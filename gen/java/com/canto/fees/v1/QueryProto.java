@@ -14,44 +14,5877 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryFeesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.fees.v1.QueryFeesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryFeesRequest is the request type for the Query/Fees RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.fees.v1.QueryFeesRequest}
+   */
+  public static final class QueryFeesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.fees.v1.QueryFeesRequest)
+      QueryFeesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeesRequest.newBuilder() to construct.
+    private QueryFeesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.fees.v1.QueryProto.QueryFeesRequest.class, com.canto.fees.v1.QueryProto.QueryFeesRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.fees.v1.QueryProto.QueryFeesRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.fees.v1.QueryProto.QueryFeesRequest other = (com.canto.fees.v1.QueryProto.QueryFeesRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.fees.v1.QueryProto.QueryFeesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFeesRequest is the request type for the Query/Fees RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.fees.v1.QueryFeesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.fees.v1.QueryFeesRequest)
+        com.canto.fees.v1.QueryProto.QueryFeesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.fees.v1.QueryProto.QueryFeesRequest.class, com.canto.fees.v1.QueryProto.QueryFeesRequest.Builder.class);
+      }
+
+      // Construct using com.canto.fees.v1.QueryProto.QueryFeesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeesRequest getDefaultInstanceForType() {
+        return com.canto.fees.v1.QueryProto.QueryFeesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeesRequest build() {
+        com.canto.fees.v1.QueryProto.QueryFeesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeesRequest buildPartial() {
+        com.canto.fees.v1.QueryProto.QueryFeesRequest result = new com.canto.fees.v1.QueryProto.QueryFeesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.fees.v1.QueryProto.QueryFeesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.fees.v1.QueryProto.QueryFeesRequest) {
+          return mergeFrom((com.canto.fees.v1.QueryProto.QueryFeesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.fees.v1.QueryProto.QueryFeesRequest other) {
+        if (other == com.canto.fees.v1.QueryProto.QueryFeesRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.fees.v1.QueryFeesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.fees.v1.QueryFeesRequest)
+    private static final com.canto.fees.v1.QueryProto.QueryFeesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.fees.v1.QueryProto.QueryFeesRequest();
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeesRequest>() {
+      @java.lang.Override
+      public QueryFeesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.fees.v1.QueryProto.QueryFeesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.fees.v1.QueryFeesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.canto.fees.v1.FeesProto.Fee> 
+        getFeesList();
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.fees.v1.FeesProto.Fee getFees(int index);
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    int getFeesCount();
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+        getFeesOrBuilderList();
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.fees.v1.FeesProto.FeeOrBuilder getFeesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryFeesResponse is the response type for the Query/Fees RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.fees.v1.QueryFeesResponse}
+   */
+  public static final class QueryFeesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.fees.v1.QueryFeesResponse)
+      QueryFeesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeesResponse.newBuilder() to construct.
+    private QueryFeesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeesResponse() {
+      fees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.fees.v1.QueryProto.QueryFeesResponse.class, com.canto.fees.v1.QueryProto.QueryFeesResponse.Builder.class);
+    }
+
+    public static final int FEES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.canto.fees.v1.FeesProto.Fee> fees_;
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.canto.fees.v1.FeesProto.Fee> getFeesList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+        getFeesOrBuilderList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFeesCount() {
+      return fees_.size();
+    }
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.fees.v1.FeesProto.Fee getFees(int index) {
+      return fees_.get(index);
+    }
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.fees.v1.FeesProto.FeeOrBuilder getFeesOrBuilder(
+        int index) {
+      return fees_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fees_.size(); i++) {
+        output.writeMessage(1, fees_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < fees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, fees_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.fees.v1.QueryProto.QueryFeesResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.fees.v1.QueryProto.QueryFeesResponse other = (com.canto.fees.v1.QueryProto.QueryFeesResponse) obj;
+
+      if (!getFeesList()
+          .equals(other.getFeesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFeesCount() > 0) {
+        hash = (37 * hash) + FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getFeesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.fees.v1.QueryProto.QueryFeesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFeesResponse is the response type for the Query/Fees RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.fees.v1.QueryFeesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.fees.v1.QueryFeesResponse)
+        com.canto.fees.v1.QueryProto.QueryFeesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.fees.v1.QueryProto.QueryFeesResponse.class, com.canto.fees.v1.QueryProto.QueryFeesResponse.Builder.class);
+      }
+
+      // Construct using com.canto.fees.v1.QueryProto.QueryFeesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+        } else {
+          fees_ = null;
+          feesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeesResponse getDefaultInstanceForType() {
+        return com.canto.fees.v1.QueryProto.QueryFeesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeesResponse build() {
+        com.canto.fees.v1.QueryProto.QueryFeesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeesResponse buildPartial() {
+        com.canto.fees.v1.QueryProto.QueryFeesResponse result = new com.canto.fees.v1.QueryProto.QueryFeesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.canto.fees.v1.QueryProto.QueryFeesResponse result) {
+        if (feesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            fees_ = java.util.Collections.unmodifiableList(fees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.fees_ = fees_;
+        } else {
+          result.fees_ = feesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.canto.fees.v1.QueryProto.QueryFeesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.fees.v1.QueryProto.QueryFeesResponse) {
+          return mergeFrom((com.canto.fees.v1.QueryProto.QueryFeesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.fees.v1.QueryProto.QueryFeesResponse other) {
+        if (other == com.canto.fees.v1.QueryProto.QueryFeesResponse.getDefaultInstance()) return this;
+        if (feesBuilder_ == null) {
+          if (!other.fees_.isEmpty()) {
+            if (fees_.isEmpty()) {
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFeesIsMutable();
+              fees_.addAll(other.fees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fees_.isEmpty()) {
+            if (feesBuilder_.isEmpty()) {
+              feesBuilder_.dispose();
+              feesBuilder_ = null;
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              feesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeesFieldBuilder() : null;
+            } else {
+              feesBuilder_.addAllMessages(other.fees_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.canto.fees.v1.FeesProto.Fee m =
+                    input.readMessage(
+                        com.canto.fees.v1.FeesProto.Fee.parser(),
+                        extensionRegistry);
+                if (feesBuilder_ == null) {
+                  ensureFeesIsMutable();
+                  fees_.add(m);
+                } else {
+                  feesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.canto.fees.v1.FeesProto.Fee> fees_ =
+        java.util.Collections.emptyList();
+      private void ensureFeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fees_ = new java.util.ArrayList<com.canto.fees.v1.FeesProto.Fee>(fees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder> feesBuilder_;
+
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.canto.fees.v1.FeesProto.Fee> getFeesList() {
+        if (feesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fees_);
+        } else {
+          return feesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFeesCount() {
+        if (feesBuilder_ == null) {
+          return fees_.size();
+        } else {
+          return feesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee getFees(int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);
+        } else {
+          return feesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFees(
+          int index, com.canto.fees.v1.FeesProto.Fee value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.set(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFees(
+          int index, com.canto.fees.v1.FeesProto.Fee.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFees(com.canto.fees.v1.FeesProto.Fee value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFees(
+          int index, com.canto.fees.v1.FeesProto.Fee value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFees(
+          com.canto.fees.v1.FeesProto.Fee.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFees(
+          int index, com.canto.fees.v1.FeesProto.Fee.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFees(
+          java.lang.Iterable<? extends com.canto.fees.v1.FeesProto.Fee> values) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fees_);
+          onChanged();
+        } else {
+          feesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFees() {
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          feesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFees(int index) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.remove(index);
+          onChanged();
+        } else {
+          feesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee.Builder getFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.FeeOrBuilder getFeesOrBuilder(
+          int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);  } else {
+          return feesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+           getFeesOrBuilderList() {
+        if (feesBuilder_ != null) {
+          return feesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fees_);
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee.Builder addFeesBuilder() {
+        return getFeesFieldBuilder().addBuilder(
+            com.canto.fees.v1.FeesProto.Fee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee.Builder addFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().addBuilder(
+            index, com.canto.fees.v1.FeesProto.Fee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.canto.fees.v1.FeesProto.Fee.Builder> 
+           getFeesBuilderList() {
+        return getFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+          getFeesFieldBuilder() {
+        if (feesBuilder_ == null) {
+          feesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder>(
+                  fees_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fees_ = null;
+        }
+        return feesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.fees.v1.QueryFeesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.fees.v1.QueryFeesResponse)
+    private static final com.canto.fees.v1.QueryProto.QueryFeesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.fees.v1.QueryProto.QueryFeesResponse();
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeesResponse>() {
+      @java.lang.Override
+      public QueryFeesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.fees.v1.QueryProto.QueryFeesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.fees.v1.QueryFeeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract identifier is the hex contract address of a contract
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * contract identifier is the hex contract address of a contract
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryFeeRequest is the request type for the Query/Fee RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.fees.v1.QueryFeeRequest}
+   */
+  public static final class QueryFeeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.fees.v1.QueryFeeRequest)
+      QueryFeeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeeRequest.newBuilder() to construct.
+    private QueryFeeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeeRequest() {
+      contractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.fees.v1.QueryProto.QueryFeeRequest.class, com.canto.fees.v1.QueryProto.QueryFeeRequest.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * contract identifier is the hex contract address of a contract
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract identifier is the hex contract address of a contract
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.fees.v1.QueryProto.QueryFeeRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.fees.v1.QueryProto.QueryFeeRequest other = (com.canto.fees.v1.QueryProto.QueryFeeRequest) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.fees.v1.QueryProto.QueryFeeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFeeRequest is the request type for the Query/Fee RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.fees.v1.QueryFeeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.fees.v1.QueryFeeRequest)
+        com.canto.fees.v1.QueryProto.QueryFeeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.fees.v1.QueryProto.QueryFeeRequest.class, com.canto.fees.v1.QueryProto.QueryFeeRequest.Builder.class);
+      }
+
+      // Construct using com.canto.fees.v1.QueryProto.QueryFeeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeeRequest getDefaultInstanceForType() {
+        return com.canto.fees.v1.QueryProto.QueryFeeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeeRequest build() {
+        com.canto.fees.v1.QueryProto.QueryFeeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeeRequest buildPartial() {
+        com.canto.fees.v1.QueryProto.QueryFeeRequest result = new com.canto.fees.v1.QueryProto.QueryFeeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.fees.v1.QueryProto.QueryFeeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.fees.v1.QueryProto.QueryFeeRequest) {
+          return mergeFrom((com.canto.fees.v1.QueryProto.QueryFeeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.fees.v1.QueryProto.QueryFeeRequest other) {
+        if (other == com.canto.fees.v1.QueryProto.QueryFeeRequest.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * contract identifier is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract identifier is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract identifier is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract identifier is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract identifier is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.fees.v1.QueryFeeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.fees.v1.QueryFeeRequest)
+    private static final com.canto.fees.v1.QueryProto.QueryFeeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.fees.v1.QueryProto.QueryFeeRequest();
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeeRequest>() {
+      @java.lang.Override
+      public QueryFeeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.fees.v1.QueryProto.QueryFeeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.fees.v1.QueryFeeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     * @return Whether the fee field is set.
+     */
+    boolean hasFee();
+    /**
+     * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     * @return The fee.
+     */
+    com.canto.fees.v1.FeesProto.Fee getFee();
+    /**
+     * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.fees.v1.FeesProto.FeeOrBuilder getFeeOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryFeeResponse is the response type for the Query/Fee RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.fees.v1.QueryFeeResponse}
+   */
+  public static final class QueryFeeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.fees.v1.QueryFeeResponse)
+      QueryFeeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeeResponse.newBuilder() to construct.
+    private QueryFeeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.fees.v1.QueryProto.QueryFeeResponse.class, com.canto.fees.v1.QueryProto.QueryFeeResponse.Builder.class);
+    }
+
+    public static final int FEE_FIELD_NUMBER = 1;
+    private com.canto.fees.v1.FeesProto.Fee fee_;
+    /**
+     * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     * @return Whether the fee field is set.
+     */
+    @java.lang.Override
+    public boolean hasFee() {
+      return fee_ != null;
+    }
+    /**
+     * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     * @return The fee.
+     */
+    @java.lang.Override
+    public com.canto.fees.v1.FeesProto.Fee getFee() {
+      return fee_ == null ? com.canto.fees.v1.FeesProto.Fee.getDefaultInstance() : fee_;
+    }
+    /**
+     * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.fees.v1.FeesProto.FeeOrBuilder getFeeOrBuilder() {
+      return fee_ == null ? com.canto.fees.v1.FeesProto.Fee.getDefaultInstance() : fee_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (fee_ != null) {
+        output.writeMessage(1, getFee());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (fee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFee());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.fees.v1.QueryProto.QueryFeeResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.fees.v1.QueryProto.QueryFeeResponse other = (com.canto.fees.v1.QueryProto.QueryFeeResponse) obj;
+
+      if (hasFee() != other.hasFee()) return false;
+      if (hasFee()) {
+        if (!getFee()
+            .equals(other.getFee())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFee()) {
+        hash = (37 * hash) + FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getFee().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.fees.v1.QueryProto.QueryFeeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFeeResponse is the response type for the Query/Fee RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.fees.v1.QueryFeeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.fees.v1.QueryFeeResponse)
+        com.canto.fees.v1.QueryProto.QueryFeeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.fees.v1.QueryProto.QueryFeeResponse.class, com.canto.fees.v1.QueryProto.QueryFeeResponse.Builder.class);
+      }
+
+      // Construct using com.canto.fees.v1.QueryProto.QueryFeeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        fee_ = null;
+        if (feeBuilder_ != null) {
+          feeBuilder_.dispose();
+          feeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryFeeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeeResponse getDefaultInstanceForType() {
+        return com.canto.fees.v1.QueryProto.QueryFeeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeeResponse build() {
+        com.canto.fees.v1.QueryProto.QueryFeeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryFeeResponse buildPartial() {
+        com.canto.fees.v1.QueryProto.QueryFeeResponse result = new com.canto.fees.v1.QueryProto.QueryFeeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.fees.v1.QueryProto.QueryFeeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fee_ = feeBuilder_ == null
+              ? fee_
+              : feeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.fees.v1.QueryProto.QueryFeeResponse) {
+          return mergeFrom((com.canto.fees.v1.QueryProto.QueryFeeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.fees.v1.QueryProto.QueryFeeResponse other) {
+        if (other == com.canto.fees.v1.QueryProto.QueryFeeResponse.getDefaultInstance()) return this;
+        if (other.hasFee()) {
+          mergeFee(other.getFee());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.canto.fees.v1.FeesProto.Fee fee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder> feeBuilder_;
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       * @return Whether the fee field is set.
+       */
+      public boolean hasFee() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       * @return The fee.
+       */
+      public com.canto.fees.v1.FeesProto.Fee getFee() {
+        if (feeBuilder_ == null) {
+          return fee_ == null ? com.canto.fees.v1.FeesProto.Fee.getDefaultInstance() : fee_;
+        } else {
+          return feeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFee(com.canto.fees.v1.FeesProto.Fee value) {
+        if (feeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fee_ = value;
+        } else {
+          feeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFee(
+          com.canto.fees.v1.FeesProto.Fee.Builder builderForValue) {
+        if (feeBuilder_ == null) {
+          fee_ = builderForValue.build();
+        } else {
+          feeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFee(com.canto.fees.v1.FeesProto.Fee value) {
+        if (feeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            fee_ != null &&
+            fee_ != com.canto.fees.v1.FeesProto.Fee.getDefaultInstance()) {
+            getFeeBuilder().mergeFrom(value);
+          } else {
+            fee_ = value;
+          }
+        } else {
+          feeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFee() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fee_ = null;
+        if (feeBuilder_ != null) {
+          feeBuilder_.dispose();
+          feeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee.Builder getFeeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.FeeOrBuilder getFeeOrBuilder() {
+        if (feeBuilder_ != null) {
+          return feeBuilder_.getMessageOrBuilder();
+        } else {
+          return fee_ == null ?
+              com.canto.fees.v1.FeesProto.Fee.getDefaultInstance() : fee_;
+        }
+      }
+      /**
+       * <code>.canto.fees.v1.Fee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+          getFeeFieldBuilder() {
+        if (feeBuilder_ == null) {
+          feeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder>(
+                  getFee(),
+                  getParentForChildren(),
+                  isClean());
+          fee_ = null;
+        }
+        return feeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.fees.v1.QueryFeeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.fees.v1.QueryFeeResponse)
+    private static final com.canto.fees.v1.QueryProto.QueryFeeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.fees.v1.QueryProto.QueryFeeResponse();
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryFeeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeeResponse>() {
+      @java.lang.Override
+      public QueryFeeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.fees.v1.QueryProto.QueryFeeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.fees.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.fees.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.fees.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.fees.v1.QueryProto.QueryParamsRequest.class, com.canto.fees.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.fees.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.fees.v1.QueryProto.QueryParamsRequest other = (com.canto.fees.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.fees.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.fees.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.fees.v1.QueryParamsRequest)
+        com.canto.fees.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.fees.v1.QueryProto.QueryParamsRequest.class, com.canto.fees.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.canto.fees.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.canto.fees.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryParamsRequest build() {
+        com.canto.fees.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.canto.fees.v1.QueryProto.QueryParamsRequest result = new com.canto.fees.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.fees.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.canto.fees.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.fees.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.canto.fees.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.fees.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.fees.v1.QueryParamsRequest)
+    private static final com.canto.fees.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.fees.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.fees.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.fees.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.canto.fees.v1.GenesisProto.Params getParams();
+    /**
+     * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.fees.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.fees.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.fees.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.fees.v1.QueryProto.QueryParamsResponse.class, com.canto.fees.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.canto.fees.v1.GenesisProto.Params params_;
+    /**
+     * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.canto.fees.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.canto.fees.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.fees.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.canto.fees.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.fees.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.fees.v1.QueryProto.QueryParamsResponse other = (com.canto.fees.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.fees.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.fees.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.fees.v1.QueryParamsResponse)
+        com.canto.fees.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.fees.v1.QueryProto.QueryParamsResponse.class, com.canto.fees.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.canto.fees.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.canto.fees.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryParamsResponse build() {
+        com.canto.fees.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.canto.fees.v1.QueryProto.QueryParamsResponse result = new com.canto.fees.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.fees.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.fees.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.canto.fees.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.fees.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.canto.fees.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.canto.fees.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.fees.v1.GenesisProto.Params, com.canto.fees.v1.GenesisProto.Params.Builder, com.canto.fees.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.canto.fees.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.canto.fees.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.canto.fees.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.canto.fees.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.canto.fees.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.canto.fees.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.canto.fees.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.canto.fees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.fees.v1.GenesisProto.Params, com.canto.fees.v1.GenesisProto.Params.Builder, com.canto.fees.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.fees.v1.GenesisProto.Params, com.canto.fees.v1.GenesisProto.Params.Builder, com.canto.fees.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.fees.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.fees.v1.QueryParamsResponse)
+    private static final com.canto.fees.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.fees.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.fees.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDeployerFeesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.fees.v1.QueryDeployerFeesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * deployer bech32 address
+     * </pre>
+     *
+     * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    java.lang.String getDeployerAddress();
+    /**
+     * <pre>
+     * deployer bech32 address
+     * </pre>
+     *
+     * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeployerAddressBytes();
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDeployerFeesRequest is the request type for the Query/DeployerFees RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.fees.v1.QueryDeployerFeesRequest}
+   */
+  public static final class QueryDeployerFeesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.fees.v1.QueryDeployerFeesRequest)
+      QueryDeployerFeesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDeployerFeesRequest.newBuilder() to construct.
+    private QueryDeployerFeesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDeployerFeesRequest() {
+      deployerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDeployerFeesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest.class, com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest.Builder.class);
+    }
+
+    public static final int DEPLOYER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deployerAddress_ = "";
+    /**
+     * <pre>
+     * deployer bech32 address
+     * </pre>
+     *
+     * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeployerAddress() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deployerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * deployer bech32 address
+     * </pre>
+     *
+     * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeployerAddressBytes() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deployerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deployerAddress_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deployerAddress_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest other = (com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest) obj;
+
+      if (!getDeployerAddress()
+          .equals(other.getDeployerAddress())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEPLOYER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeployerAddress().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDeployerFeesRequest is the request type for the Query/DeployerFees RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.fees.v1.QueryDeployerFeesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.fees.v1.QueryDeployerFeesRequest)
+        com.canto.fees.v1.QueryProto.QueryDeployerFeesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest.class, com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest.Builder.class);
+      }
+
+      // Construct using com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        deployerAddress_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest getDefaultInstanceForType() {
+        return com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest build() {
+        com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest buildPartial() {
+        com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest result = new com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.deployerAddress_ = deployerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest) {
+          return mergeFrom((com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest other) {
+        if (other == com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest.getDefaultInstance()) return this;
+        if (!other.getDeployerAddress().isEmpty()) {
+          deployerAddress_ = other.deployerAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                deployerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object deployerAddress_ = "";
+      /**
+       * <pre>
+       * deployer bech32 address
+       * </pre>
+       *
+       * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+       * @return The deployerAddress.
+       */
+      public java.lang.String getDeployerAddress() {
+        java.lang.Object ref = deployerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deployerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer bech32 address
+       * </pre>
+       *
+       * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+       * @return The bytes for deployerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeployerAddressBytes() {
+        java.lang.Object ref = deployerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deployerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer bech32 address
+       * </pre>
+       *
+       * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+       * @param value The deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer bech32 address
+       * </pre>
+       *
+       * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeployerAddress() {
+        deployerAddress_ = getDefaultInstance().getDeployerAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer bech32 address
+       * </pre>
+       *
+       * <code>string deployer_address = 1 [json_name = "deployerAddress"];</code>
+       * @param value The bytes for deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.fees.v1.QueryDeployerFeesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.fees.v1.QueryDeployerFeesRequest)
+    private static final com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest();
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDeployerFeesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDeployerFeesRequest>() {
+      @java.lang.Override
+      public QueryDeployerFeesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDeployerFeesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDeployerFeesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.fees.v1.QueryProto.QueryDeployerFeesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDeployerFeesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.fees.v1.QueryDeployerFeesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.canto.fees.v1.FeesProto.Fee> 
+        getFeesList();
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.fees.v1.FeesProto.Fee getFees(int index);
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    int getFeesCount();
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+        getFeesOrBuilderList();
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.fees.v1.FeesProto.FeeOrBuilder getFeesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDeployerFeesResponse is the response type for the Query/DeployerFees RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.fees.v1.QueryDeployerFeesResponse}
+   */
+  public static final class QueryDeployerFeesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.fees.v1.QueryDeployerFeesResponse)
+      QueryDeployerFeesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDeployerFeesResponse.newBuilder() to construct.
+    private QueryDeployerFeesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDeployerFeesResponse() {
+      fees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDeployerFeesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse.class, com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse.Builder.class);
+    }
+
+    public static final int FEES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.canto.fees.v1.FeesProto.Fee> fees_;
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.canto.fees.v1.FeesProto.Fee> getFeesList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+        getFeesOrBuilderList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFeesCount() {
+      return fees_.size();
+    }
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.fees.v1.FeesProto.Fee getFees(int index) {
+      return fees_.get(index);
+    }
+    /**
+     * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.fees.v1.FeesProto.FeeOrBuilder getFeesOrBuilder(
+        int index) {
+      return fees_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fees_.size(); i++) {
+        output.writeMessage(1, fees_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < fees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, fees_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse other = (com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse) obj;
+
+      if (!getFeesList()
+          .equals(other.getFeesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFeesCount() > 0) {
+        hash = (37 * hash) + FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getFeesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDeployerFeesResponse is the response type for the Query/DeployerFees RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.fees.v1.QueryDeployerFeesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.fees.v1.QueryDeployerFeesResponse)
+        com.canto.fees.v1.QueryProto.QueryDeployerFeesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse.class, com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse.Builder.class);
+      }
+
+      // Construct using com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+        } else {
+          fees_ = null;
+          feesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.fees.v1.QueryProto.internal_static_canto_fees_v1_QueryDeployerFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse getDefaultInstanceForType() {
+        return com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse build() {
+        com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse buildPartial() {
+        com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse result = new com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse result) {
+        if (feesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            fees_ = java.util.Collections.unmodifiableList(fees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.fees_ = fees_;
+        } else {
+          result.fees_ = feesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse) {
+          return mergeFrom((com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse other) {
+        if (other == com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse.getDefaultInstance()) return this;
+        if (feesBuilder_ == null) {
+          if (!other.fees_.isEmpty()) {
+            if (fees_.isEmpty()) {
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFeesIsMutable();
+              fees_.addAll(other.fees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fees_.isEmpty()) {
+            if (feesBuilder_.isEmpty()) {
+              feesBuilder_.dispose();
+              feesBuilder_ = null;
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              feesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeesFieldBuilder() : null;
+            } else {
+              feesBuilder_.addAllMessages(other.fees_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.canto.fees.v1.FeesProto.Fee m =
+                    input.readMessage(
+                        com.canto.fees.v1.FeesProto.Fee.parser(),
+                        extensionRegistry);
+                if (feesBuilder_ == null) {
+                  ensureFeesIsMutable();
+                  fees_.add(m);
+                } else {
+                  feesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.canto.fees.v1.FeesProto.Fee> fees_ =
+        java.util.Collections.emptyList();
+      private void ensureFeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fees_ = new java.util.ArrayList<com.canto.fees.v1.FeesProto.Fee>(fees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder> feesBuilder_;
+
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.canto.fees.v1.FeesProto.Fee> getFeesList() {
+        if (feesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fees_);
+        } else {
+          return feesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFeesCount() {
+        if (feesBuilder_ == null) {
+          return fees_.size();
+        } else {
+          return feesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee getFees(int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);
+        } else {
+          return feesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFees(
+          int index, com.canto.fees.v1.FeesProto.Fee value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.set(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFees(
+          int index, com.canto.fees.v1.FeesProto.Fee.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFees(com.canto.fees.v1.FeesProto.Fee value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFees(
+          int index, com.canto.fees.v1.FeesProto.Fee value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFees(
+          com.canto.fees.v1.FeesProto.Fee.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFees(
+          int index, com.canto.fees.v1.FeesProto.Fee.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFees(
+          java.lang.Iterable<? extends com.canto.fees.v1.FeesProto.Fee> values) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fees_);
+          onChanged();
+        } else {
+          feesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFees() {
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          feesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFees(int index) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.remove(index);
+          onChanged();
+        } else {
+          feesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee.Builder getFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.FeeOrBuilder getFeesOrBuilder(
+          int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);  } else {
+          return feesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+           getFeesOrBuilderList() {
+        if (feesBuilder_ != null) {
+          return feesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fees_);
+        }
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee.Builder addFeesBuilder() {
+        return getFeesFieldBuilder().addBuilder(
+            com.canto.fees.v1.FeesProto.Fee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.fees.v1.FeesProto.Fee.Builder addFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().addBuilder(
+            index, com.canto.fees.v1.FeesProto.Fee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .canto.fees.v1.Fee fees = 1 [json_name = "fees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.canto.fees.v1.FeesProto.Fee.Builder> 
+           getFeesBuilderList() {
+        return getFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder> 
+          getFeesFieldBuilder() {
+        if (feesBuilder_ == null) {
+          feesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.canto.fees.v1.FeesProto.Fee, com.canto.fees.v1.FeesProto.Fee.Builder, com.canto.fees.v1.FeesProto.FeeOrBuilder>(
+                  fees_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fees_ = null;
+        }
+        return feesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.fees.v1.QueryDeployerFeesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.fees.v1.QueryDeployerFeesResponse)
+    private static final com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse();
+    }
+
+    public static com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDeployerFeesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDeployerFeesResponse>() {
+      @java.lang.Override
+      public QueryDeployerFeesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDeployerFeesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDeployerFeesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.fees.v1.QueryProto.QueryDeployerFeesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_fees_v1_QueryFeesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_fees_v1_QueryFeesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_fees_v1_QueryFeesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_fees_v1_QueryFeesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_fees_v1_QueryFeeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_fees_v1_QueryFeeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_fees_v1_QueryFeeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_fees_v1_QueryFeeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_fees_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_fees_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_fees_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_fees_v1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_fees_v1_QueryDeployerFeesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_fees_v1_QueryDeployerFeesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_fees_v1_QueryDeployerFeesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_fees_v1_QueryDeployerFeesResponse_fieldAccessorTable;
 
@@ -98,12 +5931,12 @@ public final class QueryProto {
       "v1/params\022\221\001\n\014DeployerFees\022\'.canto.fees." +
       "v1.QueryDeployerFeesRequest\032(.canto.fees" +
       ".v1.QueryDeployerFeesResponse\".\202\323\344\223\002(\022&/" +
-      "canto/fees/v1/fees/{deployer_address}B\245\001" +
-      "\n\021com.canto.fees.v1B\nQueryProtoP\001Z.githu" +
-      "b.com/Canto-Network/Canto/v6/x/fees/type" +
-      "s\242\002\003CFX\252\002\rCanto.Fees.V1\312\002\rCanto\\Fees\\V1\342" +
-      "\002\031Canto\\Fees\\V1\\GPBMetadata\352\002\017Canto::Fee" +
-      "s::V1b\006proto3"
+      "canto/fees/v1/fees/{deployer_address}B\243\001" +
+      "\n\021com.canto.fees.v1B\nQueryProtoZ.github." +
+      "com/Canto-Network/Canto/v6/x/fees/types\242" +
+      "\002\003CFX\252\002\rCanto.Fees.V1\312\002\rCanto\\Fees\\V1\342\002\031" +
+      "Canto\\Fees\\V1\\GPBMetadata\352\002\017Canto::Fees:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

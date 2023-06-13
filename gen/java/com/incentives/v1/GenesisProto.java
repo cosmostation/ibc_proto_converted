@@ -14,14 +14,1380 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:incentives.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.incentives.v1.GenesisProto.Params getParams();
+    /**
+     * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code incentives.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:incentives.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.incentives.v1.GenesisProto.internal_static_incentives_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.incentives.v1.GenesisProto.internal_static_incentives_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.incentives.v1.GenesisProto.GenesisState.class, com.incentives.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.incentives.v1.GenesisProto.Params params_;
+    /**
+     * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.incentives.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.incentives.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.incentives.v1.GenesisProto.GenesisState other = (com.incentives.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.incentives.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.incentives.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.incentives.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.incentives.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code incentives.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:incentives.v1.GenesisState)
+        com.incentives.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.incentives.v1.GenesisProto.internal_static_incentives_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.incentives.v1.GenesisProto.internal_static_incentives_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.incentives.v1.GenesisProto.GenesisState.class, com.incentives.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.incentives.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.incentives.v1.GenesisProto.internal_static_incentives_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.incentives.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.incentives.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.incentives.v1.GenesisProto.GenesisState build() {
+        com.incentives.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.incentives.v1.GenesisProto.GenesisState buildPartial() {
+        com.incentives.v1.GenesisProto.GenesisState result = new com.incentives.v1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.incentives.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.incentives.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.incentives.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.incentives.v1.GenesisProto.GenesisState other) {
+        if (other == com.incentives.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.incentives.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.incentives.v1.GenesisProto.Params, com.incentives.v1.GenesisProto.Params.Builder, com.incentives.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.incentives.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.incentives.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.incentives.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.incentives.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.incentives.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.incentives.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.incentives.v1.GenesisProto.Params, com.incentives.v1.GenesisProto.Params.Builder, com.incentives.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.incentives.v1.GenesisProto.Params, com.incentives.v1.GenesisProto.Params.Builder, com.incentives.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:incentives.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:incentives.v1.GenesisState)
+    private static final com.incentives.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.incentives.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.incentives.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.incentives.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:incentives.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionPerBlock field is set.
+     */
+    boolean hasDistributionPerBlock();
+    /**
+     * <pre>
+     * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+     * @return The distributionPerBlock.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDistributionPerBlock();
+    /**
+     * <pre>
+     * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDistributionPerBlockOrBuilder();
+
+    /**
+     * <pre>
+     * IncentivesCutoffHeight defines the block height after which the incentives module will stop sending coins to the distribution module from
+     * the community pool
+     * </pre>
+     *
+     * <code>uint64 incentives_cutoff_height = 2 [json_name = "incentivesCutoffHeight"];</code>
+     * @return The incentivesCutoffHeight.
+     */
+    long getIncentivesCutoffHeight();
+  }
+  /**
+   * <pre>
+   * Params incentives parameters
+   * </pre>
+   *
+   * Protobuf type {@code incentives.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:incentives.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.incentives.v1.GenesisProto.internal_static_incentives_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.incentives.v1.GenesisProto.internal_static_incentives_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.incentives.v1.GenesisProto.Params.class, com.incentives.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int DISTRIBUTION_PER_BLOCK_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin distributionPerBlock_;
+    /**
+     * <pre>
+     * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionPerBlock field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistributionPerBlock() {
+      return distributionPerBlock_ != null;
+    }
+    /**
+     * <pre>
+     * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+     * @return The distributionPerBlock.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDistributionPerBlock() {
+      return distributionPerBlock_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : distributionPerBlock_;
+    }
+    /**
+     * <pre>
+     * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDistributionPerBlockOrBuilder() {
+      return distributionPerBlock_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : distributionPerBlock_;
+    }
+
+    public static final int INCENTIVES_CUTOFF_HEIGHT_FIELD_NUMBER = 2;
+    private long incentivesCutoffHeight_ = 0L;
+    /**
+     * <pre>
+     * IncentivesCutoffHeight defines the block height after which the incentives module will stop sending coins to the distribution module from
+     * the community pool
+     * </pre>
+     *
+     * <code>uint64 incentives_cutoff_height = 2 [json_name = "incentivesCutoffHeight"];</code>
+     * @return The incentivesCutoffHeight.
+     */
+    @java.lang.Override
+    public long getIncentivesCutoffHeight() {
+      return incentivesCutoffHeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (distributionPerBlock_ != null) {
+        output.writeMessage(1, getDistributionPerBlock());
+      }
+      if (incentivesCutoffHeight_ != 0L) {
+        output.writeUInt64(2, incentivesCutoffHeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (distributionPerBlock_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDistributionPerBlock());
+      }
+      if (incentivesCutoffHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, incentivesCutoffHeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.incentives.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.incentives.v1.GenesisProto.Params other = (com.incentives.v1.GenesisProto.Params) obj;
+
+      if (hasDistributionPerBlock() != other.hasDistributionPerBlock()) return false;
+      if (hasDistributionPerBlock()) {
+        if (!getDistributionPerBlock()
+            .equals(other.getDistributionPerBlock())) return false;
+      }
+      if (getIncentivesCutoffHeight()
+          != other.getIncentivesCutoffHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDistributionPerBlock()) {
+        hash = (37 * hash) + DISTRIBUTION_PER_BLOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getDistributionPerBlock().hashCode();
+      }
+      hash = (37 * hash) + INCENTIVES_CUTOFF_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIncentivesCutoffHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.incentives.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.incentives.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.incentives.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.incentives.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.incentives.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params incentives parameters
+     * </pre>
+     *
+     * Protobuf type {@code incentives.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:incentives.v1.Params)
+        com.incentives.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.incentives.v1.GenesisProto.internal_static_incentives_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.incentives.v1.GenesisProto.internal_static_incentives_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.incentives.v1.GenesisProto.Params.class, com.incentives.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.incentives.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        distributionPerBlock_ = null;
+        if (distributionPerBlockBuilder_ != null) {
+          distributionPerBlockBuilder_.dispose();
+          distributionPerBlockBuilder_ = null;
+        }
+        incentivesCutoffHeight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.incentives.v1.GenesisProto.internal_static_incentives_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.incentives.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.incentives.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.incentives.v1.GenesisProto.Params build() {
+        com.incentives.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.incentives.v1.GenesisProto.Params buildPartial() {
+        com.incentives.v1.GenesisProto.Params result = new com.incentives.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.incentives.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.distributionPerBlock_ = distributionPerBlockBuilder_ == null
+              ? distributionPerBlock_
+              : distributionPerBlockBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.incentivesCutoffHeight_ = incentivesCutoffHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.incentives.v1.GenesisProto.Params) {
+          return mergeFrom((com.incentives.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.incentives.v1.GenesisProto.Params other) {
+        if (other == com.incentives.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (other.hasDistributionPerBlock()) {
+          mergeDistributionPerBlock(other.getDistributionPerBlock());
+        }
+        if (other.getIncentivesCutoffHeight() != 0L) {
+          setIncentivesCutoffHeight(other.getIncentivesCutoffHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDistributionPerBlockFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                incentivesCutoffHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin distributionPerBlock_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> distributionPerBlockBuilder_;
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       * @return Whether the distributionPerBlock field is set.
+       */
+      public boolean hasDistributionPerBlock() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       * @return The distributionPerBlock.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDistributionPerBlock() {
+        if (distributionPerBlockBuilder_ == null) {
+          return distributionPerBlock_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : distributionPerBlock_;
+        } else {
+          return distributionPerBlockBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionPerBlock(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (distributionPerBlockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          distributionPerBlock_ = value;
+        } else {
+          distributionPerBlockBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionPerBlock(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (distributionPerBlockBuilder_ == null) {
+          distributionPerBlock_ = builderForValue.build();
+        } else {
+          distributionPerBlockBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDistributionPerBlock(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (distributionPerBlockBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            distributionPerBlock_ != null &&
+            distributionPerBlock_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDistributionPerBlockBuilder().mergeFrom(value);
+          } else {
+            distributionPerBlock_ = value;
+          }
+        } else {
+          distributionPerBlockBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDistributionPerBlock() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        distributionPerBlock_ = null;
+        if (distributionPerBlockBuilder_ != null) {
+          distributionPerBlockBuilder_.dispose();
+          distributionPerBlockBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDistributionPerBlockBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDistributionPerBlockFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDistributionPerBlockOrBuilder() {
+        if (distributionPerBlockBuilder_ != null) {
+          return distributionPerBlockBuilder_.getMessageOrBuilder();
+        } else {
+          return distributionPerBlock_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : distributionPerBlock_;
+        }
+      }
+      /**
+       * <pre>
+       * DistributionPerBlock defines the coin to be sent to the distribution module from the community pool every block
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin distribution_per_block = 1 [json_name = "distributionPerBlock", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDistributionPerBlockFieldBuilder() {
+        if (distributionPerBlockBuilder_ == null) {
+          distributionPerBlockBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDistributionPerBlock(),
+                  getParentForChildren(),
+                  isClean());
+          distributionPerBlock_ = null;
+        }
+        return distributionPerBlockBuilder_;
+      }
+
+      private long incentivesCutoffHeight_ ;
+      /**
+       * <pre>
+       * IncentivesCutoffHeight defines the block height after which the incentives module will stop sending coins to the distribution module from
+       * the community pool
+       * </pre>
+       *
+       * <code>uint64 incentives_cutoff_height = 2 [json_name = "incentivesCutoffHeight"];</code>
+       * @return The incentivesCutoffHeight.
+       */
+      @java.lang.Override
+      public long getIncentivesCutoffHeight() {
+        return incentivesCutoffHeight_;
+      }
+      /**
+       * <pre>
+       * IncentivesCutoffHeight defines the block height after which the incentives module will stop sending coins to the distribution module from
+       * the community pool
+       * </pre>
+       *
+       * <code>uint64 incentives_cutoff_height = 2 [json_name = "incentivesCutoffHeight"];</code>
+       * @param value The incentivesCutoffHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncentivesCutoffHeight(long value) {
+
+        incentivesCutoffHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IncentivesCutoffHeight defines the block height after which the incentives module will stop sending coins to the distribution module from
+       * the community pool
+       * </pre>
+       *
+       * <code>uint64 incentives_cutoff_height = 2 [json_name = "incentivesCutoffHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncentivesCutoffHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        incentivesCutoffHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:incentives.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:incentives.v1.Params)
+    private static final com.incentives.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.incentives.v1.GenesisProto.Params();
+    }
+
+    public static com.incentives.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.incentives.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_incentives_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_incentives_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_incentives_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_incentives_v1_Params_fieldAccessorTable;
 
@@ -41,11 +1407,11 @@ public final class GenesisProto {
       "tion_per_block\030\001 \001(\0132\031.cosmos.base.v1bet" +
       "a1.CoinB\004\310\336\037\000R\024distributionPerBlock\0228\n\030i" +
       "ncentives_cutoff_height\030\002 \001(\004R\026incentive" +
-      "sCutoffHeightB\252\001\n\021com.incentives.v1B\014Gen" +
-      "esisProtoP\001Z2github.com/peggyjv/sommelie" +
-      "r/v4/x/incentives/types\242\002\003IXX\252\002\rIncentiv" +
-      "es.V1\312\002\rIncentives\\V1\342\002\031Incentives\\V1\\GP" +
-      "BMetadata\352\002\016Incentives::V1b\006proto3"
+      "sCutoffHeightB\250\001\n\021com.incentives.v1B\014Gen" +
+      "esisProtoZ2github.com/peggyjv/sommelier/" +
+      "v4/x/incentives/types\242\002\003IXX\252\002\rIncentives" +
+      ".V1\312\002\rIncentives\\V1\342\002\031Incentives\\V1\\GPBM" +
+      "etadata\352\002\016Incentives::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

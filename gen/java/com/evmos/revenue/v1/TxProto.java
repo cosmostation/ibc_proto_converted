@@ -14,44 +14,5540 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgRegisterRevenueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.MsgRegisterRevenue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    java.lang.String getDeployerAddress();
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeployerAddressBytes();
+
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The withdrawerAddress.
+     */
+    java.lang.String getWithdrawerAddress();
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The bytes for withdrawerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWithdrawerAddressBytes();
+
+    /**
+     * <pre>
+     * nonces is an array of nonces from the address path, where the last nonce is the nonce
+     * that determines the contract's address - it can be an EOA nonce or a
+     * factory contract nonce
+     * </pre>
+     *
+     * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+     * @return A list containing the nonces.
+     */
+    java.util.List<java.lang.Long> getNoncesList();
+    /**
+     * <pre>
+     * nonces is an array of nonces from the address path, where the last nonce is the nonce
+     * that determines the contract's address - it can be an EOA nonce or a
+     * factory contract nonce
+     * </pre>
+     *
+     * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+     * @return The count of nonces.
+     */
+    int getNoncesCount();
+    /**
+     * <pre>
+     * nonces is an array of nonces from the address path, where the last nonce is the nonce
+     * that determines the contract's address - it can be an EOA nonce or a
+     * factory contract nonce
+     * </pre>
+     *
+     * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+     * @param index The index of the element to return.
+     * @return The nonces at the given index.
+     */
+    long getNonces(int index);
+  }
+  /**
+   * <pre>
+   * MsgRegisterRevenue defines a message that registers a Revenue
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.MsgRegisterRevenue}
+   */
+  public static final class MsgRegisterRevenue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.MsgRegisterRevenue)
+      MsgRegisterRevenueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterRevenue.newBuilder() to construct.
+    private MsgRegisterRevenue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterRevenue() {
+      contractAddress_ = "";
+      deployerAddress_ = "";
+      withdrawerAddress_ = "";
+      nonces_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterRevenue();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.TxProto.MsgRegisterRevenue.class, com.evmos.revenue.v1.TxProto.MsgRegisterRevenue.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPLOYER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deployerAddress_ = "";
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeployerAddress() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deployerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeployerAddressBytes() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deployerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WITHDRAWER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object withdrawerAddress_ = "";
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The withdrawerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWithdrawerAddress() {
+      java.lang.Object ref = withdrawerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        withdrawerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The bytes for withdrawerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWithdrawerAddressBytes() {
+      java.lang.Object ref = withdrawerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        withdrawerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NONCES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList nonces_;
+    /**
+     * <pre>
+     * nonces is an array of nonces from the address path, where the last nonce is the nonce
+     * that determines the contract's address - it can be an EOA nonce or a
+     * factory contract nonce
+     * </pre>
+     *
+     * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+     * @return A list containing the nonces.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getNoncesList() {
+      return nonces_;
+    }
+    /**
+     * <pre>
+     * nonces is an array of nonces from the address path, where the last nonce is the nonce
+     * that determines the contract's address - it can be an EOA nonce or a
+     * factory contract nonce
+     * </pre>
+     *
+     * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+     * @return The count of nonces.
+     */
+    public int getNoncesCount() {
+      return nonces_.size();
+    }
+    /**
+     * <pre>
+     * nonces is an array of nonces from the address path, where the last nonce is the nonce
+     * that determines the contract's address - it can be an EOA nonce or a
+     * factory contract nonce
+     * </pre>
+     *
+     * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+     * @param index The index of the element to return.
+     * @return The nonces at the given index.
+     */
+    public long getNonces(int index) {
+      return nonces_.getLong(index);
+    }
+    private int noncesMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deployerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, withdrawerAddress_);
+      }
+      if (getNoncesList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(noncesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < nonces_.size(); i++) {
+        output.writeUInt64NoTag(nonces_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deployerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, withdrawerAddress_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < nonces_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(nonces_.getLong(i));
+        }
+        size += dataSize;
+        if (!getNoncesList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        noncesMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.TxProto.MsgRegisterRevenue)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.TxProto.MsgRegisterRevenue other = (com.evmos.revenue.v1.TxProto.MsgRegisterRevenue) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getDeployerAddress()
+          .equals(other.getDeployerAddress())) return false;
+      if (!getWithdrawerAddress()
+          .equals(other.getWithdrawerAddress())) return false;
+      if (!getNoncesList()
+          .equals(other.getNoncesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + DEPLOYER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeployerAddress().hashCode();
+      hash = (37 * hash) + WITHDRAWER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWithdrawerAddress().hashCode();
+      if (getNoncesCount() > 0) {
+        hash = (37 * hash) + NONCES_FIELD_NUMBER;
+        hash = (53 * hash) + getNoncesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.TxProto.MsgRegisterRevenue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterRevenue defines a message that registers a Revenue
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.MsgRegisterRevenue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.MsgRegisterRevenue)
+        com.evmos.revenue.v1.TxProto.MsgRegisterRevenueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.TxProto.MsgRegisterRevenue.class, com.evmos.revenue.v1.TxProto.MsgRegisterRevenue.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.TxProto.MsgRegisterRevenue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        deployerAddress_ = "";
+        withdrawerAddress_ = "";
+        nonces_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgRegisterRevenue getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.TxProto.MsgRegisterRevenue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgRegisterRevenue build() {
+        com.evmos.revenue.v1.TxProto.MsgRegisterRevenue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgRegisterRevenue buildPartial() {
+        com.evmos.revenue.v1.TxProto.MsgRegisterRevenue result = new com.evmos.revenue.v1.TxProto.MsgRegisterRevenue(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.revenue.v1.TxProto.MsgRegisterRevenue result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          nonces_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.nonces_ = nonces_;
+      }
+
+      private void buildPartial0(com.evmos.revenue.v1.TxProto.MsgRegisterRevenue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deployerAddress_ = deployerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.withdrawerAddress_ = withdrawerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.TxProto.MsgRegisterRevenue) {
+          return mergeFrom((com.evmos.revenue.v1.TxProto.MsgRegisterRevenue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.TxProto.MsgRegisterRevenue other) {
+        if (other == com.evmos.revenue.v1.TxProto.MsgRegisterRevenue.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDeployerAddress().isEmpty()) {
+          deployerAddress_ = other.deployerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getWithdrawerAddress().isEmpty()) {
+          withdrawerAddress_ = other.withdrawerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.nonces_.isEmpty()) {
+          if (nonces_.isEmpty()) {
+            nonces_ = other.nonces_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureNoncesIsMutable();
+            nonces_.addAll(other.nonces_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                deployerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                withdrawerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                long v = input.readUInt64();
+                ensureNoncesIsMutable();
+                nonces_.addLong(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureNoncesIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  nonces_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deployerAddress_ = "";
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The deployerAddress.
+       */
+      public java.lang.String getDeployerAddress() {
+        java.lang.Object ref = deployerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deployerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The bytes for deployerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeployerAddressBytes() {
+        java.lang.Object ref = deployerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deployerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeployerAddress() {
+        deployerAddress_ = getDefaultInstance().getDeployerAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The bytes for deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object withdrawerAddress_ = "";
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return The withdrawerAddress.
+       */
+      public java.lang.String getWithdrawerAddress() {
+        java.lang.Object ref = withdrawerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          withdrawerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return The bytes for withdrawerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWithdrawerAddressBytes() {
+        java.lang.Object ref = withdrawerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          withdrawerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @param value The withdrawerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        withdrawerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawerAddress() {
+        withdrawerAddress_ = getDefaultInstance().getWithdrawerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @param value The bytes for withdrawerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        withdrawerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList nonces_ = emptyLongList();
+      private void ensureNoncesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          nonces_ = mutableCopy(nonces_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       * nonces is an array of nonces from the address path, where the last nonce is the nonce
+       * that determines the contract's address - it can be an EOA nonce or a
+       * factory contract nonce
+       * </pre>
+       *
+       * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+       * @return A list containing the nonces.
+       */
+      public java.util.List<java.lang.Long>
+          getNoncesList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(nonces_) : nonces_;
+      }
+      /**
+       * <pre>
+       * nonces is an array of nonces from the address path, where the last nonce is the nonce
+       * that determines the contract's address - it can be an EOA nonce or a
+       * factory contract nonce
+       * </pre>
+       *
+       * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+       * @return The count of nonces.
+       */
+      public int getNoncesCount() {
+        return nonces_.size();
+      }
+      /**
+       * <pre>
+       * nonces is an array of nonces from the address path, where the last nonce is the nonce
+       * that determines the contract's address - it can be an EOA nonce or a
+       * factory contract nonce
+       * </pre>
+       *
+       * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+       * @param index The index of the element to return.
+       * @return The nonces at the given index.
+       */
+      public long getNonces(int index) {
+        return nonces_.getLong(index);
+      }
+      /**
+       * <pre>
+       * nonces is an array of nonces from the address path, where the last nonce is the nonce
+       * that determines the contract's address - it can be an EOA nonce or a
+       * factory contract nonce
+       * </pre>
+       *
+       * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+       * @param index The index to set the value at.
+       * @param value The nonces to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNonces(
+          int index, long value) {
+
+        ensureNoncesIsMutable();
+        nonces_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * nonces is an array of nonces from the address path, where the last nonce is the nonce
+       * that determines the contract's address - it can be an EOA nonce or a
+       * factory contract nonce
+       * </pre>
+       *
+       * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+       * @param value The nonces to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNonces(long value) {
+
+        ensureNoncesIsMutable();
+        nonces_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * nonces is an array of nonces from the address path, where the last nonce is the nonce
+       * that determines the contract's address - it can be an EOA nonce or a
+       * factory contract nonce
+       * </pre>
+       *
+       * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+       * @param values The nonces to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllNonces(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureNoncesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, nonces_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * nonces is an array of nonces from the address path, where the last nonce is the nonce
+       * that determines the contract's address - it can be an EOA nonce or a
+       * factory contract nonce
+       * </pre>
+       *
+       * <code>repeated uint64 nonces = 4 [json_name = "nonces"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNonces() {
+        nonces_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.MsgRegisterRevenue)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.MsgRegisterRevenue)
+    private static final com.evmos.revenue.v1.TxProto.MsgRegisterRevenue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.TxProto.MsgRegisterRevenue();
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterRevenue>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterRevenue>() {
+      @java.lang.Override
+      public MsgRegisterRevenue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterRevenue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterRevenue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.TxProto.MsgRegisterRevenue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRegisterRevenueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.MsgRegisterRevenueResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRegisterRevenueResponse defines the MsgRegisterRevenue response type
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.MsgRegisterRevenueResponse}
+   */
+  public static final class MsgRegisterRevenueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.MsgRegisterRevenueResponse)
+      MsgRegisterRevenueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterRevenueResponse.newBuilder() to construct.
+    private MsgRegisterRevenueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterRevenueResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterRevenueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse.class, com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse other = (com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterRevenueResponse defines the MsgRegisterRevenue response type
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.MsgRegisterRevenueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.MsgRegisterRevenueResponse)
+        com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse.class, com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgRegisterRevenueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse build() {
+        com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse buildPartial() {
+        com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse result = new com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse) {
+          return mergeFrom((com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse other) {
+        if (other == com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.MsgRegisterRevenueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.MsgRegisterRevenueResponse)
+    private static final com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse();
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterRevenueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterRevenueResponse>() {
+      @java.lang.Override
+      public MsgRegisterRevenueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterRevenueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterRevenueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.TxProto.MsgRegisterRevenueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateRevenueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.MsgUpdateRevenue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    java.lang.String getDeployerAddress();
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeployerAddressBytes();
+
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The withdrawerAddress.
+     */
+    java.lang.String getWithdrawerAddress();
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The bytes for withdrawerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWithdrawerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgUpdateRevenue defines a message that updates the withdrawer address for a
+   * registered Revenue
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.MsgUpdateRevenue}
+   */
+  public static final class MsgUpdateRevenue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.MsgUpdateRevenue)
+      MsgUpdateRevenueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateRevenue.newBuilder() to construct.
+    private MsgUpdateRevenue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateRevenue() {
+      contractAddress_ = "";
+      deployerAddress_ = "";
+      withdrawerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateRevenue();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.TxProto.MsgUpdateRevenue.class, com.evmos.revenue.v1.TxProto.MsgUpdateRevenue.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPLOYER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deployerAddress_ = "";
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeployerAddress() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deployerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeployerAddressBytes() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deployerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WITHDRAWER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object withdrawerAddress_ = "";
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The withdrawerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWithdrawerAddress() {
+      java.lang.Object ref = withdrawerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        withdrawerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The bytes for withdrawerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWithdrawerAddressBytes() {
+      java.lang.Object ref = withdrawerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        withdrawerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deployerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, withdrawerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deployerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, withdrawerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.TxProto.MsgUpdateRevenue)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.TxProto.MsgUpdateRevenue other = (com.evmos.revenue.v1.TxProto.MsgUpdateRevenue) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getDeployerAddress()
+          .equals(other.getDeployerAddress())) return false;
+      if (!getWithdrawerAddress()
+          .equals(other.getWithdrawerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + DEPLOYER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeployerAddress().hashCode();
+      hash = (37 * hash) + WITHDRAWER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWithdrawerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.TxProto.MsgUpdateRevenue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateRevenue defines a message that updates the withdrawer address for a
+     * registered Revenue
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.MsgUpdateRevenue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.MsgUpdateRevenue)
+        com.evmos.revenue.v1.TxProto.MsgUpdateRevenueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.TxProto.MsgUpdateRevenue.class, com.evmos.revenue.v1.TxProto.MsgUpdateRevenue.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.TxProto.MsgUpdateRevenue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        deployerAddress_ = "";
+        withdrawerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateRevenue getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.TxProto.MsgUpdateRevenue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateRevenue build() {
+        com.evmos.revenue.v1.TxProto.MsgUpdateRevenue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateRevenue buildPartial() {
+        com.evmos.revenue.v1.TxProto.MsgUpdateRevenue result = new com.evmos.revenue.v1.TxProto.MsgUpdateRevenue(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.revenue.v1.TxProto.MsgUpdateRevenue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deployerAddress_ = deployerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.withdrawerAddress_ = withdrawerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.TxProto.MsgUpdateRevenue) {
+          return mergeFrom((com.evmos.revenue.v1.TxProto.MsgUpdateRevenue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.TxProto.MsgUpdateRevenue other) {
+        if (other == com.evmos.revenue.v1.TxProto.MsgUpdateRevenue.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDeployerAddress().isEmpty()) {
+          deployerAddress_ = other.deployerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getWithdrawerAddress().isEmpty()) {
+          withdrawerAddress_ = other.withdrawerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                deployerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                withdrawerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deployerAddress_ = "";
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The deployerAddress.
+       */
+      public java.lang.String getDeployerAddress() {
+        java.lang.Object ref = deployerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deployerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The bytes for deployerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeployerAddressBytes() {
+        java.lang.Object ref = deployerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deployerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeployerAddress() {
+        deployerAddress_ = getDefaultInstance().getDeployerAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The bytes for deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object withdrawerAddress_ = "";
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return The withdrawerAddress.
+       */
+      public java.lang.String getWithdrawerAddress() {
+        java.lang.Object ref = withdrawerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          withdrawerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return The bytes for withdrawerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWithdrawerAddressBytes() {
+        java.lang.Object ref = withdrawerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          withdrawerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @param value The withdrawerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        withdrawerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawerAddress() {
+        withdrawerAddress_ = getDefaultInstance().getWithdrawerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @param value The bytes for withdrawerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        withdrawerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.MsgUpdateRevenue)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.MsgUpdateRevenue)
+    private static final com.evmos.revenue.v1.TxProto.MsgUpdateRevenue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.TxProto.MsgUpdateRevenue();
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateRevenue>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateRevenue>() {
+      @java.lang.Override
+      public MsgUpdateRevenue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateRevenue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateRevenue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.TxProto.MsgUpdateRevenue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateRevenueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.MsgUpdateRevenueResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgUpdateRevenueResponse defines the MsgUpdateRevenue response type
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.MsgUpdateRevenueResponse}
+   */
+  public static final class MsgUpdateRevenueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.MsgUpdateRevenueResponse)
+      MsgUpdateRevenueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateRevenueResponse.newBuilder() to construct.
+    private MsgUpdateRevenueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateRevenueResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateRevenueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse.class, com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse other = (com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateRevenueResponse defines the MsgUpdateRevenue response type
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.MsgUpdateRevenueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.MsgUpdateRevenueResponse)
+        com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse.class, com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateRevenueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse build() {
+        com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse buildPartial() {
+        com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse result = new com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse) {
+          return mergeFrom((com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse other) {
+        if (other == com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.MsgUpdateRevenueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.MsgUpdateRevenueResponse)
+    private static final com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse();
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateRevenueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateRevenueResponse>() {
+      @java.lang.Override
+      public MsgUpdateRevenueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateRevenueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateRevenueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.TxProto.MsgUpdateRevenueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelRevenueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.MsgCancelRevenue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    java.lang.String getDeployerAddress();
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeployerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgCancelRevenue defines a message that cancels a registered Revenue
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.MsgCancelRevenue}
+   */
+  public static final class MsgCancelRevenue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.MsgCancelRevenue)
+      MsgCancelRevenueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelRevenue.newBuilder() to construct.
+    private MsgCancelRevenue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelRevenue() {
+      contractAddress_ = "";
+      deployerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelRevenue();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.TxProto.MsgCancelRevenue.class, com.evmos.revenue.v1.TxProto.MsgCancelRevenue.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_address in hex format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPLOYER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deployerAddress_ = "";
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeployerAddress() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deployerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+     * sending the transaction which deploys the contract
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeployerAddressBytes() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deployerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deployerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deployerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.TxProto.MsgCancelRevenue)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.TxProto.MsgCancelRevenue other = (com.evmos.revenue.v1.TxProto.MsgCancelRevenue) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getDeployerAddress()
+          .equals(other.getDeployerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + DEPLOYER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeployerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.TxProto.MsgCancelRevenue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCancelRevenue defines a message that cancels a registered Revenue
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.MsgCancelRevenue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.MsgCancelRevenue)
+        com.evmos.revenue.v1.TxProto.MsgCancelRevenueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.TxProto.MsgCancelRevenue.class, com.evmos.revenue.v1.TxProto.MsgCancelRevenue.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.TxProto.MsgCancelRevenue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        deployerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgCancelRevenue getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.TxProto.MsgCancelRevenue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgCancelRevenue build() {
+        com.evmos.revenue.v1.TxProto.MsgCancelRevenue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgCancelRevenue buildPartial() {
+        com.evmos.revenue.v1.TxProto.MsgCancelRevenue result = new com.evmos.revenue.v1.TxProto.MsgCancelRevenue(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.revenue.v1.TxProto.MsgCancelRevenue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deployerAddress_ = deployerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.TxProto.MsgCancelRevenue) {
+          return mergeFrom((com.evmos.revenue.v1.TxProto.MsgCancelRevenue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.TxProto.MsgCancelRevenue other) {
+        if (other == com.evmos.revenue.v1.TxProto.MsgCancelRevenue.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDeployerAddress().isEmpty()) {
+          deployerAddress_ = other.deployerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                deployerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in hex format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deployerAddress_ = "";
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The deployerAddress.
+       */
+      public java.lang.String getDeployerAddress() {
+        java.lang.Object ref = deployerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deployerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The bytes for deployerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeployerAddressBytes() {
+        java.lang.Object ref = deployerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deployerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeployerAddress() {
+        deployerAddress_ = getDefaultInstance().getDeployerAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the same as the origin EOA
+       * sending the transaction which deploys the contract
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The bytes for deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.MsgCancelRevenue)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.MsgCancelRevenue)
+    private static final com.evmos.revenue.v1.TxProto.MsgCancelRevenue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.TxProto.MsgCancelRevenue();
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelRevenue>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelRevenue>() {
+      @java.lang.Override
+      public MsgCancelRevenue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelRevenue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelRevenue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.TxProto.MsgCancelRevenue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelRevenueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.MsgCancelRevenueResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCancelRevenueResponse defines the MsgCancelRevenue response type
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.MsgCancelRevenueResponse}
+   */
+  public static final class MsgCancelRevenueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.MsgCancelRevenueResponse)
+      MsgCancelRevenueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelRevenueResponse.newBuilder() to construct.
+    private MsgCancelRevenueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelRevenueResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelRevenueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse.class, com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse other = (com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCancelRevenueResponse defines the MsgCancelRevenue response type
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.MsgCancelRevenueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.MsgCancelRevenueResponse)
+        com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse.class, com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgCancelRevenueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse build() {
+        com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse buildPartial() {
+        com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse result = new com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse) {
+          return mergeFrom((com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse other) {
+        if (other == com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.MsgCancelRevenueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.MsgCancelRevenueResponse)
+    private static final com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse();
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelRevenueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelRevenueResponse>() {
+      @java.lang.Override
+      public MsgCancelRevenueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelRevenueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelRevenueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.TxProto.MsgCancelRevenueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.MsgUpdateParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authority is the address of the governance account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * authority is the address of the governance account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * params defines the x/revenue parameters to update.
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the x/revenue parameters to update.
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.evmos.revenue.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the x/revenue parameters to update.
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgUpdateParams defines a Msg for updating the x/revenue module parameters.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.MsgUpdateParams}
+   */
+  public static final class MsgUpdateParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.MsgUpdateParams)
+      MsgUpdateParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateParams.newBuilder() to construct.
+    private MsgUpdateParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateParams() {
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.TxProto.MsgUpdateParams.class, com.evmos.revenue.v1.TxProto.MsgUpdateParams.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * authority is the address of the governance account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authority is the address of the governance account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.evmos.revenue.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params defines the x/revenue parameters to update.
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the x/revenue parameters to update.
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.evmos.revenue.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the x/revenue parameters to update.
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.TxProto.MsgUpdateParams)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.TxProto.MsgUpdateParams other = (com.evmos.revenue.v1.TxProto.MsgUpdateParams) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.TxProto.MsgUpdateParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateParams defines a Msg for updating the x/revenue module parameters.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.MsgUpdateParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.MsgUpdateParams)
+        com.evmos.revenue.v1.TxProto.MsgUpdateParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.TxProto.MsgUpdateParams.class, com.evmos.revenue.v1.TxProto.MsgUpdateParams.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.TxProto.MsgUpdateParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateParams getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.TxProto.MsgUpdateParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateParams build() {
+        com.evmos.revenue.v1.TxProto.MsgUpdateParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateParams buildPartial() {
+        com.evmos.revenue.v1.TxProto.MsgUpdateParams result = new com.evmos.revenue.v1.TxProto.MsgUpdateParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.revenue.v1.TxProto.MsgUpdateParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.TxProto.MsgUpdateParams) {
+          return mergeFrom((com.evmos.revenue.v1.TxProto.MsgUpdateParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.TxProto.MsgUpdateParams other) {
+        if (other == com.evmos.revenue.v1.TxProto.MsgUpdateParams.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.evmos.revenue.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.revenue.v1.GenesisProto.Params, com.evmos.revenue.v1.GenesisProto.Params.Builder, com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.evmos.revenue.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.evmos.revenue.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.evmos.revenue.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.evmos.revenue.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            params_ != null &&
+            params_ != com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the x/revenue parameters to update.
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.revenue.v1.GenesisProto.Params, com.evmos.revenue.v1.GenesisProto.Params.Builder, com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.evmos.revenue.v1.GenesisProto.Params, com.evmos.revenue.v1.GenesisProto.Params.Builder, com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.MsgUpdateParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.MsgUpdateParams)
+    private static final com.evmos.revenue.v1.TxProto.MsgUpdateParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.TxProto.MsgUpdateParams();
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateParams>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateParams>() {
+      @java.lang.Override
+      public MsgUpdateParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.TxProto.MsgUpdateParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.MsgUpdateParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgUpdateParamsResponse defines the response structure for executing a
+   * MsgUpdateParams message.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.MsgUpdateParamsResponse}
+   */
+  public static final class MsgUpdateParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.MsgUpdateParamsResponse)
+      MsgUpdateParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateParamsResponse.newBuilder() to construct.
+    private MsgUpdateParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse.class, com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse other = (com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateParamsResponse defines the response structure for executing a
+     * MsgUpdateParams message.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.MsgUpdateParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.MsgUpdateParamsResponse)
+        com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse.class, com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.TxProto.internal_static_evmos_revenue_v1_MsgUpdateParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse build() {
+        com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse buildPartial() {
+        com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse result = new com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse) {
+          return mergeFrom((com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse other) {
+        if (other == com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.MsgUpdateParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.MsgUpdateParamsResponse)
+    private static final com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse();
+    }
+
+    public static com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateParamsResponse>() {
+      @java.lang.Override
+      public MsgUpdateParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.TxProto.MsgUpdateParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_MsgRegisterRevenue_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_MsgRegisterRevenue_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_MsgRegisterRevenueResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_MsgRegisterRevenueResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_MsgUpdateRevenue_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_MsgUpdateRevenue_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_MsgUpdateRevenueResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_MsgUpdateRevenueResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_MsgCancelRevenue_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_MsgCancelRevenue_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_MsgCancelRevenueResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_MsgCancelRevenueResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_MsgUpdateParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_MsgUpdateParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_MsgUpdateParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_MsgUpdateParamsResponse_fieldAccessorTable;
 
@@ -99,11 +5595,11 @@ public final class TxProto {
       "enue/v1/tx/cancel_revenue\022\\\n\014UpdateParam" +
       "s\022!.evmos.revenue.v1.MsgUpdateParams\032).e" +
       "vmos.revenue.v1.MsgUpdateParamsResponseB" +
-      "\260\001\n\024com.evmos.revenue.v1B\007TxProtoP\001Z-git" +
-      "hub.com/evmos/evmos/v13/x/revenue/v1/typ" +
-      "es\242\002\003ERX\252\002\020Evmos.Revenue.V1\312\002\020Evmos\\Reve" +
-      "nue\\V1\342\002\034Evmos\\Revenue\\V1\\GPBMetadata\352\002\022" +
-      "Evmos::Revenue::V1b\006proto3"
+      "\256\001\n\024com.evmos.revenue.v1B\007TxProtoZ-githu" +
+      "b.com/evmos/evmos/v13/x/revenue/v1/types" +
+      "\242\002\003ERX\252\002\020Evmos.Revenue.V1\312\002\020Evmos\\Revenu" +
+      "e\\V1\342\002\034Evmos\\Revenue\\V1\\GPBMetadata\352\002\022Ev" +
+      "mos::Revenue::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

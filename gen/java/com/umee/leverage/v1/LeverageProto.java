@@ -14,14 +14,5528 @@ public final class LeverageProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Complete Liquidation Threshold determines how far between
+     * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+     * borrowed value must have progressed in order to allow a full liquidation.
+     * 0.3 indicates 30% of the way from LT to CV.
+     * See also `minimum_close_factor` for more information.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+     * @return The completeLiquidationThreshold.
+     */
+    java.lang.String getCompleteLiquidationThreshold();
+    /**
+     * <pre>
+     * Complete Liquidation Threshold determines how far between
+     * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+     * borrowed value must have progressed in order to allow a full liquidation.
+     * 0.3 indicates 30% of the way from LT to CV.
+     * See also `minimum_close_factor` for more information.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+     * @return The bytes for completeLiquidationThreshold.
+     */
+    com.google.protobuf.ByteString
+        getCompleteLiquidationThresholdBytes();
+
+    /**
+     * <pre>
+     * Close Factor determines the portion of a borrower's position that can be
+     * liquidated in a single event. Minimum Close Factor is Close Factor at
+     * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+     * be liquidated when the borrowed value passes the liquidation_threshold.
+     * close_factor scales linearly between minimum_close_factor and 1.0,
+     * reaching its maximum when borrowed value passes
+     * complete_liquidation_threshold. We can put it into the picture:
+     *
+     *             borrowed          CV := collateral
+     *             value                   value
+     *  --- | ------- | ----- | -------- | -------&gt;
+     *     LV                 CL
+     *
+     * LV = liquidation value = liquidation_threshold * CV
+     * CL = LV + (CV-LV) * complete_liquidation_threshold
+     *    is the borrowed value above which close factor will be 1.
+     *
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+     * @return The minimumCloseFactor.
+     */
+    java.lang.String getMinimumCloseFactor();
+    /**
+     * <pre>
+     * Close Factor determines the portion of a borrower's position that can be
+     * liquidated in a single event. Minimum Close Factor is Close Factor at
+     * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+     * be liquidated when the borrowed value passes the liquidation_threshold.
+     * close_factor scales linearly between minimum_close_factor and 1.0,
+     * reaching its maximum when borrowed value passes
+     * complete_liquidation_threshold. We can put it into the picture:
+     *
+     *             borrowed          CV := collateral
+     *             value                   value
+     *  --- | ------- | ----- | -------- | -------&gt;
+     *     LV                 CL
+     *
+     * LV = liquidation value = liquidation_threshold * CV
+     * CL = LV + (CV-LV) * complete_liquidation_threshold
+     *    is the borrowed value above which close factor will be 1.
+     *
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+     * @return The bytes for minimumCloseFactor.
+     */
+    com.google.protobuf.ByteString
+        getMinimumCloseFactorBytes();
+
+    /**
+     * <pre>
+     * Oracle Reward Factor determines the portion of interest accrued on
+     * borrows that is sent to the oracle module to fund its reward pool.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+     * @return The oracleRewardFactor.
+     */
+    java.lang.String getOracleRewardFactor();
+    /**
+     * <pre>
+     * Oracle Reward Factor determines the portion of interest accrued on
+     * borrows that is sent to the oracle module to fund its reward pool.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+     * @return The bytes for oracleRewardFactor.
+     */
+    com.google.protobuf.ByteString
+        getOracleRewardFactorBytes();
+
+    /**
+     * <pre>
+     * Small Liquidation Size determines the USD value at which a borrow is
+     * considered small enough to be liquidated in a single transaction, bypassing
+     * dynamic close factor.
+     * </pre>
+     *
+     * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+     * @return The smallLiquidationSize.
+     */
+    java.lang.String getSmallLiquidationSize();
+    /**
+     * <pre>
+     * Small Liquidation Size determines the USD value at which a borrow is
+     * considered small enough to be liquidated in a single transaction, bypassing
+     * dynamic close factor.
+     * </pre>
+     *
+     * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+     * @return The bytes for smallLiquidationSize.
+     */
+    com.google.protobuf.ByteString
+        getSmallLiquidationSizeBytes();
+
+    /**
+     * <pre>
+     * Direct Liquidation Fee is a reduction factor in liquidation incentive
+     * experienced by liquidators who choose to receive base assets instead of
+     * uTokens as liquidation rewards.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+     * @return The directLiquidationFee.
+     */
+    java.lang.String getDirectLiquidationFee();
+    /**
+     * <pre>
+     * Direct Liquidation Fee is a reduction factor in liquidation incentive
+     * experienced by liquidators who choose to receive base assets instead of
+     * uTokens as liquidation rewards.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+     * @return The bytes for directLiquidationFee.
+     */
+    com.google.protobuf.ByteString
+        getDirectLiquidationFeeBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the parameters for the leverage module.
+   * See https://github.com/umee-network/umee/blob/main/docs/design_docs/010-market-params.md
+   * for more details.
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      completeLiquidationThreshold_ = "";
+      minimumCloseFactor_ = "";
+      oracleRewardFactor_ = "";
+      smallLiquidationSize_ = "";
+      directLiquidationFee_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.LeverageProto.Params.class, com.umee.leverage.v1.LeverageProto.Params.Builder.class);
+    }
+
+    public static final int COMPLETE_LIQUIDATION_THRESHOLD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object completeLiquidationThreshold_ = "";
+    /**
+     * <pre>
+     * Complete Liquidation Threshold determines how far between
+     * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+     * borrowed value must have progressed in order to allow a full liquidation.
+     * 0.3 indicates 30% of the way from LT to CV.
+     * See also `minimum_close_factor` for more information.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+     * @return The completeLiquidationThreshold.
+     */
+    @java.lang.Override
+    public java.lang.String getCompleteLiquidationThreshold() {
+      java.lang.Object ref = completeLiquidationThreshold_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        completeLiquidationThreshold_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Complete Liquidation Threshold determines how far between
+     * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+     * borrowed value must have progressed in order to allow a full liquidation.
+     * 0.3 indicates 30% of the way from LT to CV.
+     * See also `minimum_close_factor` for more information.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+     * @return The bytes for completeLiquidationThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCompleteLiquidationThresholdBytes() {
+      java.lang.Object ref = completeLiquidationThreshold_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        completeLiquidationThreshold_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINIMUM_CLOSE_FACTOR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minimumCloseFactor_ = "";
+    /**
+     * <pre>
+     * Close Factor determines the portion of a borrower's position that can be
+     * liquidated in a single event. Minimum Close Factor is Close Factor at
+     * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+     * be liquidated when the borrowed value passes the liquidation_threshold.
+     * close_factor scales linearly between minimum_close_factor and 1.0,
+     * reaching its maximum when borrowed value passes
+     * complete_liquidation_threshold. We can put it into the picture:
+     *
+     *             borrowed          CV := collateral
+     *             value                   value
+     *  --- | ------- | ----- | -------- | -------&gt;
+     *     LV                 CL
+     *
+     * LV = liquidation value = liquidation_threshold * CV
+     * CL = LV + (CV-LV) * complete_liquidation_threshold
+     *    is the borrowed value above which close factor will be 1.
+     *
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+     * @return The minimumCloseFactor.
+     */
+    @java.lang.Override
+    public java.lang.String getMinimumCloseFactor() {
+      java.lang.Object ref = minimumCloseFactor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minimumCloseFactor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Close Factor determines the portion of a borrower's position that can be
+     * liquidated in a single event. Minimum Close Factor is Close Factor at
+     * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+     * be liquidated when the borrowed value passes the liquidation_threshold.
+     * close_factor scales linearly between minimum_close_factor and 1.0,
+     * reaching its maximum when borrowed value passes
+     * complete_liquidation_threshold. We can put it into the picture:
+     *
+     *             borrowed          CV := collateral
+     *             value                   value
+     *  --- | ------- | ----- | -------- | -------&gt;
+     *     LV                 CL
+     *
+     * LV = liquidation value = liquidation_threshold * CV
+     * CL = LV + (CV-LV) * complete_liquidation_threshold
+     *    is the borrowed value above which close factor will be 1.
+     *
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+     * @return The bytes for minimumCloseFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinimumCloseFactorBytes() {
+      java.lang.Object ref = minimumCloseFactor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minimumCloseFactor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORACLE_REWARD_FACTOR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object oracleRewardFactor_ = "";
+    /**
+     * <pre>
+     * Oracle Reward Factor determines the portion of interest accrued on
+     * borrows that is sent to the oracle module to fund its reward pool.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+     * @return The oracleRewardFactor.
+     */
+    @java.lang.Override
+    public java.lang.String getOracleRewardFactor() {
+      java.lang.Object ref = oracleRewardFactor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        oracleRewardFactor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Oracle Reward Factor determines the portion of interest accrued on
+     * borrows that is sent to the oracle module to fund its reward pool.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+     * @return The bytes for oracleRewardFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOracleRewardFactorBytes() {
+      java.lang.Object ref = oracleRewardFactor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oracleRewardFactor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SMALL_LIQUIDATION_SIZE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object smallLiquidationSize_ = "";
+    /**
+     * <pre>
+     * Small Liquidation Size determines the USD value at which a borrow is
+     * considered small enough to be liquidated in a single transaction, bypassing
+     * dynamic close factor.
+     * </pre>
+     *
+     * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+     * @return The smallLiquidationSize.
+     */
+    @java.lang.Override
+    public java.lang.String getSmallLiquidationSize() {
+      java.lang.Object ref = smallLiquidationSize_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        smallLiquidationSize_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Small Liquidation Size determines the USD value at which a borrow is
+     * considered small enough to be liquidated in a single transaction, bypassing
+     * dynamic close factor.
+     * </pre>
+     *
+     * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+     * @return The bytes for smallLiquidationSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSmallLiquidationSizeBytes() {
+      java.lang.Object ref = smallLiquidationSize_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        smallLiquidationSize_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DIRECT_LIQUIDATION_FEE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object directLiquidationFee_ = "";
+    /**
+     * <pre>
+     * Direct Liquidation Fee is a reduction factor in liquidation incentive
+     * experienced by liquidators who choose to receive base assets instead of
+     * uTokens as liquidation rewards.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+     * @return The directLiquidationFee.
+     */
+    @java.lang.Override
+    public java.lang.String getDirectLiquidationFee() {
+      java.lang.Object ref = directLiquidationFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        directLiquidationFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Direct Liquidation Fee is a reduction factor in liquidation incentive
+     * experienced by liquidators who choose to receive base assets instead of
+     * uTokens as liquidation rewards.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+     * @return The bytes for directLiquidationFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDirectLiquidationFeeBytes() {
+      java.lang.Object ref = directLiquidationFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        directLiquidationFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(completeLiquidationThreshold_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, completeLiquidationThreshold_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minimumCloseFactor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, minimumCloseFactor_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracleRewardFactor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oracleRewardFactor_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(smallLiquidationSize_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, smallLiquidationSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(directLiquidationFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, directLiquidationFee_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(completeLiquidationThreshold_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, completeLiquidationThreshold_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minimumCloseFactor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, minimumCloseFactor_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracleRewardFactor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oracleRewardFactor_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(smallLiquidationSize_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, smallLiquidationSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(directLiquidationFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, directLiquidationFee_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.LeverageProto.Params)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.LeverageProto.Params other = (com.umee.leverage.v1.LeverageProto.Params) obj;
+
+      if (!getCompleteLiquidationThreshold()
+          .equals(other.getCompleteLiquidationThreshold())) return false;
+      if (!getMinimumCloseFactor()
+          .equals(other.getMinimumCloseFactor())) return false;
+      if (!getOracleRewardFactor()
+          .equals(other.getOracleRewardFactor())) return false;
+      if (!getSmallLiquidationSize()
+          .equals(other.getSmallLiquidationSize())) return false;
+      if (!getDirectLiquidationFee()
+          .equals(other.getDirectLiquidationFee())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COMPLETE_LIQUIDATION_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getCompleteLiquidationThreshold().hashCode();
+      hash = (37 * hash) + MINIMUM_CLOSE_FACTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getMinimumCloseFactor().hashCode();
+      hash = (37 * hash) + ORACLE_REWARD_FACTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getOracleRewardFactor().hashCode();
+      hash = (37 * hash) + SMALL_LIQUIDATION_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getSmallLiquidationSize().hashCode();
+      hash = (37 * hash) + DIRECT_LIQUIDATION_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getDirectLiquidationFee().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.LeverageProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.LeverageProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.LeverageProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the parameters for the leverage module.
+     * See https://github.com/umee-network/umee/blob/main/docs/design_docs/010-market-params.md
+     * for more details.
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.Params)
+        com.umee.leverage.v1.LeverageProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.LeverageProto.Params.class, com.umee.leverage.v1.LeverageProto.Params.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.LeverageProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        completeLiquidationThreshold_ = "";
+        minimumCloseFactor_ = "";
+        oracleRewardFactor_ = "";
+        smallLiquidationSize_ = "";
+        directLiquidationFee_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.LeverageProto.Params getDefaultInstanceForType() {
+        return com.umee.leverage.v1.LeverageProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.LeverageProto.Params build() {
+        com.umee.leverage.v1.LeverageProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.LeverageProto.Params buildPartial() {
+        com.umee.leverage.v1.LeverageProto.Params result = new com.umee.leverage.v1.LeverageProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.LeverageProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.completeLiquidationThreshold_ = completeLiquidationThreshold_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minimumCloseFactor_ = minimumCloseFactor_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.oracleRewardFactor_ = oracleRewardFactor_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.smallLiquidationSize_ = smallLiquidationSize_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.directLiquidationFee_ = directLiquidationFee_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.LeverageProto.Params) {
+          return mergeFrom((com.umee.leverage.v1.LeverageProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.LeverageProto.Params other) {
+        if (other == com.umee.leverage.v1.LeverageProto.Params.getDefaultInstance()) return this;
+        if (!other.getCompleteLiquidationThreshold().isEmpty()) {
+          completeLiquidationThreshold_ = other.completeLiquidationThreshold_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMinimumCloseFactor().isEmpty()) {
+          minimumCloseFactor_ = other.minimumCloseFactor_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOracleRewardFactor().isEmpty()) {
+          oracleRewardFactor_ = other.oracleRewardFactor_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getSmallLiquidationSize().isEmpty()) {
+          smallLiquidationSize_ = other.smallLiquidationSize_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDirectLiquidationFee().isEmpty()) {
+          directLiquidationFee_ = other.directLiquidationFee_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                completeLiquidationThreshold_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              case 26: {
+                minimumCloseFactor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              case 34: {
+                oracleRewardFactor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              case 42: {
+                smallLiquidationSize_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 42
+              case 50: {
+                directLiquidationFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object completeLiquidationThreshold_ = "";
+      /**
+       * <pre>
+       * Complete Liquidation Threshold determines how far between
+       * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+       * borrowed value must have progressed in order to allow a full liquidation.
+       * 0.3 indicates 30% of the way from LT to CV.
+       * See also `minimum_close_factor` for more information.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+       * @return The completeLiquidationThreshold.
+       */
+      public java.lang.String getCompleteLiquidationThreshold() {
+        java.lang.Object ref = completeLiquidationThreshold_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          completeLiquidationThreshold_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Complete Liquidation Threshold determines how far between
+       * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+       * borrowed value must have progressed in order to allow a full liquidation.
+       * 0.3 indicates 30% of the way from LT to CV.
+       * See also `minimum_close_factor` for more information.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+       * @return The bytes for completeLiquidationThreshold.
+       */
+      public com.google.protobuf.ByteString
+          getCompleteLiquidationThresholdBytes() {
+        java.lang.Object ref = completeLiquidationThreshold_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          completeLiquidationThreshold_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Complete Liquidation Threshold determines how far between
+       * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+       * borrowed value must have progressed in order to allow a full liquidation.
+       * 0.3 indicates 30% of the way from LT to CV.
+       * See also `minimum_close_factor` for more information.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+       * @param value The completeLiquidationThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompleteLiquidationThreshold(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        completeLiquidationThreshold_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Complete Liquidation Threshold determines how far between
+       * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+       * borrowed value must have progressed in order to allow a full liquidation.
+       * 0.3 indicates 30% of the way from LT to CV.
+       * See also `minimum_close_factor` for more information.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompleteLiquidationThreshold() {
+        completeLiquidationThreshold_ = getDefaultInstance().getCompleteLiquidationThreshold();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Complete Liquidation Threshold determines how far between
+       * liquidation_threshold (LT) and collateral_value (CV) a borrower's
+       * borrowed value must have progressed in order to allow a full liquidation.
+       * 0.3 indicates 30% of the way from LT to CV.
+       * See also `minimum_close_factor` for more information.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string complete_liquidation_threshold = 2 [json_name = "completeLiquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"complete_liquidation_threshold&#92;""];</code>
+       * @param value The bytes for completeLiquidationThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompleteLiquidationThresholdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        completeLiquidationThreshold_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minimumCloseFactor_ = "";
+      /**
+       * <pre>
+       * Close Factor determines the portion of a borrower's position that can be
+       * liquidated in a single event. Minimum Close Factor is Close Factor at
+       * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+       * be liquidated when the borrowed value passes the liquidation_threshold.
+       * close_factor scales linearly between minimum_close_factor and 1.0,
+       * reaching its maximum when borrowed value passes
+       * complete_liquidation_threshold. We can put it into the picture:
+       *
+       *             borrowed          CV := collateral
+       *             value                   value
+       *  --- | ------- | ----- | -------- | -------&gt;
+       *     LV                 CL
+       *
+       * LV = liquidation value = liquidation_threshold * CV
+       * CL = LV + (CV-LV) * complete_liquidation_threshold
+       *    is the borrowed value above which close factor will be 1.
+       *
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+       * @return The minimumCloseFactor.
+       */
+      public java.lang.String getMinimumCloseFactor() {
+        java.lang.Object ref = minimumCloseFactor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minimumCloseFactor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Close Factor determines the portion of a borrower's position that can be
+       * liquidated in a single event. Minimum Close Factor is Close Factor at
+       * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+       * be liquidated when the borrowed value passes the liquidation_threshold.
+       * close_factor scales linearly between minimum_close_factor and 1.0,
+       * reaching its maximum when borrowed value passes
+       * complete_liquidation_threshold. We can put it into the picture:
+       *
+       *             borrowed          CV := collateral
+       *             value                   value
+       *  --- | ------- | ----- | -------- | -------&gt;
+       *     LV                 CL
+       *
+       * LV = liquidation value = liquidation_threshold * CV
+       * CL = LV + (CV-LV) * complete_liquidation_threshold
+       *    is the borrowed value above which close factor will be 1.
+       *
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+       * @return The bytes for minimumCloseFactor.
+       */
+      public com.google.protobuf.ByteString
+          getMinimumCloseFactorBytes() {
+        java.lang.Object ref = minimumCloseFactor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minimumCloseFactor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Close Factor determines the portion of a borrower's position that can be
+       * liquidated in a single event. Minimum Close Factor is Close Factor at
+       * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+       * be liquidated when the borrowed value passes the liquidation_threshold.
+       * close_factor scales linearly between minimum_close_factor and 1.0,
+       * reaching its maximum when borrowed value passes
+       * complete_liquidation_threshold. We can put it into the picture:
+       *
+       *             borrowed          CV := collateral
+       *             value                   value
+       *  --- | ------- | ----- | -------- | -------&gt;
+       *     LV                 CL
+       *
+       * LV = liquidation value = liquidation_threshold * CV
+       * CL = LV + (CV-LV) * complete_liquidation_threshold
+       *    is the borrowed value above which close factor will be 1.
+       *
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+       * @param value The minimumCloseFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinimumCloseFactor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minimumCloseFactor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Close Factor determines the portion of a borrower's position that can be
+       * liquidated in a single event. Minimum Close Factor is Close Factor at
+       * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+       * be liquidated when the borrowed value passes the liquidation_threshold.
+       * close_factor scales linearly between minimum_close_factor and 1.0,
+       * reaching its maximum when borrowed value passes
+       * complete_liquidation_threshold. We can put it into the picture:
+       *
+       *             borrowed          CV := collateral
+       *             value                   value
+       *  --- | ------- | ----- | -------- | -------&gt;
+       *     LV                 CL
+       *
+       * LV = liquidation value = liquidation_threshold * CV
+       * CL = LV + (CV-LV) * complete_liquidation_threshold
+       *    is the borrowed value above which close factor will be 1.
+       *
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinimumCloseFactor() {
+        minimumCloseFactor_ = getDefaultInstance().getMinimumCloseFactor();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Close Factor determines the portion of a borrower's position that can be
+       * liquidated in a single event. Minimum Close Factor is Close Factor at
+       * liquidation_threshold. 0.1 means that that 10% of the borrower position can
+       * be liquidated when the borrowed value passes the liquidation_threshold.
+       * close_factor scales linearly between minimum_close_factor and 1.0,
+       * reaching its maximum when borrowed value passes
+       * complete_liquidation_threshold. We can put it into the picture:
+       *
+       *             borrowed          CV := collateral
+       *             value                   value
+       *  --- | ------- | ----- | -------- | -------&gt;
+       *     LV                 CL
+       *
+       * LV = liquidation value = liquidation_threshold * CV
+       * CL = LV + (CV-LV) * complete_liquidation_threshold
+       *    is the borrowed value above which close factor will be 1.
+       *
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string minimum_close_factor = 3 [json_name = "minimumCloseFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_close_factor&#92;""];</code>
+       * @param value The bytes for minimumCloseFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinimumCloseFactorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minimumCloseFactor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object oracleRewardFactor_ = "";
+      /**
+       * <pre>
+       * Oracle Reward Factor determines the portion of interest accrued on
+       * borrows that is sent to the oracle module to fund its reward pool.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+       * @return The oracleRewardFactor.
+       */
+      public java.lang.String getOracleRewardFactor() {
+        java.lang.Object ref = oracleRewardFactor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          oracleRewardFactor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Oracle Reward Factor determines the portion of interest accrued on
+       * borrows that is sent to the oracle module to fund its reward pool.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+       * @return The bytes for oracleRewardFactor.
+       */
+      public com.google.protobuf.ByteString
+          getOracleRewardFactorBytes() {
+        java.lang.Object ref = oracleRewardFactor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oracleRewardFactor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Oracle Reward Factor determines the portion of interest accrued on
+       * borrows that is sent to the oracle module to fund its reward pool.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+       * @param value The oracleRewardFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleRewardFactor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        oracleRewardFactor_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Oracle Reward Factor determines the portion of interest accrued on
+       * borrows that is sent to the oracle module to fund its reward pool.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracleRewardFactor() {
+        oracleRewardFactor_ = getDefaultInstance().getOracleRewardFactor();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Oracle Reward Factor determines the portion of interest accrued on
+       * borrows that is sent to the oracle module to fund its reward pool.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string oracle_reward_factor = 4 [json_name = "oracleRewardFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"oracle_reward_factor&#92;""];</code>
+       * @param value The bytes for oracleRewardFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleRewardFactorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        oracleRewardFactor_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object smallLiquidationSize_ = "";
+      /**
+       * <pre>
+       * Small Liquidation Size determines the USD value at which a borrow is
+       * considered small enough to be liquidated in a single transaction, bypassing
+       * dynamic close factor.
+       * </pre>
+       *
+       * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+       * @return The smallLiquidationSize.
+       */
+      public java.lang.String getSmallLiquidationSize() {
+        java.lang.Object ref = smallLiquidationSize_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          smallLiquidationSize_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Small Liquidation Size determines the USD value at which a borrow is
+       * considered small enough to be liquidated in a single transaction, bypassing
+       * dynamic close factor.
+       * </pre>
+       *
+       * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+       * @return The bytes for smallLiquidationSize.
+       */
+      public com.google.protobuf.ByteString
+          getSmallLiquidationSizeBytes() {
+        java.lang.Object ref = smallLiquidationSize_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          smallLiquidationSize_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Small Liquidation Size determines the USD value at which a borrow is
+       * considered small enough to be liquidated in a single transaction, bypassing
+       * dynamic close factor.
+       * </pre>
+       *
+       * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+       * @param value The smallLiquidationSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSmallLiquidationSize(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        smallLiquidationSize_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Small Liquidation Size determines the USD value at which a borrow is
+       * considered small enough to be liquidated in a single transaction, bypassing
+       * dynamic close factor.
+       * </pre>
+       *
+       * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSmallLiquidationSize() {
+        smallLiquidationSize_ = getDefaultInstance().getSmallLiquidationSize();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Small Liquidation Size determines the USD value at which a borrow is
+       * considered small enough to be liquidated in a single transaction, bypassing
+       * dynamic close factor.
+       * </pre>
+       *
+       * <code>string small_liquidation_size = 5 [json_name = "smallLiquidationSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"small_liquidation_size&#92;""];</code>
+       * @param value The bytes for smallLiquidationSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSmallLiquidationSizeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        smallLiquidationSize_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object directLiquidationFee_ = "";
+      /**
+       * <pre>
+       * Direct Liquidation Fee is a reduction factor in liquidation incentive
+       * experienced by liquidators who choose to receive base assets instead of
+       * uTokens as liquidation rewards.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+       * @return The directLiquidationFee.
+       */
+      public java.lang.String getDirectLiquidationFee() {
+        java.lang.Object ref = directLiquidationFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          directLiquidationFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Direct Liquidation Fee is a reduction factor in liquidation incentive
+       * experienced by liquidators who choose to receive base assets instead of
+       * uTokens as liquidation rewards.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+       * @return The bytes for directLiquidationFee.
+       */
+      public com.google.protobuf.ByteString
+          getDirectLiquidationFeeBytes() {
+        java.lang.Object ref = directLiquidationFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          directLiquidationFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Direct Liquidation Fee is a reduction factor in liquidation incentive
+       * experienced by liquidators who choose to receive base assets instead of
+       * uTokens as liquidation rewards.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+       * @param value The directLiquidationFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDirectLiquidationFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        directLiquidationFee_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Direct Liquidation Fee is a reduction factor in liquidation incentive
+       * experienced by liquidators who choose to receive base assets instead of
+       * uTokens as liquidation rewards.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDirectLiquidationFee() {
+        directLiquidationFee_ = getDefaultInstance().getDirectLiquidationFee();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Direct Liquidation Fee is a reduction factor in liquidation incentive
+       * experienced by liquidators who choose to receive base assets instead of
+       * uTokens as liquidation rewards.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string direct_liquidation_fee = 6 [json_name = "directLiquidationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"direct_liquidation_fee&#92;""];</code>
+       * @param value The bytes for directLiquidationFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDirectLiquidationFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        directLiquidationFee_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.Params)
+    private static final com.umee.leverage.v1.LeverageProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.LeverageProto.Params();
+    }
+
+    public static com.umee.leverage.v1.LeverageProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.LeverageProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.Token)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Base Denom is the denomination of the underlying base token. Must be the base
+     * denom as registered in the Bank module (so IBC denom for IBC tokens).
+     * </pre>
+     *
+     * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The baseDenom.
+     */
+    java.lang.String getBaseDenom();
+    /**
+     * <pre>
+     * Base Denom is the denomination of the underlying base token. Must be the base
+     * denom as registered in the Bank module (so IBC denom for IBC tokens).
+     * </pre>
+     *
+     * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The bytes for baseDenom.
+     */
+    com.google.protobuf.ByteString
+        getBaseDenomBytes();
+
+    /**
+     * <pre>
+     * Reserve Factor defines what portion of accrued interest goes to reserves
+     * when this token is borrowed.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+     * @return The reserveFactor.
+     */
+    java.lang.String getReserveFactor();
+    /**
+     * <pre>
+     * Reserve Factor defines what portion of accrued interest goes to reserves
+     * when this token is borrowed.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+     * @return The bytes for reserveFactor.
+     */
+    com.google.protobuf.ByteString
+        getReserveFactorBytes();
+
+    /**
+     * <pre>
+     * Collateral Weight defines what portion of the total value of the asset
+     * can contribute to a users borrowing power. If the collateral weight is
+     * zero, using this asset as collateral against borrowing will be disabled.
+     * Must be smaller than `liquidation_threshold`.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+     * @return The collateralWeight.
+     */
+    java.lang.String getCollateralWeight();
+    /**
+     * <pre>
+     * Collateral Weight defines what portion of the total value of the asset
+     * can contribute to a users borrowing power. If the collateral weight is
+     * zero, using this asset as collateral against borrowing will be disabled.
+     * Must be smaller than `liquidation_threshold`.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+     * @return The bytes for collateralWeight.
+     */
+    com.google.protobuf.ByteString
+        getCollateralWeightBytes();
+
+    /**
+     * <pre>
+     * Liquidation Threshold defines what amount of the total value of the
+     * asset as a collateral can contribute to a user's liquidation threshold
+     * (above which they become eligible for liquidation).
+     * Must be bigger than `collateral_weight`.
+     * Valid values: 0-1.
+     * See also: min_close_factor.
+     * </pre>
+     *
+     * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+     * @return The liquidationThreshold.
+     */
+    java.lang.String getLiquidationThreshold();
+    /**
+     * <pre>
+     * Liquidation Threshold defines what amount of the total value of the
+     * asset as a collateral can contribute to a user's liquidation threshold
+     * (above which they become eligible for liquidation).
+     * Must be bigger than `collateral_weight`.
+     * Valid values: 0-1.
+     * See also: min_close_factor.
+     * </pre>
+     *
+     * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+     * @return The bytes for liquidationThreshold.
+     */
+    com.google.protobuf.ByteString
+        getLiquidationThresholdBytes();
+
+    /**
+     * <pre>
+     * Base Borrow Rate defines the minimum interest rate for borrowing this
+     * asset.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+     * @return The baseBorrowRate.
+     */
+    java.lang.String getBaseBorrowRate();
+    /**
+     * <pre>
+     * Base Borrow Rate defines the minimum interest rate for borrowing this
+     * asset.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+     * @return The bytes for baseBorrowRate.
+     */
+    com.google.protobuf.ByteString
+        getBaseBorrowRateBytes();
+
+    /**
+     * <pre>
+     * Kink Borrow Rate defines the interest rate for borrowing this
+     * asset when supply utilization is equal to 'kink_utilization'.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+     * @return The kinkBorrowRate.
+     */
+    java.lang.String getKinkBorrowRate();
+    /**
+     * <pre>
+     * Kink Borrow Rate defines the interest rate for borrowing this
+     * asset when supply utilization is equal to 'kink_utilization'.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+     * @return The bytes for kinkBorrowRate.
+     */
+    com.google.protobuf.ByteString
+        getKinkBorrowRateBytes();
+
+    /**
+     * <pre>
+     * Max Borrow Rate defines the interest rate for borrowing this
+     * asset when supply utilization is at its maximum.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+     * @return The maxBorrowRate.
+     */
+    java.lang.String getMaxBorrowRate();
+    /**
+     * <pre>
+     * Max Borrow Rate defines the interest rate for borrowing this
+     * asset when supply utilization is at its maximum.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+     * @return The bytes for maxBorrowRate.
+     */
+    com.google.protobuf.ByteString
+        getMaxBorrowRateBytes();
+
+    /**
+     * <pre>
+     * Kink Utilization defines the supply utilization value where
+     * the kink in the borrow interest rate function occurs.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+     * @return The kinkUtilization.
+     */
+    java.lang.String getKinkUtilization();
+    /**
+     * <pre>
+     * Kink Utilization defines the supply utilization value where
+     * the kink in the borrow interest rate function occurs.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+     * @return The bytes for kinkUtilization.
+     */
+    com.google.protobuf.ByteString
+        getKinkUtilizationBytes();
+
+    /**
+     * <pre>
+     * Liquidation Incentive determines the portion of bonus collateral of
+     * a token type liquidators receive as a liquidation reward.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+     * @return The liquidationIncentive.
+     */
+    java.lang.String getLiquidationIncentive();
+    /**
+     * <pre>
+     * Liquidation Incentive determines the portion of bonus collateral of
+     * a token type liquidators receive as a liquidation reward.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+     * @return The bytes for liquidationIncentive.
+     */
+    com.google.protobuf.ByteString
+        getLiquidationIncentiveBytes();
+
+    /**
+     * <pre>
+     * Symbol Denom is the human readable denomination of this token.
+     * </pre>
+     *
+     * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+     * @return The symbolDenom.
+     */
+    java.lang.String getSymbolDenom();
+    /**
+     * <pre>
+     * Symbol Denom is the human readable denomination of this token.
+     * </pre>
+     *
+     * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+     * @return The bytes for symbolDenom.
+     */
+    com.google.protobuf.ByteString
+        getSymbolDenomBytes();
+
+    /**
+     * <pre>
+     * Exponent is the power of ten by which to multiply, in order to convert
+     * an amount of the token denoted in its symbol denom to the actual amount
+     * of its base denom.
+     * </pre>
+     *
+     * <code>uint32 exponent = 11 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+     * @return The exponent.
+     */
+    int getExponent();
+
+    /**
+     * <pre>
+     * Enable Msg Supply allows supplying for lending or collateral using this
+     * token. `false` means that a token can no longer be supplied.
+     * Note that withdrawing is always enabled. Disabling supply would
+     * be one step in phasing out an asset type.
+     * </pre>
+     *
+     * <code>bool enable_msg_supply = 12 [json_name = "enableMsgSupply", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_supply&#92;""];</code>
+     * @return The enableMsgSupply.
+     */
+    boolean getEnableMsgSupply();
+
+    /**
+     * <pre>
+     * Enable Msg Borrow allows borrowing of this token. Note that repaying is
+     * always enabled. Disabling borrowing would be one step in phasing out an
+     * asset type, but could also be used from the start for asset types meant
+     * to be collateral only, like meTokens.
+     * </pre>
+     *
+     * <code>bool enable_msg_borrow = 13 [json_name = "enableMsgBorrow", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_borrow&#92;""];</code>
+     * @return The enableMsgBorrow.
+     */
+    boolean getEnableMsgBorrow();
+
+    /**
+     * <pre>
+     * Blacklist should only be used to eliminate an asset completely. A blacklisted
+     * asset is treated as though its oracle price is zero, and thus ignored by
+     * calculations such as collateral value and borrow limit. Can still be repaid
+     * or withdrawn, but not liquidated. A blacklisted token must have enable_msg_supply
+     * and enable_msg_borrow set to false. Such tokens can be safely removed from the
+     * oracle and price feeder as well.
+     * </pre>
+     *
+     * <code>bool blacklist = 14 [json_name = "blacklist"];</code>
+     * @return The blacklist.
+     */
+    boolean getBlacklist();
+
+    /**
+     * <pre>
+     * Max Collateral Share specifies how much of the system's overall collateral
+     * can be provided by a given token. 1.0 means that the token has no restriction.
+     * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+     * @return The maxCollateralShare.
+     */
+    java.lang.String getMaxCollateralShare();
+    /**
+     * <pre>
+     * Max Collateral Share specifies how much of the system's overall collateral
+     * can be provided by a given token. 1.0 means that the token has no restriction.
+     * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+     * @return The bytes for maxCollateralShare.
+     */
+    com.google.protobuf.ByteString
+        getMaxCollateralShareBytes();
+
+    /**
+     * <pre>
+     * Max Supply Utilization specifies the maximum supply utilization a token is
+     * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+     * the supply utilization is above `max_supply_utilization`.
+     *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+     * @return The maxSupplyUtilization.
+     */
+    java.lang.String getMaxSupplyUtilization();
+    /**
+     * <pre>
+     * Max Supply Utilization specifies the maximum supply utilization a token is
+     * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+     * the supply utilization is above `max_supply_utilization`.
+     *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+     * @return The bytes for maxSupplyUtilization.
+     */
+    com.google.protobuf.ByteString
+        getMaxSupplyUtilizationBytes();
+
+    /**
+     * <pre>
+     * Min Collateral Liquidity specifies min limit for the following function:
+     *    collateral_liquidity(token) = available(token) / total_collateral(token)
+     * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+     * result of such action invalidates min_collateral_liquidity.
+     * Liquidity can only drop below this value due to interest or liquidations.
+     * The goal is to assure that there is enough available (not borrowed) token to be available
+     * for withdraw when there is a collateral liquidation and the liquidator needs to
+     * withdraw uToken.
+     * Valid values: 0 - inf
+     * </pre>
+     *
+     * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+     * @return The minCollateralLiquidity.
+     */
+    java.lang.String getMinCollateralLiquidity();
+    /**
+     * <pre>
+     * Min Collateral Liquidity specifies min limit for the following function:
+     *    collateral_liquidity(token) = available(token) / total_collateral(token)
+     * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+     * result of such action invalidates min_collateral_liquidity.
+     * Liquidity can only drop below this value due to interest or liquidations.
+     * The goal is to assure that there is enough available (not borrowed) token to be available
+     * for withdraw when there is a collateral liquidation and the liquidator needs to
+     * withdraw uToken.
+     * Valid values: 0 - inf
+     * </pre>
+     *
+     * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+     * @return The bytes for minCollateralLiquidity.
+     */
+    com.google.protobuf.ByteString
+        getMinCollateralLiquidityBytes();
+
+    /**
+     * <pre>
+     * Max Supply is the maximum amount of tokens the protocol can hold.
+     * Adding more supply of the given token to the protocol will return an error.
+     * Must be a non negative value. 0 means that there is no limit.
+     * To mark a token as not valid for supply, `msg_supply` must be set to false.
+     * </pre>
+     *
+     * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The maxSupply.
+     */
+    java.lang.String getMaxSupply();
+    /**
+     * <pre>
+     * Max Supply is the maximum amount of tokens the protocol can hold.
+     * Adding more supply of the given token to the protocol will return an error.
+     * Must be a non negative value. 0 means that there is no limit.
+     * To mark a token as not valid for supply, `msg_supply` must be set to false.
+     * </pre>
+     *
+     * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The bytes for maxSupply.
+     */
+    com.google.protobuf.ByteString
+        getMaxSupplyBytes();
+
+    /**
+     * <pre>
+     * Historic Medians is the number of median historic prices to request from
+     * the oracle module when evaluating new borrow positions containing this token.
+     * All MsgBorrow, MsgWithdraw, and MsgDecollateralize must result in healthy
+     * borrow positions under both current and historic prices. The default value of
+     * zero for this field causes current price to be used in those calculations
+     * for the affected Token.
+     * The time span covered by the historic median will be:
+     *     oracle.Params.median_stamp_period * oracle.Params.historic_stamp_period * historic_medians.
+     * </pre>
+     *
+     * <code>uint32 historic_medians = 19 [json_name = "historicMedians", (.gogoproto.moretags) = "yaml:&#92;"historic_medians&#92;""];</code>
+     * @return The historicMedians.
+     */
+    int getHistoricMedians();
+  }
+  /**
+   * <pre>
+   * Token defines a token, along with its metadata and parameters, in the Umee
+   * capital facility that can be supplied and borrowed.
+   * See https://github.com/umee-network/umee/blob/main/docs/design_docs/010-market-params.md
+   * for more details.
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.Token}
+   */
+  public static final class Token extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.Token)
+      TokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Token.newBuilder() to construct.
+    private Token(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Token() {
+      baseDenom_ = "";
+      reserveFactor_ = "";
+      collateralWeight_ = "";
+      liquidationThreshold_ = "";
+      baseBorrowRate_ = "";
+      kinkBorrowRate_ = "";
+      maxBorrowRate_ = "";
+      kinkUtilization_ = "";
+      liquidationIncentive_ = "";
+      symbolDenom_ = "";
+      maxCollateralShare_ = "";
+      maxSupplyUtilization_ = "";
+      minCollateralLiquidity_ = "";
+      maxSupply_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Token();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Token_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Token_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.LeverageProto.Token.class, com.umee.leverage.v1.LeverageProto.Token.Builder.class);
+    }
+
+    public static final int BASE_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseDenom_ = "";
+    /**
+     * <pre>
+     * Base Denom is the denomination of the underlying base token. Must be the base
+     * denom as registered in the Bank module (so IBC denom for IBC tokens).
+     * </pre>
+     *
+     * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The baseDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseDenom() {
+      java.lang.Object ref = baseDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Base Denom is the denomination of the underlying base token. Must be the base
+     * denom as registered in the Bank module (so IBC denom for IBC tokens).
+     * </pre>
+     *
+     * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The bytes for baseDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseDenomBytes() {
+      java.lang.Object ref = baseDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESERVE_FACTOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reserveFactor_ = "";
+    /**
+     * <pre>
+     * Reserve Factor defines what portion of accrued interest goes to reserves
+     * when this token is borrowed.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+     * @return The reserveFactor.
+     */
+    @java.lang.Override
+    public java.lang.String getReserveFactor() {
+      java.lang.Object ref = reserveFactor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reserveFactor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Reserve Factor defines what portion of accrued interest goes to reserves
+     * when this token is borrowed.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+     * @return The bytes for reserveFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReserveFactorBytes() {
+      java.lang.Object ref = reserveFactor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reserveFactor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_WEIGHT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collateralWeight_ = "";
+    /**
+     * <pre>
+     * Collateral Weight defines what portion of the total value of the asset
+     * can contribute to a users borrowing power. If the collateral weight is
+     * zero, using this asset as collateral against borrowing will be disabled.
+     * Must be smaller than `liquidation_threshold`.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+     * @return The collateralWeight.
+     */
+    @java.lang.Override
+    public java.lang.String getCollateralWeight() {
+      java.lang.Object ref = collateralWeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collateralWeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Collateral Weight defines what portion of the total value of the asset
+     * can contribute to a users borrowing power. If the collateral weight is
+     * zero, using this asset as collateral against borrowing will be disabled.
+     * Must be smaller than `liquidation_threshold`.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+     * @return The bytes for collateralWeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollateralWeightBytes() {
+      java.lang.Object ref = collateralWeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collateralWeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIQUIDATION_THRESHOLD_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidationThreshold_ = "";
+    /**
+     * <pre>
+     * Liquidation Threshold defines what amount of the total value of the
+     * asset as a collateral can contribute to a user's liquidation threshold
+     * (above which they become eligible for liquidation).
+     * Must be bigger than `collateral_weight`.
+     * Valid values: 0-1.
+     * See also: min_close_factor.
+     * </pre>
+     *
+     * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+     * @return The liquidationThreshold.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidationThreshold() {
+      java.lang.Object ref = liquidationThreshold_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidationThreshold_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Liquidation Threshold defines what amount of the total value of the
+     * asset as a collateral can contribute to a user's liquidation threshold
+     * (above which they become eligible for liquidation).
+     * Must be bigger than `collateral_weight`.
+     * Valid values: 0-1.
+     * See also: min_close_factor.
+     * </pre>
+     *
+     * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+     * @return The bytes for liquidationThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidationThresholdBytes() {
+      java.lang.Object ref = liquidationThreshold_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidationThreshold_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BASE_BORROW_RATE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseBorrowRate_ = "";
+    /**
+     * <pre>
+     * Base Borrow Rate defines the minimum interest rate for borrowing this
+     * asset.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+     * @return The baseBorrowRate.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseBorrowRate() {
+      java.lang.Object ref = baseBorrowRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseBorrowRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Base Borrow Rate defines the minimum interest rate for borrowing this
+     * asset.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+     * @return The bytes for baseBorrowRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseBorrowRateBytes() {
+      java.lang.Object ref = baseBorrowRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseBorrowRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KINK_BORROW_RATE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object kinkBorrowRate_ = "";
+    /**
+     * <pre>
+     * Kink Borrow Rate defines the interest rate for borrowing this
+     * asset when supply utilization is equal to 'kink_utilization'.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+     * @return The kinkBorrowRate.
+     */
+    @java.lang.Override
+    public java.lang.String getKinkBorrowRate() {
+      java.lang.Object ref = kinkBorrowRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        kinkBorrowRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Kink Borrow Rate defines the interest rate for borrowing this
+     * asset when supply utilization is equal to 'kink_utilization'.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+     * @return The bytes for kinkBorrowRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKinkBorrowRateBytes() {
+      java.lang.Object ref = kinkBorrowRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        kinkBorrowRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_BORROW_RATE_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxBorrowRate_ = "";
+    /**
+     * <pre>
+     * Max Borrow Rate defines the interest rate for borrowing this
+     * asset when supply utilization is at its maximum.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+     * @return The maxBorrowRate.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxBorrowRate() {
+      java.lang.Object ref = maxBorrowRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxBorrowRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Max Borrow Rate defines the interest rate for borrowing this
+     * asset when supply utilization is at its maximum.
+     * Valid values: 0-∞
+     * </pre>
+     *
+     * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+     * @return The bytes for maxBorrowRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxBorrowRateBytes() {
+      java.lang.Object ref = maxBorrowRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxBorrowRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KINK_UTILIZATION_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object kinkUtilization_ = "";
+    /**
+     * <pre>
+     * Kink Utilization defines the supply utilization value where
+     * the kink in the borrow interest rate function occurs.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+     * @return The kinkUtilization.
+     */
+    @java.lang.Override
+    public java.lang.String getKinkUtilization() {
+      java.lang.Object ref = kinkUtilization_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        kinkUtilization_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Kink Utilization defines the supply utilization value where
+     * the kink in the borrow interest rate function occurs.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+     * @return The bytes for kinkUtilization.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKinkUtilizationBytes() {
+      java.lang.Object ref = kinkUtilization_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        kinkUtilization_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIQUIDATION_INCENTIVE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidationIncentive_ = "";
+    /**
+     * <pre>
+     * Liquidation Incentive determines the portion of bonus collateral of
+     * a token type liquidators receive as a liquidation reward.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+     * @return The liquidationIncentive.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidationIncentive() {
+      java.lang.Object ref = liquidationIncentive_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidationIncentive_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Liquidation Incentive determines the portion of bonus collateral of
+     * a token type liquidators receive as a liquidation reward.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+     * @return The bytes for liquidationIncentive.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidationIncentiveBytes() {
+      java.lang.Object ref = liquidationIncentive_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidationIncentive_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SYMBOL_DENOM_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbolDenom_ = "";
+    /**
+     * <pre>
+     * Symbol Denom is the human readable denomination of this token.
+     * </pre>
+     *
+     * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+     * @return The symbolDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbolDenom() {
+      java.lang.Object ref = symbolDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbolDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Symbol Denom is the human readable denomination of this token.
+     * </pre>
+     *
+     * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+     * @return The bytes for symbolDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolDenomBytes() {
+      java.lang.Object ref = symbolDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbolDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPONENT_FIELD_NUMBER = 11;
+    private int exponent_ = 0;
+    /**
+     * <pre>
+     * Exponent is the power of ten by which to multiply, in order to convert
+     * an amount of the token denoted in its symbol denom to the actual amount
+     * of its base denom.
+     * </pre>
+     *
+     * <code>uint32 exponent = 11 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+     * @return The exponent.
+     */
+    @java.lang.Override
+    public int getExponent() {
+      return exponent_;
+    }
+
+    public static final int ENABLE_MSG_SUPPLY_FIELD_NUMBER = 12;
+    private boolean enableMsgSupply_ = false;
+    /**
+     * <pre>
+     * Enable Msg Supply allows supplying for lending or collateral using this
+     * token. `false` means that a token can no longer be supplied.
+     * Note that withdrawing is always enabled. Disabling supply would
+     * be one step in phasing out an asset type.
+     * </pre>
+     *
+     * <code>bool enable_msg_supply = 12 [json_name = "enableMsgSupply", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_supply&#92;""];</code>
+     * @return The enableMsgSupply.
+     */
+    @java.lang.Override
+    public boolean getEnableMsgSupply() {
+      return enableMsgSupply_;
+    }
+
+    public static final int ENABLE_MSG_BORROW_FIELD_NUMBER = 13;
+    private boolean enableMsgBorrow_ = false;
+    /**
+     * <pre>
+     * Enable Msg Borrow allows borrowing of this token. Note that repaying is
+     * always enabled. Disabling borrowing would be one step in phasing out an
+     * asset type, but could also be used from the start for asset types meant
+     * to be collateral only, like meTokens.
+     * </pre>
+     *
+     * <code>bool enable_msg_borrow = 13 [json_name = "enableMsgBorrow", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_borrow&#92;""];</code>
+     * @return The enableMsgBorrow.
+     */
+    @java.lang.Override
+    public boolean getEnableMsgBorrow() {
+      return enableMsgBorrow_;
+    }
+
+    public static final int BLACKLIST_FIELD_NUMBER = 14;
+    private boolean blacklist_ = false;
+    /**
+     * <pre>
+     * Blacklist should only be used to eliminate an asset completely. A blacklisted
+     * asset is treated as though its oracle price is zero, and thus ignored by
+     * calculations such as collateral value and borrow limit. Can still be repaid
+     * or withdrawn, but not liquidated. A blacklisted token must have enable_msg_supply
+     * and enable_msg_borrow set to false. Such tokens can be safely removed from the
+     * oracle and price feeder as well.
+     * </pre>
+     *
+     * <code>bool blacklist = 14 [json_name = "blacklist"];</code>
+     * @return The blacklist.
+     */
+    @java.lang.Override
+    public boolean getBlacklist() {
+      return blacklist_;
+    }
+
+    public static final int MAX_COLLATERAL_SHARE_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxCollateralShare_ = "";
+    /**
+     * <pre>
+     * Max Collateral Share specifies how much of the system's overall collateral
+     * can be provided by a given token. 1.0 means that the token has no restriction.
+     * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+     * @return The maxCollateralShare.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxCollateralShare() {
+      java.lang.Object ref = maxCollateralShare_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxCollateralShare_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Max Collateral Share specifies how much of the system's overall collateral
+     * can be provided by a given token. 1.0 means that the token has no restriction.
+     * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+     * @return The bytes for maxCollateralShare.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxCollateralShareBytes() {
+      java.lang.Object ref = maxCollateralShare_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxCollateralShare_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_SUPPLY_UTILIZATION_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxSupplyUtilization_ = "";
+    /**
+     * <pre>
+     * Max Supply Utilization specifies the maximum supply utilization a token is
+     * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+     * the supply utilization is above `max_supply_utilization`.
+     *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+     * @return The maxSupplyUtilization.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxSupplyUtilization() {
+      java.lang.Object ref = maxSupplyUtilization_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxSupplyUtilization_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Max Supply Utilization specifies the maximum supply utilization a token is
+     * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+     * the supply utilization is above `max_supply_utilization`.
+     *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+     * Valid values: 0-1.
+     * </pre>
+     *
+     * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+     * @return The bytes for maxSupplyUtilization.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxSupplyUtilizationBytes() {
+      java.lang.Object ref = maxSupplyUtilization_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxSupplyUtilization_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_COLLATERAL_LIQUIDITY_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minCollateralLiquidity_ = "";
+    /**
+     * <pre>
+     * Min Collateral Liquidity specifies min limit for the following function:
+     *    collateral_liquidity(token) = available(token) / total_collateral(token)
+     * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+     * result of such action invalidates min_collateral_liquidity.
+     * Liquidity can only drop below this value due to interest or liquidations.
+     * The goal is to assure that there is enough available (not borrowed) token to be available
+     * for withdraw when there is a collateral liquidation and the liquidator needs to
+     * withdraw uToken.
+     * Valid values: 0 - inf
+     * </pre>
+     *
+     * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+     * @return The minCollateralLiquidity.
+     */
+    @java.lang.Override
+    public java.lang.String getMinCollateralLiquidity() {
+      java.lang.Object ref = minCollateralLiquidity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minCollateralLiquidity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Min Collateral Liquidity specifies min limit for the following function:
+     *    collateral_liquidity(token) = available(token) / total_collateral(token)
+     * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+     * result of such action invalidates min_collateral_liquidity.
+     * Liquidity can only drop below this value due to interest or liquidations.
+     * The goal is to assure that there is enough available (not borrowed) token to be available
+     * for withdraw when there is a collateral liquidation and the liquidator needs to
+     * withdraw uToken.
+     * Valid values: 0 - inf
+     * </pre>
+     *
+     * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+     * @return The bytes for minCollateralLiquidity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinCollateralLiquidityBytes() {
+      java.lang.Object ref = minCollateralLiquidity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minCollateralLiquidity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_SUPPLY_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxSupply_ = "";
+    /**
+     * <pre>
+     * Max Supply is the maximum amount of tokens the protocol can hold.
+     * Adding more supply of the given token to the protocol will return an error.
+     * Must be a non negative value. 0 means that there is no limit.
+     * To mark a token as not valid for supply, `msg_supply` must be set to false.
+     * </pre>
+     *
+     * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The maxSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxSupply() {
+      java.lang.Object ref = maxSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Max Supply is the maximum amount of tokens the protocol can hold.
+     * Adding more supply of the given token to the protocol will return an error.
+     * Must be a non negative value. 0 means that there is no limit.
+     * To mark a token as not valid for supply, `msg_supply` must be set to false.
+     * </pre>
+     *
+     * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The bytes for maxSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxSupplyBytes() {
+      java.lang.Object ref = maxSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HISTORIC_MEDIANS_FIELD_NUMBER = 19;
+    private int historicMedians_ = 0;
+    /**
+     * <pre>
+     * Historic Medians is the number of median historic prices to request from
+     * the oracle module when evaluating new borrow positions containing this token.
+     * All MsgBorrow, MsgWithdraw, and MsgDecollateralize must result in healthy
+     * borrow positions under both current and historic prices. The default value of
+     * zero for this field causes current price to be used in those calculations
+     * for the affected Token.
+     * The time span covered by the historic median will be:
+     *     oracle.Params.median_stamp_period * oracle.Params.historic_stamp_period * historic_medians.
+     * </pre>
+     *
+     * <code>uint32 historic_medians = 19 [json_name = "historicMedians", (.gogoproto.moretags) = "yaml:&#92;"historic_medians&#92;""];</code>
+     * @return The historicMedians.
+     */
+    @java.lang.Override
+    public int getHistoricMedians() {
+      return historicMedians_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, baseDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveFactor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reserveFactor_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralWeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, collateralWeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidationThreshold_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, liquidationThreshold_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseBorrowRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, baseBorrowRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kinkBorrowRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, kinkBorrowRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxBorrowRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, maxBorrowRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kinkUtilization_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, kinkUtilization_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidationIncentive_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, liquidationIncentive_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbolDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, symbolDenom_);
+      }
+      if (exponent_ != 0) {
+        output.writeUInt32(11, exponent_);
+      }
+      if (enableMsgSupply_ != false) {
+        output.writeBool(12, enableMsgSupply_);
+      }
+      if (enableMsgBorrow_ != false) {
+        output.writeBool(13, enableMsgBorrow_);
+      }
+      if (blacklist_ != false) {
+        output.writeBool(14, blacklist_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxCollateralShare_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, maxCollateralShare_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSupplyUtilization_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, maxSupplyUtilization_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minCollateralLiquidity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, minCollateralLiquidity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, maxSupply_);
+      }
+      if (historicMedians_ != 0) {
+        output.writeUInt32(19, historicMedians_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, baseDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveFactor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reserveFactor_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralWeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, collateralWeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidationThreshold_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, liquidationThreshold_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseBorrowRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, baseBorrowRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kinkBorrowRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, kinkBorrowRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxBorrowRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, maxBorrowRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kinkUtilization_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, kinkUtilization_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidationIncentive_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, liquidationIncentive_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbolDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, symbolDenom_);
+      }
+      if (exponent_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, exponent_);
+      }
+      if (enableMsgSupply_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, enableMsgSupply_);
+      }
+      if (enableMsgBorrow_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, enableMsgBorrow_);
+      }
+      if (blacklist_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, blacklist_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxCollateralShare_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, maxCollateralShare_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSupplyUtilization_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, maxSupplyUtilization_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minCollateralLiquidity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, minCollateralLiquidity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, maxSupply_);
+      }
+      if (historicMedians_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(19, historicMedians_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.LeverageProto.Token)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.LeverageProto.Token other = (com.umee.leverage.v1.LeverageProto.Token) obj;
+
+      if (!getBaseDenom()
+          .equals(other.getBaseDenom())) return false;
+      if (!getReserveFactor()
+          .equals(other.getReserveFactor())) return false;
+      if (!getCollateralWeight()
+          .equals(other.getCollateralWeight())) return false;
+      if (!getLiquidationThreshold()
+          .equals(other.getLiquidationThreshold())) return false;
+      if (!getBaseBorrowRate()
+          .equals(other.getBaseBorrowRate())) return false;
+      if (!getKinkBorrowRate()
+          .equals(other.getKinkBorrowRate())) return false;
+      if (!getMaxBorrowRate()
+          .equals(other.getMaxBorrowRate())) return false;
+      if (!getKinkUtilization()
+          .equals(other.getKinkUtilization())) return false;
+      if (!getLiquidationIncentive()
+          .equals(other.getLiquidationIncentive())) return false;
+      if (!getSymbolDenom()
+          .equals(other.getSymbolDenom())) return false;
+      if (getExponent()
+          != other.getExponent()) return false;
+      if (getEnableMsgSupply()
+          != other.getEnableMsgSupply()) return false;
+      if (getEnableMsgBorrow()
+          != other.getEnableMsgBorrow()) return false;
+      if (getBlacklist()
+          != other.getBlacklist()) return false;
+      if (!getMaxCollateralShare()
+          .equals(other.getMaxCollateralShare())) return false;
+      if (!getMaxSupplyUtilization()
+          .equals(other.getMaxSupplyUtilization())) return false;
+      if (!getMinCollateralLiquidity()
+          .equals(other.getMinCollateralLiquidity())) return false;
+      if (!getMaxSupply()
+          .equals(other.getMaxSupply())) return false;
+      if (getHistoricMedians()
+          != other.getHistoricMedians()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BASE_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseDenom().hashCode();
+      hash = (37 * hash) + RESERVE_FACTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getReserveFactor().hashCode();
+      hash = (37 * hash) + COLLATERAL_WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getCollateralWeight().hashCode();
+      hash = (37 * hash) + LIQUIDATION_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidationThreshold().hashCode();
+      hash = (37 * hash) + BASE_BORROW_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseBorrowRate().hashCode();
+      hash = (37 * hash) + KINK_BORROW_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getKinkBorrowRate().hashCode();
+      hash = (37 * hash) + MAX_BORROW_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxBorrowRate().hashCode();
+      hash = (37 * hash) + KINK_UTILIZATION_FIELD_NUMBER;
+      hash = (53 * hash) + getKinkUtilization().hashCode();
+      hash = (37 * hash) + LIQUIDATION_INCENTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidationIncentive().hashCode();
+      hash = (37 * hash) + SYMBOL_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbolDenom().hashCode();
+      hash = (37 * hash) + EXPONENT_FIELD_NUMBER;
+      hash = (53 * hash) + getExponent();
+      hash = (37 * hash) + ENABLE_MSG_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableMsgSupply());
+      hash = (37 * hash) + ENABLE_MSG_BORROW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableMsgBorrow());
+      hash = (37 * hash) + BLACKLIST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getBlacklist());
+      hash = (37 * hash) + MAX_COLLATERAL_SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxCollateralShare().hashCode();
+      hash = (37 * hash) + MAX_SUPPLY_UTILIZATION_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxSupplyUtilization().hashCode();
+      hash = (37 * hash) + MIN_COLLATERAL_LIQUIDITY_FIELD_NUMBER;
+      hash = (53 * hash) + getMinCollateralLiquidity().hashCode();
+      hash = (37 * hash) + MAX_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxSupply().hashCode();
+      hash = (37 * hash) + HISTORIC_MEDIANS_FIELD_NUMBER;
+      hash = (53 * hash) + getHistoricMedians();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.LeverageProto.Token parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.LeverageProto.Token parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.LeverageProto.Token parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.LeverageProto.Token prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Token defines a token, along with its metadata and parameters, in the Umee
+     * capital facility that can be supplied and borrowed.
+     * See https://github.com/umee-network/umee/blob/main/docs/design_docs/010-market-params.md
+     * for more details.
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.Token}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.Token)
+        com.umee.leverage.v1.LeverageProto.TokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Token_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Token_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.LeverageProto.Token.class, com.umee.leverage.v1.LeverageProto.Token.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.LeverageProto.Token.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        baseDenom_ = "";
+        reserveFactor_ = "";
+        collateralWeight_ = "";
+        liquidationThreshold_ = "";
+        baseBorrowRate_ = "";
+        kinkBorrowRate_ = "";
+        maxBorrowRate_ = "";
+        kinkUtilization_ = "";
+        liquidationIncentive_ = "";
+        symbolDenom_ = "";
+        exponent_ = 0;
+        enableMsgSupply_ = false;
+        enableMsgBorrow_ = false;
+        blacklist_ = false;
+        maxCollateralShare_ = "";
+        maxSupplyUtilization_ = "";
+        minCollateralLiquidity_ = "";
+        maxSupply_ = "";
+        historicMedians_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.LeverageProto.internal_static_umee_leverage_v1_Token_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.LeverageProto.Token getDefaultInstanceForType() {
+        return com.umee.leverage.v1.LeverageProto.Token.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.LeverageProto.Token build() {
+        com.umee.leverage.v1.LeverageProto.Token result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.LeverageProto.Token buildPartial() {
+        com.umee.leverage.v1.LeverageProto.Token result = new com.umee.leverage.v1.LeverageProto.Token(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.LeverageProto.Token result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.baseDenom_ = baseDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.reserveFactor_ = reserveFactor_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.collateralWeight_ = collateralWeight_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.liquidationThreshold_ = liquidationThreshold_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.baseBorrowRate_ = baseBorrowRate_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.kinkBorrowRate_ = kinkBorrowRate_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.maxBorrowRate_ = maxBorrowRate_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.kinkUtilization_ = kinkUtilization_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.liquidationIncentive_ = liquidationIncentive_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.symbolDenom_ = symbolDenom_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.exponent_ = exponent_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.enableMsgSupply_ = enableMsgSupply_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.enableMsgBorrow_ = enableMsgBorrow_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.blacklist_ = blacklist_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.maxCollateralShare_ = maxCollateralShare_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.maxSupplyUtilization_ = maxSupplyUtilization_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.minCollateralLiquidity_ = minCollateralLiquidity_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.maxSupply_ = maxSupply_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.historicMedians_ = historicMedians_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.LeverageProto.Token) {
+          return mergeFrom((com.umee.leverage.v1.LeverageProto.Token)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.LeverageProto.Token other) {
+        if (other == com.umee.leverage.v1.LeverageProto.Token.getDefaultInstance()) return this;
+        if (!other.getBaseDenom().isEmpty()) {
+          baseDenom_ = other.baseDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getReserveFactor().isEmpty()) {
+          reserveFactor_ = other.reserveFactor_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getCollateralWeight().isEmpty()) {
+          collateralWeight_ = other.collateralWeight_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getLiquidationThreshold().isEmpty()) {
+          liquidationThreshold_ = other.liquidationThreshold_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getBaseBorrowRate().isEmpty()) {
+          baseBorrowRate_ = other.baseBorrowRate_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getKinkBorrowRate().isEmpty()) {
+          kinkBorrowRate_ = other.kinkBorrowRate_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getMaxBorrowRate().isEmpty()) {
+          maxBorrowRate_ = other.maxBorrowRate_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getKinkUtilization().isEmpty()) {
+          kinkUtilization_ = other.kinkUtilization_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getLiquidationIncentive().isEmpty()) {
+          liquidationIncentive_ = other.liquidationIncentive_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.getSymbolDenom().isEmpty()) {
+          symbolDenom_ = other.symbolDenom_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (other.getExponent() != 0) {
+          setExponent(other.getExponent());
+        }
+        if (other.getEnableMsgSupply() != false) {
+          setEnableMsgSupply(other.getEnableMsgSupply());
+        }
+        if (other.getEnableMsgBorrow() != false) {
+          setEnableMsgBorrow(other.getEnableMsgBorrow());
+        }
+        if (other.getBlacklist() != false) {
+          setBlacklist(other.getBlacklist());
+        }
+        if (!other.getMaxCollateralShare().isEmpty()) {
+          maxCollateralShare_ = other.maxCollateralShare_;
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
+        if (!other.getMaxSupplyUtilization().isEmpty()) {
+          maxSupplyUtilization_ = other.maxSupplyUtilization_;
+          bitField0_ |= 0x00008000;
+          onChanged();
+        }
+        if (!other.getMinCollateralLiquidity().isEmpty()) {
+          minCollateralLiquidity_ = other.minCollateralLiquidity_;
+          bitField0_ |= 0x00010000;
+          onChanged();
+        }
+        if (!other.getMaxSupply().isEmpty()) {
+          maxSupply_ = other.maxSupply_;
+          bitField0_ |= 0x00020000;
+          onChanged();
+        }
+        if (other.getHistoricMedians() != 0) {
+          setHistoricMedians(other.getHistoricMedians());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                baseDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                reserveFactor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                collateralWeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                liquidationThreshold_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                baseBorrowRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                kinkBorrowRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                maxBorrowRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                kinkUtilization_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                liquidationIncentive_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                symbolDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 88: {
+                exponent_ = input.readUInt32();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 96: {
+                enableMsgSupply_ = input.readBool();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                enableMsgBorrow_ = input.readBool();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              case 112: {
+                blacklist_ = input.readBool();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 112
+              case 122: {
+                maxCollateralShare_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+              case 130: {
+                maxSupplyUtilization_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+              case 138: {
+                minCollateralLiquidity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 138
+              case 146: {
+                maxSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 146
+              case 152: {
+                historicMedians_ = input.readUInt32();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 152
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object baseDenom_ = "";
+      /**
+       * <pre>
+       * Base Denom is the denomination of the underlying base token. Must be the base
+       * denom as registered in the Bank module (so IBC denom for IBC tokens).
+       * </pre>
+       *
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return The baseDenom.
+       */
+      public java.lang.String getBaseDenom() {
+        java.lang.Object ref = baseDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Base Denom is the denomination of the underlying base token. Must be the base
+       * denom as registered in the Bank module (so IBC denom for IBC tokens).
+       * </pre>
+       *
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return The bytes for baseDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBaseDenomBytes() {
+        java.lang.Object ref = baseDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Base Denom is the denomination of the underlying base token. Must be the base
+       * denom as registered in the Bank module (so IBC denom for IBC tokens).
+       * </pre>
+       *
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @param value The baseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Base Denom is the denomination of the underlying base token. Must be the base
+       * denom as registered in the Bank module (so IBC denom for IBC tokens).
+       * </pre>
+       *
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseDenom() {
+        baseDenom_ = getDefaultInstance().getBaseDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Base Denom is the denomination of the underlying base token. Must be the base
+       * denom as registered in the Bank module (so IBC denom for IBC tokens).
+       * </pre>
+       *
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @param value The bytes for baseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reserveFactor_ = "";
+      /**
+       * <pre>
+       * Reserve Factor defines what portion of accrued interest goes to reserves
+       * when this token is borrowed.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+       * @return The reserveFactor.
+       */
+      public java.lang.String getReserveFactor() {
+        java.lang.Object ref = reserveFactor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reserveFactor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Reserve Factor defines what portion of accrued interest goes to reserves
+       * when this token is borrowed.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+       * @return The bytes for reserveFactor.
+       */
+      public com.google.protobuf.ByteString
+          getReserveFactorBytes() {
+        java.lang.Object ref = reserveFactor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reserveFactor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Reserve Factor defines what portion of accrued interest goes to reserves
+       * when this token is borrowed.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+       * @param value The reserveFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveFactor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reserveFactor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserve Factor defines what portion of accrued interest goes to reserves
+       * when this token is borrowed.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReserveFactor() {
+        reserveFactor_ = getDefaultInstance().getReserveFactor();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserve Factor defines what portion of accrued interest goes to reserves
+       * when this token is borrowed.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string reserve_factor = 2 [json_name = "reserveFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reserve_factor&#92;""];</code>
+       * @param value The bytes for reserveFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveFactorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reserveFactor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collateralWeight_ = "";
+      /**
+       * <pre>
+       * Collateral Weight defines what portion of the total value of the asset
+       * can contribute to a users borrowing power. If the collateral weight is
+       * zero, using this asset as collateral against borrowing will be disabled.
+       * Must be smaller than `liquidation_threshold`.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+       * @return The collateralWeight.
+       */
+      public java.lang.String getCollateralWeight() {
+        java.lang.Object ref = collateralWeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collateralWeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Collateral Weight defines what portion of the total value of the asset
+       * can contribute to a users borrowing power. If the collateral weight is
+       * zero, using this asset as collateral against borrowing will be disabled.
+       * Must be smaller than `liquidation_threshold`.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+       * @return The bytes for collateralWeight.
+       */
+      public com.google.protobuf.ByteString
+          getCollateralWeightBytes() {
+        java.lang.Object ref = collateralWeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collateralWeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Collateral Weight defines what portion of the total value of the asset
+       * can contribute to a users borrowing power. If the collateral weight is
+       * zero, using this asset as collateral against borrowing will be disabled.
+       * Must be smaller than `liquidation_threshold`.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+       * @param value The collateralWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralWeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collateralWeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Collateral Weight defines what portion of the total value of the asset
+       * can contribute to a users borrowing power. If the collateral weight is
+       * zero, using this asset as collateral against borrowing will be disabled.
+       * Must be smaller than `liquidation_threshold`.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollateralWeight() {
+        collateralWeight_ = getDefaultInstance().getCollateralWeight();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Collateral Weight defines what portion of the total value of the asset
+       * can contribute to a users borrowing power. If the collateral weight is
+       * zero, using this asset as collateral against borrowing will be disabled.
+       * Must be smaller than `liquidation_threshold`.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string collateral_weight = 3 [json_name = "collateralWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_weight&#92;""];</code>
+       * @param value The bytes for collateralWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralWeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collateralWeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object liquidationThreshold_ = "";
+      /**
+       * <pre>
+       * Liquidation Threshold defines what amount of the total value of the
+       * asset as a collateral can contribute to a user's liquidation threshold
+       * (above which they become eligible for liquidation).
+       * Must be bigger than `collateral_weight`.
+       * Valid values: 0-1.
+       * See also: min_close_factor.
+       * </pre>
+       *
+       * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+       * @return The liquidationThreshold.
+       */
+      public java.lang.String getLiquidationThreshold() {
+        java.lang.Object ref = liquidationThreshold_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidationThreshold_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidation Threshold defines what amount of the total value of the
+       * asset as a collateral can contribute to a user's liquidation threshold
+       * (above which they become eligible for liquidation).
+       * Must be bigger than `collateral_weight`.
+       * Valid values: 0-1.
+       * See also: min_close_factor.
+       * </pre>
+       *
+       * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+       * @return The bytes for liquidationThreshold.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidationThresholdBytes() {
+        java.lang.Object ref = liquidationThreshold_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidationThreshold_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidation Threshold defines what amount of the total value of the
+       * asset as a collateral can contribute to a user's liquidation threshold
+       * (above which they become eligible for liquidation).
+       * Must be bigger than `collateral_weight`.
+       * Valid values: 0-1.
+       * See also: min_close_factor.
+       * </pre>
+       *
+       * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+       * @param value The liquidationThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidationThreshold(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidationThreshold_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidation Threshold defines what amount of the total value of the
+       * asset as a collateral can contribute to a user's liquidation threshold
+       * (above which they become eligible for liquidation).
+       * Must be bigger than `collateral_weight`.
+       * Valid values: 0-1.
+       * See also: min_close_factor.
+       * </pre>
+       *
+       * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidationThreshold() {
+        liquidationThreshold_ = getDefaultInstance().getLiquidationThreshold();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidation Threshold defines what amount of the total value of the
+       * asset as a collateral can contribute to a user's liquidation threshold
+       * (above which they become eligible for liquidation).
+       * Must be bigger than `collateral_weight`.
+       * Valid values: 0-1.
+       * See also: min_close_factor.
+       * </pre>
+       *
+       * <code>string liquidation_threshold = 4 [json_name = "liquidationThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_threshold&#92;""];</code>
+       * @param value The bytes for liquidationThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidationThresholdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidationThreshold_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object baseBorrowRate_ = "";
+      /**
+       * <pre>
+       * Base Borrow Rate defines the minimum interest rate for borrowing this
+       * asset.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+       * @return The baseBorrowRate.
+       */
+      public java.lang.String getBaseBorrowRate() {
+        java.lang.Object ref = baseBorrowRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseBorrowRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Base Borrow Rate defines the minimum interest rate for borrowing this
+       * asset.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+       * @return The bytes for baseBorrowRate.
+       */
+      public com.google.protobuf.ByteString
+          getBaseBorrowRateBytes() {
+        java.lang.Object ref = baseBorrowRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseBorrowRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Base Borrow Rate defines the minimum interest rate for borrowing this
+       * asset.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+       * @param value The baseBorrowRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseBorrowRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseBorrowRate_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Base Borrow Rate defines the minimum interest rate for borrowing this
+       * asset.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseBorrowRate() {
+        baseBorrowRate_ = getDefaultInstance().getBaseBorrowRate();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Base Borrow Rate defines the minimum interest rate for borrowing this
+       * asset.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string base_borrow_rate = 5 [json_name = "baseBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"base_borrow_rate&#92;""];</code>
+       * @param value The bytes for baseBorrowRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseBorrowRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseBorrowRate_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object kinkBorrowRate_ = "";
+      /**
+       * <pre>
+       * Kink Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is equal to 'kink_utilization'.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+       * @return The kinkBorrowRate.
+       */
+      public java.lang.String getKinkBorrowRate() {
+        java.lang.Object ref = kinkBorrowRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          kinkBorrowRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Kink Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is equal to 'kink_utilization'.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+       * @return The bytes for kinkBorrowRate.
+       */
+      public com.google.protobuf.ByteString
+          getKinkBorrowRateBytes() {
+        java.lang.Object ref = kinkBorrowRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          kinkBorrowRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Kink Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is equal to 'kink_utilization'.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+       * @param value The kinkBorrowRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKinkBorrowRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        kinkBorrowRate_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Kink Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is equal to 'kink_utilization'.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKinkBorrowRate() {
+        kinkBorrowRate_ = getDefaultInstance().getKinkBorrowRate();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Kink Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is equal to 'kink_utilization'.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string kink_borrow_rate = 6 [json_name = "kinkBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_borrow_rate&#92;""];</code>
+       * @param value The bytes for kinkBorrowRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKinkBorrowRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        kinkBorrowRate_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxBorrowRate_ = "";
+      /**
+       * <pre>
+       * Max Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is at its maximum.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+       * @return The maxBorrowRate.
+       */
+      public java.lang.String getMaxBorrowRate() {
+        java.lang.Object ref = maxBorrowRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxBorrowRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Max Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is at its maximum.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+       * @return The bytes for maxBorrowRate.
+       */
+      public com.google.protobuf.ByteString
+          getMaxBorrowRateBytes() {
+        java.lang.Object ref = maxBorrowRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxBorrowRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Max Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is at its maximum.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+       * @param value The maxBorrowRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxBorrowRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxBorrowRate_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is at its maximum.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxBorrowRate() {
+        maxBorrowRate_ = getDefaultInstance().getMaxBorrowRate();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max Borrow Rate defines the interest rate for borrowing this
+       * asset when supply utilization is at its maximum.
+       * Valid values: 0-∞
+       * </pre>
+       *
+       * <code>string max_borrow_rate = 7 [json_name = "maxBorrowRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_borrow_rate&#92;""];</code>
+       * @param value The bytes for maxBorrowRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxBorrowRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxBorrowRate_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object kinkUtilization_ = "";
+      /**
+       * <pre>
+       * Kink Utilization defines the supply utilization value where
+       * the kink in the borrow interest rate function occurs.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+       * @return The kinkUtilization.
+       */
+      public java.lang.String getKinkUtilization() {
+        java.lang.Object ref = kinkUtilization_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          kinkUtilization_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Kink Utilization defines the supply utilization value where
+       * the kink in the borrow interest rate function occurs.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+       * @return The bytes for kinkUtilization.
+       */
+      public com.google.protobuf.ByteString
+          getKinkUtilizationBytes() {
+        java.lang.Object ref = kinkUtilization_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          kinkUtilization_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Kink Utilization defines the supply utilization value where
+       * the kink in the borrow interest rate function occurs.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+       * @param value The kinkUtilization to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKinkUtilization(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        kinkUtilization_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Kink Utilization defines the supply utilization value where
+       * the kink in the borrow interest rate function occurs.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKinkUtilization() {
+        kinkUtilization_ = getDefaultInstance().getKinkUtilization();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Kink Utilization defines the supply utilization value where
+       * the kink in the borrow interest rate function occurs.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string kink_utilization = 8 [json_name = "kinkUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"kink_utilization&#92;""];</code>
+       * @param value The bytes for kinkUtilization to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKinkUtilizationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        kinkUtilization_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object liquidationIncentive_ = "";
+      /**
+       * <pre>
+       * Liquidation Incentive determines the portion of bonus collateral of
+       * a token type liquidators receive as a liquidation reward.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+       * @return The liquidationIncentive.
+       */
+      public java.lang.String getLiquidationIncentive() {
+        java.lang.Object ref = liquidationIncentive_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidationIncentive_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidation Incentive determines the portion of bonus collateral of
+       * a token type liquidators receive as a liquidation reward.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+       * @return The bytes for liquidationIncentive.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidationIncentiveBytes() {
+        java.lang.Object ref = liquidationIncentive_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidationIncentive_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidation Incentive determines the portion of bonus collateral of
+       * a token type liquidators receive as a liquidation reward.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+       * @param value The liquidationIncentive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidationIncentive(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidationIncentive_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidation Incentive determines the portion of bonus collateral of
+       * a token type liquidators receive as a liquidation reward.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidationIncentive() {
+        liquidationIncentive_ = getDefaultInstance().getLiquidationIncentive();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidation Incentive determines the portion of bonus collateral of
+       * a token type liquidators receive as a liquidation reward.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string liquidation_incentive = 9 [json_name = "liquidationIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidation_incentive&#92;""];</code>
+       * @param value The bytes for liquidationIncentive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidationIncentiveBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidationIncentive_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object symbolDenom_ = "";
+      /**
+       * <pre>
+       * Symbol Denom is the human readable denomination of this token.
+       * </pre>
+       *
+       * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @return The symbolDenom.
+       */
+      public java.lang.String getSymbolDenom() {
+        java.lang.Object ref = symbolDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbolDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Symbol Denom is the human readable denomination of this token.
+       * </pre>
+       *
+       * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @return The bytes for symbolDenom.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolDenomBytes() {
+        java.lang.Object ref = symbolDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbolDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Symbol Denom is the human readable denomination of this token.
+       * </pre>
+       *
+       * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @param value The symbolDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbolDenom_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Symbol Denom is the human readable denomination of this token.
+       * </pre>
+       *
+       * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbolDenom() {
+        symbolDenom_ = getDefaultInstance().getSymbolDenom();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Symbol Denom is the human readable denomination of this token.
+       * </pre>
+       *
+       * <code>string symbol_denom = 10 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @param value The bytes for symbolDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbolDenom_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private int exponent_ ;
+      /**
+       * <pre>
+       * Exponent is the power of ten by which to multiply, in order to convert
+       * an amount of the token denoted in its symbol denom to the actual amount
+       * of its base denom.
+       * </pre>
+       *
+       * <code>uint32 exponent = 11 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+       * @return The exponent.
+       */
+      @java.lang.Override
+      public int getExponent() {
+        return exponent_;
+      }
+      /**
+       * <pre>
+       * Exponent is the power of ten by which to multiply, in order to convert
+       * an amount of the token denoted in its symbol denom to the actual amount
+       * of its base denom.
+       * </pre>
+       *
+       * <code>uint32 exponent = 11 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+       * @param value The exponent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExponent(int value) {
+
+        exponent_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Exponent is the power of ten by which to multiply, in order to convert
+       * an amount of the token denoted in its symbol denom to the actual amount
+       * of its base denom.
+       * </pre>
+       *
+       * <code>uint32 exponent = 11 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExponent() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        exponent_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableMsgSupply_ ;
+      /**
+       * <pre>
+       * Enable Msg Supply allows supplying for lending or collateral using this
+       * token. `false` means that a token can no longer be supplied.
+       * Note that withdrawing is always enabled. Disabling supply would
+       * be one step in phasing out an asset type.
+       * </pre>
+       *
+       * <code>bool enable_msg_supply = 12 [json_name = "enableMsgSupply", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_supply&#92;""];</code>
+       * @return The enableMsgSupply.
+       */
+      @java.lang.Override
+      public boolean getEnableMsgSupply() {
+        return enableMsgSupply_;
+      }
+      /**
+       * <pre>
+       * Enable Msg Supply allows supplying for lending or collateral using this
+       * token. `false` means that a token can no longer be supplied.
+       * Note that withdrawing is always enabled. Disabling supply would
+       * be one step in phasing out an asset type.
+       * </pre>
+       *
+       * <code>bool enable_msg_supply = 12 [json_name = "enableMsgSupply", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_supply&#92;""];</code>
+       * @param value The enableMsgSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableMsgSupply(boolean value) {
+
+        enableMsgSupply_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable Msg Supply allows supplying for lending or collateral using this
+       * token. `false` means that a token can no longer be supplied.
+       * Note that withdrawing is always enabled. Disabling supply would
+       * be one step in phasing out an asset type.
+       * </pre>
+       *
+       * <code>bool enable_msg_supply = 12 [json_name = "enableMsgSupply", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_supply&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableMsgSupply() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        enableMsgSupply_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableMsgBorrow_ ;
+      /**
+       * <pre>
+       * Enable Msg Borrow allows borrowing of this token. Note that repaying is
+       * always enabled. Disabling borrowing would be one step in phasing out an
+       * asset type, but could also be used from the start for asset types meant
+       * to be collateral only, like meTokens.
+       * </pre>
+       *
+       * <code>bool enable_msg_borrow = 13 [json_name = "enableMsgBorrow", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_borrow&#92;""];</code>
+       * @return The enableMsgBorrow.
+       */
+      @java.lang.Override
+      public boolean getEnableMsgBorrow() {
+        return enableMsgBorrow_;
+      }
+      /**
+       * <pre>
+       * Enable Msg Borrow allows borrowing of this token. Note that repaying is
+       * always enabled. Disabling borrowing would be one step in phasing out an
+       * asset type, but could also be used from the start for asset types meant
+       * to be collateral only, like meTokens.
+       * </pre>
+       *
+       * <code>bool enable_msg_borrow = 13 [json_name = "enableMsgBorrow", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_borrow&#92;""];</code>
+       * @param value The enableMsgBorrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableMsgBorrow(boolean value) {
+
+        enableMsgBorrow_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable Msg Borrow allows borrowing of this token. Note that repaying is
+       * always enabled. Disabling borrowing would be one step in phasing out an
+       * asset type, but could also be used from the start for asset types meant
+       * to be collateral only, like meTokens.
+       * </pre>
+       *
+       * <code>bool enable_msg_borrow = 13 [json_name = "enableMsgBorrow", (.gogoproto.moretags) = "yaml:&#92;"enable_msg_borrow&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableMsgBorrow() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        enableMsgBorrow_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean blacklist_ ;
+      /**
+       * <pre>
+       * Blacklist should only be used to eliminate an asset completely. A blacklisted
+       * asset is treated as though its oracle price is zero, and thus ignored by
+       * calculations such as collateral value and borrow limit. Can still be repaid
+       * or withdrawn, but not liquidated. A blacklisted token must have enable_msg_supply
+       * and enable_msg_borrow set to false. Such tokens can be safely removed from the
+       * oracle and price feeder as well.
+       * </pre>
+       *
+       * <code>bool blacklist = 14 [json_name = "blacklist"];</code>
+       * @return The blacklist.
+       */
+      @java.lang.Override
+      public boolean getBlacklist() {
+        return blacklist_;
+      }
+      /**
+       * <pre>
+       * Blacklist should only be used to eliminate an asset completely. A blacklisted
+       * asset is treated as though its oracle price is zero, and thus ignored by
+       * calculations such as collateral value and borrow limit. Can still be repaid
+       * or withdrawn, but not liquidated. A blacklisted token must have enable_msg_supply
+       * and enable_msg_borrow set to false. Such tokens can be safely removed from the
+       * oracle and price feeder as well.
+       * </pre>
+       *
+       * <code>bool blacklist = 14 [json_name = "blacklist"];</code>
+       * @param value The blacklist to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlacklist(boolean value) {
+
+        blacklist_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Blacklist should only be used to eliminate an asset completely. A blacklisted
+       * asset is treated as though its oracle price is zero, and thus ignored by
+       * calculations such as collateral value and borrow limit. Can still be repaid
+       * or withdrawn, but not liquidated. A blacklisted token must have enable_msg_supply
+       * and enable_msg_borrow set to false. Such tokens can be safely removed from the
+       * oracle and price feeder as well.
+       * </pre>
+       *
+       * <code>bool blacklist = 14 [json_name = "blacklist"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlacklist() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        blacklist_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxCollateralShare_ = "";
+      /**
+       * <pre>
+       * Max Collateral Share specifies how much of the system's overall collateral
+       * can be provided by a given token. 1.0 means that the token has no restriction.
+       * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+       * @return The maxCollateralShare.
+       */
+      public java.lang.String getMaxCollateralShare() {
+        java.lang.Object ref = maxCollateralShare_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxCollateralShare_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Max Collateral Share specifies how much of the system's overall collateral
+       * can be provided by a given token. 1.0 means that the token has no restriction.
+       * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+       * @return The bytes for maxCollateralShare.
+       */
+      public com.google.protobuf.ByteString
+          getMaxCollateralShareBytes() {
+        java.lang.Object ref = maxCollateralShare_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxCollateralShare_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Max Collateral Share specifies how much of the system's overall collateral
+       * can be provided by a given token. 1.0 means that the token has no restriction.
+       * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+       * @param value The maxCollateralShare to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxCollateralShare(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxCollateralShare_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max Collateral Share specifies how much of the system's overall collateral
+       * can be provided by a given token. 1.0 means that the token has no restriction.
+       * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxCollateralShare() {
+        maxCollateralShare_ = getDefaultInstance().getMaxCollateralShare();
+        bitField0_ = (bitField0_ & ~0x00004000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max Collateral Share specifies how much of the system's overall collateral
+       * can be provided by a given token. 1.0 means that the token has no restriction.
+       * 0.1 means maximum 10% of system's total collateral value can be provided by this token.
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_collateral_share = 15 [json_name = "maxCollateralShare", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_collateral_share&#92;""];</code>
+       * @param value The bytes for maxCollateralShare to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxCollateralShareBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxCollateralShare_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxSupplyUtilization_ = "";
+      /**
+       * <pre>
+       * Max Supply Utilization specifies the maximum supply utilization a token is
+       * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+       * the supply utilization is above `max_supply_utilization`.
+       *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+       * @return The maxSupplyUtilization.
+       */
+      public java.lang.String getMaxSupplyUtilization() {
+        java.lang.Object ref = maxSupplyUtilization_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxSupplyUtilization_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Max Supply Utilization specifies the maximum supply utilization a token is
+       * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+       * the supply utilization is above `max_supply_utilization`.
+       *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+       * @return The bytes for maxSupplyUtilization.
+       */
+      public com.google.protobuf.ByteString
+          getMaxSupplyUtilizationBytes() {
+        java.lang.Object ref = maxSupplyUtilization_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxSupplyUtilization_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Max Supply Utilization specifies the maximum supply utilization a token is
+       * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+       * the supply utilization is above `max_supply_utilization`.
+       *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+       * @param value The maxSupplyUtilization to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSupplyUtilization(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxSupplyUtilization_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max Supply Utilization specifies the maximum supply utilization a token is
+       * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+       * the supply utilization is above `max_supply_utilization`.
+       *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxSupplyUtilization() {
+        maxSupplyUtilization_ = getDefaultInstance().getMaxSupplyUtilization();
+        bitField0_ = (bitField0_ & ~0x00008000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max Supply Utilization specifies the maximum supply utilization a token is
+       * allowed to reach as a direct result of user borrowing. New borrows are not allowed when
+       * the supply utilization is above `max_supply_utilization`.
+       *    supply_utilization(token) = total_borrowed(token) / total_supply(token)
+       * Valid values: 0-1.
+       * </pre>
+       *
+       * <code>string max_supply_utilization = 16 [json_name = "maxSupplyUtilization", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_supply_utilization&#92;""];</code>
+       * @param value The bytes for maxSupplyUtilization to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSupplyUtilizationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxSupplyUtilization_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minCollateralLiquidity_ = "";
+      /**
+       * <pre>
+       * Min Collateral Liquidity specifies min limit for the following function:
+       *    collateral_liquidity(token) = available(token) / total_collateral(token)
+       * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+       * result of such action invalidates min_collateral_liquidity.
+       * Liquidity can only drop below this value due to interest or liquidations.
+       * The goal is to assure that there is enough available (not borrowed) token to be available
+       * for withdraw when there is a collateral liquidation and the liquidator needs to
+       * withdraw uToken.
+       * Valid values: 0 - inf
+       * </pre>
+       *
+       * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+       * @return The minCollateralLiquidity.
+       */
+      public java.lang.String getMinCollateralLiquidity() {
+        java.lang.Object ref = minCollateralLiquidity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minCollateralLiquidity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Min Collateral Liquidity specifies min limit for the following function:
+       *    collateral_liquidity(token) = available(token) / total_collateral(token)
+       * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+       * result of such action invalidates min_collateral_liquidity.
+       * Liquidity can only drop below this value due to interest or liquidations.
+       * The goal is to assure that there is enough available (not borrowed) token to be available
+       * for withdraw when there is a collateral liquidation and the liquidator needs to
+       * withdraw uToken.
+       * Valid values: 0 - inf
+       * </pre>
+       *
+       * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+       * @return The bytes for minCollateralLiquidity.
+       */
+      public com.google.protobuf.ByteString
+          getMinCollateralLiquidityBytes() {
+        java.lang.Object ref = minCollateralLiquidity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minCollateralLiquidity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Min Collateral Liquidity specifies min limit for the following function:
+       *    collateral_liquidity(token) = available(token) / total_collateral(token)
+       * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+       * result of such action invalidates min_collateral_liquidity.
+       * Liquidity can only drop below this value due to interest or liquidations.
+       * The goal is to assure that there is enough available (not borrowed) token to be available
+       * for withdraw when there is a collateral liquidation and the liquidator needs to
+       * withdraw uToken.
+       * Valid values: 0 - inf
+       * </pre>
+       *
+       * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+       * @param value The minCollateralLiquidity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinCollateralLiquidity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minCollateralLiquidity_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Min Collateral Liquidity specifies min limit for the following function:
+       *    collateral_liquidity(token) = available(token) / total_collateral(token)
+       * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+       * result of such action invalidates min_collateral_liquidity.
+       * Liquidity can only drop below this value due to interest or liquidations.
+       * The goal is to assure that there is enough available (not borrowed) token to be available
+       * for withdraw when there is a collateral liquidation and the liquidator needs to
+       * withdraw uToken.
+       * Valid values: 0 - inf
+       * </pre>
+       *
+       * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinCollateralLiquidity() {
+        minCollateralLiquidity_ = getDefaultInstance().getMinCollateralLiquidity();
+        bitField0_ = (bitField0_ & ~0x00010000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Min Collateral Liquidity specifies min limit for the following function:
+       *    collateral_liquidity(token) = available(token) / total_collateral(token)
+       * Borrowing, collateralizing, or withdrawing assets is not allowed when the
+       * result of such action invalidates min_collateral_liquidity.
+       * Liquidity can only drop below this value due to interest or liquidations.
+       * The goal is to assure that there is enough available (not borrowed) token to be available
+       * for withdraw when there is a collateral liquidation and the liquidator needs to
+       * withdraw uToken.
+       * Valid values: 0 - inf
+       * </pre>
+       *
+       * <code>string min_collateral_liquidity = 17 [json_name = "minCollateralLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_collateral_liquidity&#92;""];</code>
+       * @param value The bytes for minCollateralLiquidity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinCollateralLiquidityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minCollateralLiquidity_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxSupply_ = "";
+      /**
+       * <pre>
+       * Max Supply is the maximum amount of tokens the protocol can hold.
+       * Adding more supply of the given token to the protocol will return an error.
+       * Must be a non negative value. 0 means that there is no limit.
+       * To mark a token as not valid for supply, `msg_supply` must be set to false.
+       * </pre>
+       *
+       * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @return The maxSupply.
+       */
+      public java.lang.String getMaxSupply() {
+        java.lang.Object ref = maxSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Max Supply is the maximum amount of tokens the protocol can hold.
+       * Adding more supply of the given token to the protocol will return an error.
+       * Must be a non negative value. 0 means that there is no limit.
+       * To mark a token as not valid for supply, `msg_supply` must be set to false.
+       * </pre>
+       *
+       * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @return The bytes for maxSupply.
+       */
+      public com.google.protobuf.ByteString
+          getMaxSupplyBytes() {
+        java.lang.Object ref = maxSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Max Supply is the maximum amount of tokens the protocol can hold.
+       * Adding more supply of the given token to the protocol will return an error.
+       * Must be a non negative value. 0 means that there is no limit.
+       * To mark a token as not valid for supply, `msg_supply` must be set to false.
+       * </pre>
+       *
+       * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @param value The maxSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxSupply_ = value;
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max Supply is the maximum amount of tokens the protocol can hold.
+       * Adding more supply of the given token to the protocol will return an error.
+       * Must be a non negative value. 0 means that there is no limit.
+       * To mark a token as not valid for supply, `msg_supply` must be set to false.
+       * </pre>
+       *
+       * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxSupply() {
+        maxSupply_ = getDefaultInstance().getMaxSupply();
+        bitField0_ = (bitField0_ & ~0x00020000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max Supply is the maximum amount of tokens the protocol can hold.
+       * Adding more supply of the given token to the protocol will return an error.
+       * Must be a non negative value. 0 means that there is no limit.
+       * To mark a token as not valid for supply, `msg_supply` must be set to false.
+       * </pre>
+       *
+       * <code>string max_supply = 18 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @param value The bytes for maxSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxSupply_ = value;
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+
+      private int historicMedians_ ;
+      /**
+       * <pre>
+       * Historic Medians is the number of median historic prices to request from
+       * the oracle module when evaluating new borrow positions containing this token.
+       * All MsgBorrow, MsgWithdraw, and MsgDecollateralize must result in healthy
+       * borrow positions under both current and historic prices. The default value of
+       * zero for this field causes current price to be used in those calculations
+       * for the affected Token.
+       * The time span covered by the historic median will be:
+       *     oracle.Params.median_stamp_period * oracle.Params.historic_stamp_period * historic_medians.
+       * </pre>
+       *
+       * <code>uint32 historic_medians = 19 [json_name = "historicMedians", (.gogoproto.moretags) = "yaml:&#92;"historic_medians&#92;""];</code>
+       * @return The historicMedians.
+       */
+      @java.lang.Override
+      public int getHistoricMedians() {
+        return historicMedians_;
+      }
+      /**
+       * <pre>
+       * Historic Medians is the number of median historic prices to request from
+       * the oracle module when evaluating new borrow positions containing this token.
+       * All MsgBorrow, MsgWithdraw, and MsgDecollateralize must result in healthy
+       * borrow positions under both current and historic prices. The default value of
+       * zero for this field causes current price to be used in those calculations
+       * for the affected Token.
+       * The time span covered by the historic median will be:
+       *     oracle.Params.median_stamp_period * oracle.Params.historic_stamp_period * historic_medians.
+       * </pre>
+       *
+       * <code>uint32 historic_medians = 19 [json_name = "historicMedians", (.gogoproto.moretags) = "yaml:&#92;"historic_medians&#92;""];</code>
+       * @param value The historicMedians to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHistoricMedians(int value) {
+
+        historicMedians_ = value;
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Historic Medians is the number of median historic prices to request from
+       * the oracle module when evaluating new borrow positions containing this token.
+       * All MsgBorrow, MsgWithdraw, and MsgDecollateralize must result in healthy
+       * borrow positions under both current and historic prices. The default value of
+       * zero for this field causes current price to be used in those calculations
+       * for the affected Token.
+       * The time span covered by the historic median will be:
+       *     oracle.Params.median_stamp_period * oracle.Params.historic_stamp_period * historic_medians.
+       * </pre>
+       *
+       * <code>uint32 historic_medians = 19 [json_name = "historicMedians", (.gogoproto.moretags) = "yaml:&#92;"historic_medians&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHistoricMedians() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        historicMedians_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.Token)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.Token)
+    private static final com.umee.leverage.v1.LeverageProto.Token DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.LeverageProto.Token();
+    }
+
+    public static com.umee.leverage.v1.LeverageProto.Token getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Token>
+        PARSER = new com.google.protobuf.AbstractParser<Token>() {
+      @java.lang.Override
+      public Token parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Token> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Token> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.LeverageProto.Token getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_Token_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_Token_fieldAccessorTable;
 
@@ -100,12 +5614,12 @@ public final class LeverageProto {
       "sdk/types.Int\362\336\037\021yaml:\"max_supply\"R\tmaxS" +
       "upply\022F\n\020historic_medians\030\023 \001(\rB\033\362\336\037\027yam" +
       "l:\"historic_medians\"R\017historicMedians:\004\350" +
-      "\240\037\001B\275\001\n\024com.umee.leverage.v1B\rLeveragePr" +
-      "otoP\001Z0github.com/umee-network/umee/v5/x" +
-      "/leverage/types\242\002\003ULX\252\002\020Umee.Leverage.V1" +
-      "\312\002\020Umee\\Leverage\\V1\342\002\034Umee\\Leverage\\V1\\G" +
-      "PBMetadata\352\002\022Umee::Leverage::V1\310\341\036\000b\006pro" +
-      "to3"
+      "\240\037\001B\273\001\n\024com.umee.leverage.v1B\rLeveragePr" +
+      "otoZ0github.com/umee-network/umee/v5/x/l" +
+      "everage/types\242\002\003ULX\252\002\020Umee.Leverage.V1\312\002" +
+      "\020Umee\\Leverage\\V1\342\002\034Umee\\Leverage\\V1\\GPB" +
+      "Metadata\352\002\022Umee::Leverage::V1\310\341\036\000b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

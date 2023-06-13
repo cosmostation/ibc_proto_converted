@@ -32,14 +32,14 @@ public final class ServiceProto {
       "\n\006Handle\0225.assetmantle.modules.metas.que" +
       "ries.metas.QueryRequest\0326.assetmantle.mo" +
       "dules.metas.queries.metas.QueryResponse\"" +
-      "#\202\323\344\223\002\035\022\033/mantle/metas/v1beta1/metasB\375\001\n" +
+      "#\202\323\344\223\002\035\022\033/mantle/metas/v1beta1/metasB\373\001\n" +
       "+com.assetmantle.modules.metas.queries.m" +
-      "etasB\014ServiceProtoP\001\242\002\005AMMQM\252\002\'Assetmant" +
-      "le.Modules.Metas.Queries.Metas\312\002\'Assetma" +
-      "ntle\\Modules\\Metas\\Queries\\Metas\342\0023Asset" +
-      "mantle\\Modules\\Metas\\Queries\\Metas\\GPBMe" +
-      "tadata\352\002+Assetmantle::Modules::Metas::Qu" +
-      "eries::Metasb\006proto3"
+      "etasB\014ServiceProto\242\002\005AMMQM\252\002\'Assetmantle" +
+      ".Modules.Metas.Queries.Metas\312\002\'Assetmant" +
+      "le\\Modules\\Metas\\Queries\\Metas\342\0023Assetma" +
+      "ntle\\Modules\\Metas\\Queries\\Metas\\GPBMeta" +
+      "data\352\002+Assetmantle::Modules::Metas::Quer" +
+      "ies::Metasb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

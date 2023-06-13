@@ -14,9 +14,561 @@ public final class StringIdProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface StringIDOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:assetmantle.schema.ids.base.StringID)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+     * @return The iDString.
+     */
+    java.lang.String getIDString();
+    /**
+     * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+     * @return The bytes for iDString.
+     */
+    com.google.protobuf.ByteString
+        getIDStringBytes();
+  }
+  /**
+   * Protobuf type {@code assetmantle.schema.ids.base.StringID}
+   */
+  public static final class StringID extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:assetmantle.schema.ids.base.StringID)
+      StringIDOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StringID.newBuilder() to construct.
+    private StringID(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StringID() {
+      iDString_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StringID();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.assetmantle.schema.ids.base.StringIdProto.internal_static_assetmantle_schema_ids_base_StringID_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.assetmantle.schema.ids.base.StringIdProto.internal_static_assetmantle_schema_ids_base_StringID_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.assetmantle.schema.ids.base.StringIdProto.StringID.class, com.assetmantle.schema.ids.base.StringIdProto.StringID.Builder.class);
+    }
+
+    public static final int I_D_STRING_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iDString_ = "";
+    /**
+     * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+     * @return The iDString.
+     */
+    @java.lang.Override
+    public java.lang.String getIDString() {
+      java.lang.Object ref = iDString_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iDString_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+     * @return The bytes for iDString.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIDStringBytes() {
+      java.lang.Object ref = iDString_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iDString_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iDString_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iDString_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iDString_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iDString_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.assetmantle.schema.ids.base.StringIdProto.StringID)) {
+        return super.equals(obj);
+      }
+      com.assetmantle.schema.ids.base.StringIdProto.StringID other = (com.assetmantle.schema.ids.base.StringIdProto.StringID) obj;
+
+      if (!getIDString()
+          .equals(other.getIDString())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + I_D_STRING_FIELD_NUMBER;
+      hash = (53 * hash) + getIDString().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.assetmantle.schema.ids.base.StringIdProto.StringID prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code assetmantle.schema.ids.base.StringID}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:assetmantle.schema.ids.base.StringID)
+        com.assetmantle.schema.ids.base.StringIdProto.StringIDOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.assetmantle.schema.ids.base.StringIdProto.internal_static_assetmantle_schema_ids_base_StringID_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.assetmantle.schema.ids.base.StringIdProto.internal_static_assetmantle_schema_ids_base_StringID_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.assetmantle.schema.ids.base.StringIdProto.StringID.class, com.assetmantle.schema.ids.base.StringIdProto.StringID.Builder.class);
+      }
+
+      // Construct using com.assetmantle.schema.ids.base.StringIdProto.StringID.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iDString_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.assetmantle.schema.ids.base.StringIdProto.internal_static_assetmantle_schema_ids_base_StringID_descriptor;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.StringIdProto.StringID getDefaultInstanceForType() {
+        return com.assetmantle.schema.ids.base.StringIdProto.StringID.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.StringIdProto.StringID build() {
+        com.assetmantle.schema.ids.base.StringIdProto.StringID result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.StringIdProto.StringID buildPartial() {
+        com.assetmantle.schema.ids.base.StringIdProto.StringID result = new com.assetmantle.schema.ids.base.StringIdProto.StringID(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.assetmantle.schema.ids.base.StringIdProto.StringID result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iDString_ = iDString_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.assetmantle.schema.ids.base.StringIdProto.StringID) {
+          return mergeFrom((com.assetmantle.schema.ids.base.StringIdProto.StringID)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.assetmantle.schema.ids.base.StringIdProto.StringID other) {
+        if (other == com.assetmantle.schema.ids.base.StringIdProto.StringID.getDefaultInstance()) return this;
+        if (!other.getIDString().isEmpty()) {
+          iDString_ = other.iDString_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iDString_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object iDString_ = "";
+      /**
+       * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+       * @return The iDString.
+       */
+      public java.lang.String getIDString() {
+        java.lang.Object ref = iDString_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iDString_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+       * @return The bytes for iDString.
+       */
+      public com.google.protobuf.ByteString
+          getIDStringBytes() {
+        java.lang.Object ref = iDString_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iDString_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+       * @param value The iDString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIDString(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iDString_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIDString() {
+        iDString_ = getDefaultInstance().getIDString();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string i_d_string = 1 [json_name = "iDString"];</code>
+       * @param value The bytes for iDString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIDStringBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iDString_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:assetmantle.schema.ids.base.StringID)
+    }
+
+    // @@protoc_insertion_point(class_scope:assetmantle.schema.ids.base.StringID)
+    private static final com.assetmantle.schema.ids.base.StringIdProto.StringID DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.assetmantle.schema.ids.base.StringIdProto.StringID();
+    }
+
+    public static com.assetmantle.schema.ids.base.StringIdProto.StringID getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StringID>
+        PARSER = new com.google.protobuf.AbstractParser<StringID>() {
+      @java.lang.Override
+      public StringID parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StringID> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StringID> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.assetmantle.schema.ids.base.StringIdProto.StringID getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_assetmantle_schema_ids_base_StringID_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_assetmantle_schema_ids_base_StringID_fieldAccessorTable;
 
@@ -31,12 +583,12 @@ public final class StringIdProto {
       "\n$assetmantle/ids/base/string_id.proto\022\033" +
       "assetmantle.schema.ids.base\032\024gogoproto/g" +
       "ogo.proto\".\n\010StringID\022\034\n\ni_d_string\030\001 \001(" +
-      "\tR\010iDString:\004\210\240\037\000B\300\001\n\037com.assetmantle.sc" +
-      "hema.ids.baseB\rStringIdProtoP\001\242\002\004ASIB\252\002\033" +
-      "Assetmantle.Schema.Ids.Base\312\002\033Assetmantl" +
-      "e\\Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\I" +
-      "ds\\Base\\GPBMetadata\352\002\036Assetmantle::Schem" +
-      "a::Ids::Baseb\006proto3"
+      "\tR\010iDString:\004\210\240\037\000B\276\001\n\037com.assetmantle.sc" +
+      "hema.ids.baseB\rStringIdProto\242\002\004ASIB\252\002\033As" +
+      "setmantle.Schema.Ids.Base\312\002\033Assetmantle\\" +
+      "Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids" +
+      "\\Base\\GPBMetadata\352\002\036Assetmantle::Schema:" +
+      ":Ids::Baseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

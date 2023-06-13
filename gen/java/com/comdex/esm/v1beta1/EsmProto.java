@@ -14,44 +14,7057 @@ public final class EsmProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ESMTriggerParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.esm.v1beta1.ESMTriggerParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the targetValue field is set.
+     */
+    boolean hasTargetValue();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The targetValue.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTargetValue();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTargetValueOrBuilder();
+
+    /**
+     * <code>uint64 cool_off_period = 3 [json_name = "coolOffPeriod", (.gogoproto.customname) = "CoolOffPeriod", (.gogoproto.moretags) = "yaml:&#92;"cool_off_period&#92;""];</code>
+     * @return The coolOffPeriod.
+     */
+    long getCoolOffPeriod();
+
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    java.util.List<com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates> 
+        getAssetsRatesList();
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates getAssetsRates(int index);
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    int getAssetsRatesCount();
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder> 
+        getAssetsRatesOrBuilderList();
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder getAssetsRatesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.esm.v1beta1.ESMTriggerParams}
+   */
+  public static final class ESMTriggerParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.esm.v1beta1.ESMTriggerParams)
+      ESMTriggerParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ESMTriggerParams.newBuilder() to construct.
+    private ESMTriggerParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ESMTriggerParams() {
+      assetsRates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ESMTriggerParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMTriggerParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMTriggerParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.class, com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int TARGET_VALUE_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin targetValue_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the targetValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasTargetValue() {
+      return targetValue_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The targetValue.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTargetValue() {
+      return targetValue_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : targetValue_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTargetValueOrBuilder() {
+      return targetValue_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : targetValue_;
+    }
+
+    public static final int COOL_OFF_PERIOD_FIELD_NUMBER = 3;
+    private long coolOffPeriod_ = 0L;
+    /**
+     * <code>uint64 cool_off_period = 3 [json_name = "coolOffPeriod", (.gogoproto.customname) = "CoolOffPeriod", (.gogoproto.moretags) = "yaml:&#92;"cool_off_period&#92;""];</code>
+     * @return The coolOffPeriod.
+     */
+    @java.lang.Override
+    public long getCoolOffPeriod() {
+      return coolOffPeriod_;
+    }
+
+    public static final int ASSETSRATES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates> assetsRates_;
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates> getAssetsRatesList() {
+      return assetsRates_;
+    }
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder> 
+        getAssetsRatesOrBuilderList() {
+      return assetsRates_;
+    }
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAssetsRatesCount() {
+      return assetsRates_.size();
+    }
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates getAssetsRates(int index) {
+      return assetsRates_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder getAssetsRatesOrBuilder(
+        int index) {
+      return assetsRates_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (targetValue_ != null) {
+        output.writeMessage(2, getTargetValue());
+      }
+      if (coolOffPeriod_ != 0L) {
+        output.writeUInt64(3, coolOffPeriod_);
+      }
+      for (int i = 0; i < assetsRates_.size(); i++) {
+        output.writeMessage(4, assetsRates_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (targetValue_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTargetValue());
+      }
+      if (coolOffPeriod_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, coolOffPeriod_);
+      }
+      for (int i = 0; i < assetsRates_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, assetsRates_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams)) {
+        return super.equals(obj);
+      }
+      com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams other = (com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (hasTargetValue() != other.hasTargetValue()) return false;
+      if (hasTargetValue()) {
+        if (!getTargetValue()
+            .equals(other.getTargetValue())) return false;
+      }
+      if (getCoolOffPeriod()
+          != other.getCoolOffPeriod()) return false;
+      if (!getAssetsRatesList()
+          .equals(other.getAssetsRatesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      if (hasTargetValue()) {
+        hash = (37 * hash) + TARGET_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetValue().hashCode();
+      }
+      hash = (37 * hash) + COOL_OFF_PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCoolOffPeriod());
+      if (getAssetsRatesCount() > 0) {
+        hash = (37 * hash) + ASSETSRATES_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsRatesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.esm.v1beta1.ESMTriggerParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.esm.v1beta1.ESMTriggerParams)
+        com.comdex.esm.v1beta1.EsmProto.ESMTriggerParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMTriggerParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMTriggerParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.class, com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.Builder.class);
+      }
+
+      // Construct using com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        targetValue_ = null;
+        if (targetValueBuilder_ != null) {
+          targetValueBuilder_.dispose();
+          targetValueBuilder_ = null;
+        }
+        coolOffPeriod_ = 0L;
+        if (assetsRatesBuilder_ == null) {
+          assetsRates_ = java.util.Collections.emptyList();
+        } else {
+          assetsRates_ = null;
+          assetsRatesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMTriggerParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams getDefaultInstanceForType() {
+        return com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams build() {
+        com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams buildPartial() {
+        com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams result = new com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams result) {
+        if (assetsRatesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            assetsRates_ = java.util.Collections.unmodifiableList(assetsRates_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.assetsRates_ = assetsRates_;
+        } else {
+          result.assetsRates_ = assetsRatesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.targetValue_ = targetValueBuilder_ == null
+              ? targetValue_
+              : targetValueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.coolOffPeriod_ = coolOffPeriod_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams) {
+          return mergeFrom((com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams other) {
+        if (other == com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasTargetValue()) {
+          mergeTargetValue(other.getTargetValue());
+        }
+        if (other.getCoolOffPeriod() != 0L) {
+          setCoolOffPeriod(other.getCoolOffPeriod());
+        }
+        if (assetsRatesBuilder_ == null) {
+          if (!other.assetsRates_.isEmpty()) {
+            if (assetsRates_.isEmpty()) {
+              assetsRates_ = other.assetsRates_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAssetsRatesIsMutable();
+              assetsRates_.addAll(other.assetsRates_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assetsRates_.isEmpty()) {
+            if (assetsRatesBuilder_.isEmpty()) {
+              assetsRatesBuilder_.dispose();
+              assetsRatesBuilder_ = null;
+              assetsRates_ = other.assetsRates_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              assetsRatesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsRatesFieldBuilder() : null;
+            } else {
+              assetsRatesBuilder_.addAllMessages(other.assetsRates_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getTargetValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                coolOffPeriod_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates m =
+                    input.readMessage(
+                        com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.parser(),
+                        extensionRegistry);
+                if (assetsRatesBuilder_ == null) {
+                  ensureAssetsRatesIsMutable();
+                  assetsRates_.add(m);
+                } else {
+                  assetsRatesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin targetValue_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> targetValueBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the targetValue field is set.
+       */
+      public boolean hasTargetValue() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The targetValue.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTargetValue() {
+        if (targetValueBuilder_ == null) {
+          return targetValue_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : targetValue_;
+        } else {
+          return targetValueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setTargetValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (targetValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          targetValue_ = value;
+        } else {
+          targetValueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setTargetValue(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (targetValueBuilder_ == null) {
+          targetValue_ = builderForValue.build();
+        } else {
+          targetValueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeTargetValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (targetValueBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            targetValue_ != null &&
+            targetValue_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTargetValueBuilder().mergeFrom(value);
+          } else {
+            targetValue_ = value;
+          }
+        } else {
+          targetValueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearTargetValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targetValue_ = null;
+        if (targetValueBuilder_ != null) {
+          targetValueBuilder_.dispose();
+          targetValueBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTargetValueBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTargetValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTargetValueOrBuilder() {
+        if (targetValueBuilder_ != null) {
+          return targetValueBuilder_.getMessageOrBuilder();
+        } else {
+          return targetValue_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : targetValue_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTargetValueFieldBuilder() {
+        if (targetValueBuilder_ == null) {
+          targetValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTargetValue(),
+                  getParentForChildren(),
+                  isClean());
+          targetValue_ = null;
+        }
+        return targetValueBuilder_;
+      }
+
+      private long coolOffPeriod_ ;
+      /**
+       * <code>uint64 cool_off_period = 3 [json_name = "coolOffPeriod", (.gogoproto.customname) = "CoolOffPeriod", (.gogoproto.moretags) = "yaml:&#92;"cool_off_period&#92;""];</code>
+       * @return The coolOffPeriod.
+       */
+      @java.lang.Override
+      public long getCoolOffPeriod() {
+        return coolOffPeriod_;
+      }
+      /**
+       * <code>uint64 cool_off_period = 3 [json_name = "coolOffPeriod", (.gogoproto.customname) = "CoolOffPeriod", (.gogoproto.moretags) = "yaml:&#92;"cool_off_period&#92;""];</code>
+       * @param value The coolOffPeriod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCoolOffPeriod(long value) {
+
+        coolOffPeriod_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cool_off_period = 3 [json_name = "coolOffPeriod", (.gogoproto.customname) = "CoolOffPeriod", (.gogoproto.moretags) = "yaml:&#92;"cool_off_period&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCoolOffPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        coolOffPeriod_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates> assetsRates_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsRatesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          assetsRates_ = new java.util.ArrayList<com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates>(assetsRates_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder> assetsRatesBuilder_;
+
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public java.util.List<com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates> getAssetsRatesList() {
+        if (assetsRatesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assetsRates_);
+        } else {
+          return assetsRatesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public int getAssetsRatesCount() {
+        if (assetsRatesBuilder_ == null) {
+          return assetsRates_.size();
+        } else {
+          return assetsRatesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates getAssetsRates(int index) {
+        if (assetsRatesBuilder_ == null) {
+          return assetsRates_.get(index);
+        } else {
+          return assetsRatesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder setAssetsRates(
+          int index, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates value) {
+        if (assetsRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsRatesIsMutable();
+          assetsRates_.set(index, value);
+          onChanged();
+        } else {
+          assetsRatesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder setAssetsRates(
+          int index, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder builderForValue) {
+        if (assetsRatesBuilder_ == null) {
+          ensureAssetsRatesIsMutable();
+          assetsRates_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsRatesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder addAssetsRates(com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates value) {
+        if (assetsRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsRatesIsMutable();
+          assetsRates_.add(value);
+          onChanged();
+        } else {
+          assetsRatesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder addAssetsRates(
+          int index, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates value) {
+        if (assetsRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsRatesIsMutable();
+          assetsRates_.add(index, value);
+          onChanged();
+        } else {
+          assetsRatesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder addAssetsRates(
+          com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder builderForValue) {
+        if (assetsRatesBuilder_ == null) {
+          ensureAssetsRatesIsMutable();
+          assetsRates_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsRatesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder addAssetsRates(
+          int index, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder builderForValue) {
+        if (assetsRatesBuilder_ == null) {
+          ensureAssetsRatesIsMutable();
+          assetsRates_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsRatesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder addAllAssetsRates(
+          java.lang.Iterable<? extends com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates> values) {
+        if (assetsRatesBuilder_ == null) {
+          ensureAssetsRatesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assetsRates_);
+          onChanged();
+        } else {
+          assetsRatesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder clearAssetsRates() {
+        if (assetsRatesBuilder_ == null) {
+          assetsRates_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          assetsRatesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public Builder removeAssetsRates(int index) {
+        if (assetsRatesBuilder_ == null) {
+          ensureAssetsRatesIsMutable();
+          assetsRates_.remove(index);
+          onChanged();
+        } else {
+          assetsRatesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder getAssetsRatesBuilder(
+          int index) {
+        return getAssetsRatesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder getAssetsRatesOrBuilder(
+          int index) {
+        if (assetsRatesBuilder_ == null) {
+          return assetsRates_.get(index);  } else {
+          return assetsRatesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder> 
+           getAssetsRatesOrBuilderList() {
+        if (assetsRatesBuilder_ != null) {
+          return assetsRatesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assetsRates_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder addAssetsRatesBuilder() {
+        return getAssetsRatesFieldBuilder().addBuilder(
+            com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder addAssetsRatesBuilder(
+          int index) {
+        return getAssetsRatesFieldBuilder().addBuilder(
+            index, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.esm.v1beta1.DebtAssetsRates assetsRates = 4 [json_name = "assetsRates", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AssetsRates", (.gogoproto.moretags) = "yaml:&#92;"assets_rates&#92;""];</code>
+       */
+      public java.util.List<com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder> 
+           getAssetsRatesBuilderList() {
+        return getAssetsRatesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder> 
+          getAssetsRatesFieldBuilder() {
+        if (assetsRatesBuilder_ == null) {
+          assetsRatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder>(
+                  assetsRates_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assetsRates_ = null;
+        }
+        return assetsRatesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.esm.v1beta1.ESMTriggerParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.esm.v1beta1.ESMTriggerParams)
+    private static final com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams();
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ESMTriggerParams>
+        PARSER = new com.google.protobuf.AbstractParser<ESMTriggerParams>() {
+      @java.lang.Override
+      public ESMTriggerParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ESMTriggerParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ESMTriggerParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CurrentDepositStatsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.esm.v1beta1.CurrentDepositStats)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the balance field is set.
+     */
+    boolean hasBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The balance.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.esm.v1beta1.CurrentDepositStats}
+   */
+  public static final class CurrentDepositStats extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.esm.v1beta1.CurrentDepositStats)
+      CurrentDepositStatsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CurrentDepositStats.newBuilder() to construct.
+    private CurrentDepositStats(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CurrentDepositStats() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CurrentDepositStats();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_CurrentDepositStats_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_CurrentDepositStats_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.class, com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int BALANCE_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the balance field is set.
+     */
+    @java.lang.Override
+    public boolean hasBalance() {
+      return balance_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The balance.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (balance_ != null) {
+        output.writeMessage(2, getBalance());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (balance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getBalance());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats)) {
+        return super.equals(obj);
+      }
+      com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats other = (com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (hasBalance() != other.hasBalance()) return false;
+      if (hasBalance()) {
+        if (!getBalance()
+            .equals(other.getBalance())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      if (hasBalance()) {
+        hash = (37 * hash) + BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getBalance().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.esm.v1beta1.CurrentDepositStats}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.esm.v1beta1.CurrentDepositStats)
+        com.comdex.esm.v1beta1.EsmProto.CurrentDepositStatsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_CurrentDepositStats_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_CurrentDepositStats_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.class, com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.Builder.class);
+      }
+
+      // Construct using com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_CurrentDepositStats_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats getDefaultInstanceForType() {
+        return com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats build() {
+        com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats buildPartial() {
+        com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats result = new com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.balance_ = balanceBuilder_ == null
+              ? balance_
+              : balanceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats) {
+          return mergeFrom((com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats other) {
+        if (other == com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasBalance()) {
+          mergeBalance(other.getBalance());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getBalanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> balanceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the balance field is set.
+       */
+      public boolean hasBalance() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The balance.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+        if (balanceBuilder_ == null) {
+          return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        } else {
+          return balanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          balance_ = value;
+        } else {
+          balanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balanceBuilder_ == null) {
+          balance_ = builderForValue.build();
+        } else {
+          balanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            balance_ != null &&
+            balance_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBalanceBuilder().mergeFrom(value);
+          } else {
+            balance_ = value;
+          }
+        } else {
+          balanceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearBalance() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBalanceBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+        if (balanceBuilder_ != null) {
+          return balanceBuilder_.getMessageOrBuilder();
+        } else {
+          return balance_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBalanceFieldBuilder() {
+        if (balanceBuilder_ == null) {
+          balanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBalance(),
+                  getParentForChildren(),
+                  isClean());
+          balance_ = null;
+        }
+        return balanceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.esm.v1beta1.CurrentDepositStats)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.esm.v1beta1.CurrentDepositStats)
+    private static final com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats();
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CurrentDepositStats>
+        PARSER = new com.google.protobuf.AbstractParser<CurrentDepositStats>() {
+      @java.lang.Override
+      public CurrentDepositStats parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CurrentDepositStats> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CurrentDepositStats> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ESMStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.esm.v1beta1.ESMStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+     * @return The executor.
+     */
+    java.lang.String getExecutor();
+    /**
+     * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+     * @return The bytes for executor.
+     */
+    com.google.protobuf.ByteString
+        getExecutorBytes();
+
+    /**
+     * <code>bool status = 3 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+     * @return The status.
+     */
+    boolean getStatus();
+
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <code>bool vault_redemption_status = 6 [json_name = "vaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"vault_redemption_status&#92;""];</code>
+     * @return The vaultRedemptionStatus.
+     */
+    boolean getVaultRedemptionStatus();
+
+    /**
+     * <code>bool snapshotStatus = 7 [json_name = "snapshotStatus", (.gogoproto.moretags) = "yaml:&#92;"snapshot_status&#92;""];</code>
+     * @return The snapshotStatus.
+     */
+    boolean getSnapshotStatus();
+
+    /**
+     * <code>bool stable_vault_redemption_status = 8 [json_name = "stableVaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_redemption_status&#92;""];</code>
+     * @return The stableVaultRedemptionStatus.
+     */
+    boolean getStableVaultRedemptionStatus();
+
+    /**
+     * <code>bool collector_transaction = 9 [json_name = "collectorTransaction", (.gogoproto.moretags) = "yaml:&#92;"collector_transaction&#92;""];</code>
+     * @return The collectorTransaction.
+     */
+    boolean getCollectorTransaction();
+
+    /**
+     * <code>bool share_calculation = 10 [json_name = "shareCalculation", (.gogoproto.moretags) = "yaml:&#92;"share_calculation&#92;""];</code>
+     * @return The shareCalculation.
+     */
+    boolean getShareCalculation();
+  }
+  /**
+   * Protobuf type {@code comdex.esm.v1beta1.ESMStatus}
+   */
+  public static final class ESMStatus extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.esm.v1beta1.ESMStatus)
+      ESMStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ESMStatus.newBuilder() to construct.
+    private ESMStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ESMStatus() {
+      executor_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ESMStatus();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMStatus_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.esm.v1beta1.EsmProto.ESMStatus.class, com.comdex.esm.v1beta1.EsmProto.ESMStatus.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXECUTOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object executor_ = "";
+    /**
+     * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+     * @return The executor.
+     */
+    @java.lang.Override
+    public java.lang.String getExecutor() {
+      java.lang.Object ref = executor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        executor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+     * @return The bytes for executor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExecutorBytes() {
+      java.lang.Object ref = executor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        executor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 3;
+    private boolean status_ = false;
+    /**
+     * <code>bool status = 3 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public boolean getStatus() {
+      return status_;
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int VAULT_REDEMPTION_STATUS_FIELD_NUMBER = 6;
+    private boolean vaultRedemptionStatus_ = false;
+    /**
+     * <code>bool vault_redemption_status = 6 [json_name = "vaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"vault_redemption_status&#92;""];</code>
+     * @return The vaultRedemptionStatus.
+     */
+    @java.lang.Override
+    public boolean getVaultRedemptionStatus() {
+      return vaultRedemptionStatus_;
+    }
+
+    public static final int SNAPSHOTSTATUS_FIELD_NUMBER = 7;
+    private boolean snapshotStatus_ = false;
+    /**
+     * <code>bool snapshotStatus = 7 [json_name = "snapshotStatus", (.gogoproto.moretags) = "yaml:&#92;"snapshot_status&#92;""];</code>
+     * @return The snapshotStatus.
+     */
+    @java.lang.Override
+    public boolean getSnapshotStatus() {
+      return snapshotStatus_;
+    }
+
+    public static final int STABLE_VAULT_REDEMPTION_STATUS_FIELD_NUMBER = 8;
+    private boolean stableVaultRedemptionStatus_ = false;
+    /**
+     * <code>bool stable_vault_redemption_status = 8 [json_name = "stableVaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_redemption_status&#92;""];</code>
+     * @return The stableVaultRedemptionStatus.
+     */
+    @java.lang.Override
+    public boolean getStableVaultRedemptionStatus() {
+      return stableVaultRedemptionStatus_;
+    }
+
+    public static final int COLLECTOR_TRANSACTION_FIELD_NUMBER = 9;
+    private boolean collectorTransaction_ = false;
+    /**
+     * <code>bool collector_transaction = 9 [json_name = "collectorTransaction", (.gogoproto.moretags) = "yaml:&#92;"collector_transaction&#92;""];</code>
+     * @return The collectorTransaction.
+     */
+    @java.lang.Override
+    public boolean getCollectorTransaction() {
+      return collectorTransaction_;
+    }
+
+    public static final int SHARE_CALCULATION_FIELD_NUMBER = 10;
+    private boolean shareCalculation_ = false;
+    /**
+     * <code>bool share_calculation = 10 [json_name = "shareCalculation", (.gogoproto.moretags) = "yaml:&#92;"share_calculation&#92;""];</code>
+     * @return The shareCalculation.
+     */
+    @java.lang.Override
+    public boolean getShareCalculation() {
+      return shareCalculation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, executor_);
+      }
+      if (status_ != false) {
+        output.writeBool(3, status_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(4, getStartTime());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(5, getEndTime());
+      }
+      if (vaultRedemptionStatus_ != false) {
+        output.writeBool(6, vaultRedemptionStatus_);
+      }
+      if (snapshotStatus_ != false) {
+        output.writeBool(7, snapshotStatus_);
+      }
+      if (stableVaultRedemptionStatus_ != false) {
+        output.writeBool(8, stableVaultRedemptionStatus_);
+      }
+      if (collectorTransaction_ != false) {
+        output.writeBool(9, collectorTransaction_);
+      }
+      if (shareCalculation_ != false) {
+        output.writeBool(10, shareCalculation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, executor_);
+      }
+      if (status_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, status_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStartTime());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getEndTime());
+      }
+      if (vaultRedemptionStatus_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, vaultRedemptionStatus_);
+      }
+      if (snapshotStatus_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, snapshotStatus_);
+      }
+      if (stableVaultRedemptionStatus_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, stableVaultRedemptionStatus_);
+      }
+      if (collectorTransaction_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, collectorTransaction_);
+      }
+      if (shareCalculation_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, shareCalculation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.esm.v1beta1.EsmProto.ESMStatus)) {
+        return super.equals(obj);
+      }
+      com.comdex.esm.v1beta1.EsmProto.ESMStatus other = (com.comdex.esm.v1beta1.EsmProto.ESMStatus) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getExecutor()
+          .equals(other.getExecutor())) return false;
+      if (getStatus()
+          != other.getStatus()) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (getVaultRedemptionStatus()
+          != other.getVaultRedemptionStatus()) return false;
+      if (getSnapshotStatus()
+          != other.getSnapshotStatus()) return false;
+      if (getStableVaultRedemptionStatus()
+          != other.getStableVaultRedemptionStatus()) return false;
+      if (getCollectorTransaction()
+          != other.getCollectorTransaction()) return false;
+      if (getShareCalculation()
+          != other.getShareCalculation()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXECUTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getExecutor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStatus());
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (37 * hash) + VAULT_REDEMPTION_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getVaultRedemptionStatus());
+      hash = (37 * hash) + SNAPSHOTSTATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSnapshotStatus());
+      hash = (37 * hash) + STABLE_VAULT_REDEMPTION_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStableVaultRedemptionStatus());
+      hash = (37 * hash) + COLLECTOR_TRANSACTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCollectorTransaction());
+      hash = (37 * hash) + SHARE_CALCULATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getShareCalculation());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.esm.v1beta1.EsmProto.ESMStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.esm.v1beta1.ESMStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.esm.v1beta1.ESMStatus)
+        com.comdex.esm.v1beta1.EsmProto.ESMStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMStatus_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.esm.v1beta1.EsmProto.ESMStatus.class, com.comdex.esm.v1beta1.EsmProto.ESMStatus.Builder.class);
+      }
+
+      // Construct using com.comdex.esm.v1beta1.EsmProto.ESMStatus.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        executor_ = "";
+        status_ = false;
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        vaultRedemptionStatus_ = false;
+        snapshotStatus_ = false;
+        stableVaultRedemptionStatus_ = false;
+        collectorTransaction_ = false;
+        shareCalculation_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_ESMStatus_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.ESMStatus getDefaultInstanceForType() {
+        return com.comdex.esm.v1beta1.EsmProto.ESMStatus.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.ESMStatus build() {
+        com.comdex.esm.v1beta1.EsmProto.ESMStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.ESMStatus buildPartial() {
+        com.comdex.esm.v1beta1.EsmProto.ESMStatus result = new com.comdex.esm.v1beta1.EsmProto.ESMStatus(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.esm.v1beta1.EsmProto.ESMStatus result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.executor_ = executor_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.vaultRedemptionStatus_ = vaultRedemptionStatus_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.snapshotStatus_ = snapshotStatus_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.stableVaultRedemptionStatus_ = stableVaultRedemptionStatus_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.collectorTransaction_ = collectorTransaction_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.shareCalculation_ = shareCalculation_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.esm.v1beta1.EsmProto.ESMStatus) {
+          return mergeFrom((com.comdex.esm.v1beta1.EsmProto.ESMStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.esm.v1beta1.EsmProto.ESMStatus other) {
+        if (other == com.comdex.esm.v1beta1.EsmProto.ESMStatus.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (!other.getExecutor().isEmpty()) {
+          executor_ = other.executor_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getStatus() != false) {
+          setStatus(other.getStatus());
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (other.getVaultRedemptionStatus() != false) {
+          setVaultRedemptionStatus(other.getVaultRedemptionStatus());
+        }
+        if (other.getSnapshotStatus() != false) {
+          setSnapshotStatus(other.getSnapshotStatus());
+        }
+        if (other.getStableVaultRedemptionStatus() != false) {
+          setStableVaultRedemptionStatus(other.getStableVaultRedemptionStatus());
+        }
+        if (other.getCollectorTransaction() != false) {
+          setCollectorTransaction(other.getCollectorTransaction());
+        }
+        if (other.getShareCalculation() != false) {
+          setShareCalculation(other.getShareCalculation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                executor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                status_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                vaultRedemptionStatus_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                snapshotStatus_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                stableVaultRedemptionStatus_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                collectorTransaction_ = input.readBool();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                shareCalculation_ = input.readBool();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object executor_ = "";
+      /**
+       * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+       * @return The executor.
+       */
+      public java.lang.String getExecutor() {
+        java.lang.Object ref = executor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          executor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+       * @return The bytes for executor.
+       */
+      public com.google.protobuf.ByteString
+          getExecutorBytes() {
+        java.lang.Object ref = executor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          executor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+       * @param value The executor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        executor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutor() {
+        executor_ = getDefaultInstance().getExecutor();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string executor = 2 [json_name = "executor", (.gogoproto.moretags) = "yaml:&#92;"executor&#92;""];</code>
+       * @param value The bytes for executor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        executor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean status_ ;
+      /**
+       * <code>bool status = 3 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public boolean getStatus() {
+        return status_;
+      }
+      /**
+       * <code>bool status = 3 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(boolean value) {
+
+        status_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool status = 3 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        status_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private boolean vaultRedemptionStatus_ ;
+      /**
+       * <code>bool vault_redemption_status = 6 [json_name = "vaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"vault_redemption_status&#92;""];</code>
+       * @return The vaultRedemptionStatus.
+       */
+      @java.lang.Override
+      public boolean getVaultRedemptionStatus() {
+        return vaultRedemptionStatus_;
+      }
+      /**
+       * <code>bool vault_redemption_status = 6 [json_name = "vaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"vault_redemption_status&#92;""];</code>
+       * @param value The vaultRedemptionStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVaultRedemptionStatus(boolean value) {
+
+        vaultRedemptionStatus_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool vault_redemption_status = 6 [json_name = "vaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"vault_redemption_status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVaultRedemptionStatus() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        vaultRedemptionStatus_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean snapshotStatus_ ;
+      /**
+       * <code>bool snapshotStatus = 7 [json_name = "snapshotStatus", (.gogoproto.moretags) = "yaml:&#92;"snapshot_status&#92;""];</code>
+       * @return The snapshotStatus.
+       */
+      @java.lang.Override
+      public boolean getSnapshotStatus() {
+        return snapshotStatus_;
+      }
+      /**
+       * <code>bool snapshotStatus = 7 [json_name = "snapshotStatus", (.gogoproto.moretags) = "yaml:&#92;"snapshot_status&#92;""];</code>
+       * @param value The snapshotStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSnapshotStatus(boolean value) {
+
+        snapshotStatus_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool snapshotStatus = 7 [json_name = "snapshotStatus", (.gogoproto.moretags) = "yaml:&#92;"snapshot_status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSnapshotStatus() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        snapshotStatus_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean stableVaultRedemptionStatus_ ;
+      /**
+       * <code>bool stable_vault_redemption_status = 8 [json_name = "stableVaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_redemption_status&#92;""];</code>
+       * @return The stableVaultRedemptionStatus.
+       */
+      @java.lang.Override
+      public boolean getStableVaultRedemptionStatus() {
+        return stableVaultRedemptionStatus_;
+      }
+      /**
+       * <code>bool stable_vault_redemption_status = 8 [json_name = "stableVaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_redemption_status&#92;""];</code>
+       * @param value The stableVaultRedemptionStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStableVaultRedemptionStatus(boolean value) {
+
+        stableVaultRedemptionStatus_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool stable_vault_redemption_status = 8 [json_name = "stableVaultRedemptionStatus", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_redemption_status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStableVaultRedemptionStatus() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        stableVaultRedemptionStatus_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean collectorTransaction_ ;
+      /**
+       * <code>bool collector_transaction = 9 [json_name = "collectorTransaction", (.gogoproto.moretags) = "yaml:&#92;"collector_transaction&#92;""];</code>
+       * @return The collectorTransaction.
+       */
+      @java.lang.Override
+      public boolean getCollectorTransaction() {
+        return collectorTransaction_;
+      }
+      /**
+       * <code>bool collector_transaction = 9 [json_name = "collectorTransaction", (.gogoproto.moretags) = "yaml:&#92;"collector_transaction&#92;""];</code>
+       * @param value The collectorTransaction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectorTransaction(boolean value) {
+
+        collectorTransaction_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool collector_transaction = 9 [json_name = "collectorTransaction", (.gogoproto.moretags) = "yaml:&#92;"collector_transaction&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollectorTransaction() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        collectorTransaction_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean shareCalculation_ ;
+      /**
+       * <code>bool share_calculation = 10 [json_name = "shareCalculation", (.gogoproto.moretags) = "yaml:&#92;"share_calculation&#92;""];</code>
+       * @return The shareCalculation.
+       */
+      @java.lang.Override
+      public boolean getShareCalculation() {
+        return shareCalculation_;
+      }
+      /**
+       * <code>bool share_calculation = 10 [json_name = "shareCalculation", (.gogoproto.moretags) = "yaml:&#92;"share_calculation&#92;""];</code>
+       * @param value The shareCalculation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShareCalculation(boolean value) {
+
+        shareCalculation_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool share_calculation = 10 [json_name = "shareCalculation", (.gogoproto.moretags) = "yaml:&#92;"share_calculation&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShareCalculation() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        shareCalculation_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.esm.v1beta1.ESMStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.esm.v1beta1.ESMStatus)
+    private static final com.comdex.esm.v1beta1.EsmProto.ESMStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.esm.v1beta1.EsmProto.ESMStatus();
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.ESMStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ESMStatus>
+        PARSER = new com.google.protobuf.AbstractParser<ESMStatus>() {
+      @java.lang.Override
+      public ESMStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ESMStatus> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ESMStatus> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.ESMStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KillSwitchParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.esm.v1beta1.KillSwitchParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>bool breaker_enable = 2 [json_name = "breakerEnable", (.gogoproto.moretags) = "yaml:&#92;"breaker_enable&#92;""];</code>
+     * @return The breakerEnable.
+     */
+    boolean getBreakerEnable();
+  }
+  /**
+   * Protobuf type {@code comdex.esm.v1beta1.KillSwitchParams}
+   */
+  public static final class KillSwitchParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.esm.v1beta1.KillSwitchParams)
+      KillSwitchParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KillSwitchParams.newBuilder() to construct.
+    private KillSwitchParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KillSwitchParams() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KillSwitchParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_KillSwitchParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_KillSwitchParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.esm.v1beta1.EsmProto.KillSwitchParams.class, com.comdex.esm.v1beta1.EsmProto.KillSwitchParams.Builder.class);
+    }
+
+    public static final int APPID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int BREAKER_ENABLE_FIELD_NUMBER = 2;
+    private boolean breakerEnable_ = false;
+    /**
+     * <code>bool breaker_enable = 2 [json_name = "breakerEnable", (.gogoproto.moretags) = "yaml:&#92;"breaker_enable&#92;""];</code>
+     * @return The breakerEnable.
+     */
+    @java.lang.Override
+    public boolean getBreakerEnable() {
+      return breakerEnable_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (breakerEnable_ != false) {
+        output.writeBool(2, breakerEnable_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (breakerEnable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, breakerEnable_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.esm.v1beta1.EsmProto.KillSwitchParams)) {
+        return super.equals(obj);
+      }
+      com.comdex.esm.v1beta1.EsmProto.KillSwitchParams other = (com.comdex.esm.v1beta1.EsmProto.KillSwitchParams) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getBreakerEnable()
+          != other.getBreakerEnable()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APPID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + BREAKER_ENABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getBreakerEnable());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.esm.v1beta1.EsmProto.KillSwitchParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.esm.v1beta1.KillSwitchParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.esm.v1beta1.KillSwitchParams)
+        com.comdex.esm.v1beta1.EsmProto.KillSwitchParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_KillSwitchParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_KillSwitchParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.esm.v1beta1.EsmProto.KillSwitchParams.class, com.comdex.esm.v1beta1.EsmProto.KillSwitchParams.Builder.class);
+      }
+
+      // Construct using com.comdex.esm.v1beta1.EsmProto.KillSwitchParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        breakerEnable_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_KillSwitchParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.KillSwitchParams getDefaultInstanceForType() {
+        return com.comdex.esm.v1beta1.EsmProto.KillSwitchParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.KillSwitchParams build() {
+        com.comdex.esm.v1beta1.EsmProto.KillSwitchParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.KillSwitchParams buildPartial() {
+        com.comdex.esm.v1beta1.EsmProto.KillSwitchParams result = new com.comdex.esm.v1beta1.EsmProto.KillSwitchParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.esm.v1beta1.EsmProto.KillSwitchParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.breakerEnable_ = breakerEnable_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.esm.v1beta1.EsmProto.KillSwitchParams) {
+          return mergeFrom((com.comdex.esm.v1beta1.EsmProto.KillSwitchParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.esm.v1beta1.EsmProto.KillSwitchParams other) {
+        if (other == com.comdex.esm.v1beta1.EsmProto.KillSwitchParams.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getBreakerEnable() != false) {
+          setBreakerEnable(other.getBreakerEnable());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                breakerEnable_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean breakerEnable_ ;
+      /**
+       * <code>bool breaker_enable = 2 [json_name = "breakerEnable", (.gogoproto.moretags) = "yaml:&#92;"breaker_enable&#92;""];</code>
+       * @return The breakerEnable.
+       */
+      @java.lang.Override
+      public boolean getBreakerEnable() {
+        return breakerEnable_;
+      }
+      /**
+       * <code>bool breaker_enable = 2 [json_name = "breakerEnable", (.gogoproto.moretags) = "yaml:&#92;"breaker_enable&#92;""];</code>
+       * @param value The breakerEnable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBreakerEnable(boolean value) {
+
+        breakerEnable_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool breaker_enable = 2 [json_name = "breakerEnable", (.gogoproto.moretags) = "yaml:&#92;"breaker_enable&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBreakerEnable() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        breakerEnable_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.esm.v1beta1.KillSwitchParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.esm.v1beta1.KillSwitchParams)
+    private static final com.comdex.esm.v1beta1.EsmProto.KillSwitchParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.esm.v1beta1.EsmProto.KillSwitchParams();
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.KillSwitchParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KillSwitchParams>
+        PARSER = new com.google.protobuf.AbstractParser<KillSwitchParams>() {
+      @java.lang.Override
+      public KillSwitchParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KillSwitchParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KillSwitchParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.KillSwitchParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UsersDepositMappingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.esm.v1beta1.UsersDepositMapping)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+     * @return The depositor.
+     */
+    java.lang.String getDepositor();
+    /**
+     * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+     * @return The bytes for depositor.
+     */
+    com.google.protobuf.ByteString
+        getDepositorBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the deposits field is set.
+     */
+    boolean hasDeposits();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The deposits.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDeposits();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.esm.v1beta1.UsersDepositMapping}
+   */
+  public static final class UsersDepositMapping extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.esm.v1beta1.UsersDepositMapping)
+      UsersDepositMappingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UsersDepositMapping.newBuilder() to construct.
+    private UsersDepositMapping(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UsersDepositMapping() {
+      depositor_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UsersDepositMapping();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_UsersDepositMapping_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_UsersDepositMapping_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.class, com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int DEPOSITOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object depositor_ = "";
+    /**
+     * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+     * @return The depositor.
+     */
+    @java.lang.Override
+    public java.lang.String getDepositor() {
+      java.lang.Object ref = depositor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        depositor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+     * @return The bytes for depositor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositorBytes() {
+      java.lang.Object ref = depositor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        depositor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSITS_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin deposits_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the deposits field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeposits() {
+      return deposits_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The deposits.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDeposits() {
+      return deposits_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposits_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositsOrBuilder() {
+      return deposits_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposits_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, depositor_);
+      }
+      if (deposits_ != null) {
+        output.writeMessage(3, getDeposits());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, depositor_);
+      }
+      if (deposits_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDeposits());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping)) {
+        return super.equals(obj);
+      }
+      com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping other = (com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getDepositor()
+          .equals(other.getDepositor())) return false;
+      if (hasDeposits() != other.hasDeposits()) return false;
+      if (hasDeposits()) {
+        if (!getDeposits()
+            .equals(other.getDeposits())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + DEPOSITOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDepositor().hashCode();
+      if (hasDeposits()) {
+        hash = (37 * hash) + DEPOSITS_FIELD_NUMBER;
+        hash = (53 * hash) + getDeposits().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.esm.v1beta1.UsersDepositMapping}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.esm.v1beta1.UsersDepositMapping)
+        com.comdex.esm.v1beta1.EsmProto.UsersDepositMappingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_UsersDepositMapping_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_UsersDepositMapping_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.class, com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.Builder.class);
+      }
+
+      // Construct using com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        depositor_ = "";
+        deposits_ = null;
+        if (depositsBuilder_ != null) {
+          depositsBuilder_.dispose();
+          depositsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_UsersDepositMapping_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping getDefaultInstanceForType() {
+        return com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping build() {
+        com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping buildPartial() {
+        com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping result = new com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.depositor_ = depositor_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.deposits_ = depositsBuilder_ == null
+              ? deposits_
+              : depositsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping) {
+          return mergeFrom((com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping other) {
+        if (other == com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (!other.getDepositor().isEmpty()) {
+          depositor_ = other.depositor_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasDeposits()) {
+          mergeDeposits(other.getDeposits());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                depositor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDepositsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object depositor_ = "";
+      /**
+       * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+       * @return The depositor.
+       */
+      public java.lang.String getDepositor() {
+        java.lang.Object ref = depositor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          depositor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+       * @return The bytes for depositor.
+       */
+      public com.google.protobuf.ByteString
+          getDepositorBytes() {
+        java.lang.Object ref = depositor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          depositor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+       * @param value The depositor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        depositor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepositor() {
+        depositor_ = getDefaultInstance().getDepositor();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string depositor = 2 [json_name = "depositor", (.gogoproto.moretags) = "yaml:&#92;"depositor&#92;""];</code>
+       * @param value The bytes for depositor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        depositor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin deposits_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> depositsBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the deposits field is set.
+       */
+      public boolean hasDeposits() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The deposits.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDeposits() {
+        if (depositsBuilder_ == null) {
+          return deposits_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposits_;
+        } else {
+          return depositsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setDeposits(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deposits_ = value;
+        } else {
+          depositsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setDeposits(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          deposits_ = builderForValue.build();
+        } else {
+          depositsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeDeposits(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            deposits_ != null &&
+            deposits_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDepositsBuilder().mergeFrom(value);
+          } else {
+            deposits_ = value;
+          }
+        } else {
+          depositsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearDeposits() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        deposits_ = null;
+        if (depositsBuilder_ != null) {
+          depositsBuilder_.dispose();
+          depositsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDepositsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDepositsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositsOrBuilder() {
+        if (depositsBuilder_ != null) {
+          return depositsBuilder_.getMessageOrBuilder();
+        } else {
+          return deposits_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposits_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDepositsFieldBuilder() {
+        if (depositsBuilder_ == null) {
+          depositsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDeposits(),
+                  getParentForChildren(),
+                  isClean());
+          deposits_ = null;
+        }
+        return depositsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.esm.v1beta1.UsersDepositMapping)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.esm.v1beta1.UsersDepositMapping)
+    private static final com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping();
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UsersDepositMapping>
+        PARSER = new com.google.protobuf.AbstractParser<UsersDepositMapping>() {
+      @java.lang.Override
+      public UsersDepositMapping parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UsersDepositMapping> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UsersDepositMapping> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataAfterCoolOffOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.esm.v1beta1.DataAfterCoolOff)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+     * @return The collateralTotalAmount.
+     */
+    java.lang.String getCollateralTotalAmount();
+    /**
+     * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+     * @return The bytes for collateralTotalAmount.
+     */
+    com.google.protobuf.ByteString
+        getCollateralTotalAmountBytes();
+
+    /**
+     * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+     * @return The debtTotalAmount.
+     */
+    java.lang.String getDebtTotalAmount();
+    /**
+     * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+     * @return The bytes for debtTotalAmount.
+     */
+    com.google.protobuf.ByteString
+        getDebtTotalAmountBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.esm.v1beta1.DataAfterCoolOff}
+   */
+  public static final class DataAfterCoolOff extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.esm.v1beta1.DataAfterCoolOff)
+      DataAfterCoolOffOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataAfterCoolOff.newBuilder() to construct.
+    private DataAfterCoolOff(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataAfterCoolOff() {
+      collateralTotalAmount_ = "";
+      debtTotalAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataAfterCoolOff();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DataAfterCoolOff_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DataAfterCoolOff_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff.class, com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff.Builder.class);
+    }
+
+    public static final int APPID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int COLLATERAL_TOTAL_AMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collateralTotalAmount_ = "";
+    /**
+     * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+     * @return The collateralTotalAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getCollateralTotalAmount() {
+      java.lang.Object ref = collateralTotalAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collateralTotalAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+     * @return The bytes for collateralTotalAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollateralTotalAmountBytes() {
+      java.lang.Object ref = collateralTotalAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collateralTotalAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEBT_TOTAL_AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object debtTotalAmount_ = "";
+    /**
+     * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+     * @return The debtTotalAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getDebtTotalAmount() {
+      java.lang.Object ref = debtTotalAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        debtTotalAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+     * @return The bytes for debtTotalAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDebtTotalAmountBytes() {
+      java.lang.Object ref = debtTotalAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtTotalAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralTotalAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralTotalAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(debtTotalAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, debtTotalAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralTotalAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralTotalAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(debtTotalAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, debtTotalAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff)) {
+        return super.equals(obj);
+      }
+      com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff other = (com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getCollateralTotalAmount()
+          .equals(other.getCollateralTotalAmount())) return false;
+      if (!getDebtTotalAmount()
+          .equals(other.getDebtTotalAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APPID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + COLLATERAL_TOTAL_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCollateralTotalAmount().hashCode();
+      hash = (37 * hash) + DEBT_TOTAL_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getDebtTotalAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.esm.v1beta1.DataAfterCoolOff}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.esm.v1beta1.DataAfterCoolOff)
+        com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOffOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DataAfterCoolOff_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DataAfterCoolOff_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff.class, com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff.Builder.class);
+      }
+
+      // Construct using com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        collateralTotalAmount_ = "";
+        debtTotalAmount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DataAfterCoolOff_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff getDefaultInstanceForType() {
+        return com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff build() {
+        com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff buildPartial() {
+        com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff result = new com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.collateralTotalAmount_ = collateralTotalAmount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.debtTotalAmount_ = debtTotalAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff) {
+          return mergeFrom((com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff other) {
+        if (other == com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (!other.getCollateralTotalAmount().isEmpty()) {
+          collateralTotalAmount_ = other.collateralTotalAmount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDebtTotalAmount().isEmpty()) {
+          debtTotalAmount_ = other.debtTotalAmount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                collateralTotalAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                debtTotalAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collateralTotalAmount_ = "";
+      /**
+       * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+       * @return The collateralTotalAmount.
+       */
+      public java.lang.String getCollateralTotalAmount() {
+        java.lang.Object ref = collateralTotalAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collateralTotalAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+       * @return The bytes for collateralTotalAmount.
+       */
+      public com.google.protobuf.ByteString
+          getCollateralTotalAmountBytes() {
+        java.lang.Object ref = collateralTotalAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collateralTotalAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+       * @param value The collateralTotalAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralTotalAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collateralTotalAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollateralTotalAmount() {
+        collateralTotalAmount_ = getDefaultInstance().getCollateralTotalAmount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_total_amount = 2 [json_name = "collateralTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"collateral_total_amount&#92;""];</code>
+       * @param value The bytes for collateralTotalAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralTotalAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collateralTotalAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object debtTotalAmount_ = "";
+      /**
+       * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+       * @return The debtTotalAmount.
+       */
+      public java.lang.String getDebtTotalAmount() {
+        java.lang.Object ref = debtTotalAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          debtTotalAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+       * @return The bytes for debtTotalAmount.
+       */
+      public com.google.protobuf.ByteString
+          getDebtTotalAmountBytes() {
+        java.lang.Object ref = debtTotalAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtTotalAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+       * @param value The debtTotalAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebtTotalAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        debtTotalAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDebtTotalAmount() {
+        debtTotalAmount_ = getDefaultInstance().getDebtTotalAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string debt_total_amount = 3 [json_name = "debtTotalAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_total_amount&#92;""];</code>
+       * @param value The bytes for debtTotalAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebtTotalAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        debtTotalAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.esm.v1beta1.DataAfterCoolOff)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.esm.v1beta1.DataAfterCoolOff)
+    private static final com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff();
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataAfterCoolOff>
+        PARSER = new com.google.protobuf.AbstractParser<DataAfterCoolOff>() {
+      @java.lang.Override
+      public DataAfterCoolOff parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataAfterCoolOff> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataAfterCoolOff> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssetToAmountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.esm.v1beta1.AssetToAmount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+     * @return The share.
+     */
+    java.lang.String getShare();
+    /**
+     * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+     * @return The bytes for share.
+     */
+    com.google.protobuf.ByteString
+        getShareBytes();
+
+    /**
+     * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+     * @return The debtTokenWorth.
+     */
+    java.lang.String getDebtTokenWorth();
+    /**
+     * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+     * @return The bytes for debtTokenWorth.
+     */
+    com.google.protobuf.ByteString
+        getDebtTokenWorthBytes();
+
+    /**
+     * <code>bool is_collateral = 6 [json_name = "isCollateral", (.gogoproto.moretags) = "yaml:&#92;"is_collateral&#92;""];</code>
+     * @return The isCollateral.
+     */
+    boolean getIsCollateral();
+  }
+  /**
+   * Protobuf type {@code comdex.esm.v1beta1.AssetToAmount}
+   */
+  public static final class AssetToAmount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.esm.v1beta1.AssetToAmount)
+      AssetToAmountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AssetToAmount.newBuilder() to construct.
+    private AssetToAmount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AssetToAmount() {
+      amount_ = "";
+      share_ = "";
+      debtTokenWorth_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AssetToAmount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_AssetToAmount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_AssetToAmount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.esm.v1beta1.EsmProto.AssetToAmount.class, com.comdex.esm.v1beta1.EsmProto.AssetToAmount.Builder.class);
+    }
+
+    public static final int APPID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 2;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object share_ = "";
+    /**
+     * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+     * @return The share.
+     */
+    @java.lang.Override
+    public java.lang.String getShare() {
+      java.lang.Object ref = share_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        share_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+     * @return The bytes for share.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getShareBytes() {
+      java.lang.Object ref = share_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        share_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEBT_TOKEN_WORTH_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object debtTokenWorth_ = "";
+    /**
+     * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+     * @return The debtTokenWorth.
+     */
+    @java.lang.Override
+    public java.lang.String getDebtTokenWorth() {
+      java.lang.Object ref = debtTokenWorth_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        debtTokenWorth_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+     * @return The bytes for debtTokenWorth.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDebtTokenWorthBytes() {
+      java.lang.Object ref = debtTokenWorth_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtTokenWorth_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IS_COLLATERAL_FIELD_NUMBER = 6;
+    private boolean isCollateral_ = false;
+    /**
+     * <code>bool is_collateral = 6 [json_name = "isCollateral", (.gogoproto.moretags) = "yaml:&#92;"is_collateral&#92;""];</code>
+     * @return The isCollateral.
+     */
+    @java.lang.Override
+    public boolean getIsCollateral() {
+      return isCollateral_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (assetId_ != 0L) {
+        output.writeUInt64(2, assetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(share_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, share_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(debtTokenWorth_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, debtTokenWorth_);
+      }
+      if (isCollateral_ != false) {
+        output.writeBool(6, isCollateral_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, assetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(share_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, share_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(debtTokenWorth_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, debtTokenWorth_);
+      }
+      if (isCollateral_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, isCollateral_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.esm.v1beta1.EsmProto.AssetToAmount)) {
+        return super.equals(obj);
+      }
+      com.comdex.esm.v1beta1.EsmProto.AssetToAmount other = (com.comdex.esm.v1beta1.EsmProto.AssetToAmount) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getShare()
+          .equals(other.getShare())) return false;
+      if (!getDebtTokenWorth()
+          .equals(other.getDebtTokenWorth())) return false;
+      if (getIsCollateral()
+          != other.getIsCollateral()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APPID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getShare().hashCode();
+      hash = (37 * hash) + DEBT_TOKEN_WORTH_FIELD_NUMBER;
+      hash = (53 * hash) + getDebtTokenWorth().hashCode();
+      hash = (37 * hash) + IS_COLLATERAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsCollateral());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.esm.v1beta1.EsmProto.AssetToAmount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.esm.v1beta1.AssetToAmount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.esm.v1beta1.AssetToAmount)
+        com.comdex.esm.v1beta1.EsmProto.AssetToAmountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_AssetToAmount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_AssetToAmount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.esm.v1beta1.EsmProto.AssetToAmount.class, com.comdex.esm.v1beta1.EsmProto.AssetToAmount.Builder.class);
+      }
+
+      // Construct using com.comdex.esm.v1beta1.EsmProto.AssetToAmount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        assetId_ = 0L;
+        amount_ = "";
+        share_ = "";
+        debtTokenWorth_ = "";
+        isCollateral_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_AssetToAmount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.AssetToAmount getDefaultInstanceForType() {
+        return com.comdex.esm.v1beta1.EsmProto.AssetToAmount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.AssetToAmount build() {
+        com.comdex.esm.v1beta1.EsmProto.AssetToAmount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.AssetToAmount buildPartial() {
+        com.comdex.esm.v1beta1.EsmProto.AssetToAmount result = new com.comdex.esm.v1beta1.EsmProto.AssetToAmount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.esm.v1beta1.EsmProto.AssetToAmount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.share_ = share_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.debtTokenWorth_ = debtTokenWorth_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.isCollateral_ = isCollateral_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.esm.v1beta1.EsmProto.AssetToAmount) {
+          return mergeFrom((com.comdex.esm.v1beta1.EsmProto.AssetToAmount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.esm.v1beta1.EsmProto.AssetToAmount other) {
+        if (other == com.comdex.esm.v1beta1.EsmProto.AssetToAmount.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getShare().isEmpty()) {
+          share_ = other.share_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDebtTokenWorth().isEmpty()) {
+          debtTokenWorth_ = other.debtTokenWorth_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getIsCollateral() != false) {
+          setIsCollateral(other.getIsCollateral());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                share_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                debtTokenWorth_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                isCollateral_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 appId = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"appId&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object share_ = "";
+      /**
+       * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+       * @return The share.
+       */
+      public java.lang.String getShare() {
+        java.lang.Object ref = share_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          share_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+       * @return The bytes for share.
+       */
+      public com.google.protobuf.ByteString
+          getShareBytes() {
+        java.lang.Object ref = share_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          share_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+       * @param value The share to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShare(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        share_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShare() {
+        share_ = getDefaultInstance().getShare();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string share = 4 [json_name = "share", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"share&#92;""];</code>
+       * @param value The bytes for share to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShareBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        share_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object debtTokenWorth_ = "";
+      /**
+       * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+       * @return The debtTokenWorth.
+       */
+      public java.lang.String getDebtTokenWorth() {
+        java.lang.Object ref = debtTokenWorth_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          debtTokenWorth_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+       * @return The bytes for debtTokenWorth.
+       */
+      public com.google.protobuf.ByteString
+          getDebtTokenWorthBytes() {
+        java.lang.Object ref = debtTokenWorth_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtTokenWorth_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+       * @param value The debtTokenWorth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebtTokenWorth(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        debtTokenWorth_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDebtTokenWorth() {
+        debtTokenWorth_ = getDefaultInstance().getDebtTokenWorth();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string debt_token_worth = 5 [json_name = "debtTokenWorth", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"debt_token_worth&#92;""];</code>
+       * @param value The bytes for debtTokenWorth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebtTokenWorthBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        debtTokenWorth_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private boolean isCollateral_ ;
+      /**
+       * <code>bool is_collateral = 6 [json_name = "isCollateral", (.gogoproto.moretags) = "yaml:&#92;"is_collateral&#92;""];</code>
+       * @return The isCollateral.
+       */
+      @java.lang.Override
+      public boolean getIsCollateral() {
+        return isCollateral_;
+      }
+      /**
+       * <code>bool is_collateral = 6 [json_name = "isCollateral", (.gogoproto.moretags) = "yaml:&#92;"is_collateral&#92;""];</code>
+       * @param value The isCollateral to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsCollateral(boolean value) {
+
+        isCollateral_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_collateral = 6 [json_name = "isCollateral", (.gogoproto.moretags) = "yaml:&#92;"is_collateral&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsCollateral() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        isCollateral_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.esm.v1beta1.AssetToAmount)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.esm.v1beta1.AssetToAmount)
+    private static final com.comdex.esm.v1beta1.EsmProto.AssetToAmount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.esm.v1beta1.EsmProto.AssetToAmount();
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.AssetToAmount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssetToAmount>
+        PARSER = new com.google.protobuf.AbstractParser<AssetToAmount>() {
+      @java.lang.Override
+      public AssetToAmount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssetToAmount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssetToAmount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.AssetToAmount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DebtAssetsRatesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.esm.v1beta1.DebtAssetsRates)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>uint64 rates = 2 [json_name = "rates"];</code>
+     * @return The rates.
+     */
+    long getRates();
+  }
+  /**
+   * Protobuf type {@code comdex.esm.v1beta1.DebtAssetsRates}
+   */
+  public static final class DebtAssetsRates extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.esm.v1beta1.DebtAssetsRates)
+      DebtAssetsRatesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DebtAssetsRates.newBuilder() to construct.
+    private DebtAssetsRates(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DebtAssetsRates() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DebtAssetsRates();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DebtAssetsRates_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DebtAssetsRates_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.class, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder.class);
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 1;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int RATES_FIELD_NUMBER = 2;
+    private long rates_ = 0L;
+    /**
+     * <code>uint64 rates = 2 [json_name = "rates"];</code>
+     * @return The rates.
+     */
+    @java.lang.Override
+    public long getRates() {
+      return rates_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (assetId_ != 0L) {
+        output.writeUInt64(1, assetId_);
+      }
+      if (rates_ != 0L) {
+        output.writeUInt64(2, rates_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, assetId_);
+      }
+      if (rates_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, rates_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates)) {
+        return super.equals(obj);
+      }
+      com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates other = (com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates) obj;
+
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (getRates()
+          != other.getRates()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      hash = (37 * hash) + RATES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRates());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.esm.v1beta1.DebtAssetsRates}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.esm.v1beta1.DebtAssetsRates)
+        com.comdex.esm.v1beta1.EsmProto.DebtAssetsRatesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DebtAssetsRates_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DebtAssetsRates_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.class, com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.Builder.class);
+      }
+
+      // Construct using com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        assetId_ = 0L;
+        rates_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.esm.v1beta1.EsmProto.internal_static_comdex_esm_v1beta1_DebtAssetsRates_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates getDefaultInstanceForType() {
+        return com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates build() {
+        com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates buildPartial() {
+        com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates result = new com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rates_ = rates_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates) {
+          return mergeFrom((com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates other) {
+        if (other == com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates.getDefaultInstance()) return this;
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (other.getRates() != 0L) {
+          setRates(other.getRates());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                rates_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.customname) = "AssetID", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long rates_ ;
+      /**
+       * <code>uint64 rates = 2 [json_name = "rates"];</code>
+       * @return The rates.
+       */
+      @java.lang.Override
+      public long getRates() {
+        return rates_;
+      }
+      /**
+       * <code>uint64 rates = 2 [json_name = "rates"];</code>
+       * @param value The rates to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRates(long value) {
+
+        rates_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 rates = 2 [json_name = "rates"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRates() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rates_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.esm.v1beta1.DebtAssetsRates)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.esm.v1beta1.DebtAssetsRates)
+    private static final com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates();
+    }
+
+    public static com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DebtAssetsRates>
+        PARSER = new com.google.protobuf.AbstractParser<DebtAssetsRates>() {
+      @java.lang.Override
+      public DebtAssetsRates parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DebtAssetsRates> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DebtAssetsRates> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.esm.v1beta1.EsmProto.DebtAssetsRates getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_esm_v1beta1_ESMTriggerParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_esm_v1beta1_ESMTriggerParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_esm_v1beta1_CurrentDepositStats_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_esm_v1beta1_CurrentDepositStats_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_esm_v1beta1_ESMStatus_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_esm_v1beta1_ESMStatus_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_esm_v1beta1_KillSwitchParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_esm_v1beta1_KillSwitchParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_esm_v1beta1_UsersDepositMapping_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_esm_v1beta1_UsersDepositMapping_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_esm_v1beta1_DataAfterCoolOff_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_esm_v1beta1_DataAfterCoolOff_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_esm_v1beta1_AssetToAmount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_esm_v1beta1_AssetToAmount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_esm_v1beta1_DebtAssetsRates_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_esm_v1beta1_DebtAssetsRates_fieldAccessorTable;
 
@@ -131,12 +7144,12 @@ public final class EsmProto {
       "collateral\030\006 \001(\010B\030\362\336\037\024yaml:\"is_collatera" +
       "l\"R\014isCollateral\"b\n\017DebtAssetsRates\0229\n\010a" +
       "sset_id\030\001 \001(\004B\036\342\336\037\007AssetID\362\336\037\017yaml:\"asse" +
-      "t_id\"R\007assetId\022\024\n\005rates\030\002 \001(\004R\005ratesB\273\001\n" +
-      "\026com.comdex.esm.v1beta1B\010EsmProtoP\001Z-git" +
-      "hub.com/comdex-official/comdex/x/esm/typ" +
-      "es\242\002\003CEX\252\002\022Comdex.Esm.V1beta1\312\002\022Comdex\\E" +
-      "sm\\V1beta1\342\002\036Comdex\\Esm\\V1beta1\\GPBMetad" +
-      "ata\352\002\024Comdex::Esm::V1beta1b\006proto3"
+      "t_id\"R\007assetId\022\024\n\005rates\030\002 \001(\004R\005ratesB\271\001\n" +
+      "\026com.comdex.esm.v1beta1B\010EsmProtoZ-githu" +
+      "b.com/comdex-official/comdex/x/esm/types" +
+      "\242\002\003CEX\252\002\022Comdex.Esm.V1beta1\312\002\022Comdex\\Esm" +
+      "\\V1beta1\342\002\036Comdex\\Esm\\V1beta1\\GPBMetadat" +
+      "a\352\002\024Comdex::Esm::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

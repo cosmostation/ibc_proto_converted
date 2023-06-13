@@ -14,19 +14,1523 @@ public final class MsgProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface RaAuthenticateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.v1beta1.RaAuthenticate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>bytes certificate = 2 [json_name = "certificate", (.gogoproto.jsontag) = "ra_cert", (.gogoproto.casttype) = "github.com/scrtlabs/SecretNetwork/x/registration/remote_attestation.Certificate"];</code>
+     * @return The certificate.
+     */
+    com.google.protobuf.ByteString getCertificate();
+  }
+  /**
+   * Protobuf type {@code secret.registration.v1beta1.RaAuthenticate}
+   */
+  public static final class RaAuthenticate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.v1beta1.RaAuthenticate)
+      RaAuthenticateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RaAuthenticate.newBuilder() to construct.
+    private RaAuthenticate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RaAuthenticate() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      certificate_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RaAuthenticate();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_RaAuthenticate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_RaAuthenticate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.v1beta1.MsgProto.RaAuthenticate.class, com.secret.registration.v1beta1.MsgProto.RaAuthenticate.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CERTIFICATE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString certificate_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes certificate = 2 [json_name = "certificate", (.gogoproto.jsontag) = "ra_cert", (.gogoproto.casttype) = "github.com/scrtlabs/SecretNetwork/x/registration/remote_attestation.Certificate"];</code>
+     * @return The certificate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCertificate() {
+      return certificate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (!certificate_.isEmpty()) {
+        output.writeBytes(2, certificate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (!certificate_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, certificate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.v1beta1.MsgProto.RaAuthenticate)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.v1beta1.MsgProto.RaAuthenticate other = (com.secret.registration.v1beta1.MsgProto.RaAuthenticate) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getCertificate()
+          .equals(other.getCertificate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CERTIFICATE_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.v1beta1.MsgProto.RaAuthenticate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.v1beta1.RaAuthenticate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.v1beta1.RaAuthenticate)
+        com.secret.registration.v1beta1.MsgProto.RaAuthenticateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_RaAuthenticate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_RaAuthenticate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.v1beta1.MsgProto.RaAuthenticate.class, com.secret.registration.v1beta1.MsgProto.RaAuthenticate.Builder.class);
+      }
+
+      // Construct using com.secret.registration.v1beta1.MsgProto.RaAuthenticate.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        certificate_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_RaAuthenticate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.RaAuthenticate getDefaultInstanceForType() {
+        return com.secret.registration.v1beta1.MsgProto.RaAuthenticate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.RaAuthenticate build() {
+        com.secret.registration.v1beta1.MsgProto.RaAuthenticate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.RaAuthenticate buildPartial() {
+        com.secret.registration.v1beta1.MsgProto.RaAuthenticate result = new com.secret.registration.v1beta1.MsgProto.RaAuthenticate(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.v1beta1.MsgProto.RaAuthenticate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.certificate_ = certificate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.v1beta1.MsgProto.RaAuthenticate) {
+          return mergeFrom((com.secret.registration.v1beta1.MsgProto.RaAuthenticate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.v1beta1.MsgProto.RaAuthenticate other) {
+        if (other == com.secret.registration.v1beta1.MsgProto.RaAuthenticate.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (other.getCertificate() != com.google.protobuf.ByteString.EMPTY) {
+          setCertificate(other.getCertificate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                certificate_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString certificate_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes certificate = 2 [json_name = "certificate", (.gogoproto.jsontag) = "ra_cert", (.gogoproto.casttype) = "github.com/scrtlabs/SecretNetwork/x/registration/remote_attestation.Certificate"];</code>
+       * @return The certificate.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCertificate() {
+        return certificate_;
+      }
+      /**
+       * <code>bytes certificate = 2 [json_name = "certificate", (.gogoproto.jsontag) = "ra_cert", (.gogoproto.casttype) = "github.com/scrtlabs/SecretNetwork/x/registration/remote_attestation.Certificate"];</code>
+       * @param value The certificate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificate(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        certificate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes certificate = 2 [json_name = "certificate", (.gogoproto.jsontag) = "ra_cert", (.gogoproto.casttype) = "github.com/scrtlabs/SecretNetwork/x/registration/remote_attestation.Certificate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        certificate_ = getDefaultInstance().getCertificate();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.v1beta1.RaAuthenticate)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.v1beta1.RaAuthenticate)
+    private static final com.secret.registration.v1beta1.MsgProto.RaAuthenticate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.v1beta1.MsgProto.RaAuthenticate();
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.RaAuthenticate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RaAuthenticate>
+        PARSER = new com.google.protobuf.AbstractParser<RaAuthenticate>() {
+      @java.lang.Override
+      public RaAuthenticate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RaAuthenticate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RaAuthenticate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.v1beta1.MsgProto.RaAuthenticate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MasterKeyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.v1beta1.MasterKey)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes bytes = 1 [json_name = "bytes"];</code>
+     * @return The bytes.
+     */
+    com.google.protobuf.ByteString getBytes();
+  }
+  /**
+   * Protobuf type {@code secret.registration.v1beta1.MasterKey}
+   */
+  public static final class MasterKey extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.v1beta1.MasterKey)
+      MasterKeyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MasterKey.newBuilder() to construct.
+    private MasterKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MasterKey() {
+      bytes_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MasterKey();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_MasterKey_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_MasterKey_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.v1beta1.MsgProto.MasterKey.class, com.secret.registration.v1beta1.MsgProto.MasterKey.Builder.class);
+    }
+
+    public static final int BYTES_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString bytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes bytes = 1 [json_name = "bytes"];</code>
+     * @return The bytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBytes() {
+      return bytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!bytes_.isEmpty()) {
+        output.writeBytes(1, bytes_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!bytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, bytes_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.v1beta1.MsgProto.MasterKey)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.v1beta1.MsgProto.MasterKey other = (com.secret.registration.v1beta1.MsgProto.MasterKey) obj;
+
+      if (!getBytes()
+          .equals(other.getBytes())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getBytes().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.v1beta1.MsgProto.MasterKey prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.v1beta1.MasterKey}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.v1beta1.MasterKey)
+        com.secret.registration.v1beta1.MsgProto.MasterKeyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_MasterKey_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_MasterKey_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.v1beta1.MsgProto.MasterKey.class, com.secret.registration.v1beta1.MsgProto.MasterKey.Builder.class);
+      }
+
+      // Construct using com.secret.registration.v1beta1.MsgProto.MasterKey.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bytes_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_MasterKey_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.MasterKey getDefaultInstanceForType() {
+        return com.secret.registration.v1beta1.MsgProto.MasterKey.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.MasterKey build() {
+        com.secret.registration.v1beta1.MsgProto.MasterKey result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.MasterKey buildPartial() {
+        com.secret.registration.v1beta1.MsgProto.MasterKey result = new com.secret.registration.v1beta1.MsgProto.MasterKey(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.v1beta1.MsgProto.MasterKey result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bytes_ = bytes_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.v1beta1.MsgProto.MasterKey) {
+          return mergeFrom((com.secret.registration.v1beta1.MsgProto.MasterKey)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.v1beta1.MsgProto.MasterKey other) {
+        if (other == com.secret.registration.v1beta1.MsgProto.MasterKey.getDefaultInstance()) return this;
+        if (other.getBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setBytes(other.getBytes());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                bytes_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString bytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes bytes = 1 [json_name = "bytes"];</code>
+       * @return The bytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBytes() {
+        return bytes_;
+      }
+      /**
+       * <code>bytes bytes = 1 [json_name = "bytes"];</code>
+       * @param value The bytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        bytes_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes bytes = 1 [json_name = "bytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBytes() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bytes_ = getDefaultInstance().getBytes();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.v1beta1.MasterKey)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.v1beta1.MasterKey)
+    private static final com.secret.registration.v1beta1.MsgProto.MasterKey DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.v1beta1.MsgProto.MasterKey();
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.MasterKey getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MasterKey>
+        PARSER = new com.google.protobuf.AbstractParser<MasterKey>() {
+      @java.lang.Override
+      public MasterKey parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MasterKey> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MasterKey> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.v1beta1.MsgProto.MasterKey getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.v1beta1.Key)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes key = 1 [json_name = "key", (.gogoproto.jsontag) = "key"];</code>
+     * @return The key.
+     */
+    com.google.protobuf.ByteString getKey();
+  }
+  /**
+   * Protobuf type {@code secret.registration.v1beta1.Key}
+   */
+  public static final class Key extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.v1beta1.Key)
+      KeyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Key.newBuilder() to construct.
+    private Key(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Key() {
+      key_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Key();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_Key_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_Key_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.v1beta1.MsgProto.Key.class, com.secret.registration.v1beta1.MsgProto.Key.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes key = 1 [json_name = "key", (.gogoproto.jsontag) = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getKey() {
+      return key_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!key_.isEmpty()) {
+        output.writeBytes(1, key_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!key_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, key_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.v1beta1.MsgProto.Key)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.v1beta1.MsgProto.Key other = (com.secret.registration.v1beta1.MsgProto.Key) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.Key parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.Key parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.v1beta1.MsgProto.Key parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.v1beta1.MsgProto.Key prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.v1beta1.Key}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.v1beta1.Key)
+        com.secret.registration.v1beta1.MsgProto.KeyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_Key_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_Key_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.v1beta1.MsgProto.Key.class, com.secret.registration.v1beta1.MsgProto.Key.Builder.class);
+      }
+
+      // Construct using com.secret.registration.v1beta1.MsgProto.Key.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.v1beta1.MsgProto.internal_static_secret_registration_v1beta1_Key_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.Key getDefaultInstanceForType() {
+        return com.secret.registration.v1beta1.MsgProto.Key.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.Key build() {
+        com.secret.registration.v1beta1.MsgProto.Key result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.v1beta1.MsgProto.Key buildPartial() {
+        com.secret.registration.v1beta1.MsgProto.Key result = new com.secret.registration.v1beta1.MsgProto.Key(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.v1beta1.MsgProto.Key result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.v1beta1.MsgProto.Key) {
+          return mergeFrom((com.secret.registration.v1beta1.MsgProto.Key)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.v1beta1.MsgProto.Key other) {
+        if (other == com.secret.registration.v1beta1.MsgProto.Key.getDefaultInstance()) return this;
+        if (other.getKey() != com.google.protobuf.ByteString.EMPTY) {
+          setKey(other.getKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes key = 1 [json_name = "key", (.gogoproto.jsontag) = "key"];</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getKey() {
+        return key_;
+      }
+      /**
+       * <code>bytes key = 1 [json_name = "key", (.gogoproto.jsontag) = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes key = 1 [json_name = "key", (.gogoproto.jsontag) = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.v1beta1.Key)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.v1beta1.Key)
+    private static final com.secret.registration.v1beta1.MsgProto.Key DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.v1beta1.MsgProto.Key();
+    }
+
+    public static com.secret.registration.v1beta1.MsgProto.Key getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Key>
+        PARSER = new com.google.protobuf.AbstractParser<Key>() {
+      @java.lang.Override
+      public Key parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Key> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Key> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.v1beta1.MsgProto.Key getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_v1beta1_RaAuthenticate_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_v1beta1_RaAuthenticate_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_v1beta1_MasterKey_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_v1beta1_MasterKey_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_v1beta1_Key_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_v1beta1_Key_fieldAccessorTable;
 
@@ -47,14 +1551,14 @@ public final class MsgProto {
       "bs/SecretNetwork/x/registration/remote_a" +
       "ttestation.CertificateR\013certificate\"!\n\tM" +
       "asterKey\022\024\n\005bytes\030\001 \001(\014R\005bytes\" \n\003Key\022\031\n" +
-      "\003key\030\001 \001(\014B\007\352\336\037\003keyR\003keyB\202\002\n\037com.secret." +
-      "registration.v1beta1B\010MsgProtoP\001Z?github" +
-      ".com/scrtlabs/SecretNetwork/x/registrati" +
-      "on/internal/types\242\002\003SRX\252\002\033Secret.Registr" +
-      "ation.V1beta1\312\002\033Secret\\Registration\\V1be" +
-      "ta1\342\002\'Secret\\Registration\\V1beta1\\GPBMet" +
-      "adata\352\002\035Secret::Registration::V1beta1\310\341\036" +
-      "\000\250\342\036\001b\006proto3"
+      "\003key\030\001 \001(\014B\007\352\336\037\003keyR\003keyB\200\002\n\037com.secret." +
+      "registration.v1beta1B\010MsgProtoZ?github.c" +
+      "om/scrtlabs/SecretNetwork/x/registration" +
+      "/internal/types\242\002\003SRX\252\002\033Secret.Registrat" +
+      "ion.V1beta1\312\002\033Secret\\Registration\\V1beta" +
+      "1\342\002\'Secret\\Registration\\V1beta1\\GPBMetad" +
+      "ata\352\002\035Secret::Registration::V1beta1\310\341\036\000\250" +
+      "\342\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

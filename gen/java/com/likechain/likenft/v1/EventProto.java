@@ -14,109 +14,18947 @@ public final class EventProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventNewClassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventNewClass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+     * @return The parentIscnIdPrefix.
+     */
+    java.lang.String getParentIscnIdPrefix();
+    /**
+     * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+     * @return The bytes for parentIscnIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getParentIscnIdPrefixBytes();
+
+    /**
+     * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+     * @return The parentAccount.
+     */
+    java.lang.String getParentAccount();
+    /**
+     * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+     * @return The bytes for parentAccount.
+     */
+    com.google.protobuf.ByteString
+        getParentAccountBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventNewClass}
+   */
+  public static final class EventNewClass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventNewClass)
+      EventNewClassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventNewClass.newBuilder() to construct.
+    private EventNewClass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventNewClass() {
+      classId_ = "";
+      parentIscnIdPrefix_ = "";
+      parentAccount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventNewClass();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventNewClass_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventNewClass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventNewClass.class, com.likechain.likenft.v1.EventProto.EventNewClass.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARENT_ISCN_ID_PREFIX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object parentIscnIdPrefix_ = "";
+    /**
+     * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+     * @return The parentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getParentIscnIdPrefix() {
+      java.lang.Object ref = parentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentIscnIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+     * @return The bytes for parentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParentIscnIdPrefixBytes() {
+      java.lang.Object ref = parentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentIscnIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARENT_ACCOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object parentAccount_ = "";
+    /**
+     * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+     * @return The parentAccount.
+     */
+    @java.lang.Override
+    public java.lang.String getParentAccount() {
+      java.lang.Object ref = parentAccount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentAccount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+     * @return The bytes for parentAccount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParentAccountBytes() {
+      java.lang.Object ref = parentAccount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentIscnIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, parentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentAccount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, parentAccount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentIscnIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, parentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentAccount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, parentAccount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventNewClass)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventNewClass other = (com.likechain.likenft.v1.EventProto.EventNewClass) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getParentIscnIdPrefix()
+          .equals(other.getParentIscnIdPrefix())) return false;
+      if (!getParentAccount()
+          .equals(other.getParentAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + PARENT_ISCN_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getParentIscnIdPrefix().hashCode();
+      hash = (37 * hash) + PARENT_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getParentAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventNewClass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventNewClass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventNewClass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventNewClass)
+        com.likechain.likenft.v1.EventProto.EventNewClassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventNewClass_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventNewClass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventNewClass.class, com.likechain.likenft.v1.EventProto.EventNewClass.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventNewClass.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        parentIscnIdPrefix_ = "";
+        parentAccount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventNewClass_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventNewClass getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventNewClass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventNewClass build() {
+        com.likechain.likenft.v1.EventProto.EventNewClass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventNewClass buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventNewClass result = new com.likechain.likenft.v1.EventProto.EventNewClass(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventNewClass result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.parentIscnIdPrefix_ = parentIscnIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.parentAccount_ = parentAccount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventNewClass) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventNewClass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventNewClass other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventNewClass.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getParentIscnIdPrefix().isEmpty()) {
+          parentIscnIdPrefix_ = other.parentIscnIdPrefix_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getParentAccount().isEmpty()) {
+          parentAccount_ = other.parentAccount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                parentIscnIdPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                parentAccount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parentIscnIdPrefix_ = "";
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @return The parentIscnIdPrefix.
+       */
+      public java.lang.String getParentIscnIdPrefix() {
+        java.lang.Object ref = parentIscnIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parentIscnIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @return The bytes for parentIscnIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getParentIscnIdPrefixBytes() {
+        java.lang.Object ref = parentIscnIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentIscnIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @param value The parentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentIscnIdPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        parentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParentIscnIdPrefix() {
+        parentIscnIdPrefix_ = getDefaultInstance().getParentIscnIdPrefix();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @param value The bytes for parentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentIscnIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        parentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parentAccount_ = "";
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @return The parentAccount.
+       */
+      public java.lang.String getParentAccount() {
+        java.lang.Object ref = parentAccount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parentAccount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @return The bytes for parentAccount.
+       */
+      public com.google.protobuf.ByteString
+          getParentAccountBytes() {
+        java.lang.Object ref = parentAccount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentAccount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @param value The parentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        parentAccount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParentAccount() {
+        parentAccount_ = getDefaultInstance().getParentAccount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @param value The bytes for parentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        parentAccount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventNewClass)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventNewClass)
+    private static final com.likechain.likenft.v1.EventProto.EventNewClass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventNewClass();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventNewClass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventNewClass>
+        PARSER = new com.google.protobuf.AbstractParser<EventNewClass>() {
+      @java.lang.Override
+      public EventNewClass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventNewClass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventNewClass> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventNewClass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateClassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventUpdateClass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+     * @return The parentIscnIdPrefix.
+     */
+    java.lang.String getParentIscnIdPrefix();
+    /**
+     * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+     * @return The bytes for parentIscnIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getParentIscnIdPrefixBytes();
+
+    /**
+     * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+     * @return The parentAccount.
+     */
+    java.lang.String getParentAccount();
+    /**
+     * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+     * @return The bytes for parentAccount.
+     */
+    com.google.protobuf.ByteString
+        getParentAccountBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventUpdateClass}
+   */
+  public static final class EventUpdateClass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventUpdateClass)
+      EventUpdateClassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateClass.newBuilder() to construct.
+    private EventUpdateClass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateClass() {
+      classId_ = "";
+      parentIscnIdPrefix_ = "";
+      parentAccount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateClass();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateClass_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateClass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventUpdateClass.class, com.likechain.likenft.v1.EventProto.EventUpdateClass.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARENT_ISCN_ID_PREFIX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object parentIscnIdPrefix_ = "";
+    /**
+     * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+     * @return The parentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getParentIscnIdPrefix() {
+      java.lang.Object ref = parentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentIscnIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+     * @return The bytes for parentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParentIscnIdPrefixBytes() {
+      java.lang.Object ref = parentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentIscnIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARENT_ACCOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object parentAccount_ = "";
+    /**
+     * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+     * @return The parentAccount.
+     */
+    @java.lang.Override
+    public java.lang.String getParentAccount() {
+      java.lang.Object ref = parentAccount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentAccount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+     * @return The bytes for parentAccount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParentAccountBytes() {
+      java.lang.Object ref = parentAccount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentIscnIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, parentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentAccount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, parentAccount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentIscnIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, parentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentAccount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, parentAccount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventUpdateClass)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventUpdateClass other = (com.likechain.likenft.v1.EventProto.EventUpdateClass) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getParentIscnIdPrefix()
+          .equals(other.getParentIscnIdPrefix())) return false;
+      if (!getParentAccount()
+          .equals(other.getParentAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + PARENT_ISCN_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getParentIscnIdPrefix().hashCode();
+      hash = (37 * hash) + PARENT_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getParentAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventUpdateClass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventUpdateClass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventUpdateClass)
+        com.likechain.likenft.v1.EventProto.EventUpdateClassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateClass_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateClass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventUpdateClass.class, com.likechain.likenft.v1.EventProto.EventUpdateClass.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventUpdateClass.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        parentIscnIdPrefix_ = "";
+        parentAccount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateClass_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateClass getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventUpdateClass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateClass build() {
+        com.likechain.likenft.v1.EventProto.EventUpdateClass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateClass buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventUpdateClass result = new com.likechain.likenft.v1.EventProto.EventUpdateClass(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventUpdateClass result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.parentIscnIdPrefix_ = parentIscnIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.parentAccount_ = parentAccount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventUpdateClass) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventUpdateClass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventUpdateClass other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventUpdateClass.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getParentIscnIdPrefix().isEmpty()) {
+          parentIscnIdPrefix_ = other.parentIscnIdPrefix_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getParentAccount().isEmpty()) {
+          parentAccount_ = other.parentAccount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                parentIscnIdPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                parentAccount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parentIscnIdPrefix_ = "";
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @return The parentIscnIdPrefix.
+       */
+      public java.lang.String getParentIscnIdPrefix() {
+        java.lang.Object ref = parentIscnIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parentIscnIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @return The bytes for parentIscnIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getParentIscnIdPrefixBytes() {
+        java.lang.Object ref = parentIscnIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentIscnIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @param value The parentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentIscnIdPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        parentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParentIscnIdPrefix() {
+        parentIscnIdPrefix_ = getDefaultInstance().getParentIscnIdPrefix();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_iscn_id_prefix = 2 [json_name = "parentIscnIdPrefix"];</code>
+       * @param value The bytes for parentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentIscnIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        parentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parentAccount_ = "";
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @return The parentAccount.
+       */
+      public java.lang.String getParentAccount() {
+        java.lang.Object ref = parentAccount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parentAccount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @return The bytes for parentAccount.
+       */
+      public com.google.protobuf.ByteString
+          getParentAccountBytes() {
+        java.lang.Object ref = parentAccount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentAccount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @param value The parentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        parentAccount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParentAccount() {
+        parentAccount_ = getDefaultInstance().getParentAccount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_account = 3 [json_name = "parentAccount"];</code>
+       * @param value The bytes for parentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        parentAccount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventUpdateClass)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventUpdateClass)
+    private static final com.likechain.likenft.v1.EventProto.EventUpdateClass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventUpdateClass();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateClass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateClass>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateClass>() {
+      @java.lang.Override
+      public EventUpdateClass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateClass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateClass> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventUpdateClass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRevealClassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventRevealClass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>bool success = 2 [json_name = "success"];</code>
+     * @return The success.
+     */
+    boolean getSuccess();
+
+    /**
+     * <code>string error = 3 [json_name = "error"];</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <code>string error = 3 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventRevealClass}
+   */
+  public static final class EventRevealClass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventRevealClass)
+      EventRevealClassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRevealClass.newBuilder() to construct.
+    private EventRevealClass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRevealClass() {
+      classId_ = "";
+      error_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRevealClass();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventRevealClass_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventRevealClass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventRevealClass.class, com.likechain.likenft.v1.EventProto.EventRevealClass.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUCCESS_FIELD_NUMBER = 2;
+    private boolean success_ = false;
+    /**
+     * <code>bool success = 2 [json_name = "success"];</code>
+     * @return The success.
+     */
+    @java.lang.Override
+    public boolean getSuccess() {
+      return success_;
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object error_ = "";
+    /**
+     * <code>string error = 3 [json_name = "error"];</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string error = 3 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (success_ != false) {
+        output.writeBool(2, success_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, error_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (success_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, success_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, error_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventRevealClass)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventRevealClass other = (com.likechain.likenft.v1.EventProto.EventRevealClass) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (getSuccess()
+          != other.getSuccess()) return false;
+      if (!getError()
+          .equals(other.getError())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuccess());
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventRevealClass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventRevealClass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventRevealClass)
+        com.likechain.likenft.v1.EventProto.EventRevealClassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventRevealClass_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventRevealClass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventRevealClass.class, com.likechain.likenft.v1.EventProto.EventRevealClass.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventRevealClass.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        success_ = false;
+        error_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventRevealClass_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventRevealClass getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventRevealClass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventRevealClass build() {
+        com.likechain.likenft.v1.EventProto.EventRevealClass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventRevealClass buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventRevealClass result = new com.likechain.likenft.v1.EventProto.EventRevealClass(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventRevealClass result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.success_ = success_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.error_ = error_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventRevealClass) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventRevealClass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventRevealClass other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventRevealClass.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSuccess() != false) {
+          setSuccess(other.getSuccess());
+        }
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                success_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                error_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean success_ ;
+      /**
+       * <code>bool success = 2 [json_name = "success"];</code>
+       * @return The success.
+       */
+      @java.lang.Override
+      public boolean getSuccess() {
+        return success_;
+      }
+      /**
+       * <code>bool success = 2 [json_name = "success"];</code>
+       * @param value The success to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuccess(boolean value) {
+
+        success_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool success = 2 [json_name = "success"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuccess() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        success_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object error_ = "";
+      /**
+       * <code>string error = 3 [json_name = "error"];</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string error = 3 [json_name = "error"];</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string error = 3 [json_name = "error"];</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        error_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 3 [json_name = "error"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        error_ = getDefaultInstance().getError();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 3 [json_name = "error"];</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        error_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventRevealClass)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventRevealClass)
+    private static final com.likechain.likenft.v1.EventProto.EventRevealClass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventRevealClass();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventRevealClass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRevealClass>
+        PARSER = new com.google.protobuf.AbstractParser<EventRevealClass>() {
+      @java.lang.Override
+      public EventRevealClass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRevealClass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRevealClass> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventRevealClass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventMintNFTOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventMintNFT)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    java.lang.String getClassParentIscnIdPrefix();
+    /**
+     * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes();
+
+    /**
+     * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    java.lang.String getClassParentAccount();
+    /**
+     * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    com.google.protobuf.ByteString
+        getClassParentAccountBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventMintNFT}
+   */
+  public static final class EventMintNFT extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventMintNFT)
+      EventMintNFTOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventMintNFT.newBuilder() to construct.
+    private EventMintNFT(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventMintNFT() {
+      classId_ = "";
+      nftId_ = "";
+      owner_ = "";
+      classParentIscnIdPrefix_ = "";
+      classParentAccount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventMintNFT();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventMintNFT_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventMintNFT_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventMintNFT.class, com.likechain.likenft.v1.EventProto.EventMintNFT.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentIscnIdPrefix_ = "";
+    /**
+     * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentIscnIdPrefix() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentIscnIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentIscnIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ACCOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentAccount_ = "";
+    /**
+     * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentAccount() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentAccount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentAccountBytes() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, classParentAccount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, classParentAccount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventMintNFT)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventMintNFT other = (com.likechain.likenft.v1.EventProto.EventMintNFT) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getClassParentIscnIdPrefix()
+          .equals(other.getClassParentIscnIdPrefix())) return false;
+      if (!getClassParentAccount()
+          .equals(other.getClassParentAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentIscnIdPrefix().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventMintNFT prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventMintNFT}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventMintNFT)
+        com.likechain.likenft.v1.EventProto.EventMintNFTOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventMintNFT_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventMintNFT_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventMintNFT.class, com.likechain.likenft.v1.EventProto.EventMintNFT.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventMintNFT.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        owner_ = "";
+        classParentIscnIdPrefix_ = "";
+        classParentAccount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventMintNFT_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventMintNFT getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventMintNFT.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventMintNFT build() {
+        com.likechain.likenft.v1.EventProto.EventMintNFT result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventMintNFT buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventMintNFT result = new com.likechain.likenft.v1.EventProto.EventMintNFT(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventMintNFT result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.classParentIscnIdPrefix_ = classParentIscnIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.classParentAccount_ = classParentAccount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventMintNFT) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventMintNFT)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventMintNFT other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventMintNFT.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getClassParentIscnIdPrefix().isEmpty()) {
+          classParentIscnIdPrefix_ = other.classParentIscnIdPrefix_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getClassParentAccount().isEmpty()) {
+          classParentAccount_ = other.classParentAccount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                classParentIscnIdPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                classParentAccount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentIscnIdPrefix_ = "";
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The classParentIscnIdPrefix.
+       */
+      public java.lang.String getClassParentIscnIdPrefix() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentIscnIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The bytes for classParentIscnIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentIscnIdPrefixBytes() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentIscnIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentIscnIdPrefix() {
+        classParentIscnIdPrefix_ = getDefaultInstance().getClassParentIscnIdPrefix();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The bytes for classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentAccount_ = "";
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @return The classParentAccount.
+       */
+      public java.lang.String getClassParentAccount() {
+        java.lang.Object ref = classParentAccount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentAccount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @return The bytes for classParentAccount.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentAccountBytes() {
+        java.lang.Object ref = classParentAccount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentAccount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @param value The classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentAccount() {
+        classParentAccount_ = getDefaultInstance().getClassParentAccount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @param value The bytes for classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventMintNFT)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventMintNFT)
+    private static final com.likechain.likenft.v1.EventProto.EventMintNFT DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventMintNFT();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventMintNFT getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventMintNFT>
+        PARSER = new com.google.protobuf.AbstractParser<EventMintNFT>() {
+      @java.lang.Override
+      public EventMintNFT parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventMintNFT> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventMintNFT> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventMintNFT getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBurnNFTOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventBurnNFT)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    java.lang.String getClassParentIscnIdPrefix();
+    /**
+     * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes();
+
+    /**
+     * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    java.lang.String getClassParentAccount();
+    /**
+     * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    com.google.protobuf.ByteString
+        getClassParentAccountBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventBurnNFT}
+   */
+  public static final class EventBurnNFT extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventBurnNFT)
+      EventBurnNFTOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBurnNFT.newBuilder() to construct.
+    private EventBurnNFT(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBurnNFT() {
+      classId_ = "";
+      nftId_ = "";
+      owner_ = "";
+      classParentIscnIdPrefix_ = "";
+      classParentAccount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBurnNFT();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBurnNFT_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBurnNFT_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventBurnNFT.class, com.likechain.likenft.v1.EventProto.EventBurnNFT.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentIscnIdPrefix_ = "";
+    /**
+     * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentIscnIdPrefix() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentIscnIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentIscnIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ACCOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentAccount_ = "";
+    /**
+     * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentAccount() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentAccount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentAccountBytes() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, classParentAccount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, classParentAccount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventBurnNFT)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventBurnNFT other = (com.likechain.likenft.v1.EventProto.EventBurnNFT) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getClassParentIscnIdPrefix()
+          .equals(other.getClassParentIscnIdPrefix())) return false;
+      if (!getClassParentAccount()
+          .equals(other.getClassParentAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentIscnIdPrefix().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventBurnNFT prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventBurnNFT}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventBurnNFT)
+        com.likechain.likenft.v1.EventProto.EventBurnNFTOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBurnNFT_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBurnNFT_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventBurnNFT.class, com.likechain.likenft.v1.EventProto.EventBurnNFT.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventBurnNFT.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        owner_ = "";
+        classParentIscnIdPrefix_ = "";
+        classParentAccount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBurnNFT_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventBurnNFT getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventBurnNFT.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventBurnNFT build() {
+        com.likechain.likenft.v1.EventProto.EventBurnNFT result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventBurnNFT buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventBurnNFT result = new com.likechain.likenft.v1.EventProto.EventBurnNFT(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventBurnNFT result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.classParentIscnIdPrefix_ = classParentIscnIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.classParentAccount_ = classParentAccount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventBurnNFT) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventBurnNFT)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventBurnNFT other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventBurnNFT.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getClassParentIscnIdPrefix().isEmpty()) {
+          classParentIscnIdPrefix_ = other.classParentIscnIdPrefix_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getClassParentAccount().isEmpty()) {
+          classParentAccount_ = other.classParentAccount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                classParentIscnIdPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                classParentAccount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentIscnIdPrefix_ = "";
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The classParentIscnIdPrefix.
+       */
+      public java.lang.String getClassParentIscnIdPrefix() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentIscnIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The bytes for classParentIscnIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentIscnIdPrefixBytes() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentIscnIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentIscnIdPrefix() {
+        classParentIscnIdPrefix_ = getDefaultInstance().getClassParentIscnIdPrefix();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 4 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The bytes for classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentAccount_ = "";
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @return The classParentAccount.
+       */
+      public java.lang.String getClassParentAccount() {
+        java.lang.Object ref = classParentAccount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentAccount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @return The bytes for classParentAccount.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentAccountBytes() {
+        java.lang.Object ref = classParentAccount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentAccount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @param value The classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentAccount() {
+        classParentAccount_ = getDefaultInstance().getClassParentAccount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 5 [json_name = "classParentAccount"];</code>
+       * @param value The bytes for classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventBurnNFT)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventBurnNFT)
+    private static final com.likechain.likenft.v1.EventProto.EventBurnNFT DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventBurnNFT();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventBurnNFT getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBurnNFT>
+        PARSER = new com.google.protobuf.AbstractParser<EventBurnNFT>() {
+      @java.lang.Override
+      public EventBurnNFT parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBurnNFT> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBurnNFT> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventBurnNFT getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCreateBlindBoxContentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventCreateBlindBoxContent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    java.lang.String getContentId();
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The bytes for contentId.
+     */
+    com.google.protobuf.ByteString
+        getContentIdBytes();
+
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    java.lang.String getClassParentIscnIdPrefix();
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes();
+
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    java.lang.String getClassParentAccount();
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    com.google.protobuf.ByteString
+        getClassParentAccountBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventCreateBlindBoxContent}
+   */
+  public static final class EventCreateBlindBoxContent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventCreateBlindBoxContent)
+      EventCreateBlindBoxContentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateBlindBoxContent.newBuilder() to construct.
+    private EventCreateBlindBoxContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateBlindBoxContent() {
+      classId_ = "";
+      contentId_ = "";
+      classParentIscnIdPrefix_ = "";
+      classParentAccount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateBlindBoxContent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateBlindBoxContent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateBlindBoxContent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent.class, com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contentId_ = "";
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    @java.lang.Override
+    public java.lang.String getContentId() {
+      java.lang.Object ref = contentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The bytes for contentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContentIdBytes() {
+      java.lang.Object ref = contentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentIscnIdPrefix_ = "";
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentIscnIdPrefix() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentIscnIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentIscnIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ACCOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentAccount_ = "";
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentAccount() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentAccount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentAccountBytes() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, classParentAccount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, classParentAccount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent other = (com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getContentId()
+          .equals(other.getContentId())) return false;
+      if (!getClassParentIscnIdPrefix()
+          .equals(other.getClassParentIscnIdPrefix())) return false;
+      if (!getClassParentAccount()
+          .equals(other.getClassParentAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + CONTENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContentId().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentIscnIdPrefix().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventCreateBlindBoxContent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventCreateBlindBoxContent)
+        com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateBlindBoxContent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateBlindBoxContent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent.class, com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        contentId_ = "";
+        classParentIscnIdPrefix_ = "";
+        classParentAccount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateBlindBoxContent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent build() {
+        com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent result = new com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contentId_ = contentId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.classParentIscnIdPrefix_ = classParentIscnIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.classParentAccount_ = classParentAccount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContentId().isEmpty()) {
+          contentId_ = other.contentId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getClassParentIscnIdPrefix().isEmpty()) {
+          classParentIscnIdPrefix_ = other.classParentIscnIdPrefix_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getClassParentAccount().isEmpty()) {
+          classParentAccount_ = other.classParentAccount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contentId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                classParentIscnIdPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                classParentAccount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contentId_ = "";
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return The contentId.
+       */
+      public java.lang.String getContentId() {
+        java.lang.Object ref = contentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return The bytes for contentId.
+       */
+      public com.google.protobuf.ByteString
+          getContentIdBytes() {
+        java.lang.Object ref = contentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @param value The contentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentId() {
+        contentId_ = getDefaultInstance().getContentId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @param value The bytes for contentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentIscnIdPrefix_ = "";
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The classParentIscnIdPrefix.
+       */
+      public java.lang.String getClassParentIscnIdPrefix() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentIscnIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The bytes for classParentIscnIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentIscnIdPrefixBytes() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentIscnIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentIscnIdPrefix() {
+        classParentIscnIdPrefix_ = getDefaultInstance().getClassParentIscnIdPrefix();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The bytes for classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentAccount_ = "";
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return The classParentAccount.
+       */
+      public java.lang.String getClassParentAccount() {
+        java.lang.Object ref = classParentAccount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentAccount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return The bytes for classParentAccount.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentAccountBytes() {
+        java.lang.Object ref = classParentAccount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentAccount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @param value The classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentAccount() {
+        classParentAccount_ = getDefaultInstance().getClassParentAccount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @param value The bytes for classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventCreateBlindBoxContent)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventCreateBlindBoxContent)
+    private static final com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateBlindBoxContent>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateBlindBoxContent>() {
+      @java.lang.Override
+      public EventCreateBlindBoxContent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateBlindBoxContent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateBlindBoxContent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventCreateBlindBoxContent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateBlindBoxContentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventUpdateBlindBoxContent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    java.lang.String getContentId();
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The bytes for contentId.
+     */
+    com.google.protobuf.ByteString
+        getContentIdBytes();
+
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    java.lang.String getClassParentIscnIdPrefix();
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes();
+
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    java.lang.String getClassParentAccount();
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    com.google.protobuf.ByteString
+        getClassParentAccountBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventUpdateBlindBoxContent}
+   */
+  public static final class EventUpdateBlindBoxContent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventUpdateBlindBoxContent)
+      EventUpdateBlindBoxContentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateBlindBoxContent.newBuilder() to construct.
+    private EventUpdateBlindBoxContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateBlindBoxContent() {
+      classId_ = "";
+      contentId_ = "";
+      classParentIscnIdPrefix_ = "";
+      classParentAccount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateBlindBoxContent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateBlindBoxContent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateBlindBoxContent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent.class, com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contentId_ = "";
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    @java.lang.Override
+    public java.lang.String getContentId() {
+      java.lang.Object ref = contentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The bytes for contentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContentIdBytes() {
+      java.lang.Object ref = contentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentIscnIdPrefix_ = "";
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentIscnIdPrefix() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentIscnIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentIscnIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ACCOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentAccount_ = "";
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentAccount() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentAccount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentAccountBytes() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, classParentAccount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, classParentAccount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent other = (com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getContentId()
+          .equals(other.getContentId())) return false;
+      if (!getClassParentIscnIdPrefix()
+          .equals(other.getClassParentIscnIdPrefix())) return false;
+      if (!getClassParentAccount()
+          .equals(other.getClassParentAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + CONTENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContentId().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentIscnIdPrefix().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventUpdateBlindBoxContent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventUpdateBlindBoxContent)
+        com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateBlindBoxContent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateBlindBoxContent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent.class, com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        contentId_ = "";
+        classParentIscnIdPrefix_ = "";
+        classParentAccount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateBlindBoxContent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent build() {
+        com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent result = new com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contentId_ = contentId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.classParentIscnIdPrefix_ = classParentIscnIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.classParentAccount_ = classParentAccount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContentId().isEmpty()) {
+          contentId_ = other.contentId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getClassParentIscnIdPrefix().isEmpty()) {
+          classParentIscnIdPrefix_ = other.classParentIscnIdPrefix_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getClassParentAccount().isEmpty()) {
+          classParentAccount_ = other.classParentAccount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contentId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                classParentIscnIdPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                classParentAccount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contentId_ = "";
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return The contentId.
+       */
+      public java.lang.String getContentId() {
+        java.lang.Object ref = contentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return The bytes for contentId.
+       */
+      public com.google.protobuf.ByteString
+          getContentIdBytes() {
+        java.lang.Object ref = contentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @param value The contentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentId() {
+        contentId_ = getDefaultInstance().getContentId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @param value The bytes for contentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentIscnIdPrefix_ = "";
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The classParentIscnIdPrefix.
+       */
+      public java.lang.String getClassParentIscnIdPrefix() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentIscnIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The bytes for classParentIscnIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentIscnIdPrefixBytes() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentIscnIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentIscnIdPrefix() {
+        classParentIscnIdPrefix_ = getDefaultInstance().getClassParentIscnIdPrefix();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The bytes for classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentAccount_ = "";
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return The classParentAccount.
+       */
+      public java.lang.String getClassParentAccount() {
+        java.lang.Object ref = classParentAccount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentAccount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return The bytes for classParentAccount.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentAccountBytes() {
+        java.lang.Object ref = classParentAccount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentAccount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @param value The classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentAccount() {
+        classParentAccount_ = getDefaultInstance().getClassParentAccount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @param value The bytes for classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventUpdateBlindBoxContent)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventUpdateBlindBoxContent)
+    private static final com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateBlindBoxContent>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateBlindBoxContent>() {
+      @java.lang.Override
+      public EventUpdateBlindBoxContent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateBlindBoxContent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateBlindBoxContent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventUpdateBlindBoxContent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventDeleteBlindBoxContentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventDeleteBlindBoxContent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    java.lang.String getContentId();
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The bytes for contentId.
+     */
+    com.google.protobuf.ByteString
+        getContentIdBytes();
+
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    java.lang.String getClassParentIscnIdPrefix();
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes();
+
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    java.lang.String getClassParentAccount();
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    com.google.protobuf.ByteString
+        getClassParentAccountBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventDeleteBlindBoxContent}
+   */
+  public static final class EventDeleteBlindBoxContent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventDeleteBlindBoxContent)
+      EventDeleteBlindBoxContentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventDeleteBlindBoxContent.newBuilder() to construct.
+    private EventDeleteBlindBoxContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventDeleteBlindBoxContent() {
+      classId_ = "";
+      contentId_ = "";
+      classParentIscnIdPrefix_ = "";
+      classParentAccount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventDeleteBlindBoxContent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteBlindBoxContent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteBlindBoxContent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent.class, com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contentId_ = "";
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    @java.lang.Override
+    public java.lang.String getContentId() {
+      java.lang.Object ref = contentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The bytes for contentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContentIdBytes() {
+      java.lang.Object ref = contentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentIscnIdPrefix_ = "";
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentIscnIdPrefix() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentIscnIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+     * @return The bytes for classParentIscnIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentIscnIdPrefixBytes() {
+      java.lang.Object ref = classParentIscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentIscnIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_PARENT_ACCOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classParentAccount_ = "";
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The classParentAccount.
+     */
+    @java.lang.Override
+    public java.lang.String getClassParentAccount() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classParentAccount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+     * @return The bytes for classParentAccount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassParentAccountBytes() {
+      java.lang.Object ref = classParentAccount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classParentAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, classParentAccount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentIscnIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classParentIscnIdPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classParentAccount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, classParentAccount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent other = (com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getContentId()
+          .equals(other.getContentId())) return false;
+      if (!getClassParentIscnIdPrefix()
+          .equals(other.getClassParentIscnIdPrefix())) return false;
+      if (!getClassParentAccount()
+          .equals(other.getClassParentAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + CONTENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContentId().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ISCN_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentIscnIdPrefix().hashCode();
+      hash = (37 * hash) + CLASS_PARENT_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getClassParentAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventDeleteBlindBoxContent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventDeleteBlindBoxContent)
+        com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteBlindBoxContent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteBlindBoxContent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent.class, com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        contentId_ = "";
+        classParentIscnIdPrefix_ = "";
+        classParentAccount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteBlindBoxContent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent build() {
+        com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent result = new com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contentId_ = contentId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.classParentIscnIdPrefix_ = classParentIscnIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.classParentAccount_ = classParentAccount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContentId().isEmpty()) {
+          contentId_ = other.contentId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getClassParentIscnIdPrefix().isEmpty()) {
+          classParentIscnIdPrefix_ = other.classParentIscnIdPrefix_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getClassParentAccount().isEmpty()) {
+          classParentAccount_ = other.classParentAccount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contentId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                classParentIscnIdPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                classParentAccount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contentId_ = "";
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return The contentId.
+       */
+      public java.lang.String getContentId() {
+        java.lang.Object ref = contentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return The bytes for contentId.
+       */
+      public com.google.protobuf.ByteString
+          getContentIdBytes() {
+        java.lang.Object ref = contentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @param value The contentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentId() {
+        contentId_ = getDefaultInstance().getContentId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @param value The bytes for contentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentIscnIdPrefix_ = "";
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The classParentIscnIdPrefix.
+       */
+      public java.lang.String getClassParentIscnIdPrefix() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentIscnIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return The bytes for classParentIscnIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentIscnIdPrefixBytes() {
+        java.lang.Object ref = classParentIscnIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentIscnIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentIscnIdPrefix() {
+        classParentIscnIdPrefix_ = getDefaultInstance().getClassParentIscnIdPrefix();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_iscn_id_prefix = 3 [json_name = "classParentIscnIdPrefix"];</code>
+       * @param value The bytes for classParentIscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentIscnIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentIscnIdPrefix_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classParentAccount_ = "";
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return The classParentAccount.
+       */
+      public java.lang.String getClassParentAccount() {
+        java.lang.Object ref = classParentAccount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classParentAccount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return The bytes for classParentAccount.
+       */
+      public com.google.protobuf.ByteString
+          getClassParentAccountBytes() {
+        java.lang.Object ref = classParentAccount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classParentAccount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @param value The classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassParentAccount() {
+        classParentAccount_ = getDefaultInstance().getClassParentAccount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_parent_account = 4 [json_name = "classParentAccount"];</code>
+       * @param value The bytes for classParentAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassParentAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classParentAccount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventDeleteBlindBoxContent)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventDeleteBlindBoxContent)
+    private static final com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventDeleteBlindBoxContent>
+        PARSER = new com.google.protobuf.AbstractParser<EventDeleteBlindBoxContent>() {
+      @java.lang.Override
+      public EventDeleteBlindBoxContent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventDeleteBlindBoxContent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventDeleteBlindBoxContent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventDeleteBlindBoxContent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCreateOfferOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventCreateOffer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    java.lang.String getBuyer();
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    com.google.protobuf.ByteString
+        getBuyerBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventCreateOffer}
+   */
+  public static final class EventCreateOffer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventCreateOffer)
+      EventCreateOfferOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateOffer.newBuilder() to construct.
+    private EventCreateOffer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateOffer() {
+      classId_ = "";
+      nftId_ = "";
+      buyer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateOffer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateOffer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateOffer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventCreateOffer.class, com.likechain.likenft.v1.EventProto.EventCreateOffer.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buyer_ = "";
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyer() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerBytes() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, buyer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, buyer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventCreateOffer)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventCreateOffer other = (com.likechain.likenft.v1.EventProto.EventCreateOffer) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getBuyer()
+          .equals(other.getBuyer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + BUYER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventCreateOffer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventCreateOffer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventCreateOffer)
+        com.likechain.likenft.v1.EventProto.EventCreateOfferOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateOffer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateOffer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventCreateOffer.class, com.likechain.likenft.v1.EventProto.EventCreateOffer.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventCreateOffer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        buyer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateOffer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateOffer getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventCreateOffer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateOffer build() {
+        com.likechain.likenft.v1.EventProto.EventCreateOffer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateOffer buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventCreateOffer result = new com.likechain.likenft.v1.EventProto.EventCreateOffer(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventCreateOffer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.buyer_ = buyer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventCreateOffer) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventCreateOffer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventCreateOffer other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventCreateOffer.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getBuyer().isEmpty()) {
+          buyer_ = other.buyer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                buyer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyer_ = "";
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return The buyer.
+       */
+      public java.lang.String getBuyer() {
+        java.lang.Object ref = buyer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return The bytes for buyer.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerBytes() {
+        java.lang.Object ref = buyer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @param value The buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        buyer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyer() {
+        buyer_ = getDefaultInstance().getBuyer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @param value The bytes for buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        buyer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventCreateOffer)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventCreateOffer)
+    private static final com.likechain.likenft.v1.EventProto.EventCreateOffer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventCreateOffer();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateOffer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateOffer>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateOffer>() {
+      @java.lang.Override
+      public EventCreateOffer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateOffer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateOffer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventCreateOffer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateOfferOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventUpdateOffer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    java.lang.String getBuyer();
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    com.google.protobuf.ByteString
+        getBuyerBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventUpdateOffer}
+   */
+  public static final class EventUpdateOffer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventUpdateOffer)
+      EventUpdateOfferOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateOffer.newBuilder() to construct.
+    private EventUpdateOffer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateOffer() {
+      classId_ = "";
+      nftId_ = "";
+      buyer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateOffer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateOffer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateOffer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventUpdateOffer.class, com.likechain.likenft.v1.EventProto.EventUpdateOffer.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buyer_ = "";
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyer() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerBytes() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, buyer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, buyer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventUpdateOffer)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventUpdateOffer other = (com.likechain.likenft.v1.EventProto.EventUpdateOffer) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getBuyer()
+          .equals(other.getBuyer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + BUYER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventUpdateOffer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventUpdateOffer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventUpdateOffer)
+        com.likechain.likenft.v1.EventProto.EventUpdateOfferOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateOffer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateOffer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventUpdateOffer.class, com.likechain.likenft.v1.EventProto.EventUpdateOffer.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventUpdateOffer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        buyer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateOffer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateOffer getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventUpdateOffer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateOffer build() {
+        com.likechain.likenft.v1.EventProto.EventUpdateOffer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateOffer buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventUpdateOffer result = new com.likechain.likenft.v1.EventProto.EventUpdateOffer(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventUpdateOffer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.buyer_ = buyer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventUpdateOffer) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventUpdateOffer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventUpdateOffer other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventUpdateOffer.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getBuyer().isEmpty()) {
+          buyer_ = other.buyer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                buyer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyer_ = "";
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return The buyer.
+       */
+      public java.lang.String getBuyer() {
+        java.lang.Object ref = buyer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return The bytes for buyer.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerBytes() {
+        java.lang.Object ref = buyer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @param value The buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        buyer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyer() {
+        buyer_ = getDefaultInstance().getBuyer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @param value The bytes for buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        buyer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventUpdateOffer)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventUpdateOffer)
+    private static final com.likechain.likenft.v1.EventProto.EventUpdateOffer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventUpdateOffer();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateOffer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateOffer>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateOffer>() {
+      @java.lang.Override
+      public EventUpdateOffer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateOffer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateOffer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventUpdateOffer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventDeleteOfferOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventDeleteOffer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    java.lang.String getBuyer();
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    com.google.protobuf.ByteString
+        getBuyerBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventDeleteOffer}
+   */
+  public static final class EventDeleteOffer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventDeleteOffer)
+      EventDeleteOfferOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventDeleteOffer.newBuilder() to construct.
+    private EventDeleteOffer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventDeleteOffer() {
+      classId_ = "";
+      nftId_ = "";
+      buyer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventDeleteOffer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteOffer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteOffer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventDeleteOffer.class, com.likechain.likenft.v1.EventProto.EventDeleteOffer.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buyer_ = "";
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyer() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerBytes() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, buyer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, buyer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventDeleteOffer)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventDeleteOffer other = (com.likechain.likenft.v1.EventProto.EventDeleteOffer) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getBuyer()
+          .equals(other.getBuyer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + BUYER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventDeleteOffer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventDeleteOffer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventDeleteOffer)
+        com.likechain.likenft.v1.EventProto.EventDeleteOfferOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteOffer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteOffer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventDeleteOffer.class, com.likechain.likenft.v1.EventProto.EventDeleteOffer.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventDeleteOffer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        buyer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteOffer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteOffer getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventDeleteOffer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteOffer build() {
+        com.likechain.likenft.v1.EventProto.EventDeleteOffer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteOffer buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventDeleteOffer result = new com.likechain.likenft.v1.EventProto.EventDeleteOffer(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventDeleteOffer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.buyer_ = buyer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventDeleteOffer) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventDeleteOffer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventDeleteOffer other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventDeleteOffer.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getBuyer().isEmpty()) {
+          buyer_ = other.buyer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                buyer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyer_ = "";
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return The buyer.
+       */
+      public java.lang.String getBuyer() {
+        java.lang.Object ref = buyer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return The bytes for buyer.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerBytes() {
+        java.lang.Object ref = buyer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @param value The buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        buyer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyer() {
+        buyer_ = getDefaultInstance().getBuyer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @param value The bytes for buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        buyer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventDeleteOffer)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventDeleteOffer)
+    private static final com.likechain.likenft.v1.EventProto.EventDeleteOffer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventDeleteOffer();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteOffer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventDeleteOffer>
+        PARSER = new com.google.protobuf.AbstractParser<EventDeleteOffer>() {
+      @java.lang.Override
+      public EventDeleteOffer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventDeleteOffer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventDeleteOffer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventDeleteOffer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCreateListingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventCreateListing)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    java.lang.String getSeller();
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    com.google.protobuf.ByteString
+        getSellerBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventCreateListing}
+   */
+  public static final class EventCreateListing extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventCreateListing)
+      EventCreateListingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateListing.newBuilder() to construct.
+    private EventCreateListing(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateListing() {
+      classId_ = "";
+      nftId_ = "";
+      seller_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateListing();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateListing_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateListing_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventCreateListing.class, com.likechain.likenft.v1.EventProto.EventCreateListing.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seller_ = "";
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    @java.lang.Override
+    public java.lang.String getSeller() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerBytes() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, seller_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, seller_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventCreateListing)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventCreateListing other = (com.likechain.likenft.v1.EventProto.EventCreateListing) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getSeller()
+          .equals(other.getSeller())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + SELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getSeller().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventCreateListing prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventCreateListing}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventCreateListing)
+        com.likechain.likenft.v1.EventProto.EventCreateListingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateListing_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateListing_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventCreateListing.class, com.likechain.likenft.v1.EventProto.EventCreateListing.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventCreateListing.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        seller_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateListing_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateListing getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventCreateListing.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateListing build() {
+        com.likechain.likenft.v1.EventProto.EventCreateListing result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateListing buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventCreateListing result = new com.likechain.likenft.v1.EventProto.EventCreateListing(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventCreateListing result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.seller_ = seller_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventCreateListing) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventCreateListing)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventCreateListing other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventCreateListing.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSeller().isEmpty()) {
+          seller_ = other.seller_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                seller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object seller_ = "";
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The seller.
+       */
+      public java.lang.String getSeller() {
+        java.lang.Object ref = seller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The bytes for seller.
+       */
+      public com.google.protobuf.ByteString
+          getSellerBytes() {
+        java.lang.Object ref = seller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeller() {
+        seller_ = getDefaultInstance().getSeller();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The bytes for seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventCreateListing)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventCreateListing)
+    private static final com.likechain.likenft.v1.EventProto.EventCreateListing DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventCreateListing();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateListing getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateListing>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateListing>() {
+      @java.lang.Override
+      public EventCreateListing parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateListing> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateListing> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventCreateListing getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateListingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventUpdateListing)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    java.lang.String getSeller();
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    com.google.protobuf.ByteString
+        getSellerBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventUpdateListing}
+   */
+  public static final class EventUpdateListing extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventUpdateListing)
+      EventUpdateListingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateListing.newBuilder() to construct.
+    private EventUpdateListing(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateListing() {
+      classId_ = "";
+      nftId_ = "";
+      seller_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateListing();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateListing_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateListing_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventUpdateListing.class, com.likechain.likenft.v1.EventProto.EventUpdateListing.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seller_ = "";
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    @java.lang.Override
+    public java.lang.String getSeller() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerBytes() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, seller_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, seller_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventUpdateListing)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventUpdateListing other = (com.likechain.likenft.v1.EventProto.EventUpdateListing) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getSeller()
+          .equals(other.getSeller())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + SELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getSeller().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventUpdateListing prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventUpdateListing}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventUpdateListing)
+        com.likechain.likenft.v1.EventProto.EventUpdateListingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateListing_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateListing_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventUpdateListing.class, com.likechain.likenft.v1.EventProto.EventUpdateListing.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventUpdateListing.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        seller_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateListing_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateListing getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventUpdateListing.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateListing build() {
+        com.likechain.likenft.v1.EventProto.EventUpdateListing result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateListing buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventUpdateListing result = new com.likechain.likenft.v1.EventProto.EventUpdateListing(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventUpdateListing result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.seller_ = seller_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventUpdateListing) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventUpdateListing)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventUpdateListing other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventUpdateListing.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSeller().isEmpty()) {
+          seller_ = other.seller_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                seller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object seller_ = "";
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The seller.
+       */
+      public java.lang.String getSeller() {
+        java.lang.Object ref = seller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The bytes for seller.
+       */
+      public com.google.protobuf.ByteString
+          getSellerBytes() {
+        java.lang.Object ref = seller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeller() {
+        seller_ = getDefaultInstance().getSeller();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The bytes for seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventUpdateListing)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventUpdateListing)
+    private static final com.likechain.likenft.v1.EventProto.EventUpdateListing DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventUpdateListing();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateListing getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateListing>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateListing>() {
+      @java.lang.Override
+      public EventUpdateListing parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateListing> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateListing> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventUpdateListing getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventDeleteListingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventDeleteListing)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    java.lang.String getSeller();
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    com.google.protobuf.ByteString
+        getSellerBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventDeleteListing}
+   */
+  public static final class EventDeleteListing extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventDeleteListing)
+      EventDeleteListingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventDeleteListing.newBuilder() to construct.
+    private EventDeleteListing(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventDeleteListing() {
+      classId_ = "";
+      nftId_ = "";
+      seller_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventDeleteListing();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteListing_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteListing_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventDeleteListing.class, com.likechain.likenft.v1.EventProto.EventDeleteListing.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seller_ = "";
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    @java.lang.Override
+    public java.lang.String getSeller() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerBytes() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, seller_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, seller_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventDeleteListing)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventDeleteListing other = (com.likechain.likenft.v1.EventProto.EventDeleteListing) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getSeller()
+          .equals(other.getSeller())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + SELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getSeller().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventDeleteListing prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventDeleteListing}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventDeleteListing)
+        com.likechain.likenft.v1.EventProto.EventDeleteListingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteListing_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteListing_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventDeleteListing.class, com.likechain.likenft.v1.EventProto.EventDeleteListing.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventDeleteListing.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        seller_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteListing_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteListing getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventDeleteListing.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteListing build() {
+        com.likechain.likenft.v1.EventProto.EventDeleteListing result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteListing buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventDeleteListing result = new com.likechain.likenft.v1.EventProto.EventDeleteListing(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventDeleteListing result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.seller_ = seller_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventDeleteListing) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventDeleteListing)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventDeleteListing other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventDeleteListing.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSeller().isEmpty()) {
+          seller_ = other.seller_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                seller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object seller_ = "";
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The seller.
+       */
+      public java.lang.String getSeller() {
+        java.lang.Object ref = seller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The bytes for seller.
+       */
+      public com.google.protobuf.ByteString
+          getSellerBytes() {
+        java.lang.Object ref = seller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeller() {
+        seller_ = getDefaultInstance().getSeller();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The bytes for seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventDeleteListing)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventDeleteListing)
+    private static final com.likechain.likenft.v1.EventProto.EventDeleteListing DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventDeleteListing();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteListing getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventDeleteListing>
+        PARSER = new com.google.protobuf.AbstractParser<EventDeleteListing>() {
+      @java.lang.Override
+      public EventDeleteListing parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventDeleteListing> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventDeleteListing> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventDeleteListing getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventSellNFTOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventSellNFT)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    java.lang.String getSeller();
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    com.google.protobuf.ByteString
+        getSellerBytes();
+
+    /**
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    java.lang.String getBuyer();
+    /**
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    com.google.protobuf.ByteString
+        getBuyerBytes();
+
+    /**
+     * <code>uint64 price = 5 [json_name = "price"];</code>
+     * @return The price.
+     */
+    long getPrice();
+
+    /**
+     * <code>bool full_pay_to_royalty = 6 [json_name = "fullPayToRoyalty"];</code>
+     * @return The fullPayToRoyalty.
+     */
+    boolean getFullPayToRoyalty();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventSellNFT}
+   */
+  public static final class EventSellNFT extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventSellNFT)
+      EventSellNFTOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventSellNFT.newBuilder() to construct.
+    private EventSellNFT(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventSellNFT() {
+      classId_ = "";
+      nftId_ = "";
+      seller_ = "";
+      buyer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventSellNFT();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventSellNFT_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventSellNFT_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventSellNFT.class, com.likechain.likenft.v1.EventProto.EventSellNFT.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seller_ = "";
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    @java.lang.Override
+    public java.lang.String getSeller() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerBytes() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buyer_ = "";
+    /**
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyer() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerBytes() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 5;
+    private long price_ = 0L;
+    /**
+     * <code>uint64 price = 5 [json_name = "price"];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public long getPrice() {
+      return price_;
+    }
+
+    public static final int FULL_PAY_TO_ROYALTY_FIELD_NUMBER = 6;
+    private boolean fullPayToRoyalty_ = false;
+    /**
+     * <code>bool full_pay_to_royalty = 6 [json_name = "fullPayToRoyalty"];</code>
+     * @return The fullPayToRoyalty.
+     */
+    @java.lang.Override
+    public boolean getFullPayToRoyalty() {
+      return fullPayToRoyalty_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, seller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, buyer_);
+      }
+      if (price_ != 0L) {
+        output.writeUInt64(5, price_);
+      }
+      if (fullPayToRoyalty_ != false) {
+        output.writeBool(6, fullPayToRoyalty_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, seller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, buyer_);
+      }
+      if (price_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, price_);
+      }
+      if (fullPayToRoyalty_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, fullPayToRoyalty_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventSellNFT)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventSellNFT other = (com.likechain.likenft.v1.EventProto.EventSellNFT) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getSeller()
+          .equals(other.getSeller())) return false;
+      if (!getBuyer()
+          .equals(other.getBuyer())) return false;
+      if (getPrice()
+          != other.getPrice()) return false;
+      if (getFullPayToRoyalty()
+          != other.getFullPayToRoyalty()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + SELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getSeller().hashCode();
+      hash = (37 * hash) + BUYER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyer().hashCode();
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPrice());
+      hash = (37 * hash) + FULL_PAY_TO_ROYALTY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFullPayToRoyalty());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventSellNFT prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventSellNFT}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventSellNFT)
+        com.likechain.likenft.v1.EventProto.EventSellNFTOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventSellNFT_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventSellNFT_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventSellNFT.class, com.likechain.likenft.v1.EventProto.EventSellNFT.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventSellNFT.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        seller_ = "";
+        buyer_ = "";
+        price_ = 0L;
+        fullPayToRoyalty_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventSellNFT_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventSellNFT getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventSellNFT.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventSellNFT build() {
+        com.likechain.likenft.v1.EventProto.EventSellNFT result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventSellNFT buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventSellNFT result = new com.likechain.likenft.v1.EventProto.EventSellNFT(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventSellNFT result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.seller_ = seller_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.buyer_ = buyer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.price_ = price_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.fullPayToRoyalty_ = fullPayToRoyalty_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventSellNFT) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventSellNFT)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventSellNFT other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventSellNFT.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSeller().isEmpty()) {
+          seller_ = other.seller_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBuyer().isEmpty()) {
+          buyer_ = other.buyer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getPrice() != 0L) {
+          setPrice(other.getPrice());
+        }
+        if (other.getFullPayToRoyalty() != false) {
+          setFullPayToRoyalty(other.getFullPayToRoyalty());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                seller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                buyer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                price_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                fullPayToRoyalty_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object seller_ = "";
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The seller.
+       */
+      public java.lang.String getSeller() {
+        java.lang.Object ref = seller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The bytes for seller.
+       */
+      public com.google.protobuf.ByteString
+          getSellerBytes() {
+        java.lang.Object ref = seller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeller() {
+        seller_ = getDefaultInstance().getSeller();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The bytes for seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyer_ = "";
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return The buyer.
+       */
+      public java.lang.String getBuyer() {
+        java.lang.Object ref = buyer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return The bytes for buyer.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerBytes() {
+        java.lang.Object ref = buyer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @param value The buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        buyer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyer() {
+        buyer_ = getDefaultInstance().getBuyer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @param value The bytes for buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        buyer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long price_ ;
+      /**
+       * <code>uint64 price = 5 [json_name = "price"];</code>
+       * @return The price.
+       */
+      @java.lang.Override
+      public long getPrice() {
+        return price_;
+      }
+      /**
+       * <code>uint64 price = 5 [json_name = "price"];</code>
+       * @param value The price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrice(long value) {
+
+        price_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 price = 5 [json_name = "price"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrice() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        price_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean fullPayToRoyalty_ ;
+      /**
+       * <code>bool full_pay_to_royalty = 6 [json_name = "fullPayToRoyalty"];</code>
+       * @return The fullPayToRoyalty.
+       */
+      @java.lang.Override
+      public boolean getFullPayToRoyalty() {
+        return fullPayToRoyalty_;
+      }
+      /**
+       * <code>bool full_pay_to_royalty = 6 [json_name = "fullPayToRoyalty"];</code>
+       * @param value The fullPayToRoyalty to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullPayToRoyalty(boolean value) {
+
+        fullPayToRoyalty_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool full_pay_to_royalty = 6 [json_name = "fullPayToRoyalty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullPayToRoyalty() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        fullPayToRoyalty_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventSellNFT)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventSellNFT)
+    private static final com.likechain.likenft.v1.EventProto.EventSellNFT DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventSellNFT();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventSellNFT getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventSellNFT>
+        PARSER = new com.google.protobuf.AbstractParser<EventSellNFT>() {
+      @java.lang.Override
+      public EventSellNFT parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventSellNFT> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventSellNFT> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventSellNFT getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBuyNFTOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventBuyNFT)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    java.lang.String getSeller();
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    com.google.protobuf.ByteString
+        getSellerBytes();
+
+    /**
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    java.lang.String getBuyer();
+    /**
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    com.google.protobuf.ByteString
+        getBuyerBytes();
+
+    /**
+     * <code>uint64 price = 5 [json_name = "price"];</code>
+     * @return The price.
+     */
+    long getPrice();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventBuyNFT}
+   */
+  public static final class EventBuyNFT extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventBuyNFT)
+      EventBuyNFTOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBuyNFT.newBuilder() to construct.
+    private EventBuyNFT(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBuyNFT() {
+      classId_ = "";
+      nftId_ = "";
+      seller_ = "";
+      buyer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBuyNFT();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBuyNFT_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBuyNFT_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventBuyNFT.class, com.likechain.likenft.v1.EventProto.EventBuyNFT.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seller_ = "";
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    @java.lang.Override
+    public java.lang.String getSeller() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerBytes() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buyer_ = "";
+    /**
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyer() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerBytes() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 5;
+    private long price_ = 0L;
+    /**
+     * <code>uint64 price = 5 [json_name = "price"];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public long getPrice() {
+      return price_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, seller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, buyer_);
+      }
+      if (price_ != 0L) {
+        output.writeUInt64(5, price_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, seller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, buyer_);
+      }
+      if (price_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, price_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventBuyNFT)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventBuyNFT other = (com.likechain.likenft.v1.EventProto.EventBuyNFT) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getSeller()
+          .equals(other.getSeller())) return false;
+      if (!getBuyer()
+          .equals(other.getBuyer())) return false;
+      if (getPrice()
+          != other.getPrice()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + SELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getSeller().hashCode();
+      hash = (37 * hash) + BUYER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyer().hashCode();
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPrice());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventBuyNFT prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventBuyNFT}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventBuyNFT)
+        com.likechain.likenft.v1.EventProto.EventBuyNFTOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBuyNFT_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBuyNFT_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventBuyNFT.class, com.likechain.likenft.v1.EventProto.EventBuyNFT.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventBuyNFT.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        seller_ = "";
+        buyer_ = "";
+        price_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventBuyNFT_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventBuyNFT getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventBuyNFT.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventBuyNFT build() {
+        com.likechain.likenft.v1.EventProto.EventBuyNFT result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventBuyNFT buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventBuyNFT result = new com.likechain.likenft.v1.EventProto.EventBuyNFT(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventBuyNFT result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.seller_ = seller_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.buyer_ = buyer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.price_ = price_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventBuyNFT) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventBuyNFT)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventBuyNFT other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventBuyNFT.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSeller().isEmpty()) {
+          seller_ = other.seller_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBuyer().isEmpty()) {
+          buyer_ = other.buyer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getPrice() != 0L) {
+          setPrice(other.getPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                seller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                buyer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                price_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object seller_ = "";
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The seller.
+       */
+      public java.lang.String getSeller() {
+        java.lang.Object ref = seller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The bytes for seller.
+       */
+      public com.google.protobuf.ByteString
+          getSellerBytes() {
+        java.lang.Object ref = seller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeller() {
+        seller_ = getDefaultInstance().getSeller();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The bytes for seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyer_ = "";
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return The buyer.
+       */
+      public java.lang.String getBuyer() {
+        java.lang.Object ref = buyer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return The bytes for buyer.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerBytes() {
+        java.lang.Object ref = buyer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @param value The buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        buyer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyer() {
+        buyer_ = getDefaultInstance().getBuyer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @param value The bytes for buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        buyer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long price_ ;
+      /**
+       * <code>uint64 price = 5 [json_name = "price"];</code>
+       * @return The price.
+       */
+      @java.lang.Override
+      public long getPrice() {
+        return price_;
+      }
+      /**
+       * <code>uint64 price = 5 [json_name = "price"];</code>
+       * @param value The price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrice(long value) {
+
+        price_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 price = 5 [json_name = "price"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrice() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        price_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventBuyNFT)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventBuyNFT)
+    private static final com.likechain.likenft.v1.EventProto.EventBuyNFT DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventBuyNFT();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventBuyNFT getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBuyNFT>
+        PARSER = new com.google.protobuf.AbstractParser<EventBuyNFT>() {
+      @java.lang.Override
+      public EventBuyNFT parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBuyNFT> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBuyNFT> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventBuyNFT getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventExpireOfferOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventExpireOffer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    java.lang.String getBuyer();
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    com.google.protobuf.ByteString
+        getBuyerBytes();
+
+    /**
+     * <code>bool success = 4 [json_name = "success"];</code>
+     * @return The success.
+     */
+    boolean getSuccess();
+
+    /**
+     * <code>string error = 5 [json_name = "error"];</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <code>string error = 5 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventExpireOffer}
+   */
+  public static final class EventExpireOffer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventExpireOffer)
+      EventExpireOfferOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventExpireOffer.newBuilder() to construct.
+    private EventExpireOffer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventExpireOffer() {
+      classId_ = "";
+      nftId_ = "";
+      buyer_ = "";
+      error_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventExpireOffer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireOffer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireOffer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventExpireOffer.class, com.likechain.likenft.v1.EventProto.EventExpireOffer.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buyer_ = "";
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyer() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer = 3 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerBytes() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUCCESS_FIELD_NUMBER = 4;
+    private boolean success_ = false;
+    /**
+     * <code>bool success = 4 [json_name = "success"];</code>
+     * @return The success.
+     */
+    @java.lang.Override
+    public boolean getSuccess() {
+      return success_;
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object error_ = "";
+    /**
+     * <code>string error = 5 [json_name = "error"];</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string error = 5 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, buyer_);
+      }
+      if (success_ != false) {
+        output.writeBool(4, success_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, error_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, buyer_);
+      }
+      if (success_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, success_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, error_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventExpireOffer)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventExpireOffer other = (com.likechain.likenft.v1.EventProto.EventExpireOffer) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getBuyer()
+          .equals(other.getBuyer())) return false;
+      if (getSuccess()
+          != other.getSuccess()) return false;
+      if (!getError()
+          .equals(other.getError())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + BUYER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyer().hashCode();
+      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuccess());
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventExpireOffer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventExpireOffer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventExpireOffer)
+        com.likechain.likenft.v1.EventProto.EventExpireOfferOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireOffer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireOffer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventExpireOffer.class, com.likechain.likenft.v1.EventProto.EventExpireOffer.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventExpireOffer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        buyer_ = "";
+        success_ = false;
+        error_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireOffer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventExpireOffer getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventExpireOffer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventExpireOffer build() {
+        com.likechain.likenft.v1.EventProto.EventExpireOffer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventExpireOffer buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventExpireOffer result = new com.likechain.likenft.v1.EventProto.EventExpireOffer(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventExpireOffer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.buyer_ = buyer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.success_ = success_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.error_ = error_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventExpireOffer) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventExpireOffer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventExpireOffer other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventExpireOffer.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getBuyer().isEmpty()) {
+          buyer_ = other.buyer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getSuccess() != false) {
+          setSuccess(other.getSuccess());
+        }
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                buyer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                success_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                error_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyer_ = "";
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return The buyer.
+       */
+      public java.lang.String getBuyer() {
+        java.lang.Object ref = buyer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return The bytes for buyer.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerBytes() {
+        java.lang.Object ref = buyer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @param value The buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        buyer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyer() {
+        buyer_ = getDefaultInstance().getBuyer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer = 3 [json_name = "buyer"];</code>
+       * @param value The bytes for buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        buyer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private boolean success_ ;
+      /**
+       * <code>bool success = 4 [json_name = "success"];</code>
+       * @return The success.
+       */
+      @java.lang.Override
+      public boolean getSuccess() {
+        return success_;
+      }
+      /**
+       * <code>bool success = 4 [json_name = "success"];</code>
+       * @param value The success to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuccess(boolean value) {
+
+        success_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool success = 4 [json_name = "success"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuccess() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        success_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object error_ = "";
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        error_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        error_ = getDefaultInstance().getError();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        error_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventExpireOffer)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventExpireOffer)
+    private static final com.likechain.likenft.v1.EventProto.EventExpireOffer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventExpireOffer();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventExpireOffer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventExpireOffer>
+        PARSER = new com.google.protobuf.AbstractParser<EventExpireOffer>() {
+      @java.lang.Override
+      public EventExpireOffer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventExpireOffer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventExpireOffer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventExpireOffer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventExpireListingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventExpireListing)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    java.lang.String getNftId();
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    com.google.protobuf.ByteString
+        getNftIdBytes();
+
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    java.lang.String getSeller();
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    com.google.protobuf.ByteString
+        getSellerBytes();
+
+    /**
+     * <code>bool success = 4 [json_name = "success"];</code>
+     * @return The success.
+     */
+    boolean getSuccess();
+
+    /**
+     * <code>string error = 5 [json_name = "error"];</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <code>string error = 5 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventExpireListing}
+   */
+  public static final class EventExpireListing extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventExpireListing)
+      EventExpireListingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventExpireListing.newBuilder() to construct.
+    private EventExpireListing(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventExpireListing() {
+      classId_ = "";
+      nftId_ = "";
+      seller_ = "";
+      error_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventExpireListing();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireListing_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireListing_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventExpireListing.class, com.likechain.likenft.v1.EventProto.EventExpireListing.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftId_ = "";
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The nftId.
+     */
+    @java.lang.Override
+    public java.lang.String getNftId() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_id = 2 [json_name = "nftId"];</code>
+     * @return The bytes for nftId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIdBytes() {
+      java.lang.Object ref = nftId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seller_ = "";
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    @java.lang.Override
+    public java.lang.String getSeller() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string seller = 3 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerBytes() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUCCESS_FIELD_NUMBER = 4;
+    private boolean success_ = false;
+    /**
+     * <code>bool success = 4 [json_name = "success"];</code>
+     * @return The success.
+     */
+    @java.lang.Override
+    public boolean getSuccess() {
+      return success_;
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object error_ = "";
+    /**
+     * <code>string error = 5 [json_name = "error"];</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string error = 5 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, seller_);
+      }
+      if (success_ != false) {
+        output.writeBool(4, success_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, error_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, seller_);
+      }
+      if (success_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, success_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, error_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventExpireListing)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventExpireListing other = (com.likechain.likenft.v1.EventProto.EventExpireListing) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getNftId()
+          .equals(other.getNftId())) return false;
+      if (!getSeller()
+          .equals(other.getSeller())) return false;
+      if (getSuccess()
+          != other.getSuccess()) return false;
+      if (!getError()
+          .equals(other.getError())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftId().hashCode();
+      hash = (37 * hash) + SELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getSeller().hashCode();
+      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuccess());
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventExpireListing prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventExpireListing}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventExpireListing)
+        com.likechain.likenft.v1.EventProto.EventExpireListingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireListing_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireListing_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventExpireListing.class, com.likechain.likenft.v1.EventProto.EventExpireListing.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventExpireListing.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        nftId_ = "";
+        seller_ = "";
+        success_ = false;
+        error_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventExpireListing_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventExpireListing getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventExpireListing.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventExpireListing build() {
+        com.likechain.likenft.v1.EventProto.EventExpireListing result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventExpireListing buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventExpireListing result = new com.likechain.likenft.v1.EventProto.EventExpireListing(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventExpireListing result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftId_ = nftId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.seller_ = seller_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.success_ = success_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.error_ = error_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventExpireListing) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventExpireListing)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventExpireListing other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventExpireListing.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftId().isEmpty()) {
+          nftId_ = other.nftId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSeller().isEmpty()) {
+          seller_ = other.seller_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getSuccess() != false) {
+          setSuccess(other.getSuccess());
+        }
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                seller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                success_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                error_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftId_ = "";
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The nftId.
+       */
+      public java.lang.String getNftId() {
+        java.lang.Object ref = nftId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return The bytes for nftId.
+       */
+      public com.google.protobuf.ByteString
+          getNftIdBytes() {
+        java.lang.Object ref = nftId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftId() {
+        nftId_ = getDefaultInstance().getNftId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_id = 2 [json_name = "nftId"];</code>
+       * @param value The bytes for nftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object seller_ = "";
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The seller.
+       */
+      public java.lang.String getSeller() {
+        java.lang.Object ref = seller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return The bytes for seller.
+       */
+      public com.google.protobuf.ByteString
+          getSellerBytes() {
+        java.lang.Object ref = seller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeller() {
+        seller_ = getDefaultInstance().getSeller();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 3 [json_name = "seller"];</code>
+       * @param value The bytes for seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        seller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private boolean success_ ;
+      /**
+       * <code>bool success = 4 [json_name = "success"];</code>
+       * @return The success.
+       */
+      @java.lang.Override
+      public boolean getSuccess() {
+        return success_;
+      }
+      /**
+       * <code>bool success = 4 [json_name = "success"];</code>
+       * @param value The success to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuccess(boolean value) {
+
+        success_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool success = 4 [json_name = "success"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuccess() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        success_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object error_ = "";
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        error_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        error_ = getDefaultInstance().getError();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 5 [json_name = "error"];</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        error_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventExpireListing)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventExpireListing)
+    private static final com.likechain.likenft.v1.EventProto.EventExpireListing DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventExpireListing();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventExpireListing getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventExpireListing>
+        PARSER = new com.google.protobuf.AbstractParser<EventExpireListing>() {
+      @java.lang.Override
+      public EventExpireListing parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventExpireListing> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventExpireListing> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventExpireListing getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCreateRoyaltyConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventCreateRoyaltyConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventCreateRoyaltyConfig}
+   */
+  public static final class EventCreateRoyaltyConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventCreateRoyaltyConfig)
+      EventCreateRoyaltyConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateRoyaltyConfig.newBuilder() to construct.
+    private EventCreateRoyaltyConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateRoyaltyConfig() {
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateRoyaltyConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateRoyaltyConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateRoyaltyConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig.class, com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig other = (com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventCreateRoyaltyConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventCreateRoyaltyConfig)
+        com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateRoyaltyConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateRoyaltyConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig.class, com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventCreateRoyaltyConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig build() {
+        com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig result = new com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventCreateRoyaltyConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventCreateRoyaltyConfig)
+    private static final com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateRoyaltyConfig>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateRoyaltyConfig>() {
+      @java.lang.Override
+      public EventCreateRoyaltyConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateRoyaltyConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateRoyaltyConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventCreateRoyaltyConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateRoyaltyConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventUpdateRoyaltyConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventUpdateRoyaltyConfig}
+   */
+  public static final class EventUpdateRoyaltyConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventUpdateRoyaltyConfig)
+      EventUpdateRoyaltyConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateRoyaltyConfig.newBuilder() to construct.
+    private EventUpdateRoyaltyConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateRoyaltyConfig() {
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateRoyaltyConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateRoyaltyConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateRoyaltyConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig.class, com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig other = (com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventUpdateRoyaltyConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventUpdateRoyaltyConfig)
+        com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateRoyaltyConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateRoyaltyConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig.class, com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventUpdateRoyaltyConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig build() {
+        com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig result = new com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventUpdateRoyaltyConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventUpdateRoyaltyConfig)
+    private static final com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateRoyaltyConfig>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateRoyaltyConfig>() {
+      @java.lang.Override
+      public EventUpdateRoyaltyConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateRoyaltyConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateRoyaltyConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventUpdateRoyaltyConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventDeleteRoyaltyConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.EventDeleteRoyaltyConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.EventDeleteRoyaltyConfig}
+   */
+  public static final class EventDeleteRoyaltyConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.EventDeleteRoyaltyConfig)
+      EventDeleteRoyaltyConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventDeleteRoyaltyConfig.newBuilder() to construct.
+    private EventDeleteRoyaltyConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventDeleteRoyaltyConfig() {
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventDeleteRoyaltyConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteRoyaltyConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteRoyaltyConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig.class, com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig other = (com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.EventDeleteRoyaltyConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.EventDeleteRoyaltyConfig)
+        com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteRoyaltyConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteRoyaltyConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig.class, com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.EventProto.internal_static_likechain_likenft_v1_EventDeleteRoyaltyConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig build() {
+        com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig buildPartial() {
+        com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig result = new com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig) {
+          return mergeFrom((com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig other) {
+        if (other == com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.EventDeleteRoyaltyConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.EventDeleteRoyaltyConfig)
+    private static final com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig();
+    }
+
+    public static com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventDeleteRoyaltyConfig>
+        PARSER = new com.google.protobuf.AbstractParser<EventDeleteRoyaltyConfig>() {
+      @java.lang.Override
+      public EventDeleteRoyaltyConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventDeleteRoyaltyConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventDeleteRoyaltyConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.EventProto.EventDeleteRoyaltyConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventNewClass_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventNewClass_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventUpdateClass_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventUpdateClass_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventRevealClass_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventRevealClass_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventMintNFT_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventMintNFT_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventBurnNFT_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventBurnNFT_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventCreateBlindBoxContent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventCreateBlindBoxContent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventUpdateBlindBoxContent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventUpdateBlindBoxContent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventDeleteBlindBoxContent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventDeleteBlindBoxContent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventCreateOffer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventCreateOffer_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventUpdateOffer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventUpdateOffer_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventDeleteOffer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventDeleteOffer_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventCreateListing_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventCreateListing_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventUpdateListing_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventUpdateListing_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventDeleteListing_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventDeleteListing_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventSellNFT_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventSellNFT_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventBuyNFT_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventBuyNFT_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventExpireOffer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventExpireOffer_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventExpireListing_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventExpireListing_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventCreateRoyaltyConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventCreateRoyaltyConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventUpdateRoyaltyConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventUpdateRoyaltyConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_EventDeleteRoyaltyConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_EventDeleteRoyaltyConfig_fieldAccessorTable;
 
@@ -197,12 +19035,12 @@ public final class EventProto {
       "\tR\007classId\"5\n\030EventUpdateRoyaltyConfig\022\031" +
       "\n\010class_id\030\001 \001(\tR\007classId\"5\n\030EventDelete" +
       "RoyaltyConfig\022\031\n\010class_id\030\001 \001(\tR\007classId" +
-      "B\317\001\n\030com.likechain.likenft.v1B\nEventProt" +
-      "oP\001Z5github.com/likecoin/likecoin-chain/" +
-      "v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Lik" +
-      "enft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likecha" +
-      "in\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::L" +
-      "ikenft::V1b\006proto3"
+      "B\315\001\n\030com.likechain.likenft.v1B\nEventProt" +
+      "oZ5github.com/likecoin/likecoin-chain/v4" +
+      "/x/likenft/types\242\002\003LLX\252\002\024Likechain.Liken" +
+      "ft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain" +
+      "\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Lik" +
+      "enft::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

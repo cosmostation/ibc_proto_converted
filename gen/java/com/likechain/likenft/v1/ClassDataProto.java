@@ -14,34 +14,5255 @@ public final class ClassDataProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code likechain.likenft.v1.ClassParentType}
+   */
+  public enum ClassParentType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN = 0;</code>
+     */
+    UNKNOWN(0),
+    /**
+     * <code>ISCN = 1;</code>
+     */
+    ISCN(1),
+    /**
+     * <code>ACCOUNT = 2;</code>
+     */
+    ACCOUNT(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>UNKNOWN = 0;</code>
+     */
+    public static final int UNKNOWN_VALUE = 0;
+    /**
+     * <code>ISCN = 1;</code>
+     */
+    public static final int ISCN_VALUE = 1;
+    /**
+     * <code>ACCOUNT = 2;</code>
+     */
+    public static final int ACCOUNT_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ClassParentType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ClassParentType forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN;
+        case 1: return ISCN;
+        case 2: return ACCOUNT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ClassParentType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ClassParentType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ClassParentType>() {
+            public ClassParentType findValueByNumber(int number) {
+              return ClassParentType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.ClassDataProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ClassParentType[] VALUES = values();
+
+    public static ClassParentType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ClassParentType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:likechain.likenft.v1.ClassParentType)
+  }
+
+  public interface ClassDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.ClassData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.ByteString getMetadata();
+
+    /**
+     * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     * @return Whether the parent field is set.
+     */
+    boolean hasParent();
+    /**
+     * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     * @return The parent.
+     */
+    com.likechain.likenft.v1.ClassDataProto.ClassParent getParent();
+    /**
+     * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder getParentOrBuilder();
+
+    /**
+     * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+     * @return Whether the config field is set.
+     */
+    boolean hasConfig();
+    /**
+     * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+     * @return The config.
+     */
+    com.likechain.likenft.v1.ClassDataProto.ClassConfig getConfig();
+    /**
+     * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.ClassDataProto.ClassConfigOrBuilder getConfigOrBuilder();
+
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blindBoxState field is set.
+     */
+    boolean hasBlindBoxState();
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+     * @return The blindBoxState.
+     */
+    com.likechain.likenft.v1.ClassDataProto.BlindBoxState getBlindBoxState();
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.ClassDataProto.BlindBoxStateOrBuilder getBlindBoxStateOrBuilder();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.ClassData}
+   */
+  public static final class ClassData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.ClassData)
+      ClassDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClassData.newBuilder() to construct.
+    private ClassData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClassData() {
+      metadata_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClassData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.ClassDataProto.ClassData.class, com.likechain.likenft.v1.ClassDataProto.ClassData.Builder.class);
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMetadata() {
+      return metadata_;
+    }
+
+    public static final int PARENT_FIELD_NUMBER = 2;
+    private com.likechain.likenft.v1.ClassDataProto.ClassParent parent_;
+    /**
+     * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     * @return Whether the parent field is set.
+     */
+    @java.lang.Override
+    public boolean hasParent() {
+      return parent_ != null;
+    }
+    /**
+     * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     * @return The parent.
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassParent getParent() {
+      return parent_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance() : parent_;
+    }
+    /**
+     * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder getParentOrBuilder() {
+      return parent_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance() : parent_;
+    }
+
+    public static final int CONFIG_FIELD_NUMBER = 3;
+    private com.likechain.likenft.v1.ClassDataProto.ClassConfig config_;
+    /**
+     * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+     * @return Whether the config field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfig() {
+      return config_ != null;
+    }
+    /**
+     * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+     * @return The config.
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassConfig getConfig() {
+      return config_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassConfig.getDefaultInstance() : config_;
+    }
+    /**
+     * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassConfigOrBuilder getConfigOrBuilder() {
+      return config_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassConfig.getDefaultInstance() : config_;
+    }
+
+    public static final int BLIND_BOX_STATE_FIELD_NUMBER = 4;
+    private com.likechain.likenft.v1.ClassDataProto.BlindBoxState blindBoxState_;
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blindBoxState field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlindBoxState() {
+      return blindBoxState_ != null;
+    }
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+     * @return The blindBoxState.
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.BlindBoxState getBlindBoxState() {
+      return blindBoxState_ == null ? com.likechain.likenft.v1.ClassDataProto.BlindBoxState.getDefaultInstance() : blindBoxState_;
+    }
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.BlindBoxStateOrBuilder getBlindBoxStateOrBuilder() {
+      return blindBoxState_ == null ? com.likechain.likenft.v1.ClassDataProto.BlindBoxState.getDefaultInstance() : blindBoxState_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!metadata_.isEmpty()) {
+        output.writeBytes(1, metadata_);
+      }
+      if (parent_ != null) {
+        output.writeMessage(2, getParent());
+      }
+      if (config_ != null) {
+        output.writeMessage(3, getConfig());
+      }
+      if (blindBoxState_ != null) {
+        output.writeMessage(4, getBlindBoxState());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!metadata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, metadata_);
+      }
+      if (parent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParent());
+      }
+      if (config_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getConfig());
+      }
+      if (blindBoxState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getBlindBoxState());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.ClassDataProto.ClassData)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.ClassDataProto.ClassData other = (com.likechain.likenft.v1.ClassDataProto.ClassData) obj;
+
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+      if (hasParent() != other.hasParent()) return false;
+      if (hasParent()) {
+        if (!getParent()
+            .equals(other.getParent())) return false;
+      }
+      if (hasConfig() != other.hasConfig()) return false;
+      if (hasConfig()) {
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
+      }
+      if (hasBlindBoxState() != other.hasBlindBoxState()) return false;
+      if (hasBlindBoxState()) {
+        if (!getBlindBoxState()
+            .equals(other.getBlindBoxState())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
+      if (hasParent()) {
+        hash = (37 * hash) + PARENT_FIELD_NUMBER;
+        hash = (53 * hash) + getParent().hashCode();
+      }
+      if (hasConfig()) {
+        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getConfig().hashCode();
+      }
+      if (hasBlindBoxState()) {
+        hash = (37 * hash) + BLIND_BOX_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getBlindBoxState().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.ClassDataProto.ClassData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.ClassData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.ClassData)
+        com.likechain.likenft.v1.ClassDataProto.ClassDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.ClassDataProto.ClassData.class, com.likechain.likenft.v1.ClassDataProto.ClassData.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.ClassDataProto.ClassData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        metadata_ = com.google.protobuf.ByteString.EMPTY;
+        parent_ = null;
+        if (parentBuilder_ != null) {
+          parentBuilder_.dispose();
+          parentBuilder_ = null;
+        }
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        blindBoxState_ = null;
+        if (blindBoxStateBuilder_ != null) {
+          blindBoxStateBuilder_.dispose();
+          blindBoxStateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassData getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.ClassDataProto.ClassData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassData build() {
+        com.likechain.likenft.v1.ClassDataProto.ClassData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassData buildPartial() {
+        com.likechain.likenft.v1.ClassDataProto.ClassData result = new com.likechain.likenft.v1.ClassDataProto.ClassData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.ClassDataProto.ClassData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.metadata_ = metadata_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.parent_ = parentBuilder_ == null
+              ? parent_
+              : parentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.config_ = configBuilder_ == null
+              ? config_
+              : configBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.blindBoxState_ = blindBoxStateBuilder_ == null
+              ? blindBoxState_
+              : blindBoxStateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.ClassDataProto.ClassData) {
+          return mergeFrom((com.likechain.likenft.v1.ClassDataProto.ClassData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.ClassDataProto.ClassData other) {
+        if (other == com.likechain.likenft.v1.ClassDataProto.ClassData.getDefaultInstance()) return this;
+        if (other.getMetadata() != com.google.protobuf.ByteString.EMPTY) {
+          setMetadata(other.getMetadata());
+        }
+        if (other.hasParent()) {
+          mergeParent(other.getParent());
+        }
+        if (other.hasConfig()) {
+          mergeConfig(other.getConfig());
+        }
+        if (other.hasBlindBoxState()) {
+          mergeBlindBoxState(other.getBlindBoxState());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                metadata_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getBlindBoxStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+       * @return The metadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMetadata() {
+        return metadata_;
+      }
+      /**
+       * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadata_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        metadata_ = getDefaultInstance().getMetadata();
+        onChanged();
+        return this;
+      }
+
+      private com.likechain.likenft.v1.ClassDataProto.ClassParent parent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.ClassParent, com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder, com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder> parentBuilder_;
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       * @return Whether the parent field is set.
+       */
+      public boolean hasParent() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       * @return The parent.
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassParent getParent() {
+        if (parentBuilder_ == null) {
+          return parent_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance() : parent_;
+        } else {
+          return parentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParent(com.likechain.likenft.v1.ClassDataProto.ClassParent value) {
+        if (parentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parent_ = value;
+        } else {
+          parentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParent(
+          com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder builderForValue) {
+        if (parentBuilder_ == null) {
+          parent_ = builderForValue.build();
+        } else {
+          parentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParent(com.likechain.likenft.v1.ClassDataProto.ClassParent value) {
+        if (parentBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            parent_ != null &&
+            parent_ != com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance()) {
+            getParentBuilder().mergeFrom(value);
+          } else {
+            parent_ = value;
+          }
+        } else {
+          parentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParent() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        parent_ = null;
+        if (parentBuilder_ != null) {
+          parentBuilder_.dispose();
+          parentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder getParentBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder getParentOrBuilder() {
+        if (parentBuilder_ != null) {
+          return parentBuilder_.getMessageOrBuilder();
+        } else {
+          return parent_ == null ?
+              com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance() : parent_;
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.ClassParent, com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder, com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder> 
+          getParentFieldBuilder() {
+        if (parentBuilder_ == null) {
+          parentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.likenft.v1.ClassDataProto.ClassParent, com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder, com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder>(
+                  getParent(),
+                  getParentForChildren(),
+                  isClean());
+          parent_ = null;
+        }
+        return parentBuilder_;
+      }
+
+      private com.likechain.likenft.v1.ClassDataProto.ClassConfig config_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.ClassConfig, com.likechain.likenft.v1.ClassDataProto.ClassConfig.Builder, com.likechain.likenft.v1.ClassDataProto.ClassConfigOrBuilder> configBuilder_;
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       * @return Whether the config field is set.
+       */
+      public boolean hasConfig() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       * @return The config.
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassConfig getConfig() {
+        if (configBuilder_ == null) {
+          return config_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassConfig.getDefaultInstance() : config_;
+        } else {
+          return configBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setConfig(com.likechain.likenft.v1.ClassDataProto.ClassConfig value) {
+        if (configBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          config_ = value;
+        } else {
+          configBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setConfig(
+          com.likechain.likenft.v1.ClassDataProto.ClassConfig.Builder builderForValue) {
+        if (configBuilder_ == null) {
+          config_ = builderForValue.build();
+        } else {
+          configBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeConfig(com.likechain.likenft.v1.ClassDataProto.ClassConfig value) {
+        if (configBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            config_ != null &&
+            config_ != com.likechain.likenft.v1.ClassDataProto.ClassConfig.getDefaultInstance()) {
+            getConfigBuilder().mergeFrom(value);
+          } else {
+            config_ = value;
+          }
+        } else {
+          configBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearConfig() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassConfig.Builder getConfigBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassConfigOrBuilder getConfigOrBuilder() {
+        if (configBuilder_ != null) {
+          return configBuilder_.getMessageOrBuilder();
+        } else {
+          return config_ == null ?
+              com.likechain.likenft.v1.ClassDataProto.ClassConfig.getDefaultInstance() : config_;
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.ClassConfig, com.likechain.likenft.v1.ClassDataProto.ClassConfig.Builder, com.likechain.likenft.v1.ClassDataProto.ClassConfigOrBuilder> 
+          getConfigFieldBuilder() {
+        if (configBuilder_ == null) {
+          configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.likenft.v1.ClassDataProto.ClassConfig, com.likechain.likenft.v1.ClassDataProto.ClassConfig.Builder, com.likechain.likenft.v1.ClassDataProto.ClassConfigOrBuilder>(
+                  getConfig(),
+                  getParentForChildren(),
+                  isClean());
+          config_ = null;
+        }
+        return configBuilder_;
+      }
+
+      private com.likechain.likenft.v1.ClassDataProto.BlindBoxState blindBoxState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.BlindBoxState, com.likechain.likenft.v1.ClassDataProto.BlindBoxState.Builder, com.likechain.likenft.v1.ClassDataProto.BlindBoxStateOrBuilder> blindBoxStateBuilder_;
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       * @return Whether the blindBoxState field is set.
+       */
+      public boolean hasBlindBoxState() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       * @return The blindBoxState.
+       */
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxState getBlindBoxState() {
+        if (blindBoxStateBuilder_ == null) {
+          return blindBoxState_ == null ? com.likechain.likenft.v1.ClassDataProto.BlindBoxState.getDefaultInstance() : blindBoxState_;
+        } else {
+          return blindBoxStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlindBoxState(com.likechain.likenft.v1.ClassDataProto.BlindBoxState value) {
+        if (blindBoxStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blindBoxState_ = value;
+        } else {
+          blindBoxStateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlindBoxState(
+          com.likechain.likenft.v1.ClassDataProto.BlindBoxState.Builder builderForValue) {
+        if (blindBoxStateBuilder_ == null) {
+          blindBoxState_ = builderForValue.build();
+        } else {
+          blindBoxStateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBlindBoxState(com.likechain.likenft.v1.ClassDataProto.BlindBoxState value) {
+        if (blindBoxStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            blindBoxState_ != null &&
+            blindBoxState_ != com.likechain.likenft.v1.ClassDataProto.BlindBoxState.getDefaultInstance()) {
+            getBlindBoxStateBuilder().mergeFrom(value);
+          } else {
+            blindBoxState_ = value;
+          }
+        } else {
+          blindBoxStateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBlindBoxState() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        blindBoxState_ = null;
+        if (blindBoxStateBuilder_ != null) {
+          blindBoxStateBuilder_.dispose();
+          blindBoxStateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxState.Builder getBlindBoxStateBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getBlindBoxStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxStateOrBuilder getBlindBoxStateOrBuilder() {
+        if (blindBoxStateBuilder_ != null) {
+          return blindBoxStateBuilder_.getMessageOrBuilder();
+        } else {
+          return blindBoxState_ == null ?
+              com.likechain.likenft.v1.ClassDataProto.BlindBoxState.getDefaultInstance() : blindBoxState_;
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.BlindBoxState, com.likechain.likenft.v1.ClassDataProto.BlindBoxState.Builder, com.likechain.likenft.v1.ClassDataProto.BlindBoxStateOrBuilder> 
+          getBlindBoxStateFieldBuilder() {
+        if (blindBoxStateBuilder_ == null) {
+          blindBoxStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.likenft.v1.ClassDataProto.BlindBoxState, com.likechain.likenft.v1.ClassDataProto.BlindBoxState.Builder, com.likechain.likenft.v1.ClassDataProto.BlindBoxStateOrBuilder>(
+                  getBlindBoxState(),
+                  getParentForChildren(),
+                  isClean());
+          blindBoxState_ = null;
+        }
+        return blindBoxStateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.ClassData)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.ClassData)
+    private static final com.likechain.likenft.v1.ClassDataProto.ClassData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.ClassDataProto.ClassData();
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClassData>
+        PARSER = new com.google.protobuf.AbstractParser<ClassData>() {
+      @java.lang.Override
+      public ClassData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClassData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClassData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClassParentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.ClassParent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.likechain.likenft.v1.ClassDataProto.ClassParentType getType();
+
+    /**
+     * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+     * @return The iscnIdPrefix.
+     */
+    java.lang.String getIscnIdPrefix();
+    /**
+     * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+     * @return The bytes for iscnIdPrefix.
+     */
+    com.google.protobuf.ByteString
+        getIscnIdPrefixBytes();
+
+    /**
+     * <code>uint64 iscn_version_at_mint = 3 [json_name = "iscnVersionAtMint", (.gogoproto.nullable) = true];</code>
+     * @return The iscnVersionAtMint.
+     */
+    long getIscnVersionAtMint();
+
+    /**
+     * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.ClassParent}
+   */
+  public static final class ClassParent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.ClassParent)
+      ClassParentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClassParent.newBuilder() to construct.
+    private ClassParent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClassParent() {
+      type_ = 0;
+      iscnIdPrefix_ = "";
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClassParent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassParent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassParent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.ClassDataProto.ClassParent.class, com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_ = 0;
+    /**
+     * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.likechain.likenft.v1.ClassDataProto.ClassParentType getType() {
+      com.likechain.likenft.v1.ClassDataProto.ClassParentType result = com.likechain.likenft.v1.ClassDataProto.ClassParentType.forNumber(type_);
+      return result == null ? com.likechain.likenft.v1.ClassDataProto.ClassParentType.UNRECOGNIZED : result;
+    }
+
+    public static final int ISCN_ID_PREFIX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iscnIdPrefix_ = "";
+    /**
+     * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+     * @return The iscnIdPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getIscnIdPrefix() {
+      java.lang.Object ref = iscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iscnIdPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+     * @return The bytes for iscnIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIscnIdPrefixBytes() {
+      java.lang.Object ref = iscnIdPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iscnIdPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISCN_VERSION_AT_MINT_FIELD_NUMBER = 3;
+    private long iscnVersionAtMint_ = 0L;
+    /**
+     * <code>uint64 iscn_version_at_mint = 3 [json_name = "iscnVersionAtMint", (.gogoproto.nullable) = true];</code>
+     * @return The iscnVersionAtMint.
+     */
+    @java.lang.Override
+    public long getIscnVersionAtMint() {
+      return iscnVersionAtMint_;
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (type_ != com.likechain.likenft.v1.ClassDataProto.ClassParentType.UNKNOWN.getNumber()) {
+        output.writeEnum(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnIdPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, iscnIdPrefix_);
+      }
+      if (iscnVersionAtMint_ != 0L) {
+        output.writeUInt64(3, iscnVersionAtMint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, account_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (type_ != com.likechain.likenft.v1.ClassDataProto.ClassParentType.UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnIdPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, iscnIdPrefix_);
+      }
+      if (iscnVersionAtMint_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, iscnVersionAtMint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, account_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.ClassDataProto.ClassParent)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.ClassDataProto.ClassParent other = (com.likechain.likenft.v1.ClassDataProto.ClassParent) obj;
+
+      if (type_ != other.type_) return false;
+      if (!getIscnIdPrefix()
+          .equals(other.getIscnIdPrefix())) return false;
+      if (getIscnVersionAtMint()
+          != other.getIscnVersionAtMint()) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + ISCN_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getIscnIdPrefix().hashCode();
+      hash = (37 * hash) + ISCN_VERSION_AT_MINT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIscnVersionAtMint());
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.ClassDataProto.ClassParent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.ClassParent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.ClassParent)
+        com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassParent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassParent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.ClassDataProto.ClassParent.class, com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.ClassDataProto.ClassParent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = 0;
+        iscnIdPrefix_ = "";
+        iscnVersionAtMint_ = 0L;
+        account_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassParent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassParent getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassParent build() {
+        com.likechain.likenft.v1.ClassDataProto.ClassParent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassParent buildPartial() {
+        com.likechain.likenft.v1.ClassDataProto.ClassParent result = new com.likechain.likenft.v1.ClassDataProto.ClassParent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.ClassDataProto.ClassParent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.iscnIdPrefix_ = iscnIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.iscnVersionAtMint_ = iscnVersionAtMint_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.account_ = account_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.ClassDataProto.ClassParent) {
+          return mergeFrom((com.likechain.likenft.v1.ClassDataProto.ClassParent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.ClassDataProto.ClassParent other) {
+        if (other == com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance()) return this;
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (!other.getIscnIdPrefix().isEmpty()) {
+          iscnIdPrefix_ = other.iscnIdPrefix_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getIscnVersionAtMint() != 0L) {
+          setIscnVersionAtMint(other.getIscnVersionAtMint());
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                iscnIdPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                iscnVersionAtMint_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int type_ = 0;
+      /**
+       * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassParentType getType() {
+        com.likechain.likenft.v1.ClassDataProto.ClassParentType result = com.likechain.likenft.v1.ClassDataProto.ClassParentType.forNumber(type_);
+        return result == null ? com.likechain.likenft.v1.ClassDataProto.ClassParentType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.likechain.likenft.v1.ClassDataProto.ClassParentType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParentType type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object iscnIdPrefix_ = "";
+      /**
+       * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+       * @return The iscnIdPrefix.
+       */
+      public java.lang.String getIscnIdPrefix() {
+        java.lang.Object ref = iscnIdPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iscnIdPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+       * @return The bytes for iscnIdPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getIscnIdPrefixBytes() {
+        java.lang.Object ref = iscnIdPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iscnIdPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+       * @param value The iscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnIdPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iscnIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIscnIdPrefix() {
+        iscnIdPrefix_ = getDefaultInstance().getIscnIdPrefix();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id_prefix = 2 [json_name = "iscnIdPrefix", (.gogoproto.nullable) = true];</code>
+       * @param value The bytes for iscnIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iscnIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long iscnVersionAtMint_ ;
+      /**
+       * <code>uint64 iscn_version_at_mint = 3 [json_name = "iscnVersionAtMint", (.gogoproto.nullable) = true];</code>
+       * @return The iscnVersionAtMint.
+       */
+      @java.lang.Override
+      public long getIscnVersionAtMint() {
+        return iscnVersionAtMint_;
+      }
+      /**
+       * <code>uint64 iscn_version_at_mint = 3 [json_name = "iscnVersionAtMint", (.gogoproto.nullable) = true];</code>
+       * @param value The iscnVersionAtMint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnVersionAtMint(long value) {
+
+        iscnVersionAtMint_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 iscn_version_at_mint = 3 [json_name = "iscnVersionAtMint", (.gogoproto.nullable) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIscnVersionAtMint() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        iscnVersionAtMint_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 4 [json_name = "account", (.gogoproto.nullable) = true];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.ClassParent)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.ClassParent)
+    private static final com.likechain.likenft.v1.ClassDataProto.ClassParent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.ClassDataProto.ClassParent();
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassParent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClassParent>
+        PARSER = new com.google.protobuf.AbstractParser<ClassParent>() {
+      @java.lang.Override
+      public ClassParent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClassParent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClassParent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassParent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MintPeriodOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.MintPeriod)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+     * @return A list containing the allowedAddresses.
+     */
+    java.util.List<java.lang.String>
+        getAllowedAddressesList();
+    /**
+     * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+     * @return The count of allowedAddresses.
+     */
+    int getAllowedAddressesCount();
+    /**
+     * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedAddresses at the given index.
+     */
+    java.lang.String getAllowedAddresses(int index);
+    /**
+     * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowedAddressesBytes(int index);
+
+    /**
+     * <code>uint64 mint_price = 3 [json_name = "mintPrice"];</code>
+     * @return The mintPrice.
+     */
+    long getMintPrice();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.MintPeriod}
+   */
+  public static final class MintPeriod extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.MintPeriod)
+      MintPeriodOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MintPeriod.newBuilder() to construct.
+    private MintPeriod(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MintPeriod() {
+      allowedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MintPeriod();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_MintPeriod_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_MintPeriod_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.ClassDataProto.MintPeriod.class, com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder.class);
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int ALLOWED_ADDRESSES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList allowedAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+     * @return A list containing the allowedAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowedAddressesList() {
+      return allowedAddresses_;
+    }
+    /**
+     * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+     * @return The count of allowedAddresses.
+     */
+    public int getAllowedAddressesCount() {
+      return allowedAddresses_.size();
+    }
+    /**
+     * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedAddresses at the given index.
+     */
+    public java.lang.String getAllowedAddresses(int index) {
+      return allowedAddresses_.get(index);
+    }
+    /**
+     * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllowedAddressesBytes(int index) {
+      return allowedAddresses_.getByteString(index);
+    }
+
+    public static final int MINT_PRICE_FIELD_NUMBER = 3;
+    private long mintPrice_ = 0L;
+    /**
+     * <code>uint64 mint_price = 3 [json_name = "mintPrice"];</code>
+     * @return The mintPrice.
+     */
+    @java.lang.Override
+    public long getMintPrice() {
+      return mintPrice_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startTime_ != null) {
+        output.writeMessage(1, getStartTime());
+      }
+      for (int i = 0; i < allowedAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, allowedAddresses_.getRaw(i));
+      }
+      if (mintPrice_ != 0L) {
+        output.writeUInt64(3, mintPrice_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStartTime());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowedAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowedAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowedAddressesList().size();
+      }
+      if (mintPrice_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, mintPrice_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.ClassDataProto.MintPeriod)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.ClassDataProto.MintPeriod other = (com.likechain.likenft.v1.ClassDataProto.MintPeriod) obj;
+
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (!getAllowedAddressesList()
+          .equals(other.getAllowedAddressesList())) return false;
+      if (getMintPrice()
+          != other.getMintPrice()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (getAllowedAddressesCount() > 0) {
+        hash = (37 * hash) + ALLOWED_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedAddressesList().hashCode();
+      }
+      hash = (37 * hash) + MINT_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMintPrice());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.ClassDataProto.MintPeriod prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.MintPeriod}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.MintPeriod)
+        com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_MintPeriod_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_MintPeriod_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.ClassDataProto.MintPeriod.class, com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.ClassDataProto.MintPeriod.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        allowedAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        mintPrice_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_MintPeriod_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.MintPeriod getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.ClassDataProto.MintPeriod.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.MintPeriod build() {
+        com.likechain.likenft.v1.ClassDataProto.MintPeriod result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.MintPeriod buildPartial() {
+        com.likechain.likenft.v1.ClassDataProto.MintPeriod result = new com.likechain.likenft.v1.ClassDataProto.MintPeriod(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.ClassDataProto.MintPeriod result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          allowedAddresses_.makeImmutable();
+          result.allowedAddresses_ = allowedAddresses_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.mintPrice_ = mintPrice_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.ClassDataProto.MintPeriod) {
+          return mergeFrom((com.likechain.likenft.v1.ClassDataProto.MintPeriod)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.ClassDataProto.MintPeriod other) {
+        if (other == com.likechain.likenft.v1.ClassDataProto.MintPeriod.getDefaultInstance()) return this;
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (!other.allowedAddresses_.isEmpty()) {
+          if (allowedAddresses_.isEmpty()) {
+            allowedAddresses_ = other.allowedAddresses_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureAllowedAddressesIsMutable();
+            allowedAddresses_.addAll(other.allowedAddresses_);
+          }
+          onChanged();
+        }
+        if (other.getMintPrice() != 0L) {
+          setMintPrice(other.getMintPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAllowedAddressesIsMutable();
+                allowedAddresses_.add(s);
+                break;
+              } // case 18
+              case 24: {
+                mintPrice_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList allowedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAllowedAddressesIsMutable() {
+        if (!allowedAddresses_.isModifiable()) {
+          allowedAddresses_ = new com.google.protobuf.LazyStringArrayList(allowedAddresses_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @return A list containing the allowedAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowedAddressesList() {
+        allowedAddresses_.makeImmutable();
+        return allowedAddresses_;
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @return The count of allowedAddresses.
+       */
+      public int getAllowedAddressesCount() {
+        return allowedAddresses_.size();
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @param index The index of the element to return.
+       * @return The allowedAddresses at the given index.
+       */
+      public java.lang.String getAllowedAddresses(int index) {
+        return allowedAddresses_.get(index);
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowedAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllowedAddressesBytes(int index) {
+        return allowedAddresses_.getByteString(index);
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @param index The index to set the value at.
+       * @param value The allowedAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedAddressesIsMutable();
+        allowedAddresses_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @param value The allowedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedAddressesIsMutable();
+        allowedAddresses_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @param values The allowedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowedAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowedAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowedAddresses_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedAddresses() {
+        allowedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_addresses = 2 [json_name = "allowedAddresses"];</code>
+       * @param value The bytes of the allowedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAllowedAddressesIsMutable();
+        allowedAddresses_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long mintPrice_ ;
+      /**
+       * <code>uint64 mint_price = 3 [json_name = "mintPrice"];</code>
+       * @return The mintPrice.
+       */
+      @java.lang.Override
+      public long getMintPrice() {
+        return mintPrice_;
+      }
+      /**
+       * <code>uint64 mint_price = 3 [json_name = "mintPrice"];</code>
+       * @param value The mintPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintPrice(long value) {
+
+        mintPrice_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 mint_price = 3 [json_name = "mintPrice"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintPrice() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        mintPrice_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.MintPeriod)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.MintPeriod)
+    private static final com.likechain.likenft.v1.ClassDataProto.MintPeriod DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.ClassDataProto.MintPeriod();
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.MintPeriod getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MintPeriod>
+        PARSER = new com.google.protobuf.AbstractParser<MintPeriod>() {
+      @java.lang.Override
+      public MintPeriod parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MintPeriod> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MintPeriod> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.MintPeriod getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClassConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.ClassConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool burnable = 1 [json_name = "burnable"];</code>
+     * @return The burnable.
+     */
+    boolean getBurnable();
+
+    /**
+     * <code>uint64 max_supply = 2 [json_name = "maxSupply"];</code>
+     * @return The maxSupply.
+     */
+    long getMaxSupply();
+
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+     * @return Whether the blindBoxConfig field is set.
+     */
+    boolean hasBlindBoxConfig();
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+     * @return The blindBoxConfig.
+     */
+    com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig getBlindBoxConfig();
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+     */
+    com.likechain.likenft.v1.ClassDataProto.BlindBoxConfigOrBuilder getBlindBoxConfigOrBuilder();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.ClassConfig}
+   */
+  public static final class ClassConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.ClassConfig)
+      ClassConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClassConfig.newBuilder() to construct.
+    private ClassConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClassConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClassConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.ClassDataProto.ClassConfig.class, com.likechain.likenft.v1.ClassDataProto.ClassConfig.Builder.class);
+    }
+
+    public static final int BURNABLE_FIELD_NUMBER = 1;
+    private boolean burnable_ = false;
+    /**
+     * <code>bool burnable = 1 [json_name = "burnable"];</code>
+     * @return The burnable.
+     */
+    @java.lang.Override
+    public boolean getBurnable() {
+      return burnable_;
+    }
+
+    public static final int MAX_SUPPLY_FIELD_NUMBER = 2;
+    private long maxSupply_ = 0L;
+    /**
+     * <code>uint64 max_supply = 2 [json_name = "maxSupply"];</code>
+     * @return The maxSupply.
+     */
+    @java.lang.Override
+    public long getMaxSupply() {
+      return maxSupply_;
+    }
+
+    public static final int BLIND_BOX_CONFIG_FIELD_NUMBER = 3;
+    private com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig blindBoxConfig_;
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+     * @return Whether the blindBoxConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlindBoxConfig() {
+      return blindBoxConfig_ != null;
+    }
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+     * @return The blindBoxConfig.
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig getBlindBoxConfig() {
+      return blindBoxConfig_ == null ? com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.getDefaultInstance() : blindBoxConfig_;
+    }
+    /**
+     * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfigOrBuilder getBlindBoxConfigOrBuilder() {
+      return blindBoxConfig_ == null ? com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.getDefaultInstance() : blindBoxConfig_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (burnable_ != false) {
+        output.writeBool(1, burnable_);
+      }
+      if (maxSupply_ != 0L) {
+        output.writeUInt64(2, maxSupply_);
+      }
+      if (blindBoxConfig_ != null) {
+        output.writeMessage(3, getBlindBoxConfig());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (burnable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, burnable_);
+      }
+      if (maxSupply_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, maxSupply_);
+      }
+      if (blindBoxConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBlindBoxConfig());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.ClassDataProto.ClassConfig)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.ClassDataProto.ClassConfig other = (com.likechain.likenft.v1.ClassDataProto.ClassConfig) obj;
+
+      if (getBurnable()
+          != other.getBurnable()) return false;
+      if (getMaxSupply()
+          != other.getMaxSupply()) return false;
+      if (hasBlindBoxConfig() != other.hasBlindBoxConfig()) return false;
+      if (hasBlindBoxConfig()) {
+        if (!getBlindBoxConfig()
+            .equals(other.getBlindBoxConfig())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BURNABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getBurnable());
+      hash = (37 * hash) + MAX_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxSupply());
+      if (hasBlindBoxConfig()) {
+        hash = (37 * hash) + BLIND_BOX_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getBlindBoxConfig().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.ClassDataProto.ClassConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.ClassConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.ClassConfig)
+        com.likechain.likenft.v1.ClassDataProto.ClassConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.ClassDataProto.ClassConfig.class, com.likechain.likenft.v1.ClassDataProto.ClassConfig.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.ClassDataProto.ClassConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        burnable_ = false;
+        maxSupply_ = 0L;
+        blindBoxConfig_ = null;
+        if (blindBoxConfigBuilder_ != null) {
+          blindBoxConfigBuilder_.dispose();
+          blindBoxConfigBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_ClassConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassConfig getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.ClassDataProto.ClassConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassConfig build() {
+        com.likechain.likenft.v1.ClassDataProto.ClassConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.ClassConfig buildPartial() {
+        com.likechain.likenft.v1.ClassDataProto.ClassConfig result = new com.likechain.likenft.v1.ClassDataProto.ClassConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.ClassDataProto.ClassConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.burnable_ = burnable_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxSupply_ = maxSupply_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.blindBoxConfig_ = blindBoxConfigBuilder_ == null
+              ? blindBoxConfig_
+              : blindBoxConfigBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.ClassDataProto.ClassConfig) {
+          return mergeFrom((com.likechain.likenft.v1.ClassDataProto.ClassConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.ClassDataProto.ClassConfig other) {
+        if (other == com.likechain.likenft.v1.ClassDataProto.ClassConfig.getDefaultInstance()) return this;
+        if (other.getBurnable() != false) {
+          setBurnable(other.getBurnable());
+        }
+        if (other.getMaxSupply() != 0L) {
+          setMaxSupply(other.getMaxSupply());
+        }
+        if (other.hasBlindBoxConfig()) {
+          mergeBlindBoxConfig(other.getBlindBoxConfig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                burnable_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                maxSupply_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getBlindBoxConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean burnable_ ;
+      /**
+       * <code>bool burnable = 1 [json_name = "burnable"];</code>
+       * @return The burnable.
+       */
+      @java.lang.Override
+      public boolean getBurnable() {
+        return burnable_;
+      }
+      /**
+       * <code>bool burnable = 1 [json_name = "burnable"];</code>
+       * @param value The burnable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnable(boolean value) {
+
+        burnable_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool burnable = 1 [json_name = "burnable"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnable() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        burnable_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long maxSupply_ ;
+      /**
+       * <code>uint64 max_supply = 2 [json_name = "maxSupply"];</code>
+       * @return The maxSupply.
+       */
+      @java.lang.Override
+      public long getMaxSupply() {
+        return maxSupply_;
+      }
+      /**
+       * <code>uint64 max_supply = 2 [json_name = "maxSupply"];</code>
+       * @param value The maxSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSupply(long value) {
+
+        maxSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 max_supply = 2 [json_name = "maxSupply"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxSupply() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maxSupply_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig blindBoxConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.Builder, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfigOrBuilder> blindBoxConfigBuilder_;
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       * @return Whether the blindBoxConfig field is set.
+       */
+      public boolean hasBlindBoxConfig() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       * @return The blindBoxConfig.
+       */
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig getBlindBoxConfig() {
+        if (blindBoxConfigBuilder_ == null) {
+          return blindBoxConfig_ == null ? com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.getDefaultInstance() : blindBoxConfig_;
+        } else {
+          return blindBoxConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder setBlindBoxConfig(com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig value) {
+        if (blindBoxConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blindBoxConfig_ = value;
+        } else {
+          blindBoxConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder setBlindBoxConfig(
+          com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.Builder builderForValue) {
+        if (blindBoxConfigBuilder_ == null) {
+          blindBoxConfig_ = builderForValue.build();
+        } else {
+          blindBoxConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder mergeBlindBoxConfig(com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig value) {
+        if (blindBoxConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            blindBoxConfig_ != null &&
+            blindBoxConfig_ != com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.getDefaultInstance()) {
+            getBlindBoxConfigBuilder().mergeFrom(value);
+          } else {
+            blindBoxConfig_ = value;
+          }
+        } else {
+          blindBoxConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder clearBlindBoxConfig() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        blindBoxConfig_ = null;
+        if (blindBoxConfigBuilder_ != null) {
+          blindBoxConfigBuilder_.dispose();
+          blindBoxConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.Builder getBlindBoxConfigBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBlindBoxConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfigOrBuilder getBlindBoxConfigOrBuilder() {
+        if (blindBoxConfigBuilder_ != null) {
+          return blindBoxConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return blindBoxConfig_ == null ?
+              com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.getDefaultInstance() : blindBoxConfig_;
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.Builder, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfigOrBuilder> 
+          getBlindBoxConfigFieldBuilder() {
+        if (blindBoxConfigBuilder_ == null) {
+          blindBoxConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.Builder, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfigOrBuilder>(
+                  getBlindBoxConfig(),
+                  getParentForChildren(),
+                  isClean());
+          blindBoxConfig_ = null;
+        }
+        return blindBoxConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.ClassConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.ClassConfig)
+    private static final com.likechain.likenft.v1.ClassDataProto.ClassConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.ClassDataProto.ClassConfig();
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.ClassConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClassConfig>
+        PARSER = new com.google.protobuf.AbstractParser<ClassConfig>() {
+      @java.lang.Override
+      public ClassConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClassConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClassConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BlindBoxConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.BlindBoxConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.likechain.likenft.v1.ClassDataProto.MintPeriod> 
+        getMintPeriodsList();
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.ClassDataProto.MintPeriod getMintPeriods(int index);
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    int getMintPeriodsCount();
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder> 
+        getMintPeriodsOrBuilderList();
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder getMintPeriodsOrBuilder(
+        int index);
+
+    /**
+     * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the revealTime field is set.
+     */
+    boolean hasRevealTime();
+    /**
+     * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The revealTime.
+     */
+    com.google.protobuf.Timestamp getRevealTime();
+    /**
+     * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getRevealTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.BlindBoxConfig}
+   */
+  public static final class BlindBoxConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.BlindBoxConfig)
+      BlindBoxConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BlindBoxConfig.newBuilder() to construct.
+    private BlindBoxConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BlindBoxConfig() {
+      mintPeriods_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BlindBoxConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.class, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.Builder.class);
+    }
+
+    public static final int MINT_PERIODS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.likechain.likenft.v1.ClassDataProto.MintPeriod> mintPeriods_;
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.likechain.likenft.v1.ClassDataProto.MintPeriod> getMintPeriodsList() {
+      return mintPeriods_;
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder> 
+        getMintPeriodsOrBuilderList() {
+      return mintPeriods_;
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMintPeriodsCount() {
+      return mintPeriods_.size();
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.MintPeriod getMintPeriods(int index) {
+      return mintPeriods_.get(index);
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder getMintPeriodsOrBuilder(
+        int index) {
+      return mintPeriods_.get(index);
+    }
+
+    public static final int REVEAL_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp revealTime_;
+    /**
+     * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the revealTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasRevealTime() {
+      return revealTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The revealTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getRevealTime() {
+      return revealTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : revealTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getRevealTimeOrBuilder() {
+      return revealTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : revealTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < mintPeriods_.size(); i++) {
+        output.writeMessage(1, mintPeriods_.get(i));
+      }
+      if (revealTime_ != null) {
+        output.writeMessage(2, getRevealTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < mintPeriods_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, mintPeriods_.get(i));
+      }
+      if (revealTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRevealTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig other = (com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig) obj;
+
+      if (!getMintPeriodsList()
+          .equals(other.getMintPeriodsList())) return false;
+      if (hasRevealTime() != other.hasRevealTime()) return false;
+      if (hasRevealTime()) {
+        if (!getRevealTime()
+            .equals(other.getRevealTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMintPeriodsCount() > 0) {
+        hash = (37 * hash) + MINT_PERIODS_FIELD_NUMBER;
+        hash = (53 * hash) + getMintPeriodsList().hashCode();
+      }
+      if (hasRevealTime()) {
+        hash = (37 * hash) + REVEAL_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getRevealTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.BlindBoxConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.BlindBoxConfig)
+        com.likechain.likenft.v1.ClassDataProto.BlindBoxConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.class, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (mintPeriodsBuilder_ == null) {
+          mintPeriods_ = java.util.Collections.emptyList();
+        } else {
+          mintPeriods_ = null;
+          mintPeriodsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        revealTime_ = null;
+        if (revealTimeBuilder_ != null) {
+          revealTimeBuilder_.dispose();
+          revealTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig build() {
+        com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig buildPartial() {
+        com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig result = new com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig result) {
+        if (mintPeriodsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            mintPeriods_ = java.util.Collections.unmodifiableList(mintPeriods_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.mintPeriods_ = mintPeriods_;
+        } else {
+          result.mintPeriods_ = mintPeriodsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.revealTime_ = revealTimeBuilder_ == null
+              ? revealTime_
+              : revealTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig) {
+          return mergeFrom((com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig other) {
+        if (other == com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.getDefaultInstance()) return this;
+        if (mintPeriodsBuilder_ == null) {
+          if (!other.mintPeriods_.isEmpty()) {
+            if (mintPeriods_.isEmpty()) {
+              mintPeriods_ = other.mintPeriods_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMintPeriodsIsMutable();
+              mintPeriods_.addAll(other.mintPeriods_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mintPeriods_.isEmpty()) {
+            if (mintPeriodsBuilder_.isEmpty()) {
+              mintPeriodsBuilder_.dispose();
+              mintPeriodsBuilder_ = null;
+              mintPeriods_ = other.mintPeriods_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              mintPeriodsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintPeriodsFieldBuilder() : null;
+            } else {
+              mintPeriodsBuilder_.addAllMessages(other.mintPeriods_);
+            }
+          }
+        }
+        if (other.hasRevealTime()) {
+          mergeRevealTime(other.getRevealTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.likechain.likenft.v1.ClassDataProto.MintPeriod m =
+                    input.readMessage(
+                        com.likechain.likenft.v1.ClassDataProto.MintPeriod.parser(),
+                        extensionRegistry);
+                if (mintPeriodsBuilder_ == null) {
+                  ensureMintPeriodsIsMutable();
+                  mintPeriods_.add(m);
+                } else {
+                  mintPeriodsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRevealTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.likechain.likenft.v1.ClassDataProto.MintPeriod> mintPeriods_ =
+        java.util.Collections.emptyList();
+      private void ensureMintPeriodsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          mintPeriods_ = new java.util.ArrayList<com.likechain.likenft.v1.ClassDataProto.MintPeriod>(mintPeriods_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.MintPeriod, com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder, com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder> mintPeriodsBuilder_;
+
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.likechain.likenft.v1.ClassDataProto.MintPeriod> getMintPeriodsList() {
+        if (mintPeriodsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mintPeriods_);
+        } else {
+          return mintPeriodsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMintPeriodsCount() {
+        if (mintPeriodsBuilder_ == null) {
+          return mintPeriods_.size();
+        } else {
+          return mintPeriodsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.MintPeriod getMintPeriods(int index) {
+        if (mintPeriodsBuilder_ == null) {
+          return mintPeriods_.get(index);
+        } else {
+          return mintPeriodsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintPeriods(
+          int index, com.likechain.likenft.v1.ClassDataProto.MintPeriod value) {
+        if (mintPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintPeriodsIsMutable();
+          mintPeriods_.set(index, value);
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintPeriods(
+          int index, com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder builderForValue) {
+        if (mintPeriodsBuilder_ == null) {
+          ensureMintPeriodsIsMutable();
+          mintPeriods_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintPeriods(com.likechain.likenft.v1.ClassDataProto.MintPeriod value) {
+        if (mintPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintPeriodsIsMutable();
+          mintPeriods_.add(value);
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintPeriods(
+          int index, com.likechain.likenft.v1.ClassDataProto.MintPeriod value) {
+        if (mintPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintPeriodsIsMutable();
+          mintPeriods_.add(index, value);
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintPeriods(
+          com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder builderForValue) {
+        if (mintPeriodsBuilder_ == null) {
+          ensureMintPeriodsIsMutable();
+          mintPeriods_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintPeriods(
+          int index, com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder builderForValue) {
+        if (mintPeriodsBuilder_ == null) {
+          ensureMintPeriodsIsMutable();
+          mintPeriods_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMintPeriods(
+          java.lang.Iterable<? extends com.likechain.likenft.v1.ClassDataProto.MintPeriod> values) {
+        if (mintPeriodsBuilder_ == null) {
+          ensureMintPeriodsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mintPeriods_);
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMintPeriods() {
+        if (mintPeriodsBuilder_ == null) {
+          mintPeriods_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMintPeriods(int index) {
+        if (mintPeriodsBuilder_ == null) {
+          ensureMintPeriodsIsMutable();
+          mintPeriods_.remove(index);
+          onChanged();
+        } else {
+          mintPeriodsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder getMintPeriodsBuilder(
+          int index) {
+        return getMintPeriodsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder getMintPeriodsOrBuilder(
+          int index) {
+        if (mintPeriodsBuilder_ == null) {
+          return mintPeriods_.get(index);  } else {
+          return mintPeriodsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder> 
+           getMintPeriodsOrBuilderList() {
+        if (mintPeriodsBuilder_ != null) {
+          return mintPeriodsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mintPeriods_);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder addMintPeriodsBuilder() {
+        return getMintPeriodsFieldBuilder().addBuilder(
+            com.likechain.likenft.v1.ClassDataProto.MintPeriod.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder addMintPeriodsBuilder(
+          int index) {
+        return getMintPeriodsFieldBuilder().addBuilder(
+            index, com.likechain.likenft.v1.ClassDataProto.MintPeriod.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.MintPeriod mint_periods = 1 [json_name = "mintPeriods", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder> 
+           getMintPeriodsBuilderList() {
+        return getMintPeriodsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.MintPeriod, com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder, com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder> 
+          getMintPeriodsFieldBuilder() {
+        if (mintPeriodsBuilder_ == null) {
+          mintPeriodsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.likechain.likenft.v1.ClassDataProto.MintPeriod, com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder, com.likechain.likenft.v1.ClassDataProto.MintPeriodOrBuilder>(
+                  mintPeriods_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mintPeriods_ = null;
+        }
+        return mintPeriodsBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp revealTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> revealTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the revealTime field is set.
+       */
+      public boolean hasRevealTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The revealTime.
+       */
+      public com.google.protobuf.Timestamp getRevealTime() {
+        if (revealTimeBuilder_ == null) {
+          return revealTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : revealTime_;
+        } else {
+          return revealTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setRevealTime(com.google.protobuf.Timestamp value) {
+        if (revealTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          revealTime_ = value;
+        } else {
+          revealTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setRevealTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (revealTimeBuilder_ == null) {
+          revealTime_ = builderForValue.build();
+        } else {
+          revealTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeRevealTime(com.google.protobuf.Timestamp value) {
+        if (revealTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            revealTime_ != null &&
+            revealTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getRevealTimeBuilder().mergeFrom(value);
+          } else {
+            revealTime_ = value;
+          }
+        } else {
+          revealTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearRevealTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        revealTime_ = null;
+        if (revealTimeBuilder_ != null) {
+          revealTimeBuilder_.dispose();
+          revealTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getRevealTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRevealTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getRevealTimeOrBuilder() {
+        if (revealTimeBuilder_ != null) {
+          return revealTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return revealTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : revealTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getRevealTimeFieldBuilder() {
+        if (revealTimeBuilder_ == null) {
+          revealTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getRevealTime(),
+                  getParentForChildren(),
+                  isClean());
+          revealTime_ = null;
+        }
+        return revealTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.BlindBoxConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.BlindBoxConfig)
+    private static final com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig();
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BlindBoxConfig>
+        PARSER = new com.google.protobuf.AbstractParser<BlindBoxConfig>() {
+      @java.lang.Override
+      public BlindBoxConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BlindBoxConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BlindBoxConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BlindBoxStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.BlindBoxState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 content_count = 1 [json_name = "contentCount"];</code>
+     * @return The contentCount.
+     */
+    long getContentCount();
+
+    /**
+     * <code>bool to_be_revealed = 2 [json_name = "toBeRevealed"];</code>
+     * @return The toBeRevealed.
+     */
+    boolean getToBeRevealed();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.BlindBoxState}
+   */
+  public static final class BlindBoxState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.BlindBoxState)
+      BlindBoxStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BlindBoxState.newBuilder() to construct.
+    private BlindBoxState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BlindBoxState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BlindBoxState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.ClassDataProto.BlindBoxState.class, com.likechain.likenft.v1.ClassDataProto.BlindBoxState.Builder.class);
+    }
+
+    public static final int CONTENT_COUNT_FIELD_NUMBER = 1;
+    private long contentCount_ = 0L;
+    /**
+     * <code>uint64 content_count = 1 [json_name = "contentCount"];</code>
+     * @return The contentCount.
+     */
+    @java.lang.Override
+    public long getContentCount() {
+      return contentCount_;
+    }
+
+    public static final int TO_BE_REVEALED_FIELD_NUMBER = 2;
+    private boolean toBeRevealed_ = false;
+    /**
+     * <code>bool to_be_revealed = 2 [json_name = "toBeRevealed"];</code>
+     * @return The toBeRevealed.
+     */
+    @java.lang.Override
+    public boolean getToBeRevealed() {
+      return toBeRevealed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (contentCount_ != 0L) {
+        output.writeUInt64(1, contentCount_);
+      }
+      if (toBeRevealed_ != false) {
+        output.writeBool(2, toBeRevealed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (contentCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, contentCount_);
+      }
+      if (toBeRevealed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, toBeRevealed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.ClassDataProto.BlindBoxState)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.ClassDataProto.BlindBoxState other = (com.likechain.likenft.v1.ClassDataProto.BlindBoxState) obj;
+
+      if (getContentCount()
+          != other.getContentCount()) return false;
+      if (getToBeRevealed()
+          != other.getToBeRevealed()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTENT_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getContentCount());
+      hash = (37 * hash) + TO_BE_REVEALED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getToBeRevealed());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.ClassDataProto.BlindBoxState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.BlindBoxState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.BlindBoxState)
+        com.likechain.likenft.v1.ClassDataProto.BlindBoxStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.ClassDataProto.BlindBoxState.class, com.likechain.likenft.v1.ClassDataProto.BlindBoxState.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.ClassDataProto.BlindBoxState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contentCount_ = 0L;
+        toBeRevealed_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.ClassDataProto.internal_static_likechain_likenft_v1_BlindBoxState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxState getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.ClassDataProto.BlindBoxState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxState build() {
+        com.likechain.likenft.v1.ClassDataProto.BlindBoxState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.ClassDataProto.BlindBoxState buildPartial() {
+        com.likechain.likenft.v1.ClassDataProto.BlindBoxState result = new com.likechain.likenft.v1.ClassDataProto.BlindBoxState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.ClassDataProto.BlindBoxState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contentCount_ = contentCount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.toBeRevealed_ = toBeRevealed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.ClassDataProto.BlindBoxState) {
+          return mergeFrom((com.likechain.likenft.v1.ClassDataProto.BlindBoxState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.ClassDataProto.BlindBoxState other) {
+        if (other == com.likechain.likenft.v1.ClassDataProto.BlindBoxState.getDefaultInstance()) return this;
+        if (other.getContentCount() != 0L) {
+          setContentCount(other.getContentCount());
+        }
+        if (other.getToBeRevealed() != false) {
+          setToBeRevealed(other.getToBeRevealed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                contentCount_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                toBeRevealed_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long contentCount_ ;
+      /**
+       * <code>uint64 content_count = 1 [json_name = "contentCount"];</code>
+       * @return The contentCount.
+       */
+      @java.lang.Override
+      public long getContentCount() {
+        return contentCount_;
+      }
+      /**
+       * <code>uint64 content_count = 1 [json_name = "contentCount"];</code>
+       * @param value The contentCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentCount(long value) {
+
+        contentCount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 content_count = 1 [json_name = "contentCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentCount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contentCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean toBeRevealed_ ;
+      /**
+       * <code>bool to_be_revealed = 2 [json_name = "toBeRevealed"];</code>
+       * @return The toBeRevealed.
+       */
+      @java.lang.Override
+      public boolean getToBeRevealed() {
+        return toBeRevealed_;
+      }
+      /**
+       * <code>bool to_be_revealed = 2 [json_name = "toBeRevealed"];</code>
+       * @param value The toBeRevealed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToBeRevealed(boolean value) {
+
+        toBeRevealed_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool to_be_revealed = 2 [json_name = "toBeRevealed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToBeRevealed() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        toBeRevealed_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.BlindBoxState)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.BlindBoxState)
+    private static final com.likechain.likenft.v1.ClassDataProto.BlindBoxState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.ClassDataProto.BlindBoxState();
+    }
+
+    public static com.likechain.likenft.v1.ClassDataProto.BlindBoxState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BlindBoxState>
+        PARSER = new com.google.protobuf.AbstractParser<BlindBoxState>() {
+      @java.lang.Override
+      public BlindBoxState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BlindBoxState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BlindBoxState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.BlindBoxState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_ClassData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_ClassData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_ClassParent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_ClassParent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_MintPeriod_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_MintPeriod_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_ClassConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_ClassConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_BlindBoxConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_BlindBoxConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_BlindBoxState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_BlindBoxState_fieldAccessorTable;
 
@@ -83,13 +5304,13 @@ public final class ClassDataProto {
       "me\"Z\n\rBlindBoxState\022#\n\rcontent_count\030\001 \001" +
       "(\004R\014contentCount\022$\n\016to_be_revealed\030\002 \001(\010" +
       "R\014toBeRevealed*5\n\017ClassParentType\022\013\n\007UNK" +
-      "NOWN\020\000\022\010\n\004ISCN\020\001\022\013\n\007ACCOUNT\020\002B\323\001\n\030com.li" +
-      "kechain.likenft.v1B\016ClassDataProtoP\001Z5gi" +
-      "thub.com/likecoin/likecoin-chain/v4/x/li" +
-      "kenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1" +
-      "\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Like" +
-      "nft\\V1\\GPBMetadata\352\002\026Likechain::Likenft:" +
-      ":V1b\006proto3"
+      "NOWN\020\000\022\010\n\004ISCN\020\001\022\013\n\007ACCOUNT\020\002B\321\001\n\030com.li" +
+      "kechain.likenft.v1B\016ClassDataProtoZ5gith" +
+      "ub.com/likecoin/likecoin-chain/v4/x/like" +
+      "nft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002" +
+      "\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenf" +
+      "t\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

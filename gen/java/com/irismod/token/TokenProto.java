@@ -14,14 +14,2213 @@ public final class TokenProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.token.Token)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>uint32 scale = 3 [json_name = "scale"];</code>
+     * @return The scale.
+     */
+    int getScale();
+
+    /**
+     * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+     * @return The minUnit.
+     */
+    java.lang.String getMinUnit();
+    /**
+     * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+     * @return The bytes for minUnit.
+     */
+    com.google.protobuf.ByteString
+        getMinUnitBytes();
+
+    /**
+     * <code>uint64 initial_supply = 5 [json_name = "initialSupply", (.gogoproto.moretags) = "yaml:&#92;"initial_supply&#92;""];</code>
+     * @return The initialSupply.
+     */
+    long getInitialSupply();
+
+    /**
+     * <code>uint64 max_supply = 6 [json_name = "maxSupply", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The maxSupply.
+     */
+    long getMaxSupply();
+
+    /**
+     * <code>bool mintable = 7 [json_name = "mintable"];</code>
+     * @return The mintable.
+     */
+    boolean getMintable();
+
+    /**
+     * <code>string owner = 8 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 8 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * <pre>
+   * Token defines a standard for the fungible token
+   * </pre>
+   *
+   * Protobuf type {@code irismod.token.Token}
+   */
+  public static final class Token extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.token.Token)
+      TokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Token.newBuilder() to construct.
+    private Token(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Token() {
+      symbol_ = "";
+      name_ = "";
+      minUnit_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Token();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.token.TokenProto.internal_static_irismod_token_Token_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.token.TokenProto.internal_static_irismod_token_Token_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.token.TokenProto.Token.class, com.irismod.token.TokenProto.Token.Builder.class);
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol = 1 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCALE_FIELD_NUMBER = 3;
+    private int scale_ = 0;
+    /**
+     * <code>uint32 scale = 3 [json_name = "scale"];</code>
+     * @return The scale.
+     */
+    @java.lang.Override
+    public int getScale() {
+      return scale_;
+    }
+
+    public static final int MIN_UNIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minUnit_ = "";
+    /**
+     * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+     * @return The minUnit.
+     */
+    @java.lang.Override
+    public java.lang.String getMinUnit() {
+      java.lang.Object ref = minUnit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minUnit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+     * @return The bytes for minUnit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinUnitBytes() {
+      java.lang.Object ref = minUnit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minUnit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INITIAL_SUPPLY_FIELD_NUMBER = 5;
+    private long initialSupply_ = 0L;
+    /**
+     * <code>uint64 initial_supply = 5 [json_name = "initialSupply", (.gogoproto.moretags) = "yaml:&#92;"initial_supply&#92;""];</code>
+     * @return The initialSupply.
+     */
+    @java.lang.Override
+    public long getInitialSupply() {
+      return initialSupply_;
+    }
+
+    public static final int MAX_SUPPLY_FIELD_NUMBER = 6;
+    private long maxSupply_ = 0L;
+    /**
+     * <code>uint64 max_supply = 6 [json_name = "maxSupply", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The maxSupply.
+     */
+    @java.lang.Override
+    public long getMaxSupply() {
+      return maxSupply_;
+    }
+
+    public static final int MINTABLE_FIELD_NUMBER = 7;
+    private boolean mintable_ = false;
+    /**
+     * <code>bool mintable = 7 [json_name = "mintable"];</code>
+     * @return The mintable.
+     */
+    @java.lang.Override
+    public boolean getMintable() {
+      return mintable_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 8 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 8 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (scale_ != 0) {
+        output.writeUInt32(3, scale_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minUnit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, minUnit_);
+      }
+      if (initialSupply_ != 0L) {
+        output.writeUInt64(5, initialSupply_);
+      }
+      if (maxSupply_ != 0L) {
+        output.writeUInt64(6, maxSupply_);
+      }
+      if (mintable_ != false) {
+        output.writeBool(7, mintable_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (scale_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, scale_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minUnit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, minUnit_);
+      }
+      if (initialSupply_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, initialSupply_);
+      }
+      if (maxSupply_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, maxSupply_);
+      }
+      if (mintable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, mintable_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.token.TokenProto.Token)) {
+        return super.equals(obj);
+      }
+      com.irismod.token.TokenProto.Token other = (com.irismod.token.TokenProto.Token) obj;
+
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getScale()
+          != other.getScale()) return false;
+      if (!getMinUnit()
+          .equals(other.getMinUnit())) return false;
+      if (getInitialSupply()
+          != other.getInitialSupply()) return false;
+      if (getMaxSupply()
+          != other.getMaxSupply()) return false;
+      if (getMintable()
+          != other.getMintable()) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SCALE_FIELD_NUMBER;
+      hash = (53 * hash) + getScale();
+      hash = (37 * hash) + MIN_UNIT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinUnit().hashCode();
+      hash = (37 * hash) + INITIAL_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getInitialSupply());
+      hash = (37 * hash) + MAX_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxSupply());
+      hash = (37 * hash) + MINTABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMintable());
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.token.TokenProto.Token parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.token.TokenProto.Token parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.token.TokenProto.Token parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.token.TokenProto.Token parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.token.TokenProto.Token prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Token defines a standard for the fungible token
+     * </pre>
+     *
+     * Protobuf type {@code irismod.token.Token}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.token.Token)
+        com.irismod.token.TokenProto.TokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.token.TokenProto.internal_static_irismod_token_Token_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.token.TokenProto.internal_static_irismod_token_Token_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.token.TokenProto.Token.class, com.irismod.token.TokenProto.Token.Builder.class);
+      }
+
+      // Construct using com.irismod.token.TokenProto.Token.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        symbol_ = "";
+        name_ = "";
+        scale_ = 0;
+        minUnit_ = "";
+        initialSupply_ = 0L;
+        maxSupply_ = 0L;
+        mintable_ = false;
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.token.TokenProto.internal_static_irismod_token_Token_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.token.TokenProto.Token getDefaultInstanceForType() {
+        return com.irismod.token.TokenProto.Token.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.token.TokenProto.Token build() {
+        com.irismod.token.TokenProto.Token result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.token.TokenProto.Token buildPartial() {
+        com.irismod.token.TokenProto.Token result = new com.irismod.token.TokenProto.Token(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.token.TokenProto.Token result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.symbol_ = symbol_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.scale_ = scale_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.minUnit_ = minUnit_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.initialSupply_ = initialSupply_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.maxSupply_ = maxSupply_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.mintable_ = mintable_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.token.TokenProto.Token) {
+          return mergeFrom((com.irismod.token.TokenProto.Token)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.token.TokenProto.Token other) {
+        if (other == com.irismod.token.TokenProto.Token.getDefaultInstance()) return this;
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getScale() != 0) {
+          setScale(other.getScale());
+        }
+        if (!other.getMinUnit().isEmpty()) {
+          minUnit_ = other.minUnit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getInitialSupply() != 0L) {
+          setInitialSupply(other.getInitialSupply());
+        }
+        if (other.getMaxSupply() != 0L) {
+          setMaxSupply(other.getMaxSupply());
+        }
+        if (other.getMintable() != false) {
+          setMintable(other.getMintable());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                scale_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                minUnit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                initialSupply_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                maxSupply_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                mintable_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <code>string symbol = 1 [json_name = "symbol"];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol"];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol"];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol"];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int scale_ ;
+      /**
+       * <code>uint32 scale = 3 [json_name = "scale"];</code>
+       * @return The scale.
+       */
+      @java.lang.Override
+      public int getScale() {
+        return scale_;
+      }
+      /**
+       * <code>uint32 scale = 3 [json_name = "scale"];</code>
+       * @param value The scale to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScale(int value) {
+
+        scale_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 scale = 3 [json_name = "scale"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScale() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        scale_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minUnit_ = "";
+      /**
+       * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+       * @return The minUnit.
+       */
+      public java.lang.String getMinUnit() {
+        java.lang.Object ref = minUnit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minUnit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+       * @return The bytes for minUnit.
+       */
+      public com.google.protobuf.ByteString
+          getMinUnitBytes() {
+        java.lang.Object ref = minUnit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minUnit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+       * @param value The minUnit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinUnit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minUnit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinUnit() {
+        minUnit_ = getDefaultInstance().getMinUnit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_unit = 4 [json_name = "minUnit", (.gogoproto.moretags) = "yaml:&#92;"min_unit&#92;""];</code>
+       * @param value The bytes for minUnit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinUnitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minUnit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long initialSupply_ ;
+      /**
+       * <code>uint64 initial_supply = 5 [json_name = "initialSupply", (.gogoproto.moretags) = "yaml:&#92;"initial_supply&#92;""];</code>
+       * @return The initialSupply.
+       */
+      @java.lang.Override
+      public long getInitialSupply() {
+        return initialSupply_;
+      }
+      /**
+       * <code>uint64 initial_supply = 5 [json_name = "initialSupply", (.gogoproto.moretags) = "yaml:&#92;"initial_supply&#92;""];</code>
+       * @param value The initialSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialSupply(long value) {
+
+        initialSupply_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 initial_supply = 5 [json_name = "initialSupply", (.gogoproto.moretags) = "yaml:&#92;"initial_supply&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitialSupply() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        initialSupply_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maxSupply_ ;
+      /**
+       * <code>uint64 max_supply = 6 [json_name = "maxSupply", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @return The maxSupply.
+       */
+      @java.lang.Override
+      public long getMaxSupply() {
+        return maxSupply_;
+      }
+      /**
+       * <code>uint64 max_supply = 6 [json_name = "maxSupply", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @param value The maxSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSupply(long value) {
+
+        maxSupply_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 max_supply = 6 [json_name = "maxSupply", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxSupply() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        maxSupply_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean mintable_ ;
+      /**
+       * <code>bool mintable = 7 [json_name = "mintable"];</code>
+       * @return The mintable.
+       */
+      @java.lang.Override
+      public boolean getMintable() {
+        return mintable_;
+      }
+      /**
+       * <code>bool mintable = 7 [json_name = "mintable"];</code>
+       * @param value The mintable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintable(boolean value) {
+
+        mintable_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool mintable = 7 [json_name = "mintable"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintable() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        mintable_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.token.Token)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.token.Token)
+    private static final com.irismod.token.TokenProto.Token DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.token.TokenProto.Token();
+    }
+
+    public static com.irismod.token.TokenProto.Token getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Token>
+        PARSER = new com.google.protobuf.AbstractParser<Token>() {
+      @java.lang.Override
+      public Token parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Token> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Token> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.token.TokenProto.Token getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.token.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+     * @return The tokenTaxRate.
+     */
+    java.lang.String getTokenTaxRate();
+    /**
+     * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+     * @return The bytes for tokenTaxRate.
+     */
+    com.google.protobuf.ByteString
+        getTokenTaxRateBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+     * @return Whether the issueTokenBaseFee field is set.
+     */
+    boolean hasIssueTokenBaseFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+     * @return The issueTokenBaseFee.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getIssueTokenBaseFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueTokenBaseFeeOrBuilder();
+
+    /**
+     * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+     * @return The mintTokenFeeRatio.
+     */
+    java.lang.String getMintTokenFeeRatio();
+    /**
+     * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+     * @return The bytes for mintTokenFeeRatio.
+     */
+    com.google.protobuf.ByteString
+        getMintTokenFeeRatioBytes();
+  }
+  /**
+   * <pre>
+   * Params defines token module's parameters
+   * </pre>
+   *
+   * Protobuf type {@code irismod.token.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.token.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      tokenTaxRate_ = "";
+      mintTokenFeeRatio_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.token.TokenProto.internal_static_irismod_token_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.token.TokenProto.internal_static_irismod_token_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.token.TokenProto.Params.class, com.irismod.token.TokenProto.Params.Builder.class);
+    }
+
+    public static final int TOKEN_TAX_RATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenTaxRate_ = "";
+    /**
+     * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+     * @return The tokenTaxRate.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenTaxRate() {
+      java.lang.Object ref = tokenTaxRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenTaxRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+     * @return The bytes for tokenTaxRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenTaxRateBytes() {
+      java.lang.Object ref = tokenTaxRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenTaxRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUE_TOKEN_BASE_FEE_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin issueTokenBaseFee_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+     * @return Whether the issueTokenBaseFee field is set.
+     */
+    @java.lang.Override
+    public boolean hasIssueTokenBaseFee() {
+      return issueTokenBaseFee_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+     * @return The issueTokenBaseFee.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getIssueTokenBaseFee() {
+      return issueTokenBaseFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueTokenBaseFee_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueTokenBaseFeeOrBuilder() {
+      return issueTokenBaseFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueTokenBaseFee_;
+    }
+
+    public static final int MINT_TOKEN_FEE_RATIO_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintTokenFeeRatio_ = "";
+    /**
+     * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+     * @return The mintTokenFeeRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getMintTokenFeeRatio() {
+      java.lang.Object ref = mintTokenFeeRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintTokenFeeRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+     * @return The bytes for mintTokenFeeRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintTokenFeeRatioBytes() {
+      java.lang.Object ref = mintTokenFeeRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintTokenFeeRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenTaxRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tokenTaxRate_);
+      }
+      if (issueTokenBaseFee_ != null) {
+        output.writeMessage(2, getIssueTokenBaseFee());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintTokenFeeRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mintTokenFeeRatio_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenTaxRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tokenTaxRate_);
+      }
+      if (issueTokenBaseFee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getIssueTokenBaseFee());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintTokenFeeRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mintTokenFeeRatio_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.token.TokenProto.Params)) {
+        return super.equals(obj);
+      }
+      com.irismod.token.TokenProto.Params other = (com.irismod.token.TokenProto.Params) obj;
+
+      if (!getTokenTaxRate()
+          .equals(other.getTokenTaxRate())) return false;
+      if (hasIssueTokenBaseFee() != other.hasIssueTokenBaseFee()) return false;
+      if (hasIssueTokenBaseFee()) {
+        if (!getIssueTokenBaseFee()
+            .equals(other.getIssueTokenBaseFee())) return false;
+      }
+      if (!getMintTokenFeeRatio()
+          .equals(other.getMintTokenFeeRatio())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOKEN_TAX_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenTaxRate().hashCode();
+      if (hasIssueTokenBaseFee()) {
+        hash = (37 * hash) + ISSUE_TOKEN_BASE_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getIssueTokenBaseFee().hashCode();
+      }
+      hash = (37 * hash) + MINT_TOKEN_FEE_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getMintTokenFeeRatio().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.token.TokenProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.token.TokenProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.token.TokenProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.token.TokenProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.token.TokenProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines token module's parameters
+     * </pre>
+     *
+     * Protobuf type {@code irismod.token.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.token.Params)
+        com.irismod.token.TokenProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.token.TokenProto.internal_static_irismod_token_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.token.TokenProto.internal_static_irismod_token_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.token.TokenProto.Params.class, com.irismod.token.TokenProto.Params.Builder.class);
+      }
+
+      // Construct using com.irismod.token.TokenProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tokenTaxRate_ = "";
+        issueTokenBaseFee_ = null;
+        if (issueTokenBaseFeeBuilder_ != null) {
+          issueTokenBaseFeeBuilder_.dispose();
+          issueTokenBaseFeeBuilder_ = null;
+        }
+        mintTokenFeeRatio_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.token.TokenProto.internal_static_irismod_token_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.token.TokenProto.Params getDefaultInstanceForType() {
+        return com.irismod.token.TokenProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.token.TokenProto.Params build() {
+        com.irismod.token.TokenProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.token.TokenProto.Params buildPartial() {
+        com.irismod.token.TokenProto.Params result = new com.irismod.token.TokenProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.token.TokenProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tokenTaxRate_ = tokenTaxRate_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.issueTokenBaseFee_ = issueTokenBaseFeeBuilder_ == null
+              ? issueTokenBaseFee_
+              : issueTokenBaseFeeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.mintTokenFeeRatio_ = mintTokenFeeRatio_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.token.TokenProto.Params) {
+          return mergeFrom((com.irismod.token.TokenProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.token.TokenProto.Params other) {
+        if (other == com.irismod.token.TokenProto.Params.getDefaultInstance()) return this;
+        if (!other.getTokenTaxRate().isEmpty()) {
+          tokenTaxRate_ = other.tokenTaxRate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasIssueTokenBaseFee()) {
+          mergeIssueTokenBaseFee(other.getIssueTokenBaseFee());
+        }
+        if (!other.getMintTokenFeeRatio().isEmpty()) {
+          mintTokenFeeRatio_ = other.mintTokenFeeRatio_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                tokenTaxRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getIssueTokenBaseFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                mintTokenFeeRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object tokenTaxRate_ = "";
+      /**
+       * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+       * @return The tokenTaxRate.
+       */
+      public java.lang.String getTokenTaxRate() {
+        java.lang.Object ref = tokenTaxRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenTaxRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+       * @return The bytes for tokenTaxRate.
+       */
+      public com.google.protobuf.ByteString
+          getTokenTaxRateBytes() {
+        java.lang.Object ref = tokenTaxRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenTaxRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+       * @param value The tokenTaxRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenTaxRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenTaxRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenTaxRate() {
+        tokenTaxRate_ = getDefaultInstance().getTokenTaxRate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_tax_rate = 1 [json_name = "tokenTaxRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"token_tax_rate&#92;""];</code>
+       * @param value The bytes for tokenTaxRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenTaxRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenTaxRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin issueTokenBaseFee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> issueTokenBaseFeeBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       * @return Whether the issueTokenBaseFee field is set.
+       */
+      public boolean hasIssueTokenBaseFee() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       * @return The issueTokenBaseFee.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getIssueTokenBaseFee() {
+        if (issueTokenBaseFeeBuilder_ == null) {
+          return issueTokenBaseFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueTokenBaseFee_;
+        } else {
+          return issueTokenBaseFeeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       */
+      public Builder setIssueTokenBaseFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (issueTokenBaseFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          issueTokenBaseFee_ = value;
+        } else {
+          issueTokenBaseFeeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       */
+      public Builder setIssueTokenBaseFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (issueTokenBaseFeeBuilder_ == null) {
+          issueTokenBaseFee_ = builderForValue.build();
+        } else {
+          issueTokenBaseFeeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       */
+      public Builder mergeIssueTokenBaseFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (issueTokenBaseFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            issueTokenBaseFee_ != null &&
+            issueTokenBaseFee_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getIssueTokenBaseFeeBuilder().mergeFrom(value);
+          } else {
+            issueTokenBaseFee_ = value;
+          }
+        } else {
+          issueTokenBaseFeeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       */
+      public Builder clearIssueTokenBaseFee() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        issueTokenBaseFee_ = null;
+        if (issueTokenBaseFeeBuilder_ != null) {
+          issueTokenBaseFeeBuilder_.dispose();
+          issueTokenBaseFeeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getIssueTokenBaseFeeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getIssueTokenBaseFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueTokenBaseFeeOrBuilder() {
+        if (issueTokenBaseFeeBuilder_ != null) {
+          return issueTokenBaseFeeBuilder_.getMessageOrBuilder();
+        } else {
+          return issueTokenBaseFee_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueTokenBaseFee_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getIssueTokenBaseFeeFieldBuilder() {
+        if (issueTokenBaseFeeBuilder_ == null) {
+          issueTokenBaseFeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getIssueTokenBaseFee(),
+                  getParentForChildren(),
+                  isClean());
+          issueTokenBaseFee_ = null;
+        }
+        return issueTokenBaseFeeBuilder_;
+      }
+
+      private java.lang.Object mintTokenFeeRatio_ = "";
+      /**
+       * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+       * @return The mintTokenFeeRatio.
+       */
+      public java.lang.String getMintTokenFeeRatio() {
+        java.lang.Object ref = mintTokenFeeRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintTokenFeeRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+       * @return The bytes for mintTokenFeeRatio.
+       */
+      public com.google.protobuf.ByteString
+          getMintTokenFeeRatioBytes() {
+        java.lang.Object ref = mintTokenFeeRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintTokenFeeRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+       * @param value The mintTokenFeeRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintTokenFeeRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintTokenFeeRatio_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintTokenFeeRatio() {
+        mintTokenFeeRatio_ = getDefaultInstance().getMintTokenFeeRatio();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mint_token_fee_ratio = 3 [json_name = "mintTokenFeeRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"mint_token_fee_ratio&#92;""];</code>
+       * @param value The bytes for mintTokenFeeRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintTokenFeeRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintTokenFeeRatio_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.token.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.token.Params)
+    private static final com.irismod.token.TokenProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.token.TokenProto.Params();
+    }
+
+    public static com.irismod.token.TokenProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.token.TokenProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_token_Token_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_token_Token_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_token_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_token_Params_fieldAccessorTable;
 
@@ -52,11 +2251,11 @@ public final class TokenProto {
       "int_token_fee_ratio\030\003 \001(\tBM\310\336\037\000\332\336\037&githu" +
       "b.com/cosmos/cosmos-sdk/types.Dec\362\336\037\033yam" +
       "l:\"mint_token_fee_ratio\"R\021mintTokenFeeRa" +
-      "tio:\010\230\240\037\000\350\240\037\001B\250\001\n\021com.irismod.tokenB\nTok" +
-      "enProtoP\001Z.github.com/irisnet/irismod/mo" +
-      "dules/token/types\242\002\003ITX\252\002\rIrismod.Token\312" +
-      "\002\rIrismod\\Token\342\002\031Irismod\\Token\\GPBMetad" +
-      "ata\352\002\016Irismod::Token\310\341\036\000b\006proto3"
+      "tio:\010\230\240\037\000\350\240\037\001B\246\001\n\021com.irismod.tokenB\nTok" +
+      "enProtoZ.github.com/irisnet/irismod/modu" +
+      "les/token/types\242\002\003ITX\252\002\rIrismod.Token\312\002\r" +
+      "Irismod\\Token\342\002\031Irismod\\Token\\GPBMetadat" +
+      "a\352\002\016Irismod::Token\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

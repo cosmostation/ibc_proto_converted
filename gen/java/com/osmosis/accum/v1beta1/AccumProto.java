@@ -14,19 +14,3697 @@ public final class AccumProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AccumulatorContentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.accum.v1beta1.AccumulatorContent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getAccumValueList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getAccumValue(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getAccumValueCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAccumValueOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAccumValueOrBuilder(
+        int index);
+
+    /**
+     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The totalShares.
+     */
+    java.lang.String getTotalShares();
+    /**
+     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for totalShares.
+     */
+    com.google.protobuf.ByteString
+        getTotalSharesBytes();
+  }
+  /**
+   * <pre>
+   * AccumulatorContent is the state-entry for the global accumulator.
+   * It contains the name of the global accumulator and the total value of
+   * shares belonging to it from all positions.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.accum.v1beta1.AccumulatorContent}
+   */
+  public static final class AccumulatorContent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.accum.v1beta1.AccumulatorContent)
+      AccumulatorContentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccumulatorContent.newBuilder() to construct.
+    private AccumulatorContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccumulatorContent() {
+      accumValue_ = java.util.Collections.emptyList();
+      totalShares_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccumulatorContent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_AccumulatorContent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_AccumulatorContent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent.class, com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent.Builder.class);
+    }
+
+    public static final int ACCUM_VALUE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> accumValue_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAccumValueList() {
+      return accumValue_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAccumValueOrBuilderList() {
+      return accumValue_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getAccumValueCount() {
+      return accumValue_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getAccumValue(int index) {
+      return accumValue_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAccumValueOrBuilder(
+        int index) {
+      return accumValue_.get(index);
+    }
+
+    public static final int TOTAL_SHARES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalShares_ = "";
+    /**
+     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The totalShares.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalShares() {
+      java.lang.Object ref = totalShares_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalShares_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for totalShares.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalSharesBytes() {
+      java.lang.Object ref = totalShares_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalShares_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < accumValue_.size(); i++) {
+        output.writeMessage(1, accumValue_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalShares_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, totalShares_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < accumValue_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, accumValue_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalShares_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, totalShares_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent)) {
+        return super.equals(obj);
+      }
+      com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent other = (com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent) obj;
+
+      if (!getAccumValueList()
+          .equals(other.getAccumValueList())) return false;
+      if (!getTotalShares()
+          .equals(other.getTotalShares())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAccumValueCount() > 0) {
+        hash = (37 * hash) + ACCUM_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getAccumValueList().hashCode();
+      }
+      hash = (37 * hash) + TOTAL_SHARES_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalShares().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccumulatorContent is the state-entry for the global accumulator.
+     * It contains the name of the global accumulator and the total value of
+     * shares belonging to it from all positions.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.accum.v1beta1.AccumulatorContent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.accum.v1beta1.AccumulatorContent)
+        com.osmosis.accum.v1beta1.AccumProto.AccumulatorContentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_AccumulatorContent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_AccumulatorContent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent.class, com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent.Builder.class);
+      }
+
+      // Construct using com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (accumValueBuilder_ == null) {
+          accumValue_ = java.util.Collections.emptyList();
+        } else {
+          accumValue_ = null;
+          accumValueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalShares_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_AccumulatorContent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent getDefaultInstanceForType() {
+        return com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent build() {
+        com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent buildPartial() {
+        com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent result = new com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent result) {
+        if (accumValueBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            accumValue_ = java.util.Collections.unmodifiableList(accumValue_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.accumValue_ = accumValue_;
+        } else {
+          result.accumValue_ = accumValueBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalShares_ = totalShares_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent) {
+          return mergeFrom((com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent other) {
+        if (other == com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent.getDefaultInstance()) return this;
+        if (accumValueBuilder_ == null) {
+          if (!other.accumValue_.isEmpty()) {
+            if (accumValue_.isEmpty()) {
+              accumValue_ = other.accumValue_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAccumValueIsMutable();
+              accumValue_.addAll(other.accumValue_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accumValue_.isEmpty()) {
+            if (accumValueBuilder_.isEmpty()) {
+              accumValueBuilder_.dispose();
+              accumValueBuilder_ = null;
+              accumValue_ = other.accumValue_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              accumValueBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccumValueFieldBuilder() : null;
+            } else {
+              accumValueBuilder_.addAllMessages(other.accumValue_);
+            }
+          }
+        }
+        if (!other.getTotalShares().isEmpty()) {
+          totalShares_ = other.totalShares_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (accumValueBuilder_ == null) {
+                  ensureAccumValueIsMutable();
+                  accumValue_.add(m);
+                } else {
+                  accumValueBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                totalShares_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> accumValue_ =
+        java.util.Collections.emptyList();
+      private void ensureAccumValueIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          accumValue_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(accumValue_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> accumValueBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAccumValueList() {
+        if (accumValueBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accumValue_);
+        } else {
+          return accumValueBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getAccumValueCount() {
+        if (accumValueBuilder_ == null) {
+          return accumValue_.size();
+        } else {
+          return accumValueBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getAccumValue(int index) {
+        if (accumValueBuilder_ == null) {
+          return accumValue_.get(index);
+        } else {
+          return accumValueBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAccumValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (accumValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccumValueIsMutable();
+          accumValue_.set(index, value);
+          onChanged();
+        } else {
+          accumValueBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAccumValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (accumValueBuilder_ == null) {
+          ensureAccumValueIsMutable();
+          accumValue_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accumValueBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAccumValue(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (accumValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccumValueIsMutable();
+          accumValue_.add(value);
+          onChanged();
+        } else {
+          accumValueBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAccumValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (accumValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccumValueIsMutable();
+          accumValue_.add(index, value);
+          onChanged();
+        } else {
+          accumValueBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAccumValue(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (accumValueBuilder_ == null) {
+          ensureAccumValueIsMutable();
+          accumValue_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accumValueBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAccumValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (accumValueBuilder_ == null) {
+          ensureAccumValueIsMutable();
+          accumValue_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accumValueBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllAccumValue(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (accumValueBuilder_ == null) {
+          ensureAccumValueIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accumValue_);
+          onChanged();
+        } else {
+          accumValueBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearAccumValue() {
+        if (accumValueBuilder_ == null) {
+          accumValue_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          accumValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeAccumValue(int index) {
+        if (accumValueBuilder_ == null) {
+          ensureAccumValueIsMutable();
+          accumValue_.remove(index);
+          onChanged();
+        } else {
+          accumValueBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getAccumValueBuilder(
+          int index) {
+        return getAccumValueFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAccumValueOrBuilder(
+          int index) {
+        if (accumValueBuilder_ == null) {
+          return accumValue_.get(index);  } else {
+          return accumValueBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getAccumValueOrBuilderList() {
+        if (accumValueBuilder_ != null) {
+          return accumValueBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accumValue_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAccumValueBuilder() {
+        return getAccumValueFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAccumValueBuilder(
+          int index) {
+        return getAccumValueFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value = 1 [json_name = "accumValue", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getAccumValueBuilderList() {
+        return getAccumValueFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getAccumValueFieldBuilder() {
+        if (accumValueBuilder_ == null) {
+          accumValueBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  accumValue_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accumValue_ = null;
+        }
+        return accumValueBuilder_;
+      }
+
+      private java.lang.Object totalShares_ = "";
+      /**
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The totalShares.
+       */
+      public java.lang.String getTotalShares() {
+        java.lang.Object ref = totalShares_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalShares_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for totalShares.
+       */
+      public com.google.protobuf.ByteString
+          getTotalSharesBytes() {
+        java.lang.Object ref = totalShares_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalShares_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The totalShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalShares(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalShares_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalShares() {
+        totalShares_ = getDefaultInstance().getTotalShares();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for totalShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSharesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalShares_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.accum.v1beta1.AccumulatorContent)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.accum.v1beta1.AccumulatorContent)
+    private static final com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent();
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccumulatorContent>
+        PARSER = new com.google.protobuf.AbstractParser<AccumulatorContent>() {
+      @java.lang.Override
+      public AccumulatorContent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccumulatorContent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccumulatorContent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.accum.v1beta1.AccumProto.AccumulatorContent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.accum.v1beta1.Options)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.accum.v1beta1.Options}
+   */
+  public static final class Options extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.accum.v1beta1.Options)
+      OptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Options.newBuilder() to construct.
+    private Options(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Options() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Options();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Options_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Options_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.accum.v1beta1.AccumProto.Options.class, com.osmosis.accum.v1beta1.AccumProto.Options.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.accum.v1beta1.AccumProto.Options)) {
+        return super.equals(obj);
+      }
+      com.osmosis.accum.v1beta1.AccumProto.Options other = (com.osmosis.accum.v1beta1.AccumProto.Options) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Options parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.accum.v1beta1.AccumProto.Options prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.accum.v1beta1.Options}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.accum.v1beta1.Options)
+        com.osmosis.accum.v1beta1.AccumProto.OptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Options_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Options_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.accum.v1beta1.AccumProto.Options.class, com.osmosis.accum.v1beta1.AccumProto.Options.Builder.class);
+      }
+
+      // Construct using com.osmosis.accum.v1beta1.AccumProto.Options.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Options_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.Options getDefaultInstanceForType() {
+        return com.osmosis.accum.v1beta1.AccumProto.Options.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.Options build() {
+        com.osmosis.accum.v1beta1.AccumProto.Options result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.Options buildPartial() {
+        com.osmosis.accum.v1beta1.AccumProto.Options result = new com.osmosis.accum.v1beta1.AccumProto.Options(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.accum.v1beta1.AccumProto.Options) {
+          return mergeFrom((com.osmosis.accum.v1beta1.AccumProto.Options)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.accum.v1beta1.AccumProto.Options other) {
+        if (other == com.osmosis.accum.v1beta1.AccumProto.Options.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.accum.v1beta1.Options)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.accum.v1beta1.Options)
+    private static final com.osmosis.accum.v1beta1.AccumProto.Options DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.accum.v1beta1.AccumProto.Options();
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.Options getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Options>
+        PARSER = new com.google.protobuf.AbstractParser<Options>() {
+      @java.lang.Override
+      public Options parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Options> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Options> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.accum.v1beta1.AccumProto.Options getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.accum.v1beta1.Record)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * num_shares is the number of shares belonging to the position associated
+     * with this record.
+     * </pre>
+     *
+     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The numShares.
+     */
+    java.lang.String getNumShares();
+    /**
+     * <pre>
+     * num_shares is the number of shares belonging to the position associated
+     * with this record.
+     * </pre>
+     *
+     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for numShares.
+     */
+    com.google.protobuf.ByteString
+        getNumSharesBytes();
+
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getAccumValuePerShareList();
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getAccumValuePerShare(int index);
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getAccumValuePerShareCount();
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAccumValuePerShareOrBuilderList();
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAccumValuePerShareOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getUnclaimedRewardsTotalList();
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getUnclaimedRewardsTotal(int index);
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getUnclaimedRewardsTotalCount();
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getUnclaimedRewardsTotalOrBuilderList();
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getUnclaimedRewardsTotalOrBuilder(
+        int index);
+
+    /**
+     * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+     * @return Whether the options field is set.
+     */
+    boolean hasOptions();
+    /**
+     * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+     * @return The options.
+     */
+    com.osmosis.accum.v1beta1.AccumProto.Options getOptions();
+    /**
+     * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+     */
+    com.osmosis.accum.v1beta1.AccumProto.OptionsOrBuilder getOptionsOrBuilder();
+  }
+  /**
+   * <pre>
+   * Record corresponds to an individual position value belonging to the
+   * global accumulator.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.accum.v1beta1.Record}
+   */
+  public static final class Record extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.accum.v1beta1.Record)
+      RecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Record.newBuilder() to construct.
+    private Record(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Record() {
+      numShares_ = "";
+      accumValuePerShare_ = java.util.Collections.emptyList();
+      unclaimedRewardsTotal_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Record();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Record_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Record_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.accum.v1beta1.AccumProto.Record.class, com.osmosis.accum.v1beta1.AccumProto.Record.Builder.class);
+    }
+
+    public static final int NUM_SHARES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object numShares_ = "";
+    /**
+     * <pre>
+     * num_shares is the number of shares belonging to the position associated
+     * with this record.
+     * </pre>
+     *
+     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The numShares.
+     */
+    @java.lang.Override
+    public java.lang.String getNumShares() {
+      java.lang.Object ref = numShares_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        numShares_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * num_shares is the number of shares belonging to the position associated
+     * with this record.
+     * </pre>
+     *
+     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for numShares.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumSharesBytes() {
+      java.lang.Object ref = numShares_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        numShares_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCUM_VALUE_PER_SHARE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> accumValuePerShare_;
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAccumValuePerShareList() {
+      return accumValuePerShare_;
+    }
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAccumValuePerShareOrBuilderList() {
+      return accumValuePerShare_;
+    }
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getAccumValuePerShareCount() {
+      return accumValuePerShare_.size();
+    }
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getAccumValuePerShare(int index) {
+      return accumValuePerShare_.get(index);
+    }
+    /**
+     * <pre>
+     * accum_value_per_share is the subset of coins per shar of the global
+     * accumulator value that allows to infer how much a position is entitled to
+     * per share that it owns.
+     *
+     * In the default case with no intervals, this value equals to the global
+     * accumulator value at the time of the position creation, the last update or
+     * reward claim.
+     *
+     * In the interval case such as concentrated liquidity, this value equals to
+     * the global growth of rewards inside the interval during one of: the time of
+     * the position creation, the last update or reward claim. Note, that
+     * immediately prior to claiming or updating rewards, this value must be
+     * updated to "the growth inside at the time of last update + the growth
+     * outside at the time of the current block". This is so that the claiming
+     * logic can subtract this updated value from the global accumulator value to
+     * get the growth inside the interval from the time of last update up until
+     * the current block time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAccumValuePerShareOrBuilder(
+        int index) {
+      return accumValuePerShare_.get(index);
+    }
+
+    public static final int UNCLAIMED_REWARDS_TOTAL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> unclaimedRewardsTotal_;
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getUnclaimedRewardsTotalList() {
+      return unclaimedRewardsTotal_;
+    }
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getUnclaimedRewardsTotalOrBuilderList() {
+      return unclaimedRewardsTotal_;
+    }
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getUnclaimedRewardsTotalCount() {
+      return unclaimedRewardsTotal_.size();
+    }
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getUnclaimedRewardsTotal(int index) {
+      return unclaimedRewardsTotal_.get(index);
+    }
+    /**
+     * <pre>
+     * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+     * position is entitled to. This value is updated whenever shares are added or
+     * removed from an existing position. We also expose API for manually updating
+     * this value for some custom use cases such as merging pre-existing positions
+     * into a single one.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getUnclaimedRewardsTotalOrBuilder(
+        int index) {
+      return unclaimedRewardsTotal_.get(index);
+    }
+
+    public static final int OPTIONS_FIELD_NUMBER = 4;
+    private com.osmosis.accum.v1beta1.AccumProto.Options options_;
+    /**
+     * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+     * @return Whether the options field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptions() {
+      return options_ != null;
+    }
+    /**
+     * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+     * @return The options.
+     */
+    @java.lang.Override
+    public com.osmosis.accum.v1beta1.AccumProto.Options getOptions() {
+      return options_ == null ? com.osmosis.accum.v1beta1.AccumProto.Options.getDefaultInstance() : options_;
+    }
+    /**
+     * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.accum.v1beta1.AccumProto.OptionsOrBuilder getOptionsOrBuilder() {
+      return options_ == null ? com.osmosis.accum.v1beta1.AccumProto.Options.getDefaultInstance() : options_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numShares_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, numShares_);
+      }
+      for (int i = 0; i < accumValuePerShare_.size(); i++) {
+        output.writeMessage(2, accumValuePerShare_.get(i));
+      }
+      for (int i = 0; i < unclaimedRewardsTotal_.size(); i++) {
+        output.writeMessage(3, unclaimedRewardsTotal_.get(i));
+      }
+      if (options_ != null) {
+        output.writeMessage(4, getOptions());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numShares_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, numShares_);
+      }
+      for (int i = 0; i < accumValuePerShare_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, accumValuePerShare_.get(i));
+      }
+      for (int i = 0; i < unclaimedRewardsTotal_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, unclaimedRewardsTotal_.get(i));
+      }
+      if (options_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getOptions());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.accum.v1beta1.AccumProto.Record)) {
+        return super.equals(obj);
+      }
+      com.osmosis.accum.v1beta1.AccumProto.Record other = (com.osmosis.accum.v1beta1.AccumProto.Record) obj;
+
+      if (!getNumShares()
+          .equals(other.getNumShares())) return false;
+      if (!getAccumValuePerShareList()
+          .equals(other.getAccumValuePerShareList())) return false;
+      if (!getUnclaimedRewardsTotalList()
+          .equals(other.getUnclaimedRewardsTotalList())) return false;
+      if (hasOptions() != other.hasOptions()) return false;
+      if (hasOptions()) {
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NUM_SHARES_FIELD_NUMBER;
+      hash = (53 * hash) + getNumShares().hashCode();
+      if (getAccumValuePerShareCount() > 0) {
+        hash = (37 * hash) + ACCUM_VALUE_PER_SHARE_FIELD_NUMBER;
+        hash = (53 * hash) + getAccumValuePerShareList().hashCode();
+      }
+      if (getUnclaimedRewardsTotalCount() > 0) {
+        hash = (37 * hash) + UNCLAIMED_REWARDS_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getUnclaimedRewardsTotalList().hashCode();
+      }
+      if (hasOptions()) {
+        hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOptions().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.accum.v1beta1.AccumProto.Record parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.accum.v1beta1.AccumProto.Record prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Record corresponds to an individual position value belonging to the
+     * global accumulator.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.accum.v1beta1.Record}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.accum.v1beta1.Record)
+        com.osmosis.accum.v1beta1.AccumProto.RecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Record_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Record_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.accum.v1beta1.AccumProto.Record.class, com.osmosis.accum.v1beta1.AccumProto.Record.Builder.class);
+      }
+
+      // Construct using com.osmosis.accum.v1beta1.AccumProto.Record.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        numShares_ = "";
+        if (accumValuePerShareBuilder_ == null) {
+          accumValuePerShare_ = java.util.Collections.emptyList();
+        } else {
+          accumValuePerShare_ = null;
+          accumValuePerShareBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          unclaimedRewardsTotal_ = java.util.Collections.emptyList();
+        } else {
+          unclaimedRewardsTotal_ = null;
+          unclaimedRewardsTotalBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
+          optionsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.accum.v1beta1.AccumProto.internal_static_osmosis_accum_v1beta1_Record_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.Record getDefaultInstanceForType() {
+        return com.osmosis.accum.v1beta1.AccumProto.Record.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.Record build() {
+        com.osmosis.accum.v1beta1.AccumProto.Record result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.accum.v1beta1.AccumProto.Record buildPartial() {
+        com.osmosis.accum.v1beta1.AccumProto.Record result = new com.osmosis.accum.v1beta1.AccumProto.Record(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.accum.v1beta1.AccumProto.Record result) {
+        if (accumValuePerShareBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            accumValuePerShare_ = java.util.Collections.unmodifiableList(accumValuePerShare_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.accumValuePerShare_ = accumValuePerShare_;
+        } else {
+          result.accumValuePerShare_ = accumValuePerShareBuilder_.build();
+        }
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            unclaimedRewardsTotal_ = java.util.Collections.unmodifiableList(unclaimedRewardsTotal_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.unclaimedRewardsTotal_ = unclaimedRewardsTotal_;
+        } else {
+          result.unclaimedRewardsTotal_ = unclaimedRewardsTotalBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.accum.v1beta1.AccumProto.Record result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.numShares_ = numShares_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.options_ = optionsBuilder_ == null
+              ? options_
+              : optionsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.accum.v1beta1.AccumProto.Record) {
+          return mergeFrom((com.osmosis.accum.v1beta1.AccumProto.Record)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.accum.v1beta1.AccumProto.Record other) {
+        if (other == com.osmosis.accum.v1beta1.AccumProto.Record.getDefaultInstance()) return this;
+        if (!other.getNumShares().isEmpty()) {
+          numShares_ = other.numShares_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (accumValuePerShareBuilder_ == null) {
+          if (!other.accumValuePerShare_.isEmpty()) {
+            if (accumValuePerShare_.isEmpty()) {
+              accumValuePerShare_ = other.accumValuePerShare_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAccumValuePerShareIsMutable();
+              accumValuePerShare_.addAll(other.accumValuePerShare_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accumValuePerShare_.isEmpty()) {
+            if (accumValuePerShareBuilder_.isEmpty()) {
+              accumValuePerShareBuilder_.dispose();
+              accumValuePerShareBuilder_ = null;
+              accumValuePerShare_ = other.accumValuePerShare_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              accumValuePerShareBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccumValuePerShareFieldBuilder() : null;
+            } else {
+              accumValuePerShareBuilder_.addAllMessages(other.accumValuePerShare_);
+            }
+          }
+        }
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          if (!other.unclaimedRewardsTotal_.isEmpty()) {
+            if (unclaimedRewardsTotal_.isEmpty()) {
+              unclaimedRewardsTotal_ = other.unclaimedRewardsTotal_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureUnclaimedRewardsTotalIsMutable();
+              unclaimedRewardsTotal_.addAll(other.unclaimedRewardsTotal_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unclaimedRewardsTotal_.isEmpty()) {
+            if (unclaimedRewardsTotalBuilder_.isEmpty()) {
+              unclaimedRewardsTotalBuilder_.dispose();
+              unclaimedRewardsTotalBuilder_ = null;
+              unclaimedRewardsTotal_ = other.unclaimedRewardsTotal_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              unclaimedRewardsTotalBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnclaimedRewardsTotalFieldBuilder() : null;
+            } else {
+              unclaimedRewardsTotalBuilder_.addAllMessages(other.unclaimedRewardsTotal_);
+            }
+          }
+        }
+        if (other.hasOptions()) {
+          mergeOptions(other.getOptions());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                numShares_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (accumValuePerShareBuilder_ == null) {
+                  ensureAccumValuePerShareIsMutable();
+                  accumValuePerShare_.add(m);
+                } else {
+                  accumValuePerShareBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (unclaimedRewardsTotalBuilder_ == null) {
+                  ensureUnclaimedRewardsTotalIsMutable();
+                  unclaimedRewardsTotal_.add(m);
+                } else {
+                  unclaimedRewardsTotalBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getOptionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object numShares_ = "";
+      /**
+       * <pre>
+       * num_shares is the number of shares belonging to the position associated
+       * with this record.
+       * </pre>
+       *
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The numShares.
+       */
+      public java.lang.String getNumShares() {
+        java.lang.Object ref = numShares_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          numShares_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * num_shares is the number of shares belonging to the position associated
+       * with this record.
+       * </pre>
+       *
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for numShares.
+       */
+      public com.google.protobuf.ByteString
+          getNumSharesBytes() {
+        java.lang.Object ref = numShares_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          numShares_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * num_shares is the number of shares belonging to the position associated
+       * with this record.
+       * </pre>
+       *
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The numShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumShares(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        numShares_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * num_shares is the number of shares belonging to the position associated
+       * with this record.
+       * </pre>
+       *
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumShares() {
+        numShares_ = getDefaultInstance().getNumShares();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * num_shares is the number of shares belonging to the position associated
+       * with this record.
+       * </pre>
+       *
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for numShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumSharesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        numShares_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> accumValuePerShare_ =
+        java.util.Collections.emptyList();
+      private void ensureAccumValuePerShareIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          accumValuePerShare_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(accumValuePerShare_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> accumValuePerShareBuilder_;
+
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAccumValuePerShareList() {
+        if (accumValuePerShareBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accumValuePerShare_);
+        } else {
+          return accumValuePerShareBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getAccumValuePerShareCount() {
+        if (accumValuePerShareBuilder_ == null) {
+          return accumValuePerShare_.size();
+        } else {
+          return accumValuePerShareBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getAccumValuePerShare(int index) {
+        if (accumValuePerShareBuilder_ == null) {
+          return accumValuePerShare_.get(index);
+        } else {
+          return accumValuePerShareBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAccumValuePerShare(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (accumValuePerShareBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccumValuePerShareIsMutable();
+          accumValuePerShare_.set(index, value);
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAccumValuePerShare(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (accumValuePerShareBuilder_ == null) {
+          ensureAccumValuePerShareIsMutable();
+          accumValuePerShare_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAccumValuePerShare(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (accumValuePerShareBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccumValuePerShareIsMutable();
+          accumValuePerShare_.add(value);
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAccumValuePerShare(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (accumValuePerShareBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccumValuePerShareIsMutable();
+          accumValuePerShare_.add(index, value);
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAccumValuePerShare(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (accumValuePerShareBuilder_ == null) {
+          ensureAccumValuePerShareIsMutable();
+          accumValuePerShare_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAccumValuePerShare(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (accumValuePerShareBuilder_ == null) {
+          ensureAccumValuePerShareIsMutable();
+          accumValuePerShare_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllAccumValuePerShare(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (accumValuePerShareBuilder_ == null) {
+          ensureAccumValuePerShareIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accumValuePerShare_);
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearAccumValuePerShare() {
+        if (accumValuePerShareBuilder_ == null) {
+          accumValuePerShare_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeAccumValuePerShare(int index) {
+        if (accumValuePerShareBuilder_ == null) {
+          ensureAccumValuePerShareIsMutable();
+          accumValuePerShare_.remove(index);
+          onChanged();
+        } else {
+          accumValuePerShareBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getAccumValuePerShareBuilder(
+          int index) {
+        return getAccumValuePerShareFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAccumValuePerShareOrBuilder(
+          int index) {
+        if (accumValuePerShareBuilder_ == null) {
+          return accumValuePerShare_.get(index);  } else {
+          return accumValuePerShareBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getAccumValuePerShareOrBuilderList() {
+        if (accumValuePerShareBuilder_ != null) {
+          return accumValuePerShareBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accumValuePerShare_);
+        }
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAccumValuePerShareBuilder() {
+        return getAccumValuePerShareFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAccumValuePerShareBuilder(
+          int index) {
+        return getAccumValuePerShareFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * accum_value_per_share is the subset of coins per shar of the global
+       * accumulator value that allows to infer how much a position is entitled to
+       * per share that it owns.
+       *
+       * In the default case with no intervals, this value equals to the global
+       * accumulator value at the time of the position creation, the last update or
+       * reward claim.
+       *
+       * In the interval case such as concentrated liquidity, this value equals to
+       * the global growth of rewards inside the interval during one of: the time of
+       * the position creation, the last update or reward claim. Note, that
+       * immediately prior to claiming or updating rewards, this value must be
+       * updated to "the growth inside at the time of last update + the growth
+       * outside at the time of the current block". This is so that the claiming
+       * logic can subtract this updated value from the global accumulator value to
+       * get the growth inside the interval from the time of last update up until
+       * the current block time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin accum_value_per_share = 2 [json_name = "accumValuePerShare", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getAccumValuePerShareBuilderList() {
+        return getAccumValuePerShareFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getAccumValuePerShareFieldBuilder() {
+        if (accumValuePerShareBuilder_ == null) {
+          accumValuePerShareBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  accumValuePerShare_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accumValuePerShare_ = null;
+        }
+        return accumValuePerShareBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> unclaimedRewardsTotal_ =
+        java.util.Collections.emptyList();
+      private void ensureUnclaimedRewardsTotalIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          unclaimedRewardsTotal_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(unclaimedRewardsTotal_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> unclaimedRewardsTotalBuilder_;
+
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getUnclaimedRewardsTotalList() {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unclaimedRewardsTotal_);
+        } else {
+          return unclaimedRewardsTotalBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getUnclaimedRewardsTotalCount() {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          return unclaimedRewardsTotal_.size();
+        } else {
+          return unclaimedRewardsTotalBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getUnclaimedRewardsTotal(int index) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          return unclaimedRewardsTotal_.get(index);
+        } else {
+          return unclaimedRewardsTotalBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setUnclaimedRewardsTotal(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnclaimedRewardsTotalIsMutable();
+          unclaimedRewardsTotal_.set(index, value);
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setUnclaimedRewardsTotal(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          ensureUnclaimedRewardsTotalIsMutable();
+          unclaimedRewardsTotal_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addUnclaimedRewardsTotal(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnclaimedRewardsTotalIsMutable();
+          unclaimedRewardsTotal_.add(value);
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addUnclaimedRewardsTotal(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnclaimedRewardsTotalIsMutable();
+          unclaimedRewardsTotal_.add(index, value);
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addUnclaimedRewardsTotal(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          ensureUnclaimedRewardsTotalIsMutable();
+          unclaimedRewardsTotal_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addUnclaimedRewardsTotal(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          ensureUnclaimedRewardsTotalIsMutable();
+          unclaimedRewardsTotal_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllUnclaimedRewardsTotal(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          ensureUnclaimedRewardsTotalIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unclaimedRewardsTotal_);
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearUnclaimedRewardsTotal() {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          unclaimedRewardsTotal_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeUnclaimedRewardsTotal(int index) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          ensureUnclaimedRewardsTotalIsMutable();
+          unclaimedRewardsTotal_.remove(index);
+          onChanged();
+        } else {
+          unclaimedRewardsTotalBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getUnclaimedRewardsTotalBuilder(
+          int index) {
+        return getUnclaimedRewardsTotalFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getUnclaimedRewardsTotalOrBuilder(
+          int index) {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          return unclaimedRewardsTotal_.get(index);  } else {
+          return unclaimedRewardsTotalBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getUnclaimedRewardsTotalOrBuilderList() {
+        if (unclaimedRewardsTotalBuilder_ != null) {
+          return unclaimedRewardsTotalBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unclaimedRewardsTotal_);
+        }
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addUnclaimedRewardsTotalBuilder() {
+        return getUnclaimedRewardsTotalFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addUnclaimedRewardsTotalBuilder(
+          int index) {
+        return getUnclaimedRewardsTotalFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * unclaimed_rewards_total is the total amount of unclaimed rewards that the
+       * position is entitled to. This value is updated whenever shares are added or
+       * removed from an existing position. We also expose API for manually updating
+       * this value for some custom use cases such as merging pre-existing positions
+       * into a single one.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin unclaimed_rewards_total = 3 [json_name = "unclaimedRewardsTotal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getUnclaimedRewardsTotalBuilderList() {
+        return getUnclaimedRewardsTotalFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getUnclaimedRewardsTotalFieldBuilder() {
+        if (unclaimedRewardsTotalBuilder_ == null) {
+          unclaimedRewardsTotalBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  unclaimedRewardsTotal_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unclaimedRewardsTotal_ = null;
+        }
+        return unclaimedRewardsTotalBuilder_;
+      }
+
+      private com.osmosis.accum.v1beta1.AccumProto.Options options_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.accum.v1beta1.AccumProto.Options, com.osmosis.accum.v1beta1.AccumProto.Options.Builder, com.osmosis.accum.v1beta1.AccumProto.OptionsOrBuilder> optionsBuilder_;
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       * @return Whether the options field is set.
+       */
+      public boolean hasOptions() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       * @return The options.
+       */
+      public com.osmosis.accum.v1beta1.AccumProto.Options getOptions() {
+        if (optionsBuilder_ == null) {
+          return options_ == null ? com.osmosis.accum.v1beta1.AccumProto.Options.getDefaultInstance() : options_;
+        } else {
+          return optionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       */
+      public Builder setOptions(com.osmosis.accum.v1beta1.AccumProto.Options value) {
+        if (optionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          options_ = value;
+        } else {
+          optionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       */
+      public Builder setOptions(
+          com.osmosis.accum.v1beta1.AccumProto.Options.Builder builderForValue) {
+        if (optionsBuilder_ == null) {
+          options_ = builderForValue.build();
+        } else {
+          optionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       */
+      public Builder mergeOptions(com.osmosis.accum.v1beta1.AccumProto.Options value) {
+        if (optionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            options_ != null &&
+            options_ != com.osmosis.accum.v1beta1.AccumProto.Options.getDefaultInstance()) {
+            getOptionsBuilder().mergeFrom(value);
+          } else {
+            options_ = value;
+          }
+        } else {
+          optionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       */
+      public Builder clearOptions() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
+          optionsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       */
+      public com.osmosis.accum.v1beta1.AccumProto.Options.Builder getOptionsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       */
+      public com.osmosis.accum.v1beta1.AccumProto.OptionsOrBuilder getOptionsOrBuilder() {
+        if (optionsBuilder_ != null) {
+          return optionsBuilder_.getMessageOrBuilder();
+        } else {
+          return options_ == null ?
+              com.osmosis.accum.v1beta1.AccumProto.Options.getDefaultInstance() : options_;
+        }
+      }
+      /**
+       * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.accum.v1beta1.AccumProto.Options, com.osmosis.accum.v1beta1.AccumProto.Options.Builder, com.osmosis.accum.v1beta1.AccumProto.OptionsOrBuilder> 
+          getOptionsFieldBuilder() {
+        if (optionsBuilder_ == null) {
+          optionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.accum.v1beta1.AccumProto.Options, com.osmosis.accum.v1beta1.AccumProto.Options.Builder, com.osmosis.accum.v1beta1.AccumProto.OptionsOrBuilder>(
+                  getOptions(),
+                  getParentForChildren(),
+                  isClean());
+          options_ = null;
+        }
+        return optionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.accum.v1beta1.Record)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.accum.v1beta1.Record)
+    private static final com.osmosis.accum.v1beta1.AccumProto.Record DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.accum.v1beta1.AccumProto.Record();
+    }
+
+    public static com.osmosis.accum.v1beta1.AccumProto.Record getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Record>
+        PARSER = new com.google.protobuf.AbstractParser<Record>() {
+      @java.lang.Override
+      public Record parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Record> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Record> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.accum.v1beta1.AccumProto.Record getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_accum_v1beta1_AccumulatorContent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_accum_v1beta1_AccumulatorContent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_accum_v1beta1_Options_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_accum_v1beta1_Options_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_accum_v1beta1_Record_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_accum_v1beta1_Record_fieldAccessorTable;
 
@@ -57,12 +3735,12 @@ public final class AccumProto {
       "\252\337\037+github.com/cosmos/cosmos-sdk/types.D" +
       "ecCoinsR\025unclaimedRewardsTotal\0228\n\007option" +
       "s\030\004 \001(\0132\036.osmosis.accum.v1beta1.OptionsR" +
-      "\007optionsB\316\001\n\031com.osmosis.accum.v1beta1B\n" +
-      "AccumProtoP\001Z/github.com/osmosis-labs/os" +
-      "mosis/osmoutils/accum\242\002\003OAX\252\002\025Osmosis.Ac" +
-      "cum.V1beta1\312\002\025Osmosis\\Accum\\V1beta1\342\002!Os" +
-      "mosis\\Accum\\V1beta1\\GPBMetadata\352\002\027Osmosi" +
-      "s::Accum::V1beta1b\006proto3"
+      "\007optionsB\314\001\n\031com.osmosis.accum.v1beta1B\n" +
+      "AccumProtoZ/github.com/osmosis-labs/osmo" +
+      "sis/osmoutils/accum\242\002\003OAX\252\002\025Osmosis.Accu" +
+      "m.V1beta1\312\002\025Osmosis\\Accum\\V1beta1\342\002!Osmo" +
+      "sis\\Accum\\V1beta1\\GPBMetadata\352\002\027Osmosis:" +
+      ":Accum::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

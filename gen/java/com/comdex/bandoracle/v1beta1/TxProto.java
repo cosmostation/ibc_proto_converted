@@ -14,14 +14,2492 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgFetchPriceDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.bandoracle.v1beta1.MsgFetchPriceData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 oracle_script_id = 2 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.moretags) = "yaml:&#92;"oracle_script_id&#92;""];</code>
+     * @return The oracleScriptId.
+     */
+    long getOracleScriptId();
+
+    /**
+     * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+     * @return The sourceChannel.
+     */
+    java.lang.String getSourceChannel();
+    /**
+     * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+     * @return The bytes for sourceChannel.
+     */
+    com.google.protobuf.ByteString
+        getSourceChannelBytes();
+
+    /**
+     * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+     * @return Whether the calldata field is set.
+     */
+    boolean hasCalldata();
+    /**
+     * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+     * @return The calldata.
+     */
+    com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData getCalldata();
+    /**
+     * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+     */
+    com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallDataOrBuilder getCalldataOrBuilder();
+
+    /**
+     * <code>uint64 ask_count = 5 [json_name = "askCount"];</code>
+     * @return The askCount.
+     */
+    long getAskCount();
+
+    /**
+     * <code>uint64 min_count = 6 [json_name = "minCount"];</code>
+     * @return The minCount.
+     */
+    long getMinCount();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFeeLimitList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFeeLimit(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getFeeLimitCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeeLimitOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeLimitOrBuilder(
+        int index);
+
+    /**
+     * <code>string request_key = 8 [json_name = "requestKey"];</code>
+     * @return The requestKey.
+     */
+    java.lang.String getRequestKey();
+    /**
+     * <code>string request_key = 8 [json_name = "requestKey"];</code>
+     * @return The bytes for requestKey.
+     */
+    com.google.protobuf.ByteString
+        getRequestKeyBytes();
+
+    /**
+     * <code>uint64 prepare_gas = 9 [json_name = "prepareGas"];</code>
+     * @return The prepareGas.
+     */
+    long getPrepareGas();
+
+    /**
+     * <code>uint64 execute_gas = 10 [json_name = "executeGas"];</code>
+     * @return The executeGas.
+     */
+    long getExecuteGas();
+
+    /**
+     * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+     * @return The clientId.
+     */
+    java.lang.String getClientId();
+    /**
+     * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+     * @return The bytes for clientId.
+     */
+    com.google.protobuf.ByteString
+        getClientIdBytes();
+
+    /**
+     * <code>uint64 twa_batch_size = 12 [json_name = "twaBatchSize"];</code>
+     * @return The twaBatchSize.
+     */
+    long getTwaBatchSize();
+
+    /**
+     * <code>int64 accepted_height_diff = 13 [json_name = "acceptedHeightDiff", (.gogoproto.moretags) = "yaml:&#92;"accepted_height_diff&#92;""];</code>
+     * @return The acceptedHeightDiff.
+     */
+    long getAcceptedHeightDiff();
+  }
+  /**
+   * Protobuf type {@code comdex.bandoracle.v1beta1.MsgFetchPriceData}
+   */
+  public static final class MsgFetchPriceData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.bandoracle.v1beta1.MsgFetchPriceData)
+      MsgFetchPriceDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgFetchPriceData.newBuilder() to construct.
+    private MsgFetchPriceData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgFetchPriceData() {
+      creator_ = "";
+      sourceChannel_ = "";
+      feeLimit_ = java.util.Collections.emptyList();
+      requestKey_ = "";
+      clientId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgFetchPriceData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.class, com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORACLE_SCRIPT_ID_FIELD_NUMBER = 2;
+    private long oracleScriptId_ = 0L;
+    /**
+     * <code>uint64 oracle_script_id = 2 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.moretags) = "yaml:&#92;"oracle_script_id&#92;""];</code>
+     * @return The oracleScriptId.
+     */
+    @java.lang.Override
+    public long getOracleScriptId() {
+      return oracleScriptId_;
+    }
+
+    public static final int SOURCE_CHANNEL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceChannel_ = "";
+    /**
+     * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+     * @return The sourceChannel.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceChannel() {
+      java.lang.Object ref = sourceChannel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceChannel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+     * @return The bytes for sourceChannel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceChannelBytes() {
+      java.lang.Object ref = sourceChannel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceChannel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CALLDATA_FIELD_NUMBER = 4;
+    private com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData calldata_;
+    /**
+     * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+     * @return Whether the calldata field is set.
+     */
+    @java.lang.Override
+    public boolean hasCalldata() {
+      return calldata_ != null;
+    }
+    /**
+     * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+     * @return The calldata.
+     */
+    @java.lang.Override
+    public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData getCalldata() {
+      return calldata_ == null ? com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.getDefaultInstance() : calldata_;
+    }
+    /**
+     * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+     */
+    @java.lang.Override
+    public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallDataOrBuilder getCalldataOrBuilder() {
+      return calldata_ == null ? com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.getDefaultInstance() : calldata_;
+    }
+
+    public static final int ASK_COUNT_FIELD_NUMBER = 5;
+    private long askCount_ = 0L;
+    /**
+     * <code>uint64 ask_count = 5 [json_name = "askCount"];</code>
+     * @return The askCount.
+     */
+    @java.lang.Override
+    public long getAskCount() {
+      return askCount_;
+    }
+
+    public static final int MIN_COUNT_FIELD_NUMBER = 6;
+    private long minCount_ = 0L;
+    /**
+     * <code>uint64 min_count = 6 [json_name = "minCount"];</code>
+     * @return The minCount.
+     */
+    @java.lang.Override
+    public long getMinCount() {
+      return minCount_;
+    }
+
+    public static final int FEE_LIMIT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> feeLimit_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeeLimitList() {
+      return feeLimit_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeeLimitOrBuilderList() {
+      return feeLimit_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getFeeLimitCount() {
+      return feeLimit_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFeeLimit(int index) {
+      return feeLimit_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeLimitOrBuilder(
+        int index) {
+      return feeLimit_.get(index);
+    }
+
+    public static final int REQUEST_KEY_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestKey_ = "";
+    /**
+     * <code>string request_key = 8 [json_name = "requestKey"];</code>
+     * @return The requestKey.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestKey() {
+      java.lang.Object ref = requestKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_key = 8 [json_name = "requestKey"];</code>
+     * @return The bytes for requestKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestKeyBytes() {
+      java.lang.Object ref = requestKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREPARE_GAS_FIELD_NUMBER = 9;
+    private long prepareGas_ = 0L;
+    /**
+     * <code>uint64 prepare_gas = 9 [json_name = "prepareGas"];</code>
+     * @return The prepareGas.
+     */
+    @java.lang.Override
+    public long getPrepareGas() {
+      return prepareGas_;
+    }
+
+    public static final int EXECUTE_GAS_FIELD_NUMBER = 10;
+    private long executeGas_ = 0L;
+    /**
+     * <code>uint64 execute_gas = 10 [json_name = "executeGas"];</code>
+     * @return The executeGas.
+     */
+    @java.lang.Override
+    public long getExecuteGas() {
+      return executeGas_;
+    }
+
+    public static final int CLIENT_ID_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientId_ = "";
+    /**
+     * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+     * @return The clientId.
+     */
+    @java.lang.Override
+    public java.lang.String getClientId() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+     * @return The bytes for clientId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientIdBytes() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TWA_BATCH_SIZE_FIELD_NUMBER = 12;
+    private long twaBatchSize_ = 0L;
+    /**
+     * <code>uint64 twa_batch_size = 12 [json_name = "twaBatchSize"];</code>
+     * @return The twaBatchSize.
+     */
+    @java.lang.Override
+    public long getTwaBatchSize() {
+      return twaBatchSize_;
+    }
+
+    public static final int ACCEPTED_HEIGHT_DIFF_FIELD_NUMBER = 13;
+    private long acceptedHeightDiff_ = 0L;
+    /**
+     * <code>int64 accepted_height_diff = 13 [json_name = "acceptedHeightDiff", (.gogoproto.moretags) = "yaml:&#92;"accepted_height_diff&#92;""];</code>
+     * @return The acceptedHeightDiff.
+     */
+    @java.lang.Override
+    public long getAcceptedHeightDiff() {
+      return acceptedHeightDiff_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (oracleScriptId_ != 0L) {
+        output.writeUInt64(2, oracleScriptId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceChannel_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sourceChannel_);
+      }
+      if (calldata_ != null) {
+        output.writeMessage(4, getCalldata());
+      }
+      if (askCount_ != 0L) {
+        output.writeUInt64(5, askCount_);
+      }
+      if (minCount_ != 0L) {
+        output.writeUInt64(6, minCount_);
+      }
+      for (int i = 0; i < feeLimit_.size(); i++) {
+        output.writeMessage(7, feeLimit_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, requestKey_);
+      }
+      if (prepareGas_ != 0L) {
+        output.writeUInt64(9, prepareGas_);
+      }
+      if (executeGas_ != 0L) {
+        output.writeUInt64(10, executeGas_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, clientId_);
+      }
+      if (twaBatchSize_ != 0L) {
+        output.writeUInt64(12, twaBatchSize_);
+      }
+      if (acceptedHeightDiff_ != 0L) {
+        output.writeInt64(13, acceptedHeightDiff_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (oracleScriptId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, oracleScriptId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceChannel_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sourceChannel_);
+      }
+      if (calldata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCalldata());
+      }
+      if (askCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, askCount_);
+      }
+      if (minCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, minCount_);
+      }
+      for (int i = 0; i < feeLimit_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, feeLimit_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, requestKey_);
+      }
+      if (prepareGas_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, prepareGas_);
+      }
+      if (executeGas_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, executeGas_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, clientId_);
+      }
+      if (twaBatchSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, twaBatchSize_);
+      }
+      if (acceptedHeightDiff_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(13, acceptedHeightDiff_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData)) {
+        return super.equals(obj);
+      }
+      com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData other = (com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getOracleScriptId()
+          != other.getOracleScriptId()) return false;
+      if (!getSourceChannel()
+          .equals(other.getSourceChannel())) return false;
+      if (hasCalldata() != other.hasCalldata()) return false;
+      if (hasCalldata()) {
+        if (!getCalldata()
+            .equals(other.getCalldata())) return false;
+      }
+      if (getAskCount()
+          != other.getAskCount()) return false;
+      if (getMinCount()
+          != other.getMinCount()) return false;
+      if (!getFeeLimitList()
+          .equals(other.getFeeLimitList())) return false;
+      if (!getRequestKey()
+          .equals(other.getRequestKey())) return false;
+      if (getPrepareGas()
+          != other.getPrepareGas()) return false;
+      if (getExecuteGas()
+          != other.getExecuteGas()) return false;
+      if (!getClientId()
+          .equals(other.getClientId())) return false;
+      if (getTwaBatchSize()
+          != other.getTwaBatchSize()) return false;
+      if (getAcceptedHeightDiff()
+          != other.getAcceptedHeightDiff()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ORACLE_SCRIPT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOracleScriptId());
+      hash = (37 * hash) + SOURCE_CHANNEL_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceChannel().hashCode();
+      if (hasCalldata()) {
+        hash = (37 * hash) + CALLDATA_FIELD_NUMBER;
+        hash = (53 * hash) + getCalldata().hashCode();
+      }
+      hash = (37 * hash) + ASK_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAskCount());
+      hash = (37 * hash) + MIN_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinCount());
+      if (getFeeLimitCount() > 0) {
+        hash = (37 * hash) + FEE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getFeeLimitList().hashCode();
+      }
+      hash = (37 * hash) + REQUEST_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestKey().hashCode();
+      hash = (37 * hash) + PREPARE_GAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPrepareGas());
+      hash = (37 * hash) + EXECUTE_GAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExecuteGas());
+      hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientId().hashCode();
+      hash = (37 * hash) + TWA_BATCH_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTwaBatchSize());
+      hash = (37 * hash) + ACCEPTED_HEIGHT_DIFF_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAcceptedHeightDiff());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.bandoracle.v1beta1.MsgFetchPriceData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.bandoracle.v1beta1.MsgFetchPriceData)
+        com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.class, com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.Builder.class);
+      }
+
+      // Construct using com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        oracleScriptId_ = 0L;
+        sourceChannel_ = "";
+        calldata_ = null;
+        if (calldataBuilder_ != null) {
+          calldataBuilder_.dispose();
+          calldataBuilder_ = null;
+        }
+        askCount_ = 0L;
+        minCount_ = 0L;
+        if (feeLimitBuilder_ == null) {
+          feeLimit_ = java.util.Collections.emptyList();
+        } else {
+          feeLimit_ = null;
+          feeLimitBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        requestKey_ = "";
+        prepareGas_ = 0L;
+        executeGas_ = 0L;
+        clientId_ = "";
+        twaBatchSize_ = 0L;
+        acceptedHeightDiff_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData getDefaultInstanceForType() {
+        return com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData build() {
+        com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData buildPartial() {
+        com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData result = new com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData result) {
+        if (feeLimitBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            feeLimit_ = java.util.Collections.unmodifiableList(feeLimit_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.feeLimit_ = feeLimit_;
+        } else {
+          result.feeLimit_ = feeLimitBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.oracleScriptId_ = oracleScriptId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.sourceChannel_ = sourceChannel_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.calldata_ = calldataBuilder_ == null
+              ? calldata_
+              : calldataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.askCount_ = askCount_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.minCount_ = minCount_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.requestKey_ = requestKey_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.prepareGas_ = prepareGas_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.executeGas_ = executeGas_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.clientId_ = clientId_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.twaBatchSize_ = twaBatchSize_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.acceptedHeightDiff_ = acceptedHeightDiff_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData) {
+          return mergeFrom((com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData other) {
+        if (other == com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getOracleScriptId() != 0L) {
+          setOracleScriptId(other.getOracleScriptId());
+        }
+        if (!other.getSourceChannel().isEmpty()) {
+          sourceChannel_ = other.sourceChannel_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasCalldata()) {
+          mergeCalldata(other.getCalldata());
+        }
+        if (other.getAskCount() != 0L) {
+          setAskCount(other.getAskCount());
+        }
+        if (other.getMinCount() != 0L) {
+          setMinCount(other.getMinCount());
+        }
+        if (feeLimitBuilder_ == null) {
+          if (!other.feeLimit_.isEmpty()) {
+            if (feeLimit_.isEmpty()) {
+              feeLimit_ = other.feeLimit_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureFeeLimitIsMutable();
+              feeLimit_.addAll(other.feeLimit_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.feeLimit_.isEmpty()) {
+            if (feeLimitBuilder_.isEmpty()) {
+              feeLimitBuilder_.dispose();
+              feeLimitBuilder_ = null;
+              feeLimit_ = other.feeLimit_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              feeLimitBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeeLimitFieldBuilder() : null;
+            } else {
+              feeLimitBuilder_.addAllMessages(other.feeLimit_);
+            }
+          }
+        }
+        if (!other.getRequestKey().isEmpty()) {
+          requestKey_ = other.requestKey_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (other.getPrepareGas() != 0L) {
+          setPrepareGas(other.getPrepareGas());
+        }
+        if (other.getExecuteGas() != 0L) {
+          setExecuteGas(other.getExecuteGas());
+        }
+        if (!other.getClientId().isEmpty()) {
+          clientId_ = other.clientId_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (other.getTwaBatchSize() != 0L) {
+          setTwaBatchSize(other.getTwaBatchSize());
+        }
+        if (other.getAcceptedHeightDiff() != 0L) {
+          setAcceptedHeightDiff(other.getAcceptedHeightDiff());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                oracleScriptId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                sourceChannel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getCalldataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                askCount_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                minCount_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (feeLimitBuilder_ == null) {
+                  ensureFeeLimitIsMutable();
+                  feeLimit_.add(m);
+                } else {
+                  feeLimitBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                requestKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 72: {
+                prepareGas_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                executeGas_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 90: {
+                clientId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 96: {
+                twaBatchSize_ = input.readUInt64();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                acceptedHeightDiff_ = input.readInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long oracleScriptId_ ;
+      /**
+       * <code>uint64 oracle_script_id = 2 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.moretags) = "yaml:&#92;"oracle_script_id&#92;""];</code>
+       * @return The oracleScriptId.
+       */
+      @java.lang.Override
+      public long getOracleScriptId() {
+        return oracleScriptId_;
+      }
+      /**
+       * <code>uint64 oracle_script_id = 2 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.moretags) = "yaml:&#92;"oracle_script_id&#92;""];</code>
+       * @param value The oracleScriptId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleScriptId(long value) {
+
+        oracleScriptId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 oracle_script_id = 2 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.moretags) = "yaml:&#92;"oracle_script_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracleScriptId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        oracleScriptId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceChannel_ = "";
+      /**
+       * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+       * @return The sourceChannel.
+       */
+      public java.lang.String getSourceChannel() {
+        java.lang.Object ref = sourceChannel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceChannel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+       * @return The bytes for sourceChannel.
+       */
+      public com.google.protobuf.ByteString
+          getSourceChannelBytes() {
+        java.lang.Object ref = sourceChannel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceChannel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+       * @param value The sourceChannel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceChannel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceChannel_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceChannel() {
+        sourceChannel_ = getDefaultInstance().getSourceChannel();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source_channel = 3 [json_name = "sourceChannel"];</code>
+       * @param value The bytes for sourceChannel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceChannelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceChannel_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData calldata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.Builder, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallDataOrBuilder> calldataBuilder_;
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       * @return Whether the calldata field is set.
+       */
+      public boolean hasCalldata() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       * @return The calldata.
+       */
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData getCalldata() {
+        if (calldataBuilder_ == null) {
+          return calldata_ == null ? com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.getDefaultInstance() : calldata_;
+        } else {
+          return calldataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       */
+      public Builder setCalldata(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData value) {
+        if (calldataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          calldata_ = value;
+        } else {
+          calldataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       */
+      public Builder setCalldata(
+          com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.Builder builderForValue) {
+        if (calldataBuilder_ == null) {
+          calldata_ = builderForValue.build();
+        } else {
+          calldataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       */
+      public Builder mergeCalldata(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData value) {
+        if (calldataBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            calldata_ != null &&
+            calldata_ != com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.getDefaultInstance()) {
+            getCalldataBuilder().mergeFrom(value);
+          } else {
+            calldata_ = value;
+          }
+        } else {
+          calldataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       */
+      public Builder clearCalldata() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        calldata_ = null;
+        if (calldataBuilder_ != null) {
+          calldataBuilder_.dispose();
+          calldataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       */
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.Builder getCalldataBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCalldataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       */
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallDataOrBuilder getCalldataOrBuilder() {
+        if (calldataBuilder_ != null) {
+          return calldataBuilder_.getMessageOrBuilder();
+        } else {
+          return calldata_ == null ?
+              com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.getDefaultInstance() : calldata_;
+        }
+      }
+      /**
+       * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.Builder, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallDataOrBuilder> 
+          getCalldataFieldBuilder() {
+        if (calldataBuilder_ == null) {
+          calldataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.Builder, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallDataOrBuilder>(
+                  getCalldata(),
+                  getParentForChildren(),
+                  isClean());
+          calldata_ = null;
+        }
+        return calldataBuilder_;
+      }
+
+      private long askCount_ ;
+      /**
+       * <code>uint64 ask_count = 5 [json_name = "askCount"];</code>
+       * @return The askCount.
+       */
+      @java.lang.Override
+      public long getAskCount() {
+        return askCount_;
+      }
+      /**
+       * <code>uint64 ask_count = 5 [json_name = "askCount"];</code>
+       * @param value The askCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAskCount(long value) {
+
+        askCount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 ask_count = 5 [json_name = "askCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAskCount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        askCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long minCount_ ;
+      /**
+       * <code>uint64 min_count = 6 [json_name = "minCount"];</code>
+       * @return The minCount.
+       */
+      @java.lang.Override
+      public long getMinCount() {
+        return minCount_;
+      }
+      /**
+       * <code>uint64 min_count = 6 [json_name = "minCount"];</code>
+       * @param value The minCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinCount(long value) {
+
+        minCount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 min_count = 6 [json_name = "minCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinCount() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        minCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> feeLimit_ =
+        java.util.Collections.emptyList();
+      private void ensureFeeLimitIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          feeLimit_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(feeLimit_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> feeLimitBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeeLimitList() {
+        if (feeLimitBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(feeLimit_);
+        } else {
+          return feeLimitBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getFeeLimitCount() {
+        if (feeLimitBuilder_ == null) {
+          return feeLimit_.size();
+        } else {
+          return feeLimitBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFeeLimit(int index) {
+        if (feeLimitBuilder_ == null) {
+          return feeLimit_.get(index);
+        } else {
+          return feeLimitBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFeeLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeLimitIsMutable();
+          feeLimit_.set(index, value);
+          onChanged();
+        } else {
+          feeLimitBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFeeLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          feeLimit_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeLimitBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFeeLimit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeLimitIsMutable();
+          feeLimit_.add(value);
+          onChanged();
+        } else {
+          feeLimitBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFeeLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeLimitIsMutable();
+          feeLimit_.add(index, value);
+          onChanged();
+        } else {
+          feeLimitBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFeeLimit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          feeLimit_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feeLimitBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFeeLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          feeLimit_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeLimitBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllFeeLimit(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, feeLimit_);
+          onChanged();
+        } else {
+          feeLimitBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearFeeLimit() {
+        if (feeLimitBuilder_ == null) {
+          feeLimit_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          feeLimitBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeFeeLimit(int index) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          feeLimit_.remove(index);
+          onChanged();
+        } else {
+          feeLimitBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFeeLimitBuilder(
+          int index) {
+        return getFeeLimitFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeLimitOrBuilder(
+          int index) {
+        if (feeLimitBuilder_ == null) {
+          return feeLimit_.get(index);  } else {
+          return feeLimitBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFeeLimitOrBuilderList() {
+        if (feeLimitBuilder_ != null) {
+          return feeLimitBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(feeLimit_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeeLimitBuilder() {
+        return getFeeLimitFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeeLimitBuilder(
+          int index) {
+        return getFeeLimitFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 7 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFeeLimitBuilderList() {
+        return getFeeLimitFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFeeLimitFieldBuilder() {
+        if (feeLimitBuilder_ == null) {
+          feeLimitBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  feeLimit_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          feeLimit_ = null;
+        }
+        return feeLimitBuilder_;
+      }
+
+      private java.lang.Object requestKey_ = "";
+      /**
+       * <code>string request_key = 8 [json_name = "requestKey"];</code>
+       * @return The requestKey.
+       */
+      public java.lang.String getRequestKey() {
+        java.lang.Object ref = requestKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_key = 8 [json_name = "requestKey"];</code>
+       * @return The bytes for requestKey.
+       */
+      public com.google.protobuf.ByteString
+          getRequestKeyBytes() {
+        java.lang.Object ref = requestKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_key = 8 [json_name = "requestKey"];</code>
+       * @param value The requestKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestKey_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_key = 8 [json_name = "requestKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestKey() {
+        requestKey_ = getDefaultInstance().getRequestKey();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_key = 8 [json_name = "requestKey"];</code>
+       * @param value The bytes for requestKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestKey_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private long prepareGas_ ;
+      /**
+       * <code>uint64 prepare_gas = 9 [json_name = "prepareGas"];</code>
+       * @return The prepareGas.
+       */
+      @java.lang.Override
+      public long getPrepareGas() {
+        return prepareGas_;
+      }
+      /**
+       * <code>uint64 prepare_gas = 9 [json_name = "prepareGas"];</code>
+       * @param value The prepareGas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrepareGas(long value) {
+
+        prepareGas_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 prepare_gas = 9 [json_name = "prepareGas"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrepareGas() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        prepareGas_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long executeGas_ ;
+      /**
+       * <code>uint64 execute_gas = 10 [json_name = "executeGas"];</code>
+       * @return The executeGas.
+       */
+      @java.lang.Override
+      public long getExecuteGas() {
+        return executeGas_;
+      }
+      /**
+       * <code>uint64 execute_gas = 10 [json_name = "executeGas"];</code>
+       * @param value The executeGas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecuteGas(long value) {
+
+        executeGas_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 execute_gas = 10 [json_name = "executeGas"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecuteGas() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        executeGas_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientId_ = "";
+      /**
+       * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @return The clientId.
+       */
+      public java.lang.String getClientId() {
+        java.lang.Object ref = clientId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @return The bytes for clientId.
+       */
+      public com.google.protobuf.ByteString
+          getClientIdBytes() {
+        java.lang.Object ref = clientId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @param value The clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientId_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientId() {
+        clientId_ = getDefaultInstance().getClientId();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_id = 11 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @param value The bytes for clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientId_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private long twaBatchSize_ ;
+      /**
+       * <code>uint64 twa_batch_size = 12 [json_name = "twaBatchSize"];</code>
+       * @return The twaBatchSize.
+       */
+      @java.lang.Override
+      public long getTwaBatchSize() {
+        return twaBatchSize_;
+      }
+      /**
+       * <code>uint64 twa_batch_size = 12 [json_name = "twaBatchSize"];</code>
+       * @param value The twaBatchSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTwaBatchSize(long value) {
+
+        twaBatchSize_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 twa_batch_size = 12 [json_name = "twaBatchSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTwaBatchSize() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        twaBatchSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long acceptedHeightDiff_ ;
+      /**
+       * <code>int64 accepted_height_diff = 13 [json_name = "acceptedHeightDiff", (.gogoproto.moretags) = "yaml:&#92;"accepted_height_diff&#92;""];</code>
+       * @return The acceptedHeightDiff.
+       */
+      @java.lang.Override
+      public long getAcceptedHeightDiff() {
+        return acceptedHeightDiff_;
+      }
+      /**
+       * <code>int64 accepted_height_diff = 13 [json_name = "acceptedHeightDiff", (.gogoproto.moretags) = "yaml:&#92;"accepted_height_diff&#92;""];</code>
+       * @param value The acceptedHeightDiff to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAcceptedHeightDiff(long value) {
+
+        acceptedHeightDiff_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 accepted_height_diff = 13 [json_name = "acceptedHeightDiff", (.gogoproto.moretags) = "yaml:&#92;"accepted_height_diff&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAcceptedHeightDiff() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        acceptedHeightDiff_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.bandoracle.v1beta1.MsgFetchPriceData)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.bandoracle.v1beta1.MsgFetchPriceData)
+    private static final com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData();
+    }
+
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgFetchPriceData>
+        PARSER = new com.google.protobuf.AbstractParser<MsgFetchPriceData>() {
+      @java.lang.Override
+      public MsgFetchPriceData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgFetchPriceData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgFetchPriceData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgFetchPriceDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.bandoracle.v1beta1.MsgFetchPriceDataResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.bandoracle.v1beta1.MsgFetchPriceDataResponse}
+   */
+  public static final class MsgFetchPriceDataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.bandoracle.v1beta1.MsgFetchPriceDataResponse)
+      MsgFetchPriceDataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgFetchPriceDataResponse.newBuilder() to construct.
+    private MsgFetchPriceDataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgFetchPriceDataResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgFetchPriceDataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceDataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceDataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse.class, com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse other = (com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.bandoracle.v1beta1.MsgFetchPriceDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.bandoracle.v1beta1.MsgFetchPriceDataResponse)
+        com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceDataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse.class, com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.bandoracle.v1beta1.TxProto.internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse getDefaultInstanceForType() {
+        return com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse build() {
+        com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse buildPartial() {
+        com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse result = new com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse) {
+          return mergeFrom((com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse other) {
+        if (other == com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.bandoracle.v1beta1.MsgFetchPriceDataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.bandoracle.v1beta1.MsgFetchPriceDataResponse)
+    private static final com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse();
+    }
+
+    public static com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgFetchPriceDataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgFetchPriceDataResponse>() {
+      @java.lang.Override
+      public MsgFetchPriceDataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgFetchPriceDataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgFetchPriceDataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceDataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceDataResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_bandoracle_v1beta1_MsgFetchPriceDataResponse_fieldAccessorTable;
 
@@ -54,13 +2532,13 @@ public final class TxProto {
       "$\n\016twa_batch_size\030\014 \001(\004R\014twaBatchSize\022Q\n" +
       "\024accepted_height_diff\030\r \001(\003B\037\362\336\037\033yaml:\"a" +
       "ccepted_height_diff\"R\022acceptedHeightDiff" +
-      "\"\033\n\031MsgFetchPriceDataResponseB\344\001\n\035com.co" +
-      "mdex.bandoracle.v1beta1B\007TxProtoP\001Z4gith" +
-      "ub.com/comdex-official/comdex/x/bandorac" +
-      "le/types\242\002\003CBX\252\002\031Comdex.Bandoracle.V1bet" +
-      "a1\312\002\031Comdex\\Bandoracle\\V1beta1\342\002%Comdex\\" +
-      "Bandoracle\\V1beta1\\GPBMetadata\352\002\033Comdex:" +
-      ":Bandoracle::V1beta1b\006proto3"
+      "\"\033\n\031MsgFetchPriceDataResponseB\342\001\n\035com.co" +
+      "mdex.bandoracle.v1beta1B\007TxProtoZ4github" +
+      ".com/comdex-official/comdex/x/bandoracle" +
+      "/types\242\002\003CBX\252\002\031Comdex.Bandoracle.V1beta1" +
+      "\312\002\031Comdex\\Bandoracle\\V1beta1\342\002%Comdex\\Ba" +
+      "ndoracle\\V1beta1\\GPBMetadata\352\002\033Comdex::B" +
+      "andoracle::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,64 +14,6120 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryPeriodRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryPeriodRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryPeriodRequest is the request type for the Query/Period RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryPeriodRequest}
+   */
+  public static final class QueryPeriodRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryPeriodRequest)
+      QueryPeriodRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPeriodRequest.newBuilder() to construct.
+    private QueryPeriodRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPeriodRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPeriodRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryPeriodRequest.class, com.canto.inflation.v1.QueryProto.QueryPeriodRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryPeriodRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryPeriodRequest other = (com.canto.inflation.v1.QueryProto.QueryPeriodRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryPeriodRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPeriodRequest is the request type for the Query/Period RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryPeriodRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryPeriodRequest)
+        com.canto.inflation.v1.QueryProto.QueryPeriodRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryPeriodRequest.class, com.canto.inflation.v1.QueryProto.QueryPeriodRequest.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryPeriodRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryPeriodRequest getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryPeriodRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryPeriodRequest build() {
+        com.canto.inflation.v1.QueryProto.QueryPeriodRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryPeriodRequest buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryPeriodRequest result = new com.canto.inflation.v1.QueryProto.QueryPeriodRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryPeriodRequest) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryPeriodRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryPeriodRequest other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryPeriodRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryPeriodRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryPeriodRequest)
+    private static final com.canto.inflation.v1.QueryProto.QueryPeriodRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryPeriodRequest();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPeriodRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPeriodRequest>() {
+      @java.lang.Override
+      public QueryPeriodRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPeriodRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPeriodRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryPeriodRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPeriodResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryPeriodResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * period is the current minting per epoch provision value.
+     * </pre>
+     *
+     * <code>uint64 period = 1 [json_name = "period"];</code>
+     * @return The period.
+     */
+    long getPeriod();
+  }
+  /**
+   * <pre>
+   * QueryPeriodResponse is the response type for the Query/Period RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryPeriodResponse}
+   */
+  public static final class QueryPeriodResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryPeriodResponse)
+      QueryPeriodResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPeriodResponse.newBuilder() to construct.
+    private QueryPeriodResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPeriodResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPeriodResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryPeriodResponse.class, com.canto.inflation.v1.QueryProto.QueryPeriodResponse.Builder.class);
+    }
+
+    public static final int PERIOD_FIELD_NUMBER = 1;
+    private long period_ = 0L;
+    /**
+     * <pre>
+     * period is the current minting per epoch provision value.
+     * </pre>
+     *
+     * <code>uint64 period = 1 [json_name = "period"];</code>
+     * @return The period.
+     */
+    @java.lang.Override
+    public long getPeriod() {
+      return period_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (period_ != 0L) {
+        output.writeUInt64(1, period_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (period_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, period_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryPeriodResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryPeriodResponse other = (com.canto.inflation.v1.QueryProto.QueryPeriodResponse) obj;
+
+      if (getPeriod()
+          != other.getPeriod()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPeriod());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryPeriodResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPeriodResponse is the response type for the Query/Period RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryPeriodResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryPeriodResponse)
+        com.canto.inflation.v1.QueryProto.QueryPeriodResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryPeriodResponse.class, com.canto.inflation.v1.QueryProto.QueryPeriodResponse.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryPeriodResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        period_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryPeriodResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryPeriodResponse getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryPeriodResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryPeriodResponse build() {
+        com.canto.inflation.v1.QueryProto.QueryPeriodResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryPeriodResponse buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryPeriodResponse result = new com.canto.inflation.v1.QueryProto.QueryPeriodResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.inflation.v1.QueryProto.QueryPeriodResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.period_ = period_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryPeriodResponse) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryPeriodResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryPeriodResponse other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryPeriodResponse.getDefaultInstance()) return this;
+        if (other.getPeriod() != 0L) {
+          setPeriod(other.getPeriod());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                period_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long period_ ;
+      /**
+       * <pre>
+       * period is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>uint64 period = 1 [json_name = "period"];</code>
+       * @return The period.
+       */
+      @java.lang.Override
+      public long getPeriod() {
+        return period_;
+      }
+      /**
+       * <pre>
+       * period is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>uint64 period = 1 [json_name = "period"];</code>
+       * @param value The period to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPeriod(long value) {
+
+        period_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * period is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>uint64 period = 1 [json_name = "period"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        period_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryPeriodResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryPeriodResponse)
+    private static final com.canto.inflation.v1.QueryProto.QueryPeriodResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryPeriodResponse();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryPeriodResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPeriodResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPeriodResponse>() {
+      @java.lang.Override
+      public QueryPeriodResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPeriodResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPeriodResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryPeriodResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEpochMintProvisionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryEpochMintProvisionRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryEpochMintProvisionRequest is the request type for the
+   * Query/EpochMintProvision RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryEpochMintProvisionRequest}
+   */
+  public static final class QueryEpochMintProvisionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryEpochMintProvisionRequest)
+      QueryEpochMintProvisionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEpochMintProvisionRequest.newBuilder() to construct.
+    private QueryEpochMintProvisionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEpochMintProvisionRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEpochMintProvisionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest.class, com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest other = (com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryEpochMintProvisionRequest is the request type for the
+     * Query/EpochMintProvision RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryEpochMintProvisionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryEpochMintProvisionRequest)
+        com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest.class, com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest build() {
+        com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest result = new com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryEpochMintProvisionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryEpochMintProvisionRequest)
+    private static final com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEpochMintProvisionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEpochMintProvisionRequest>() {
+      @java.lang.Override
+      public QueryEpochMintProvisionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEpochMintProvisionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEpochMintProvisionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEpochMintProvisionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryEpochMintProvisionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * epoch_mint_provision is the current minting per epoch provision value.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return Whether the epochMintProvision field is set.
+     */
+    boolean hasEpochMintProvision();
+    /**
+     * <pre>
+     * epoch_mint_provision is the current minting per epoch provision value.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return The epochMintProvision.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getEpochMintProvision();
+    /**
+     * <pre>
+     * epoch_mint_provision is the current minting per epoch provision value.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getEpochMintProvisionOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryEpochMintProvisionResponse is the response type for the
+   * Query/EpochMintProvision RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryEpochMintProvisionResponse}
+   */
+  public static final class QueryEpochMintProvisionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryEpochMintProvisionResponse)
+      QueryEpochMintProvisionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEpochMintProvisionResponse.newBuilder() to construct.
+    private QueryEpochMintProvisionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEpochMintProvisionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEpochMintProvisionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.class, com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.Builder.class);
+    }
+
+    public static final int EPOCH_MINT_PROVISION_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin epochMintProvision_;
+    /**
+     * <pre>
+     * epoch_mint_provision is the current minting per epoch provision value.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return Whether the epochMintProvision field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpochMintProvision() {
+      return epochMintProvision_ != null;
+    }
+    /**
+     * <pre>
+     * epoch_mint_provision is the current minting per epoch provision value.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return The epochMintProvision.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getEpochMintProvision() {
+      return epochMintProvision_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : epochMintProvision_;
+    }
+    /**
+     * <pre>
+     * epoch_mint_provision is the current minting per epoch provision value.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getEpochMintProvisionOrBuilder() {
+      return epochMintProvision_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : epochMintProvision_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (epochMintProvision_ != null) {
+        output.writeMessage(1, getEpochMintProvision());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (epochMintProvision_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEpochMintProvision());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse other = (com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse) obj;
+
+      if (hasEpochMintProvision() != other.hasEpochMintProvision()) return false;
+      if (hasEpochMintProvision()) {
+        if (!getEpochMintProvision()
+            .equals(other.getEpochMintProvision())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEpochMintProvision()) {
+        hash = (37 * hash) + EPOCH_MINT_PROVISION_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochMintProvision().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryEpochMintProvisionResponse is the response type for the
+     * Query/EpochMintProvision RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryEpochMintProvisionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryEpochMintProvisionResponse)
+        com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.class, com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        epochMintProvision_ = null;
+        if (epochMintProvisionBuilder_ != null) {
+          epochMintProvisionBuilder_.dispose();
+          epochMintProvisionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryEpochMintProvisionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse build() {
+        com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse result = new com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.epochMintProvision_ = epochMintProvisionBuilder_ == null
+              ? epochMintProvision_
+              : epochMintProvisionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.getDefaultInstance()) return this;
+        if (other.hasEpochMintProvision()) {
+          mergeEpochMintProvision(other.getEpochMintProvision());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getEpochMintProvisionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin epochMintProvision_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> epochMintProvisionBuilder_;
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       * @return Whether the epochMintProvision field is set.
+       */
+      public boolean hasEpochMintProvision() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       * @return The epochMintProvision.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getEpochMintProvision() {
+        if (epochMintProvisionBuilder_ == null) {
+          return epochMintProvision_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : epochMintProvision_;
+        } else {
+          return epochMintProvisionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setEpochMintProvision(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (epochMintProvisionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          epochMintProvision_ = value;
+        } else {
+          epochMintProvisionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setEpochMintProvision(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (epochMintProvisionBuilder_ == null) {
+          epochMintProvision_ = builderForValue.build();
+        } else {
+          epochMintProvisionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder mergeEpochMintProvision(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (epochMintProvisionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            epochMintProvision_ != null &&
+            epochMintProvision_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getEpochMintProvisionBuilder().mergeFrom(value);
+          } else {
+            epochMintProvision_ = value;
+          }
+        } else {
+          epochMintProvisionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearEpochMintProvision() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        epochMintProvision_ = null;
+        if (epochMintProvisionBuilder_ != null) {
+          epochMintProvisionBuilder_.dispose();
+          epochMintProvisionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getEpochMintProvisionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getEpochMintProvisionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getEpochMintProvisionOrBuilder() {
+        if (epochMintProvisionBuilder_ != null) {
+          return epochMintProvisionBuilder_.getMessageOrBuilder();
+        } else {
+          return epochMintProvision_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : epochMintProvision_;
+        }
+      }
+      /**
+       * <pre>
+       * epoch_mint_provision is the current minting per epoch provision value.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin epoch_mint_provision = 1 [json_name = "epochMintProvision", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getEpochMintProvisionFieldBuilder() {
+        if (epochMintProvisionBuilder_ == null) {
+          epochMintProvisionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getEpochMintProvision(),
+                  getParentForChildren(),
+                  isClean());
+          epochMintProvision_ = null;
+        }
+        return epochMintProvisionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryEpochMintProvisionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryEpochMintProvisionResponse)
+    private static final com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEpochMintProvisionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEpochMintProvisionResponse>() {
+      @java.lang.Override
+      public QueryEpochMintProvisionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEpochMintProvisionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEpochMintProvisionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySkippedEpochsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QuerySkippedEpochsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QuerySkippedEpochsRequest is the request type for the Query/SkippedEpochs RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QuerySkippedEpochsRequest}
+   */
+  public static final class QuerySkippedEpochsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QuerySkippedEpochsRequest)
+      QuerySkippedEpochsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySkippedEpochsRequest.newBuilder() to construct.
+    private QuerySkippedEpochsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySkippedEpochsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySkippedEpochsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest.class, com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest other = (com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySkippedEpochsRequest is the request type for the Query/SkippedEpochs RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QuerySkippedEpochsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QuerySkippedEpochsRequest)
+        com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest.class, com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest build() {
+        com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest buildPartial() {
+        com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest result = new com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest other) {
+        if (other == com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QuerySkippedEpochsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QuerySkippedEpochsRequest)
+    private static final com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySkippedEpochsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySkippedEpochsRequest>() {
+      @java.lang.Override
+      public QuerySkippedEpochsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySkippedEpochsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySkippedEpochsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QuerySkippedEpochsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySkippedEpochsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QuerySkippedEpochsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * number of epochs that the inflation module has been disabled.
+     * </pre>
+     *
+     * <code>uint64 skipped_epochs = 1 [json_name = "skippedEpochs"];</code>
+     * @return The skippedEpochs.
+     */
+    long getSkippedEpochs();
+  }
+  /**
+   * <pre>
+   * QuerySkippedEpochsResponse is the response type for the Query/SkippedEpochs
+   * RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QuerySkippedEpochsResponse}
+   */
+  public static final class QuerySkippedEpochsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QuerySkippedEpochsResponse)
+      QuerySkippedEpochsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySkippedEpochsResponse.newBuilder() to construct.
+    private QuerySkippedEpochsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySkippedEpochsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySkippedEpochsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse.class, com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse.Builder.class);
+    }
+
+    public static final int SKIPPED_EPOCHS_FIELD_NUMBER = 1;
+    private long skippedEpochs_ = 0L;
+    /**
+     * <pre>
+     * number of epochs that the inflation module has been disabled.
+     * </pre>
+     *
+     * <code>uint64 skipped_epochs = 1 [json_name = "skippedEpochs"];</code>
+     * @return The skippedEpochs.
+     */
+    @java.lang.Override
+    public long getSkippedEpochs() {
+      return skippedEpochs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (skippedEpochs_ != 0L) {
+        output.writeUInt64(1, skippedEpochs_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (skippedEpochs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, skippedEpochs_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse other = (com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse) obj;
+
+      if (getSkippedEpochs()
+          != other.getSkippedEpochs()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SKIPPED_EPOCHS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSkippedEpochs());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySkippedEpochsResponse is the response type for the Query/SkippedEpochs
+     * RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QuerySkippedEpochsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QuerySkippedEpochsResponse)
+        com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse.class, com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        skippedEpochs_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QuerySkippedEpochsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse build() {
+        com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse buildPartial() {
+        com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse result = new com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.skippedEpochs_ = skippedEpochs_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse other) {
+        if (other == com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse.getDefaultInstance()) return this;
+        if (other.getSkippedEpochs() != 0L) {
+          setSkippedEpochs(other.getSkippedEpochs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                skippedEpochs_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long skippedEpochs_ ;
+      /**
+       * <pre>
+       * number of epochs that the inflation module has been disabled.
+       * </pre>
+       *
+       * <code>uint64 skipped_epochs = 1 [json_name = "skippedEpochs"];</code>
+       * @return The skippedEpochs.
+       */
+      @java.lang.Override
+      public long getSkippedEpochs() {
+        return skippedEpochs_;
+      }
+      /**
+       * <pre>
+       * number of epochs that the inflation module has been disabled.
+       * </pre>
+       *
+       * <code>uint64 skipped_epochs = 1 [json_name = "skippedEpochs"];</code>
+       * @param value The skippedEpochs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSkippedEpochs(long value) {
+
+        skippedEpochs_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number of epochs that the inflation module has been disabled.
+       * </pre>
+       *
+       * <code>uint64 skipped_epochs = 1 [json_name = "skippedEpochs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSkippedEpochs() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        skippedEpochs_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QuerySkippedEpochsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QuerySkippedEpochsResponse)
+    private static final com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySkippedEpochsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySkippedEpochsResponse>() {
+      @java.lang.Override
+      public QuerySkippedEpochsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySkippedEpochsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySkippedEpochsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QuerySkippedEpochsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCirculatingSupplyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryCirculatingSupplyRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryCirculatingSupplyRequest is the request type for the
+   * Query/CirculatingSupply RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryCirculatingSupplyRequest}
+   */
+  public static final class QueryCirculatingSupplyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryCirculatingSupplyRequest)
+      QueryCirculatingSupplyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCirculatingSupplyRequest.newBuilder() to construct.
+    private QueryCirculatingSupplyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCirculatingSupplyRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCirculatingSupplyRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest.class, com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest other = (com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCirculatingSupplyRequest is the request type for the
+     * Query/CirculatingSupply RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryCirculatingSupplyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryCirculatingSupplyRequest)
+        com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest.class, com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest build() {
+        com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest result = new com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryCirculatingSupplyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryCirculatingSupplyRequest)
+    private static final com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCirculatingSupplyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCirculatingSupplyRequest>() {
+      @java.lang.Override
+      public QueryCirculatingSupplyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCirculatingSupplyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCirculatingSupplyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCirculatingSupplyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryCirculatingSupplyResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * total amount of coins in circulation
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return Whether the circulatingSupply field is set.
+     */
+    boolean hasCirculatingSupply();
+    /**
+     * <pre>
+     * total amount of coins in circulation
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return The circulatingSupply.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getCirculatingSupply();
+    /**
+     * <pre>
+     * total amount of coins in circulation
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCirculatingSupplyOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryCirculatingSupplyResponse is the response type for the
+   * Query/CirculatingSupply RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryCirculatingSupplyResponse}
+   */
+  public static final class QueryCirculatingSupplyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryCirculatingSupplyResponse)
+      QueryCirculatingSupplyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCirculatingSupplyResponse.newBuilder() to construct.
+    private QueryCirculatingSupplyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCirculatingSupplyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCirculatingSupplyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.class, com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.Builder.class);
+    }
+
+    public static final int CIRCULATING_SUPPLY_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin circulatingSupply_;
+    /**
+     * <pre>
+     * total amount of coins in circulation
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return Whether the circulatingSupply field is set.
+     */
+    @java.lang.Override
+    public boolean hasCirculatingSupply() {
+      return circulatingSupply_ != null;
+    }
+    /**
+     * <pre>
+     * total amount of coins in circulation
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return The circulatingSupply.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getCirculatingSupply() {
+      return circulatingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : circulatingSupply_;
+    }
+    /**
+     * <pre>
+     * total amount of coins in circulation
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCirculatingSupplyOrBuilder() {
+      return circulatingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : circulatingSupply_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (circulatingSupply_ != null) {
+        output.writeMessage(1, getCirculatingSupply());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (circulatingSupply_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCirculatingSupply());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse other = (com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse) obj;
+
+      if (hasCirculatingSupply() != other.hasCirculatingSupply()) return false;
+      if (hasCirculatingSupply()) {
+        if (!getCirculatingSupply()
+            .equals(other.getCirculatingSupply())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCirculatingSupply()) {
+        hash = (37 * hash) + CIRCULATING_SUPPLY_FIELD_NUMBER;
+        hash = (53 * hash) + getCirculatingSupply().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCirculatingSupplyResponse is the response type for the
+     * Query/CirculatingSupply RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryCirculatingSupplyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryCirculatingSupplyResponse)
+        com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.class, com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        circulatingSupply_ = null;
+        if (circulatingSupplyBuilder_ != null) {
+          circulatingSupplyBuilder_.dispose();
+          circulatingSupplyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryCirculatingSupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse build() {
+        com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse result = new com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.circulatingSupply_ = circulatingSupplyBuilder_ == null
+              ? circulatingSupply_
+              : circulatingSupplyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.getDefaultInstance()) return this;
+        if (other.hasCirculatingSupply()) {
+          mergeCirculatingSupply(other.getCirculatingSupply());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCirculatingSupplyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin circulatingSupply_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> circulatingSupplyBuilder_;
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       * @return Whether the circulatingSupply field is set.
+       */
+      public boolean hasCirculatingSupply() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       * @return The circulatingSupply.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getCirculatingSupply() {
+        if (circulatingSupplyBuilder_ == null) {
+          return circulatingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : circulatingSupply_;
+        } else {
+          return circulatingSupplyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setCirculatingSupply(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (circulatingSupplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          circulatingSupply_ = value;
+        } else {
+          circulatingSupplyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setCirculatingSupply(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (circulatingSupplyBuilder_ == null) {
+          circulatingSupply_ = builderForValue.build();
+        } else {
+          circulatingSupplyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder mergeCirculatingSupply(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (circulatingSupplyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            circulatingSupply_ != null &&
+            circulatingSupply_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getCirculatingSupplyBuilder().mergeFrom(value);
+          } else {
+            circulatingSupply_ = value;
+          }
+        } else {
+          circulatingSupplyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearCirculatingSupply() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        circulatingSupply_ = null;
+        if (circulatingSupplyBuilder_ != null) {
+          circulatingSupplyBuilder_.dispose();
+          circulatingSupplyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getCirculatingSupplyBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCirculatingSupplyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCirculatingSupplyOrBuilder() {
+        if (circulatingSupplyBuilder_ != null) {
+          return circulatingSupplyBuilder_.getMessageOrBuilder();
+        } else {
+          return circulatingSupply_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : circulatingSupply_;
+        }
+      }
+      /**
+       * <pre>
+       * total amount of coins in circulation
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin circulating_supply = 1 [json_name = "circulatingSupply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getCirculatingSupplyFieldBuilder() {
+        if (circulatingSupplyBuilder_ == null) {
+          circulatingSupplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getCirculatingSupply(),
+                  getParentForChildren(),
+                  isClean());
+          circulatingSupply_ = null;
+        }
+        return circulatingSupplyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryCirculatingSupplyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryCirculatingSupplyResponse)
+    private static final com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCirculatingSupplyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCirculatingSupplyResponse>() {
+      @java.lang.Override
+      public QueryCirculatingSupplyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCirculatingSupplyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCirculatingSupplyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryInflationRateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryInflationRateRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryInflationRateRequest is the request type for the Query/InflationRate RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryInflationRateRequest}
+   */
+  public static final class QueryInflationRateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryInflationRateRequest)
+      QueryInflationRateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInflationRateRequest.newBuilder() to construct.
+    private QueryInflationRateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInflationRateRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInflationRateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryInflationRateRequest.class, com.canto.inflation.v1.QueryProto.QueryInflationRateRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryInflationRateRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryInflationRateRequest other = (com.canto.inflation.v1.QueryProto.QueryInflationRateRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryInflationRateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryInflationRateRequest is the request type for the Query/InflationRate RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryInflationRateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryInflationRateRequest)
+        com.canto.inflation.v1.QueryProto.QueryInflationRateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryInflationRateRequest.class, com.canto.inflation.v1.QueryProto.QueryInflationRateRequest.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryInflationRateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryInflationRateRequest getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryInflationRateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryInflationRateRequest build() {
+        com.canto.inflation.v1.QueryProto.QueryInflationRateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryInflationRateRequest buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryInflationRateRequest result = new com.canto.inflation.v1.QueryProto.QueryInflationRateRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryInflationRateRequest) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryInflationRateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryInflationRateRequest other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryInflationRateRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryInflationRateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryInflationRateRequest)
+    private static final com.canto.inflation.v1.QueryProto.QueryInflationRateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryInflationRateRequest();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInflationRateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInflationRateRequest>() {
+      @java.lang.Override
+      public QueryInflationRateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInflationRateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInflationRateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryInflationRateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryInflationRateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryInflationRateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * rate by which the total supply increases within one period
+     * </pre>
+     *
+     * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The inflationRate.
+     */
+    java.lang.String getInflationRate();
+    /**
+     * <pre>
+     * rate by which the total supply increases within one period
+     * </pre>
+     *
+     * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for inflationRate.
+     */
+    com.google.protobuf.ByteString
+        getInflationRateBytes();
+  }
+  /**
+   * <pre>
+   * QueryInflationRateResponse is the response type for the Query/InflationRate
+   * RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryInflationRateResponse}
+   */
+  public static final class QueryInflationRateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryInflationRateResponse)
+      QueryInflationRateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInflationRateResponse.newBuilder() to construct.
+    private QueryInflationRateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInflationRateResponse() {
+      inflationRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInflationRateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryInflationRateResponse.class, com.canto.inflation.v1.QueryProto.QueryInflationRateResponse.Builder.class);
+    }
+
+    public static final int INFLATION_RATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object inflationRate_ = "";
+    /**
+     * <pre>
+     * rate by which the total supply increases within one period
+     * </pre>
+     *
+     * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The inflationRate.
+     */
+    @java.lang.Override
+    public java.lang.String getInflationRate() {
+      java.lang.Object ref = inflationRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inflationRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * rate by which the total supply increases within one period
+     * </pre>
+     *
+     * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for inflationRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInflationRateBytes() {
+      java.lang.Object ref = inflationRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inflationRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflationRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, inflationRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflationRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, inflationRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryInflationRateResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryInflationRateResponse other = (com.canto.inflation.v1.QueryProto.QueryInflationRateResponse) obj;
+
+      if (!getInflationRate()
+          .equals(other.getInflationRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INFLATION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getInflationRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryInflationRateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryInflationRateResponse is the response type for the Query/InflationRate
+     * RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryInflationRateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryInflationRateResponse)
+        com.canto.inflation.v1.QueryProto.QueryInflationRateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryInflationRateResponse.class, com.canto.inflation.v1.QueryProto.QueryInflationRateResponse.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryInflationRateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        inflationRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryInflationRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryInflationRateResponse getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryInflationRateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryInflationRateResponse build() {
+        com.canto.inflation.v1.QueryProto.QueryInflationRateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryInflationRateResponse buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryInflationRateResponse result = new com.canto.inflation.v1.QueryProto.QueryInflationRateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.inflation.v1.QueryProto.QueryInflationRateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.inflationRate_ = inflationRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryInflationRateResponse) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryInflationRateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryInflationRateResponse other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryInflationRateResponse.getDefaultInstance()) return this;
+        if (!other.getInflationRate().isEmpty()) {
+          inflationRate_ = other.inflationRate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                inflationRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object inflationRate_ = "";
+      /**
+       * <pre>
+       * rate by which the total supply increases within one period
+       * </pre>
+       *
+       * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The inflationRate.
+       */
+      public java.lang.String getInflationRate() {
+        java.lang.Object ref = inflationRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inflationRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * rate by which the total supply increases within one period
+       * </pre>
+       *
+       * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for inflationRate.
+       */
+      public com.google.protobuf.ByteString
+          getInflationRateBytes() {
+        java.lang.Object ref = inflationRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inflationRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * rate by which the total supply increases within one period
+       * </pre>
+       *
+       * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The inflationRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflationRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        inflationRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * rate by which the total supply increases within one period
+       * </pre>
+       *
+       * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInflationRate() {
+        inflationRate_ = getDefaultInstance().getInflationRate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * rate by which the total supply increases within one period
+       * </pre>
+       *
+       * <code>string inflation_rate = 1 [json_name = "inflationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for inflationRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflationRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        inflationRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryInflationRateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryInflationRateResponse)
+    private static final com.canto.inflation.v1.QueryProto.QueryInflationRateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryInflationRateResponse();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryInflationRateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInflationRateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInflationRateResponse>() {
+      @java.lang.Override
+      public QueryInflationRateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInflationRateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInflationRateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryInflationRateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryParamsRequest.class, com.canto.inflation.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryParamsRequest other = (com.canto.inflation.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryParamsRequest)
+        com.canto.inflation.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryParamsRequest.class, com.canto.inflation.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryParamsRequest build() {
+        com.canto.inflation.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryParamsRequest result = new com.canto.inflation.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryParamsRequest)
+    private static final com.canto.inflation.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.canto.inflation.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.inflation.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.QueryProto.QueryParamsResponse.class, com.canto.inflation.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.canto.inflation.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.canto.inflation.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.inflation.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.QueryProto.QueryParamsResponse other = (com.canto.inflation.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.QueryParamsResponse)
+        com.canto.inflation.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.QueryProto.QueryParamsResponse.class, com.canto.inflation.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.QueryProto.internal_static_canto_inflation_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.canto.inflation.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryParamsResponse build() {
+        com.canto.inflation.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.canto.inflation.v1.QueryProto.QueryParamsResponse result = new com.canto.inflation.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.inflation.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.canto.inflation.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.canto.inflation.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.canto.inflation.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.inflation.v1.GenesisProto.Params, com.canto.inflation.v1.GenesisProto.Params.Builder, com.canto.inflation.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.canto.inflation.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.canto.inflation.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.canto.inflation.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.canto.inflation.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.inflation.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.inflation.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.inflation.v1.GenesisProto.Params, com.canto.inflation.v1.GenesisProto.Params.Builder, com.canto.inflation.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.inflation.v1.GenesisProto.Params, com.canto.inflation.v1.GenesisProto.Params.Builder, com.canto.inflation.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.QueryParamsResponse)
+    private static final com.canto.inflation.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.canto.inflation.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryPeriodRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryPeriodRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryPeriodResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryPeriodResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryEpochMintProvisionRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryEpochMintProvisionRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryEpochMintProvisionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryEpochMintProvisionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QuerySkippedEpochsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QuerySkippedEpochsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QuerySkippedEpochsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QuerySkippedEpochsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryCirculatingSupplyRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryCirculatingSupplyRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryCirculatingSupplyResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryCirculatingSupplyResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryInflationRateRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryInflationRateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryInflationRateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryInflationRateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_QueryParamsResponse_fieldAccessorTable;
 
@@ -130,13 +6186,13 @@ public final class QueryProto {
       "nto/inflation/v1/inflation_rate\022}\n\006Param" +
       "s\022&.canto.inflation.v1.QueryParamsReques" +
       "t\032\'.canto.inflation.v1.QueryParamsRespon" +
-      "se\"\"\202\323\344\223\002\034\022\032/canto/inflation/v1/paramsB\303" +
-      "\001\n\026com.canto.inflation.v1B\nQueryProtoP\001Z" +
-      "3github.com/Canto-Network/Canto/v6/x/inf" +
-      "lation/types\242\002\003CIX\252\002\022Canto.Inflation.V1\312" +
-      "\002\022Canto\\Inflation\\V1\342\002\036Canto\\Inflation\\V" +
-      "1\\GPBMetadata\352\002\024Canto::Inflation::V1b\006pr" +
-      "oto3"
+      "se\"\"\202\323\344\223\002\034\022\032/canto/inflation/v1/paramsB\301" +
+      "\001\n\026com.canto.inflation.v1B\nQueryProtoZ3g" +
+      "ithub.com/Canto-Network/Canto/v6/x/infla" +
+      "tion/types\242\002\003CIX\252\002\022Canto.Inflation.V1\312\002\022" +
+      "Canto\\Inflation\\V1\342\002\036Canto\\Inflation\\V1\\" +
+      "GPBMetadata\352\002\024Canto::Inflation::V1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

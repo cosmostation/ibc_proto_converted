@@ -14,24 +14,4750 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.coreum.asset.nft.v1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.nft.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.coreum.asset.nft.v1.NftProto.ClassDefinition> 
+        getClassDefinitionsList();
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.nft.v1.NftProto.ClassDefinition getClassDefinitions(int index);
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    int getClassDefinitionsCount();
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder> 
+        getClassDefinitionsOrBuilderList();
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder getClassDefinitionsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    java.util.List<com.coreum.asset.nft.v1.GenesisProto.FrozenNFT> 
+        getFrozenNftsList();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    com.coreum.asset.nft.v1.GenesisProto.FrozenNFT getFrozenNfts(int index);
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    int getFrozenNftsCount();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder> 
+        getFrozenNftsOrBuilderList();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder getFrozenNftsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    java.util.List<com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts> 
+        getWhitelistedNftAccountsList();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts getWhitelistedNftAccounts(int index);
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    int getWhitelistedNftAccountsCount();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder> 
+        getWhitelistedNftAccountsOrBuilderList();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder getWhitelistedNftAccountsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    java.util.List<com.coreum.asset.nft.v1.GenesisProto.BurntNFT> 
+        getBurntNftsList();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    com.coreum.asset.nft.v1.GenesisProto.BurntNFT getBurntNfts(int index);
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    int getBurntNftsCount();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder> 
+        getBurntNftsOrBuilderList();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder getBurntNftsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the nftasset module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.asset.nft.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      classDefinitions_ = java.util.Collections.emptyList();
+      frozenNfts_ = java.util.Collections.emptyList();
+      whitelistedNftAccounts_ = java.util.Collections.emptyList();
+      burntNfts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.GenesisProto.GenesisState.class, com.coreum.asset.nft.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.coreum.asset.nft.v1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.coreum.asset.nft.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.coreum.asset.nft.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int CLASS_DEFINITIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.coreum.asset.nft.v1.NftProto.ClassDefinition> classDefinitions_;
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.nft.v1.NftProto.ClassDefinition> getClassDefinitionsList() {
+      return classDefinitions_;
+    }
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder> 
+        getClassDefinitionsOrBuilderList() {
+      return classDefinitions_;
+    }
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClassDefinitionsCount() {
+      return classDefinitions_.size();
+    }
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.NftProto.ClassDefinition getClassDefinitions(int index) {
+      return classDefinitions_.get(index);
+    }
+    /**
+     * <pre>
+     * class_definitions keep the non-fungible token class definitions state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder getClassDefinitionsOrBuilder(
+        int index) {
+      return classDefinitions_.get(index);
+    }
+
+    public static final int FROZEN_NFTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.coreum.asset.nft.v1.GenesisProto.FrozenNFT> frozenNfts_;
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.nft.v1.GenesisProto.FrozenNFT> getFrozenNftsList() {
+      return frozenNfts_;
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder> 
+        getFrozenNftsOrBuilderList() {
+      return frozenNfts_;
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    @java.lang.Override
+    public int getFrozenNftsCount() {
+      return frozenNfts_.size();
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT getFrozenNfts(int index) {
+      return frozenNfts_.get(index);
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder getFrozenNftsOrBuilder(
+        int index) {
+      return frozenNfts_.get(index);
+    }
+
+    public static final int WHITELISTED_NFT_ACCOUNTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts> whitelistedNftAccounts_;
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts> getWhitelistedNftAccountsList() {
+      return whitelistedNftAccounts_;
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder> 
+        getWhitelistedNftAccountsOrBuilderList() {
+      return whitelistedNftAccounts_;
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    @java.lang.Override
+    public int getWhitelistedNftAccountsCount() {
+      return whitelistedNftAccounts_.size();
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts getWhitelistedNftAccounts(int index) {
+      return whitelistedNftAccounts_.get(index);
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder getWhitelistedNftAccountsOrBuilder(
+        int index) {
+      return whitelistedNftAccounts_.get(index);
+    }
+
+    public static final int BURNT_NFTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.coreum.asset.nft.v1.GenesisProto.BurntNFT> burntNfts_;
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.nft.v1.GenesisProto.BurntNFT> getBurntNftsList() {
+      return burntNfts_;
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder> 
+        getBurntNftsOrBuilderList() {
+      return burntNfts_;
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    @java.lang.Override
+    public int getBurntNftsCount() {
+      return burntNfts_.size();
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.BurntNFT getBurntNfts(int index) {
+      return burntNfts_.get(index);
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder getBurntNftsOrBuilder(
+        int index) {
+      return burntNfts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < classDefinitions_.size(); i++) {
+        output.writeMessage(2, classDefinitions_.get(i));
+      }
+      for (int i = 0; i < frozenNfts_.size(); i++) {
+        output.writeMessage(3, frozenNfts_.get(i));
+      }
+      for (int i = 0; i < whitelistedNftAccounts_.size(); i++) {
+        output.writeMessage(4, whitelistedNftAccounts_.get(i));
+      }
+      for (int i = 0; i < burntNfts_.size(); i++) {
+        output.writeMessage(5, burntNfts_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < classDefinitions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, classDefinitions_.get(i));
+      }
+      for (int i = 0; i < frozenNfts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, frozenNfts_.get(i));
+      }
+      for (int i = 0; i < whitelistedNftAccounts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, whitelistedNftAccounts_.get(i));
+      }
+      for (int i = 0; i < burntNfts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, burntNfts_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.GenesisProto.GenesisState other = (com.coreum.asset.nft.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getClassDefinitionsList()
+          .equals(other.getClassDefinitionsList())) return false;
+      if (!getFrozenNftsList()
+          .equals(other.getFrozenNftsList())) return false;
+      if (!getWhitelistedNftAccountsList()
+          .equals(other.getWhitelistedNftAccountsList())) return false;
+      if (!getBurntNftsList()
+          .equals(other.getBurntNftsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getClassDefinitionsCount() > 0) {
+        hash = (37 * hash) + CLASS_DEFINITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getClassDefinitionsList().hashCode();
+      }
+      if (getFrozenNftsCount() > 0) {
+        hash = (37 * hash) + FROZEN_NFTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFrozenNftsList().hashCode();
+      }
+      if (getWhitelistedNftAccountsCount() > 0) {
+        hash = (37 * hash) + WHITELISTED_NFT_ACCOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getWhitelistedNftAccountsList().hashCode();
+      }
+      if (getBurntNftsCount() > 0) {
+        hash = (37 * hash) + BURNT_NFTS_FIELD_NUMBER;
+        hash = (53 * hash) + getBurntNftsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the nftasset module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.asset.nft.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.GenesisState)
+        com.coreum.asset.nft.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.GenesisProto.GenesisState.class, com.coreum.asset.nft.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (classDefinitionsBuilder_ == null) {
+          classDefinitions_ = java.util.Collections.emptyList();
+        } else {
+          classDefinitions_ = null;
+          classDefinitionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (frozenNftsBuilder_ == null) {
+          frozenNfts_ = java.util.Collections.emptyList();
+        } else {
+          frozenNfts_ = null;
+          frozenNftsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (whitelistedNftAccountsBuilder_ == null) {
+          whitelistedNftAccounts_ = java.util.Collections.emptyList();
+        } else {
+          whitelistedNftAccounts_ = null;
+          whitelistedNftAccountsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (burntNftsBuilder_ == null) {
+          burntNfts_ = java.util.Collections.emptyList();
+        } else {
+          burntNfts_ = null;
+          burntNftsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.GenesisState build() {
+        com.coreum.asset.nft.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.GenesisState buildPartial() {
+        com.coreum.asset.nft.v1.GenesisProto.GenesisState result = new com.coreum.asset.nft.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.coreum.asset.nft.v1.GenesisProto.GenesisState result) {
+        if (classDefinitionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            classDefinitions_ = java.util.Collections.unmodifiableList(classDefinitions_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.classDefinitions_ = classDefinitions_;
+        } else {
+          result.classDefinitions_ = classDefinitionsBuilder_.build();
+        }
+        if (frozenNftsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            frozenNfts_ = java.util.Collections.unmodifiableList(frozenNfts_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.frozenNfts_ = frozenNfts_;
+        } else {
+          result.frozenNfts_ = frozenNftsBuilder_.build();
+        }
+        if (whitelistedNftAccountsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            whitelistedNftAccounts_ = java.util.Collections.unmodifiableList(whitelistedNftAccounts_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.whitelistedNftAccounts_ = whitelistedNftAccounts_;
+        } else {
+          result.whitelistedNftAccounts_ = whitelistedNftAccountsBuilder_.build();
+        }
+        if (burntNftsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            burntNfts_ = java.util.Collections.unmodifiableList(burntNfts_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.burntNfts_ = burntNfts_;
+        } else {
+          result.burntNfts_ = burntNftsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.coreum.asset.nft.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.GenesisProto.GenesisState other) {
+        if (other == com.coreum.asset.nft.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (classDefinitionsBuilder_ == null) {
+          if (!other.classDefinitions_.isEmpty()) {
+            if (classDefinitions_.isEmpty()) {
+              classDefinitions_ = other.classDefinitions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureClassDefinitionsIsMutable();
+              classDefinitions_.addAll(other.classDefinitions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.classDefinitions_.isEmpty()) {
+            if (classDefinitionsBuilder_.isEmpty()) {
+              classDefinitionsBuilder_.dispose();
+              classDefinitionsBuilder_ = null;
+              classDefinitions_ = other.classDefinitions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              classDefinitionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClassDefinitionsFieldBuilder() : null;
+            } else {
+              classDefinitionsBuilder_.addAllMessages(other.classDefinitions_);
+            }
+          }
+        }
+        if (frozenNftsBuilder_ == null) {
+          if (!other.frozenNfts_.isEmpty()) {
+            if (frozenNfts_.isEmpty()) {
+              frozenNfts_ = other.frozenNfts_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureFrozenNftsIsMutable();
+              frozenNfts_.addAll(other.frozenNfts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.frozenNfts_.isEmpty()) {
+            if (frozenNftsBuilder_.isEmpty()) {
+              frozenNftsBuilder_.dispose();
+              frozenNftsBuilder_ = null;
+              frozenNfts_ = other.frozenNfts_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              frozenNftsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFrozenNftsFieldBuilder() : null;
+            } else {
+              frozenNftsBuilder_.addAllMessages(other.frozenNfts_);
+            }
+          }
+        }
+        if (whitelistedNftAccountsBuilder_ == null) {
+          if (!other.whitelistedNftAccounts_.isEmpty()) {
+            if (whitelistedNftAccounts_.isEmpty()) {
+              whitelistedNftAccounts_ = other.whitelistedNftAccounts_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureWhitelistedNftAccountsIsMutable();
+              whitelistedNftAccounts_.addAll(other.whitelistedNftAccounts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.whitelistedNftAccounts_.isEmpty()) {
+            if (whitelistedNftAccountsBuilder_.isEmpty()) {
+              whitelistedNftAccountsBuilder_.dispose();
+              whitelistedNftAccountsBuilder_ = null;
+              whitelistedNftAccounts_ = other.whitelistedNftAccounts_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              whitelistedNftAccountsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWhitelistedNftAccountsFieldBuilder() : null;
+            } else {
+              whitelistedNftAccountsBuilder_.addAllMessages(other.whitelistedNftAccounts_);
+            }
+          }
+        }
+        if (burntNftsBuilder_ == null) {
+          if (!other.burntNfts_.isEmpty()) {
+            if (burntNfts_.isEmpty()) {
+              burntNfts_ = other.burntNfts_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureBurntNftsIsMutable();
+              burntNfts_.addAll(other.burntNfts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.burntNfts_.isEmpty()) {
+            if (burntNftsBuilder_.isEmpty()) {
+              burntNftsBuilder_.dispose();
+              burntNftsBuilder_ = null;
+              burntNfts_ = other.burntNfts_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              burntNftsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBurntNftsFieldBuilder() : null;
+            } else {
+              burntNftsBuilder_.addAllMessages(other.burntNfts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.coreum.asset.nft.v1.NftProto.ClassDefinition m =
+                    input.readMessage(
+                        com.coreum.asset.nft.v1.NftProto.ClassDefinition.parser(),
+                        extensionRegistry);
+                if (classDefinitionsBuilder_ == null) {
+                  ensureClassDefinitionsIsMutable();
+                  classDefinitions_.add(m);
+                } else {
+                  classDefinitionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.coreum.asset.nft.v1.GenesisProto.FrozenNFT m =
+                    input.readMessage(
+                        com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.parser(),
+                        extensionRegistry);
+                if (frozenNftsBuilder_ == null) {
+                  ensureFrozenNftsIsMutable();
+                  frozenNfts_.add(m);
+                } else {
+                  frozenNftsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts m =
+                    input.readMessage(
+                        com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.parser(),
+                        extensionRegistry);
+                if (whitelistedNftAccountsBuilder_ == null) {
+                  ensureWhitelistedNftAccountsIsMutable();
+                  whitelistedNftAccounts_.add(m);
+                } else {
+                  whitelistedNftAccountsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.coreum.asset.nft.v1.GenesisProto.BurntNFT m =
+                    input.readMessage(
+                        com.coreum.asset.nft.v1.GenesisProto.BurntNFT.parser(),
+                        extensionRegistry);
+                if (burntNftsBuilder_ == null) {
+                  ensureBurntNftsIsMutable();
+                  burntNfts_.add(m);
+                } else {
+                  burntNftsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.coreum.asset.nft.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.asset.nft.v1.ParamsProto.Params, com.coreum.asset.nft.v1.ParamsProto.Params.Builder, com.coreum.asset.nft.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.coreum.asset.nft.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.coreum.asset.nft.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.coreum.asset.nft.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.coreum.asset.nft.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.coreum.asset.nft.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.coreum.asset.nft.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.nft.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.nft.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.coreum.asset.nft.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.nft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.asset.nft.v1.ParamsProto.Params, com.coreum.asset.nft.v1.ParamsProto.Params.Builder, com.coreum.asset.nft.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.coreum.asset.nft.v1.ParamsProto.Params, com.coreum.asset.nft.v1.ParamsProto.Params.Builder, com.coreum.asset.nft.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.coreum.asset.nft.v1.NftProto.ClassDefinition> classDefinitions_ =
+        java.util.Collections.emptyList();
+      private void ensureClassDefinitionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          classDefinitions_ = new java.util.ArrayList<com.coreum.asset.nft.v1.NftProto.ClassDefinition>(classDefinitions_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.nft.v1.NftProto.ClassDefinition, com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder, com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder> classDefinitionsBuilder_;
+
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.coreum.asset.nft.v1.NftProto.ClassDefinition> getClassDefinitionsList() {
+        if (classDefinitionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(classDefinitions_);
+        } else {
+          return classDefinitionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClassDefinitionsCount() {
+        if (classDefinitionsBuilder_ == null) {
+          return classDefinitions_.size();
+        } else {
+          return classDefinitionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.nft.v1.NftProto.ClassDefinition getClassDefinitions(int index) {
+        if (classDefinitionsBuilder_ == null) {
+          return classDefinitions_.get(index);
+        } else {
+          return classDefinitionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClassDefinitions(
+          int index, com.coreum.asset.nft.v1.NftProto.ClassDefinition value) {
+        if (classDefinitionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassDefinitionsIsMutable();
+          classDefinitions_.set(index, value);
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClassDefinitions(
+          int index, com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder builderForValue) {
+        if (classDefinitionsBuilder_ == null) {
+          ensureClassDefinitionsIsMutable();
+          classDefinitions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClassDefinitions(com.coreum.asset.nft.v1.NftProto.ClassDefinition value) {
+        if (classDefinitionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassDefinitionsIsMutable();
+          classDefinitions_.add(value);
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClassDefinitions(
+          int index, com.coreum.asset.nft.v1.NftProto.ClassDefinition value) {
+        if (classDefinitionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassDefinitionsIsMutable();
+          classDefinitions_.add(index, value);
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClassDefinitions(
+          com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder builderForValue) {
+        if (classDefinitionsBuilder_ == null) {
+          ensureClassDefinitionsIsMutable();
+          classDefinitions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClassDefinitions(
+          int index, com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder builderForValue) {
+        if (classDefinitionsBuilder_ == null) {
+          ensureClassDefinitionsIsMutable();
+          classDefinitions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClassDefinitions(
+          java.lang.Iterable<? extends com.coreum.asset.nft.v1.NftProto.ClassDefinition> values) {
+        if (classDefinitionsBuilder_ == null) {
+          ensureClassDefinitionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, classDefinitions_);
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClassDefinitions() {
+        if (classDefinitionsBuilder_ == null) {
+          classDefinitions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClassDefinitions(int index) {
+        if (classDefinitionsBuilder_ == null) {
+          ensureClassDefinitionsIsMutable();
+          classDefinitions_.remove(index);
+          onChanged();
+        } else {
+          classDefinitionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder getClassDefinitionsBuilder(
+          int index) {
+        return getClassDefinitionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder getClassDefinitionsOrBuilder(
+          int index) {
+        if (classDefinitionsBuilder_ == null) {
+          return classDefinitions_.get(index);  } else {
+          return classDefinitionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder> 
+           getClassDefinitionsOrBuilderList() {
+        if (classDefinitionsBuilder_ != null) {
+          return classDefinitionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(classDefinitions_);
+        }
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder addClassDefinitionsBuilder() {
+        return getClassDefinitionsFieldBuilder().addBuilder(
+            com.coreum.asset.nft.v1.NftProto.ClassDefinition.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder addClassDefinitionsBuilder(
+          int index) {
+        return getClassDefinitionsFieldBuilder().addBuilder(
+            index, com.coreum.asset.nft.v1.NftProto.ClassDefinition.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * class_definitions keep the non-fungible token class definitions state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.nft.v1.ClassDefinition class_definitions = 2 [json_name = "classDefinitions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder> 
+           getClassDefinitionsBuilderList() {
+        return getClassDefinitionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.nft.v1.NftProto.ClassDefinition, com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder, com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder> 
+          getClassDefinitionsFieldBuilder() {
+        if (classDefinitionsBuilder_ == null) {
+          classDefinitionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.coreum.asset.nft.v1.NftProto.ClassDefinition, com.coreum.asset.nft.v1.NftProto.ClassDefinition.Builder, com.coreum.asset.nft.v1.NftProto.ClassDefinitionOrBuilder>(
+                  classDefinitions_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          classDefinitions_ = null;
+        }
+        return classDefinitionsBuilder_;
+      }
+
+      private java.util.List<com.coreum.asset.nft.v1.GenesisProto.FrozenNFT> frozenNfts_ =
+        java.util.Collections.emptyList();
+      private void ensureFrozenNftsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          frozenNfts_ = new java.util.ArrayList<com.coreum.asset.nft.v1.GenesisProto.FrozenNFT>(frozenNfts_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.nft.v1.GenesisProto.FrozenNFT, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder, com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder> frozenNftsBuilder_;
+
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public java.util.List<com.coreum.asset.nft.v1.GenesisProto.FrozenNFT> getFrozenNftsList() {
+        if (frozenNftsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(frozenNfts_);
+        } else {
+          return frozenNftsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public int getFrozenNftsCount() {
+        if (frozenNftsBuilder_ == null) {
+          return frozenNfts_.size();
+        } else {
+          return frozenNftsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT getFrozenNfts(int index) {
+        if (frozenNftsBuilder_ == null) {
+          return frozenNfts_.get(index);
+        } else {
+          return frozenNftsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder setFrozenNfts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT value) {
+        if (frozenNftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFrozenNftsIsMutable();
+          frozenNfts_.set(index, value);
+          onChanged();
+        } else {
+          frozenNftsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder setFrozenNfts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder builderForValue) {
+        if (frozenNftsBuilder_ == null) {
+          ensureFrozenNftsIsMutable();
+          frozenNfts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          frozenNftsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder addFrozenNfts(com.coreum.asset.nft.v1.GenesisProto.FrozenNFT value) {
+        if (frozenNftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFrozenNftsIsMutable();
+          frozenNfts_.add(value);
+          onChanged();
+        } else {
+          frozenNftsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder addFrozenNfts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT value) {
+        if (frozenNftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFrozenNftsIsMutable();
+          frozenNfts_.add(index, value);
+          onChanged();
+        } else {
+          frozenNftsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder addFrozenNfts(
+          com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder builderForValue) {
+        if (frozenNftsBuilder_ == null) {
+          ensureFrozenNftsIsMutable();
+          frozenNfts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          frozenNftsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder addFrozenNfts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder builderForValue) {
+        if (frozenNftsBuilder_ == null) {
+          ensureFrozenNftsIsMutable();
+          frozenNfts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          frozenNftsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder addAllFrozenNfts(
+          java.lang.Iterable<? extends com.coreum.asset.nft.v1.GenesisProto.FrozenNFT> values) {
+        if (frozenNftsBuilder_ == null) {
+          ensureFrozenNftsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, frozenNfts_);
+          onChanged();
+        } else {
+          frozenNftsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder clearFrozenNfts() {
+        if (frozenNftsBuilder_ == null) {
+          frozenNfts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          frozenNftsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public Builder removeFrozenNfts(int index) {
+        if (frozenNftsBuilder_ == null) {
+          ensureFrozenNftsIsMutable();
+          frozenNfts_.remove(index);
+          onChanged();
+        } else {
+          frozenNftsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder getFrozenNftsBuilder(
+          int index) {
+        return getFrozenNftsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder getFrozenNftsOrBuilder(
+          int index) {
+        if (frozenNftsBuilder_ == null) {
+          return frozenNfts_.get(index);  } else {
+          return frozenNftsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder> 
+           getFrozenNftsOrBuilderList() {
+        if (frozenNftsBuilder_ != null) {
+          return frozenNftsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(frozenNfts_);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder addFrozenNftsBuilder() {
+        return getFrozenNftsFieldBuilder().addBuilder(
+            com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder addFrozenNftsBuilder(
+          int index) {
+        return getFrozenNftsFieldBuilder().addBuilder(
+            index, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.FrozenNFT frozen_nfts = 3 [json_name = "frozenNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "FrozenNFTs"];</code>
+       */
+      public java.util.List<com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder> 
+           getFrozenNftsBuilderList() {
+        return getFrozenNftsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.nft.v1.GenesisProto.FrozenNFT, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder, com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder> 
+          getFrozenNftsFieldBuilder() {
+        if (frozenNftsBuilder_ == null) {
+          frozenNftsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.coreum.asset.nft.v1.GenesisProto.FrozenNFT, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder, com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder>(
+                  frozenNfts_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          frozenNfts_ = null;
+        }
+        return frozenNftsBuilder_;
+      }
+
+      private java.util.List<com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts> whitelistedNftAccounts_ =
+        java.util.Collections.emptyList();
+      private void ensureWhitelistedNftAccountsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          whitelistedNftAccounts_ = new java.util.ArrayList<com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts>(whitelistedNftAccounts_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder> whitelistedNftAccountsBuilder_;
+
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public java.util.List<com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts> getWhitelistedNftAccountsList() {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(whitelistedNftAccounts_);
+        } else {
+          return whitelistedNftAccountsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public int getWhitelistedNftAccountsCount() {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          return whitelistedNftAccounts_.size();
+        } else {
+          return whitelistedNftAccountsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts getWhitelistedNftAccounts(int index) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          return whitelistedNftAccounts_.get(index);
+        } else {
+          return whitelistedNftAccountsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder setWhitelistedNftAccounts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts value) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedNftAccountsIsMutable();
+          whitelistedNftAccounts_.set(index, value);
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder setWhitelistedNftAccounts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder builderForValue) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          ensureWhitelistedNftAccountsIsMutable();
+          whitelistedNftAccounts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder addWhitelistedNftAccounts(com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts value) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedNftAccountsIsMutable();
+          whitelistedNftAccounts_.add(value);
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder addWhitelistedNftAccounts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts value) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedNftAccountsIsMutable();
+          whitelistedNftAccounts_.add(index, value);
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder addWhitelistedNftAccounts(
+          com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder builderForValue) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          ensureWhitelistedNftAccountsIsMutable();
+          whitelistedNftAccounts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder addWhitelistedNftAccounts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder builderForValue) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          ensureWhitelistedNftAccountsIsMutable();
+          whitelistedNftAccounts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder addAllWhitelistedNftAccounts(
+          java.lang.Iterable<? extends com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts> values) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          ensureWhitelistedNftAccountsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, whitelistedNftAccounts_);
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder clearWhitelistedNftAccounts() {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          whitelistedNftAccounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public Builder removeWhitelistedNftAccounts(int index) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          ensureWhitelistedNftAccountsIsMutable();
+          whitelistedNftAccounts_.remove(index);
+          onChanged();
+        } else {
+          whitelistedNftAccountsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder getWhitelistedNftAccountsBuilder(
+          int index) {
+        return getWhitelistedNftAccountsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder getWhitelistedNftAccountsOrBuilder(
+          int index) {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          return whitelistedNftAccounts_.get(index);  } else {
+          return whitelistedNftAccountsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder> 
+           getWhitelistedNftAccountsOrBuilderList() {
+        if (whitelistedNftAccountsBuilder_ != null) {
+          return whitelistedNftAccountsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(whitelistedNftAccounts_);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder addWhitelistedNftAccountsBuilder() {
+        return getWhitelistedNftAccountsFieldBuilder().addBuilder(
+            com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder addWhitelistedNftAccountsBuilder(
+          int index) {
+        return getWhitelistedNftAccountsFieldBuilder().addBuilder(
+            index, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.WhitelistedNFTAccounts whitelisted_nft_accounts = 4 [json_name = "whitelistedNftAccounts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "WhitelistedNFTAccounts"];</code>
+       */
+      public java.util.List<com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder> 
+           getWhitelistedNftAccountsBuilderList() {
+        return getWhitelistedNftAccountsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder> 
+          getWhitelistedNftAccountsFieldBuilder() {
+        if (whitelistedNftAccountsBuilder_ == null) {
+          whitelistedNftAccountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder>(
+                  whitelistedNftAccounts_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          whitelistedNftAccounts_ = null;
+        }
+        return whitelistedNftAccountsBuilder_;
+      }
+
+      private java.util.List<com.coreum.asset.nft.v1.GenesisProto.BurntNFT> burntNfts_ =
+        java.util.Collections.emptyList();
+      private void ensureBurntNftsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          burntNfts_ = new java.util.ArrayList<com.coreum.asset.nft.v1.GenesisProto.BurntNFT>(burntNfts_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.nft.v1.GenesisProto.BurntNFT, com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder, com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder> burntNftsBuilder_;
+
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public java.util.List<com.coreum.asset.nft.v1.GenesisProto.BurntNFT> getBurntNftsList() {
+        if (burntNftsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(burntNfts_);
+        } else {
+          return burntNftsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public int getBurntNftsCount() {
+        if (burntNftsBuilder_ == null) {
+          return burntNfts_.size();
+        } else {
+          return burntNftsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.BurntNFT getBurntNfts(int index) {
+        if (burntNftsBuilder_ == null) {
+          return burntNfts_.get(index);
+        } else {
+          return burntNftsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder setBurntNfts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.BurntNFT value) {
+        if (burntNftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBurntNftsIsMutable();
+          burntNfts_.set(index, value);
+          onChanged();
+        } else {
+          burntNftsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder setBurntNfts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder builderForValue) {
+        if (burntNftsBuilder_ == null) {
+          ensureBurntNftsIsMutable();
+          burntNfts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          burntNftsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder addBurntNfts(com.coreum.asset.nft.v1.GenesisProto.BurntNFT value) {
+        if (burntNftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBurntNftsIsMutable();
+          burntNfts_.add(value);
+          onChanged();
+        } else {
+          burntNftsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder addBurntNfts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.BurntNFT value) {
+        if (burntNftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBurntNftsIsMutable();
+          burntNfts_.add(index, value);
+          onChanged();
+        } else {
+          burntNftsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder addBurntNfts(
+          com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder builderForValue) {
+        if (burntNftsBuilder_ == null) {
+          ensureBurntNftsIsMutable();
+          burntNfts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          burntNftsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder addBurntNfts(
+          int index, com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder builderForValue) {
+        if (burntNftsBuilder_ == null) {
+          ensureBurntNftsIsMutable();
+          burntNfts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          burntNftsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder addAllBurntNfts(
+          java.lang.Iterable<? extends com.coreum.asset.nft.v1.GenesisProto.BurntNFT> values) {
+        if (burntNftsBuilder_ == null) {
+          ensureBurntNftsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, burntNfts_);
+          onChanged();
+        } else {
+          burntNftsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder clearBurntNfts() {
+        if (burntNftsBuilder_ == null) {
+          burntNfts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          burntNftsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public Builder removeBurntNfts(int index) {
+        if (burntNftsBuilder_ == null) {
+          ensureBurntNftsIsMutable();
+          burntNfts_.remove(index);
+          onChanged();
+        } else {
+          burntNftsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder getBurntNftsBuilder(
+          int index) {
+        return getBurntNftsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder getBurntNftsOrBuilder(
+          int index) {
+        if (burntNftsBuilder_ == null) {
+          return burntNfts_.get(index);  } else {
+          return burntNftsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public java.util.List<? extends com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder> 
+           getBurntNftsOrBuilderList() {
+        if (burntNftsBuilder_ != null) {
+          return burntNftsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(burntNfts_);
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder addBurntNftsBuilder() {
+        return getBurntNftsFieldBuilder().addBuilder(
+            com.coreum.asset.nft.v1.GenesisProto.BurntNFT.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder addBurntNftsBuilder(
+          int index) {
+        return getBurntNftsFieldBuilder().addBuilder(
+            index, com.coreum.asset.nft.v1.GenesisProto.BurntNFT.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.BurntNFT burnt_nfts = 5 [json_name = "burntNfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BurntNFTs"];</code>
+       */
+      public java.util.List<com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder> 
+           getBurntNftsBuilderList() {
+        return getBurntNftsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.nft.v1.GenesisProto.BurntNFT, com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder, com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder> 
+          getBurntNftsFieldBuilder() {
+        if (burntNftsBuilder_ == null) {
+          burntNftsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.coreum.asset.nft.v1.GenesisProto.BurntNFT, com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder, com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder>(
+                  burntNfts_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          burntNfts_ = null;
+        }
+        return burntNftsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.GenesisState)
+    private static final com.coreum.asset.nft.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FrozenNFTOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.FrozenNFT)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The classID.
+     */
+    java.lang.String getClassID();
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The bytes for classID.
+     */
+    com.google.protobuf.ByteString
+        getClassIDBytes();
+
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @return A list containing the nftIDs.
+     */
+    java.util.List<java.lang.String>
+        getNftIDsList();
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @return The count of nftIDs.
+     */
+    int getNftIDsCount();
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @param index The index of the element to return.
+     * @return The nftIDs at the given index.
+     */
+    java.lang.String getNftIDs(int index);
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the nftIDs at the given index.
+     */
+    com.google.protobuf.ByteString
+        getNftIDsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code coreum.asset.nft.v1.FrozenNFT}
+   */
+  public static final class FrozenNFT extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.FrozenNFT)
+      FrozenNFTOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FrozenNFT.newBuilder() to construct.
+    private FrozenNFT(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FrozenNFT() {
+      classID_ = "";
+      nftIDs_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FrozenNFT();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_FrozenNFT_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_FrozenNFT_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.class, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder.class);
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classID_ = "";
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The classID.
+     */
+    @java.lang.Override
+    public java.lang.String getClassID() {
+      java.lang.Object ref = classID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The bytes for classID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIDBytes() {
+      java.lang.Object ref = classID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFTIDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList nftIDs_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @return A list containing the nftIDs.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNftIDsList() {
+      return nftIDs_;
+    }
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @return The count of nftIDs.
+     */
+    public int getNftIDsCount() {
+      return nftIDs_.size();
+    }
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @param index The index of the element to return.
+     * @return The nftIDs at the given index.
+     */
+    public java.lang.String getNftIDs(int index) {
+      return nftIDs_.get(index);
+    }
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the nftIDs at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getNftIDsBytes(int index) {
+      return nftIDs_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classID_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classID_);
+      }
+      for (int i = 0; i < nftIDs_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftIDs_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classID_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classID_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < nftIDs_.size(); i++) {
+          dataSize += computeStringSizeNoTag(nftIDs_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNftIDsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.GenesisProto.FrozenNFT)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.GenesisProto.FrozenNFT other = (com.coreum.asset.nft.v1.GenesisProto.FrozenNFT) obj;
+
+      if (!getClassID()
+          .equals(other.getClassID())) return false;
+      if (!getNftIDsList()
+          .equals(other.getNftIDsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassID().hashCode();
+      if (getNftIDsCount() > 0) {
+        hash = (37 * hash) + NFTIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getNftIDsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.GenesisProto.FrozenNFT prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.nft.v1.FrozenNFT}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.FrozenNFT)
+        com.coreum.asset.nft.v1.GenesisProto.FrozenNFTOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_FrozenNFT_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_FrozenNFT_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.class, com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classID_ = "";
+        nftIDs_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_FrozenNFT_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT build() {
+        com.coreum.asset.nft.v1.GenesisProto.FrozenNFT result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT buildPartial() {
+        com.coreum.asset.nft.v1.GenesisProto.FrozenNFT result = new com.coreum.asset.nft.v1.GenesisProto.FrozenNFT(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.GenesisProto.FrozenNFT result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classID_ = classID_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          nftIDs_.makeImmutable();
+          result.nftIDs_ = nftIDs_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.GenesisProto.FrozenNFT) {
+          return mergeFrom((com.coreum.asset.nft.v1.GenesisProto.FrozenNFT)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.GenesisProto.FrozenNFT other) {
+        if (other == com.coreum.asset.nft.v1.GenesisProto.FrozenNFT.getDefaultInstance()) return this;
+        if (!other.getClassID().isEmpty()) {
+          classID_ = other.classID_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.nftIDs_.isEmpty()) {
+          if (nftIDs_.isEmpty()) {
+            nftIDs_ = other.nftIDs_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureNftIDsIsMutable();
+            nftIDs_.addAll(other.nftIDs_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureNftIDsIsMutable();
+                nftIDs_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classID_ = "";
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return The classID.
+       */
+      public java.lang.String getClassID() {
+        java.lang.Object ref = classID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return The bytes for classID.
+       */
+      public com.google.protobuf.ByteString
+          getClassIDBytes() {
+        java.lang.Object ref = classID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @param value The classID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassID() {
+        classID_ = getDefaultInstance().getClassID();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @param value The bytes for classID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList nftIDs_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureNftIDsIsMutable() {
+        if (!nftIDs_.isModifiable()) {
+          nftIDs_ = new com.google.protobuf.LazyStringArrayList(nftIDs_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @return A list containing the nftIDs.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNftIDsList() {
+        nftIDs_.makeImmutable();
+        return nftIDs_;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @return The count of nftIDs.
+       */
+      public int getNftIDsCount() {
+        return nftIDs_.size();
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param index The index of the element to return.
+       * @return The nftIDs at the given index.
+       */
+      public java.lang.String getNftIDs(int index) {
+        return nftIDs_.get(index);
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the nftIDs at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNftIDsBytes(int index) {
+        return nftIDs_.getByteString(index);
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param index The index to set the value at.
+       * @param value The nftIDs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIDs(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureNftIDsIsMutable();
+        nftIDs_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param value The nftIDs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNftIDs(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureNftIDsIsMutable();
+        nftIDs_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param values The nftIDs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllNftIDs(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNftIDsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, nftIDs_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftIDs() {
+        nftIDs_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param value The bytes of the nftIDs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNftIDsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureNftIDsIsMutable();
+        nftIDs_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.FrozenNFT)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.FrozenNFT)
+    private static final com.coreum.asset.nft.v1.GenesisProto.FrozenNFT DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.GenesisProto.FrozenNFT();
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.FrozenNFT getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FrozenNFT>
+        PARSER = new com.google.protobuf.AbstractParser<FrozenNFT>() {
+      @java.lang.Override
+      public FrozenNFT parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FrozenNFT> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FrozenNFT> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.FrozenNFT getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WhitelistedNFTAccountsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.WhitelistedNFTAccounts)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The classID.
+     */
+    java.lang.String getClassID();
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The bytes for classID.
+     */
+    com.google.protobuf.ByteString
+        getClassIDBytes();
+
+    /**
+     * <code>string nftID = 2 [json_name = "nftID"];</code>
+     * @return The nftID.
+     */
+    java.lang.String getNftID();
+    /**
+     * <code>string nftID = 2 [json_name = "nftID"];</code>
+     * @return The bytes for nftID.
+     */
+    com.google.protobuf.ByteString
+        getNftIDBytes();
+
+    /**
+     * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+     * @return A list containing the accounts.
+     */
+    java.util.List<java.lang.String>
+        getAccountsList();
+    /**
+     * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+     * @return The count of accounts.
+     */
+    int getAccountsCount();
+    /**
+     * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+     * @param index The index of the element to return.
+     * @return The accounts at the given index.
+     */
+    java.lang.String getAccounts(int index);
+    /**
+     * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the accounts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAccountsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code coreum.asset.nft.v1.WhitelistedNFTAccounts}
+   */
+  public static final class WhitelistedNFTAccounts extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.WhitelistedNFTAccounts)
+      WhitelistedNFTAccountsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WhitelistedNFTAccounts.newBuilder() to construct.
+    private WhitelistedNFTAccounts(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WhitelistedNFTAccounts() {
+      classID_ = "";
+      nftID_ = "";
+      accounts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WhitelistedNFTAccounts();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_WhitelistedNFTAccounts_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_WhitelistedNFTAccounts_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.class, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder.class);
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classID_ = "";
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The classID.
+     */
+    @java.lang.Override
+    public java.lang.String getClassID() {
+      java.lang.Object ref = classID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The bytes for classID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIDBytes() {
+      java.lang.Object ref = classID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFTID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftID_ = "";
+    /**
+     * <code>string nftID = 2 [json_name = "nftID"];</code>
+     * @return The nftID.
+     */
+    @java.lang.Override
+    public java.lang.String getNftID() {
+      java.lang.Object ref = nftID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nftID = 2 [json_name = "nftID"];</code>
+     * @return The bytes for nftID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIDBytes() {
+      java.lang.Object ref = nftID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList accounts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+     * @return A list containing the accounts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAccountsList() {
+      return accounts_;
+    }
+    /**
+     * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+     * @return The count of accounts.
+     */
+    public int getAccountsCount() {
+      return accounts_.size();
+    }
+    /**
+     * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+     * @param index The index of the element to return.
+     * @return The accounts at the given index.
+     */
+    public java.lang.String getAccounts(int index) {
+      return accounts_.get(index);
+    }
+    /**
+     * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the accounts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAccountsBytes(int index) {
+      return accounts_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classID_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classID_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftID_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftID_);
+      }
+      for (int i = 0; i < accounts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, accounts_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classID_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classID_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftID_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nftID_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < accounts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(accounts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAccountsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts other = (com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts) obj;
+
+      if (!getClassID()
+          .equals(other.getClassID())) return false;
+      if (!getNftID()
+          .equals(other.getNftID())) return false;
+      if (!getAccountsList()
+          .equals(other.getAccountsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassID().hashCode();
+      hash = (37 * hash) + NFTID_FIELD_NUMBER;
+      hash = (53 * hash) + getNftID().hashCode();
+      if (getAccountsCount() > 0) {
+        hash = (37 * hash) + ACCOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.nft.v1.WhitelistedNFTAccounts}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.WhitelistedNFTAccounts)
+        com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccountsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_WhitelistedNFTAccounts_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_WhitelistedNFTAccounts_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.class, com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classID_ = "";
+        nftID_ = "";
+        accounts_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_WhitelistedNFTAccounts_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts build() {
+        com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts buildPartial() {
+        com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts result = new com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classID_ = classID_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nftID_ = nftID_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          accounts_.makeImmutable();
+          result.accounts_ = accounts_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts) {
+          return mergeFrom((com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts other) {
+        if (other == com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts.getDefaultInstance()) return this;
+        if (!other.getClassID().isEmpty()) {
+          classID_ = other.classID_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNftID().isEmpty()) {
+          nftID_ = other.nftID_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.accounts_.isEmpty()) {
+          if (accounts_.isEmpty()) {
+            accounts_ = other.accounts_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureAccountsIsMutable();
+            accounts_.addAll(other.accounts_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nftID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAccountsIsMutable();
+                accounts_.add(s);
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classID_ = "";
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return The classID.
+       */
+      public java.lang.String getClassID() {
+        java.lang.Object ref = classID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return The bytes for classID.
+       */
+      public com.google.protobuf.ByteString
+          getClassIDBytes() {
+        java.lang.Object ref = classID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @param value The classID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassID() {
+        classID_ = getDefaultInstance().getClassID();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @param value The bytes for classID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nftID_ = "";
+      /**
+       * <code>string nftID = 2 [json_name = "nftID"];</code>
+       * @return The nftID.
+       */
+      public java.lang.String getNftID() {
+        java.lang.Object ref = nftID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nftID = 2 [json_name = "nftID"];</code>
+       * @return The bytes for nftID.
+       */
+      public com.google.protobuf.ByteString
+          getNftIDBytes() {
+        java.lang.Object ref = nftID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nftID = 2 [json_name = "nftID"];</code>
+       * @param value The nftID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nftID = 2 [json_name = "nftID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftID() {
+        nftID_ = getDefaultInstance().getNftID();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nftID = 2 [json_name = "nftID"];</code>
+       * @param value The bytes for nftID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList accounts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAccountsIsMutable() {
+        if (!accounts_.isModifiable()) {
+          accounts_ = new com.google.protobuf.LazyStringArrayList(accounts_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @return A list containing the accounts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAccountsList() {
+        accounts_.makeImmutable();
+        return accounts_;
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @return The count of accounts.
+       */
+      public int getAccountsCount() {
+        return accounts_.size();
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @param index The index of the element to return.
+       * @return The accounts at the given index.
+       */
+      public java.lang.String getAccounts(int index) {
+        return accounts_.get(index);
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the accounts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAccountsBytes(int index) {
+        return accounts_.getByteString(index);
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @param index The index to set the value at.
+       * @param value The accounts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccounts(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAccountsIsMutable();
+        accounts_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @param value The accounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAccounts(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAccountsIsMutable();
+        accounts_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @param values The accounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAccounts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAccountsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, accounts_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccounts() {
+        accounts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string accounts = 4 [json_name = "accounts"];</code>
+       * @param value The bytes of the accounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAccountsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAccountsIsMutable();
+        accounts_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.WhitelistedNFTAccounts)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.WhitelistedNFTAccounts)
+    private static final com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts();
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WhitelistedNFTAccounts>
+        PARSER = new com.google.protobuf.AbstractParser<WhitelistedNFTAccounts>() {
+      @java.lang.Override
+      public WhitelistedNFTAccounts parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<WhitelistedNFTAccounts> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WhitelistedNFTAccounts> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.WhitelistedNFTAccounts getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BurntNFTOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.BurntNFT)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The classID.
+     */
+    java.lang.String getClassID();
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The bytes for classID.
+     */
+    com.google.protobuf.ByteString
+        getClassIDBytes();
+
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @return A list containing the nftIDs.
+     */
+    java.util.List<java.lang.String>
+        getNftIDsList();
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @return The count of nftIDs.
+     */
+    int getNftIDsCount();
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @param index The index of the element to return.
+     * @return The nftIDs at the given index.
+     */
+    java.lang.String getNftIDs(int index);
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the nftIDs at the given index.
+     */
+    com.google.protobuf.ByteString
+        getNftIDsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code coreum.asset.nft.v1.BurntNFT}
+   */
+  public static final class BurntNFT extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.BurntNFT)
+      BurntNFTOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BurntNFT.newBuilder() to construct.
+    private BurntNFT(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BurntNFT() {
+      classID_ = "";
+      nftIDs_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BurntNFT();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_BurntNFT_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_BurntNFT_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.GenesisProto.BurntNFT.class, com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder.class);
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classID_ = "";
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The classID.
+     */
+    @java.lang.Override
+    public java.lang.String getClassID() {
+      java.lang.Object ref = classID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string classID = 1 [json_name = "classID"];</code>
+     * @return The bytes for classID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIDBytes() {
+      java.lang.Object ref = classID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NFTIDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList nftIDs_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @return A list containing the nftIDs.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNftIDsList() {
+      return nftIDs_;
+    }
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @return The count of nftIDs.
+     */
+    public int getNftIDsCount() {
+      return nftIDs_.size();
+    }
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @param index The index of the element to return.
+     * @return The nftIDs at the given index.
+     */
+    public java.lang.String getNftIDs(int index) {
+      return nftIDs_.get(index);
+    }
+    /**
+     * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the nftIDs at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getNftIDsBytes(int index) {
+      return nftIDs_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classID_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classID_);
+      }
+      for (int i = 0; i < nftIDs_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nftIDs_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classID_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classID_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < nftIDs_.size(); i++) {
+          dataSize += computeStringSizeNoTag(nftIDs_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNftIDsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.GenesisProto.BurntNFT)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.GenesisProto.BurntNFT other = (com.coreum.asset.nft.v1.GenesisProto.BurntNFT) obj;
+
+      if (!getClassID()
+          .equals(other.getClassID())) return false;
+      if (!getNftIDsList()
+          .equals(other.getNftIDsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassID().hashCode();
+      if (getNftIDsCount() > 0) {
+        hash = (37 * hash) + NFTIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getNftIDsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.GenesisProto.BurntNFT prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.nft.v1.BurntNFT}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.BurntNFT)
+        com.coreum.asset.nft.v1.GenesisProto.BurntNFTOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_BurntNFT_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_BurntNFT_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.GenesisProto.BurntNFT.class, com.coreum.asset.nft.v1.GenesisProto.BurntNFT.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.GenesisProto.BurntNFT.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classID_ = "";
+        nftIDs_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.GenesisProto.internal_static_coreum_asset_nft_v1_BurntNFT_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.BurntNFT getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.GenesisProto.BurntNFT.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.BurntNFT build() {
+        com.coreum.asset.nft.v1.GenesisProto.BurntNFT result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.GenesisProto.BurntNFT buildPartial() {
+        com.coreum.asset.nft.v1.GenesisProto.BurntNFT result = new com.coreum.asset.nft.v1.GenesisProto.BurntNFT(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.GenesisProto.BurntNFT result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classID_ = classID_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          nftIDs_.makeImmutable();
+          result.nftIDs_ = nftIDs_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.GenesisProto.BurntNFT) {
+          return mergeFrom((com.coreum.asset.nft.v1.GenesisProto.BurntNFT)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.GenesisProto.BurntNFT other) {
+        if (other == com.coreum.asset.nft.v1.GenesisProto.BurntNFT.getDefaultInstance()) return this;
+        if (!other.getClassID().isEmpty()) {
+          classID_ = other.classID_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.nftIDs_.isEmpty()) {
+          if (nftIDs_.isEmpty()) {
+            nftIDs_ = other.nftIDs_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureNftIDsIsMutable();
+            nftIDs_.addAll(other.nftIDs_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureNftIDsIsMutable();
+                nftIDs_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classID_ = "";
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return The classID.
+       */
+      public java.lang.String getClassID() {
+        java.lang.Object ref = classID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return The bytes for classID.
+       */
+      public com.google.protobuf.ByteString
+          getClassIDBytes() {
+        java.lang.Object ref = classID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @param value The classID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassID() {
+        classID_ = getDefaultInstance().getClassID();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classID = 1 [json_name = "classID"];</code>
+       * @param value The bytes for classID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList nftIDs_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureNftIDsIsMutable() {
+        if (!nftIDs_.isModifiable()) {
+          nftIDs_ = new com.google.protobuf.LazyStringArrayList(nftIDs_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @return A list containing the nftIDs.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNftIDsList() {
+        nftIDs_.makeImmutable();
+        return nftIDs_;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @return The count of nftIDs.
+       */
+      public int getNftIDsCount() {
+        return nftIDs_.size();
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param index The index of the element to return.
+       * @return The nftIDs at the given index.
+       */
+      public java.lang.String getNftIDs(int index) {
+        return nftIDs_.get(index);
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the nftIDs at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNftIDsBytes(int index) {
+        return nftIDs_.getByteString(index);
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param index The index to set the value at.
+       * @param value The nftIDs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIDs(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureNftIDsIsMutable();
+        nftIDs_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param value The nftIDs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNftIDs(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureNftIDsIsMutable();
+        nftIDs_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param values The nftIDs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllNftIDs(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNftIDsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, nftIDs_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftIDs() {
+        nftIDs_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string nftIDs = 2 [json_name = "nftIDs"];</code>
+       * @param value The bytes of the nftIDs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNftIDsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureNftIDsIsMutable();
+        nftIDs_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.BurntNFT)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.BurntNFT)
+    private static final com.coreum.asset.nft.v1.GenesisProto.BurntNFT DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.GenesisProto.BurntNFT();
+    }
+
+    public static com.coreum.asset.nft.v1.GenesisProto.BurntNFT getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BurntNFT>
+        PARSER = new com.google.protobuf.AbstractParser<BurntNFT>() {
+      @java.lang.Override
+      public BurntNFT parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BurntNFT> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BurntNFT> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.GenesisProto.BurntNFT getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_FrozenNFT_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_FrozenNFT_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_WhitelistedNFTAccounts_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_WhitelistedNFTAccounts_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_BurntNFT_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_BurntNFT_fieldAccessorTable;
 
@@ -63,13 +4789,13 @@ public final class GenesisProto {
       "telistedNFTAccounts\022\030\n\007classID\030\001 \001(\tR\007cl" +
       "assID\022\024\n\005nftID\030\002 \001(\tR\005nftID\022\032\n\010accounts\030" +
       "\004 \003(\tR\010accounts\"<\n\010BurntNFT\022\030\n\007classID\030\001" +
-      " \001(\tR\007classID\022\026\n\006nftIDs\030\002 \003(\tR\006nftIDsB\314\001" +
-      "\n\027com.coreum.asset.nft.v1B\014GenesisProtoP" +
-      "\001Z4github.com/CoreumFoundation/coreum/x/" +
-      "asset/nft/types\242\002\003CAN\252\002\023Coreum.Asset.Nft" +
-      ".V1\312\002\023Coreum\\Asset\\Nft\\V1\342\002\037Coreum\\Asset" +
-      "\\Nft\\V1\\GPBMetadata\352\002\026Coreum::Asset::Nft" +
-      "::V1b\006proto3"
+      " \001(\tR\007classID\022\026\n\006nftIDs\030\002 \003(\tR\006nftIDsB\312\001" +
+      "\n\027com.coreum.asset.nft.v1B\014GenesisProtoZ" +
+      "4github.com/CoreumFoundation/coreum/x/as" +
+      "set/nft/types\242\002\003CAN\252\002\023Coreum.Asset.Nft.V" +
+      "1\312\002\023Coreum\\Asset\\Nft\\V1\342\002\037Coreum\\Asset\\N" +
+      "ft\\V1\\GPBMetadata\352\002\026Coreum::Asset::Nft::" +
+      "V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

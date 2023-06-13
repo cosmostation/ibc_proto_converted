@@ -14,64 +14,7704 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgSetValidatorSetPreferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * delegator is the user who is trying to create a validator-set.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    java.lang.String getDelegator();
+    /**
+     * <pre>
+     * delegator is the user who is trying to create a validator-set.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorBytes();
+
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> 
+        getPreferencesList();
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index);
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    int getPreferencesCount();
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+        getPreferencesOrBuilderList();
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgCreateValidatorSetPreference is a list that holds validator-set.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference}
+   */
+  public static final class MsgSetValidatorSetPreference extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference)
+      MsgSetValidatorSetPreferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetValidatorSetPreference.newBuilder() to construct.
+    private MsgSetValidatorSetPreference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetValidatorSetPreference() {
+      delegator_ = "";
+      preferences_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetValidatorSetPreference();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreference_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference.Builder.class);
+    }
+
+    public static final int DELEGATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegator_ = "";
+    /**
+     * <pre>
+     * delegator is the user who is trying to create a validator-set.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegator() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * delegator is the user who is trying to create a validator-set.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorBytes() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREFERENCES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> preferences_;
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> getPreferencesList() {
+      return preferences_;
+    }
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+        getPreferencesOrBuilderList() {
+      return preferences_;
+    }
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getPreferencesCount() {
+      return preferences_.size();
+    }
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index) {
+      return preferences_.get(index);
+    }
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+        int index) {
+      return preferences_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegator_);
+      }
+      for (int i = 0; i < preferences_.size(); i++) {
+        output.writeMessage(2, preferences_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegator_);
+      }
+      for (int i = 0; i < preferences_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, preferences_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference) obj;
+
+      if (!getDelegator()
+          .equals(other.getDelegator())) return false;
+      if (!getPreferencesList()
+          .equals(other.getPreferencesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegator().hashCode();
+      if (getPreferencesCount() > 0) {
+        hash = (37 * hash) + PREFERENCES_FIELD_NUMBER;
+        hash = (53 * hash) + getPreferencesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateValidatorSetPreference is a list that holds validator-set.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreference_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegator_ = "";
+        if (preferencesBuilder_ == null) {
+          preferences_ = java.util.Collections.emptyList();
+        } else {
+          preferences_ = null;
+          preferencesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreference_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference result) {
+        if (preferencesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            preferences_ = java.util.Collections.unmodifiableList(preferences_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.preferences_ = preferences_;
+        } else {
+          result.preferences_ = preferencesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegator_ = delegator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference.getDefaultInstance()) return this;
+        if (!other.getDelegator().isEmpty()) {
+          delegator_ = other.delegator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (preferencesBuilder_ == null) {
+          if (!other.preferences_.isEmpty()) {
+            if (preferences_.isEmpty()) {
+              preferences_ = other.preferences_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePreferencesIsMutable();
+              preferences_.addAll(other.preferences_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.preferences_.isEmpty()) {
+            if (preferencesBuilder_.isEmpty()) {
+              preferencesBuilder_.dispose();
+              preferencesBuilder_ = null;
+              preferences_ = other.preferences_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              preferencesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPreferencesFieldBuilder() : null;
+            } else {
+              preferencesBuilder_.addAllMessages(other.preferences_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference m =
+                    input.readMessage(
+                        com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.parser(),
+                        extensionRegistry);
+                if (preferencesBuilder_ == null) {
+                  ensurePreferencesIsMutable();
+                  preferences_.add(m);
+                } else {
+                  preferencesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegator_ = "";
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The delegator.
+       */
+      public java.lang.String getDelegator() {
+        java.lang.Object ref = delegator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The bytes for delegator.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorBytes() {
+        java.lang.Object ref = delegator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegator() {
+        delegator_ = getDefaultInstance().getDelegator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The bytes for delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> preferences_ =
+        java.util.Collections.emptyList();
+      private void ensurePreferencesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          preferences_ = new java.util.ArrayList<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference>(preferences_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> preferencesBuilder_;
+
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> getPreferencesList() {
+        if (preferencesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(preferences_);
+        } else {
+          return preferencesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public int getPreferencesCount() {
+        if (preferencesBuilder_ == null) {
+          return preferences_.size();
+        } else {
+          return preferencesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index) {
+        if (preferencesBuilder_ == null) {
+          return preferences_.get(index);
+        } else {
+          return preferencesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder setPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.set(index, value);
+          onChanged();
+        } else {
+          preferencesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder setPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addPreferences(com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.add(value);
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.add(index, value);
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addPreferences(
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.add(builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addAllPreferences(
+          java.lang.Iterable<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> values) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, preferences_);
+          onChanged();
+        } else {
+          preferencesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder clearPreferences() {
+        if (preferencesBuilder_ == null) {
+          preferences_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          preferencesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder removePreferences(int index) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.remove(index);
+          onChanged();
+        } else {
+          preferencesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder getPreferencesBuilder(
+          int index) {
+        return getPreferencesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+          int index) {
+        if (preferencesBuilder_ == null) {
+          return preferences_.get(index);  } else {
+          return preferencesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+           getPreferencesOrBuilderList() {
+        if (preferencesBuilder_ != null) {
+          return preferencesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(preferences_);
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder addPreferencesBuilder() {
+        return getPreferencesFieldBuilder().addBuilder(
+            com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder addPreferencesBuilder(
+          int index) {
+        return getPreferencesFieldBuilder().addBuilder(
+            index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder> 
+           getPreferencesBuilderList() {
+        return getPreferencesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+          getPreferencesFieldBuilder() {
+        if (preferencesBuilder_ == null) {
+          preferencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder>(
+                  preferences_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          preferences_ = null;
+        }
+        return preferencesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetValidatorSetPreference>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetValidatorSetPreference>() {
+      @java.lang.Override
+      public MsgSetValidatorSetPreference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetValidatorSetPreference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetValidatorSetPreference> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetValidatorSetPreferenceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse}
+   */
+  public static final class MsgSetValidatorSetPreferenceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse)
+      MsgSetValidatorSetPreferenceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetValidatorSetPreferenceResponse.newBuilder() to construct.
+    private MsgSetValidatorSetPreferenceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetValidatorSetPreferenceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetValidatorSetPreferenceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreferenceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreferenceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreferenceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreferenceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreferenceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetValidatorSetPreferenceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetValidatorSetPreferenceResponse>() {
+      @java.lang.Override
+      public MsgSetValidatorSetPreferenceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetValidatorSetPreferenceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetValidatorSetPreferenceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgSetValidatorSetPreferenceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDelegateToValidatorSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * delegator is the user who is trying to delegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    java.lang.String getDelegator();
+    /**
+     * <pre>
+     * delegator is the user who is trying to delegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorBytes();
+
+    /**
+     * <pre>
+     * the amount of tokens the user is trying to delegate.
+     * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+     * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+     * B, 2osmo to C.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <pre>
+     * the amount of tokens the user is trying to delegate.
+     * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+     * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+     * B, 2osmo to C.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <pre>
+     * the amount of tokens the user is trying to delegate.
+     * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+     * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+     * B, 2osmo to C.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgDelegateToValidatorSet allows users to delegate to an existing
+   * validator-set
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet}
+   */
+  public static final class MsgDelegateToValidatorSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet)
+      MsgDelegateToValidatorSetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDelegateToValidatorSet.newBuilder() to construct.
+    private MsgDelegateToValidatorSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDelegateToValidatorSet() {
+      delegator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDelegateToValidatorSet();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSet_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet.Builder.class);
+    }
+
+    public static final int DELEGATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegator_ = "";
+    /**
+     * <pre>
+     * delegator is the user who is trying to delegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegator() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * delegator is the user who is trying to delegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorBytes() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COIN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <pre>
+     * the amount of tokens the user is trying to delegate.
+     * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+     * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+     * B, 2osmo to C.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <pre>
+     * the amount of tokens the user is trying to delegate.
+     * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+     * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+     * B, 2osmo to C.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <pre>
+     * the amount of tokens the user is trying to delegate.
+     * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+     * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+     * B, 2osmo to C.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegator_);
+      }
+      if (coin_ != null) {
+        output.writeMessage(2, getCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegator_);
+      }
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet) obj;
+
+      if (!getDelegator()
+          .equals(other.getDelegator())) return false;
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegator().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDelegateToValidatorSet allows users to delegate to an existing
+     * validator-set
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegator_ = "";
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSet_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegator_ = delegator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet.getDefaultInstance()) return this;
+        if (!other.getDelegator().isEmpty()) {
+          delegator_ = other.delegator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegator_ = "";
+      /**
+       * <pre>
+       * delegator is the user who is trying to delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The delegator.
+       */
+      public java.lang.String getDelegator() {
+        java.lang.Object ref = delegator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The bytes for delegator.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorBytes() {
+        java.lang.Object ref = delegator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegator() {
+        delegator_ = getDefaultInstance().getDelegator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The bytes for delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <pre>
+       * the amount of tokens the user is trying to delegate.
+       * For ex: delegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3, ValC
+       * -&gt; 0.2} our staking logic would attempt to delegate 5osmo to A , 3osmo to
+       * B, 2osmo to C.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDelegateToValidatorSet>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDelegateToValidatorSet>() {
+      @java.lang.Override
+      public MsgDelegateToValidatorSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDelegateToValidatorSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDelegateToValidatorSet> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDelegateToValidatorSetResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse}
+   */
+  public static final class MsgDelegateToValidatorSetResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse)
+      MsgDelegateToValidatorSetResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDelegateToValidatorSetResponse.newBuilder() to construct.
+    private MsgDelegateToValidatorSetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDelegateToValidatorSetResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDelegateToValidatorSetResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSetResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSetResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSetResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDelegateToValidatorSetResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDelegateToValidatorSetResponse>() {
+      @java.lang.Override
+      public MsgDelegateToValidatorSetResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDelegateToValidatorSetResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDelegateToValidatorSetResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateToValidatorSetResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUndelegateFromValidatorSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * delegator is the user who is trying to undelegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    java.lang.String getDelegator();
+    /**
+     * <pre>
+     * delegator is the user who is trying to undelegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorBytes();
+
+    /**
+     * <pre>
+     * the amount the user wants to undelegate
+     * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+     * ValC
+     * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+     * 3osmo from B, 2osmo from C
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <pre>
+     * the amount the user wants to undelegate
+     * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+     * ValC
+     * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+     * 3osmo from B, 2osmo from C
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <pre>
+     * the amount the user wants to undelegate
+     * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+     * ValC
+     * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+     * 3osmo from B, 2osmo from C
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet}
+   */
+  public static final class MsgUndelegateFromValidatorSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet)
+      MsgUndelegateFromValidatorSetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUndelegateFromValidatorSet.newBuilder() to construct.
+    private MsgUndelegateFromValidatorSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUndelegateFromValidatorSet() {
+      delegator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUndelegateFromValidatorSet();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSet_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet.Builder.class);
+    }
+
+    public static final int DELEGATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegator_ = "";
+    /**
+     * <pre>
+     * delegator is the user who is trying to undelegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegator() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * delegator is the user who is trying to undelegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorBytes() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COIN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <pre>
+     * the amount the user wants to undelegate
+     * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+     * ValC
+     * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+     * 3osmo from B, 2osmo from C
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <pre>
+     * the amount the user wants to undelegate
+     * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+     * ValC
+     * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+     * 3osmo from B, 2osmo from C
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <pre>
+     * the amount the user wants to undelegate
+     * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+     * ValC
+     * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+     * 3osmo from B, 2osmo from C
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegator_);
+      }
+      if (coin_ != null) {
+        output.writeMessage(3, getCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegator_);
+      }
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet) obj;
+
+      if (!getDelegator()
+          .equals(other.getDelegator())) return false;
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegator().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegator_ = "";
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSet_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegator_ = delegator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet.getDefaultInstance()) return this;
+        if (!other.getDelegator().isEmpty()) {
+          delegator_ = other.delegator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 26: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegator_ = "";
+      /**
+       * <pre>
+       * delegator is the user who is trying to undelegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The delegator.
+       */
+      public java.lang.String getDelegator() {
+        java.lang.Object ref = delegator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to undelegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The bytes for delegator.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorBytes() {
+        java.lang.Object ref = delegator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to undelegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to undelegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegator() {
+        delegator_ = getDefaultInstance().getDelegator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to undelegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The bytes for delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <pre>
+       * the amount the user wants to undelegate
+       * For ex: Undelegate 10osmo with validator-set {ValA -&gt; 0.5, ValB -&gt; 0.3,
+       * ValC
+       * -&gt; 0.2} our undelegate logic would attempt to undelegate 5osmo from A ,
+       * 3osmo from B, 2osmo from C
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUndelegateFromValidatorSet>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUndelegateFromValidatorSet>() {
+      @java.lang.Override
+      public MsgUndelegateFromValidatorSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUndelegateFromValidatorSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUndelegateFromValidatorSet> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUndelegateFromValidatorSetResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse}
+   */
+  public static final class MsgUndelegateFromValidatorSetResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse)
+      MsgUndelegateFromValidatorSetResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUndelegateFromValidatorSetResponse.newBuilder() to construct.
+    private MsgUndelegateFromValidatorSetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUndelegateFromValidatorSetResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUndelegateFromValidatorSetResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSetResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSetResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSetResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUndelegateFromValidatorSetResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUndelegateFromValidatorSetResponse>() {
+      @java.lang.Override
+      public MsgUndelegateFromValidatorSetResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUndelegateFromValidatorSetResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUndelegateFromValidatorSetResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRedelegateValidatorSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * delegator is the user who is trying to create a validator-set.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    java.lang.String getDelegator();
+    /**
+     * <pre>
+     * delegator is the user who is trying to create a validator-set.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorBytes();
+
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> 
+        getPreferencesList();
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index);
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    int getPreferencesCount();
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+        getPreferencesOrBuilderList();
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet}
+   */
+  public static final class MsgRedelegateValidatorSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet)
+      MsgRedelegateValidatorSetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRedelegateValidatorSet.newBuilder() to construct.
+    private MsgRedelegateValidatorSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRedelegateValidatorSet() {
+      delegator_ = "";
+      preferences_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRedelegateValidatorSet();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSet_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet.Builder.class);
+    }
+
+    public static final int DELEGATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegator_ = "";
+    /**
+     * <pre>
+     * delegator is the user who is trying to create a validator-set.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegator() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * delegator is the user who is trying to create a validator-set.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorBytes() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREFERENCES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> preferences_;
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> getPreferencesList() {
+      return preferences_;
+    }
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+        getPreferencesOrBuilderList() {
+      return preferences_;
+    }
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getPreferencesCount() {
+      return preferences_.size();
+    }
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index) {
+      return preferences_.get(index);
+    }
+    /**
+     * <pre>
+     * list of {valAddr, weight} to delegate to
+     * </pre>
+     *
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+        int index) {
+      return preferences_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegator_);
+      }
+      for (int i = 0; i < preferences_.size(); i++) {
+        output.writeMessage(2, preferences_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegator_);
+      }
+      for (int i = 0; i < preferences_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, preferences_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet) obj;
+
+      if (!getDelegator()
+          .equals(other.getDelegator())) return false;
+      if (!getPreferencesList()
+          .equals(other.getPreferencesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegator().hashCode();
+      if (getPreferencesCount() > 0) {
+        hash = (37 * hash) + PREFERENCES_FIELD_NUMBER;
+        hash = (53 * hash) + getPreferencesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegator_ = "";
+        if (preferencesBuilder_ == null) {
+          preferences_ = java.util.Collections.emptyList();
+        } else {
+          preferences_ = null;
+          preferencesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSet_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet result) {
+        if (preferencesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            preferences_ = java.util.Collections.unmodifiableList(preferences_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.preferences_ = preferences_;
+        } else {
+          result.preferences_ = preferencesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegator_ = delegator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet.getDefaultInstance()) return this;
+        if (!other.getDelegator().isEmpty()) {
+          delegator_ = other.delegator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (preferencesBuilder_ == null) {
+          if (!other.preferences_.isEmpty()) {
+            if (preferences_.isEmpty()) {
+              preferences_ = other.preferences_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePreferencesIsMutable();
+              preferences_.addAll(other.preferences_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.preferences_.isEmpty()) {
+            if (preferencesBuilder_.isEmpty()) {
+              preferencesBuilder_.dispose();
+              preferencesBuilder_ = null;
+              preferences_ = other.preferences_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              preferencesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPreferencesFieldBuilder() : null;
+            } else {
+              preferencesBuilder_.addAllMessages(other.preferences_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference m =
+                    input.readMessage(
+                        com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.parser(),
+                        extensionRegistry);
+                if (preferencesBuilder_ == null) {
+                  ensurePreferencesIsMutable();
+                  preferences_.add(m);
+                } else {
+                  preferencesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegator_ = "";
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The delegator.
+       */
+      public java.lang.String getDelegator() {
+        java.lang.Object ref = delegator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The bytes for delegator.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorBytes() {
+        java.lang.Object ref = delegator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegator() {
+        delegator_ = getDefaultInstance().getDelegator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to create a validator-set.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The bytes for delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> preferences_ =
+        java.util.Collections.emptyList();
+      private void ensurePreferencesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          preferences_ = new java.util.ArrayList<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference>(preferences_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> preferencesBuilder_;
+
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> getPreferencesList() {
+        if (preferencesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(preferences_);
+        } else {
+          return preferencesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public int getPreferencesCount() {
+        if (preferencesBuilder_ == null) {
+          return preferences_.size();
+        } else {
+          return preferencesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index) {
+        if (preferencesBuilder_ == null) {
+          return preferences_.get(index);
+        } else {
+          return preferencesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder setPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.set(index, value);
+          onChanged();
+        } else {
+          preferencesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder setPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addPreferences(com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.add(value);
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.add(index, value);
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addPreferences(
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.add(builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder addAllPreferences(
+          java.lang.Iterable<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> values) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, preferences_);
+          onChanged();
+        } else {
+          preferencesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder clearPreferences() {
+        if (preferencesBuilder_ == null) {
+          preferences_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          preferencesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public Builder removePreferences(int index) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.remove(index);
+          onChanged();
+        } else {
+          preferencesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder getPreferencesBuilder(
+          int index) {
+        return getPreferencesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+          int index) {
+        if (preferencesBuilder_ == null) {
+          return preferences_.get(index);  } else {
+          return preferencesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+           getPreferencesOrBuilderList() {
+        if (preferencesBuilder_ != null) {
+          return preferencesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(preferences_);
+        }
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder addPreferencesBuilder() {
+        return getPreferencesFieldBuilder().addBuilder(
+            com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder addPreferencesBuilder(
+          int index) {
+        return getPreferencesFieldBuilder().addBuilder(
+            index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * list of {valAddr, weight} to delegate to
+       * </pre>
+       *
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 2 [json_name = "preferences", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"preferences&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder> 
+           getPreferencesBuilderList() {
+        return getPreferencesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+          getPreferencesFieldBuilder() {
+        if (preferencesBuilder_ == null) {
+          preferencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder>(
+                  preferences_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          preferences_ = null;
+        }
+        return preferencesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRedelegateValidatorSet>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRedelegateValidatorSet>() {
+      @java.lang.Override
+      public MsgRedelegateValidatorSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRedelegateValidatorSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRedelegateValidatorSet> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRedelegateValidatorSetResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse}
+   */
+  public static final class MsgRedelegateValidatorSetResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse)
+      MsgRedelegateValidatorSetResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRedelegateValidatorSetResponse.newBuilder() to construct.
+    private MsgRedelegateValidatorSetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRedelegateValidatorSetResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRedelegateValidatorSetResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSetResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSetResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSetResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRedelegateValidatorSetResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRedelegateValidatorSetResponse>() {
+      @java.lang.Override
+      public MsgRedelegateValidatorSetResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRedelegateValidatorSetResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRedelegateValidatorSetResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSetResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWithdrawDelegationRewardsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * delegator is the user who is trying to claim staking rewards.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    java.lang.String getDelegator();
+    /**
+     * <pre>
+     * delegator is the user who is trying to claim staking rewards.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
+   * validator set.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards}
+   */
+  public static final class MsgWithdrawDelegationRewards extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards)
+      MsgWithdrawDelegationRewardsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWithdrawDelegationRewards.newBuilder() to construct.
+    private MsgWithdrawDelegationRewards(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWithdrawDelegationRewards() {
+      delegator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWithdrawDelegationRewards();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewards_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewards_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards.Builder.class);
+    }
+
+    public static final int DELEGATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegator_ = "";
+    /**
+     * <pre>
+     * delegator is the user who is trying to claim staking rewards.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegator() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * delegator is the user who is trying to claim staking rewards.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorBytes() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards) obj;
+
+      if (!getDelegator()
+          .equals(other.getDelegator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
+     * validator set.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewards_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewards_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewards_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegator_ = delegator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards.getDefaultInstance()) return this;
+        if (!other.getDelegator().isEmpty()) {
+          delegator_ = other.delegator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegator_ = "";
+      /**
+       * <pre>
+       * delegator is the user who is trying to claim staking rewards.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The delegator.
+       */
+      public java.lang.String getDelegator() {
+        java.lang.Object ref = delegator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to claim staking rewards.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The bytes for delegator.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorBytes() {
+        java.lang.Object ref = delegator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to claim staking rewards.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to claim staking rewards.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegator() {
+        delegator_ = getDefaultInstance().getDelegator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to claim staking rewards.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The bytes for delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWithdrawDelegationRewards>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWithdrawDelegationRewards>() {
+      @java.lang.Override
+      public MsgWithdrawDelegationRewards parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWithdrawDelegationRewards> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWithdrawDelegationRewards> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewards getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWithdrawDelegationRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse}
+   */
+  public static final class MsgWithdrawDelegationRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse)
+      MsgWithdrawDelegationRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWithdrawDelegationRewardsResponse.newBuilder() to construct.
+    private MsgWithdrawDelegationRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWithdrawDelegationRewardsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWithdrawDelegationRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWithdrawDelegationRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWithdrawDelegationRewardsResponse>() {
+      @java.lang.Override
+      public MsgWithdrawDelegationRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWithdrawDelegationRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWithdrawDelegationRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgWithdrawDelegationRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDelegateBondedTokensOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * delegator is the user who is trying to force unbond osmo and delegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    java.lang.String getDelegator();
+    /**
+     * <pre>
+     * delegator is the user who is trying to force unbond osmo and delegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorBytes();
+
+    /**
+     * <pre>
+     * lockup id of osmo in the pool
+     * </pre>
+     *
+     * <code>uint64 lockID = 2 [json_name = "lockID"];</code>
+     * @return The lockID.
+     */
+    long getLockID();
+  }
+  /**
+   * <pre>
+   * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
+   * length &lt;= 2 weeks and takes all that osmo and delegates according to
+   * delegator's current validator set preference.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens}
+   */
+  public static final class MsgDelegateBondedTokens extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens)
+      MsgDelegateBondedTokensOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDelegateBondedTokens.newBuilder() to construct.
+    private MsgDelegateBondedTokens(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDelegateBondedTokens() {
+      delegator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDelegateBondedTokens();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokens_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokens_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens.Builder.class);
+    }
+
+    public static final int DELEGATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegator_ = "";
+    /**
+     * <pre>
+     * delegator is the user who is trying to force unbond osmo and delegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The delegator.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegator() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * delegator is the user who is trying to force unbond osmo and delegate.
+     * </pre>
+     *
+     * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+     * @return The bytes for delegator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorBytes() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCKID_FIELD_NUMBER = 2;
+    private long lockID_ = 0L;
+    /**
+     * <pre>
+     * lockup id of osmo in the pool
+     * </pre>
+     *
+     * <code>uint64 lockID = 2 [json_name = "lockID"];</code>
+     * @return The lockID.
+     */
+    @java.lang.Override
+    public long getLockID() {
+      return lockID_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegator_);
+      }
+      if (lockID_ != 0L) {
+        output.writeUInt64(2, lockID_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegator_);
+      }
+      if (lockID_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, lockID_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens) obj;
+
+      if (!getDelegator()
+          .equals(other.getDelegator())) return false;
+      if (getLockID()
+          != other.getLockID()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegator().hashCode();
+      hash = (37 * hash) + LOCKID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLockID());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
+     * length &lt;= 2 weeks and takes all that osmo and delegates according to
+     * delegator's current validator set preference.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokens_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokens_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegator_ = "";
+        lockID_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokens_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegator_ = delegator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lockID_ = lockID_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens.getDefaultInstance()) return this;
+        if (!other.getDelegator().isEmpty()) {
+          delegator_ = other.delegator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getLockID() != 0L) {
+          setLockID(other.getLockID());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                lockID_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegator_ = "";
+      /**
+       * <pre>
+       * delegator is the user who is trying to force unbond osmo and delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The delegator.
+       */
+      public java.lang.String getDelegator() {
+        java.lang.Object ref = delegator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to force unbond osmo and delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return The bytes for delegator.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorBytes() {
+        java.lang.Object ref = delegator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to force unbond osmo and delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to force unbond osmo and delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegator() {
+        delegator_ = getDefaultInstance().getDelegator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator is the user who is trying to force unbond osmo and delegate.
+       * </pre>
+       *
+       * <code>string delegator = 1 [json_name = "delegator", (.gogoproto.moretags) = "yaml:&#92;"delegator&#92;""];</code>
+       * @param value The bytes for delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long lockID_ ;
+      /**
+       * <pre>
+       * lockup id of osmo in the pool
+       * </pre>
+       *
+       * <code>uint64 lockID = 2 [json_name = "lockID"];</code>
+       * @return The lockID.
+       */
+      @java.lang.Override
+      public long getLockID() {
+        return lockID_;
+      }
+      /**
+       * <pre>
+       * lockup id of osmo in the pool
+       * </pre>
+       *
+       * <code>uint64 lockID = 2 [json_name = "lockID"];</code>
+       * @param value The lockID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockID(long value) {
+
+        lockID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup id of osmo in the pool
+       * </pre>
+       *
+       * <code>uint64 lockID = 2 [json_name = "lockID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockID() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lockID_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDelegateBondedTokens>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDelegateBondedTokens>() {
+      @java.lang.Override
+      public MsgDelegateBondedTokens parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDelegateBondedTokens> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDelegateBondedTokens> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokens getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDelegateBondedTokensResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse}
+   */
+  public static final class MsgDelegateBondedTokensResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse)
+      MsgDelegateBondedTokensResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDelegateBondedTokensResponse.newBuilder() to construct.
+    private MsgDelegateBondedTokensResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDelegateBondedTokensResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDelegateBondedTokensResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokensResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokensResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse other = (com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse)
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokensResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokensResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse.class, com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokensResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse build() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse buildPartial() {
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse result = new com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse other) {
+        if (other == com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse)
+    private static final com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDelegateBondedTokensResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDelegateBondedTokensResponse>() {
+      @java.lang.Override
+      public MsgDelegateBondedTokensResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDelegateBondedTokensResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDelegateBondedTokensResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgDelegateBondedTokensResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreference_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreference_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreferenceResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgSetValidatorSetPreferenceResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSet_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSetResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgDelegateToValidatorSetResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSet_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSetResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgUndelegateFromValidatorSetResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSet_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSetResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgRedelegateValidatorSetResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewards_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewards_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgWithdrawDelegationRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokens_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokens_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokensResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_MsgDelegateBondedTokensResponse_fieldAccessorTable;
 
@@ -145,13 +7785,13 @@ public final class TxProto {
       "e\022\210\001\n\024DelegateBondedTokens\0223.osmosis.val" +
       "setpref.v1beta1.MsgDelegateBondedTokens\032" +
       ";.osmosis.valsetpref.v1beta1.MsgDelegate" +
-      "BondedTokensResponseB\354\001\n\036com.osmosis.val" +
-      "setpref.v1beta1B\007TxProtoP\001Z7github.com/o" +
-      "smosis-labs/osmosis/v15/x/valset-pref/ty" +
-      "pes\242\002\003OVX\252\002\032Osmosis.Valsetpref.V1beta1\312\002" +
-      "\032Osmosis\\Valsetpref\\V1beta1\342\002&Osmosis\\Va" +
-      "lsetpref\\V1beta1\\GPBMetadata\352\002\034Osmosis::" +
-      "Valsetpref::V1beta1b\006proto3"
+      "BondedTokensResponseB\352\001\n\036com.osmosis.val" +
+      "setpref.v1beta1B\007TxProtoZ7github.com/osm" +
+      "osis-labs/osmosis/v15/x/valset-pref/type" +
+      "s\242\002\003OVX\252\002\032Osmosis.Valsetpref.V1beta1\312\002\032O" +
+      "smosis\\Valsetpref\\V1beta1\342\002&Osmosis\\Vals" +
+      "etpref\\V1beta1\\GPBMetadata\352\002\034Osmosis::Va" +
+      "lsetpref::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

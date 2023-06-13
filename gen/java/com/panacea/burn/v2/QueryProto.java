@@ -27,7 +27,7 @@ public final class QueryProto {
       "urn.v2\032\034google/api/annotations.proto\032*co" +
       "smos/base/query/v1beta1/pagination.proto" +
       "2\007\n\005QueryB\261\001\n\023com.panacea.burn.v2B\nQuery" +
-      "ProtoP\001Z0github.com/medibloc/panacea-cor" +
+      "ProtoP\000Z0github.com/medibloc/panacea-cor" +
       "e/v2/x/burn/types\242\002\003PBX\252\002\017Panacea.Burn.V" +
       "2\312\002\017Panacea\\Burn\\V2\342\002\033Panacea\\Burn\\V2\\GP" +
       "BMetadata\352\002\021Panacea::Burn::V2b\006proto3"

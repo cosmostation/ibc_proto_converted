@@ -14,9 +14,1260 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+     * @return Whether the authority field is set.
+     */
+    boolean hasAuthority();
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+     * @return The authority.
+     */
+    com.kyve.team.v1beta1.TeamProto.Authority getAuthority();
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.team.v1beta1.TeamProto.AuthorityOrBuilder getAuthorityOrBuilder();
+
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> 
+        getAccountListList();
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccountList(int index);
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    int getAccountListCount();
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+        getAccountListOrBuilderList();
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountListOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * account_count ...
+     * </pre>
+     *
+     * <code>uint64 account_count = 4 [json_name = "accountCount"];</code>
+     * @return The accountCount.
+     */
+    long getAccountCount();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the team module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      accountList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.GenesisProto.internal_static_kyve_team_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.GenesisProto.internal_static_kyve_team_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.GenesisProto.GenesisState.class, com.kyve.team.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 2;
+    private com.kyve.team.v1beta1.TeamProto.Authority authority_;
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+     * @return Whether the authority field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthority() {
+      return authority_ != null;
+    }
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TeamProto.Authority getAuthority() {
+      return authority_ == null ? com.kyve.team.v1beta1.TeamProto.Authority.getDefaultInstance() : authority_;
+    }
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TeamProto.AuthorityOrBuilder getAuthorityOrBuilder() {
+      return authority_ == null ? com.kyve.team.v1beta1.TeamProto.Authority.getDefaultInstance() : authority_;
+    }
+
+    public static final int ACCOUNT_LIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> accountList_;
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> getAccountListList() {
+      return accountList_;
+    }
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+        getAccountListOrBuilderList() {
+      return accountList_;
+    }
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAccountListCount() {
+      return accountList_.size();
+    }
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccountList(int index) {
+      return accountList_.get(index);
+    }
+    /**
+     * <pre>
+     * account_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountListOrBuilder(
+        int index) {
+      return accountList_.get(index);
+    }
+
+    public static final int ACCOUNT_COUNT_FIELD_NUMBER = 4;
+    private long accountCount_ = 0L;
+    /**
+     * <pre>
+     * account_count ...
+     * </pre>
+     *
+     * <code>uint64 account_count = 4 [json_name = "accountCount"];</code>
+     * @return The accountCount.
+     */
+    @java.lang.Override
+    public long getAccountCount() {
+      return accountCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (authority_ != null) {
+        output.writeMessage(2, getAuthority());
+      }
+      for (int i = 0; i < accountList_.size(); i++) {
+        output.writeMessage(3, accountList_.get(i));
+      }
+      if (accountCount_ != 0L) {
+        output.writeUInt64(4, accountCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (authority_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAuthority());
+      }
+      for (int i = 0; i < accountList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, accountList_.get(i));
+      }
+      if (accountCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, accountCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.GenesisProto.GenesisState other = (com.kyve.team.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasAuthority() != other.hasAuthority()) return false;
+      if (hasAuthority()) {
+        if (!getAuthority()
+            .equals(other.getAuthority())) return false;
+      }
+      if (!getAccountListList()
+          .equals(other.getAccountListList())) return false;
+      if (getAccountCount()
+          != other.getAccountCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAuthority()) {
+        hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthority().hashCode();
+      }
+      if (getAccountListCount() > 0) {
+        hash = (37 * hash) + ACCOUNT_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountListList().hashCode();
+      }
+      hash = (37 * hash) + ACCOUNT_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAccountCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the team module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.GenesisState)
+        com.kyve.team.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.GenesisProto.internal_static_kyve_team_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.GenesisProto.internal_static_kyve_team_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.GenesisProto.GenesisState.class, com.kyve.team.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = null;
+        if (authorityBuilder_ != null) {
+          authorityBuilder_.dispose();
+          authorityBuilder_ = null;
+        }
+        if (accountListBuilder_ == null) {
+          accountList_ = java.util.Collections.emptyList();
+        } else {
+          accountList_ = null;
+          accountListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        accountCount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.GenesisProto.internal_static_kyve_team_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.GenesisProto.GenesisState build() {
+        com.kyve.team.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.kyve.team.v1beta1.GenesisProto.GenesisState result = new com.kyve.team.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.kyve.team.v1beta1.GenesisProto.GenesisState result) {
+        if (accountListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            accountList_ = java.util.Collections.unmodifiableList(accountList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.accountList_ = accountList_;
+        } else {
+          result.accountList_ = accountListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authorityBuilder_ == null
+              ? authority_
+              : authorityBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.accountCount_ = accountCount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.kyve.team.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.kyve.team.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasAuthority()) {
+          mergeAuthority(other.getAuthority());
+        }
+        if (accountListBuilder_ == null) {
+          if (!other.accountList_.isEmpty()) {
+            if (accountList_.isEmpty()) {
+              accountList_ = other.accountList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAccountListIsMutable();
+              accountList_.addAll(other.accountList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accountList_.isEmpty()) {
+            if (accountListBuilder_.isEmpty()) {
+              accountListBuilder_.dispose();
+              accountListBuilder_ = null;
+              accountList_ = other.accountList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              accountListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccountListFieldBuilder() : null;
+            } else {
+              accountListBuilder_.addAllMessages(other.accountList_);
+            }
+          }
+        }
+        if (other.getAccountCount() != 0L) {
+          setAccountCount(other.getAccountCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                input.readMessage(
+                    getAuthorityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              case 26: {
+                com.kyve.team.v1beta1.TeamProto.TeamVestingAccount m =
+                    input.readMessage(
+                        com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.parser(),
+                        extensionRegistry);
+                if (accountListBuilder_ == null) {
+                  ensureAccountListIsMutable();
+                  accountList_.add(m);
+                } else {
+                  accountListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 32: {
+                accountCount_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.kyve.team.v1beta1.TeamProto.Authority authority_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.TeamProto.Authority, com.kyve.team.v1beta1.TeamProto.Authority.Builder, com.kyve.team.v1beta1.TeamProto.AuthorityOrBuilder> authorityBuilder_;
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       * @return Whether the authority field is set.
+       */
+      public boolean hasAuthority() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       * @return The authority.
+       */
+      public com.kyve.team.v1beta1.TeamProto.Authority getAuthority() {
+        if (authorityBuilder_ == null) {
+          return authority_ == null ? com.kyve.team.v1beta1.TeamProto.Authority.getDefaultInstance() : authority_;
+        } else {
+          return authorityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAuthority(com.kyve.team.v1beta1.TeamProto.Authority value) {
+        if (authorityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          authority_ = value;
+        } else {
+          authorityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAuthority(
+          com.kyve.team.v1beta1.TeamProto.Authority.Builder builderForValue) {
+        if (authorityBuilder_ == null) {
+          authority_ = builderForValue.build();
+        } else {
+          authorityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAuthority(com.kyve.team.v1beta1.TeamProto.Authority value) {
+        if (authorityBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            authority_ != null &&
+            authority_ != com.kyve.team.v1beta1.TeamProto.Authority.getDefaultInstance()) {
+            getAuthorityBuilder().mergeFrom(value);
+          } else {
+            authority_ = value;
+          }
+        } else {
+          authorityBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAuthority() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        authority_ = null;
+        if (authorityBuilder_ != null) {
+          authorityBuilder_.dispose();
+          authorityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.Authority.Builder getAuthorityBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAuthorityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.AuthorityOrBuilder getAuthorityOrBuilder() {
+        if (authorityBuilder_ != null) {
+          return authorityBuilder_.getMessageOrBuilder();
+        } else {
+          return authority_ == null ?
+              com.kyve.team.v1beta1.TeamProto.Authority.getDefaultInstance() : authority_;
+        }
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.Authority authority = 2 [json_name = "authority", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.TeamProto.Authority, com.kyve.team.v1beta1.TeamProto.Authority.Builder, com.kyve.team.v1beta1.TeamProto.AuthorityOrBuilder> 
+          getAuthorityFieldBuilder() {
+        if (authorityBuilder_ == null) {
+          authorityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.team.v1beta1.TeamProto.Authority, com.kyve.team.v1beta1.TeamProto.Authority.Builder, com.kyve.team.v1beta1.TeamProto.AuthorityOrBuilder>(
+                  getAuthority(),
+                  getParentForChildren(),
+                  isClean());
+          authority_ = null;
+        }
+        return authorityBuilder_;
+      }
+
+      private java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> accountList_ =
+        java.util.Collections.emptyList();
+      private void ensureAccountListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          accountList_ = new java.util.ArrayList<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount>(accountList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> accountListBuilder_;
+
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> getAccountListList() {
+        if (accountListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accountList_);
+        } else {
+          return accountListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAccountListCount() {
+        if (accountListBuilder_ == null) {
+          return accountList_.size();
+        } else {
+          return accountListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccountList(int index) {
+        if (accountListBuilder_ == null) {
+          return accountList_.get(index);
+        } else {
+          return accountListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAccountList(
+          int index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount value) {
+        if (accountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountListIsMutable();
+          accountList_.set(index, value);
+          onChanged();
+        } else {
+          accountListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAccountList(
+          int index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder builderForValue) {
+        if (accountListBuilder_ == null) {
+          ensureAccountListIsMutable();
+          accountList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccountList(com.kyve.team.v1beta1.TeamProto.TeamVestingAccount value) {
+        if (accountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountListIsMutable();
+          accountList_.add(value);
+          onChanged();
+        } else {
+          accountListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccountList(
+          int index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount value) {
+        if (accountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountListIsMutable();
+          accountList_.add(index, value);
+          onChanged();
+        } else {
+          accountListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccountList(
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder builderForValue) {
+        if (accountListBuilder_ == null) {
+          ensureAccountListIsMutable();
+          accountList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accountListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccountList(
+          int index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder builderForValue) {
+        if (accountListBuilder_ == null) {
+          ensureAccountListIsMutable();
+          accountList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAccountList(
+          java.lang.Iterable<? extends com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> values) {
+        if (accountListBuilder_ == null) {
+          ensureAccountListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accountList_);
+          onChanged();
+        } else {
+          accountListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAccountList() {
+        if (accountListBuilder_ == null) {
+          accountList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          accountListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAccountList(int index) {
+        if (accountListBuilder_ == null) {
+          ensureAccountListIsMutable();
+          accountList_.remove(index);
+          onChanged();
+        } else {
+          accountListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder getAccountListBuilder(
+          int index) {
+        return getAccountListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountListOrBuilder(
+          int index) {
+        if (accountListBuilder_ == null) {
+          return accountList_.get(index);  } else {
+          return accountListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+           getAccountListOrBuilderList() {
+        if (accountListBuilder_ != null) {
+          return accountListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accountList_);
+        }
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder addAccountListBuilder() {
+        return getAccountListFieldBuilder().addBuilder(
+            com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder addAccountListBuilder(
+          int index) {
+        return getAccountListFieldBuilder().addBuilder(
+            index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * account_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount account_list = 3 [json_name = "accountList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder> 
+           getAccountListBuilderList() {
+        return getAccountListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+          getAccountListFieldBuilder() {
+        if (accountListBuilder_ == null) {
+          accountListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder>(
+                  accountList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accountList_ = null;
+        }
+        return accountListBuilder_;
+      }
+
+      private long accountCount_ ;
+      /**
+       * <pre>
+       * account_count ...
+       * </pre>
+       *
+       * <code>uint64 account_count = 4 [json_name = "accountCount"];</code>
+       * @return The accountCount.
+       */
+      @java.lang.Override
+      public long getAccountCount() {
+        return accountCount_;
+      }
+      /**
+       * <pre>
+       * account_count ...
+       * </pre>
+       *
+       * <code>uint64 account_count = 4 [json_name = "accountCount"];</code>
+       * @param value The accountCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountCount(long value) {
+
+        accountCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account_count ...
+       * </pre>
+       *
+       * <code>uint64 account_count = 4 [json_name = "accountCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        accountCount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.GenesisState)
+    private static final com.kyve.team.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.kyve.team.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -35,12 +1286,12 @@ public final class GenesisProto {
       ".AuthorityB\004\310\336\037\000R\tauthority\022N\n\014account_l" +
       "ist\030\003 \003(\0132%.kyve.team.v1beta1.TeamVestin" +
       "gAccountB\004\310\336\037\000R\013accountList\022#\n\raccount_c" +
-      "ount\030\004 \001(\004R\014accountCountB\266\001\n\025com.kyve.te" +
-      "am.v1beta1B\014GenesisProtoP\001Z)github.com/K" +
-      "YVENetwork/chain/x/team/types\242\002\003KTX\252\002\021Ky" +
-      "ve.Team.V1beta1\312\002\021Kyve\\Team\\V1beta1\342\002\035Ky" +
-      "ve\\Team\\V1beta1\\GPBMetadata\352\002\023Kyve::Team" +
-      "::V1beta1b\006proto3"
+      "ount\030\004 \001(\004R\014accountCountB\264\001\n\025com.kyve.te" +
+      "am.v1beta1B\014GenesisProtoZ)github.com/KYV" +
+      "ENetwork/chain/x/team/types\242\002\003KTX\252\002\021Kyve" +
+      ".Team.V1beta1\312\002\021Kyve\\Team\\V1beta1\342\002\035Kyve" +
+      "\\Team\\V1beta1\\GPBMetadata\352\002\023Kyve::Team::" +
+      "V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

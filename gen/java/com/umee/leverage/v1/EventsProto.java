@@ -14,59 +14,11171 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventSupplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventSupply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Liquidity supplier bech32 address.
+     * </pre>
+     *
+     * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The supplier.
+     */
+    java.lang.String getSupplier();
+    /**
+     * <pre>
+     * Liquidity supplier bech32 address.
+     * </pre>
+     *
+     * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for supplier.
+     */
+    com.google.protobuf.ByteString
+        getSupplierBytes();
+
+    /**
+     * <pre>
+     * Liquidity provided to the module.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    boolean hasAsset();
+    /**
+     * <pre>
+     * Liquidity provided to the module.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAsset();
+    /**
+     * <pre>
+     * Liquidity provided to the module.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder();
+
+    /**
+     * <pre>
+     * uToken received by the supplier in exchange for the provided liquidity.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the utoken field is set.
+     */
+    boolean hasUtoken();
+    /**
+     * <pre>
+     * uToken received by the supplier in exchange for the provided liquidity.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return The utoken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUtoken();
+    /**
+     * <pre>
+     * uToken received by the supplier in exchange for the provided liquidity.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventSupply is emitted on Msg/Supply
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventSupply}
+   */
+  public static final class EventSupply extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventSupply)
+      EventSupplyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventSupply.newBuilder() to construct.
+    private EventSupply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventSupply() {
+      supplier_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventSupply();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventSupply_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventSupply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventSupply.class, com.umee.leverage.v1.EventsProto.EventSupply.Builder.class);
+    }
+
+    public static final int SUPPLIER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object supplier_ = "";
+    /**
+     * <pre>
+     * Liquidity supplier bech32 address.
+     * </pre>
+     *
+     * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The supplier.
+     */
+    @java.lang.Override
+    public java.lang.String getSupplier() {
+      java.lang.Object ref = supplier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        supplier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Liquidity supplier bech32 address.
+     * </pre>
+     *
+     * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for supplier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSupplierBytes() {
+      java.lang.Object ref = supplier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        supplier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSET_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin asset_;
+    /**
+     * <pre>
+     * Liquidity provided to the module.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsset() {
+      return asset_ != null;
+    }
+    /**
+     * <pre>
+     * Liquidity provided to the module.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAsset() {
+      return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+    }
+    /**
+     * <pre>
+     * Liquidity provided to the module.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder() {
+      return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin utoken_;
+    /**
+     * <pre>
+     * uToken received by the supplier in exchange for the provided liquidity.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the utoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasUtoken() {
+      return utoken_ != null;
+    }
+    /**
+     * <pre>
+     * uToken received by the supplier in exchange for the provided liquidity.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return The utoken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUtoken() {
+      return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+    }
+    /**
+     * <pre>
+     * uToken received by the supplier in exchange for the provided liquidity.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder() {
+      return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, supplier_);
+      }
+      if (asset_ != null) {
+        output.writeMessage(2, getAsset());
+      }
+      if (utoken_ != null) {
+        output.writeMessage(3, getUtoken());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, supplier_);
+      }
+      if (asset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAsset());
+      }
+      if (utoken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUtoken());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventSupply)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventSupply other = (com.umee.leverage.v1.EventsProto.EventSupply) obj;
+
+      if (!getSupplier()
+          .equals(other.getSupplier())) return false;
+      if (hasAsset() != other.hasAsset()) return false;
+      if (hasAsset()) {
+        if (!getAsset()
+            .equals(other.getAsset())) return false;
+      }
+      if (hasUtoken() != other.hasUtoken()) return false;
+      if (hasUtoken()) {
+        if (!getUtoken()
+            .equals(other.getUtoken())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUPPLIER_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplier().hashCode();
+      if (hasAsset()) {
+        hash = (37 * hash) + ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getAsset().hashCode();
+      }
+      if (hasUtoken()) {
+        hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getUtoken().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventSupply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventSupply prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventSupply is emitted on Msg/Supply
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventSupply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventSupply)
+        com.umee.leverage.v1.EventsProto.EventSupplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventSupply_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventSupply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventSupply.class, com.umee.leverage.v1.EventsProto.EventSupply.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventSupply.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        supplier_ = "";
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        utoken_ = null;
+        if (utokenBuilder_ != null) {
+          utokenBuilder_.dispose();
+          utokenBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventSupply_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventSupply getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventSupply.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventSupply build() {
+        com.umee.leverage.v1.EventsProto.EventSupply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventSupply buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventSupply result = new com.umee.leverage.v1.EventsProto.EventSupply(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventSupply result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.supplier_ = supplier_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.asset_ = assetBuilder_ == null
+              ? asset_
+              : assetBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.utoken_ = utokenBuilder_ == null
+              ? utoken_
+              : utokenBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventSupply) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventSupply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventSupply other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventSupply.getDefaultInstance()) return this;
+        if (!other.getSupplier().isEmpty()) {
+          supplier_ = other.supplier_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasAsset()) {
+          mergeAsset(other.getAsset());
+        }
+        if (other.hasUtoken()) {
+          mergeUtoken(other.getUtoken());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                supplier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getUtokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object supplier_ = "";
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The supplier.
+       */
+      public java.lang.String getSupplier() {
+        java.lang.Object ref = supplier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          supplier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for supplier.
+       */
+      public com.google.protobuf.ByteString
+          getSupplierBytes() {
+        java.lang.Object ref = supplier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          supplier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The supplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        supplier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupplier() {
+        supplier_ = getDefaultInstance().getSupplier();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for supplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        supplier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin asset_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> assetBuilder_;
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return Whether the asset field is set.
+       */
+      public boolean hasAsset() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return The asset.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAsset() {
+        if (assetBuilder_ == null) {
+          return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+        } else {
+          return assetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asset_ = value;
+        } else {
+          assetBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (assetBuilder_ == null) {
+          asset_ = builderForValue.build();
+        } else {
+          assetBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAsset(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            asset_ != null &&
+            asset_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAssetBuilder().mergeFrom(value);
+          } else {
+            asset_ = value;
+          }
+        } else {
+          assetBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAsset() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAssetBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAssetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder() {
+        if (assetBuilder_ != null) {
+          return assetBuilder_.getMessageOrBuilder();
+        } else {
+          return asset_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidity provided to the module.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAssetFieldBuilder() {
+        if (assetBuilder_ == null) {
+          assetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAsset(),
+                  getParentForChildren(),
+                  isClean());
+          asset_ = null;
+        }
+        return assetBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin utoken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> utokenBuilder_;
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       * @return Whether the utoken field is set.
+       */
+      public boolean hasUtoken() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       * @return The utoken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUtoken() {
+        if (utokenBuilder_ == null) {
+          return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+        } else {
+          return utokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUtoken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (utokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          utoken_ = value;
+        } else {
+          utokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUtoken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (utokenBuilder_ == null) {
+          utoken_ = builderForValue.build();
+        } else {
+          utokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeUtoken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (utokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            utoken_ != null &&
+            utoken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getUtokenBuilder().mergeFrom(value);
+          } else {
+            utoken_ = value;
+          }
+        } else {
+          utokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUtoken() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        utoken_ = null;
+        if (utokenBuilder_ != null) {
+          utokenBuilder_.dispose();
+          utokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUtokenBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getUtokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder() {
+        if (utokenBuilder_ != null) {
+          return utokenBuilder_.getMessageOrBuilder();
+        } else {
+          return utoken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+        }
+      }
+      /**
+       * <pre>
+       * uToken received by the supplier in exchange for the provided liquidity.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 3 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUtokenFieldBuilder() {
+        if (utokenBuilder_ == null) {
+          utokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getUtoken(),
+                  getParentForChildren(),
+                  isClean());
+          utoken_ = null;
+        }
+        return utokenBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventSupply)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventSupply)
+    private static final com.umee.leverage.v1.EventsProto.EventSupply DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventSupply();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventSupply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventSupply>
+        PARSER = new com.google.protobuf.AbstractParser<EventSupply>() {
+      @java.lang.Override
+      public EventSupply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventSupply> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventSupply> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventSupply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventWithdrawOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventWithdraw)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Liquidity supplier bech32 address.
+     * </pre>
+     *
+     * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The supplier.
+     */
+    java.lang.String getSupplier();
+    /**
+     * <pre>
+     * Liquidity supplier bech32 address.
+     * </pre>
+     *
+     * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for supplier.
+     */
+    com.google.protobuf.ByteString
+        getSupplierBytes();
+
+    /**
+     * <pre>
+     * uToken sent to the module in exchange for the underlying asset.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the utoken field is set.
+     */
+    boolean hasUtoken();
+    /**
+     * <pre>
+     * uToken sent to the module in exchange for the underlying asset.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return The utoken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUtoken();
+    /**
+     * <pre>
+     * uToken sent to the module in exchange for the underlying asset.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder();
+
+    /**
+     * <pre>
+     * Liquidity received by the supplier.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    boolean hasAsset();
+    /**
+     * <pre>
+     * Liquidity received by the supplier.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAsset();
+    /**
+     * <pre>
+     * Liquidity received by the supplier.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventWithdraw is emitted on Msg/Withdraw
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventWithdraw}
+   */
+  public static final class EventWithdraw extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventWithdraw)
+      EventWithdrawOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventWithdraw.newBuilder() to construct.
+    private EventWithdraw(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventWithdraw() {
+      supplier_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventWithdraw();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventWithdraw_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventWithdraw_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventWithdraw.class, com.umee.leverage.v1.EventsProto.EventWithdraw.Builder.class);
+    }
+
+    public static final int SUPPLIER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object supplier_ = "";
+    /**
+     * <pre>
+     * Liquidity supplier bech32 address.
+     * </pre>
+     *
+     * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The supplier.
+     */
+    @java.lang.Override
+    public java.lang.String getSupplier() {
+      java.lang.Object ref = supplier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        supplier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Liquidity supplier bech32 address.
+     * </pre>
+     *
+     * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for supplier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSupplierBytes() {
+      java.lang.Object ref = supplier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        supplier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin utoken_;
+    /**
+     * <pre>
+     * uToken sent to the module in exchange for the underlying asset.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the utoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasUtoken() {
+      return utoken_ != null;
+    }
+    /**
+     * <pre>
+     * uToken sent to the module in exchange for the underlying asset.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return The utoken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUtoken() {
+      return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+    }
+    /**
+     * <pre>
+     * uToken sent to the module in exchange for the underlying asset.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder() {
+      return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+    }
+
+    public static final int ASSET_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin asset_;
+    /**
+     * <pre>
+     * Liquidity received by the supplier.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsset() {
+      return asset_ != null;
+    }
+    /**
+     * <pre>
+     * Liquidity received by the supplier.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAsset() {
+      return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+    }
+    /**
+     * <pre>
+     * Liquidity received by the supplier.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder() {
+      return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, supplier_);
+      }
+      if (utoken_ != null) {
+        output.writeMessage(2, getUtoken());
+      }
+      if (asset_ != null) {
+        output.writeMessage(3, getAsset());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, supplier_);
+      }
+      if (utoken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUtoken());
+      }
+      if (asset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAsset());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventWithdraw)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventWithdraw other = (com.umee.leverage.v1.EventsProto.EventWithdraw) obj;
+
+      if (!getSupplier()
+          .equals(other.getSupplier())) return false;
+      if (hasUtoken() != other.hasUtoken()) return false;
+      if (hasUtoken()) {
+        if (!getUtoken()
+            .equals(other.getUtoken())) return false;
+      }
+      if (hasAsset() != other.hasAsset()) return false;
+      if (hasAsset()) {
+        if (!getAsset()
+            .equals(other.getAsset())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUPPLIER_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplier().hashCode();
+      if (hasUtoken()) {
+        hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getUtoken().hashCode();
+      }
+      if (hasAsset()) {
+        hash = (37 * hash) + ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getAsset().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventWithdraw prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventWithdraw is emitted on Msg/Withdraw
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventWithdraw}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventWithdraw)
+        com.umee.leverage.v1.EventsProto.EventWithdrawOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventWithdraw_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventWithdraw_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventWithdraw.class, com.umee.leverage.v1.EventsProto.EventWithdraw.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventWithdraw.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        supplier_ = "";
+        utoken_ = null;
+        if (utokenBuilder_ != null) {
+          utokenBuilder_.dispose();
+          utokenBuilder_ = null;
+        }
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventWithdraw_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventWithdraw getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventWithdraw.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventWithdraw build() {
+        com.umee.leverage.v1.EventsProto.EventWithdraw result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventWithdraw buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventWithdraw result = new com.umee.leverage.v1.EventsProto.EventWithdraw(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventWithdraw result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.supplier_ = supplier_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.utoken_ = utokenBuilder_ == null
+              ? utoken_
+              : utokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.asset_ = assetBuilder_ == null
+              ? asset_
+              : assetBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventWithdraw) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventWithdraw)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventWithdraw other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventWithdraw.getDefaultInstance()) return this;
+        if (!other.getSupplier().isEmpty()) {
+          supplier_ = other.supplier_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasUtoken()) {
+          mergeUtoken(other.getUtoken());
+        }
+        if (other.hasAsset()) {
+          mergeAsset(other.getAsset());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                supplier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getUtokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object supplier_ = "";
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The supplier.
+       */
+      public java.lang.String getSupplier() {
+        java.lang.Object ref = supplier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          supplier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for supplier.
+       */
+      public com.google.protobuf.ByteString
+          getSupplierBytes() {
+        java.lang.Object ref = supplier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          supplier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The supplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        supplier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupplier() {
+        supplier_ = getDefaultInstance().getSupplier();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity supplier bech32 address.
+       * </pre>
+       *
+       * <code>string supplier = 1 [json_name = "supplier", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for supplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        supplier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin utoken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> utokenBuilder_;
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       * @return Whether the utoken field is set.
+       */
+      public boolean hasUtoken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       * @return The utoken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUtoken() {
+        if (utokenBuilder_ == null) {
+          return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+        } else {
+          return utokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUtoken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (utokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          utoken_ = value;
+        } else {
+          utokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUtoken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (utokenBuilder_ == null) {
+          utoken_ = builderForValue.build();
+        } else {
+          utokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeUtoken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (utokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            utoken_ != null &&
+            utoken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getUtokenBuilder().mergeFrom(value);
+          } else {
+            utoken_ = value;
+          }
+        } else {
+          utokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUtoken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        utoken_ = null;
+        if (utokenBuilder_ != null) {
+          utokenBuilder_.dispose();
+          utokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUtokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getUtokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder() {
+        if (utokenBuilder_ != null) {
+          return utokenBuilder_.getMessageOrBuilder();
+        } else {
+          return utoken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+        }
+      }
+      /**
+       * <pre>
+       * uToken sent to the module in exchange for the underlying asset.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUtokenFieldBuilder() {
+        if (utokenBuilder_ == null) {
+          utokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getUtoken(),
+                  getParentForChildren(),
+                  isClean());
+          utoken_ = null;
+        }
+        return utokenBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin asset_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> assetBuilder_;
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return Whether the asset field is set.
+       */
+      public boolean hasAsset() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return The asset.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAsset() {
+        if (assetBuilder_ == null) {
+          return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+        } else {
+          return assetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asset_ = value;
+        } else {
+          assetBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (assetBuilder_ == null) {
+          asset_ = builderForValue.build();
+        } else {
+          assetBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAsset(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            asset_ != null &&
+            asset_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAssetBuilder().mergeFrom(value);
+          } else {
+            asset_ = value;
+          }
+        } else {
+          assetBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAsset() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAssetBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getAssetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder() {
+        if (assetBuilder_ != null) {
+          return assetBuilder_.getMessageOrBuilder();
+        } else {
+          return asset_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidity received by the supplier.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAssetFieldBuilder() {
+        if (assetBuilder_ == null) {
+          assetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAsset(),
+                  getParentForChildren(),
+                  isClean());
+          asset_ = null;
+        }
+        return assetBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventWithdraw)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventWithdraw)
+    private static final com.umee.leverage.v1.EventsProto.EventWithdraw DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventWithdraw();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventWithdraw getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventWithdraw>
+        PARSER = new com.google.protobuf.AbstractParser<EventWithdraw>() {
+      @java.lang.Override
+      public EventWithdraw parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventWithdraw> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventWithdraw> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventWithdraw getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCollaterizeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventCollaterize)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    java.lang.String getBorrower();
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    com.google.protobuf.ByteString
+        getBorrowerBytes();
+
+    /**
+     * <pre>
+     * uToken provided as a collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the utoken field is set.
+     */
+    boolean hasUtoken();
+    /**
+     * <pre>
+     * uToken provided as a collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return The utoken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUtoken();
+    /**
+     * <pre>
+     * uToken provided as a collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventCollaterize is emitted on Msg/Collaterize
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventCollaterize}
+   */
+  public static final class EventCollaterize extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventCollaterize)
+      EventCollaterizeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCollaterize.newBuilder() to construct.
+    private EventCollaterize(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCollaterize() {
+      borrower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCollaterize();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventCollaterize_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventCollaterize_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventCollaterize.class, com.umee.leverage.v1.EventsProto.EventCollaterize.Builder.class);
+    }
+
+    public static final int BORROWER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object borrower_ = "";
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    @java.lang.Override
+    public java.lang.String getBorrower() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        borrower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBorrowerBytes() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        borrower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin utoken_;
+    /**
+     * <pre>
+     * uToken provided as a collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the utoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasUtoken() {
+      return utoken_ != null;
+    }
+    /**
+     * <pre>
+     * uToken provided as a collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return The utoken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUtoken() {
+      return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+    }
+    /**
+     * <pre>
+     * uToken provided as a collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder() {
+      return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
+      }
+      if (utoken_ != null) {
+        output.writeMessage(2, getUtoken());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
+      }
+      if (utoken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUtoken());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventCollaterize)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventCollaterize other = (com.umee.leverage.v1.EventsProto.EventCollaterize) obj;
+
+      if (!getBorrower()
+          .equals(other.getBorrower())) return false;
+      if (hasUtoken() != other.hasUtoken()) return false;
+      if (hasUtoken()) {
+        if (!getUtoken()
+            .equals(other.getUtoken())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BORROWER_FIELD_NUMBER;
+      hash = (53 * hash) + getBorrower().hashCode();
+      if (hasUtoken()) {
+        hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getUtoken().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventCollaterize prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCollaterize is emitted on Msg/Collaterize
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventCollaterize}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventCollaterize)
+        com.umee.leverage.v1.EventsProto.EventCollaterizeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventCollaterize_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventCollaterize_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventCollaterize.class, com.umee.leverage.v1.EventsProto.EventCollaterize.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventCollaterize.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        borrower_ = "";
+        utoken_ = null;
+        if (utokenBuilder_ != null) {
+          utokenBuilder_.dispose();
+          utokenBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventCollaterize_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventCollaterize getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventCollaterize.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventCollaterize build() {
+        com.umee.leverage.v1.EventsProto.EventCollaterize result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventCollaterize buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventCollaterize result = new com.umee.leverage.v1.EventsProto.EventCollaterize(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventCollaterize result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.borrower_ = borrower_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.utoken_ = utokenBuilder_ == null
+              ? utoken_
+              : utokenBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventCollaterize) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventCollaterize)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventCollaterize other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventCollaterize.getDefaultInstance()) return this;
+        if (!other.getBorrower().isEmpty()) {
+          borrower_ = other.borrower_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasUtoken()) {
+          mergeUtoken(other.getUtoken());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                borrower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getUtokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object borrower_ = "";
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The borrower.
+       */
+      public java.lang.String getBorrower() {
+        java.lang.Object ref = borrower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          borrower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for borrower.
+       */
+      public com.google.protobuf.ByteString
+          getBorrowerBytes() {
+        java.lang.Object ref = borrower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          borrower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBorrower() {
+        borrower_ = getDefaultInstance().getBorrower();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin utoken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> utokenBuilder_;
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       * @return Whether the utoken field is set.
+       */
+      public boolean hasUtoken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       * @return The utoken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUtoken() {
+        if (utokenBuilder_ == null) {
+          return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+        } else {
+          return utokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUtoken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (utokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          utoken_ = value;
+        } else {
+          utokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUtoken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (utokenBuilder_ == null) {
+          utoken_ = builderForValue.build();
+        } else {
+          utokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeUtoken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (utokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            utoken_ != null &&
+            utoken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getUtokenBuilder().mergeFrom(value);
+          } else {
+            utoken_ = value;
+          }
+        } else {
+          utokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUtoken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        utoken_ = null;
+        if (utokenBuilder_ != null) {
+          utokenBuilder_.dispose();
+          utokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUtokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getUtokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder() {
+        if (utokenBuilder_ != null) {
+          return utokenBuilder_.getMessageOrBuilder();
+        } else {
+          return utoken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+        }
+      }
+      /**
+       * <pre>
+       * uToken provided as a collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUtokenFieldBuilder() {
+        if (utokenBuilder_ == null) {
+          utokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getUtoken(),
+                  getParentForChildren(),
+                  isClean());
+          utoken_ = null;
+        }
+        return utokenBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventCollaterize)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventCollaterize)
+    private static final com.umee.leverage.v1.EventsProto.EventCollaterize DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventCollaterize();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventCollaterize getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCollaterize>
+        PARSER = new com.google.protobuf.AbstractParser<EventCollaterize>() {
+      @java.lang.Override
+      public EventCollaterize parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCollaterize> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCollaterize> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventCollaterize getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventDecollaterizeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventDecollaterize)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    java.lang.String getBorrower();
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    com.google.protobuf.ByteString
+        getBorrowerBytes();
+
+    /**
+     * <pre>
+     * utoken removed from collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the utoken field is set.
+     */
+    boolean hasUtoken();
+    /**
+     * <pre>
+     * utoken removed from collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return The utoken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUtoken();
+    /**
+     * <pre>
+     * utoken removed from collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventDecollaterize is emitted on Msg/Decollateralize
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventDecollaterize}
+   */
+  public static final class EventDecollaterize extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventDecollaterize)
+      EventDecollaterizeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventDecollaterize.newBuilder() to construct.
+    private EventDecollaterize(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventDecollaterize() {
+      borrower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventDecollaterize();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventDecollaterize_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventDecollaterize_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventDecollaterize.class, com.umee.leverage.v1.EventsProto.EventDecollaterize.Builder.class);
+    }
+
+    public static final int BORROWER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object borrower_ = "";
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    @java.lang.Override
+    public java.lang.String getBorrower() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        borrower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBorrowerBytes() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        borrower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin utoken_;
+    /**
+     * <pre>
+     * utoken removed from collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the utoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasUtoken() {
+      return utoken_ != null;
+    }
+    /**
+     * <pre>
+     * utoken removed from collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     * @return The utoken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUtoken() {
+      return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+    }
+    /**
+     * <pre>
+     * utoken removed from collateral.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder() {
+      return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
+      }
+      if (utoken_ != null) {
+        output.writeMessage(2, getUtoken());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
+      }
+      if (utoken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUtoken());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventDecollaterize)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventDecollaterize other = (com.umee.leverage.v1.EventsProto.EventDecollaterize) obj;
+
+      if (!getBorrower()
+          .equals(other.getBorrower())) return false;
+      if (hasUtoken() != other.hasUtoken()) return false;
+      if (hasUtoken()) {
+        if (!getUtoken()
+            .equals(other.getUtoken())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BORROWER_FIELD_NUMBER;
+      hash = (53 * hash) + getBorrower().hashCode();
+      if (hasUtoken()) {
+        hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getUtoken().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventDecollaterize prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventDecollaterize is emitted on Msg/Decollateralize
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventDecollaterize}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventDecollaterize)
+        com.umee.leverage.v1.EventsProto.EventDecollaterizeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventDecollaterize_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventDecollaterize_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventDecollaterize.class, com.umee.leverage.v1.EventsProto.EventDecollaterize.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventDecollaterize.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        borrower_ = "";
+        utoken_ = null;
+        if (utokenBuilder_ != null) {
+          utokenBuilder_.dispose();
+          utokenBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventDecollaterize_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventDecollaterize getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventDecollaterize.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventDecollaterize build() {
+        com.umee.leverage.v1.EventsProto.EventDecollaterize result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventDecollaterize buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventDecollaterize result = new com.umee.leverage.v1.EventsProto.EventDecollaterize(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventDecollaterize result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.borrower_ = borrower_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.utoken_ = utokenBuilder_ == null
+              ? utoken_
+              : utokenBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventDecollaterize) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventDecollaterize)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventDecollaterize other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventDecollaterize.getDefaultInstance()) return this;
+        if (!other.getBorrower().isEmpty()) {
+          borrower_ = other.borrower_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasUtoken()) {
+          mergeUtoken(other.getUtoken());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                borrower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getUtokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object borrower_ = "";
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The borrower.
+       */
+      public java.lang.String getBorrower() {
+        java.lang.Object ref = borrower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          borrower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for borrower.
+       */
+      public com.google.protobuf.ByteString
+          getBorrowerBytes() {
+        java.lang.Object ref = borrower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          borrower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBorrower() {
+        borrower_ = getDefaultInstance().getBorrower();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin utoken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> utokenBuilder_;
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       * @return Whether the utoken field is set.
+       */
+      public boolean hasUtoken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       * @return The utoken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUtoken() {
+        if (utokenBuilder_ == null) {
+          return utoken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+        } else {
+          return utokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUtoken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (utokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          utoken_ = value;
+        } else {
+          utokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUtoken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (utokenBuilder_ == null) {
+          utoken_ = builderForValue.build();
+        } else {
+          utokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeUtoken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (utokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            utoken_ != null &&
+            utoken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getUtokenBuilder().mergeFrom(value);
+          } else {
+            utoken_ = value;
+          }
+        } else {
+          utokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUtoken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        utoken_ = null;
+        if (utokenBuilder_ != null) {
+          utokenBuilder_.dispose();
+          utokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUtokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getUtokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUtokenOrBuilder() {
+        if (utokenBuilder_ != null) {
+          return utokenBuilder_.getMessageOrBuilder();
+        } else {
+          return utoken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : utoken_;
+        }
+      }
+      /**
+       * <pre>
+       * utoken removed from collateral.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin utoken = 2 [json_name = "utoken", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUtokenFieldBuilder() {
+        if (utokenBuilder_ == null) {
+          utokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getUtoken(),
+                  getParentForChildren(),
+                  isClean());
+          utoken_ = null;
+        }
+        return utokenBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventDecollaterize)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventDecollaterize)
+    private static final com.umee.leverage.v1.EventsProto.EventDecollaterize DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventDecollaterize();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventDecollaterize getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventDecollaterize>
+        PARSER = new com.google.protobuf.AbstractParser<EventDecollaterize>() {
+      @java.lang.Override
+      public EventDecollaterize parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventDecollaterize> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventDecollaterize> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventDecollaterize getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBorrowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventBorrow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    java.lang.String getBorrower();
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    com.google.protobuf.ByteString
+        getBorrowerBytes();
+
+    /**
+     * <pre>
+     * Asset borrowed.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    boolean hasAsset();
+    /**
+     * <pre>
+     * Asset borrowed.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAsset();
+    /**
+     * <pre>
+     * Asset borrowed.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventBorrow is emitted on Msg/Borrow
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventBorrow}
+   */
+  public static final class EventBorrow extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventBorrow)
+      EventBorrowOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBorrow.newBuilder() to construct.
+    private EventBorrow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBorrow() {
+      borrower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBorrow();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventBorrow_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventBorrow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventBorrow.class, com.umee.leverage.v1.EventsProto.EventBorrow.Builder.class);
+    }
+
+    public static final int BORROWER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object borrower_ = "";
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    @java.lang.Override
+    public java.lang.String getBorrower() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        borrower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBorrowerBytes() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        borrower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSET_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin asset_;
+    /**
+     * <pre>
+     * Asset borrowed.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsset() {
+      return asset_ != null;
+    }
+    /**
+     * <pre>
+     * Asset borrowed.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAsset() {
+      return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+    }
+    /**
+     * <pre>
+     * Asset borrowed.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder() {
+      return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
+      }
+      if (asset_ != null) {
+        output.writeMessage(2, getAsset());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
+      }
+      if (asset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAsset());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventBorrow)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventBorrow other = (com.umee.leverage.v1.EventsProto.EventBorrow) obj;
+
+      if (!getBorrower()
+          .equals(other.getBorrower())) return false;
+      if (hasAsset() != other.hasAsset()) return false;
+      if (hasAsset()) {
+        if (!getAsset()
+            .equals(other.getAsset())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BORROWER_FIELD_NUMBER;
+      hash = (53 * hash) + getBorrower().hashCode();
+      if (hasAsset()) {
+        hash = (37 * hash) + ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getAsset().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventBorrow parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventBorrow prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventBorrow is emitted on Msg/Borrow
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventBorrow}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventBorrow)
+        com.umee.leverage.v1.EventsProto.EventBorrowOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventBorrow_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventBorrow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventBorrow.class, com.umee.leverage.v1.EventsProto.EventBorrow.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventBorrow.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        borrower_ = "";
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventBorrow_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventBorrow getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventBorrow.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventBorrow build() {
+        com.umee.leverage.v1.EventsProto.EventBorrow result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventBorrow buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventBorrow result = new com.umee.leverage.v1.EventsProto.EventBorrow(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventBorrow result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.borrower_ = borrower_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.asset_ = assetBuilder_ == null
+              ? asset_
+              : assetBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventBorrow) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventBorrow)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventBorrow other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventBorrow.getDefaultInstance()) return this;
+        if (!other.getBorrower().isEmpty()) {
+          borrower_ = other.borrower_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasAsset()) {
+          mergeAsset(other.getAsset());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                borrower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object borrower_ = "";
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The borrower.
+       */
+      public java.lang.String getBorrower() {
+        java.lang.Object ref = borrower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          borrower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for borrower.
+       */
+      public com.google.protobuf.ByteString
+          getBorrowerBytes() {
+        java.lang.Object ref = borrower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          borrower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBorrower() {
+        borrower_ = getDefaultInstance().getBorrower();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin asset_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> assetBuilder_;
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return Whether the asset field is set.
+       */
+      public boolean hasAsset() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return The asset.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAsset() {
+        if (assetBuilder_ == null) {
+          return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+        } else {
+          return assetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asset_ = value;
+        } else {
+          assetBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (assetBuilder_ == null) {
+          asset_ = builderForValue.build();
+        } else {
+          assetBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAsset(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            asset_ != null &&
+            asset_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAssetBuilder().mergeFrom(value);
+          } else {
+            asset_ = value;
+          }
+        } else {
+          assetBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAsset() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAssetBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAssetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder() {
+        if (assetBuilder_ != null) {
+          return assetBuilder_.getMessageOrBuilder();
+        } else {
+          return asset_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+        }
+      }
+      /**
+       * <pre>
+       * Asset borrowed.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAssetFieldBuilder() {
+        if (assetBuilder_ == null) {
+          assetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAsset(),
+                  getParentForChildren(),
+                  isClean());
+          asset_ = null;
+        }
+        return assetBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventBorrow)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventBorrow)
+    private static final com.umee.leverage.v1.EventsProto.EventBorrow DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventBorrow();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventBorrow getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBorrow>
+        PARSER = new com.google.protobuf.AbstractParser<EventBorrow>() {
+      @java.lang.Override
+      public EventBorrow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBorrow> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBorrow> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventBorrow getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRepayOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventRepay)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    java.lang.String getBorrower();
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    com.google.protobuf.ByteString
+        getBorrowerBytes();
+
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+     * @return Whether the repaid field is set.
+     */
+    boolean hasRepaid();
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+     * @return The repaid.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRepaid();
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRepaidOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventRepay is emitted on Msg/Repay
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventRepay}
+   */
+  public static final class EventRepay extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventRepay)
+      EventRepayOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRepay.newBuilder() to construct.
+    private EventRepay(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRepay() {
+      borrower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRepay();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepay_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepay_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventRepay.class, com.umee.leverage.v1.EventsProto.EventRepay.Builder.class);
+    }
+
+    public static final int BORROWER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object borrower_ = "";
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    @java.lang.Override
+    public java.lang.String getBorrower() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        borrower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBorrowerBytes() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        borrower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REPAID_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin repaid_;
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+     * @return Whether the repaid field is set.
+     */
+    @java.lang.Override
+    public boolean hasRepaid() {
+      return repaid_ != null;
+    }
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+     * @return The repaid.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRepaid() {
+      return repaid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : repaid_;
+    }
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRepaidOrBuilder() {
+      return repaid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : repaid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
+      }
+      if (repaid_ != null) {
+        output.writeMessage(2, getRepaid());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
+      }
+      if (repaid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRepaid());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventRepay)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventRepay other = (com.umee.leverage.v1.EventsProto.EventRepay) obj;
+
+      if (!getBorrower()
+          .equals(other.getBorrower())) return false;
+      if (hasRepaid() != other.hasRepaid()) return false;
+      if (hasRepaid()) {
+        if (!getRepaid()
+            .equals(other.getRepaid())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BORROWER_FIELD_NUMBER;
+      hash = (53 * hash) + getBorrower().hashCode();
+      if (hasRepaid()) {
+        hash = (37 * hash) + REPAID_FIELD_NUMBER;
+        hash = (53 * hash) + getRepaid().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepay parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventRepay prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRepay is emitted on Msg/Repay
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventRepay}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventRepay)
+        com.umee.leverage.v1.EventsProto.EventRepayOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepay_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepay_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventRepay.class, com.umee.leverage.v1.EventsProto.EventRepay.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventRepay.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        borrower_ = "";
+        repaid_ = null;
+        if (repaidBuilder_ != null) {
+          repaidBuilder_.dispose();
+          repaidBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepay_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventRepay getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventRepay.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventRepay build() {
+        com.umee.leverage.v1.EventsProto.EventRepay result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventRepay buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventRepay result = new com.umee.leverage.v1.EventsProto.EventRepay(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventRepay result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.borrower_ = borrower_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.repaid_ = repaidBuilder_ == null
+              ? repaid_
+              : repaidBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventRepay) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventRepay)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventRepay other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventRepay.getDefaultInstance()) return this;
+        if (!other.getBorrower().isEmpty()) {
+          borrower_ = other.borrower_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasRepaid()) {
+          mergeRepaid(other.getRepaid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                borrower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRepaidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object borrower_ = "";
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The borrower.
+       */
+      public java.lang.String getBorrower() {
+        java.lang.Object ref = borrower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          borrower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for borrower.
+       */
+      public com.google.protobuf.ByteString
+          getBorrowerBytes() {
+        java.lang.Object ref = borrower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          borrower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBorrower() {
+        borrower_ = getDefaultInstance().getBorrower();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin repaid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> repaidBuilder_;
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       * @return Whether the repaid field is set.
+       */
+      public boolean hasRepaid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       * @return The repaid.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRepaid() {
+        if (repaidBuilder_ == null) {
+          return repaid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : repaid_;
+        } else {
+          return repaidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRepaid(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (repaidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          repaid_ = value;
+        } else {
+          repaidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRepaid(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (repaidBuilder_ == null) {
+          repaid_ = builderForValue.build();
+        } else {
+          repaidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRepaid(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (repaidBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            repaid_ != null &&
+            repaid_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getRepaidBuilder().mergeFrom(value);
+          } else {
+            repaid_ = value;
+          }
+        } else {
+          repaidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRepaid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        repaid_ = null;
+        if (repaidBuilder_ != null) {
+          repaidBuilder_.dispose();
+          repaidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRepaidBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRepaidFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRepaidOrBuilder() {
+        if (repaidBuilder_ != null) {
+          return repaidBuilder_.getMessageOrBuilder();
+        } else {
+          return repaid_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : repaid_;
+        }
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin repaid = 2 [json_name = "repaid", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRepaidFieldBuilder() {
+        if (repaidBuilder_ == null) {
+          repaidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getRepaid(),
+                  getParentForChildren(),
+                  isClean());
+          repaid_ = null;
+        }
+        return repaidBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventRepay)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventRepay)
+    private static final com.umee.leverage.v1.EventsProto.EventRepay DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventRepay();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventRepay getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRepay>
+        PARSER = new com.google.protobuf.AbstractParser<EventRepay>() {
+      @java.lang.Override
+      public EventRepay parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRepay> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRepay> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventRepay getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventLiquidateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventLiquidate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Liquidator bech32 address.
+     * </pre>
+     *
+     * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The liquidator.
+     */
+    java.lang.String getLiquidator();
+    /**
+     * <pre>
+     * Liquidator bech32 address.
+     * </pre>
+     *
+     * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for liquidator.
+     */
+    com.google.protobuf.ByteString
+        getLiquidatorBytes();
+
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    java.lang.String getBorrower();
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    com.google.protobuf.ByteString
+        getBorrowerBytes();
+
+    /**
+     * <pre>
+     * Assets liquidated from the borrower
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+     * @return Whether the liquidated field is set.
+     */
+    boolean hasLiquidated();
+    /**
+     * <pre>
+     * Assets liquidated from the borrower
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+     * @return The liquidated.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getLiquidated();
+    /**
+     * <pre>
+     * Assets liquidated from the borrower
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLiquidatedOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventLiquidate is emitted on Msg/Liquidate
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventLiquidate}
+   */
+  public static final class EventLiquidate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventLiquidate)
+      EventLiquidateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventLiquidate.newBuilder() to construct.
+    private EventLiquidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventLiquidate() {
+      liquidator_ = "";
+      borrower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventLiquidate();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventLiquidate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventLiquidate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventLiquidate.class, com.umee.leverage.v1.EventsProto.EventLiquidate.Builder.class);
+    }
+
+    public static final int LIQUIDATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidator_ = "";
+    /**
+     * <pre>
+     * Liquidator bech32 address.
+     * </pre>
+     *
+     * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The liquidator.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidator() {
+      java.lang.Object ref = liquidator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Liquidator bech32 address.
+     * </pre>
+     *
+     * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for liquidator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidatorBytes() {
+      java.lang.Object ref = liquidator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BORROWER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object borrower_ = "";
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    @java.lang.Override
+    public java.lang.String getBorrower() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        borrower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBorrowerBytes() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        borrower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIQUIDATED_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin liquidated_;
+    /**
+     * <pre>
+     * Assets liquidated from the borrower
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+     * @return Whether the liquidated field is set.
+     */
+    @java.lang.Override
+    public boolean hasLiquidated() {
+      return liquidated_ != null;
+    }
+    /**
+     * <pre>
+     * Assets liquidated from the borrower
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+     * @return The liquidated.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getLiquidated() {
+      return liquidated_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : liquidated_;
+    }
+    /**
+     * <pre>
+     * Assets liquidated from the borrower
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLiquidatedOrBuilder() {
+      return liquidated_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : liquidated_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, liquidator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, borrower_);
+      }
+      if (liquidated_ != null) {
+        output.writeMessage(3, getLiquidated());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, liquidator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, borrower_);
+      }
+      if (liquidated_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getLiquidated());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventLiquidate)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventLiquidate other = (com.umee.leverage.v1.EventsProto.EventLiquidate) obj;
+
+      if (!getLiquidator()
+          .equals(other.getLiquidator())) return false;
+      if (!getBorrower()
+          .equals(other.getBorrower())) return false;
+      if (hasLiquidated() != other.hasLiquidated()) return false;
+      if (hasLiquidated()) {
+        if (!getLiquidated()
+            .equals(other.getLiquidated())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LIQUIDATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidator().hashCode();
+      hash = (37 * hash) + BORROWER_FIELD_NUMBER;
+      hash = (53 * hash) + getBorrower().hashCode();
+      if (hasLiquidated()) {
+        hash = (37 * hash) + LIQUIDATED_FIELD_NUMBER;
+        hash = (53 * hash) + getLiquidated().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventLiquidate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventLiquidate is emitted on Msg/Liquidate
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventLiquidate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventLiquidate)
+        com.umee.leverage.v1.EventsProto.EventLiquidateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventLiquidate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventLiquidate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventLiquidate.class, com.umee.leverage.v1.EventsProto.EventLiquidate.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventLiquidate.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        liquidator_ = "";
+        borrower_ = "";
+        liquidated_ = null;
+        if (liquidatedBuilder_ != null) {
+          liquidatedBuilder_.dispose();
+          liquidatedBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventLiquidate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventLiquidate getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventLiquidate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventLiquidate build() {
+        com.umee.leverage.v1.EventsProto.EventLiquidate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventLiquidate buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventLiquidate result = new com.umee.leverage.v1.EventsProto.EventLiquidate(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventLiquidate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.liquidator_ = liquidator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.borrower_ = borrower_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.liquidated_ = liquidatedBuilder_ == null
+              ? liquidated_
+              : liquidatedBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventLiquidate) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventLiquidate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventLiquidate other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventLiquidate.getDefaultInstance()) return this;
+        if (!other.getLiquidator().isEmpty()) {
+          liquidator_ = other.liquidator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBorrower().isEmpty()) {
+          borrower_ = other.borrower_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasLiquidated()) {
+          mergeLiquidated(other.getLiquidated());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                liquidator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                borrower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getLiquidatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object liquidator_ = "";
+      /**
+       * <pre>
+       * Liquidator bech32 address.
+       * </pre>
+       *
+       * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The liquidator.
+       */
+      public java.lang.String getLiquidator() {
+        java.lang.Object ref = liquidator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidator bech32 address.
+       * </pre>
+       *
+       * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for liquidator.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidatorBytes() {
+        java.lang.Object ref = liquidator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Liquidator bech32 address.
+       * </pre>
+       *
+       * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The liquidator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidator bech32 address.
+       * </pre>
+       *
+       * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidator() {
+        liquidator_ = getDefaultInstance().getLiquidator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Liquidator bech32 address.
+       * </pre>
+       *
+       * <code>string liquidator = 1 [json_name = "liquidator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for liquidator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object borrower_ = "";
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The borrower.
+       */
+      public java.lang.String getBorrower() {
+        java.lang.Object ref = borrower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          borrower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for borrower.
+       */
+      public com.google.protobuf.ByteString
+          getBorrowerBytes() {
+        java.lang.Object ref = borrower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          borrower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        borrower_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBorrower() {
+        borrower_ = getDefaultInstance().getBorrower();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 2 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        borrower_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin liquidated_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> liquidatedBuilder_;
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       * @return Whether the liquidated field is set.
+       */
+      public boolean hasLiquidated() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       * @return The liquidated.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getLiquidated() {
+        if (liquidatedBuilder_ == null) {
+          return liquidated_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : liquidated_;
+        } else {
+          return liquidatedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidated(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (liquidatedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          liquidated_ = value;
+        } else {
+          liquidatedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidated(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (liquidatedBuilder_ == null) {
+          liquidated_ = builderForValue.build();
+        } else {
+          liquidatedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeLiquidated(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (liquidatedBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            liquidated_ != null &&
+            liquidated_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getLiquidatedBuilder().mergeFrom(value);
+          } else {
+            liquidated_ = value;
+          }
+        } else {
+          liquidatedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLiquidated() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        liquidated_ = null;
+        if (liquidatedBuilder_ != null) {
+          liquidatedBuilder_.dispose();
+          liquidatedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getLiquidatedBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getLiquidatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLiquidatedOrBuilder() {
+        if (liquidatedBuilder_ != null) {
+          return liquidatedBuilder_.getMessageOrBuilder();
+        } else {
+          return liquidated_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : liquidated_;
+        }
+      }
+      /**
+       * <pre>
+       * Assets liquidated from the borrower
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin liquidated = 3 [json_name = "liquidated", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getLiquidatedFieldBuilder() {
+        if (liquidatedBuilder_ == null) {
+          liquidatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getLiquidated(),
+                  getParentForChildren(),
+                  isClean());
+          liquidated_ = null;
+        }
+        return liquidatedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventLiquidate)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventLiquidate)
+    private static final com.umee.leverage.v1.EventsProto.EventLiquidate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventLiquidate();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventLiquidate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventLiquidate>
+        PARSER = new com.google.protobuf.AbstractParser<EventLiquidate>() {
+      @java.lang.Override
+      public EventLiquidate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventLiquidate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventLiquidate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventLiquidate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventInterestAccrualOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventInterestAccrual)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <pre>
+     * Unix timestamp (in seconds)
+     * </pre>
+     *
+     * <code>uint64 timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTotalInterestList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalInterest(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    int getTotalInterestCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTotalInterestOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalInterestOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getReservedList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getReserved(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    int getReservedCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getReservedOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReservedOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * EventInterestAccrual is emitted when interest accrues in EndBlock
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventInterestAccrual}
+   */
+  public static final class EventInterestAccrual extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventInterestAccrual)
+      EventInterestAccrualOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventInterestAccrual.newBuilder() to construct.
+    private EventInterestAccrual(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventInterestAccrual() {
+      totalInterest_ = java.util.Collections.emptyList();
+      reserved_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventInterestAccrual();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventInterestAccrual_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventInterestAccrual_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventInterestAccrual.class, com.umee.leverage.v1.EventsProto.EventInterestAccrual.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 2;
+    private long timestamp_ = 0L;
+    /**
+     * <pre>
+     * Unix timestamp (in seconds)
+     * </pre>
+     *
+     * <code>uint64 timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
+    public static final int TOTAL_INTEREST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> totalInterest_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTotalInterestList() {
+      return totalInterest_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTotalInterestOrBuilderList() {
+      return totalInterest_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTotalInterestCount() {
+      return totalInterest_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalInterest(int index) {
+      return totalInterest_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalInterestOrBuilder(
+        int index) {
+      return totalInterest_.get(index);
+    }
+
+    public static final int RESERVED_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> reserved_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getReservedList() {
+      return reserved_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getReservedOrBuilderList() {
+      return reserved_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getReservedCount() {
+      return reserved_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getReserved(int index) {
+      return reserved_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReservedOrBuilder(
+        int index) {
+      return reserved_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeUInt64(1, blockHeight_);
+      }
+      if (timestamp_ != 0L) {
+        output.writeUInt64(2, timestamp_);
+      }
+      for (int i = 0; i < totalInterest_.size(); i++) {
+        output.writeMessage(3, totalInterest_.get(i));
+      }
+      for (int i = 0; i < reserved_.size(); i++) {
+        output.writeMessage(4, reserved_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, blockHeight_);
+      }
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, timestamp_);
+      }
+      for (int i = 0; i < totalInterest_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, totalInterest_.get(i));
+      }
+      for (int i = 0; i < reserved_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, reserved_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventInterestAccrual)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventInterestAccrual other = (com.umee.leverage.v1.EventsProto.EventInterestAccrual) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
+      if (!getTotalInterestList()
+          .equals(other.getTotalInterestList())) return false;
+      if (!getReservedList()
+          .equals(other.getReservedList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
+      if (getTotalInterestCount() > 0) {
+        hash = (37 * hash) + TOTAL_INTEREST_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalInterestList().hashCode();
+      }
+      if (getReservedCount() > 0) {
+        hash = (37 * hash) + RESERVED_FIELD_NUMBER;
+        hash = (53 * hash) + getReservedList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventInterestAccrual prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventInterestAccrual is emitted when interest accrues in EndBlock
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventInterestAccrual}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventInterestAccrual)
+        com.umee.leverage.v1.EventsProto.EventInterestAccrualOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventInterestAccrual_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventInterestAccrual_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventInterestAccrual.class, com.umee.leverage.v1.EventsProto.EventInterestAccrual.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventInterestAccrual.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        timestamp_ = 0L;
+        if (totalInterestBuilder_ == null) {
+          totalInterest_ = java.util.Collections.emptyList();
+        } else {
+          totalInterest_ = null;
+          totalInterestBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (reservedBuilder_ == null) {
+          reserved_ = java.util.Collections.emptyList();
+        } else {
+          reserved_ = null;
+          reservedBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventInterestAccrual_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventInterestAccrual getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventInterestAccrual.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventInterestAccrual build() {
+        com.umee.leverage.v1.EventsProto.EventInterestAccrual result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventInterestAccrual buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventInterestAccrual result = new com.umee.leverage.v1.EventsProto.EventInterestAccrual(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.leverage.v1.EventsProto.EventInterestAccrual result) {
+        if (totalInterestBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            totalInterest_ = java.util.Collections.unmodifiableList(totalInterest_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.totalInterest_ = totalInterest_;
+        } else {
+          result.totalInterest_ = totalInterestBuilder_.build();
+        }
+        if (reservedBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            reserved_ = java.util.Collections.unmodifiableList(reserved_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.reserved_ = reserved_;
+        } else {
+          result.reserved_ = reservedBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventInterestAccrual result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timestamp_ = timestamp_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventInterestAccrual) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventInterestAccrual)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventInterestAccrual other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventInterestAccrual.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
+        }
+        if (totalInterestBuilder_ == null) {
+          if (!other.totalInterest_.isEmpty()) {
+            if (totalInterest_.isEmpty()) {
+              totalInterest_ = other.totalInterest_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTotalInterestIsMutable();
+              totalInterest_.addAll(other.totalInterest_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalInterest_.isEmpty()) {
+            if (totalInterestBuilder_.isEmpty()) {
+              totalInterestBuilder_.dispose();
+              totalInterestBuilder_ = null;
+              totalInterest_ = other.totalInterest_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              totalInterestBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalInterestFieldBuilder() : null;
+            } else {
+              totalInterestBuilder_.addAllMessages(other.totalInterest_);
+            }
+          }
+        }
+        if (reservedBuilder_ == null) {
+          if (!other.reserved_.isEmpty()) {
+            if (reserved_.isEmpty()) {
+              reserved_ = other.reserved_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureReservedIsMutable();
+              reserved_.addAll(other.reserved_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.reserved_.isEmpty()) {
+            if (reservedBuilder_.isEmpty()) {
+              reservedBuilder_.dispose();
+              reservedBuilder_ = null;
+              reserved_ = other.reserved_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              reservedBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getReservedFieldBuilder() : null;
+            } else {
+              reservedBuilder_.addAllMessages(other.reserved_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                timestamp_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (totalInterestBuilder_ == null) {
+                  ensureTotalInterestIsMutable();
+                  totalInterest_.add(m);
+                } else {
+                  totalInterestBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (reservedBuilder_ == null) {
+                  ensureReservedIsMutable();
+                  reserved_.add(m);
+                } else {
+                  reservedBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long timestamp_ ;
+      /**
+       * <pre>
+       * Unix timestamp (in seconds)
+       * </pre>
+       *
+       * <code>uint64 timestamp = 2 [json_name = "timestamp"];</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <pre>
+       * Unix timestamp (in seconds)
+       * </pre>
+       *
+       * <code>uint64 timestamp = 2 [json_name = "timestamp"];</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+
+        timestamp_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unix timestamp (in seconds)
+       * </pre>
+       *
+       * <code>uint64 timestamp = 2 [json_name = "timestamp"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        timestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> totalInterest_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalInterestIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          totalInterest_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(totalInterest_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalInterestBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTotalInterestList() {
+        if (totalInterestBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalInterest_);
+        } else {
+          return totalInterestBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTotalInterestCount() {
+        if (totalInterestBuilder_ == null) {
+          return totalInterest_.size();
+        } else {
+          return totalInterestBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalInterest(int index) {
+        if (totalInterestBuilder_ == null) {
+          return totalInterest_.get(index);
+        } else {
+          return totalInterestBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalInterest(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalInterestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalInterestIsMutable();
+          totalInterest_.set(index, value);
+          onChanged();
+        } else {
+          totalInterestBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalInterest(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalInterestBuilder_ == null) {
+          ensureTotalInterestIsMutable();
+          totalInterest_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalInterestBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTotalInterest(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalInterestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalInterestIsMutable();
+          totalInterest_.add(value);
+          onChanged();
+        } else {
+          totalInterestBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTotalInterest(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalInterestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalInterestIsMutable();
+          totalInterest_.add(index, value);
+          onChanged();
+        } else {
+          totalInterestBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTotalInterest(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalInterestBuilder_ == null) {
+          ensureTotalInterestIsMutable();
+          totalInterest_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalInterestBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTotalInterest(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalInterestBuilder_ == null) {
+          ensureTotalInterestIsMutable();
+          totalInterest_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalInterestBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTotalInterest(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (totalInterestBuilder_ == null) {
+          ensureTotalInterestIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalInterest_);
+          onChanged();
+        } else {
+          totalInterestBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTotalInterest() {
+        if (totalInterestBuilder_ == null) {
+          totalInterest_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          totalInterestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTotalInterest(int index) {
+        if (totalInterestBuilder_ == null) {
+          ensureTotalInterestIsMutable();
+          totalInterest_.remove(index);
+          onChanged();
+        } else {
+          totalInterestBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalInterestBuilder(
+          int index) {
+        return getTotalInterestFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalInterestOrBuilder(
+          int index) {
+        if (totalInterestBuilder_ == null) {
+          return totalInterest_.get(index);  } else {
+          return totalInterestBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTotalInterestOrBuilderList() {
+        if (totalInterestBuilder_ != null) {
+          return totalInterestBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalInterest_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTotalInterestBuilder() {
+        return getTotalInterestFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTotalInterestBuilder(
+          int index) {
+        return getTotalInterestFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_interest = 3 [json_name = "totalInterest", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTotalInterestBuilderList() {
+        return getTotalInterestFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalInterestFieldBuilder() {
+        if (totalInterestBuilder_ == null) {
+          totalInterestBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  totalInterest_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          totalInterest_ = null;
+        }
+        return totalInterestBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> reserved_ =
+        java.util.Collections.emptyList();
+      private void ensureReservedIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          reserved_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(reserved_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> reservedBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getReservedList() {
+        if (reservedBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(reserved_);
+        } else {
+          return reservedBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public int getReservedCount() {
+        if (reservedBuilder_ == null) {
+          return reserved_.size();
+        } else {
+          return reservedBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getReserved(int index) {
+        if (reservedBuilder_ == null) {
+          return reserved_.get(index);
+        } else {
+          return reservedBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setReserved(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (reservedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReservedIsMutable();
+          reserved_.set(index, value);
+          onChanged();
+        } else {
+          reservedBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setReserved(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (reservedBuilder_ == null) {
+          ensureReservedIsMutable();
+          reserved_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          reservedBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addReserved(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (reservedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReservedIsMutable();
+          reserved_.add(value);
+          onChanged();
+        } else {
+          reservedBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addReserved(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (reservedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReservedIsMutable();
+          reserved_.add(index, value);
+          onChanged();
+        } else {
+          reservedBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addReserved(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (reservedBuilder_ == null) {
+          ensureReservedIsMutable();
+          reserved_.add(builderForValue.build());
+          onChanged();
+        } else {
+          reservedBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addReserved(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (reservedBuilder_ == null) {
+          ensureReservedIsMutable();
+          reserved_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          reservedBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllReserved(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (reservedBuilder_ == null) {
+          ensureReservedIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, reserved_);
+          onChanged();
+        } else {
+          reservedBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearReserved() {
+        if (reservedBuilder_ == null) {
+          reserved_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          reservedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeReserved(int index) {
+        if (reservedBuilder_ == null) {
+          ensureReservedIsMutable();
+          reserved_.remove(index);
+          onChanged();
+        } else {
+          reservedBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getReservedBuilder(
+          int index) {
+        return getReservedFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReservedOrBuilder(
+          int index) {
+        if (reservedBuilder_ == null) {
+          return reserved_.get(index);  } else {
+          return reservedBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getReservedOrBuilderList() {
+        if (reservedBuilder_ != null) {
+          return reservedBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(reserved_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addReservedBuilder() {
+        return getReservedFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addReservedBuilder(
+          int index) {
+        return getReservedFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin reserved = 4 [json_name = "reserved", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getReservedBuilderList() {
+        return getReservedFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getReservedFieldBuilder() {
+        if (reservedBuilder_ == null) {
+          reservedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  reserved_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          reserved_ = null;
+        }
+        return reservedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventInterestAccrual)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventInterestAccrual)
+    private static final com.umee.leverage.v1.EventsProto.EventInterestAccrual DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventInterestAccrual();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventInterestAccrual getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventInterestAccrual>
+        PARSER = new com.google.protobuf.AbstractParser<EventInterestAccrual>() {
+      @java.lang.Override
+      public EventInterestAccrual parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventInterestAccrual> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventInterestAccrual> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventInterestAccrual getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRepayBadDebtOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventRepayBadDebt)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    java.lang.String getBorrower();
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    com.google.protobuf.ByteString
+        getBorrowerBytes();
+
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    boolean hasAsset();
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAsset();
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventRepayBadDebt is emitted when bad debt is detected and repayed
+   * (potentially partially)
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventRepayBadDebt}
+   */
+  public static final class EventRepayBadDebt extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventRepayBadDebt)
+      EventRepayBadDebtOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRepayBadDebt.newBuilder() to construct.
+    private EventRepayBadDebt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRepayBadDebt() {
+      borrower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRepayBadDebt();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepayBadDebt_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepayBadDebt_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventRepayBadDebt.class, com.umee.leverage.v1.EventsProto.EventRepayBadDebt.Builder.class);
+    }
+
+    public static final int BORROWER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object borrower_ = "";
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    @java.lang.Override
+    public java.lang.String getBorrower() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        borrower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBorrowerBytes() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        borrower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSET_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin asset_;
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsset() {
+      return asset_ != null;
+    }
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAsset() {
+      return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+    }
+    /**
+     * <pre>
+     * Asset repaid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder() {
+      return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
+      }
+      if (asset_ != null) {
+        output.writeMessage(2, getAsset());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
+      }
+      if (asset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAsset());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventRepayBadDebt)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventRepayBadDebt other = (com.umee.leverage.v1.EventsProto.EventRepayBadDebt) obj;
+
+      if (!getBorrower()
+          .equals(other.getBorrower())) return false;
+      if (hasAsset() != other.hasAsset()) return false;
+      if (hasAsset()) {
+        if (!getAsset()
+            .equals(other.getAsset())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BORROWER_FIELD_NUMBER;
+      hash = (53 * hash) + getBorrower().hashCode();
+      if (hasAsset()) {
+        hash = (37 * hash) + ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getAsset().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventRepayBadDebt prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRepayBadDebt is emitted when bad debt is detected and repayed
+     * (potentially partially)
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventRepayBadDebt}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventRepayBadDebt)
+        com.umee.leverage.v1.EventsProto.EventRepayBadDebtOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepayBadDebt_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepayBadDebt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventRepayBadDebt.class, com.umee.leverage.v1.EventsProto.EventRepayBadDebt.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventRepayBadDebt.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        borrower_ = "";
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventRepayBadDebt_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventRepayBadDebt getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventRepayBadDebt.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventRepayBadDebt build() {
+        com.umee.leverage.v1.EventsProto.EventRepayBadDebt result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventRepayBadDebt buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventRepayBadDebt result = new com.umee.leverage.v1.EventsProto.EventRepayBadDebt(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventRepayBadDebt result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.borrower_ = borrower_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.asset_ = assetBuilder_ == null
+              ? asset_
+              : assetBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventRepayBadDebt) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventRepayBadDebt)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventRepayBadDebt other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventRepayBadDebt.getDefaultInstance()) return this;
+        if (!other.getBorrower().isEmpty()) {
+          borrower_ = other.borrower_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasAsset()) {
+          mergeAsset(other.getAsset());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                borrower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object borrower_ = "";
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The borrower.
+       */
+      public java.lang.String getBorrower() {
+        java.lang.Object ref = borrower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          borrower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for borrower.
+       */
+      public com.google.protobuf.ByteString
+          getBorrowerBytes() {
+        java.lang.Object ref = borrower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          borrower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBorrower() {
+        borrower_ = getDefaultInstance().getBorrower();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin asset_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> assetBuilder_;
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return Whether the asset field is set.
+       */
+      public boolean hasAsset() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return The asset.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAsset() {
+        if (assetBuilder_ == null) {
+          return asset_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+        } else {
+          return assetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asset_ = value;
+        } else {
+          assetBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (assetBuilder_ == null) {
+          asset_ = builderForValue.build();
+        } else {
+          assetBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAsset(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            asset_ != null &&
+            asset_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAssetBuilder().mergeFrom(value);
+          } else {
+            asset_ = value;
+          }
+        } else {
+          assetBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAsset() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAssetBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAssetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetOrBuilder() {
+        if (assetBuilder_ != null) {
+          return assetBuilder_.getMessageOrBuilder();
+        } else {
+          return asset_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : asset_;
+        }
+      }
+      /**
+       * <pre>
+       * Asset repaid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin asset = 2 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAssetFieldBuilder() {
+        if (assetBuilder_ == null) {
+          assetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAsset(),
+                  getParentForChildren(),
+                  isClean());
+          asset_ = null;
+        }
+        return assetBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventRepayBadDebt)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventRepayBadDebt)
+    private static final com.umee.leverage.v1.EventsProto.EventRepayBadDebt DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventRepayBadDebt();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventRepayBadDebt getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRepayBadDebt>
+        PARSER = new com.google.protobuf.AbstractParser<EventRepayBadDebt>() {
+      @java.lang.Override
+      public EventRepayBadDebt parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRepayBadDebt> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRepayBadDebt> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventRepayBadDebt getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventReservesExhaustedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventReservesExhausted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    java.lang.String getBorrower();
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    com.google.protobuf.ByteString
+        getBorrowerBytes();
+
+    /**
+     * <pre>
+     * Outstanding bad debt
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+     * @return Whether the outstandingDebt field is set.
+     */
+    boolean hasOutstandingDebt();
+    /**
+     * <pre>
+     * Outstanding bad debt
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+     * @return The outstandingDebt.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getOutstandingDebt();
+    /**
+     * <pre>
+     * Outstanding bad debt
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutstandingDebtOrBuilder();
+
+    /**
+     * <pre>
+     * Module balance remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+     * @return Whether the moduleBalance field is set.
+     */
+    boolean hasModuleBalance();
+    /**
+     * <pre>
+     * Module balance remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+     * @return The moduleBalance.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getModuleBalance();
+    /**
+     * <pre>
+     * Module balance remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleBalanceOrBuilder();
+
+    /**
+     * <pre>
+     * Reserves remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+     * @return Whether the reserves field is set.
+     */
+    boolean hasReserves();
+    /**
+     * <pre>
+     * Reserves remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+     * @return The reserves.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getReserves();
+    /**
+     * <pre>
+     * Reserves remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReservesOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventReservesExhausted is emitted when the module reserves are exhausted
+   * by paying off bad debts.
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventReservesExhausted}
+   */
+  public static final class EventReservesExhausted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventReservesExhausted)
+      EventReservesExhaustedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventReservesExhausted.newBuilder() to construct.
+    private EventReservesExhausted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventReservesExhausted() {
+      borrower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventReservesExhausted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventReservesExhausted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventReservesExhausted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventReservesExhausted.class, com.umee.leverage.v1.EventsProto.EventReservesExhausted.Builder.class);
+    }
+
+    public static final int BORROWER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object borrower_ = "";
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The borrower.
+     */
+    @java.lang.Override
+    public java.lang.String getBorrower() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        borrower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Borrower bech32 address.
+     * </pre>
+     *
+     * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for borrower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBorrowerBytes() {
+      java.lang.Object ref = borrower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        borrower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUTSTANDING_DEBT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin outstandingDebt_;
+    /**
+     * <pre>
+     * Outstanding bad debt
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+     * @return Whether the outstandingDebt field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutstandingDebt() {
+      return outstandingDebt_ != null;
+    }
+    /**
+     * <pre>
+     * Outstanding bad debt
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+     * @return The outstandingDebt.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getOutstandingDebt() {
+      return outstandingDebt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outstandingDebt_;
+    }
+    /**
+     * <pre>
+     * Outstanding bad debt
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutstandingDebtOrBuilder() {
+      return outstandingDebt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outstandingDebt_;
+    }
+
+    public static final int MODULE_BALANCE_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin moduleBalance_;
+    /**
+     * <pre>
+     * Module balance remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+     * @return Whether the moduleBalance field is set.
+     */
+    @java.lang.Override
+    public boolean hasModuleBalance() {
+      return moduleBalance_ != null;
+    }
+    /**
+     * <pre>
+     * Module balance remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+     * @return The moduleBalance.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getModuleBalance() {
+      return moduleBalance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : moduleBalance_;
+    }
+    /**
+     * <pre>
+     * Module balance remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleBalanceOrBuilder() {
+      return moduleBalance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : moduleBalance_;
+    }
+
+    public static final int RESERVES_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin reserves_;
+    /**
+     * <pre>
+     * Reserves remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+     * @return Whether the reserves field is set.
+     */
+    @java.lang.Override
+    public boolean hasReserves() {
+      return reserves_ != null;
+    }
+    /**
+     * <pre>
+     * Reserves remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+     * @return The reserves.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getReserves() {
+      return reserves_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : reserves_;
+    }
+    /**
+     * <pre>
+     * Reserves remaining
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReservesOrBuilder() {
+      return reserves_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : reserves_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
+      }
+      if (outstandingDebt_ != null) {
+        output.writeMessage(2, getOutstandingDebt());
+      }
+      if (moduleBalance_ != null) {
+        output.writeMessage(3, getModuleBalance());
+      }
+      if (reserves_ != null) {
+        output.writeMessage(4, getReserves());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
+      }
+      if (outstandingDebt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOutstandingDebt());
+      }
+      if (moduleBalance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getModuleBalance());
+      }
+      if (reserves_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getReserves());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventReservesExhausted)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventReservesExhausted other = (com.umee.leverage.v1.EventsProto.EventReservesExhausted) obj;
+
+      if (!getBorrower()
+          .equals(other.getBorrower())) return false;
+      if (hasOutstandingDebt() != other.hasOutstandingDebt()) return false;
+      if (hasOutstandingDebt()) {
+        if (!getOutstandingDebt()
+            .equals(other.getOutstandingDebt())) return false;
+      }
+      if (hasModuleBalance() != other.hasModuleBalance()) return false;
+      if (hasModuleBalance()) {
+        if (!getModuleBalance()
+            .equals(other.getModuleBalance())) return false;
+      }
+      if (hasReserves() != other.hasReserves()) return false;
+      if (hasReserves()) {
+        if (!getReserves()
+            .equals(other.getReserves())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BORROWER_FIELD_NUMBER;
+      hash = (53 * hash) + getBorrower().hashCode();
+      if (hasOutstandingDebt()) {
+        hash = (37 * hash) + OUTSTANDING_DEBT_FIELD_NUMBER;
+        hash = (53 * hash) + getOutstandingDebt().hashCode();
+      }
+      if (hasModuleBalance()) {
+        hash = (37 * hash) + MODULE_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getModuleBalance().hashCode();
+      }
+      if (hasReserves()) {
+        hash = (37 * hash) + RESERVES_FIELD_NUMBER;
+        hash = (53 * hash) + getReserves().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventReservesExhausted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventReservesExhausted is emitted when the module reserves are exhausted
+     * by paying off bad debts.
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventReservesExhausted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventReservesExhausted)
+        com.umee.leverage.v1.EventsProto.EventReservesExhaustedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventReservesExhausted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventReservesExhausted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventReservesExhausted.class, com.umee.leverage.v1.EventsProto.EventReservesExhausted.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventReservesExhausted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        borrower_ = "";
+        outstandingDebt_ = null;
+        if (outstandingDebtBuilder_ != null) {
+          outstandingDebtBuilder_.dispose();
+          outstandingDebtBuilder_ = null;
+        }
+        moduleBalance_ = null;
+        if (moduleBalanceBuilder_ != null) {
+          moduleBalanceBuilder_.dispose();
+          moduleBalanceBuilder_ = null;
+        }
+        reserves_ = null;
+        if (reservesBuilder_ != null) {
+          reservesBuilder_.dispose();
+          reservesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventReservesExhausted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventReservesExhausted getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventReservesExhausted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventReservesExhausted build() {
+        com.umee.leverage.v1.EventsProto.EventReservesExhausted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventReservesExhausted buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventReservesExhausted result = new com.umee.leverage.v1.EventsProto.EventReservesExhausted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventReservesExhausted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.borrower_ = borrower_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.outstandingDebt_ = outstandingDebtBuilder_ == null
+              ? outstandingDebt_
+              : outstandingDebtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.moduleBalance_ = moduleBalanceBuilder_ == null
+              ? moduleBalance_
+              : moduleBalanceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.reserves_ = reservesBuilder_ == null
+              ? reserves_
+              : reservesBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventReservesExhausted) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventReservesExhausted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventReservesExhausted other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventReservesExhausted.getDefaultInstance()) return this;
+        if (!other.getBorrower().isEmpty()) {
+          borrower_ = other.borrower_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasOutstandingDebt()) {
+          mergeOutstandingDebt(other.getOutstandingDebt());
+        }
+        if (other.hasModuleBalance()) {
+          mergeModuleBalance(other.getModuleBalance());
+        }
+        if (other.hasReserves()) {
+          mergeReserves(other.getReserves());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                borrower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOutstandingDebtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getModuleBalanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getReservesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object borrower_ = "";
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The borrower.
+       */
+      public java.lang.String getBorrower() {
+        java.lang.Object ref = borrower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          borrower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for borrower.
+       */
+      public com.google.protobuf.ByteString
+          getBorrowerBytes() {
+        java.lang.Object ref = borrower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          borrower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBorrower() {
+        borrower_ = getDefaultInstance().getBorrower();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Borrower bech32 address.
+       * </pre>
+       *
+       * <code>string borrower = 1 [json_name = "borrower", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for borrower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBorrowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        borrower_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin outstandingDebt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> outstandingDebtBuilder_;
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       * @return Whether the outstandingDebt field is set.
+       */
+      public boolean hasOutstandingDebt() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       * @return The outstandingDebt.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getOutstandingDebt() {
+        if (outstandingDebtBuilder_ == null) {
+          return outstandingDebt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outstandingDebt_;
+        } else {
+          return outstandingDebtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOutstandingDebt(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outstandingDebtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outstandingDebt_ = value;
+        } else {
+          outstandingDebtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOutstandingDebt(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (outstandingDebtBuilder_ == null) {
+          outstandingDebt_ = builderForValue.build();
+        } else {
+          outstandingDebtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOutstandingDebt(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outstandingDebtBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            outstandingDebt_ != null &&
+            outstandingDebt_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getOutstandingDebtBuilder().mergeFrom(value);
+          } else {
+            outstandingDebt_ = value;
+          }
+        } else {
+          outstandingDebtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOutstandingDebt() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        outstandingDebt_ = null;
+        if (outstandingDebtBuilder_ != null) {
+          outstandingDebtBuilder_.dispose();
+          outstandingDebtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getOutstandingDebtBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOutstandingDebtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutstandingDebtOrBuilder() {
+        if (outstandingDebtBuilder_ != null) {
+          return outstandingDebtBuilder_.getMessageOrBuilder();
+        } else {
+          return outstandingDebt_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outstandingDebt_;
+        }
+      }
+      /**
+       * <pre>
+       * Outstanding bad debt
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin outstanding_debt = 2 [json_name = "outstandingDebt", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getOutstandingDebtFieldBuilder() {
+        if (outstandingDebtBuilder_ == null) {
+          outstandingDebtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getOutstandingDebt(),
+                  getParentForChildren(),
+                  isClean());
+          outstandingDebt_ = null;
+        }
+        return outstandingDebtBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin moduleBalance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> moduleBalanceBuilder_;
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       * @return Whether the moduleBalance field is set.
+       */
+      public boolean hasModuleBalance() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       * @return The moduleBalance.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getModuleBalance() {
+        if (moduleBalanceBuilder_ == null) {
+          return moduleBalance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : moduleBalance_;
+        } else {
+          return moduleBalanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setModuleBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (moduleBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          moduleBalance_ = value;
+        } else {
+          moduleBalanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setModuleBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (moduleBalanceBuilder_ == null) {
+          moduleBalance_ = builderForValue.build();
+        } else {
+          moduleBalanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeModuleBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (moduleBalanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            moduleBalance_ != null &&
+            moduleBalance_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getModuleBalanceBuilder().mergeFrom(value);
+          } else {
+            moduleBalance_ = value;
+          }
+        } else {
+          moduleBalanceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearModuleBalance() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        moduleBalance_ = null;
+        if (moduleBalanceBuilder_ != null) {
+          moduleBalanceBuilder_.dispose();
+          moduleBalanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getModuleBalanceBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getModuleBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleBalanceOrBuilder() {
+        if (moduleBalanceBuilder_ != null) {
+          return moduleBalanceBuilder_.getMessageOrBuilder();
+        } else {
+          return moduleBalance_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : moduleBalance_;
+        }
+      }
+      /**
+       * <pre>
+       * Module balance remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_balance = 3 [json_name = "moduleBalance", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getModuleBalanceFieldBuilder() {
+        if (moduleBalanceBuilder_ == null) {
+          moduleBalanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getModuleBalance(),
+                  getParentForChildren(),
+                  isClean());
+          moduleBalance_ = null;
+        }
+        return moduleBalanceBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin reserves_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> reservesBuilder_;
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       * @return Whether the reserves field is set.
+       */
+      public boolean hasReserves() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       * @return The reserves.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getReserves() {
+        if (reservesBuilder_ == null) {
+          return reserves_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : reserves_;
+        } else {
+          return reservesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setReserves(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (reservesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reserves_ = value;
+        } else {
+          reservesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setReserves(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (reservesBuilder_ == null) {
+          reserves_ = builderForValue.build();
+        } else {
+          reservesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeReserves(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (reservesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            reserves_ != null &&
+            reserves_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getReservesBuilder().mergeFrom(value);
+          } else {
+            reserves_ = value;
+          }
+        } else {
+          reservesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearReserves() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        reserves_ = null;
+        if (reservesBuilder_ != null) {
+          reservesBuilder_.dispose();
+          reservesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getReservesBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getReservesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReservesOrBuilder() {
+        if (reservesBuilder_ != null) {
+          return reservesBuilder_.getMessageOrBuilder();
+        } else {
+          return reserves_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : reserves_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserves remaining
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin reserves = 4 [json_name = "reserves", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getReservesFieldBuilder() {
+        if (reservesBuilder_ == null) {
+          reservesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getReserves(),
+                  getParentForChildren(),
+                  isClean());
+          reserves_ = null;
+        }
+        return reservesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventReservesExhausted)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventReservesExhausted)
+    private static final com.umee.leverage.v1.EventsProto.EventReservesExhausted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventReservesExhausted();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventReservesExhausted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventReservesExhausted>
+        PARSER = new com.google.protobuf.AbstractParser<EventReservesExhausted>() {
+      @java.lang.Override
+      public EventReservesExhausted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventReservesExhausted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventReservesExhausted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventReservesExhausted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventFundOracleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.leverage.v1.EventFundOracle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getAssetsList();
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAssets(int index);
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    int getAssetsCount();
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAssetsOrBuilderList();
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * EventFundOracle is emitted when sending rewards to oracle module
+   * </pre>
+   *
+   * Protobuf type {@code umee.leverage.v1.EventFundOracle}
+   */
+  public static final class EventFundOracle extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.leverage.v1.EventFundOracle)
+      EventFundOracleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventFundOracle.newBuilder() to construct.
+    private EventFundOracle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventFundOracle() {
+      assets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventFundOracle();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventFundOracle_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventFundOracle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.leverage.v1.EventsProto.EventFundOracle.class, com.umee.leverage.v1.EventsProto.EventFundOracle.Builder.class);
+    }
+
+    public static final int ASSETS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> assets_;
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAssetsList() {
+      return assets_;
+    }
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAssetsOrBuilderList() {
+      return assets_;
+    }
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAssetsCount() {
+      return assets_.size();
+    }
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAssets(int index) {
+      return assets_.get(index);
+    }
+    /**
+     * <pre>
+     * Assets sent to oracle module
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetsOrBuilder(
+        int index) {
+      return assets_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < assets_.size(); i++) {
+        output.writeMessage(1, assets_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < assets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, assets_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.leverage.v1.EventsProto.EventFundOracle)) {
+        return super.equals(obj);
+      }
+      com.umee.leverage.v1.EventsProto.EventFundOracle other = (com.umee.leverage.v1.EventsProto.EventFundOracle) obj;
+
+      if (!getAssetsList()
+          .equals(other.getAssetsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAssetsCount() > 0) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.leverage.v1.EventsProto.EventFundOracle prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventFundOracle is emitted when sending rewards to oracle module
+     * </pre>
+     *
+     * Protobuf type {@code umee.leverage.v1.EventFundOracle}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.leverage.v1.EventFundOracle)
+        com.umee.leverage.v1.EventsProto.EventFundOracleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventFundOracle_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventFundOracle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.leverage.v1.EventsProto.EventFundOracle.class, com.umee.leverage.v1.EventsProto.EventFundOracle.Builder.class);
+      }
+
+      // Construct using com.umee.leverage.v1.EventsProto.EventFundOracle.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+        } else {
+          assets_ = null;
+          assetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.leverage.v1.EventsProto.internal_static_umee_leverage_v1_EventFundOracle_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventFundOracle getDefaultInstanceForType() {
+        return com.umee.leverage.v1.EventsProto.EventFundOracle.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventFundOracle build() {
+        com.umee.leverage.v1.EventsProto.EventFundOracle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.leverage.v1.EventsProto.EventFundOracle buildPartial() {
+        com.umee.leverage.v1.EventsProto.EventFundOracle result = new com.umee.leverage.v1.EventsProto.EventFundOracle(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.leverage.v1.EventsProto.EventFundOracle result) {
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            assets_ = java.util.Collections.unmodifiableList(assets_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.assets_ = assets_;
+        } else {
+          result.assets_ = assetsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.leverage.v1.EventsProto.EventFundOracle result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.leverage.v1.EventsProto.EventFundOracle) {
+          return mergeFrom((com.umee.leverage.v1.EventsProto.EventFundOracle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.leverage.v1.EventsProto.EventFundOracle other) {
+        if (other == com.umee.leverage.v1.EventsProto.EventFundOracle.getDefaultInstance()) return this;
+        if (assetsBuilder_ == null) {
+          if (!other.assets_.isEmpty()) {
+            if (assets_.isEmpty()) {
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAssetsIsMutable();
+              assets_.addAll(other.assets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assets_.isEmpty()) {
+            if (assetsBuilder_.isEmpty()) {
+              assetsBuilder_.dispose();
+              assetsBuilder_ = null;
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              assetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsFieldBuilder() : null;
+            } else {
+              assetsBuilder_.addAllMessages(other.assets_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (assetsBuilder_ == null) {
+                  ensureAssetsIsMutable();
+                  assets_.add(m);
+                } else {
+                  assetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> assets_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          assets_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(assets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> assetsBuilder_;
+
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAssetsList() {
+        if (assetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assets_);
+        } else {
+          return assetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAssetsCount() {
+        if (assetsBuilder_ == null) {
+          return assets_.size();
+        } else {
+          return assetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAssets(int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);
+        } else {
+          return assetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssets(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.set(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssets(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAssets(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assets_);
+          onChanged();
+        } else {
+          assetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAssets() {
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          assetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAssets(int index) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.remove(index);
+          onChanged();
+        } else {
+          assetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetsOrBuilder(
+          int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);  } else {
+          return assetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getAssetsOrBuilderList() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assets_);
+        }
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAssetsBuilder() {
+        return getAssetsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Assets sent to oracle module
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin assets = 1 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getAssetsBuilderList() {
+        return getAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  assets_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.leverage.v1.EventFundOracle)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.leverage.v1.EventFundOracle)
+    private static final com.umee.leverage.v1.EventsProto.EventFundOracle DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.leverage.v1.EventsProto.EventFundOracle();
+    }
+
+    public static com.umee.leverage.v1.EventsProto.EventFundOracle getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventFundOracle>
+        PARSER = new com.google.protobuf.AbstractParser<EventFundOracle>() {
+      @java.lang.Override
+      public EventFundOracle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventFundOracle> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventFundOracle> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.leverage.v1.EventsProto.EventFundOracle getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventSupply_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventSupply_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventWithdraw_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventWithdraw_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventCollaterize_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventCollaterize_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventDecollaterize_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventDecollaterize_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventBorrow_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventBorrow_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventRepay_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventRepay_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventLiquidate_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventLiquidate_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventInterestAccrual_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventInterestAccrual_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventRepayBadDebt_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventRepayBadDebt_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventReservesExhausted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventReservesExhausted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_leverage_v1_EventFundOracle_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_leverage_v1_EventFundOracle_fieldAccessorTable;
 
@@ -126,12 +11238,12 @@ public final class EventsProto {
       "es\030\004 \001(\0132\031.cosmos.base.v1beta1.CoinB\004\310\336\037" +
       "\000R\010reserves\"J\n\017EventFundOracle\0227\n\006assets" +
       "\030\001 \003(\0132\031.cosmos.base.v1beta1.CoinB\004\310\336\037\000R" +
-      "\006assetsB\273\001\n\024com.umee.leverage.v1B\013Events" +
-      "ProtoP\001Z0github.com/umee-network/umee/v5" +
-      "/x/leverage/types\242\002\003ULX\252\002\020Umee.Leverage." +
-      "V1\312\002\020Umee\\Leverage\\V1\342\002\034Umee\\Leverage\\V1" +
-      "\\GPBMetadata\352\002\022Umee::Leverage::V1\310\341\036\000b\006p" +
-      "roto3"
+      "\006assetsB\271\001\n\024com.umee.leverage.v1B\013Events" +
+      "ProtoZ0github.com/umee-network/umee/v5/x" +
+      "/leverage/types\242\002\003ULX\252\002\020Umee.Leverage.V1" +
+      "\312\002\020Umee\\Leverage\\V1\342\002\034Umee\\Leverage\\V1\\G" +
+      "PBMetadata\352\002\022Umee::Leverage::V1\310\341\036\000b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

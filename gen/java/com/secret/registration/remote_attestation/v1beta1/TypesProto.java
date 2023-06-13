@@ -14,34 +14,5786 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QuoteReportOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.remote_attestation.v1beta1.QuoteReport)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    java.lang.String getTimestamp();
+    /**
+     * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The bytes for timestamp.
+     */
+    com.google.protobuf.ByteString
+        getTimestampBytes();
+
+    /**
+     * <code>uint64 version = 3 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+     * @return The isvEnclaveQuoteStatus.
+     */
+    java.lang.String getIsvEnclaveQuoteStatus();
+    /**
+     * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+     * @return The bytes for isvEnclaveQuoteStatus.
+     */
+    com.google.protobuf.ByteString
+        getIsvEnclaveQuoteStatusBytes();
+
+    /**
+     * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+     * @return The platformInfoBlob.
+     */
+    java.lang.String getPlatformInfoBlob();
+    /**
+     * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+     * @return The bytes for platformInfoBlob.
+     */
+    com.google.protobuf.ByteString
+        getPlatformInfoBlobBytes();
+
+    /**
+     * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+     * @return The isvEnclaveQuoteBody.
+     */
+    java.lang.String getIsvEnclaveQuoteBody();
+    /**
+     * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+     * @return The bytes for isvEnclaveQuoteBody.
+     */
+    com.google.protobuf.ByteString
+        getIsvEnclaveQuoteBodyBytes();
+
+    /**
+     * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+     * @return A list containing the advisoryIds.
+     */
+    java.util.List<java.lang.String>
+        getAdvisoryIdsList();
+    /**
+     * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+     * @return The count of advisoryIds.
+     */
+    int getAdvisoryIdsCount();
+    /**
+     * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+     * @param index The index of the element to return.
+     * @return The advisoryIds at the given index.
+     */
+    java.lang.String getAdvisoryIds(int index);
+    /**
+     * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the advisoryIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAdvisoryIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code secret.registration.remote_attestation.v1beta1.QuoteReport}
+   */
+  public static final class QuoteReport extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.remote_attestation.v1beta1.QuoteReport)
+      QuoteReportOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuoteReport.newBuilder() to construct.
+    private QuoteReport(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuoteReport() {
+      id_ = "";
+      timestamp_ = "";
+      isvEnclaveQuoteStatus_ = "";
+      platformInfoBlob_ = "";
+      isvEnclaveQuoteBody_ = "";
+      advisoryIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuoteReport();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReport_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReport_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object timestamp_ = "";
+    /**
+     * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public java.lang.String getTimestamp() {
+      java.lang.Object ref = timestamp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timestamp_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The bytes for timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTimestampBytes() {
+      java.lang.Object ref = timestamp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timestamp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 3;
+    private long version_ = 0L;
+    /**
+     * <code>uint64 version = 3 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int ISV_ENCLAVE_QUOTE_STATUS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object isvEnclaveQuoteStatus_ = "";
+    /**
+     * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+     * @return The isvEnclaveQuoteStatus.
+     */
+    @java.lang.Override
+    public java.lang.String getIsvEnclaveQuoteStatus() {
+      java.lang.Object ref = isvEnclaveQuoteStatus_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        isvEnclaveQuoteStatus_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+     * @return The bytes for isvEnclaveQuoteStatus.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIsvEnclaveQuoteStatusBytes() {
+      java.lang.Object ref = isvEnclaveQuoteStatus_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        isvEnclaveQuoteStatus_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLATFORM_INFO_BLOB_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object platformInfoBlob_ = "";
+    /**
+     * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+     * @return The platformInfoBlob.
+     */
+    @java.lang.Override
+    public java.lang.String getPlatformInfoBlob() {
+      java.lang.Object ref = platformInfoBlob_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        platformInfoBlob_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+     * @return The bytes for platformInfoBlob.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlatformInfoBlobBytes() {
+      java.lang.Object ref = platformInfoBlob_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        platformInfoBlob_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISV_ENCLAVE_QUOTE_BODY_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object isvEnclaveQuoteBody_ = "";
+    /**
+     * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+     * @return The isvEnclaveQuoteBody.
+     */
+    @java.lang.Override
+    public java.lang.String getIsvEnclaveQuoteBody() {
+      java.lang.Object ref = isvEnclaveQuoteBody_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        isvEnclaveQuoteBody_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+     * @return The bytes for isvEnclaveQuoteBody.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIsvEnclaveQuoteBodyBytes() {
+      java.lang.Object ref = isvEnclaveQuoteBody_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        isvEnclaveQuoteBody_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADVISORY_IDS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList advisoryIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+     * @return A list containing the advisoryIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAdvisoryIdsList() {
+      return advisoryIds_;
+    }
+    /**
+     * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+     * @return The count of advisoryIds.
+     */
+    public int getAdvisoryIdsCount() {
+      return advisoryIds_.size();
+    }
+    /**
+     * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+     * @param index The index of the element to return.
+     * @return The advisoryIds at the given index.
+     */
+    public java.lang.String getAdvisoryIds(int index) {
+      return advisoryIds_.get(index);
+    }
+    /**
+     * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the advisoryIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAdvisoryIdsBytes(int index) {
+      return advisoryIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, timestamp_);
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(3, version_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(isvEnclaveQuoteStatus_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, isvEnclaveQuoteStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platformInfoBlob_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, platformInfoBlob_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(isvEnclaveQuoteBody_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, isvEnclaveQuoteBody_);
+      }
+      for (int i = 0; i < advisoryIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, advisoryIds_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, timestamp_);
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, version_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(isvEnclaveQuoteStatus_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, isvEnclaveQuoteStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platformInfoBlob_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, platformInfoBlob_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(isvEnclaveQuoteBody_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, isvEnclaveQuoteBody_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < advisoryIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(advisoryIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAdvisoryIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport other = (com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getTimestamp()
+          .equals(other.getTimestamp())) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (!getIsvEnclaveQuoteStatus()
+          .equals(other.getIsvEnclaveQuoteStatus())) return false;
+      if (!getPlatformInfoBlob()
+          .equals(other.getPlatformInfoBlob())) return false;
+      if (!getIsvEnclaveQuoteBody()
+          .equals(other.getIsvEnclaveQuoteBody())) return false;
+      if (!getAdvisoryIdsList()
+          .equals(other.getAdvisoryIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + getTimestamp().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      hash = (37 * hash) + ISV_ENCLAVE_QUOTE_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getIsvEnclaveQuoteStatus().hashCode();
+      hash = (37 * hash) + PLATFORM_INFO_BLOB_FIELD_NUMBER;
+      hash = (53 * hash) + getPlatformInfoBlob().hashCode();
+      hash = (37 * hash) + ISV_ENCLAVE_QUOTE_BODY_FIELD_NUMBER;
+      hash = (53 * hash) + getIsvEnclaveQuoteBody().hashCode();
+      if (getAdvisoryIdsCount() > 0) {
+        hash = (37 * hash) + ADVISORY_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getAdvisoryIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.remote_attestation.v1beta1.QuoteReport}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.remote_attestation.v1beta1.QuoteReport)
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReport_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReport_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport.Builder.class);
+      }
+
+      // Construct using com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        timestamp_ = "";
+        version_ = 0L;
+        isvEnclaveQuoteStatus_ = "";
+        platformInfoBlob_ = "";
+        isvEnclaveQuoteBody_ = "";
+        advisoryIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReport_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport getDefaultInstanceForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport build() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport buildPartial() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport result = new com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timestamp_ = timestamp_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isvEnclaveQuoteStatus_ = isvEnclaveQuoteStatus_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.platformInfoBlob_ = platformInfoBlob_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.isvEnclaveQuoteBody_ = isvEnclaveQuoteBody_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          advisoryIds_.makeImmutable();
+          result.advisoryIds_ = advisoryIds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport) {
+          return mergeFrom((com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport other) {
+        if (other == com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTimestamp().isEmpty()) {
+          timestamp_ = other.timestamp_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (!other.getIsvEnclaveQuoteStatus().isEmpty()) {
+          isvEnclaveQuoteStatus_ = other.isvEnclaveQuoteStatus_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getPlatformInfoBlob().isEmpty()) {
+          platformInfoBlob_ = other.platformInfoBlob_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getIsvEnclaveQuoteBody().isEmpty()) {
+          isvEnclaveQuoteBody_ = other.isvEnclaveQuoteBody_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.advisoryIds_.isEmpty()) {
+          if (advisoryIds_.isEmpty()) {
+            advisoryIds_ = other.advisoryIds_;
+            bitField0_ |= 0x00000040;
+          } else {
+            ensureAdvisoryIdsIsMutable();
+            advisoryIds_.addAll(other.advisoryIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                timestamp_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                isvEnclaveQuoteStatus_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                platformInfoBlob_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                isvEnclaveQuoteBody_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAdvisoryIdsIsMutable();
+                advisoryIds_.add(s);
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object timestamp_ = "";
+      /**
+       * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+       * @return The timestamp.
+       */
+      public java.lang.String getTimestamp() {
+        java.lang.Object ref = timestamp_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          timestamp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+       * @return The bytes for timestamp.
+       */
+      public com.google.protobuf.ByteString
+          getTimestampBytes() {
+        java.lang.Object ref = timestamp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          timestamp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        timestamp_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        timestamp_ = getDefaultInstance().getTimestamp();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string timestamp = 2 [json_name = "timestamp"];</code>
+       * @param value The bytes for timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestampBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        timestamp_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long version_ ;
+      /**
+       * <code>uint64 version = 3 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <code>uint64 version = 3 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 version = 3 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object isvEnclaveQuoteStatus_ = "";
+      /**
+       * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+       * @return The isvEnclaveQuoteStatus.
+       */
+      public java.lang.String getIsvEnclaveQuoteStatus() {
+        java.lang.Object ref = isvEnclaveQuoteStatus_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          isvEnclaveQuoteStatus_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+       * @return The bytes for isvEnclaveQuoteStatus.
+       */
+      public com.google.protobuf.ByteString
+          getIsvEnclaveQuoteStatusBytes() {
+        java.lang.Object ref = isvEnclaveQuoteStatus_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          isvEnclaveQuoteStatus_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+       * @param value The isvEnclaveQuoteStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsvEnclaveQuoteStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        isvEnclaveQuoteStatus_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsvEnclaveQuoteStatus() {
+        isvEnclaveQuoteStatus_ = getDefaultInstance().getIsvEnclaveQuoteStatus();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string isv_enclave_quote_status = 4 [json_name = "isvEnclaveQuoteStatus", (.gogoproto.jsontag) = "isvEnclaveQuoteStatus"];</code>
+       * @param value The bytes for isvEnclaveQuoteStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsvEnclaveQuoteStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        isvEnclaveQuoteStatus_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object platformInfoBlob_ = "";
+      /**
+       * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+       * @return The platformInfoBlob.
+       */
+      public java.lang.String getPlatformInfoBlob() {
+        java.lang.Object ref = platformInfoBlob_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          platformInfoBlob_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+       * @return The bytes for platformInfoBlob.
+       */
+      public com.google.protobuf.ByteString
+          getPlatformInfoBlobBytes() {
+        java.lang.Object ref = platformInfoBlob_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          platformInfoBlob_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+       * @param value The platformInfoBlob to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformInfoBlob(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        platformInfoBlob_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatformInfoBlob() {
+        platformInfoBlob_ = getDefaultInstance().getPlatformInfoBlob();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string platform_info_blob = 5 [json_name = "platformInfoBlob", (.gogoproto.jsontag) = "platformInfoBlob"];</code>
+       * @param value The bytes for platformInfoBlob to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformInfoBlobBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        platformInfoBlob_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object isvEnclaveQuoteBody_ = "";
+      /**
+       * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+       * @return The isvEnclaveQuoteBody.
+       */
+      public java.lang.String getIsvEnclaveQuoteBody() {
+        java.lang.Object ref = isvEnclaveQuoteBody_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          isvEnclaveQuoteBody_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+       * @return The bytes for isvEnclaveQuoteBody.
+       */
+      public com.google.protobuf.ByteString
+          getIsvEnclaveQuoteBodyBytes() {
+        java.lang.Object ref = isvEnclaveQuoteBody_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          isvEnclaveQuoteBody_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+       * @param value The isvEnclaveQuoteBody to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsvEnclaveQuoteBody(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        isvEnclaveQuoteBody_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsvEnclaveQuoteBody() {
+        isvEnclaveQuoteBody_ = getDefaultInstance().getIsvEnclaveQuoteBody();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string isv_enclave_quote_body = 6 [json_name = "isvEnclaveQuoteBody", (.gogoproto.jsontag) = "isvEnclaveQuoteBody"];</code>
+       * @param value The bytes for isvEnclaveQuoteBody to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsvEnclaveQuoteBodyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        isvEnclaveQuoteBody_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList advisoryIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAdvisoryIdsIsMutable() {
+        if (!advisoryIds_.isModifiable()) {
+          advisoryIds_ = new com.google.protobuf.LazyStringArrayList(advisoryIds_);
+        }
+        bitField0_ |= 0x00000040;
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @return A list containing the advisoryIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAdvisoryIdsList() {
+        advisoryIds_.makeImmutable();
+        return advisoryIds_;
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @return The count of advisoryIds.
+       */
+      public int getAdvisoryIdsCount() {
+        return advisoryIds_.size();
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @param index The index of the element to return.
+       * @return The advisoryIds at the given index.
+       */
+      public java.lang.String getAdvisoryIds(int index) {
+        return advisoryIds_.get(index);
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the advisoryIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAdvisoryIdsBytes(int index) {
+        return advisoryIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @param index The index to set the value at.
+       * @param value The advisoryIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdvisoryIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAdvisoryIdsIsMutable();
+        advisoryIds_.set(index, value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @param value The advisoryIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAdvisoryIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAdvisoryIdsIsMutable();
+        advisoryIds_.add(value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @param values The advisoryIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAdvisoryIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAdvisoryIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, advisoryIds_);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdvisoryIds() {
+        advisoryIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string advisory_ids = 7 [json_name = "advisoryIds", (.gogoproto.customname) = "AdvisoryIDs", (.gogoproto.jsontag) = "advisoryIDs"];</code>
+       * @param value The bytes of the advisoryIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAdvisoryIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAdvisoryIdsIsMutable();
+        advisoryIds_.add(value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.remote_attestation.v1beta1.QuoteReport)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.remote_attestation.v1beta1.QuoteReport)
+    private static final com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport();
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuoteReport>
+        PARSER = new com.google.protobuf.AbstractParser<QuoteReport>() {
+      @java.lang.Override
+      public QuoteReport parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuoteReport> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuoteReport> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReport getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuoteReportBodyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.remote_attestation.v1beta1.QuoteReportBody)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+     * @return The mrEnclave.
+     */
+    java.lang.String getMrEnclave();
+    /**
+     * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+     * @return The bytes for mrEnclave.
+     */
+    com.google.protobuf.ByteString
+        getMrEnclaveBytes();
+
+    /**
+     * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+     * @return The mrSigner.
+     */
+    java.lang.String getMrSigner();
+    /**
+     * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+     * @return The bytes for mrSigner.
+     */
+    com.google.protobuf.ByteString
+        getMrSignerBytes();
+
+    /**
+     * <code>string report_data = 3 [json_name = "reportData"];</code>
+     * @return The reportData.
+     */
+    java.lang.String getReportData();
+    /**
+     * <code>string report_data = 3 [json_name = "reportData"];</code>
+     * @return The bytes for reportData.
+     */
+    com.google.protobuf.ByteString
+        getReportDataBytes();
+  }
+  /**
+   * Protobuf type {@code secret.registration.remote_attestation.v1beta1.QuoteReportBody}
+   */
+  public static final class QuoteReportBody extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.remote_attestation.v1beta1.QuoteReportBody)
+      QuoteReportBodyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuoteReportBody.newBuilder() to construct.
+    private QuoteReportBody(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuoteReportBody() {
+      mrEnclave_ = "";
+      mrSigner_ = "";
+      reportData_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuoteReportBody();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportBody_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportBody_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.Builder.class);
+    }
+
+    public static final int MR_ENCLAVE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mrEnclave_ = "";
+    /**
+     * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+     * @return The mrEnclave.
+     */
+    @java.lang.Override
+    public java.lang.String getMrEnclave() {
+      java.lang.Object ref = mrEnclave_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mrEnclave_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+     * @return The bytes for mrEnclave.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMrEnclaveBytes() {
+      java.lang.Object ref = mrEnclave_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mrEnclave_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MR_SIGNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mrSigner_ = "";
+    /**
+     * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+     * @return The mrSigner.
+     */
+    @java.lang.Override
+    public java.lang.String getMrSigner() {
+      java.lang.Object ref = mrSigner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mrSigner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+     * @return The bytes for mrSigner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMrSignerBytes() {
+      java.lang.Object ref = mrSigner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mrSigner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REPORT_DATA_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reportData_ = "";
+    /**
+     * <code>string report_data = 3 [json_name = "reportData"];</code>
+     * @return The reportData.
+     */
+    @java.lang.Override
+    public java.lang.String getReportData() {
+      java.lang.Object ref = reportData_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reportData_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string report_data = 3 [json_name = "reportData"];</code>
+     * @return The bytes for reportData.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReportDataBytes() {
+      java.lang.Object ref = reportData_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reportData_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mrEnclave_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mrEnclave_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mrSigner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mrSigner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportData_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reportData_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mrEnclave_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mrEnclave_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mrSigner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mrSigner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportData_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reportData_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody other = (com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody) obj;
+
+      if (!getMrEnclave()
+          .equals(other.getMrEnclave())) return false;
+      if (!getMrSigner()
+          .equals(other.getMrSigner())) return false;
+      if (!getReportData()
+          .equals(other.getReportData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MR_ENCLAVE_FIELD_NUMBER;
+      hash = (53 * hash) + getMrEnclave().hashCode();
+      hash = (37 * hash) + MR_SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getMrSigner().hashCode();
+      hash = (37 * hash) + REPORT_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getReportData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.remote_attestation.v1beta1.QuoteReportBody}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.remote_attestation.v1beta1.QuoteReportBody)
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBodyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportBody_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportBody_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.Builder.class);
+      }
+
+      // Construct using com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mrEnclave_ = "";
+        mrSigner_ = "";
+        reportData_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportBody_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody getDefaultInstanceForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody build() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody buildPartial() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody result = new com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mrEnclave_ = mrEnclave_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.mrSigner_ = mrSigner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.reportData_ = reportData_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody) {
+          return mergeFrom((com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody other) {
+        if (other == com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.getDefaultInstance()) return this;
+        if (!other.getMrEnclave().isEmpty()) {
+          mrEnclave_ = other.mrEnclave_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMrSigner().isEmpty()) {
+          mrSigner_ = other.mrSigner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getReportData().isEmpty()) {
+          reportData_ = other.reportData_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mrEnclave_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                mrSigner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                reportData_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mrEnclave_ = "";
+      /**
+       * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+       * @return The mrEnclave.
+       */
+      public java.lang.String getMrEnclave() {
+        java.lang.Object ref = mrEnclave_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mrEnclave_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+       * @return The bytes for mrEnclave.
+       */
+      public com.google.protobuf.ByteString
+          getMrEnclaveBytes() {
+        java.lang.Object ref = mrEnclave_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mrEnclave_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+       * @param value The mrEnclave to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMrEnclave(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mrEnclave_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMrEnclave() {
+        mrEnclave_ = getDefaultInstance().getMrEnclave();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mr_enclave = 1 [json_name = "mrEnclave"];</code>
+       * @param value The bytes for mrEnclave to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMrEnclaveBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mrEnclave_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mrSigner_ = "";
+      /**
+       * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+       * @return The mrSigner.
+       */
+      public java.lang.String getMrSigner() {
+        java.lang.Object ref = mrSigner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mrSigner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+       * @return The bytes for mrSigner.
+       */
+      public com.google.protobuf.ByteString
+          getMrSignerBytes() {
+        java.lang.Object ref = mrSigner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mrSigner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+       * @param value The mrSigner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMrSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mrSigner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMrSigner() {
+        mrSigner_ = getDefaultInstance().getMrSigner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mr_signer = 2 [json_name = "mrSigner"];</code>
+       * @param value The bytes for mrSigner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMrSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mrSigner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reportData_ = "";
+      /**
+       * <code>string report_data = 3 [json_name = "reportData"];</code>
+       * @return The reportData.
+       */
+      public java.lang.String getReportData() {
+        java.lang.Object ref = reportData_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reportData_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string report_data = 3 [json_name = "reportData"];</code>
+       * @return The bytes for reportData.
+       */
+      public com.google.protobuf.ByteString
+          getReportDataBytes() {
+        java.lang.Object ref = reportData_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reportData_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string report_data = 3 [json_name = "reportData"];</code>
+       * @param value The reportData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReportData(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reportData_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string report_data = 3 [json_name = "reportData"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReportData() {
+        reportData_ = getDefaultInstance().getReportData();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string report_data = 3 [json_name = "reportData"];</code>
+       * @param value The bytes for reportData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReportDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reportData_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.remote_attestation.v1beta1.QuoteReportBody)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.remote_attestation.v1beta1.QuoteReportBody)
+    private static final com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody();
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuoteReportBody>
+        PARSER = new com.google.protobuf.AbstractParser<QuoteReportBody>() {
+      @java.lang.Override
+      public QuoteReportBody parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuoteReportBody> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuoteReportBody> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuoteReportDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.remote_attestation.v1beta1.QuoteReportData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 version = 1 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <code>uint64 sign_type = 2 [json_name = "signType"];</code>
+     * @return The signType.
+     */
+    long getSignType();
+
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+     * @return Whether the reportBody field is set.
+     */
+    boolean hasReportBody();
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+     * @return The reportBody.
+     */
+    com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody getReportBody();
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+     */
+    com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBodyOrBuilder getReportBodyOrBuilder();
+  }
+  /**
+   * Protobuf type {@code secret.registration.remote_attestation.v1beta1.QuoteReportData}
+   */
+  public static final class QuoteReportData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.remote_attestation.v1beta1.QuoteReportData)
+      QuoteReportDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuoteReportData.newBuilder() to construct.
+    private QuoteReportData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuoteReportData() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuoteReportData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.Builder.class);
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 1;
+    private long version_ = 0L;
+    /**
+     * <code>uint64 version = 1 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int SIGN_TYPE_FIELD_NUMBER = 2;
+    private long signType_ = 0L;
+    /**
+     * <code>uint64 sign_type = 2 [json_name = "signType"];</code>
+     * @return The signType.
+     */
+    @java.lang.Override
+    public long getSignType() {
+      return signType_;
+    }
+
+    public static final int REPORT_BODY_FIELD_NUMBER = 3;
+    private com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody reportBody_;
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+     * @return Whether the reportBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasReportBody() {
+      return reportBody_ != null;
+    }
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+     * @return The reportBody.
+     */
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody getReportBody() {
+      return reportBody_ == null ? com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.getDefaultInstance() : reportBody_;
+    }
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+     */
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBodyOrBuilder getReportBodyOrBuilder() {
+      return reportBody_ == null ? com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.getDefaultInstance() : reportBody_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (version_ != 0L) {
+        output.writeUInt64(1, version_);
+      }
+      if (signType_ != 0L) {
+        output.writeUInt64(2, signType_);
+      }
+      if (reportBody_ != null) {
+        output.writeMessage(3, getReportBody());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, version_);
+      }
+      if (signType_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, signType_);
+      }
+      if (reportBody_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getReportBody());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData other = (com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData) obj;
+
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (getSignType()
+          != other.getSignType()) return false;
+      if (hasReportBody() != other.hasReportBody()) return false;
+      if (hasReportBody()) {
+        if (!getReportBody()
+            .equals(other.getReportBody())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      hash = (37 * hash) + SIGN_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSignType());
+      if (hasReportBody()) {
+        hash = (37 * hash) + REPORT_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getReportBody().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.remote_attestation.v1beta1.QuoteReportData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.remote_attestation.v1beta1.QuoteReportData)
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.Builder.class);
+      }
+
+      // Construct using com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        version_ = 0L;
+        signType_ = 0L;
+        reportBody_ = null;
+        if (reportBodyBuilder_ != null) {
+          reportBodyBuilder_.dispose();
+          reportBodyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData getDefaultInstanceForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData build() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData buildPartial() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData result = new com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signType_ = signType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.reportBody_ = reportBodyBuilder_ == null
+              ? reportBody_
+              : reportBodyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData) {
+          return mergeFrom((com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData other) {
+        if (other == com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.getDefaultInstance()) return this;
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (other.getSignType() != 0L) {
+          setSignType(other.getSignType());
+        }
+        if (other.hasReportBody()) {
+          mergeReportBody(other.getReportBody());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                signType_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getReportBodyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long version_ ;
+      /**
+       * <code>uint64 version = 1 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <code>uint64 version = 1 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 version = 1 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long signType_ ;
+      /**
+       * <code>uint64 sign_type = 2 [json_name = "signType"];</code>
+       * @return The signType.
+       */
+      @java.lang.Override
+      public long getSignType() {
+        return signType_;
+      }
+      /**
+       * <code>uint64 sign_type = 2 [json_name = "signType"];</code>
+       * @param value The signType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignType(long value) {
+
+        signType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sign_type = 2 [json_name = "signType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signType_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody reportBody_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.Builder, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBodyOrBuilder> reportBodyBuilder_;
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       * @return Whether the reportBody field is set.
+       */
+      public boolean hasReportBody() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       * @return The reportBody.
+       */
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody getReportBody() {
+        if (reportBodyBuilder_ == null) {
+          return reportBody_ == null ? com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.getDefaultInstance() : reportBody_;
+        } else {
+          return reportBodyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       */
+      public Builder setReportBody(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody value) {
+        if (reportBodyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reportBody_ = value;
+        } else {
+          reportBodyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       */
+      public Builder setReportBody(
+          com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.Builder builderForValue) {
+        if (reportBodyBuilder_ == null) {
+          reportBody_ = builderForValue.build();
+        } else {
+          reportBodyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       */
+      public Builder mergeReportBody(com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody value) {
+        if (reportBodyBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            reportBody_ != null &&
+            reportBody_ != com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.getDefaultInstance()) {
+            getReportBodyBuilder().mergeFrom(value);
+          } else {
+            reportBody_ = value;
+          }
+        } else {
+          reportBodyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       */
+      public Builder clearReportBody() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        reportBody_ = null;
+        if (reportBodyBuilder_ != null) {
+          reportBodyBuilder_.dispose();
+          reportBodyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       */
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.Builder getReportBodyBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getReportBodyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       */
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBodyOrBuilder getReportBodyOrBuilder() {
+        if (reportBodyBuilder_ != null) {
+          return reportBodyBuilder_.getMessageOrBuilder();
+        } else {
+          return reportBody_ == null ?
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.getDefaultInstance() : reportBody_;
+        }
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.Builder, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBodyOrBuilder> 
+          getReportBodyFieldBuilder() {
+        if (reportBodyBuilder_ == null) {
+          reportBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBody.Builder, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportBodyOrBuilder>(
+                  getReportBody(),
+                  getParentForChildren(),
+                  isClean());
+          reportBody_ = null;
+        }
+        return reportBodyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.remote_attestation.v1beta1.QuoteReportData)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.remote_attestation.v1beta1.QuoteReportData)
+    private static final com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData();
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuoteReportData>
+        PARSER = new com.google.protobuf.AbstractParser<QuoteReportData>() {
+      @java.lang.Override
+      public QuoteReportData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuoteReportData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuoteReportData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EndorsedAttestationReportOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.remote_attestation.v1beta1.EndorsedAttestationReport)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes report = 1 [json_name = "report"];</code>
+     * @return The report.
+     */
+    com.google.protobuf.ByteString getReport();
+
+    /**
+     * <code>bytes signature = 2 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    com.google.protobuf.ByteString getSignature();
+
+    /**
+     * <code>bytes signing_cert = 3 [json_name = "signingCert"];</code>
+     * @return The signingCert.
+     */
+    com.google.protobuf.ByteString getSigningCert();
+  }
+  /**
+   * Protobuf type {@code secret.registration.remote_attestation.v1beta1.EndorsedAttestationReport}
+   */
+  public static final class EndorsedAttestationReport extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.remote_attestation.v1beta1.EndorsedAttestationReport)
+      EndorsedAttestationReportOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EndorsedAttestationReport.newBuilder() to construct.
+    private EndorsedAttestationReport(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EndorsedAttestationReport() {
+      report_ = com.google.protobuf.ByteString.EMPTY;
+      signature_ = com.google.protobuf.ByteString.EMPTY;
+      signingCert_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EndorsedAttestationReport();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_EndorsedAttestationReport_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_EndorsedAttestationReport_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport.Builder.class);
+    }
+
+    public static final int REPORT_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString report_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes report = 1 [json_name = "report"];</code>
+     * @return The report.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getReport() {
+      return report_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes signature = 2 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignature() {
+      return signature_;
+    }
+
+    public static final int SIGNING_CERT_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString signingCert_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes signing_cert = 3 [json_name = "signingCert"];</code>
+     * @return The signingCert.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSigningCert() {
+      return signingCert_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!report_.isEmpty()) {
+        output.writeBytes(1, report_);
+      }
+      if (!signature_.isEmpty()) {
+        output.writeBytes(2, signature_);
+      }
+      if (!signingCert_.isEmpty()) {
+        output.writeBytes(3, signingCert_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!report_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, report_);
+      }
+      if (!signature_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, signature_);
+      }
+      if (!signingCert_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, signingCert_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport other = (com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport) obj;
+
+      if (!getReport()
+          .equals(other.getReport())) return false;
+      if (!getSignature()
+          .equals(other.getSignature())) return false;
+      if (!getSigningCert()
+          .equals(other.getSigningCert())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REPORT_FIELD_NUMBER;
+      hash = (53 * hash) + getReport().hashCode();
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
+      hash = (37 * hash) + SIGNING_CERT_FIELD_NUMBER;
+      hash = (53 * hash) + getSigningCert().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.remote_attestation.v1beta1.EndorsedAttestationReport}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.remote_attestation.v1beta1.EndorsedAttestationReport)
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReportOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_EndorsedAttestationReport_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_EndorsedAttestationReport_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport.Builder.class);
+      }
+
+      // Construct using com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        report_ = com.google.protobuf.ByteString.EMPTY;
+        signature_ = com.google.protobuf.ByteString.EMPTY;
+        signingCert_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_EndorsedAttestationReport_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport getDefaultInstanceForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport build() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport buildPartial() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport result = new com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.report_ = report_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signature_ = signature_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.signingCert_ = signingCert_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport) {
+          return mergeFrom((com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport other) {
+        if (other == com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport.getDefaultInstance()) return this;
+        if (other.getReport() != com.google.protobuf.ByteString.EMPTY) {
+          setReport(other.getReport());
+        }
+        if (other.getSignature() != com.google.protobuf.ByteString.EMPTY) {
+          setSignature(other.getSignature());
+        }
+        if (other.getSigningCert() != com.google.protobuf.ByteString.EMPTY) {
+          setSigningCert(other.getSigningCert());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                report_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                signature_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                signingCert_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString report_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes report = 1 [json_name = "report"];</code>
+       * @return The report.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getReport() {
+        return report_;
+      }
+      /**
+       * <code>bytes report = 1 [json_name = "report"];</code>
+       * @param value The report to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReport(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        report_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes report = 1 [json_name = "report"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReport() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        report_ = getDefaultInstance().getReport();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @return The signature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignature() {
+        return signature_;
+      }
+      /**
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        signature_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString signingCert_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes signing_cert = 3 [json_name = "signingCert"];</code>
+       * @return The signingCert.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSigningCert() {
+        return signingCert_;
+      }
+      /**
+       * <code>bytes signing_cert = 3 [json_name = "signingCert"];</code>
+       * @param value The signingCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigningCert(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        signingCert_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes signing_cert = 3 [json_name = "signingCert"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigningCert() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        signingCert_ = getDefaultInstance().getSigningCert();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.remote_attestation.v1beta1.EndorsedAttestationReport)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.remote_attestation.v1beta1.EndorsedAttestationReport)
+    private static final com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport();
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EndorsedAttestationReport>
+        PARSER = new com.google.protobuf.AbstractParser<EndorsedAttestationReport>() {
+      @java.lang.Override
+      public EndorsedAttestationReport parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EndorsedAttestationReport> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EndorsedAttestationReport> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.EndorsedAttestationReport getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SGXEC256SignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.remote_attestation.v1beta1.SGXEC256Signature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string gx = 1 [json_name = "gx"];</code>
+     * @return The gx.
+     */
+    java.lang.String getGx();
+    /**
+     * <code>string gx = 1 [json_name = "gx"];</code>
+     * @return The bytes for gx.
+     */
+    com.google.protobuf.ByteString
+        getGxBytes();
+
+    /**
+     * <code>string gy = 2 [json_name = "gy"];</code>
+     * @return The gy.
+     */
+    java.lang.String getGy();
+    /**
+     * <code>string gy = 2 [json_name = "gy"];</code>
+     * @return The bytes for gy.
+     */
+    com.google.protobuf.ByteString
+        getGyBytes();
+  }
+  /**
+   * Protobuf type {@code secret.registration.remote_attestation.v1beta1.SGXEC256Signature}
+   */
+  public static final class SGXEC256Signature extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.remote_attestation.v1beta1.SGXEC256Signature)
+      SGXEC256SignatureOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SGXEC256Signature.newBuilder() to construct.
+    private SGXEC256Signature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SGXEC256Signature() {
+      gx_ = "";
+      gy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SGXEC256Signature();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_SGXEC256Signature_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_SGXEC256Signature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.Builder.class);
+    }
+
+    public static final int GX_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object gx_ = "";
+    /**
+     * <code>string gx = 1 [json_name = "gx"];</code>
+     * @return The gx.
+     */
+    @java.lang.Override
+    public java.lang.String getGx() {
+      java.lang.Object ref = gx_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gx_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string gx = 1 [json_name = "gx"];</code>
+     * @return The bytes for gx.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGxBytes() {
+      java.lang.Object ref = gx_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gx_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object gy_ = "";
+    /**
+     * <code>string gy = 2 [json_name = "gy"];</code>
+     * @return The gy.
+     */
+    @java.lang.Override
+    public java.lang.String getGy() {
+      java.lang.Object ref = gy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string gy = 2 [json_name = "gy"];</code>
+     * @return The bytes for gy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGyBytes() {
+      java.lang.Object ref = gy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gx_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gx_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, gy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gx_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gx_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, gy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature other = (com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature) obj;
+
+      if (!getGx()
+          .equals(other.getGx())) return false;
+      if (!getGy()
+          .equals(other.getGy())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GX_FIELD_NUMBER;
+      hash = (53 * hash) + getGx().hashCode();
+      hash = (37 * hash) + GY_FIELD_NUMBER;
+      hash = (53 * hash) + getGy().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.remote_attestation.v1beta1.SGXEC256Signature}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.remote_attestation.v1beta1.SGXEC256Signature)
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256SignatureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_SGXEC256Signature_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_SGXEC256Signature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.Builder.class);
+      }
+
+      // Construct using com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        gx_ = "";
+        gy_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_SGXEC256Signature_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature getDefaultInstanceForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature build() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature buildPartial() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature result = new com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gx_ = gx_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.gy_ = gy_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature) {
+          return mergeFrom((com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature other) {
+        if (other == com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.getDefaultInstance()) return this;
+        if (!other.getGx().isEmpty()) {
+          gx_ = other.gx_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getGy().isEmpty()) {
+          gy_ = other.gy_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                gx_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                gy_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object gx_ = "";
+      /**
+       * <code>string gx = 1 [json_name = "gx"];</code>
+       * @return The gx.
+       */
+      public java.lang.String getGx() {
+        java.lang.Object ref = gx_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gx_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string gx = 1 [json_name = "gx"];</code>
+       * @return The bytes for gx.
+       */
+      public com.google.protobuf.ByteString
+          getGxBytes() {
+        java.lang.Object ref = gx_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gx_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string gx = 1 [json_name = "gx"];</code>
+       * @param value The gx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGx(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        gx_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gx = 1 [json_name = "gx"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGx() {
+        gx_ = getDefaultInstance().getGx();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gx = 1 [json_name = "gx"];</code>
+       * @param value The bytes for gx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGxBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        gx_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gy_ = "";
+      /**
+       * <code>string gy = 2 [json_name = "gy"];</code>
+       * @return The gy.
+       */
+      public java.lang.String getGy() {
+        java.lang.Object ref = gy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string gy = 2 [json_name = "gy"];</code>
+       * @return The bytes for gy.
+       */
+      public com.google.protobuf.ByteString
+          getGyBytes() {
+        java.lang.Object ref = gy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string gy = 2 [json_name = "gy"];</code>
+       * @param value The gy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGy(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        gy_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gy = 2 [json_name = "gy"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGy() {
+        gy_ = getDefaultInstance().getGy();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gy = 2 [json_name = "gy"];</code>
+       * @param value The bytes for gy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        gy_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.remote_attestation.v1beta1.SGXEC256Signature)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.remote_attestation.v1beta1.SGXEC256Signature)
+    private static final com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature();
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SGXEC256Signature>
+        PARSER = new com.google.protobuf.AbstractParser<SGXEC256Signature>() {
+      @java.lang.Override
+      public SGXEC256Signature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SGXEC256Signature> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SGXEC256Signature> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PlatformInfoBlobOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.registration.remote_attestation.v1beta1.PlatformInfoBlob)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 sgx_epid_group_flags = 1 [json_name = "sgxEpidGroupFlags"];</code>
+     * @return The sgxEpidGroupFlags.
+     */
+    int getSgxEpidGroupFlags();
+
+    /**
+     * <code>uint32 sgx_tcb_evaluation_flags = 2 [json_name = "sgxTcbEvaluationFlags"];</code>
+     * @return The sgxTcbEvaluationFlags.
+     */
+    int getSgxTcbEvaluationFlags();
+
+    /**
+     * <code>uint32 pse_evaluation_flags = 3 [json_name = "pseEvaluationFlags"];</code>
+     * @return The pseEvaluationFlags.
+     */
+    int getPseEvaluationFlags();
+
+    /**
+     * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+     * @return The latestEquivalentTcbPsvn.
+     */
+    java.lang.String getLatestEquivalentTcbPsvn();
+    /**
+     * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+     * @return The bytes for latestEquivalentTcbPsvn.
+     */
+    com.google.protobuf.ByteString
+        getLatestEquivalentTcbPsvnBytes();
+
+    /**
+     * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+     * @return The latestPseIsvsvn.
+     */
+    java.lang.String getLatestPseIsvsvn();
+    /**
+     * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+     * @return The bytes for latestPseIsvsvn.
+     */
+    com.google.protobuf.ByteString
+        getLatestPseIsvsvnBytes();
+
+    /**
+     * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+     * @return The latestPsdaSvn.
+     */
+    java.lang.String getLatestPsdaSvn();
+    /**
+     * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+     * @return The bytes for latestPsdaSvn.
+     */
+    com.google.protobuf.ByteString
+        getLatestPsdaSvnBytes();
+
+    /**
+     * <code>uint32 xeid = 7 [json_name = "xeid"];</code>
+     * @return The xeid.
+     */
+    int getXeid();
+
+    /**
+     * <code>uint32 gid = 8 [json_name = "gid"];</code>
+     * @return The gid.
+     */
+    int getGid();
+
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+     * @return Whether the sgxEc256SignatureT field is set.
+     */
+    boolean hasSgxEc256SignatureT();
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+     * @return The sgxEc256SignatureT.
+     */
+    com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature getSgxEc256SignatureT();
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+     */
+    com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256SignatureOrBuilder getSgxEc256SignatureTOrBuilder();
+  }
+  /**
+   * Protobuf type {@code secret.registration.remote_attestation.v1beta1.PlatformInfoBlob}
+   */
+  public static final class PlatformInfoBlob extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.registration.remote_attestation.v1beta1.PlatformInfoBlob)
+      PlatformInfoBlobOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PlatformInfoBlob.newBuilder() to construct.
+    private PlatformInfoBlob(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PlatformInfoBlob() {
+      latestEquivalentTcbPsvn_ = "";
+      latestPseIsvsvn_ = "";
+      latestPsdaSvn_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PlatformInfoBlob();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_PlatformInfoBlob_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_PlatformInfoBlob_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.Builder.class);
+    }
+
+    public static final int SGX_EPID_GROUP_FLAGS_FIELD_NUMBER = 1;
+    private int sgxEpidGroupFlags_ = 0;
+    /**
+     * <code>uint32 sgx_epid_group_flags = 1 [json_name = "sgxEpidGroupFlags"];</code>
+     * @return The sgxEpidGroupFlags.
+     */
+    @java.lang.Override
+    public int getSgxEpidGroupFlags() {
+      return sgxEpidGroupFlags_;
+    }
+
+    public static final int SGX_TCB_EVALUATION_FLAGS_FIELD_NUMBER = 2;
+    private int sgxTcbEvaluationFlags_ = 0;
+    /**
+     * <code>uint32 sgx_tcb_evaluation_flags = 2 [json_name = "sgxTcbEvaluationFlags"];</code>
+     * @return The sgxTcbEvaluationFlags.
+     */
+    @java.lang.Override
+    public int getSgxTcbEvaluationFlags() {
+      return sgxTcbEvaluationFlags_;
+    }
+
+    public static final int PSE_EVALUATION_FLAGS_FIELD_NUMBER = 3;
+    private int pseEvaluationFlags_ = 0;
+    /**
+     * <code>uint32 pse_evaluation_flags = 3 [json_name = "pseEvaluationFlags"];</code>
+     * @return The pseEvaluationFlags.
+     */
+    @java.lang.Override
+    public int getPseEvaluationFlags() {
+      return pseEvaluationFlags_;
+    }
+
+    public static final int LATEST_EQUIVALENT_TCB_PSVN_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object latestEquivalentTcbPsvn_ = "";
+    /**
+     * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+     * @return The latestEquivalentTcbPsvn.
+     */
+    @java.lang.Override
+    public java.lang.String getLatestEquivalentTcbPsvn() {
+      java.lang.Object ref = latestEquivalentTcbPsvn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        latestEquivalentTcbPsvn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+     * @return The bytes for latestEquivalentTcbPsvn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLatestEquivalentTcbPsvnBytes() {
+      java.lang.Object ref = latestEquivalentTcbPsvn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        latestEquivalentTcbPsvn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LATEST_PSE_ISVSVN_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object latestPseIsvsvn_ = "";
+    /**
+     * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+     * @return The latestPseIsvsvn.
+     */
+    @java.lang.Override
+    public java.lang.String getLatestPseIsvsvn() {
+      java.lang.Object ref = latestPseIsvsvn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        latestPseIsvsvn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+     * @return The bytes for latestPseIsvsvn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLatestPseIsvsvnBytes() {
+      java.lang.Object ref = latestPseIsvsvn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        latestPseIsvsvn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LATEST_PSDA_SVN_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object latestPsdaSvn_ = "";
+    /**
+     * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+     * @return The latestPsdaSvn.
+     */
+    @java.lang.Override
+    public java.lang.String getLatestPsdaSvn() {
+      java.lang.Object ref = latestPsdaSvn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        latestPsdaSvn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+     * @return The bytes for latestPsdaSvn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLatestPsdaSvnBytes() {
+      java.lang.Object ref = latestPsdaSvn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        latestPsdaSvn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int XEID_FIELD_NUMBER = 7;
+    private int xeid_ = 0;
+    /**
+     * <code>uint32 xeid = 7 [json_name = "xeid"];</code>
+     * @return The xeid.
+     */
+    @java.lang.Override
+    public int getXeid() {
+      return xeid_;
+    }
+
+    public static final int GID_FIELD_NUMBER = 8;
+    private int gid_ = 0;
+    /**
+     * <code>uint32 gid = 8 [json_name = "gid"];</code>
+     * @return The gid.
+     */
+    @java.lang.Override
+    public int getGid() {
+      return gid_;
+    }
+
+    public static final int SGX_EC256_SIGNATURE_T_FIELD_NUMBER = 9;
+    private com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature sgxEc256SignatureT_;
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+     * @return Whether the sgxEc256SignatureT field is set.
+     */
+    @java.lang.Override
+    public boolean hasSgxEc256SignatureT() {
+      return sgxEc256SignatureT_ != null;
+    }
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+     * @return The sgxEc256SignatureT.
+     */
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature getSgxEc256SignatureT() {
+      return sgxEc256SignatureT_ == null ? com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.getDefaultInstance() : sgxEc256SignatureT_;
+    }
+    /**
+     * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+     */
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256SignatureOrBuilder getSgxEc256SignatureTOrBuilder() {
+      return sgxEc256SignatureT_ == null ? com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.getDefaultInstance() : sgxEc256SignatureT_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (sgxEpidGroupFlags_ != 0) {
+        output.writeUInt32(1, sgxEpidGroupFlags_);
+      }
+      if (sgxTcbEvaluationFlags_ != 0) {
+        output.writeUInt32(2, sgxTcbEvaluationFlags_);
+      }
+      if (pseEvaluationFlags_ != 0) {
+        output.writeUInt32(3, pseEvaluationFlags_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestEquivalentTcbPsvn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, latestEquivalentTcbPsvn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestPseIsvsvn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, latestPseIsvsvn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestPsdaSvn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, latestPsdaSvn_);
+      }
+      if (xeid_ != 0) {
+        output.writeUInt32(7, xeid_);
+      }
+      if (gid_ != 0) {
+        output.writeUInt32(8, gid_);
+      }
+      if (sgxEc256SignatureT_ != null) {
+        output.writeMessage(9, getSgxEc256SignatureT());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (sgxEpidGroupFlags_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, sgxEpidGroupFlags_);
+      }
+      if (sgxTcbEvaluationFlags_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, sgxTcbEvaluationFlags_);
+      }
+      if (pseEvaluationFlags_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, pseEvaluationFlags_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestEquivalentTcbPsvn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, latestEquivalentTcbPsvn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestPseIsvsvn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, latestPseIsvsvn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(latestPsdaSvn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, latestPsdaSvn_);
+      }
+      if (xeid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, xeid_);
+      }
+      if (gid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, gid_);
+      }
+      if (sgxEc256SignatureT_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getSgxEc256SignatureT());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob)) {
+        return super.equals(obj);
+      }
+      com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob other = (com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob) obj;
+
+      if (getSgxEpidGroupFlags()
+          != other.getSgxEpidGroupFlags()) return false;
+      if (getSgxTcbEvaluationFlags()
+          != other.getSgxTcbEvaluationFlags()) return false;
+      if (getPseEvaluationFlags()
+          != other.getPseEvaluationFlags()) return false;
+      if (!getLatestEquivalentTcbPsvn()
+          .equals(other.getLatestEquivalentTcbPsvn())) return false;
+      if (!getLatestPseIsvsvn()
+          .equals(other.getLatestPseIsvsvn())) return false;
+      if (!getLatestPsdaSvn()
+          .equals(other.getLatestPsdaSvn())) return false;
+      if (getXeid()
+          != other.getXeid()) return false;
+      if (getGid()
+          != other.getGid()) return false;
+      if (hasSgxEc256SignatureT() != other.hasSgxEc256SignatureT()) return false;
+      if (hasSgxEc256SignatureT()) {
+        if (!getSgxEc256SignatureT()
+            .equals(other.getSgxEc256SignatureT())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SGX_EPID_GROUP_FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + getSgxEpidGroupFlags();
+      hash = (37 * hash) + SGX_TCB_EVALUATION_FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + getSgxTcbEvaluationFlags();
+      hash = (37 * hash) + PSE_EVALUATION_FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + getPseEvaluationFlags();
+      hash = (37 * hash) + LATEST_EQUIVALENT_TCB_PSVN_FIELD_NUMBER;
+      hash = (53 * hash) + getLatestEquivalentTcbPsvn().hashCode();
+      hash = (37 * hash) + LATEST_PSE_ISVSVN_FIELD_NUMBER;
+      hash = (53 * hash) + getLatestPseIsvsvn().hashCode();
+      hash = (37 * hash) + LATEST_PSDA_SVN_FIELD_NUMBER;
+      hash = (53 * hash) + getLatestPsdaSvn().hashCode();
+      hash = (37 * hash) + XEID_FIELD_NUMBER;
+      hash = (53 * hash) + getXeid();
+      hash = (37 * hash) + GID_FIELD_NUMBER;
+      hash = (53 * hash) + getGid();
+      if (hasSgxEc256SignatureT()) {
+        hash = (37 * hash) + SGX_EC256_SIGNATURE_T_FIELD_NUMBER;
+        hash = (53 * hash) + getSgxEc256SignatureT().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.registration.remote_attestation.v1beta1.PlatformInfoBlob}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.registration.remote_attestation.v1beta1.PlatformInfoBlob)
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlobOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_PlatformInfoBlob_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_PlatformInfoBlob_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.Builder.class);
+      }
+
+      // Construct using com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sgxEpidGroupFlags_ = 0;
+        sgxTcbEvaluationFlags_ = 0;
+        pseEvaluationFlags_ = 0;
+        latestEquivalentTcbPsvn_ = "";
+        latestPseIsvsvn_ = "";
+        latestPsdaSvn_ = "";
+        xeid_ = 0;
+        gid_ = 0;
+        sgxEc256SignatureT_ = null;
+        if (sgxEc256SignatureTBuilder_ != null) {
+          sgxEc256SignatureTBuilder_.dispose();
+          sgxEc256SignatureTBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.internal_static_secret_registration_remote_attestation_v1beta1_PlatformInfoBlob_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob getDefaultInstanceForType() {
+        return com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob build() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob buildPartial() {
+        com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob result = new com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sgxEpidGroupFlags_ = sgxEpidGroupFlags_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sgxTcbEvaluationFlags_ = sgxTcbEvaluationFlags_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pseEvaluationFlags_ = pseEvaluationFlags_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.latestEquivalentTcbPsvn_ = latestEquivalentTcbPsvn_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.latestPseIsvsvn_ = latestPseIsvsvn_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.latestPsdaSvn_ = latestPsdaSvn_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.xeid_ = xeid_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.gid_ = gid_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.sgxEc256SignatureT_ = sgxEc256SignatureTBuilder_ == null
+              ? sgxEc256SignatureT_
+              : sgxEc256SignatureTBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob) {
+          return mergeFrom((com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob other) {
+        if (other == com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.getDefaultInstance()) return this;
+        if (other.getSgxEpidGroupFlags() != 0) {
+          setSgxEpidGroupFlags(other.getSgxEpidGroupFlags());
+        }
+        if (other.getSgxTcbEvaluationFlags() != 0) {
+          setSgxTcbEvaluationFlags(other.getSgxTcbEvaluationFlags());
+        }
+        if (other.getPseEvaluationFlags() != 0) {
+          setPseEvaluationFlags(other.getPseEvaluationFlags());
+        }
+        if (!other.getLatestEquivalentTcbPsvn().isEmpty()) {
+          latestEquivalentTcbPsvn_ = other.latestEquivalentTcbPsvn_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getLatestPseIsvsvn().isEmpty()) {
+          latestPseIsvsvn_ = other.latestPseIsvsvn_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getLatestPsdaSvn().isEmpty()) {
+          latestPsdaSvn_ = other.latestPsdaSvn_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.getXeid() != 0) {
+          setXeid(other.getXeid());
+        }
+        if (other.getGid() != 0) {
+          setGid(other.getGid());
+        }
+        if (other.hasSgxEc256SignatureT()) {
+          mergeSgxEc256SignatureT(other.getSgxEc256SignatureT());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                sgxEpidGroupFlags_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                sgxTcbEvaluationFlags_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                pseEvaluationFlags_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                latestEquivalentTcbPsvn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                latestPseIsvsvn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                latestPsdaSvn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                xeid_ = input.readUInt32();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                gid_ = input.readUInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                input.readMessage(
+                    getSgxEc256SignatureTFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int sgxEpidGroupFlags_ ;
+      /**
+       * <code>uint32 sgx_epid_group_flags = 1 [json_name = "sgxEpidGroupFlags"];</code>
+       * @return The sgxEpidGroupFlags.
+       */
+      @java.lang.Override
+      public int getSgxEpidGroupFlags() {
+        return sgxEpidGroupFlags_;
+      }
+      /**
+       * <code>uint32 sgx_epid_group_flags = 1 [json_name = "sgxEpidGroupFlags"];</code>
+       * @param value The sgxEpidGroupFlags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSgxEpidGroupFlags(int value) {
+
+        sgxEpidGroupFlags_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 sgx_epid_group_flags = 1 [json_name = "sgxEpidGroupFlags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSgxEpidGroupFlags() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sgxEpidGroupFlags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sgxTcbEvaluationFlags_ ;
+      /**
+       * <code>uint32 sgx_tcb_evaluation_flags = 2 [json_name = "sgxTcbEvaluationFlags"];</code>
+       * @return The sgxTcbEvaluationFlags.
+       */
+      @java.lang.Override
+      public int getSgxTcbEvaluationFlags() {
+        return sgxTcbEvaluationFlags_;
+      }
+      /**
+       * <code>uint32 sgx_tcb_evaluation_flags = 2 [json_name = "sgxTcbEvaluationFlags"];</code>
+       * @param value The sgxTcbEvaluationFlags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSgxTcbEvaluationFlags(int value) {
+
+        sgxTcbEvaluationFlags_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 sgx_tcb_evaluation_flags = 2 [json_name = "sgxTcbEvaluationFlags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSgxTcbEvaluationFlags() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sgxTcbEvaluationFlags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int pseEvaluationFlags_ ;
+      /**
+       * <code>uint32 pse_evaluation_flags = 3 [json_name = "pseEvaluationFlags"];</code>
+       * @return The pseEvaluationFlags.
+       */
+      @java.lang.Override
+      public int getPseEvaluationFlags() {
+        return pseEvaluationFlags_;
+      }
+      /**
+       * <code>uint32 pse_evaluation_flags = 3 [json_name = "pseEvaluationFlags"];</code>
+       * @param value The pseEvaluationFlags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPseEvaluationFlags(int value) {
+
+        pseEvaluationFlags_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 pse_evaluation_flags = 3 [json_name = "pseEvaluationFlags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPseEvaluationFlags() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pseEvaluationFlags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object latestEquivalentTcbPsvn_ = "";
+      /**
+       * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+       * @return The latestEquivalentTcbPsvn.
+       */
+      public java.lang.String getLatestEquivalentTcbPsvn() {
+        java.lang.Object ref = latestEquivalentTcbPsvn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          latestEquivalentTcbPsvn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+       * @return The bytes for latestEquivalentTcbPsvn.
+       */
+      public com.google.protobuf.ByteString
+          getLatestEquivalentTcbPsvnBytes() {
+        java.lang.Object ref = latestEquivalentTcbPsvn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          latestEquivalentTcbPsvn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+       * @param value The latestEquivalentTcbPsvn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestEquivalentTcbPsvn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        latestEquivalentTcbPsvn_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestEquivalentTcbPsvn() {
+        latestEquivalentTcbPsvn_ = getDefaultInstance().getLatestEquivalentTcbPsvn();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string latest_equivalent_tcb_psvn = 4 [json_name = "latestEquivalentTcbPsvn"];</code>
+       * @param value The bytes for latestEquivalentTcbPsvn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestEquivalentTcbPsvnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        latestEquivalentTcbPsvn_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object latestPseIsvsvn_ = "";
+      /**
+       * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+       * @return The latestPseIsvsvn.
+       */
+      public java.lang.String getLatestPseIsvsvn() {
+        java.lang.Object ref = latestPseIsvsvn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          latestPseIsvsvn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+       * @return The bytes for latestPseIsvsvn.
+       */
+      public com.google.protobuf.ByteString
+          getLatestPseIsvsvnBytes() {
+        java.lang.Object ref = latestPseIsvsvn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          latestPseIsvsvn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+       * @param value The latestPseIsvsvn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestPseIsvsvn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        latestPseIsvsvn_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestPseIsvsvn() {
+        latestPseIsvsvn_ = getDefaultInstance().getLatestPseIsvsvn();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string latest_pse_isvsvn = 5 [json_name = "latestPseIsvsvn"];</code>
+       * @param value The bytes for latestPseIsvsvn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestPseIsvsvnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        latestPseIsvsvn_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object latestPsdaSvn_ = "";
+      /**
+       * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+       * @return The latestPsdaSvn.
+       */
+      public java.lang.String getLatestPsdaSvn() {
+        java.lang.Object ref = latestPsdaSvn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          latestPsdaSvn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+       * @return The bytes for latestPsdaSvn.
+       */
+      public com.google.protobuf.ByteString
+          getLatestPsdaSvnBytes() {
+        java.lang.Object ref = latestPsdaSvn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          latestPsdaSvn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+       * @param value The latestPsdaSvn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestPsdaSvn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        latestPsdaSvn_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestPsdaSvn() {
+        latestPsdaSvn_ = getDefaultInstance().getLatestPsdaSvn();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string latest_psda_svn = 6 [json_name = "latestPsdaSvn"];</code>
+       * @param value The bytes for latestPsdaSvn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestPsdaSvnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        latestPsdaSvn_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private int xeid_ ;
+      /**
+       * <code>uint32 xeid = 7 [json_name = "xeid"];</code>
+       * @return The xeid.
+       */
+      @java.lang.Override
+      public int getXeid() {
+        return xeid_;
+      }
+      /**
+       * <code>uint32 xeid = 7 [json_name = "xeid"];</code>
+       * @param value The xeid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXeid(int value) {
+
+        xeid_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 xeid = 7 [json_name = "xeid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearXeid() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        xeid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int gid_ ;
+      /**
+       * <code>uint32 gid = 8 [json_name = "gid"];</code>
+       * @return The gid.
+       */
+      @java.lang.Override
+      public int getGid() {
+        return gid_;
+      }
+      /**
+       * <code>uint32 gid = 8 [json_name = "gid"];</code>
+       * @param value The gid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGid(int value) {
+
+        gid_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 gid = 8 [json_name = "gid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGid() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        gid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature sgxEc256SignatureT_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature, com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.Builder, com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256SignatureOrBuilder> sgxEc256SignatureTBuilder_;
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       * @return Whether the sgxEc256SignatureT field is set.
+       */
+      public boolean hasSgxEc256SignatureT() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       * @return The sgxEc256SignatureT.
+       */
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature getSgxEc256SignatureT() {
+        if (sgxEc256SignatureTBuilder_ == null) {
+          return sgxEc256SignatureT_ == null ? com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.getDefaultInstance() : sgxEc256SignatureT_;
+        } else {
+          return sgxEc256SignatureTBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       */
+      public Builder setSgxEc256SignatureT(com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature value) {
+        if (sgxEc256SignatureTBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sgxEc256SignatureT_ = value;
+        } else {
+          sgxEc256SignatureTBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       */
+      public Builder setSgxEc256SignatureT(
+          com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.Builder builderForValue) {
+        if (sgxEc256SignatureTBuilder_ == null) {
+          sgxEc256SignatureT_ = builderForValue.build();
+        } else {
+          sgxEc256SignatureTBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       */
+      public Builder mergeSgxEc256SignatureT(com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature value) {
+        if (sgxEc256SignatureTBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            sgxEc256SignatureT_ != null &&
+            sgxEc256SignatureT_ != com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.getDefaultInstance()) {
+            getSgxEc256SignatureTBuilder().mergeFrom(value);
+          } else {
+            sgxEc256SignatureT_ = value;
+          }
+        } else {
+          sgxEc256SignatureTBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       */
+      public Builder clearSgxEc256SignatureT() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        sgxEc256SignatureT_ = null;
+        if (sgxEc256SignatureTBuilder_ != null) {
+          sgxEc256SignatureTBuilder_.dispose();
+          sgxEc256SignatureTBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       */
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.Builder getSgxEc256SignatureTBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getSgxEc256SignatureTFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       */
+      public com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256SignatureOrBuilder getSgxEc256SignatureTOrBuilder() {
+        if (sgxEc256SignatureTBuilder_ != null) {
+          return sgxEc256SignatureTBuilder_.getMessageOrBuilder();
+        } else {
+          return sgxEc256SignatureT_ == null ?
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.getDefaultInstance() : sgxEc256SignatureT_;
+        }
+      }
+      /**
+       * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature, com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.Builder, com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256SignatureOrBuilder> 
+          getSgxEc256SignatureTFieldBuilder() {
+        if (sgxEc256SignatureTBuilder_ == null) {
+          sgxEc256SignatureTBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature, com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256Signature.Builder, com.secret.registration.remote_attestation.v1beta1.TypesProto.SGXEC256SignatureOrBuilder>(
+                  getSgxEc256SignatureT(),
+                  getParentForChildren(),
+                  isClean());
+          sgxEc256SignatureT_ = null;
+        }
+        return sgxEc256SignatureTBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.registration.remote_attestation.v1beta1.PlatformInfoBlob)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.registration.remote_attestation.v1beta1.PlatformInfoBlob)
+    private static final com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob();
+    }
+
+    public static com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PlatformInfoBlob>
+        PARSER = new com.google.protobuf.AbstractParser<PlatformInfoBlob>() {
+      @java.lang.Override
+      public PlatformInfoBlob parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PlatformInfoBlob> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PlatformInfoBlob> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_remote_attestation_v1beta1_QuoteReport_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_remote_attestation_v1beta1_QuoteReport_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportBody_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportBody_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_remote_attestation_v1beta1_QuoteReportData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_remote_attestation_v1beta1_EndorsedAttestationReport_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_remote_attestation_v1beta1_EndorsedAttestationReport_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_remote_attestation_v1beta1_SGXEC256Signature_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_remote_attestation_v1beta1_SGXEC256Signature_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_registration_remote_attestation_v1beta1_PlatformInfoBlob_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_registration_remote_attestation_v1beta1_PlatformInfoBlob_fieldAccessorTable;
 
@@ -89,16 +5841,16 @@ public final class TypesProto {
       "d\022\020\n\003gid\030\010 \001(\rR\003gid\022t\n\025sgx_ec256_signatu" +
       "re_t\030\t \001(\0132A.secret.registration.remote_" +
       "attestation.v1beta1.SGXEC256SignatureR\022s" +
-      "gxEc256SignatureTB\344\002\n2com.secret.registr" +
+      "gxEc256SignatureTB\342\002\n2com.secret.registr" +
       "ation.remote_attestation.v1beta1B\nTypesP" +
-      "rotoP\001ZCgithub.com/scrtlabs/SecretNetwor" +
-      "k/x/registration/remote_attestation\242\002\003SR" +
-      "R\252\002-Secret.Registration.RemoteAttestatio" +
-      "n.V1beta1\312\002-Secret\\Registration\\RemoteAt" +
-      "testation\\V1beta1\342\0029Secret\\Registration\\" +
-      "RemoteAttestation\\V1beta1\\GPBMetadata\352\0020" +
-      "Secret::Registration::RemoteAttestation:" +
-      ":V1beta1\310\341\036\000\250\342\036\001b\006proto3"
+      "rotoZCgithub.com/scrtlabs/SecretNetwork/" +
+      "x/registration/remote_attestation\242\002\003SRR\252" +
+      "\002-Secret.Registration.RemoteAttestation." +
+      "V1beta1\312\002-Secret\\Registration\\RemoteAtte" +
+      "station\\V1beta1\342\0029Secret\\Registration\\Re" +
+      "moteAttestation\\V1beta1\\GPBMetadata\352\0020Se" +
+      "cret::Registration::RemoteAttestation::V" +
+      "1beta1\310\341\036\000\250\342\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

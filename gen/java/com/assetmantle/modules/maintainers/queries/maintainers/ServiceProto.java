@@ -35,15 +35,15 @@ public final class ServiceProto {
       "est\032B.assetmantle.modules.maintainers.qu" +
       "eries.maintainers.QueryResponse\"/\202\323\344\223\002)\022" +
       "\'/mantle/maintainers/v1beta1/maintainers" +
-      "B\271\002\n7com.assetmantle.modules.maintainers" +
-      ".queries.maintainersB\014ServiceProtoP\001\242\002\005A" +
-      "MMQM\252\0023Assetmantle.Modules.Maintainers.Q" +
-      "ueries.Maintainers\312\0023Assetmantle\\Modules" +
-      "\\Maintainers\\Queries\\Maintainers\342\002?Asset" +
-      "mantle\\Modules\\Maintainers\\Queries\\Maint" +
-      "ainers\\GPBMetadata\352\0027Assetmantle::Module" +
-      "s::Maintainers::Queries::Maintainersb\006pr" +
-      "oto3"
+      "B\267\002\n7com.assetmantle.modules.maintainers" +
+      ".queries.maintainersB\014ServiceProto\242\002\005AMM" +
+      "QM\252\0023Assetmantle.Modules.Maintainers.Que" +
+      "ries.Maintainers\312\0023Assetmantle\\Modules\\M" +
+      "aintainers\\Queries\\Maintainers\342\002?Assetma" +
+      "ntle\\Modules\\Maintainers\\Queries\\Maintai" +
+      "ners\\GPBMetadata\352\0027Assetmantle::Modules:" +
+      ":Maintainers::Queries::Maintainersb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

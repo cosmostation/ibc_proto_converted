@@ -14,34 +14,3962 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryAirdropsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.QueryAirdropsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAirdropsRequest is request type for the Query/Airdrops RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.QueryAirdropsRequest}
+   */
+  public static final class QueryAirdropsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.QueryAirdropsRequest)
+      QueryAirdropsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAirdropsRequest.newBuilder() to construct.
+    private QueryAirdropsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAirdropsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAirdropsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest other = (com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAirdropsRequest is request type for the Query/Airdrops RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.QueryAirdropsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.QueryAirdropsRequest)
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest build() {
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest buildPartial() {
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest result = new com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest) {
+          return mergeFrom((com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest other) {
+        if (other == com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.QueryAirdropsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.QueryAirdropsRequest)
+    private static final com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest();
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAirdropsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAirdropsRequest>() {
+      @java.lang.Override
+      public QueryAirdropsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAirdropsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAirdropsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAirdropsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.QueryAirdropsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> 
+        getAirdropsList();
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrops(int index);
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    int getAirdropsCount();
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+        getAirdropsOrBuilderList();
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAirdropsResponse is response type for the Query/Airdrops RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.QueryAirdropsResponse}
+   */
+  public static final class QueryAirdropsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.QueryAirdropsResponse)
+      QueryAirdropsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAirdropsResponse.newBuilder() to construct.
+    private QueryAirdropsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAirdropsResponse() {
+      airdrops_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAirdropsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.Builder.class);
+    }
+
+    public static final int AIRDROPS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> airdrops_;
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> getAirdropsList() {
+      return airdrops_;
+    }
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+        getAirdropsOrBuilderList() {
+      return airdrops_;
+    }
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAirdropsCount() {
+      return airdrops_.size();
+    }
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrops(int index) {
+      return airdrops_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropsOrBuilder(
+        int index) {
+      return airdrops_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < airdrops_.size(); i++) {
+        output.writeMessage(1, airdrops_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < airdrops_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, airdrops_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse other = (com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse) obj;
+
+      if (!getAirdropsList()
+          .equals(other.getAirdropsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAirdropsCount() > 0) {
+        hash = (37 * hash) + AIRDROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getAirdropsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAirdropsResponse is response type for the Query/Airdrops RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.QueryAirdropsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.QueryAirdropsResponse)
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (airdropsBuilder_ == null) {
+          airdrops_ = java.util.Collections.emptyList();
+        } else {
+          airdrops_ = null;
+          airdropsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse build() {
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse buildPartial() {
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse result = new com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse result) {
+        if (airdropsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            airdrops_ = java.util.Collections.unmodifiableList(airdrops_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.airdrops_ = airdrops_;
+        } else {
+          result.airdrops_ = airdropsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse) {
+          return mergeFrom((com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse other) {
+        if (other == com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.getDefaultInstance()) return this;
+        if (airdropsBuilder_ == null) {
+          if (!other.airdrops_.isEmpty()) {
+            if (airdrops_.isEmpty()) {
+              airdrops_ = other.airdrops_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAirdropsIsMutable();
+              airdrops_.addAll(other.airdrops_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.airdrops_.isEmpty()) {
+            if (airdropsBuilder_.isEmpty()) {
+              airdropsBuilder_.dispose();
+              airdropsBuilder_ = null;
+              airdrops_ = other.airdrops_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              airdropsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAirdropsFieldBuilder() : null;
+            } else {
+              airdropsBuilder_.addAllMessages(other.airdrops_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.claim.v1beta1.ClaimProto.Airdrop m =
+                    input.readMessage(
+                        com.crescent.claim.v1beta1.ClaimProto.Airdrop.parser(),
+                        extensionRegistry);
+                if (airdropsBuilder_ == null) {
+                  ensureAirdropsIsMutable();
+                  airdrops_.add(m);
+                } else {
+                  airdropsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> airdrops_ =
+        java.util.Collections.emptyList();
+      private void ensureAirdropsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          airdrops_ = new java.util.ArrayList<com.crescent.claim.v1beta1.ClaimProto.Airdrop>(airdrops_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> airdropsBuilder_;
+
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> getAirdropsList() {
+        if (airdropsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(airdrops_);
+        } else {
+          return airdropsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAirdropsCount() {
+        if (airdropsBuilder_ == null) {
+          return airdrops_.size();
+        } else {
+          return airdropsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrops(int index) {
+        if (airdropsBuilder_ == null) {
+          return airdrops_.get(index);
+        } else {
+          return airdropsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAirdrops(
+          int index, com.crescent.claim.v1beta1.ClaimProto.Airdrop value) {
+        if (airdropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAirdropsIsMutable();
+          airdrops_.set(index, value);
+          onChanged();
+        } else {
+          airdropsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAirdrops(
+          int index, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder builderForValue) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          airdrops_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          airdropsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAirdrops(com.crescent.claim.v1beta1.ClaimProto.Airdrop value) {
+        if (airdropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAirdropsIsMutable();
+          airdrops_.add(value);
+          onChanged();
+        } else {
+          airdropsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAirdrops(
+          int index, com.crescent.claim.v1beta1.ClaimProto.Airdrop value) {
+        if (airdropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAirdropsIsMutable();
+          airdrops_.add(index, value);
+          onChanged();
+        } else {
+          airdropsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAirdrops(
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder builderForValue) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          airdrops_.add(builderForValue.build());
+          onChanged();
+        } else {
+          airdropsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAirdrops(
+          int index, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder builderForValue) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          airdrops_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          airdropsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAirdrops(
+          java.lang.Iterable<? extends com.crescent.claim.v1beta1.ClaimProto.Airdrop> values) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, airdrops_);
+          onChanged();
+        } else {
+          airdropsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAirdrops() {
+        if (airdropsBuilder_ == null) {
+          airdrops_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          airdropsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAirdrops(int index) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          airdrops_.remove(index);
+          onChanged();
+        } else {
+          airdropsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder getAirdropsBuilder(
+          int index) {
+        return getAirdropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropsOrBuilder(
+          int index) {
+        if (airdropsBuilder_ == null) {
+          return airdrops_.get(index);  } else {
+          return airdropsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+           getAirdropsOrBuilderList() {
+        if (airdropsBuilder_ != null) {
+          return airdropsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(airdrops_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder addAirdropsBuilder() {
+        return getAirdropsFieldBuilder().addBuilder(
+            com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder addAirdropsBuilder(
+          int index) {
+        return getAirdropsFieldBuilder().addBuilder(
+            index, com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder> 
+           getAirdropsBuilderList() {
+        return getAirdropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+          getAirdropsFieldBuilder() {
+        if (airdropsBuilder_ == null) {
+          airdropsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder>(
+                  airdrops_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          airdrops_ = null;
+        }
+        return airdropsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.QueryAirdropsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.QueryAirdropsResponse)
+    private static final com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse();
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAirdropsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAirdropsResponse>() {
+      @java.lang.Override
+      public QueryAirdropsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAirdropsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAirdropsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAirdropRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.QueryAirdropRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+     * @return The airdropId.
+     */
+    long getAirdropId();
+  }
+  /**
+   * <pre>
+   * QueryAirdropRequest is request type for the Query/Airdrop RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.QueryAirdropRequest}
+   */
+  public static final class QueryAirdropRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.QueryAirdropRequest)
+      QueryAirdropRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAirdropRequest.newBuilder() to construct.
+    private QueryAirdropRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAirdropRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAirdropRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest.Builder.class);
+    }
+
+    public static final int AIRDROP_ID_FIELD_NUMBER = 1;
+    private long airdropId_ = 0L;
+    /**
+     * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+     * @return The airdropId.
+     */
+    @java.lang.Override
+    public long getAirdropId() {
+      return airdropId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (airdropId_ != 0L) {
+        output.writeUInt64(1, airdropId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (airdropId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, airdropId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest other = (com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest) obj;
+
+      if (getAirdropId()
+          != other.getAirdropId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AIRDROP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAirdropId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAirdropRequest is request type for the Query/Airdrop RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.QueryAirdropRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.QueryAirdropRequest)
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        airdropId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest build() {
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest buildPartial() {
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest result = new com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.airdropId_ = airdropId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest) {
+          return mergeFrom((com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest other) {
+        if (other == com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest.getDefaultInstance()) return this;
+        if (other.getAirdropId() != 0L) {
+          setAirdropId(other.getAirdropId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                airdropId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long airdropId_ ;
+      /**
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @return The airdropId.
+       */
+      @java.lang.Override
+      public long getAirdropId() {
+        return airdropId_;
+      }
+      /**
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @param value The airdropId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAirdropId(long value) {
+
+        airdropId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAirdropId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        airdropId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.QueryAirdropRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.QueryAirdropRequest)
+    private static final com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest();
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAirdropRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAirdropRequest>() {
+      @java.lang.Override
+      public QueryAirdropRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAirdropRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAirdropRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.QueryProto.QueryAirdropRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAirdropResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.QueryAirdropResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+     * @return Whether the airdrop field is set.
+     */
+    boolean hasAirdrop();
+    /**
+     * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+     * @return The airdrop.
+     */
+    com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrop();
+    /**
+     * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAirdropResponse is response type for the Query/Airdrop RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.QueryAirdropResponse}
+   */
+  public static final class QueryAirdropResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.QueryAirdropResponse)
+      QueryAirdropResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAirdropResponse.newBuilder() to construct.
+    private QueryAirdropResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAirdropResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAirdropResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.Builder.class);
+    }
+
+    public static final int AIRDROP_FIELD_NUMBER = 1;
+    private com.crescent.claim.v1beta1.ClaimProto.Airdrop airdrop_;
+    /**
+     * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+     * @return Whether the airdrop field is set.
+     */
+    @java.lang.Override
+    public boolean hasAirdrop() {
+      return airdrop_ != null;
+    }
+    /**
+     * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+     * @return The airdrop.
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrop() {
+      return airdrop_ == null ? com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance() : airdrop_;
+    }
+    /**
+     * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropOrBuilder() {
+      return airdrop_ == null ? com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance() : airdrop_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (airdrop_ != null) {
+        output.writeMessage(1, getAirdrop());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (airdrop_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAirdrop());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse other = (com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse) obj;
+
+      if (hasAirdrop() != other.hasAirdrop()) return false;
+      if (hasAirdrop()) {
+        if (!getAirdrop()
+            .equals(other.getAirdrop())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAirdrop()) {
+        hash = (37 * hash) + AIRDROP_FIELD_NUMBER;
+        hash = (53 * hash) + getAirdrop().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAirdropResponse is response type for the Query/Airdrop RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.QueryAirdropResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.QueryAirdropResponse)
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        airdrop_ = null;
+        if (airdropBuilder_ != null) {
+          airdropBuilder_.dispose();
+          airdropBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryAirdropResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse build() {
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse buildPartial() {
+        com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse result = new com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.airdrop_ = airdropBuilder_ == null
+              ? airdrop_
+              : airdropBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse) {
+          return mergeFrom((com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse other) {
+        if (other == com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.getDefaultInstance()) return this;
+        if (other.hasAirdrop()) {
+          mergeAirdrop(other.getAirdrop());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAirdropFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.claim.v1beta1.ClaimProto.Airdrop airdrop_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> airdropBuilder_;
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       * @return Whether the airdrop field is set.
+       */
+      public boolean hasAirdrop() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       * @return The airdrop.
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrop() {
+        if (airdropBuilder_ == null) {
+          return airdrop_ == null ? com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance() : airdrop_;
+        } else {
+          return airdropBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAirdrop(com.crescent.claim.v1beta1.ClaimProto.Airdrop value) {
+        if (airdropBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          airdrop_ = value;
+        } else {
+          airdropBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAirdrop(
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder builderForValue) {
+        if (airdropBuilder_ == null) {
+          airdrop_ = builderForValue.build();
+        } else {
+          airdropBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAirdrop(com.crescent.claim.v1beta1.ClaimProto.Airdrop value) {
+        if (airdropBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            airdrop_ != null &&
+            airdrop_ != com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance()) {
+            getAirdropBuilder().mergeFrom(value);
+          } else {
+            airdrop_ = value;
+          }
+        } else {
+          airdropBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAirdrop() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        airdrop_ = null;
+        if (airdropBuilder_ != null) {
+          airdropBuilder_.dispose();
+          airdropBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder getAirdropBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAirdropFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropOrBuilder() {
+        if (airdropBuilder_ != null) {
+          return airdropBuilder_.getMessageOrBuilder();
+        } else {
+          return airdrop_ == null ?
+              com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance() : airdrop_;
+        }
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+          getAirdropFieldBuilder() {
+        if (airdropBuilder_ == null) {
+          airdropBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder>(
+                  getAirdrop(),
+                  getParentForChildren(),
+                  isClean());
+          airdrop_ = null;
+        }
+        return airdropBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.QueryAirdropResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.QueryAirdropResponse)
+    private static final com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse();
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAirdropResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAirdropResponse>() {
+      @java.lang.Override
+      public QueryAirdropResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAirdropResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAirdropResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimRecordRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.QueryClaimRecordRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+     * @return The airdropId.
+     */
+    long getAirdropId();
+
+    /**
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+  }
+  /**
+   * <pre>
+   * QueryClaimRecordRequest is request type for the Query/ClaimRecord RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.QueryClaimRecordRequest}
+   */
+  public static final class QueryClaimRecordRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.QueryClaimRecordRequest)
+      QueryClaimRecordRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimRecordRequest.newBuilder() to construct.
+    private QueryClaimRecordRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimRecordRequest() {
+      recipient_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimRecordRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest.class, com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest.Builder.class);
+    }
+
+    public static final int AIRDROP_ID_FIELD_NUMBER = 1;
+    private long airdropId_ = 0L;
+    /**
+     * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+     * @return The airdropId.
+     */
+    @java.lang.Override
+    public long getAirdropId() {
+      return airdropId_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (airdropId_ != 0L) {
+        output.writeUInt64(1, airdropId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recipient_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (airdropId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, airdropId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recipient_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest other = (com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest) obj;
+
+      if (getAirdropId()
+          != other.getAirdropId()) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AIRDROP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAirdropId());
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimRecordRequest is request type for the Query/ClaimRecord RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.QueryClaimRecordRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.QueryClaimRecordRequest)
+        com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest.class, com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        airdropId_ = 0L;
+        recipient_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest build() {
+        com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest buildPartial() {
+        com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest result = new com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.airdropId_ = airdropId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recipient_ = recipient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest) {
+          return mergeFrom((com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest other) {
+        if (other == com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest.getDefaultInstance()) return this;
+        if (other.getAirdropId() != 0L) {
+          setAirdropId(other.getAirdropId());
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                airdropId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long airdropId_ ;
+      /**
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @return The airdropId.
+       */
+      @java.lang.Override
+      public long getAirdropId() {
+        return airdropId_;
+      }
+      /**
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @param value The airdropId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAirdropId(long value) {
+
+        airdropId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAirdropId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        airdropId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.QueryClaimRecordRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.QueryClaimRecordRequest)
+    private static final com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest();
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimRecordRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimRecordRequest>() {
+      @java.lang.Override
+      public QueryClaimRecordRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimRecordRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimRecordRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.QueryClaimRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+     * @return Whether the claimRecord field is set.
+     */
+    boolean hasClaimRecord();
+    /**
+     * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+     * @return The claimRecord.
+     */
+    com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getClaimRecord();
+    /**
+     * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder getClaimRecordOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryClaimRecordResponse is response type for the Query/ClaimRecord RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.QueryClaimRecordResponse}
+   */
+  public static final class QueryClaimRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.QueryClaimRecordResponse)
+      QueryClaimRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimRecordResponse.newBuilder() to construct.
+    private QueryClaimRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimRecordResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.Builder.class);
+    }
+
+    public static final int CLAIM_RECORD_FIELD_NUMBER = 1;
+    private com.crescent.claim.v1beta1.ClaimProto.ClaimRecord claimRecord_;
+    /**
+     * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+     * @return Whether the claimRecord field is set.
+     */
+    @java.lang.Override
+    public boolean hasClaimRecord() {
+      return claimRecord_ != null;
+    }
+    /**
+     * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+     * @return The claimRecord.
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getClaimRecord() {
+      return claimRecord_ == null ? com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance() : claimRecord_;
+    }
+    /**
+     * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder getClaimRecordOrBuilder() {
+      return claimRecord_ == null ? com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance() : claimRecord_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (claimRecord_ != null) {
+        output.writeMessage(1, getClaimRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (claimRecord_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getClaimRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse other = (com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse) obj;
+
+      if (hasClaimRecord() != other.hasClaimRecord()) return false;
+      if (hasClaimRecord()) {
+        if (!getClaimRecord()
+            .equals(other.getClaimRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClaimRecord()) {
+        hash = (37 * hash) + CLAIM_RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimRecordResponse is response type for the Query/ClaimRecord RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.QueryClaimRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.QueryClaimRecordResponse)
+        com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimRecord_ = null;
+        if (claimRecordBuilder_ != null) {
+          claimRecordBuilder_.dispose();
+          claimRecordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.QueryProto.internal_static_crescent_claim_v1beta1_QueryClaimRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse build() {
+        com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse buildPartial() {
+        com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse result = new com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimRecord_ = claimRecordBuilder_ == null
+              ? claimRecord_
+              : claimRecordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse) {
+          return mergeFrom((com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse other) {
+        if (other == com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.getDefaultInstance()) return this;
+        if (other.hasClaimRecord()) {
+          mergeClaimRecord(other.getClaimRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getClaimRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.claim.v1beta1.ClaimProto.ClaimRecord claimRecord_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.ClaimRecord, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder, com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder> claimRecordBuilder_;
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       * @return Whether the claimRecord field is set.
+       */
+      public boolean hasClaimRecord() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       * @return The claimRecord.
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getClaimRecord() {
+        if (claimRecordBuilder_ == null) {
+          return claimRecord_ == null ? com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance() : claimRecord_;
+        } else {
+          return claimRecordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimRecord(com.crescent.claim.v1beta1.ClaimProto.ClaimRecord value) {
+        if (claimRecordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          claimRecord_ = value;
+        } else {
+          claimRecordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimRecord(
+          com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordBuilder_ == null) {
+          claimRecord_ = builderForValue.build();
+        } else {
+          claimRecordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeClaimRecord(com.crescent.claim.v1beta1.ClaimProto.ClaimRecord value) {
+        if (claimRecordBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            claimRecord_ != null &&
+            claimRecord_ != com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance()) {
+            getClaimRecordBuilder().mergeFrom(value);
+          } else {
+            claimRecord_ = value;
+          }
+        } else {
+          claimRecordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaimRecord() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        claimRecord_ = null;
+        if (claimRecordBuilder_ != null) {
+          claimRecordBuilder_.dispose();
+          claimRecordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder getClaimRecordBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getClaimRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder getClaimRecordOrBuilder() {
+        if (claimRecordBuilder_ != null) {
+          return claimRecordBuilder_.getMessageOrBuilder();
+        } else {
+          return claimRecord_ == null ?
+              com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance() : claimRecord_;
+        }
+      }
+      /**
+       * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.ClaimRecord, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder, com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder> 
+          getClaimRecordFieldBuilder() {
+        if (claimRecordBuilder_ == null) {
+          claimRecordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.claim.v1beta1.ClaimProto.ClaimRecord, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder, com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder>(
+                  getClaimRecord(),
+                  getParentForChildren(),
+                  isClean());
+          claimRecord_ = null;
+        }
+        return claimRecordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.QueryClaimRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.QueryClaimRecordResponse)
+    private static final com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse();
+    }
+
+    public static com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimRecordResponse>() {
+      @java.lang.Override
+      public QueryClaimRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_QueryAirdropsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_QueryAirdropsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_QueryAirdropsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_QueryAirdropsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_QueryAirdropRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_QueryAirdropRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_QueryAirdropResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_QueryAirdropResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_QueryClaimRecordRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_QueryClaimRecordRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_QueryClaimRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_QueryClaimRecordResponse_fieldAccessorTable;
 
@@ -85,13 +4013,13 @@ public final class QueryProto {
       "ecordRequest\0320.crescent.claim.v1beta1.Qu" +
       "eryClaimRecordResponse\"O\202\323\344\223\002I\022G/crescen" +
       "t/claim/v1beta1/airdrops/{airdrop_id}/cl" +
-      "aim_records/{recipient}B\331\001\n\032com.crescent" +
-      ".claim.v1beta1B\nQueryProtoP\001Z5github.com" +
-      "/crescent-network/crescent/v5/x/claim/ty" +
-      "pes\242\002\003CCX\252\002\026Crescent.Claim.V1beta1\312\002\026Cre" +
-      "scent\\Claim\\V1beta1\342\002\"Crescent\\Claim\\V1b" +
-      "eta1\\GPBMetadata\352\002\030Crescent::Claim::V1be" +
-      "ta1b\006proto3"
+      "aim_records/{recipient}B\327\001\n\032com.crescent" +
+      ".claim.v1beta1B\nQueryProtoZ5github.com/c" +
+      "rescent-network/crescent/v5/x/claim/type" +
+      "s\242\002\003CCX\252\002\026Crescent.Claim.V1beta1\312\002\026Cresc" +
+      "ent\\Claim\\V1beta1\342\002\"Crescent\\Claim\\V1bet" +
+      "a1\\GPBMetadata\352\002\030Crescent::Claim::V1beta" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

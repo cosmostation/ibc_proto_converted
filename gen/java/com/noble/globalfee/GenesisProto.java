@@ -14,14 +14,1910 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.globalfee.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Params of this module
+     * </pre>
+     *
+     * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * Params of this module
+     * </pre>
+     *
+     * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+     * @return The params.
+     */
+    com.noble.globalfee.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * Params of this module
+     * </pre>
+     *
+     * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+     */
+    com.noble.globalfee.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState - initial state of module
+   * </pre>
+   *
+   * Protobuf type {@code noble.globalfee.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.globalfee.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.globalfee.GenesisProto.GenesisState.class, com.noble.globalfee.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.noble.globalfee.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * Params of this module
+     * </pre>
+     *
+     * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * Params of this module
+     * </pre>
+     *
+     * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.noble.globalfee.GenesisProto.Params getParams() {
+      return params_ == null ? com.noble.globalfee.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * Params of this module
+     * </pre>
+     *
+     * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.noble.globalfee.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.noble.globalfee.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.globalfee.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.noble.globalfee.GenesisProto.GenesisState other = (com.noble.globalfee.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.globalfee.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.globalfee.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.globalfee.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.globalfee.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState - initial state of module
+     * </pre>
+     *
+     * Protobuf type {@code noble.globalfee.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.globalfee.GenesisState)
+        com.noble.globalfee.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.globalfee.GenesisProto.GenesisState.class, com.noble.globalfee.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.noble.globalfee.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.globalfee.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.noble.globalfee.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.globalfee.GenesisProto.GenesisState build() {
+        com.noble.globalfee.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.globalfee.GenesisProto.GenesisState buildPartial() {
+        com.noble.globalfee.GenesisProto.GenesisState result = new com.noble.globalfee.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.globalfee.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.globalfee.GenesisProto.GenesisState) {
+          return mergeFrom((com.noble.globalfee.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.globalfee.GenesisProto.GenesisState other) {
+        if (other == com.noble.globalfee.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.globalfee.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.globalfee.GenesisProto.Params, com.noble.globalfee.GenesisProto.Params.Builder, com.noble.globalfee.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       * @return The params.
+       */
+      public com.noble.globalfee.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.noble.globalfee.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       */
+      public Builder setParams(com.noble.globalfee.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       */
+      public Builder setParams(
+          com.noble.globalfee.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       */
+      public Builder mergeParams(com.noble.globalfee.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.noble.globalfee.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       */
+      public com.noble.globalfee.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       */
+      public com.noble.globalfee.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.noble.globalfee.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * Params of this module
+       * </pre>
+       *
+       * <code>.noble.globalfee.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.globalfee.GenesisProto.Params, com.noble.globalfee.GenesisProto.Params.Builder, com.noble.globalfee.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.globalfee.GenesisProto.Params, com.noble.globalfee.GenesisProto.Params.Builder, com.noble.globalfee.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.globalfee.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.globalfee.GenesisState)
+    private static final com.noble.globalfee.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.globalfee.GenesisProto.GenesisState();
+    }
+
+    public static com.noble.globalfee.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.globalfee.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.globalfee.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getMinimumGasPricesList();
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimumGasPrices(int index);
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getMinimumGasPricesCount();
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getMinimumGasPricesOrBuilderList();
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumGasPricesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+     * @return A list containing the bypassMinFeeMsgTypes.
+     */
+    java.util.List<java.lang.String>
+        getBypassMinFeeMsgTypesList();
+    /**
+     * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+     * @return The count of bypassMinFeeMsgTypes.
+     */
+    int getBypassMinFeeMsgTypesCount();
+    /**
+     * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The bypassMinFeeMsgTypes at the given index.
+     */
+    java.lang.String getBypassMinFeeMsgTypes(int index);
+    /**
+     * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the bypassMinFeeMsgTypes at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBypassMinFeeMsgTypesBytes(int index);
+  }
+  /**
+   * <pre>
+   * Params defines the set of module parameters.
+   * </pre>
+   *
+   * Protobuf type {@code noble.globalfee.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.globalfee.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      minimumGasPrices_ = java.util.Collections.emptyList();
+      bypassMinFeeMsgTypes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.globalfee.GenesisProto.Params.class, com.noble.globalfee.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int MINIMUM_GAS_PRICES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> minimumGasPrices_;
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getMinimumGasPricesList() {
+      return minimumGasPrices_;
+    }
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getMinimumGasPricesOrBuilderList() {
+      return minimumGasPrices_;
+    }
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getMinimumGasPricesCount() {
+      return minimumGasPrices_.size();
+    }
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimumGasPrices(int index) {
+      return minimumGasPrices_.get(index);
+    }
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * When multiple coins are defined then they are accepted alternatively.
+     * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+     * values allowed. For more information see
+     * https://docs.cosmos.network/main/modules/auth#concepts
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumGasPricesOrBuilder(
+        int index) {
+      return minimumGasPrices_.get(index);
+    }
+
+    public static final int BYPASS_MIN_FEE_MSG_TYPES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList bypassMinFeeMsgTypes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+     * @return A list containing the bypassMinFeeMsgTypes.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getBypassMinFeeMsgTypesList() {
+      return bypassMinFeeMsgTypes_;
+    }
+    /**
+     * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+     * @return The count of bypassMinFeeMsgTypes.
+     */
+    public int getBypassMinFeeMsgTypesCount() {
+      return bypassMinFeeMsgTypes_.size();
+    }
+    /**
+     * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The bypassMinFeeMsgTypes at the given index.
+     */
+    public java.lang.String getBypassMinFeeMsgTypes(int index) {
+      return bypassMinFeeMsgTypes_.get(index);
+    }
+    /**
+     * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the bypassMinFeeMsgTypes at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getBypassMinFeeMsgTypesBytes(int index) {
+      return bypassMinFeeMsgTypes_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < minimumGasPrices_.size(); i++) {
+        output.writeMessage(1, minimumGasPrices_.get(i));
+      }
+      for (int i = 0; i < bypassMinFeeMsgTypes_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bypassMinFeeMsgTypes_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < minimumGasPrices_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, minimumGasPrices_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < bypassMinFeeMsgTypes_.size(); i++) {
+          dataSize += computeStringSizeNoTag(bypassMinFeeMsgTypes_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getBypassMinFeeMsgTypesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.globalfee.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.noble.globalfee.GenesisProto.Params other = (com.noble.globalfee.GenesisProto.Params) obj;
+
+      if (!getMinimumGasPricesList()
+          .equals(other.getMinimumGasPricesList())) return false;
+      if (!getBypassMinFeeMsgTypesList()
+          .equals(other.getBypassMinFeeMsgTypesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMinimumGasPricesCount() > 0) {
+        hash = (37 * hash) + MINIMUM_GAS_PRICES_FIELD_NUMBER;
+        hash = (53 * hash) + getMinimumGasPricesList().hashCode();
+      }
+      if (getBypassMinFeeMsgTypesCount() > 0) {
+        hash = (37 * hash) + BYPASS_MIN_FEE_MSG_TYPES_FIELD_NUMBER;
+        hash = (53 * hash) + getBypassMinFeeMsgTypesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.globalfee.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.globalfee.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.globalfee.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.globalfee.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the set of module parameters.
+     * </pre>
+     *
+     * Protobuf type {@code noble.globalfee.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.globalfee.Params)
+        com.noble.globalfee.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.globalfee.GenesisProto.Params.class, com.noble.globalfee.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.noble.globalfee.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (minimumGasPricesBuilder_ == null) {
+          minimumGasPrices_ = java.util.Collections.emptyList();
+        } else {
+          minimumGasPrices_ = null;
+          minimumGasPricesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bypassMinFeeMsgTypes_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.globalfee.GenesisProto.internal_static_noble_globalfee_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.globalfee.GenesisProto.Params getDefaultInstanceForType() {
+        return com.noble.globalfee.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.globalfee.GenesisProto.Params build() {
+        com.noble.globalfee.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.globalfee.GenesisProto.Params buildPartial() {
+        com.noble.globalfee.GenesisProto.Params result = new com.noble.globalfee.GenesisProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.noble.globalfee.GenesisProto.Params result) {
+        if (minimumGasPricesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            minimumGasPrices_ = java.util.Collections.unmodifiableList(minimumGasPrices_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.minimumGasPrices_ = minimumGasPrices_;
+        } else {
+          result.minimumGasPrices_ = minimumGasPricesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.noble.globalfee.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          bypassMinFeeMsgTypes_.makeImmutable();
+          result.bypassMinFeeMsgTypes_ = bypassMinFeeMsgTypes_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.globalfee.GenesisProto.Params) {
+          return mergeFrom((com.noble.globalfee.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.globalfee.GenesisProto.Params other) {
+        if (other == com.noble.globalfee.GenesisProto.Params.getDefaultInstance()) return this;
+        if (minimumGasPricesBuilder_ == null) {
+          if (!other.minimumGasPrices_.isEmpty()) {
+            if (minimumGasPrices_.isEmpty()) {
+              minimumGasPrices_ = other.minimumGasPrices_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMinimumGasPricesIsMutable();
+              minimumGasPrices_.addAll(other.minimumGasPrices_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.minimumGasPrices_.isEmpty()) {
+            if (minimumGasPricesBuilder_.isEmpty()) {
+              minimumGasPricesBuilder_.dispose();
+              minimumGasPricesBuilder_ = null;
+              minimumGasPrices_ = other.minimumGasPrices_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              minimumGasPricesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMinimumGasPricesFieldBuilder() : null;
+            } else {
+              minimumGasPricesBuilder_.addAllMessages(other.minimumGasPrices_);
+            }
+          }
+        }
+        if (!other.bypassMinFeeMsgTypes_.isEmpty()) {
+          if (bypassMinFeeMsgTypes_.isEmpty()) {
+            bypassMinFeeMsgTypes_ = other.bypassMinFeeMsgTypes_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureBypassMinFeeMsgTypesIsMutable();
+            bypassMinFeeMsgTypes_.addAll(other.bypassMinFeeMsgTypes_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (minimumGasPricesBuilder_ == null) {
+                  ensureMinimumGasPricesIsMutable();
+                  minimumGasPrices_.add(m);
+                } else {
+                  minimumGasPricesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureBypassMinFeeMsgTypesIsMutable();
+                bypassMinFeeMsgTypes_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> minimumGasPrices_ =
+        java.util.Collections.emptyList();
+      private void ensureMinimumGasPricesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          minimumGasPrices_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(minimumGasPrices_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> minimumGasPricesBuilder_;
+
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getMinimumGasPricesList() {
+        if (minimumGasPricesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(minimumGasPrices_);
+        } else {
+          return minimumGasPricesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getMinimumGasPricesCount() {
+        if (minimumGasPricesBuilder_ == null) {
+          return minimumGasPrices_.size();
+        } else {
+          return minimumGasPricesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimumGasPrices(int index) {
+        if (minimumGasPricesBuilder_ == null) {
+          return minimumGasPrices_.get(index);
+        } else {
+          return minimumGasPricesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setMinimumGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumGasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.set(index, value);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setMinimumGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimumGasPrices(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumGasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.add(value);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimumGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumGasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.add(index, value);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimumGasPrices(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.add(builderForValue.build());
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimumGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllMinimumGasPrices(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, minimumGasPrices_);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearMinimumGasPrices() {
+        if (minimumGasPricesBuilder_ == null) {
+          minimumGasPrices_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeMinimumGasPrices(int index) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.remove(index);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getMinimumGasPricesBuilder(
+          int index) {
+        return getMinimumGasPricesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumGasPricesOrBuilder(
+          int index) {
+        if (minimumGasPricesBuilder_ == null) {
+          return minimumGasPrices_.get(index);  } else {
+          return minimumGasPricesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getMinimumGasPricesOrBuilderList() {
+        if (minimumGasPricesBuilder_ != null) {
+          return minimumGasPricesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(minimumGasPrices_);
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addMinimumGasPricesBuilder() {
+        return getMinimumGasPricesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addMinimumGasPricesBuilder(
+          int index) {
+        return getMinimumGasPricesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * When multiple coins are defined then they are accepted alternatively.
+       * The list must be sorted by denoms asc. No duplicate denoms or zero amount
+       * values allowed. For more information see
+       * https://docs.cosmos.network/main/modules/auth#concepts
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getMinimumGasPricesBuilderList() {
+        return getMinimumGasPricesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getMinimumGasPricesFieldBuilder() {
+        if (minimumGasPricesBuilder_ == null) {
+          minimumGasPricesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  minimumGasPrices_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          minimumGasPrices_ = null;
+        }
+        return minimumGasPricesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList bypassMinFeeMsgTypes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureBypassMinFeeMsgTypesIsMutable() {
+        if (!bypassMinFeeMsgTypes_.isModifiable()) {
+          bypassMinFeeMsgTypes_ = new com.google.protobuf.LazyStringArrayList(bypassMinFeeMsgTypes_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @return A list containing the bypassMinFeeMsgTypes.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getBypassMinFeeMsgTypesList() {
+        bypassMinFeeMsgTypes_.makeImmutable();
+        return bypassMinFeeMsgTypes_;
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @return The count of bypassMinFeeMsgTypes.
+       */
+      public int getBypassMinFeeMsgTypesCount() {
+        return bypassMinFeeMsgTypes_.size();
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The bypassMinFeeMsgTypes at the given index.
+       */
+      public java.lang.String getBypassMinFeeMsgTypes(int index) {
+        return bypassMinFeeMsgTypes_.get(index);
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the bypassMinFeeMsgTypes at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getBypassMinFeeMsgTypesBytes(int index) {
+        return bypassMinFeeMsgTypes_.getByteString(index);
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The bypassMinFeeMsgTypes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBypassMinFeeMsgTypes(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureBypassMinFeeMsgTypesIsMutable();
+        bypassMinFeeMsgTypes_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @param value The bypassMinFeeMsgTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBypassMinFeeMsgTypes(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureBypassMinFeeMsgTypesIsMutable();
+        bypassMinFeeMsgTypes_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @param values The bypassMinFeeMsgTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBypassMinFeeMsgTypes(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureBypassMinFeeMsgTypesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, bypassMinFeeMsgTypes_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBypassMinFeeMsgTypes() {
+        bypassMinFeeMsgTypes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bypass_min_fee_msg_types = 2 [json_name = "bypassMinFeeMsgTypes", (.gogoproto.jsontag) = "bypass_min_fee_msg_types,omitempty", (.gogoproto.moretags) = "yaml:&#92;"bypass_min_fee_msg_types&#92;""];</code>
+       * @param value The bytes of the bypassMinFeeMsgTypes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBypassMinFeeMsgTypesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureBypassMinFeeMsgTypesIsMutable();
+        bypassMinFeeMsgTypes_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.globalfee.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.globalfee.Params)
+    private static final com.noble.globalfee.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.globalfee.GenesisProto.Params();
+    }
+
+    public static com.noble.globalfee.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.globalfee.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_globalfee_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_globalfee_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_globalfee_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_globalfee_Params_fieldAccessorTable;
 
@@ -46,12 +1942,12 @@ public final class GenesisProto {
       "bypass_min_fee_msg_types\030\002 \003(\tBI\352\336\037\"bypa" +
       "ss_min_fee_msg_types,omitempty\362\336\037\037yaml:\"" +
       "bypass_min_fee_msg_types\"R\024bypassMinFeeM" +
-      "sgTypesB\271\001\n\023com.noble.globalfeeB\014Genesis" +
-      "ProtoP\001Z7github.com/strangelove-ventures" +
-      "/noble/x/globalfee/types\242\002\003NGX\252\002\017Noble.G" +
-      "lobalfee\312\002\017Noble\\Globalfee\342\002\033Noble\\Globa" +
-      "lfee\\GPBMetadata\352\002\020Noble::Globalfeeb\006pro" +
-      "to3"
+      "sgTypesB\267\001\n\023com.noble.globalfeeB\014Genesis" +
+      "ProtoZ7github.com/strangelove-ventures/n" +
+      "oble/x/globalfee/types\242\002\003NGX\252\002\017Noble.Glo" +
+      "balfee\312\002\017Noble\\Globalfee\342\002\033Noble\\Globalf" +
+      "ee\\GPBMetadata\352\002\020Noble::Globalfeeb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

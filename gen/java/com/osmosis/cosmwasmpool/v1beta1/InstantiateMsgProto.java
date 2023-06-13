@@ -14,9 +14,720 @@ public final class InstantiateMsgProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface InstantiateMsgOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.InstantiateMsg)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_asset_denoms is the list of asset denoms that are initialized
+     * at pool creation time.
+     * </pre>
+     *
+     * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+     * @return A list containing the poolAssetDenoms.
+     */
+    java.util.List<java.lang.String>
+        getPoolAssetDenomsList();
+    /**
+     * <pre>
+     * pool_asset_denoms is the list of asset denoms that are initialized
+     * at pool creation time.
+     * </pre>
+     *
+     * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+     * @return The count of poolAssetDenoms.
+     */
+    int getPoolAssetDenomsCount();
+    /**
+     * <pre>
+     * pool_asset_denoms is the list of asset denoms that are initialized
+     * at pool creation time.
+     * </pre>
+     *
+     * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+     * @param index The index of the element to return.
+     * @return The poolAssetDenoms at the given index.
+     */
+    java.lang.String getPoolAssetDenoms(int index);
+    /**
+     * <pre>
+     * pool_asset_denoms is the list of asset denoms that are initialized
+     * at pool creation time.
+     * </pre>
+     *
+     * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the poolAssetDenoms at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPoolAssetDenomsBytes(int index);
+  }
+  /**
+   * <pre>
+   * ===================== InstantiateMsg
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.InstantiateMsg}
+   */
+  public static final class InstantiateMsg extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.cosmwasmpool.v1beta1.InstantiateMsg)
+      InstantiateMsgOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InstantiateMsg.newBuilder() to construct.
+    private InstantiateMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InstantiateMsg() {
+      poolAssetDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InstantiateMsg();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg.class, com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg.Builder.class);
+    }
+
+    public static final int POOL_ASSET_DENOMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList poolAssetDenoms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * pool_asset_denoms is the list of asset denoms that are initialized
+     * at pool creation time.
+     * </pre>
+     *
+     * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+     * @return A list containing the poolAssetDenoms.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPoolAssetDenomsList() {
+      return poolAssetDenoms_;
+    }
+    /**
+     * <pre>
+     * pool_asset_denoms is the list of asset denoms that are initialized
+     * at pool creation time.
+     * </pre>
+     *
+     * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+     * @return The count of poolAssetDenoms.
+     */
+    public int getPoolAssetDenomsCount() {
+      return poolAssetDenoms_.size();
+    }
+    /**
+     * <pre>
+     * pool_asset_denoms is the list of asset denoms that are initialized
+     * at pool creation time.
+     * </pre>
+     *
+     * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+     * @param index The index of the element to return.
+     * @return The poolAssetDenoms at the given index.
+     */
+    public java.lang.String getPoolAssetDenoms(int index) {
+      return poolAssetDenoms_.get(index);
+    }
+    /**
+     * <pre>
+     * pool_asset_denoms is the list of asset denoms that are initialized
+     * at pool creation time.
+     * </pre>
+     *
+     * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the poolAssetDenoms at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPoolAssetDenomsBytes(int index) {
+      return poolAssetDenoms_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < poolAssetDenoms_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, poolAssetDenoms_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < poolAssetDenoms_.size(); i++) {
+          dataSize += computeStringSizeNoTag(poolAssetDenoms_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPoolAssetDenomsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg)) {
+        return super.equals(obj);
+      }
+      com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg other = (com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg) obj;
+
+      if (!getPoolAssetDenomsList()
+          .equals(other.getPoolAssetDenomsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPoolAssetDenomsCount() > 0) {
+        hash = (37 * hash) + POOL_ASSET_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolAssetDenomsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ===================== InstantiateMsg
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.InstantiateMsg}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.cosmwasmpool.v1beta1.InstantiateMsg)
+        com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsgOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg.class, com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg.Builder.class);
+      }
+
+      // Construct using com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolAssetDenoms_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg getDefaultInstanceForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg build() {
+        com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg buildPartial() {
+        com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg result = new com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          poolAssetDenoms_.makeImmutable();
+          result.poolAssetDenoms_ = poolAssetDenoms_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg) {
+          return mergeFrom((com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg other) {
+        if (other == com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg.getDefaultInstance()) return this;
+        if (!other.poolAssetDenoms_.isEmpty()) {
+          if (poolAssetDenoms_.isEmpty()) {
+            poolAssetDenoms_ = other.poolAssetDenoms_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensurePoolAssetDenomsIsMutable();
+            poolAssetDenoms_.addAll(other.poolAssetDenoms_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePoolAssetDenomsIsMutable();
+                poolAssetDenoms_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList poolAssetDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePoolAssetDenomsIsMutable() {
+        if (!poolAssetDenoms_.isModifiable()) {
+          poolAssetDenoms_ = new com.google.protobuf.LazyStringArrayList(poolAssetDenoms_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @return A list containing the poolAssetDenoms.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPoolAssetDenomsList() {
+        poolAssetDenoms_.makeImmutable();
+        return poolAssetDenoms_;
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @return The count of poolAssetDenoms.
+       */
+      public int getPoolAssetDenomsCount() {
+        return poolAssetDenoms_.size();
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @param index The index of the element to return.
+       * @return The poolAssetDenoms at the given index.
+       */
+      public java.lang.String getPoolAssetDenoms(int index) {
+        return poolAssetDenoms_.get(index);
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the poolAssetDenoms at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPoolAssetDenomsBytes(int index) {
+        return poolAssetDenoms_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @param index The index to set the value at.
+       * @param value The poolAssetDenoms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAssetDenoms(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePoolAssetDenomsIsMutable();
+        poolAssetDenoms_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @param value The poolAssetDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPoolAssetDenoms(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePoolAssetDenomsIsMutable();
+        poolAssetDenoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @param values The poolAssetDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPoolAssetDenoms(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePoolAssetDenomsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, poolAssetDenoms_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolAssetDenoms() {
+        poolAssetDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_asset_denoms is the list of asset denoms that are initialized
+       * at pool creation time.
+       * </pre>
+       *
+       * <code>repeated string pool_asset_denoms = 1 [json_name = "poolAssetDenoms"];</code>
+       * @param value The bytes of the poolAssetDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPoolAssetDenomsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePoolAssetDenomsIsMutable();
+        poolAssetDenoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.cosmwasmpool.v1beta1.InstantiateMsg)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.cosmwasmpool.v1beta1.InstantiateMsg)
+    private static final com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg();
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InstantiateMsg>
+        PARSER = new com.google.protobuf.AbstractParser<InstantiateMsg>() {
+      @java.lang.Override
+      public InstantiateMsg parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InstantiateMsg> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InstantiateMsg> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.InstantiateMsgProto.InstantiateMsg getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_fieldAccessorTable;
 
@@ -33,14 +744,13 @@ public final class InstantiateMsgProto {
       ".v1beta1\032\024gogoproto/gogo.proto\032\036cosmos/b" +
       "ase/v1beta1/coin.proto\"<\n\016InstantiateMsg" +
       "\022*\n\021pool_asset_denoms\030\001 \003(\tR\017poolAssetDe" +
-      "nomsB\212\002\n com.osmosis.cosmwasmpool.v1beta" +
-      "1B\023InstantiateMsgProtoP\001Z?github.com/osm" +
-      "osis-labs/osmosis/v15/x/cosmwasmpool/cos" +
-      "mwasm/msg\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V" +
-      "1beta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(" +
-      "Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata" +
-      "\352\002\036Osmosis::Cosmwasmpool::V1beta1b\006proto" +
-      "3"
+      "nomsB\210\002\n com.osmosis.cosmwasmpool.v1beta" +
+      "1B\023InstantiateMsgProtoZ?github.com/osmos" +
+      "is-labs/osmosis/v15/x/cosmwasmpool/cosmw" +
+      "asm/msg\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V1b" +
+      "eta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(Os" +
+      "mosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\352\002" +
+      "\036Osmosis::Cosmwasmpool::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

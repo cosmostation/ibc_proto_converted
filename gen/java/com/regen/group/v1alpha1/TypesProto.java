@@ -14,49 +14,11924 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * Choice defines available types of choices for voting.
+   * </pre>
+   *
+   * Protobuf enum {@code regen.group.v1alpha1.Choice}
+   */
+  public enum Choice
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * CHOICE_UNSPECIFIED defines a no-op voting choice.
+     * </pre>
+     *
+     * <code>CHOICE_UNSPECIFIED = 0;</code>
+     */
+    CHOICE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * CHOICE_NO defines a no voting choice.
+     * </pre>
+     *
+     * <code>CHOICE_NO = 1;</code>
+     */
+    CHOICE_NO(1),
+    /**
+     * <pre>
+     * CHOICE_YES defines a yes voting choice.
+     * </pre>
+     *
+     * <code>CHOICE_YES = 2;</code>
+     */
+    CHOICE_YES(2),
+    /**
+     * <pre>
+     * CHOICE_ABSTAIN defines an abstaining voting choice.
+     * </pre>
+     *
+     * <code>CHOICE_ABSTAIN = 3;</code>
+     */
+    CHOICE_ABSTAIN(3),
+    /**
+     * <pre>
+     * CHOICE_VETO defines a voting choice with veto.
+     * </pre>
+     *
+     * <code>CHOICE_VETO = 4;</code>
+     */
+    CHOICE_VETO(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * CHOICE_UNSPECIFIED defines a no-op voting choice.
+     * </pre>
+     *
+     * <code>CHOICE_UNSPECIFIED = 0;</code>
+     */
+    public static final int CHOICE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * CHOICE_NO defines a no voting choice.
+     * </pre>
+     *
+     * <code>CHOICE_NO = 1;</code>
+     */
+    public static final int CHOICE_NO_VALUE = 1;
+    /**
+     * <pre>
+     * CHOICE_YES defines a yes voting choice.
+     * </pre>
+     *
+     * <code>CHOICE_YES = 2;</code>
+     */
+    public static final int CHOICE_YES_VALUE = 2;
+    /**
+     * <pre>
+     * CHOICE_ABSTAIN defines an abstaining voting choice.
+     * </pre>
+     *
+     * <code>CHOICE_ABSTAIN = 3;</code>
+     */
+    public static final int CHOICE_ABSTAIN_VALUE = 3;
+    /**
+     * <pre>
+     * CHOICE_VETO defines a voting choice with veto.
+     * </pre>
+     *
+     * <code>CHOICE_VETO = 4;</code>
+     */
+    public static final int CHOICE_VETO_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Choice valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Choice forNumber(int value) {
+      switch (value) {
+        case 0: return CHOICE_UNSPECIFIED;
+        case 1: return CHOICE_NO;
+        case 2: return CHOICE_YES;
+        case 3: return CHOICE_ABSTAIN;
+        case 4: return CHOICE_VETO;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Choice>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Choice> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Choice>() {
+            public Choice findValueByNumber(int number) {
+              return Choice.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Choice[] VALUES = values();
+
+    public static Choice valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Choice(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:regen.group.v1alpha1.Choice)
+  }
+
+  public interface MemberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.Member)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address is the member's account address.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address is the member's account address.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * weight is the member's voting weight that should be greater than 0.
+     * </pre>
+     *
+     * <code>string weight = 2 [json_name = "weight"];</code>
+     * @return The weight.
+     */
+    java.lang.String getWeight();
+    /**
+     * <pre>
+     * weight is the member's voting weight that should be greater than 0.
+     * </pre>
+     *
+     * <code>string weight = 2 [json_name = "weight"];</code>
+     * @return The bytes for weight.
+     */
+    com.google.protobuf.ByteString
+        getWeightBytes();
+
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the member.
+     * </pre>
+     *
+     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.ByteString getMetadata();
+  }
+  /**
+   * <pre>
+   * Member represents a group member with an account address,
+   * non-zero weight and metadata.
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.Member}
+   */
+  public static final class Member extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.Member)
+      MemberOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Member.newBuilder() to construct.
+    private Member(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Member() {
+      address_ = "";
+      weight_ = "";
+      metadata_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Member();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Member_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Member_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.Member.class, com.regen.group.v1alpha1.TypesProto.Member.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address is the member's account address.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address is the member's account address.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object weight_ = "";
+    /**
+     * <pre>
+     * weight is the member's voting weight that should be greater than 0.
+     * </pre>
+     *
+     * <code>string weight = 2 [json_name = "weight"];</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public java.lang.String getWeight() {
+      java.lang.Object ref = weight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        weight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * weight is the member's voting weight that should be greater than 0.
+     * </pre>
+     *
+     * <code>string weight = 2 [json_name = "weight"];</code>
+     * @return The bytes for weight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWeightBytes() {
+      java.lang.Object ref = weight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        weight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the member.
+     * </pre>
+     *
+     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMetadata() {
+      return metadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, weight_);
+      }
+      if (!metadata_.isEmpty()) {
+        output.writeBytes(3, metadata_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, weight_);
+      }
+      if (!metadata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, metadata_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.Member)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.Member other = (com.regen.group.v1alpha1.TypesProto.Member) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getWeight()
+          .equals(other.getWeight())) return false;
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getWeight().hashCode();
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Member parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Member parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Member parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.Member prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Member represents a group member with an account address,
+     * non-zero weight and metadata.
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.Member}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.Member)
+        com.regen.group.v1alpha1.TypesProto.MemberOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Member_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Member_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.Member.class, com.regen.group.v1alpha1.TypesProto.Member.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.Member.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        weight_ = "";
+        metadata_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Member_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Member getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Member build() {
+        com.regen.group.v1alpha1.TypesProto.Member result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Member buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.Member result = new com.regen.group.v1alpha1.TypesProto.Member(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.Member result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.weight_ = weight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadata_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.Member) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.Member)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.Member other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getWeight().isEmpty()) {
+          weight_ = other.weight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getMetadata() != com.google.protobuf.ByteString.EMPTY) {
+          setMetadata(other.getMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                weight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                metadata_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address is the member's account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the member's account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the member's account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the member's account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the member's account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object weight_ = "";
+      /**
+       * <pre>
+       * weight is the member's voting weight that should be greater than 0.
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight"];</code>
+       * @return The weight.
+       */
+      public java.lang.String getWeight() {
+        java.lang.Object ref = weight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          weight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * weight is the member's voting weight that should be greater than 0.
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight"];</code>
+       * @return The bytes for weight.
+       */
+      public com.google.protobuf.ByteString
+          getWeightBytes() {
+        java.lang.Object ref = weight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          weight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * weight is the member's voting weight that should be greater than 0.
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight"];</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * weight is the member's voting weight that should be greater than 0.
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        weight_ = getDefaultInstance().getWeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * weight is the member's voting weight that should be greater than 0.
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight"];</code>
+       * @param value The bytes for weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the member.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @return The metadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMetadata() {
+        return metadata_;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the member.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadata_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the member.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = getDefaultInstance().getMetadata();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.Member)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.Member)
+    private static final com.regen.group.v1alpha1.TypesProto.Member DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.Member();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Member getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Member>
+        PARSER = new com.google.protobuf.AbstractParser<Member>() {
+      @java.lang.Override
+      public Member parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Member> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Member> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.Member getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MembersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.Members)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.regen.group.v1alpha1.TypesProto.Member> 
+        getMembersList();
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    com.regen.group.v1alpha1.TypesProto.Member getMembers(int index);
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    int getMembersCount();
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.regen.group.v1alpha1.TypesProto.MemberOrBuilder> 
+        getMembersOrBuilderList();
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    com.regen.group.v1alpha1.TypesProto.MemberOrBuilder getMembersOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Members defines a repeated slice of Member objects.
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.Members}
+   */
+  public static final class Members extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.Members)
+      MembersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Members.newBuilder() to construct.
+    private Members(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Members() {
+      members_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Members();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Members_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Members_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.Members.class, com.regen.group.v1alpha1.TypesProto.Members.Builder.class);
+    }
+
+    public static final int MEMBERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.group.v1alpha1.TypesProto.Member> members_;
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.group.v1alpha1.TypesProto.Member> getMembersList() {
+      return members_;
+    }
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.group.v1alpha1.TypesProto.MemberOrBuilder> 
+        getMembersOrBuilderList() {
+      return members_;
+    }
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMembersCount() {
+      return members_.size();
+    }
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.Member getMembers(int index) {
+      return members_.get(index);
+    }
+    /**
+     * <pre>
+     * members is the list of members.
+     * </pre>
+     *
+     * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.MemberOrBuilder getMembersOrBuilder(
+        int index) {
+      return members_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < members_.size(); i++) {
+        output.writeMessage(1, members_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < members_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, members_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.Members)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.Members other = (com.regen.group.v1alpha1.TypesProto.Members) obj;
+
+      if (!getMembersList()
+          .equals(other.getMembersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMembersCount() > 0) {
+        hash = (37 * hash) + MEMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getMembersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Members parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Members parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Members parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.Members prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Members defines a repeated slice of Member objects.
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.Members}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.Members)
+        com.regen.group.v1alpha1.TypesProto.MembersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Members_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Members_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.Members.class, com.regen.group.v1alpha1.TypesProto.Members.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.Members.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (membersBuilder_ == null) {
+          members_ = java.util.Collections.emptyList();
+        } else {
+          members_ = null;
+          membersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Members_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Members getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.Members.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Members build() {
+        com.regen.group.v1alpha1.TypesProto.Members result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Members buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.Members result = new com.regen.group.v1alpha1.TypesProto.Members(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.regen.group.v1alpha1.TypesProto.Members result) {
+        if (membersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            members_ = java.util.Collections.unmodifiableList(members_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.members_ = members_;
+        } else {
+          result.members_ = membersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.Members result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.Members) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.Members)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.Members other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.Members.getDefaultInstance()) return this;
+        if (membersBuilder_ == null) {
+          if (!other.members_.isEmpty()) {
+            if (members_.isEmpty()) {
+              members_ = other.members_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMembersIsMutable();
+              members_.addAll(other.members_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.members_.isEmpty()) {
+            if (membersBuilder_.isEmpty()) {
+              membersBuilder_.dispose();
+              membersBuilder_ = null;
+              members_ = other.members_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              membersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMembersFieldBuilder() : null;
+            } else {
+              membersBuilder_.addAllMessages(other.members_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.regen.group.v1alpha1.TypesProto.Member m =
+                    input.readMessage(
+                        com.regen.group.v1alpha1.TypesProto.Member.parser(),
+                        extensionRegistry);
+                if (membersBuilder_ == null) {
+                  ensureMembersIsMutable();
+                  members_.add(m);
+                } else {
+                  membersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.regen.group.v1alpha1.TypesProto.Member> members_ =
+        java.util.Collections.emptyList();
+      private void ensureMembersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          members_ = new java.util.ArrayList<com.regen.group.v1alpha1.TypesProto.Member>(members_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.group.v1alpha1.TypesProto.Member, com.regen.group.v1alpha1.TypesProto.Member.Builder, com.regen.group.v1alpha1.TypesProto.MemberOrBuilder> membersBuilder_;
+
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.regen.group.v1alpha1.TypesProto.Member> getMembersList() {
+        if (membersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(members_);
+        } else {
+          return membersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMembersCount() {
+        if (membersBuilder_ == null) {
+          return members_.size();
+        } else {
+          return membersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.Member getMembers(int index) {
+        if (membersBuilder_ == null) {
+          return members_.get(index);
+        } else {
+          return membersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMembers(
+          int index, com.regen.group.v1alpha1.TypesProto.Member value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.set(index, value);
+          onChanged();
+        } else {
+          membersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMembers(
+          int index, com.regen.group.v1alpha1.TypesProto.Member.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMembers(com.regen.group.v1alpha1.TypesProto.Member value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.add(value);
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMembers(
+          int index, com.regen.group.v1alpha1.TypesProto.Member value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.add(index, value);
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMembers(
+          com.regen.group.v1alpha1.TypesProto.Member.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.add(builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMembers(
+          int index, com.regen.group.v1alpha1.TypesProto.Member.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMembers(
+          java.lang.Iterable<? extends com.regen.group.v1alpha1.TypesProto.Member> values) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, members_);
+          onChanged();
+        } else {
+          membersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMembers() {
+        if (membersBuilder_ == null) {
+          members_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          membersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMembers(int index) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.remove(index);
+          onChanged();
+        } else {
+          membersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.Member.Builder getMembersBuilder(
+          int index) {
+        return getMembersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.MemberOrBuilder getMembersOrBuilder(
+          int index) {
+        if (membersBuilder_ == null) {
+          return members_.get(index);  } else {
+          return membersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.regen.group.v1alpha1.TypesProto.MemberOrBuilder> 
+           getMembersOrBuilderList() {
+        if (membersBuilder_ != null) {
+          return membersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(members_);
+        }
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.Member.Builder addMembersBuilder() {
+        return getMembersFieldBuilder().addBuilder(
+            com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.Member.Builder addMembersBuilder(
+          int index) {
+        return getMembersFieldBuilder().addBuilder(
+            index, com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * members is the list of members.
+       * </pre>
+       *
+       * <code>repeated .regen.group.v1alpha1.Member members = 1 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.regen.group.v1alpha1.TypesProto.Member.Builder> 
+           getMembersBuilderList() {
+        return getMembersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.group.v1alpha1.TypesProto.Member, com.regen.group.v1alpha1.TypesProto.Member.Builder, com.regen.group.v1alpha1.TypesProto.MemberOrBuilder> 
+          getMembersFieldBuilder() {
+        if (membersBuilder_ == null) {
+          membersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.group.v1alpha1.TypesProto.Member, com.regen.group.v1alpha1.TypesProto.Member.Builder, com.regen.group.v1alpha1.TypesProto.MemberOrBuilder>(
+                  members_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          members_ = null;
+        }
+        return membersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.Members)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.Members)
+    private static final com.regen.group.v1alpha1.TypesProto.Members DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.Members();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Members getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Members>
+        PARSER = new com.google.protobuf.AbstractParser<Members>() {
+      @java.lang.Override
+      public Members parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Members> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Members> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.Members getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ThresholdDecisionPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.ThresholdDecisionPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+     * </pre>
+     *
+     * <code>string threshold = 1 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    java.lang.String getThreshold();
+    /**
+     * <pre>
+     * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+     * </pre>
+     *
+     * <code>string threshold = 1 [json_name = "threshold"];</code>
+     * @return The bytes for threshold.
+     */
+    com.google.protobuf.ByteString
+        getThresholdBytes();
+
+    /**
+     * <pre>
+     * timeout is the duration from submission of a proposal to the end of voting period
+     * Within this times votes and exec messages can be submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     * @return Whether the timeout field is set.
+     */
+    boolean hasTimeout();
+    /**
+     * <pre>
+     * timeout is the duration from submission of a proposal to the end of voting period
+     * Within this times votes and exec messages can be submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     * @return The timeout.
+     */
+    com.google.protobuf.Duration getTimeout();
+    /**
+     * <pre>
+     * timeout is the duration from submission of a proposal to the end of voting period
+     * Within this times votes and exec messages can be submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder();
+  }
+  /**
+   * <pre>
+   * ThresholdDecisionPolicy implements the DecisionPolicy interface
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.ThresholdDecisionPolicy}
+   */
+  public static final class ThresholdDecisionPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.ThresholdDecisionPolicy)
+      ThresholdDecisionPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ThresholdDecisionPolicy.newBuilder() to construct.
+    private ThresholdDecisionPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ThresholdDecisionPolicy() {
+      threshold_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ThresholdDecisionPolicy();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_ThresholdDecisionPolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_ThresholdDecisionPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.class, com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.Builder.class);
+    }
+
+    public static final int THRESHOLD_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object threshold_ = "";
+    /**
+     * <pre>
+     * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+     * </pre>
+     *
+     * <code>string threshold = 1 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    @java.lang.Override
+    public java.lang.String getThreshold() {
+      java.lang.Object ref = threshold_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        threshold_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+     * </pre>
+     *
+     * <code>string threshold = 1 [json_name = "threshold"];</code>
+     * @return The bytes for threshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getThresholdBytes() {
+      java.lang.Object ref = threshold_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        threshold_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMEOUT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration timeout_;
+    /**
+     * <pre>
+     * timeout is the duration from submission of a proposal to the end of voting period
+     * Within this times votes and exec messages can be submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     * @return Whether the timeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeout() {
+      return timeout_ != null;
+    }
+    /**
+     * <pre>
+     * timeout is the duration from submission of a proposal to the end of voting period
+     * Within this times votes and exec messages can be submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     * @return The timeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getTimeout() {
+      return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
+    }
+    /**
+     * <pre>
+     * timeout is the duration from submission of a proposal to the end of voting period
+     * Within this times votes and exec messages can be submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
+      return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, threshold_);
+      }
+      if (timeout_ != null) {
+        output.writeMessage(2, getTimeout());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, threshold_);
+      }
+      if (timeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTimeout());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy other = (com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy) obj;
+
+      if (!getThreshold()
+          .equals(other.getThreshold())) return false;
+      if (hasTimeout() != other.hasTimeout()) return false;
+      if (hasTimeout()) {
+        if (!getTimeout()
+            .equals(other.getTimeout())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getThreshold().hashCode();
+      if (hasTimeout()) {
+        hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeout().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ThresholdDecisionPolicy implements the DecisionPolicy interface
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.ThresholdDecisionPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.ThresholdDecisionPolicy)
+        com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_ThresholdDecisionPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_ThresholdDecisionPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.class, com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        threshold_ = "";
+        timeout_ = null;
+        if (timeoutBuilder_ != null) {
+          timeoutBuilder_.dispose();
+          timeoutBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_ThresholdDecisionPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy build() {
+        com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy result = new com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.threshold_ = threshold_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timeout_ = timeoutBuilder_ == null
+              ? timeout_
+              : timeoutBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.getDefaultInstance()) return this;
+        if (!other.getThreshold().isEmpty()) {
+          threshold_ = other.threshold_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasTimeout()) {
+          mergeTimeout(other.getTimeout());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                threshold_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getTimeoutFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object threshold_ = "";
+      /**
+       * <pre>
+       * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+       * </pre>
+       *
+       * <code>string threshold = 1 [json_name = "threshold"];</code>
+       * @return The threshold.
+       */
+      public java.lang.String getThreshold() {
+        java.lang.Object ref = threshold_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          threshold_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+       * </pre>
+       *
+       * <code>string threshold = 1 [json_name = "threshold"];</code>
+       * @return The bytes for threshold.
+       */
+      public com.google.protobuf.ByteString
+          getThresholdBytes() {
+        java.lang.Object ref = threshold_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          threshold_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+       * </pre>
+       *
+       * <code>string threshold = 1 [json_name = "threshold"];</code>
+       * @param value The threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThreshold(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        threshold_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+       * </pre>
+       *
+       * <code>string threshold = 1 [json_name = "threshold"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThreshold() {
+        threshold_ = getDefaultInstance().getThreshold();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
+       * </pre>
+       *
+       * <code>string threshold = 1 [json_name = "threshold"];</code>
+       * @param value The bytes for threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThresholdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        threshold_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration timeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeoutBuilder_;
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       * @return Whether the timeout field is set.
+       */
+      public boolean hasTimeout() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       * @return The timeout.
+       */
+      public com.google.protobuf.Duration getTimeout() {
+        if (timeoutBuilder_ == null) {
+          return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
+        } else {
+          return timeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTimeout(com.google.protobuf.Duration value) {
+        if (timeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeout_ = value;
+        } else {
+          timeoutBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTimeout(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (timeoutBuilder_ == null) {
+          timeout_ = builderForValue.build();
+        } else {
+          timeoutBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTimeout(com.google.protobuf.Duration value) {
+        if (timeoutBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            timeout_ != null &&
+            timeout_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getTimeoutBuilder().mergeFrom(value);
+          } else {
+            timeout_ = value;
+          }
+        } else {
+          timeoutBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTimeout() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        timeout_ = null;
+        if (timeoutBuilder_ != null) {
+          timeoutBuilder_.dispose();
+          timeoutBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public com.google.protobuf.Duration.Builder getTimeoutBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
+        if (timeoutBuilder_ != null) {
+          return timeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return timeout_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : timeout_;
+        }
+      }
+      /**
+       * <pre>
+       * timeout is the duration from submission of a proposal to the end of voting period
+       * Within this times votes and exec messages can be submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration timeout = 2 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getTimeoutFieldBuilder() {
+        if (timeoutBuilder_ == null) {
+          timeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          timeout_ = null;
+        }
+        return timeoutBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.ThresholdDecisionPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.ThresholdDecisionPolicy)
+    private static final com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ThresholdDecisionPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<ThresholdDecisionPolicy>() {
+      @java.lang.Override
+      public ThresholdDecisionPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ThresholdDecisionPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ThresholdDecisionPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GroupInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.GroupInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * group_id is the unique ID of the group.
+     * </pre>
+     *
+     * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+     * @return The groupId.
+     */
+    long getGroupId();
+
+    /**
+     * <pre>
+     * admin is the account address of the group's admin.
+     * </pre>
+     *
+     * <code>string admin = 2 [json_name = "admin"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the account address of the group's admin.
+     * </pre>
+     *
+     * <code>string admin = 2 [json_name = "admin"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the group.
+     * </pre>
+     *
+     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.ByteString getMetadata();
+
+    /**
+     * <pre>
+     * version is used to track changes to a group's membership structure that
+     * would break existing proposals. Whenever any members weight is changed,
+     * or any member is added or removed this version is incremented and will
+     * cause proposals based on older versions of this group to fail
+     * </pre>
+     *
+     * <code>uint64 version = 4 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <pre>
+     * total_weight is the sum of the group members' weights.
+     * </pre>
+     *
+     * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+     * @return The totalWeight.
+     */
+    java.lang.String getTotalWeight();
+    /**
+     * <pre>
+     * total_weight is the sum of the group members' weights.
+     * </pre>
+     *
+     * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+     * @return The bytes for totalWeight.
+     */
+    com.google.protobuf.ByteString
+        getTotalWeightBytes();
+  }
+  /**
+   * <pre>
+   * GroupInfo represents the high-level on-chain information for a group.
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.GroupInfo}
+   */
+  public static final class GroupInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.GroupInfo)
+      GroupInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GroupInfo.newBuilder() to construct.
+    private GroupInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GroupInfo() {
+      admin_ = "";
+      metadata_ = com.google.protobuf.ByteString.EMPTY;
+      totalWeight_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GroupInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.GroupInfo.class, com.regen.group.v1alpha1.TypesProto.GroupInfo.Builder.class);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    private long groupId_ = 0L;
+    /**
+     * <pre>
+     * group_id is the unique ID of the group.
+     * </pre>
+     *
+     * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public long getGroupId() {
+      return groupId_;
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the account address of the group's admin.
+     * </pre>
+     *
+     * <code>string admin = 2 [json_name = "admin"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the account address of the group's admin.
+     * </pre>
+     *
+     * <code>string admin = 2 [json_name = "admin"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the group.
+     * </pre>
+     *
+     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMetadata() {
+      return metadata_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 4;
+    private long version_ = 0L;
+    /**
+     * <pre>
+     * version is used to track changes to a group's membership structure that
+     * would break existing proposals. Whenever any members weight is changed,
+     * or any member is added or removed this version is incremented and will
+     * cause proposals based on older versions of this group to fail
+     * </pre>
+     *
+     * <code>uint64 version = 4 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int TOTAL_WEIGHT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalWeight_ = "";
+    /**
+     * <pre>
+     * total_weight is the sum of the group members' weights.
+     * </pre>
+     *
+     * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+     * @return The totalWeight.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalWeight() {
+      java.lang.Object ref = totalWeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalWeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total_weight is the sum of the group members' weights.
+     * </pre>
+     *
+     * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+     * @return The bytes for totalWeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalWeightBytes() {
+      java.lang.Object ref = totalWeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalWeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (groupId_ != 0L) {
+        output.writeUInt64(1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, admin_);
+      }
+      if (!metadata_.isEmpty()) {
+        output.writeBytes(3, metadata_);
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(4, version_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalWeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, totalWeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (groupId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, admin_);
+      }
+      if (!metadata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, metadata_);
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, version_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalWeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, totalWeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.GroupInfo)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.GroupInfo other = (com.regen.group.v1alpha1.TypesProto.GroupInfo) obj;
+
+      if (getGroupId()
+          != other.getGroupId()) return false;
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (!getTotalWeight()
+          .equals(other.getTotalWeight())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGroupId());
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      hash = (37 * hash) + TOTAL_WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalWeight().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.GroupInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GroupInfo represents the high-level on-chain information for a group.
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.GroupInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.GroupInfo)
+        com.regen.group.v1alpha1.TypesProto.GroupInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.GroupInfo.class, com.regen.group.v1alpha1.TypesProto.GroupInfo.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.GroupInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        groupId_ = 0L;
+        admin_ = "";
+        metadata_ = com.google.protobuf.ByteString.EMPTY;
+        version_ = 0L;
+        totalWeight_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupInfo getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.GroupInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupInfo build() {
+        com.regen.group.v1alpha1.TypesProto.GroupInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupInfo buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.GroupInfo result = new com.regen.group.v1alpha1.TypesProto.GroupInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.GroupInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.groupId_ = groupId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.admin_ = admin_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadata_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.totalWeight_ = totalWeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.GroupInfo) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.GroupInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.GroupInfo other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.GroupInfo.getDefaultInstance()) return this;
+        if (other.getGroupId() != 0L) {
+          setGroupId(other.getGroupId());
+        }
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getMetadata() != com.google.protobuf.ByteString.EMPTY) {
+          setMetadata(other.getMetadata());
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (!other.getTotalWeight().isEmpty()) {
+          totalWeight_ = other.totalWeight_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                groupId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                metadata_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                totalWeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long groupId_ ;
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @return The groupId.
+       */
+      @java.lang.Override
+      public long getGroupId() {
+        return groupId_;
+      }
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(long value) {
+
+        groupId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        groupId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the account address of the group's admin.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account address of the group's admin.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account address of the group's admin.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account address of the group's admin.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account address of the group's admin.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the group.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @return The metadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMetadata() {
+        return metadata_;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the group.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadata_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the group.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = getDefaultInstance().getMetadata();
+        onChanged();
+        return this;
+      }
+
+      private long version_ ;
+      /**
+       * <pre>
+       * version is used to track changes to a group's membership structure that
+       * would break existing proposals. Whenever any members weight is changed,
+       * or any member is added or removed this version is incremented and will
+       * cause proposals based on older versions of this group to fail
+       * </pre>
+       *
+       * <code>uint64 version = 4 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <pre>
+       * version is used to track changes to a group's membership structure that
+       * would break existing proposals. Whenever any members weight is changed,
+       * or any member is added or removed this version is incremented and will
+       * cause proposals based on older versions of this group to fail
+       * </pre>
+       *
+       * <code>uint64 version = 4 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * version is used to track changes to a group's membership structure that
+       * would break existing proposals. Whenever any members weight is changed,
+       * or any member is added or removed this version is incremented and will
+       * cause proposals based on older versions of this group to fail
+       * </pre>
+       *
+       * <code>uint64 version = 4 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalWeight_ = "";
+      /**
+       * <pre>
+       * total_weight is the sum of the group members' weights.
+       * </pre>
+       *
+       * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+       * @return The totalWeight.
+       */
+      public java.lang.String getTotalWeight() {
+        java.lang.Object ref = totalWeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalWeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_weight is the sum of the group members' weights.
+       * </pre>
+       *
+       * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+       * @return The bytes for totalWeight.
+       */
+      public com.google.protobuf.ByteString
+          getTotalWeightBytes() {
+        java.lang.Object ref = totalWeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalWeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_weight is the sum of the group members' weights.
+       * </pre>
+       *
+       * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+       * @param value The totalWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalWeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalWeight_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_weight is the sum of the group members' weights.
+       * </pre>
+       *
+       * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalWeight() {
+        totalWeight_ = getDefaultInstance().getTotalWeight();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_weight is the sum of the group members' weights.
+       * </pre>
+       *
+       * <code>string total_weight = 5 [json_name = "totalWeight"];</code>
+       * @param value The bytes for totalWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalWeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalWeight_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.GroupInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.GroupInfo)
+    private static final com.regen.group.v1alpha1.TypesProto.GroupInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.GroupInfo();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GroupInfo>
+        PARSER = new com.google.protobuf.AbstractParser<GroupInfo>() {
+      @java.lang.Override
+      public GroupInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GroupInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GroupInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.GroupInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GroupMemberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.GroupMember)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * group_id is the unique ID of the group.
+     * </pre>
+     *
+     * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+     * @return The groupId.
+     */
+    long getGroupId();
+
+    /**
+     * <pre>
+     * member is the member data.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+     * @return Whether the member field is set.
+     */
+    boolean hasMember();
+    /**
+     * <pre>
+     * member is the member data.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+     * @return The member.
+     */
+    com.regen.group.v1alpha1.TypesProto.Member getMember();
+    /**
+     * <pre>
+     * member is the member data.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+     */
+    com.regen.group.v1alpha1.TypesProto.MemberOrBuilder getMemberOrBuilder();
+  }
+  /**
+   * <pre>
+   * GroupMember represents the relationship between a group and a member.
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.GroupMember}
+   */
+  public static final class GroupMember extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.GroupMember)
+      GroupMemberOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GroupMember.newBuilder() to construct.
+    private GroupMember(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GroupMember() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GroupMember();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupMember_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupMember_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.GroupMember.class, com.regen.group.v1alpha1.TypesProto.GroupMember.Builder.class);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    private long groupId_ = 0L;
+    /**
+     * <pre>
+     * group_id is the unique ID of the group.
+     * </pre>
+     *
+     * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public long getGroupId() {
+      return groupId_;
+    }
+
+    public static final int MEMBER_FIELD_NUMBER = 2;
+    private com.regen.group.v1alpha1.TypesProto.Member member_;
+    /**
+     * <pre>
+     * member is the member data.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+     * @return Whether the member field is set.
+     */
+    @java.lang.Override
+    public boolean hasMember() {
+      return member_ != null;
+    }
+    /**
+     * <pre>
+     * member is the member data.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+     * @return The member.
+     */
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.Member getMember() {
+      return member_ == null ? com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance() : member_;
+    }
+    /**
+     * <pre>
+     * member is the member data.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+     */
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.MemberOrBuilder getMemberOrBuilder() {
+      return member_ == null ? com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance() : member_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (groupId_ != 0L) {
+        output.writeUInt64(1, groupId_);
+      }
+      if (member_ != null) {
+        output.writeMessage(2, getMember());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (groupId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, groupId_);
+      }
+      if (member_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMember());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.GroupMember)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.GroupMember other = (com.regen.group.v1alpha1.TypesProto.GroupMember) obj;
+
+      if (getGroupId()
+          != other.getGroupId()) return false;
+      if (hasMember() != other.hasMember()) return false;
+      if (hasMember()) {
+        if (!getMember()
+            .equals(other.getMember())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGroupId());
+      if (hasMember()) {
+        hash = (37 * hash) + MEMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getMember().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.GroupMember prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GroupMember represents the relationship between a group and a member.
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.GroupMember}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.GroupMember)
+        com.regen.group.v1alpha1.TypesProto.GroupMemberOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupMember_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupMember_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.GroupMember.class, com.regen.group.v1alpha1.TypesProto.GroupMember.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.GroupMember.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        groupId_ = 0L;
+        member_ = null;
+        if (memberBuilder_ != null) {
+          memberBuilder_.dispose();
+          memberBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupMember_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupMember getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.GroupMember.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupMember build() {
+        com.regen.group.v1alpha1.TypesProto.GroupMember result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupMember buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.GroupMember result = new com.regen.group.v1alpha1.TypesProto.GroupMember(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.GroupMember result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.groupId_ = groupId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.member_ = memberBuilder_ == null
+              ? member_
+              : memberBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.GroupMember) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.GroupMember)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.GroupMember other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.GroupMember.getDefaultInstance()) return this;
+        if (other.getGroupId() != 0L) {
+          setGroupId(other.getGroupId());
+        }
+        if (other.hasMember()) {
+          mergeMember(other.getMember());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                groupId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getMemberFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long groupId_ ;
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @return The groupId.
+       */
+      @java.lang.Override
+      public long getGroupId() {
+        return groupId_;
+      }
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(long value) {
+
+        groupId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        groupId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.regen.group.v1alpha1.TypesProto.Member member_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.group.v1alpha1.TypesProto.Member, com.regen.group.v1alpha1.TypesProto.Member.Builder, com.regen.group.v1alpha1.TypesProto.MemberOrBuilder> memberBuilder_;
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       * @return Whether the member field is set.
+       */
+      public boolean hasMember() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       * @return The member.
+       */
+      public com.regen.group.v1alpha1.TypesProto.Member getMember() {
+        if (memberBuilder_ == null) {
+          return member_ == null ? com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance() : member_;
+        } else {
+          return memberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       */
+      public Builder setMember(com.regen.group.v1alpha1.TypesProto.Member value) {
+        if (memberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          member_ = value;
+        } else {
+          memberBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       */
+      public Builder setMember(
+          com.regen.group.v1alpha1.TypesProto.Member.Builder builderForValue) {
+        if (memberBuilder_ == null) {
+          member_ = builderForValue.build();
+        } else {
+          memberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       */
+      public Builder mergeMember(com.regen.group.v1alpha1.TypesProto.Member value) {
+        if (memberBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            member_ != null &&
+            member_ != com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance()) {
+            getMemberBuilder().mergeFrom(value);
+          } else {
+            member_ = value;
+          }
+        } else {
+          memberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       */
+      public Builder clearMember() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        member_ = null;
+        if (memberBuilder_ != null) {
+          memberBuilder_.dispose();
+          memberBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.Member.Builder getMemberBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getMemberFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.MemberOrBuilder getMemberOrBuilder() {
+        if (memberBuilder_ != null) {
+          return memberBuilder_.getMessageOrBuilder();
+        } else {
+          return member_ == null ?
+              com.regen.group.v1alpha1.TypesProto.Member.getDefaultInstance() : member_;
+        }
+      }
+      /**
+       * <pre>
+       * member is the member data.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Member member = 2 [json_name = "member"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.group.v1alpha1.TypesProto.Member, com.regen.group.v1alpha1.TypesProto.Member.Builder, com.regen.group.v1alpha1.TypesProto.MemberOrBuilder> 
+          getMemberFieldBuilder() {
+        if (memberBuilder_ == null) {
+          memberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.group.v1alpha1.TypesProto.Member, com.regen.group.v1alpha1.TypesProto.Member.Builder, com.regen.group.v1alpha1.TypesProto.MemberOrBuilder>(
+                  getMember(),
+                  getParentForChildren(),
+                  isClean());
+          member_ = null;
+        }
+        return memberBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.GroupMember)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.GroupMember)
+    private static final com.regen.group.v1alpha1.TypesProto.GroupMember DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.GroupMember();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupMember getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GroupMember>
+        PARSER = new com.google.protobuf.AbstractParser<GroupMember>() {
+      @java.lang.Override
+      public GroupMember parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GroupMember> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GroupMember> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.GroupMember getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GroupAccountInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.GroupAccountInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address is the group account address.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address is the group account address.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * group_id is the unique ID of the group.
+     * </pre>
+     *
+     * <code>uint64 group_id = 2 [json_name = "groupId"];</code>
+     * @return The groupId.
+     */
+    long getGroupId();
+
+    /**
+     * <pre>
+     * admin is the account address of the group admin.
+     * </pre>
+     *
+     * <code>string admin = 3 [json_name = "admin"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the account address of the group admin.
+     * </pre>
+     *
+     * <code>string admin = 3 [json_name = "admin"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the group account.
+     * </pre>
+     *
+     * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.ByteString getMetadata();
+
+    /**
+     * <pre>
+     * version is used to track changes to a group's GroupAccountInfo structure that
+     * would create a different result on a running proposal.
+     * </pre>
+     *
+     * <code>uint64 version = 5 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <pre>
+     * decision_policy specifies the group account's decision policy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+     * @return Whether the decisionPolicy field is set.
+     */
+    boolean hasDecisionPolicy();
+    /**
+     * <pre>
+     * decision_policy specifies the group account's decision policy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+     * @return The decisionPolicy.
+     */
+    com.google.protobuf.Any getDecisionPolicy();
+    /**
+     * <pre>
+     * decision_policy specifies the group account's decision policy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getDecisionPolicyOrBuilder();
+
+    /**
+     * <pre>
+     * derivation_key is the "derivation" key of the group account,
+     * which is needed to derive the group root module key and execute proposals.
+     * </pre>
+     *
+     * <code>bytes derivation_key = 7 [json_name = "derivationKey"];</code>
+     * @return The derivationKey.
+     */
+    com.google.protobuf.ByteString getDerivationKey();
+  }
+  /**
+   * <pre>
+   * GroupAccountInfo represents the high-level on-chain information for a group account.
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.GroupAccountInfo}
+   */
+  public static final class GroupAccountInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.GroupAccountInfo)
+      GroupAccountInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GroupAccountInfo.newBuilder() to construct.
+    private GroupAccountInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GroupAccountInfo() {
+      address_ = "";
+      admin_ = "";
+      metadata_ = com.google.protobuf.ByteString.EMPTY;
+      derivationKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GroupAccountInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupAccountInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupAccountInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.class, com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address is the group account address.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address is the group account address.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 2;
+    private long groupId_ = 0L;
+    /**
+     * <pre>
+     * group_id is the unique ID of the group.
+     * </pre>
+     *
+     * <code>uint64 group_id = 2 [json_name = "groupId"];</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public long getGroupId() {
+      return groupId_;
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the account address of the group admin.
+     * </pre>
+     *
+     * <code>string admin = 3 [json_name = "admin"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the account address of the group admin.
+     * </pre>
+     *
+     * <code>string admin = 3 [json_name = "admin"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the group account.
+     * </pre>
+     *
+     * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMetadata() {
+      return metadata_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 5;
+    private long version_ = 0L;
+    /**
+     * <pre>
+     * version is used to track changes to a group's GroupAccountInfo structure that
+     * would create a different result on a running proposal.
+     * </pre>
+     *
+     * <code>uint64 version = 5 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int DECISION_POLICY_FIELD_NUMBER = 6;
+    private com.google.protobuf.Any decisionPolicy_;
+    /**
+     * <pre>
+     * decision_policy specifies the group account's decision policy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+     * @return Whether the decisionPolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasDecisionPolicy() {
+      return decisionPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * decision_policy specifies the group account's decision policy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+     * @return The decisionPolicy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getDecisionPolicy() {
+      return decisionPolicy_ == null ? com.google.protobuf.Any.getDefaultInstance() : decisionPolicy_;
+    }
+    /**
+     * <pre>
+     * decision_policy specifies the group account's decision policy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getDecisionPolicyOrBuilder() {
+      return decisionPolicy_ == null ? com.google.protobuf.Any.getDefaultInstance() : decisionPolicy_;
+    }
+
+    public static final int DERIVATION_KEY_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString derivationKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * derivation_key is the "derivation" key of the group account,
+     * which is needed to derive the group root module key and execute proposals.
+     * </pre>
+     *
+     * <code>bytes derivation_key = 7 [json_name = "derivationKey"];</code>
+     * @return The derivationKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDerivationKey() {
+      return derivationKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (groupId_ != 0L) {
+        output.writeUInt64(2, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, admin_);
+      }
+      if (!metadata_.isEmpty()) {
+        output.writeBytes(4, metadata_);
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(5, version_);
+      }
+      if (decisionPolicy_ != null) {
+        output.writeMessage(6, getDecisionPolicy());
+      }
+      if (!derivationKey_.isEmpty()) {
+        output.writeBytes(7, derivationKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (groupId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, admin_);
+      }
+      if (!metadata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, metadata_);
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, version_);
+      }
+      if (decisionPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDecisionPolicy());
+      }
+      if (!derivationKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, derivationKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.GroupAccountInfo)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.GroupAccountInfo other = (com.regen.group.v1alpha1.TypesProto.GroupAccountInfo) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getGroupId()
+          != other.getGroupId()) return false;
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (hasDecisionPolicy() != other.hasDecisionPolicy()) return false;
+      if (hasDecisionPolicy()) {
+        if (!getDecisionPolicy()
+            .equals(other.getDecisionPolicy())) return false;
+      }
+      if (!getDerivationKey()
+          .equals(other.getDerivationKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGroupId());
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      if (hasDecisionPolicy()) {
+        hash = (37 * hash) + DECISION_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getDecisionPolicy().hashCode();
+      }
+      hash = (37 * hash) + DERIVATION_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getDerivationKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.GroupAccountInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GroupAccountInfo represents the high-level on-chain information for a group account.
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.GroupAccountInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.GroupAccountInfo)
+        com.regen.group.v1alpha1.TypesProto.GroupAccountInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupAccountInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupAccountInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.class, com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        groupId_ = 0L;
+        admin_ = "";
+        metadata_ = com.google.protobuf.ByteString.EMPTY;
+        version_ = 0L;
+        decisionPolicy_ = null;
+        if (decisionPolicyBuilder_ != null) {
+          decisionPolicyBuilder_.dispose();
+          decisionPolicyBuilder_ = null;
+        }
+        derivationKey_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_GroupAccountInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupAccountInfo getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupAccountInfo build() {
+        com.regen.group.v1alpha1.TypesProto.GroupAccountInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.GroupAccountInfo buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.GroupAccountInfo result = new com.regen.group.v1alpha1.TypesProto.GroupAccountInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.GroupAccountInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.groupId_ = groupId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.admin_ = admin_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.metadata_ = metadata_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.decisionPolicy_ = decisionPolicyBuilder_ == null
+              ? decisionPolicy_
+              : decisionPolicyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.derivationKey_ = derivationKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.GroupAccountInfo) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.GroupAccountInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.GroupAccountInfo other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getGroupId() != 0L) {
+          setGroupId(other.getGroupId());
+        }
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getMetadata() != com.google.protobuf.ByteString.EMPTY) {
+          setMetadata(other.getMetadata());
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (other.hasDecisionPolicy()) {
+          mergeDecisionPolicy(other.getDecisionPolicy());
+        }
+        if (other.getDerivationKey() != com.google.protobuf.ByteString.EMPTY) {
+          setDerivationKey(other.getDerivationKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                groupId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                metadata_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getDecisionPolicyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                derivationKey_ = input.readBytes();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long groupId_ ;
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 2 [json_name = "groupId"];</code>
+       * @return The groupId.
+       */
+      @java.lang.Override
+      public long getGroupId() {
+        return groupId_;
+      }
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 2 [json_name = "groupId"];</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(long value) {
+
+        groupId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * group_id is the unique ID of the group.
+       * </pre>
+       *
+       * <code>uint64 group_id = 2 [json_name = "groupId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        groupId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the account address of the group admin.
+       * </pre>
+       *
+       * <code>string admin = 3 [json_name = "admin"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account address of the group admin.
+       * </pre>
+       *
+       * <code>string admin = 3 [json_name = "admin"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account address of the group admin.
+       * </pre>
+       *
+       * <code>string admin = 3 [json_name = "admin"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account address of the group admin.
+       * </pre>
+       *
+       * <code>string admin = 3 [json_name = "admin"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account address of the group admin.
+       * </pre>
+       *
+       * <code>string admin = 3 [json_name = "admin"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the group account.
+       * </pre>
+       *
+       * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+       * @return The metadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMetadata() {
+        return metadata_;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the group account.
+       * </pre>
+       *
+       * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadata_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the group account.
+       * </pre>
+       *
+       * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        metadata_ = getDefaultInstance().getMetadata();
+        onChanged();
+        return this;
+      }
+
+      private long version_ ;
+      /**
+       * <pre>
+       * version is used to track changes to a group's GroupAccountInfo structure that
+       * would create a different result on a running proposal.
+       * </pre>
+       *
+       * <code>uint64 version = 5 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <pre>
+       * version is used to track changes to a group's GroupAccountInfo structure that
+       * would create a different result on a running proposal.
+       * </pre>
+       *
+       * <code>uint64 version = 5 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * version is used to track changes to a group's GroupAccountInfo structure that
+       * would create a different result on a running proposal.
+       * </pre>
+       *
+       * <code>uint64 version = 5 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Any decisionPolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> decisionPolicyBuilder_;
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       * @return Whether the decisionPolicy field is set.
+       */
+      public boolean hasDecisionPolicy() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       * @return The decisionPolicy.
+       */
+      public com.google.protobuf.Any getDecisionPolicy() {
+        if (decisionPolicyBuilder_ == null) {
+          return decisionPolicy_ == null ? com.google.protobuf.Any.getDefaultInstance() : decisionPolicy_;
+        } else {
+          return decisionPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       */
+      public Builder setDecisionPolicy(com.google.protobuf.Any value) {
+        if (decisionPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          decisionPolicy_ = value;
+        } else {
+          decisionPolicyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       */
+      public Builder setDecisionPolicy(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (decisionPolicyBuilder_ == null) {
+          decisionPolicy_ = builderForValue.build();
+        } else {
+          decisionPolicyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       */
+      public Builder mergeDecisionPolicy(com.google.protobuf.Any value) {
+        if (decisionPolicyBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            decisionPolicy_ != null &&
+            decisionPolicy_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getDecisionPolicyBuilder().mergeFrom(value);
+          } else {
+            decisionPolicy_ = value;
+          }
+        } else {
+          decisionPolicyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       */
+      public Builder clearDecisionPolicy() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        decisionPolicy_ = null;
+        if (decisionPolicyBuilder_ != null) {
+          decisionPolicyBuilder_.dispose();
+          decisionPolicyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       */
+      public com.google.protobuf.Any.Builder getDecisionPolicyBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDecisionPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getDecisionPolicyOrBuilder() {
+        if (decisionPolicyBuilder_ != null) {
+          return decisionPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return decisionPolicy_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : decisionPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * decision_policy specifies the group account's decision policy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Any decision_policy = 6 [json_name = "decisionPolicy", (.cosmos_proto.accepts_interface) = "DecisionPolicy"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getDecisionPolicyFieldBuilder() {
+        if (decisionPolicyBuilder_ == null) {
+          decisionPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getDecisionPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          decisionPolicy_ = null;
+        }
+        return decisionPolicyBuilder_;
+      }
+
+      private com.google.protobuf.ByteString derivationKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * derivation_key is the "derivation" key of the group account,
+       * which is needed to derive the group root module key and execute proposals.
+       * </pre>
+       *
+       * <code>bytes derivation_key = 7 [json_name = "derivationKey"];</code>
+       * @return The derivationKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDerivationKey() {
+        return derivationKey_;
+      }
+      /**
+       * <pre>
+       * derivation_key is the "derivation" key of the group account,
+       * which is needed to derive the group root module key and execute proposals.
+       * </pre>
+       *
+       * <code>bytes derivation_key = 7 [json_name = "derivationKey"];</code>
+       * @param value The derivationKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDerivationKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        derivationKey_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * derivation_key is the "derivation" key of the group account,
+       * which is needed to derive the group root module key and execute proposals.
+       * </pre>
+       *
+       * <code>bytes derivation_key = 7 [json_name = "derivationKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDerivationKey() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        derivationKey_ = getDefaultInstance().getDerivationKey();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.GroupAccountInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.GroupAccountInfo)
+    private static final com.regen.group.v1alpha1.TypesProto.GroupAccountInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.GroupAccountInfo();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.GroupAccountInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GroupAccountInfo>
+        PARSER = new com.google.protobuf.AbstractParser<GroupAccountInfo>() {
+      @java.lang.Override
+      public GroupAccountInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GroupAccountInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GroupAccountInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.GroupAccountInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.Proposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * proposal_id is the unique id of the proposal.
+     * </pre>
+     *
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    long getProposalId();
+
+    /**
+     * <pre>
+     * address is the group account address.
+     * </pre>
+     *
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address is the group account address.
+     * </pre>
+     *
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the proposal.
+     * </pre>
+     *
+     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.ByteString getMetadata();
+
+    /**
+     * <pre>
+     * proposers are the account addresses of the proposers.
+     * </pre>
+     *
+     * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+     * @return A list containing the proposers.
+     */
+    java.util.List<java.lang.String>
+        getProposersList();
+    /**
+     * <pre>
+     * proposers are the account addresses of the proposers.
+     * </pre>
+     *
+     * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+     * @return The count of proposers.
+     */
+    int getProposersCount();
+    /**
+     * <pre>
+     * proposers are the account addresses of the proposers.
+     * </pre>
+     *
+     * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+     * @param index The index of the element to return.
+     * @return The proposers at the given index.
+     */
+    java.lang.String getProposers(int index);
+    /**
+     * <pre>
+     * proposers are the account addresses of the proposers.
+     * </pre>
+     *
+     * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the proposers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getProposersBytes(int index);
+
+    /**
+     * <pre>
+     * submitted_at is a timestamp specifying when a proposal was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     * @return Whether the submittedAt field is set.
+     */
+    boolean hasSubmittedAt();
+    /**
+     * <pre>
+     * submitted_at is a timestamp specifying when a proposal was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     * @return The submittedAt.
+     */
+    com.google.protobuf.Timestamp getSubmittedAt();
+    /**
+     * <pre>
+     * submitted_at is a timestamp specifying when a proposal was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getSubmittedAtOrBuilder();
+
+    /**
+     * <pre>
+     * group_version tracks the version of the group that this proposal corresponds to.
+     * When group membership is changed, existing proposals from previous group versions will become invalid.
+     * </pre>
+     *
+     * <code>uint64 group_version = 6 [json_name = "groupVersion"];</code>
+     * @return The groupVersion.
+     */
+    long getGroupVersion();
+
+    /**
+     * <pre>
+     * group_account_version tracks the version of the group account that this proposal corresponds to.
+     * When a decision policy is changed, existing proposals from previous policy versions will become invalid.
+     * </pre>
+     *
+     * <code>uint64 group_account_version = 7 [json_name = "groupAccountVersion"];</code>
+     * @return The groupAccountVersion.
+     */
+    long getGroupAccountVersion();
+
+    /**
+     * <pre>
+     * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.regen.group.v1alpha1.TypesProto.Proposal.Status getStatus();
+
+    /**
+     * <pre>
+     * result is the final result based on the votes and election rule. Initial value is unfinalized.
+     * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+     * @return The enum numeric value on the wire for result.
+     */
+    int getResultValue();
+    /**
+     * <pre>
+     * result is the final result based on the votes and election rule. Initial value is unfinalized.
+     * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+     * @return The result.
+     */
+    com.regen.group.v1alpha1.TypesProto.Proposal.Result getResult();
+
+    /**
+     * <pre>
+     * vote_state contains the sums of all weighted votes for this proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the voteState field is set.
+     */
+    boolean hasVoteState();
+    /**
+     * <pre>
+     * vote_state contains the sums of all weighted votes for this proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+     * @return The voteState.
+     */
+    com.regen.group.v1alpha1.TypesProto.Tally getVoteState();
+    /**
+     * <pre>
+     * vote_state contains the sums of all weighted votes for this proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+     */
+    com.regen.group.v1alpha1.TypesProto.TallyOrBuilder getVoteStateOrBuilder();
+
+    /**
+     * <pre>
+     * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+     * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+     * executed anymore and should be considered pending delete.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     * @return Whether the timeout field is set.
+     */
+    boolean hasTimeout();
+    /**
+     * <pre>
+     * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+     * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+     * executed anymore and should be considered pending delete.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     * @return The timeout.
+     */
+    com.google.protobuf.Timestamp getTimeout();
+    /**
+     * <pre>
+     * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+     * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+     * executed anymore and should be considered pending delete.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+     * @return The enum numeric value on the wire for executorResult.
+     */
+    int getExecutorResultValue();
+    /**
+     * <pre>
+     * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+     * @return The executorResult.
+     */
+    com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult getExecutorResult();
+
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    java.util.List<com.google.protobuf.Any> 
+        getMsgsList();
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    com.google.protobuf.Any getMsgs(int index);
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    int getMsgsCount();
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getMsgsOrBuilderList();
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getMsgsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Proposal defines a group proposal. Any member of a group can submit a proposal
+   * for a group account to decide upon.
+   * A proposal consists of a set of `sdk.Msg`s that will be executed if the proposal
+   * passes as well as some optional metadata associated with the proposal.
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.Proposal}
+   */
+  public static final class Proposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.Proposal)
+      ProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Proposal.newBuilder() to construct.
+    private Proposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Proposal() {
+      address_ = "";
+      metadata_ = com.google.protobuf.ByteString.EMPTY;
+      proposers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      status_ = 0;
+      result_ = 0;
+      executorResult_ = 0;
+      msgs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Proposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Proposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Proposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.Proposal.class, com.regen.group.v1alpha1.TypesProto.Proposal.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Status defines proposal statuses.
+     * </pre>
+     *
+     * Protobuf enum {@code regen.group.v1alpha1.Proposal.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * An empty value is invalid and not allowed.
+       * </pre>
+       *
+       * <code>STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ProposalStatusInvalid"];</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Initial status of a proposal when persisted.
+       * </pre>
+       *
+       * <code>STATUS_SUBMITTED = 1 [(.gogoproto.enumvalue_customname) = "ProposalStatusSubmitted"];</code>
+       */
+      STATUS_SUBMITTED(1),
+      /**
+       * <pre>
+       * Final status of a proposal when the final tally was executed.
+       * </pre>
+       *
+       * <code>STATUS_CLOSED = 2 [(.gogoproto.enumvalue_customname) = "ProposalStatusClosed"];</code>
+       */
+      STATUS_CLOSED(2),
+      /**
+       * <pre>
+       * Final status of a proposal when the group was modified before the final tally.
+       * </pre>
+       *
+       * <code>STATUS_ABORTED = 3 [(.gogoproto.enumvalue_customname) = "ProposalStatusAborted"];</code>
+       */
+      STATUS_ABORTED(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * An empty value is invalid and not allowed.
+       * </pre>
+       *
+       * <code>STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ProposalStatusInvalid"];</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Initial status of a proposal when persisted.
+       * </pre>
+       *
+       * <code>STATUS_SUBMITTED = 1 [(.gogoproto.enumvalue_customname) = "ProposalStatusSubmitted"];</code>
+       */
+      public static final int STATUS_SUBMITTED_VALUE = 1;
+      /**
+       * <pre>
+       * Final status of a proposal when the final tally was executed.
+       * </pre>
+       *
+       * <code>STATUS_CLOSED = 2 [(.gogoproto.enumvalue_customname) = "ProposalStatusClosed"];</code>
+       */
+      public static final int STATUS_CLOSED_VALUE = 2;
+      /**
+       * <pre>
+       * Final status of a proposal when the group was modified before the final tally.
+       * </pre>
+       *
+       * <code>STATUS_ABORTED = 3 [(.gogoproto.enumvalue_customname) = "ProposalStatusAborted"];</code>
+       */
+      public static final int STATUS_ABORTED_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return STATUS_SUBMITTED;
+          case 2: return STATUS_CLOSED;
+          case 3: return STATUS_ABORTED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.Proposal.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:regen.group.v1alpha1.Proposal.Status)
+    }
+
+    /**
+     * <pre>
+     * Result defines types of proposal results.
+     * </pre>
+     *
+     * Protobuf enum {@code regen.group.v1alpha1.Proposal.Result}
+     */
+    public enum Result
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * An empty value is invalid and not allowed
+       * </pre>
+       *
+       * <code>RESULT_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ProposalResultInvalid"];</code>
+       */
+      RESULT_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Until a final tally has happened the status is unfinalized
+       * </pre>
+       *
+       * <code>RESULT_UNFINALIZED = 1 [(.gogoproto.enumvalue_customname) = "ProposalResultUnfinalized"];</code>
+       */
+      RESULT_UNFINALIZED(1),
+      /**
+       * <pre>
+       * Final result of the tally
+       * </pre>
+       *
+       * <code>RESULT_ACCEPTED = 2 [(.gogoproto.enumvalue_customname) = "ProposalResultAccepted"];</code>
+       */
+      RESULT_ACCEPTED(2),
+      /**
+       * <pre>
+       * Final result of the tally
+       * </pre>
+       *
+       * <code>RESULT_REJECTED = 3 [(.gogoproto.enumvalue_customname) = "ProposalResultRejected"];</code>
+       */
+      RESULT_REJECTED(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * An empty value is invalid and not allowed
+       * </pre>
+       *
+       * <code>RESULT_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ProposalResultInvalid"];</code>
+       */
+      public static final int RESULT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Until a final tally has happened the status is unfinalized
+       * </pre>
+       *
+       * <code>RESULT_UNFINALIZED = 1 [(.gogoproto.enumvalue_customname) = "ProposalResultUnfinalized"];</code>
+       */
+      public static final int RESULT_UNFINALIZED_VALUE = 1;
+      /**
+       * <pre>
+       * Final result of the tally
+       * </pre>
+       *
+       * <code>RESULT_ACCEPTED = 2 [(.gogoproto.enumvalue_customname) = "ProposalResultAccepted"];</code>
+       */
+      public static final int RESULT_ACCEPTED_VALUE = 2;
+      /**
+       * <pre>
+       * Final result of the tally
+       * </pre>
+       *
+       * <code>RESULT_REJECTED = 3 [(.gogoproto.enumvalue_customname) = "ProposalResultRejected"];</code>
+       */
+      public static final int RESULT_REJECTED_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Result valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Result forNumber(int value) {
+        switch (value) {
+          case 0: return RESULT_UNSPECIFIED;
+          case 1: return RESULT_UNFINALIZED;
+          case 2: return RESULT_ACCEPTED;
+          case 3: return RESULT_REJECTED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Result>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Result> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Result>() {
+              public Result findValueByNumber(int number) {
+                return Result.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.Proposal.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final Result[] VALUES = values();
+
+      public static Result valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Result(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:regen.group.v1alpha1.Proposal.Result)
+    }
+
+    /**
+     * <pre>
+     * ExecutorResult defines types of proposal executor results.
+     * </pre>
+     *
+     * Protobuf enum {@code regen.group.v1alpha1.Proposal.ExecutorResult}
+     */
+    public enum ExecutorResult
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * An empty value is not allowed.
+       * </pre>
+       *
+       * <code>EXECUTOR_RESULT_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ProposalExecutorResultInvalid"];</code>
+       */
+      EXECUTOR_RESULT_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * We have not yet run the executor.
+       * </pre>
+       *
+       * <code>EXECUTOR_RESULT_NOT_RUN = 1 [(.gogoproto.enumvalue_customname) = "ProposalExecutorResultNotRun"];</code>
+       */
+      EXECUTOR_RESULT_NOT_RUN(1),
+      /**
+       * <pre>
+       * The executor was successful and proposed action updated state.
+       * </pre>
+       *
+       * <code>EXECUTOR_RESULT_SUCCESS = 2 [(.gogoproto.enumvalue_customname) = "ProposalExecutorResultSuccess"];</code>
+       */
+      EXECUTOR_RESULT_SUCCESS(2),
+      /**
+       * <pre>
+       * The executor returned an error and proposed action didn't update state.
+       * </pre>
+       *
+       * <code>EXECUTOR_RESULT_FAILURE = 3 [(.gogoproto.enumvalue_customname) = "ProposalExecutorResultFailure"];</code>
+       */
+      EXECUTOR_RESULT_FAILURE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * An empty value is not allowed.
+       * </pre>
+       *
+       * <code>EXECUTOR_RESULT_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ProposalExecutorResultInvalid"];</code>
+       */
+      public static final int EXECUTOR_RESULT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * We have not yet run the executor.
+       * </pre>
+       *
+       * <code>EXECUTOR_RESULT_NOT_RUN = 1 [(.gogoproto.enumvalue_customname) = "ProposalExecutorResultNotRun"];</code>
+       */
+      public static final int EXECUTOR_RESULT_NOT_RUN_VALUE = 1;
+      /**
+       * <pre>
+       * The executor was successful and proposed action updated state.
+       * </pre>
+       *
+       * <code>EXECUTOR_RESULT_SUCCESS = 2 [(.gogoproto.enumvalue_customname) = "ProposalExecutorResultSuccess"];</code>
+       */
+      public static final int EXECUTOR_RESULT_SUCCESS_VALUE = 2;
+      /**
+       * <pre>
+       * The executor returned an error and proposed action didn't update state.
+       * </pre>
+       *
+       * <code>EXECUTOR_RESULT_FAILURE = 3 [(.gogoproto.enumvalue_customname) = "ProposalExecutorResultFailure"];</code>
+       */
+      public static final int EXECUTOR_RESULT_FAILURE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ExecutorResult valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ExecutorResult forNumber(int value) {
+        switch (value) {
+          case 0: return EXECUTOR_RESULT_UNSPECIFIED;
+          case 1: return EXECUTOR_RESULT_NOT_RUN;
+          case 2: return EXECUTOR_RESULT_SUCCESS;
+          case 3: return EXECUTOR_RESULT_FAILURE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ExecutorResult>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ExecutorResult> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ExecutorResult>() {
+              public ExecutorResult findValueByNumber(int number) {
+                return ExecutorResult.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.Proposal.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final ExecutorResult[] VALUES = values();
+
+      public static ExecutorResult valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ExecutorResult(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:regen.group.v1alpha1.Proposal.ExecutorResult)
+    }
+
+    public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
+    private long proposalId_ = 0L;
+    /**
+     * <pre>
+     * proposal_id is the unique id of the proposal.
+     * </pre>
+     *
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    @java.lang.Override
+    public long getProposalId() {
+      return proposalId_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address is the group account address.
+     * </pre>
+     *
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address is the group account address.
+     * </pre>
+     *
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the proposal.
+     * </pre>
+     *
+     * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMetadata() {
+      return metadata_;
+    }
+
+    public static final int PROPOSERS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList proposers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * proposers are the account addresses of the proposers.
+     * </pre>
+     *
+     * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+     * @return A list containing the proposers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProposersList() {
+      return proposers_;
+    }
+    /**
+     * <pre>
+     * proposers are the account addresses of the proposers.
+     * </pre>
+     *
+     * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+     * @return The count of proposers.
+     */
+    public int getProposersCount() {
+      return proposers_.size();
+    }
+    /**
+     * <pre>
+     * proposers are the account addresses of the proposers.
+     * </pre>
+     *
+     * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+     * @param index The index of the element to return.
+     * @return The proposers at the given index.
+     */
+    public java.lang.String getProposers(int index) {
+      return proposers_.get(index);
+    }
+    /**
+     * <pre>
+     * proposers are the account addresses of the proposers.
+     * </pre>
+     *
+     * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the proposers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getProposersBytes(int index) {
+      return proposers_.getByteString(index);
+    }
+
+    public static final int SUBMITTED_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp submittedAt_;
+    /**
+     * <pre>
+     * submitted_at is a timestamp specifying when a proposal was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     * @return Whether the submittedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasSubmittedAt() {
+      return submittedAt_ != null;
+    }
+    /**
+     * <pre>
+     * submitted_at is a timestamp specifying when a proposal was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     * @return The submittedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getSubmittedAt() {
+      return submittedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : submittedAt_;
+    }
+    /**
+     * <pre>
+     * submitted_at is a timestamp specifying when a proposal was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getSubmittedAtOrBuilder() {
+      return submittedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : submittedAt_;
+    }
+
+    public static final int GROUP_VERSION_FIELD_NUMBER = 6;
+    private long groupVersion_ = 0L;
+    /**
+     * <pre>
+     * group_version tracks the version of the group that this proposal corresponds to.
+     * When group membership is changed, existing proposals from previous group versions will become invalid.
+     * </pre>
+     *
+     * <code>uint64 group_version = 6 [json_name = "groupVersion"];</code>
+     * @return The groupVersion.
+     */
+    @java.lang.Override
+    public long getGroupVersion() {
+      return groupVersion_;
+    }
+
+    public static final int GROUP_ACCOUNT_VERSION_FIELD_NUMBER = 7;
+    private long groupAccountVersion_ = 0L;
+    /**
+     * <pre>
+     * group_account_version tracks the version of the group account that this proposal corresponds to.
+     * When a decision policy is changed, existing proposals from previous policy versions will become invalid.
+     * </pre>
+     *
+     * <code>uint64 group_account_version = 7 [json_name = "groupAccountVersion"];</code>
+     * @return The groupAccountVersion.
+     */
+    @java.lang.Override
+    public long getGroupAccountVersion() {
+      return groupAccountVersion_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 8;
+    private int status_ = 0;
+    /**
+     * <pre>
+     * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.regen.group.v1alpha1.TypesProto.Proposal.Status getStatus() {
+      com.regen.group.v1alpha1.TypesProto.Proposal.Status result = com.regen.group.v1alpha1.TypesProto.Proposal.Status.forNumber(status_);
+      return result == null ? com.regen.group.v1alpha1.TypesProto.Proposal.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 9;
+    private int result_ = 0;
+    /**
+     * <pre>
+     * result is the final result based on the votes and election rule. Initial value is unfinalized.
+     * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+     * @return The enum numeric value on the wire for result.
+     */
+    @java.lang.Override public int getResultValue() {
+      return result_;
+    }
+    /**
+     * <pre>
+     * result is the final result based on the votes and election rule. Initial value is unfinalized.
+     * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+     * @return The result.
+     */
+    @java.lang.Override public com.regen.group.v1alpha1.TypesProto.Proposal.Result getResult() {
+      com.regen.group.v1alpha1.TypesProto.Proposal.Result result = com.regen.group.v1alpha1.TypesProto.Proposal.Result.forNumber(result_);
+      return result == null ? com.regen.group.v1alpha1.TypesProto.Proposal.Result.UNRECOGNIZED : result;
+    }
+
+    public static final int VOTE_STATE_FIELD_NUMBER = 10;
+    private com.regen.group.v1alpha1.TypesProto.Tally voteState_;
+    /**
+     * <pre>
+     * vote_state contains the sums of all weighted votes for this proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the voteState field is set.
+     */
+    @java.lang.Override
+    public boolean hasVoteState() {
+      return voteState_ != null;
+    }
+    /**
+     * <pre>
+     * vote_state contains the sums of all weighted votes for this proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+     * @return The voteState.
+     */
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.Tally getVoteState() {
+      return voteState_ == null ? com.regen.group.v1alpha1.TypesProto.Tally.getDefaultInstance() : voteState_;
+    }
+    /**
+     * <pre>
+     * vote_state contains the sums of all weighted votes for this proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.TallyOrBuilder getVoteStateOrBuilder() {
+      return voteState_ == null ? com.regen.group.v1alpha1.TypesProto.Tally.getDefaultInstance() : voteState_;
+    }
+
+    public static final int TIMEOUT_FIELD_NUMBER = 11;
+    private com.google.protobuf.Timestamp timeout_;
+    /**
+     * <pre>
+     * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+     * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+     * executed anymore and should be considered pending delete.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     * @return Whether the timeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeout() {
+      return timeout_ != null;
+    }
+    /**
+     * <pre>
+     * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+     * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+     * executed anymore and should be considered pending delete.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     * @return The timeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimeout() {
+      return timeout_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
+    }
+    /**
+     * <pre>
+     * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+     * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+     * executed anymore and should be considered pending delete.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimeoutOrBuilder() {
+      return timeout_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
+    }
+
+    public static final int EXECUTOR_RESULT_FIELD_NUMBER = 12;
+    private int executorResult_ = 0;
+    /**
+     * <pre>
+     * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+     * @return The enum numeric value on the wire for executorResult.
+     */
+    @java.lang.Override public int getExecutorResultValue() {
+      return executorResult_;
+    }
+    /**
+     * <pre>
+     * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+     * @return The executorResult.
+     */
+    @java.lang.Override public com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult getExecutorResult() {
+      com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult result = com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult.forNumber(executorResult_);
+      return result == null ? com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult.UNRECOGNIZED : result;
+    }
+
+    public static final int MSGS_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.Any> msgs_;
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.Any> getMsgsList() {
+      return msgs_;
+    }
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getMsgsOrBuilderList() {
+      return msgs_;
+    }
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    @java.lang.Override
+    public int getMsgsCount() {
+      return msgs_.size();
+    }
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getMsgs(int index) {
+      return msgs_.get(index);
+    }
+    /**
+     * <pre>
+     * msgs is a list of Msgs that will be executed if the proposal passes.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getMsgsOrBuilder(
+        int index) {
+      return msgs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proposalId_ != 0L) {
+        output.writeUInt64(1, proposalId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      if (!metadata_.isEmpty()) {
+        output.writeBytes(3, metadata_);
+      }
+      for (int i = 0; i < proposers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, proposers_.getRaw(i));
+      }
+      if (submittedAt_ != null) {
+        output.writeMessage(5, getSubmittedAt());
+      }
+      if (groupVersion_ != 0L) {
+        output.writeUInt64(6, groupVersion_);
+      }
+      if (groupAccountVersion_ != 0L) {
+        output.writeUInt64(7, groupAccountVersion_);
+      }
+      if (status_ != com.regen.group.v1alpha1.TypesProto.Proposal.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, status_);
+      }
+      if (result_ != com.regen.group.v1alpha1.TypesProto.Proposal.Result.RESULT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, result_);
+      }
+      if (voteState_ != null) {
+        output.writeMessage(10, getVoteState());
+      }
+      if (timeout_ != null) {
+        output.writeMessage(11, getTimeout());
+      }
+      if (executorResult_ != com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult.EXECUTOR_RESULT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(12, executorResult_);
+      }
+      for (int i = 0; i < msgs_.size(); i++) {
+        output.writeMessage(13, msgs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proposalId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, proposalId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      if (!metadata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, metadata_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < proposers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(proposers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getProposersList().size();
+      }
+      if (submittedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSubmittedAt());
+      }
+      if (groupVersion_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, groupVersion_);
+      }
+      if (groupAccountVersion_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, groupAccountVersion_);
+      }
+      if (status_ != com.regen.group.v1alpha1.TypesProto.Proposal.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, status_);
+      }
+      if (result_ != com.regen.group.v1alpha1.TypesProto.Proposal.Result.RESULT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, result_);
+      }
+      if (voteState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getVoteState());
+      }
+      if (timeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getTimeout());
+      }
+      if (executorResult_ != com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult.EXECUTOR_RESULT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(12, executorResult_);
+      }
+      for (int i = 0; i < msgs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, msgs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.Proposal)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.Proposal other = (com.regen.group.v1alpha1.TypesProto.Proposal) obj;
+
+      if (getProposalId()
+          != other.getProposalId()) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+      if (!getProposersList()
+          .equals(other.getProposersList())) return false;
+      if (hasSubmittedAt() != other.hasSubmittedAt()) return false;
+      if (hasSubmittedAt()) {
+        if (!getSubmittedAt()
+            .equals(other.getSubmittedAt())) return false;
+      }
+      if (getGroupVersion()
+          != other.getGroupVersion()) return false;
+      if (getGroupAccountVersion()
+          != other.getGroupAccountVersion()) return false;
+      if (status_ != other.status_) return false;
+      if (result_ != other.result_) return false;
+      if (hasVoteState() != other.hasVoteState()) return false;
+      if (hasVoteState()) {
+        if (!getVoteState()
+            .equals(other.getVoteState())) return false;
+      }
+      if (hasTimeout() != other.hasTimeout()) return false;
+      if (hasTimeout()) {
+        if (!getTimeout()
+            .equals(other.getTimeout())) return false;
+      }
+      if (executorResult_ != other.executorResult_) return false;
+      if (!getMsgsList()
+          .equals(other.getMsgsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPOSAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProposalId());
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
+      if (getProposersCount() > 0) {
+        hash = (37 * hash) + PROPOSERS_FIELD_NUMBER;
+        hash = (53 * hash) + getProposersList().hashCode();
+      }
+      if (hasSubmittedAt()) {
+        hash = (37 * hash) + SUBMITTED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getSubmittedAt().hashCode();
+      }
+      hash = (37 * hash) + GROUP_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGroupVersion());
+      hash = (37 * hash) + GROUP_ACCOUNT_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGroupAccountVersion());
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + result_;
+      if (hasVoteState()) {
+        hash = (37 * hash) + VOTE_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getVoteState().hashCode();
+      }
+      if (hasTimeout()) {
+        hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeout().hashCode();
+      }
+      hash = (37 * hash) + EXECUTOR_RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + executorResult_;
+      if (getMsgsCount() > 0) {
+        hash = (37 * hash) + MSGS_FIELD_NUMBER;
+        hash = (53 * hash) + getMsgsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.Proposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Proposal defines a group proposal. Any member of a group can submit a proposal
+     * for a group account to decide upon.
+     * A proposal consists of a set of `sdk.Msg`s that will be executed if the proposal
+     * passes as well as some optional metadata associated with the proposal.
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.Proposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.Proposal)
+        com.regen.group.v1alpha1.TypesProto.ProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Proposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.Proposal.class, com.regen.group.v1alpha1.TypesProto.Proposal.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.Proposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proposalId_ = 0L;
+        address_ = "";
+        metadata_ = com.google.protobuf.ByteString.EMPTY;
+        proposers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        submittedAt_ = null;
+        if (submittedAtBuilder_ != null) {
+          submittedAtBuilder_.dispose();
+          submittedAtBuilder_ = null;
+        }
+        groupVersion_ = 0L;
+        groupAccountVersion_ = 0L;
+        status_ = 0;
+        result_ = 0;
+        voteState_ = null;
+        if (voteStateBuilder_ != null) {
+          voteStateBuilder_.dispose();
+          voteStateBuilder_ = null;
+        }
+        timeout_ = null;
+        if (timeoutBuilder_ != null) {
+          timeoutBuilder_.dispose();
+          timeoutBuilder_ = null;
+        }
+        executorResult_ = 0;
+        if (msgsBuilder_ == null) {
+          msgs_ = java.util.Collections.emptyList();
+        } else {
+          msgs_ = null;
+          msgsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Proposal getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.Proposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Proposal build() {
+        com.regen.group.v1alpha1.TypesProto.Proposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Proposal buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.Proposal result = new com.regen.group.v1alpha1.TypesProto.Proposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.regen.group.v1alpha1.TypesProto.Proposal result) {
+        if (msgsBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0)) {
+            msgs_ = java.util.Collections.unmodifiableList(msgs_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.msgs_ = msgs_;
+        } else {
+          result.msgs_ = msgsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.Proposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proposalId_ = proposalId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadata_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          proposers_.makeImmutable();
+          result.proposers_ = proposers_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.submittedAt_ = submittedAtBuilder_ == null
+              ? submittedAt_
+              : submittedAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.groupVersion_ = groupVersion_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.groupAccountVersion_ = groupAccountVersion_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.result_ = result_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.voteState_ = voteStateBuilder_ == null
+              ? voteState_
+              : voteStateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.timeout_ = timeoutBuilder_ == null
+              ? timeout_
+              : timeoutBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.executorResult_ = executorResult_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.Proposal) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.Proposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.Proposal other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.Proposal.getDefaultInstance()) return this;
+        if (other.getProposalId() != 0L) {
+          setProposalId(other.getProposalId());
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getMetadata() != com.google.protobuf.ByteString.EMPTY) {
+          setMetadata(other.getMetadata());
+        }
+        if (!other.proposers_.isEmpty()) {
+          if (proposers_.isEmpty()) {
+            proposers_ = other.proposers_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureProposersIsMutable();
+            proposers_.addAll(other.proposers_);
+          }
+          onChanged();
+        }
+        if (other.hasSubmittedAt()) {
+          mergeSubmittedAt(other.getSubmittedAt());
+        }
+        if (other.getGroupVersion() != 0L) {
+          setGroupVersion(other.getGroupVersion());
+        }
+        if (other.getGroupAccountVersion() != 0L) {
+          setGroupAccountVersion(other.getGroupAccountVersion());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.result_ != 0) {
+          setResultValue(other.getResultValue());
+        }
+        if (other.hasVoteState()) {
+          mergeVoteState(other.getVoteState());
+        }
+        if (other.hasTimeout()) {
+          mergeTimeout(other.getTimeout());
+        }
+        if (other.executorResult_ != 0) {
+          setExecutorResultValue(other.getExecutorResultValue());
+        }
+        if (msgsBuilder_ == null) {
+          if (!other.msgs_.isEmpty()) {
+            if (msgs_.isEmpty()) {
+              msgs_ = other.msgs_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensureMsgsIsMutable();
+              msgs_.addAll(other.msgs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.msgs_.isEmpty()) {
+            if (msgsBuilder_.isEmpty()) {
+              msgsBuilder_.dispose();
+              msgsBuilder_ = null;
+              msgs_ = other.msgs_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              msgsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMsgsFieldBuilder() : null;
+            } else {
+              msgsBuilder_.addAllMessages(other.msgs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                proposalId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                metadata_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureProposersIsMutable();
+                proposers_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getSubmittedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                groupVersion_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                groupAccountVersion_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                result_ = input.readEnum();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 82: {
+                input.readMessage(
+                    getVoteStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getTimeoutFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 96: {
+                executorResult_ = input.readEnum();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 106: {
+                com.google.protobuf.Any m =
+                    input.readMessage(
+                        com.google.protobuf.Any.parser(),
+                        extensionRegistry);
+                if (msgsBuilder_ == null) {
+                  ensureMsgsIsMutable();
+                  msgs_.add(m);
+                } else {
+                  msgsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long proposalId_ ;
+      /**
+       * <pre>
+       * proposal_id is the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return The proposalId.
+       */
+      @java.lang.Override
+      public long getProposalId() {
+        return proposalId_;
+      }
+      /**
+       * <pre>
+       * proposal_id is the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @param value The proposalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalId(long value) {
+
+        proposalId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal_id is the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proposalId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the group account address.
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the proposal.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @return The metadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMetadata() {
+        return metadata_;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the proposal.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadata_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the proposal.
+       * </pre>
+       *
+       * <code>bytes metadata = 3 [json_name = "metadata"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = getDefaultInstance().getMetadata();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList proposers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureProposersIsMutable() {
+        if (!proposers_.isModifiable()) {
+          proposers_ = new com.google.protobuf.LazyStringArrayList(proposers_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @return A list containing the proposers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getProposersList() {
+        proposers_.makeImmutable();
+        return proposers_;
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @return The count of proposers.
+       */
+      public int getProposersCount() {
+        return proposers_.size();
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @param index The index of the element to return.
+       * @return The proposers at the given index.
+       */
+      public java.lang.String getProposers(int index) {
+        return proposers_.get(index);
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the proposers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getProposersBytes(int index) {
+        return proposers_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @param index The index to set the value at.
+       * @param value The proposers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposers(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProposersIsMutable();
+        proposers_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @param value The proposers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProposers(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProposersIsMutable();
+        proposers_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @param values The proposers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllProposers(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureProposersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, proposers_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposers() {
+        proposers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposers are the account addresses of the proposers.
+       * </pre>
+       *
+       * <code>repeated string proposers = 4 [json_name = "proposers"];</code>
+       * @param value The bytes of the proposers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProposersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureProposersIsMutable();
+        proposers_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp submittedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> submittedAtBuilder_;
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       * @return Whether the submittedAt field is set.
+       */
+      public boolean hasSubmittedAt() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       * @return The submittedAt.
+       */
+      public com.google.protobuf.Timestamp getSubmittedAt() {
+        if (submittedAtBuilder_ == null) {
+          return submittedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : submittedAt_;
+        } else {
+          return submittedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSubmittedAt(com.google.protobuf.Timestamp value) {
+        if (submittedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          submittedAt_ = value;
+        } else {
+          submittedAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSubmittedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (submittedAtBuilder_ == null) {
+          submittedAt_ = builderForValue.build();
+        } else {
+          submittedAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSubmittedAt(com.google.protobuf.Timestamp value) {
+        if (submittedAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            submittedAt_ != null &&
+            submittedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getSubmittedAtBuilder().mergeFrom(value);
+          } else {
+            submittedAt_ = value;
+          }
+        } else {
+          submittedAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSubmittedAt() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        submittedAt_ = null;
+        if (submittedAtBuilder_ != null) {
+          submittedAtBuilder_.dispose();
+          submittedAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getSubmittedAtBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getSubmittedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getSubmittedAtOrBuilder() {
+        if (submittedAtBuilder_ != null) {
+          return submittedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return submittedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : submittedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * submitted_at is a timestamp specifying when a proposal was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getSubmittedAtFieldBuilder() {
+        if (submittedAtBuilder_ == null) {
+          submittedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getSubmittedAt(),
+                  getParentForChildren(),
+                  isClean());
+          submittedAt_ = null;
+        }
+        return submittedAtBuilder_;
+      }
+
+      private long groupVersion_ ;
+      /**
+       * <pre>
+       * group_version tracks the version of the group that this proposal corresponds to.
+       * When group membership is changed, existing proposals from previous group versions will become invalid.
+       * </pre>
+       *
+       * <code>uint64 group_version = 6 [json_name = "groupVersion"];</code>
+       * @return The groupVersion.
+       */
+      @java.lang.Override
+      public long getGroupVersion() {
+        return groupVersion_;
+      }
+      /**
+       * <pre>
+       * group_version tracks the version of the group that this proposal corresponds to.
+       * When group membership is changed, existing proposals from previous group versions will become invalid.
+       * </pre>
+       *
+       * <code>uint64 group_version = 6 [json_name = "groupVersion"];</code>
+       * @param value The groupVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupVersion(long value) {
+
+        groupVersion_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * group_version tracks the version of the group that this proposal corresponds to.
+       * When group membership is changed, existing proposals from previous group versions will become invalid.
+       * </pre>
+       *
+       * <code>uint64 group_version = 6 [json_name = "groupVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupVersion() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        groupVersion_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long groupAccountVersion_ ;
+      /**
+       * <pre>
+       * group_account_version tracks the version of the group account that this proposal corresponds to.
+       * When a decision policy is changed, existing proposals from previous policy versions will become invalid.
+       * </pre>
+       *
+       * <code>uint64 group_account_version = 7 [json_name = "groupAccountVersion"];</code>
+       * @return The groupAccountVersion.
+       */
+      @java.lang.Override
+      public long getGroupAccountVersion() {
+        return groupAccountVersion_;
+      }
+      /**
+       * <pre>
+       * group_account_version tracks the version of the group account that this proposal corresponds to.
+       * When a decision policy is changed, existing proposals from previous policy versions will become invalid.
+       * </pre>
+       *
+       * <code>uint64 group_account_version = 7 [json_name = "groupAccountVersion"];</code>
+       * @param value The groupAccountVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupAccountVersion(long value) {
+
+        groupAccountVersion_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * group_account_version tracks the version of the group account that this proposal corresponds to.
+       * When a decision policy is changed, existing proposals from previous policy versions will become invalid.
+       * </pre>
+       *
+       * <code>uint64 group_account_version = 7 [json_name = "groupAccountVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupAccountVersion() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        groupAccountVersion_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Proposal.Status getStatus() {
+        com.regen.group.v1alpha1.TypesProto.Proposal.Status result = com.regen.group.v1alpha1.TypesProto.Proposal.Status.forNumber(status_);
+        return result == null ? com.regen.group.v1alpha1.TypesProto.Proposal.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.regen.group.v1alpha1.TypesProto.Proposal.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000080;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Status status = 8 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int result_ = 0;
+      /**
+       * <pre>
+       * result is the final result based on the votes and election rule. Initial value is unfinalized.
+       * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+       * @return The enum numeric value on the wire for result.
+       */
+      @java.lang.Override public int getResultValue() {
+        return result_;
+      }
+      /**
+       * <pre>
+       * result is the final result based on the votes and election rule. Initial value is unfinalized.
+       * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+       * @param value The enum numeric value on the wire for result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultValue(int value) {
+        result_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * result is the final result based on the votes and election rule. Initial value is unfinalized.
+       * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Proposal.Result getResult() {
+        com.regen.group.v1alpha1.TypesProto.Proposal.Result result = com.regen.group.v1alpha1.TypesProto.Proposal.Result.forNumber(result_);
+        return result == null ? com.regen.group.v1alpha1.TypesProto.Proposal.Result.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * result is the final result based on the votes and election rule. Initial value is unfinalized.
+       * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(com.regen.group.v1alpha1.TypesProto.Proposal.Result value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000100;
+        result_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * result is the final result based on the votes and election rule. Initial value is unfinalized.
+       * The result is persisted so that clients can always rely on this state and not have to replicate the logic.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.Result result = 9 [json_name = "result"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.regen.group.v1alpha1.TypesProto.Tally voteState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.group.v1alpha1.TypesProto.Tally, com.regen.group.v1alpha1.TypesProto.Tally.Builder, com.regen.group.v1alpha1.TypesProto.TallyOrBuilder> voteStateBuilder_;
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       * @return Whether the voteState field is set.
+       */
+      public boolean hasVoteState() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       * @return The voteState.
+       */
+      public com.regen.group.v1alpha1.TypesProto.Tally getVoteState() {
+        if (voteStateBuilder_ == null) {
+          return voteState_ == null ? com.regen.group.v1alpha1.TypesProto.Tally.getDefaultInstance() : voteState_;
+        } else {
+          return voteStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVoteState(com.regen.group.v1alpha1.TypesProto.Tally value) {
+        if (voteStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          voteState_ = value;
+        } else {
+          voteStateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVoteState(
+          com.regen.group.v1alpha1.TypesProto.Tally.Builder builderForValue) {
+        if (voteStateBuilder_ == null) {
+          voteState_ = builderForValue.build();
+        } else {
+          voteStateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVoteState(com.regen.group.v1alpha1.TypesProto.Tally value) {
+        if (voteStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            voteState_ != null &&
+            voteState_ != com.regen.group.v1alpha1.TypesProto.Tally.getDefaultInstance()) {
+            getVoteStateBuilder().mergeFrom(value);
+          } else {
+            voteState_ = value;
+          }
+        } else {
+          voteStateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVoteState() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        voteState_ = null;
+        if (voteStateBuilder_ != null) {
+          voteStateBuilder_.dispose();
+          voteStateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.Tally.Builder getVoteStateBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getVoteStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.group.v1alpha1.TypesProto.TallyOrBuilder getVoteStateOrBuilder() {
+        if (voteStateBuilder_ != null) {
+          return voteStateBuilder_.getMessageOrBuilder();
+        } else {
+          return voteState_ == null ?
+              com.regen.group.v1alpha1.TypesProto.Tally.getDefaultInstance() : voteState_;
+        }
+      }
+      /**
+       * <pre>
+       * vote_state contains the sums of all weighted votes for this proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Tally vote_state = 10 [json_name = "voteState", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.group.v1alpha1.TypesProto.Tally, com.regen.group.v1alpha1.TypesProto.Tally.Builder, com.regen.group.v1alpha1.TypesProto.TallyOrBuilder> 
+          getVoteStateFieldBuilder() {
+        if (voteStateBuilder_ == null) {
+          voteStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.group.v1alpha1.TypesProto.Tally, com.regen.group.v1alpha1.TypesProto.Tally.Builder, com.regen.group.v1alpha1.TypesProto.TallyOrBuilder>(
+                  getVoteState(),
+                  getParentForChildren(),
+                  isClean());
+          voteState_ = null;
+        }
+        return voteStateBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp timeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeoutBuilder_;
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       * @return Whether the timeout field is set.
+       */
+      public boolean hasTimeout() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       * @return The timeout.
+       */
+      public com.google.protobuf.Timestamp getTimeout() {
+        if (timeoutBuilder_ == null) {
+          return timeout_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
+        } else {
+          return timeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTimeout(com.google.protobuf.Timestamp value) {
+        if (timeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeout_ = value;
+        } else {
+          timeoutBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTimeout(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timeoutBuilder_ == null) {
+          timeout_ = builderForValue.build();
+        } else {
+          timeoutBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTimeout(com.google.protobuf.Timestamp value) {
+        if (timeoutBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            timeout_ != null &&
+            timeout_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTimeoutBuilder().mergeFrom(value);
+          } else {
+            timeout_ = value;
+          }
+        } else {
+          timeoutBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTimeout() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        timeout_ = null;
+        if (timeoutBuilder_ != null) {
+          timeoutBuilder_.dispose();
+          timeoutBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimeoutBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimeoutOrBuilder() {
+        if (timeoutBuilder_ != null) {
+          return timeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return timeout_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timeout_;
+        }
+      }
+      /**
+       * <pre>
+       * timeout is the timestamp of the block where the proposal execution times out. Header times of the votes and execution messages
+       * must be before this end time to be included in the election. After the timeout timestamp the proposal can not be
+       * executed anymore and should be considered pending delete.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timeout = 11 [json_name = "timeout", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimeoutFieldBuilder() {
+        if (timeoutBuilder_ == null) {
+          timeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          timeout_ = null;
+        }
+        return timeoutBuilder_;
+      }
+
+      private int executorResult_ = 0;
+      /**
+       * <pre>
+       * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+       * @return The enum numeric value on the wire for executorResult.
+       */
+      @java.lang.Override public int getExecutorResultValue() {
+        return executorResult_;
+      }
+      /**
+       * <pre>
+       * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+       * @param value The enum numeric value on the wire for executorResult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutorResultValue(int value) {
+        executorResult_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+       * @return The executorResult.
+       */
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult getExecutorResult() {
+        com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult result = com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult.forNumber(executorResult_);
+        return result == null ? com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+       * @param value The executorResult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutorResult(com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000800;
+        executorResult_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Proposal.ExecutorResult executor_result = 12 [json_name = "executorResult"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutorResult() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        executorResult_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.protobuf.Any> msgs_ =
+        java.util.Collections.emptyList();
+      private void ensureMsgsIsMutable() {
+        if (!((bitField0_ & 0x00001000) != 0)) {
+          msgs_ = new java.util.ArrayList<com.google.protobuf.Any>(msgs_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> msgsBuilder_;
+
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any> getMsgsList() {
+        if (msgsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(msgs_);
+        } else {
+          return msgsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public int getMsgsCount() {
+        if (msgsBuilder_ == null) {
+          return msgs_.size();
+        } else {
+          return msgsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public com.google.protobuf.Any getMsgs(int index) {
+        if (msgsBuilder_ == null) {
+          return msgs_.get(index);
+        } else {
+          return msgsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder setMsgs(
+          int index, com.google.protobuf.Any value) {
+        if (msgsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgsIsMutable();
+          msgs_.set(index, value);
+          onChanged();
+        } else {
+          msgsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder setMsgs(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (msgsBuilder_ == null) {
+          ensureMsgsIsMutable();
+          msgs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          msgsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder addMsgs(com.google.protobuf.Any value) {
+        if (msgsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgsIsMutable();
+          msgs_.add(value);
+          onChanged();
+        } else {
+          msgsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder addMsgs(
+          int index, com.google.protobuf.Any value) {
+        if (msgsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgsIsMutable();
+          msgs_.add(index, value);
+          onChanged();
+        } else {
+          msgsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder addMsgs(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (msgsBuilder_ == null) {
+          ensureMsgsIsMutable();
+          msgs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          msgsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder addMsgs(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (msgsBuilder_ == null) {
+          ensureMsgsIsMutable();
+          msgs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          msgsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder addAllMsgs(
+          java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+        if (msgsBuilder_ == null) {
+          ensureMsgsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, msgs_);
+          onChanged();
+        } else {
+          msgsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder clearMsgs() {
+        if (msgsBuilder_ == null) {
+          msgs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          msgsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public Builder removeMsgs(int index) {
+        if (msgsBuilder_ == null) {
+          ensureMsgsIsMutable();
+          msgs_.remove(index);
+          onChanged();
+        } else {
+          msgsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public com.google.protobuf.Any.Builder getMsgsBuilder(
+          int index) {
+        return getMsgsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getMsgsOrBuilder(
+          int index) {
+        if (msgsBuilder_ == null) {
+          return msgs_.get(index);  } else {
+          return msgsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+           getMsgsOrBuilderList() {
+        if (msgsBuilder_ != null) {
+          return msgsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(msgs_);
+        }
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public com.google.protobuf.Any.Builder addMsgsBuilder() {
+        return getMsgsFieldBuilder().addBuilder(
+            com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public com.google.protobuf.Any.Builder addMsgsBuilder(
+          int index) {
+        return getMsgsFieldBuilder().addBuilder(
+            index, com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * msgs is a list of Msgs that will be executed if the proposal passes.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any msgs = 13 [json_name = "msgs"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any.Builder> 
+           getMsgsBuilderList() {
+        return getMsgsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getMsgsFieldBuilder() {
+        if (msgsBuilder_ == null) {
+          msgsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  msgs_,
+                  ((bitField0_ & 0x00001000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          msgs_ = null;
+        }
+        return msgsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.Proposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.Proposal)
+    private static final com.regen.group.v1alpha1.TypesProto.Proposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.Proposal();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Proposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Proposal>
+        PARSER = new com.google.protobuf.AbstractParser<Proposal>() {
+      @java.lang.Override
+      public Proposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Proposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Proposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.Proposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TallyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.Tally)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * yes_count is the weighted sum of yes votes.
+     * </pre>
+     *
+     * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+     * @return The yesCount.
+     */
+    java.lang.String getYesCount();
+    /**
+     * <pre>
+     * yes_count is the weighted sum of yes votes.
+     * </pre>
+     *
+     * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+     * @return The bytes for yesCount.
+     */
+    com.google.protobuf.ByteString
+        getYesCountBytes();
+
+    /**
+     * <pre>
+     * no_count is the weighted sum of no votes.
+     * </pre>
+     *
+     * <code>string no_count = 2 [json_name = "noCount"];</code>
+     * @return The noCount.
+     */
+    java.lang.String getNoCount();
+    /**
+     * <pre>
+     * no_count is the weighted sum of no votes.
+     * </pre>
+     *
+     * <code>string no_count = 2 [json_name = "noCount"];</code>
+     * @return The bytes for noCount.
+     */
+    com.google.protobuf.ByteString
+        getNoCountBytes();
+
+    /**
+     * <pre>
+     * abstain_count is the weighted sum of abstainers
+     * </pre>
+     *
+     * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+     * @return The abstainCount.
+     */
+    java.lang.String getAbstainCount();
+    /**
+     * <pre>
+     * abstain_count is the weighted sum of abstainers
+     * </pre>
+     *
+     * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+     * @return The bytes for abstainCount.
+     */
+    com.google.protobuf.ByteString
+        getAbstainCountBytes();
+
+    /**
+     * <pre>
+     * veto_count is the weighted sum of vetoes.
+     * </pre>
+     *
+     * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+     * @return The vetoCount.
+     */
+    java.lang.String getVetoCount();
+    /**
+     * <pre>
+     * veto_count is the weighted sum of vetoes.
+     * </pre>
+     *
+     * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+     * @return The bytes for vetoCount.
+     */
+    com.google.protobuf.ByteString
+        getVetoCountBytes();
+  }
+  /**
+   * <pre>
+   * Tally represents the sum of weighted votes.
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.Tally}
+   */
+  public static final class Tally extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.Tally)
+      TallyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Tally.newBuilder() to construct.
+    private Tally(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Tally() {
+      yesCount_ = "";
+      noCount_ = "";
+      abstainCount_ = "";
+      vetoCount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Tally();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Tally_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Tally_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.Tally.class, com.regen.group.v1alpha1.TypesProto.Tally.Builder.class);
+    }
+
+    public static final int YES_COUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object yesCount_ = "";
+    /**
+     * <pre>
+     * yes_count is the weighted sum of yes votes.
+     * </pre>
+     *
+     * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+     * @return The yesCount.
+     */
+    @java.lang.Override
+    public java.lang.String getYesCount() {
+      java.lang.Object ref = yesCount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        yesCount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * yes_count is the weighted sum of yes votes.
+     * </pre>
+     *
+     * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+     * @return The bytes for yesCount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getYesCountBytes() {
+      java.lang.Object ref = yesCount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        yesCount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NO_COUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object noCount_ = "";
+    /**
+     * <pre>
+     * no_count is the weighted sum of no votes.
+     * </pre>
+     *
+     * <code>string no_count = 2 [json_name = "noCount"];</code>
+     * @return The noCount.
+     */
+    @java.lang.Override
+    public java.lang.String getNoCount() {
+      java.lang.Object ref = noCount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        noCount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * no_count is the weighted sum of no votes.
+     * </pre>
+     *
+     * <code>string no_count = 2 [json_name = "noCount"];</code>
+     * @return The bytes for noCount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNoCountBytes() {
+      java.lang.Object ref = noCount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        noCount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ABSTAIN_COUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object abstainCount_ = "";
+    /**
+     * <pre>
+     * abstain_count is the weighted sum of abstainers
+     * </pre>
+     *
+     * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+     * @return The abstainCount.
+     */
+    @java.lang.Override
+    public java.lang.String getAbstainCount() {
+      java.lang.Object ref = abstainCount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        abstainCount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * abstain_count is the weighted sum of abstainers
+     * </pre>
+     *
+     * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+     * @return The bytes for abstainCount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAbstainCountBytes() {
+      java.lang.Object ref = abstainCount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abstainCount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VETO_COUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object vetoCount_ = "";
+    /**
+     * <pre>
+     * veto_count is the weighted sum of vetoes.
+     * </pre>
+     *
+     * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+     * @return The vetoCount.
+     */
+    @java.lang.Override
+    public java.lang.String getVetoCount() {
+      java.lang.Object ref = vetoCount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vetoCount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * veto_count is the weighted sum of vetoes.
+     * </pre>
+     *
+     * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+     * @return The bytes for vetoCount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVetoCountBytes() {
+      java.lang.Object ref = vetoCount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vetoCount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yesCount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, yesCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(noCount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, noCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(abstainCount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, abstainCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vetoCount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, vetoCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yesCount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, yesCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(noCount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, noCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(abstainCount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, abstainCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vetoCount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, vetoCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.Tally)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.Tally other = (com.regen.group.v1alpha1.TypesProto.Tally) obj;
+
+      if (!getYesCount()
+          .equals(other.getYesCount())) return false;
+      if (!getNoCount()
+          .equals(other.getNoCount())) return false;
+      if (!getAbstainCount()
+          .equals(other.getAbstainCount())) return false;
+      if (!getVetoCount()
+          .equals(other.getVetoCount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + YES_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getYesCount().hashCode();
+      hash = (37 * hash) + NO_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getNoCount().hashCode();
+      hash = (37 * hash) + ABSTAIN_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAbstainCount().hashCode();
+      hash = (37 * hash) + VETO_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getVetoCount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Tally parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.Tally prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Tally represents the sum of weighted votes.
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.Tally}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.Tally)
+        com.regen.group.v1alpha1.TypesProto.TallyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Tally_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Tally_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.Tally.class, com.regen.group.v1alpha1.TypesProto.Tally.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.Tally.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        yesCount_ = "";
+        noCount_ = "";
+        abstainCount_ = "";
+        vetoCount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Tally_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Tally getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.Tally.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Tally build() {
+        com.regen.group.v1alpha1.TypesProto.Tally result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Tally buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.Tally result = new com.regen.group.v1alpha1.TypesProto.Tally(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.Tally result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.yesCount_ = yesCount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.noCount_ = noCount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.abstainCount_ = abstainCount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.vetoCount_ = vetoCount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.Tally) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.Tally)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.Tally other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.Tally.getDefaultInstance()) return this;
+        if (!other.getYesCount().isEmpty()) {
+          yesCount_ = other.yesCount_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNoCount().isEmpty()) {
+          noCount_ = other.noCount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAbstainCount().isEmpty()) {
+          abstainCount_ = other.abstainCount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getVetoCount().isEmpty()) {
+          vetoCount_ = other.vetoCount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yesCount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                noCount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                abstainCount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                vetoCount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object yesCount_ = "";
+      /**
+       * <pre>
+       * yes_count is the weighted sum of yes votes.
+       * </pre>
+       *
+       * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+       * @return The yesCount.
+       */
+      public java.lang.String getYesCount() {
+        java.lang.Object ref = yesCount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          yesCount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * yes_count is the weighted sum of yes votes.
+       * </pre>
+       *
+       * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+       * @return The bytes for yesCount.
+       */
+      public com.google.protobuf.ByteString
+          getYesCountBytes() {
+        java.lang.Object ref = yesCount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          yesCount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * yes_count is the weighted sum of yes votes.
+       * </pre>
+       *
+       * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+       * @param value The yesCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYesCount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        yesCount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * yes_count is the weighted sum of yes votes.
+       * </pre>
+       *
+       * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYesCount() {
+        yesCount_ = getDefaultInstance().getYesCount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * yes_count is the weighted sum of yes votes.
+       * </pre>
+       *
+       * <code>string yes_count = 1 [json_name = "yesCount"];</code>
+       * @param value The bytes for yesCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYesCountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        yesCount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object noCount_ = "";
+      /**
+       * <pre>
+       * no_count is the weighted sum of no votes.
+       * </pre>
+       *
+       * <code>string no_count = 2 [json_name = "noCount"];</code>
+       * @return The noCount.
+       */
+      public java.lang.String getNoCount() {
+        java.lang.Object ref = noCount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          noCount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * no_count is the weighted sum of no votes.
+       * </pre>
+       *
+       * <code>string no_count = 2 [json_name = "noCount"];</code>
+       * @return The bytes for noCount.
+       */
+      public com.google.protobuf.ByteString
+          getNoCountBytes() {
+        java.lang.Object ref = noCount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          noCount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * no_count is the weighted sum of no votes.
+       * </pre>
+       *
+       * <code>string no_count = 2 [json_name = "noCount"];</code>
+       * @param value The noCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoCount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        noCount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * no_count is the weighted sum of no votes.
+       * </pre>
+       *
+       * <code>string no_count = 2 [json_name = "noCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNoCount() {
+        noCount_ = getDefaultInstance().getNoCount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * no_count is the weighted sum of no votes.
+       * </pre>
+       *
+       * <code>string no_count = 2 [json_name = "noCount"];</code>
+       * @param value The bytes for noCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoCountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        noCount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object abstainCount_ = "";
+      /**
+       * <pre>
+       * abstain_count is the weighted sum of abstainers
+       * </pre>
+       *
+       * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+       * @return The abstainCount.
+       */
+      public java.lang.String getAbstainCount() {
+        java.lang.Object ref = abstainCount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          abstainCount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * abstain_count is the weighted sum of abstainers
+       * </pre>
+       *
+       * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+       * @return The bytes for abstainCount.
+       */
+      public com.google.protobuf.ByteString
+          getAbstainCountBytes() {
+        java.lang.Object ref = abstainCount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abstainCount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * abstain_count is the weighted sum of abstainers
+       * </pre>
+       *
+       * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+       * @param value The abstainCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbstainCount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        abstainCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * abstain_count is the weighted sum of abstainers
+       * </pre>
+       *
+       * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbstainCount() {
+        abstainCount_ = getDefaultInstance().getAbstainCount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * abstain_count is the weighted sum of abstainers
+       * </pre>
+       *
+       * <code>string abstain_count = 3 [json_name = "abstainCount"];</code>
+       * @param value The bytes for abstainCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbstainCountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        abstainCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vetoCount_ = "";
+      /**
+       * <pre>
+       * veto_count is the weighted sum of vetoes.
+       * </pre>
+       *
+       * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+       * @return The vetoCount.
+       */
+      public java.lang.String getVetoCount() {
+        java.lang.Object ref = vetoCount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vetoCount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * veto_count is the weighted sum of vetoes.
+       * </pre>
+       *
+       * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+       * @return The bytes for vetoCount.
+       */
+      public com.google.protobuf.ByteString
+          getVetoCountBytes() {
+        java.lang.Object ref = vetoCount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vetoCount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * veto_count is the weighted sum of vetoes.
+       * </pre>
+       *
+       * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+       * @param value The vetoCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVetoCount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        vetoCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * veto_count is the weighted sum of vetoes.
+       * </pre>
+       *
+       * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVetoCount() {
+        vetoCount_ = getDefaultInstance().getVetoCount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * veto_count is the weighted sum of vetoes.
+       * </pre>
+       *
+       * <code>string veto_count = 4 [json_name = "vetoCount"];</code>
+       * @param value The bytes for vetoCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVetoCountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        vetoCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.Tally)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.Tally)
+    private static final com.regen.group.v1alpha1.TypesProto.Tally DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.Tally();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Tally getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Tally>
+        PARSER = new com.google.protobuf.AbstractParser<Tally>() {
+      @java.lang.Override
+      public Tally parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Tally> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Tally> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.Tally getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.group.v1alpha1.Vote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * proposal is the unique ID of the proposal.
+     * </pre>
+     *
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    long getProposalId();
+
+    /**
+     * <pre>
+     * voter is the account address of the voter.
+     * </pre>
+     *
+     * <code>string voter = 2 [json_name = "voter"];</code>
+     * @return The voter.
+     */
+    java.lang.String getVoter();
+    /**
+     * <pre>
+     * voter is the account address of the voter.
+     * </pre>
+     *
+     * <code>string voter = 2 [json_name = "voter"];</code>
+     * @return The bytes for voter.
+     */
+    com.google.protobuf.ByteString
+        getVoterBytes();
+
+    /**
+     * <pre>
+     * choice is the voter's choice on the proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+     * @return The enum numeric value on the wire for choice.
+     */
+    int getChoiceValue();
+    /**
+     * <pre>
+     * choice is the voter's choice on the proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+     * @return The choice.
+     */
+    com.regen.group.v1alpha1.TypesProto.Choice getChoice();
+
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the vote.
+     * </pre>
+     *
+     * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.ByteString getMetadata();
+
+    /**
+     * <pre>
+     * submitted_at is the timestamp when the vote was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     * @return Whether the submittedAt field is set.
+     */
+    boolean hasSubmittedAt();
+    /**
+     * <pre>
+     * submitted_at is the timestamp when the vote was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     * @return The submittedAt.
+     */
+    com.google.protobuf.Timestamp getSubmittedAt();
+    /**
+     * <pre>
+     * submitted_at is the timestamp when the vote was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getSubmittedAtOrBuilder();
+  }
+  /**
+   * <pre>
+   * Vote represents a vote for a proposal.
+   * </pre>
+   *
+   * Protobuf type {@code regen.group.v1alpha1.Vote}
+   */
+  public static final class Vote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.group.v1alpha1.Vote)
+      VoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Vote.newBuilder() to construct.
+    private Vote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Vote() {
+      voter_ = "";
+      choice_ = 0;
+      metadata_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Vote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Vote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Vote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.group.v1alpha1.TypesProto.Vote.class, com.regen.group.v1alpha1.TypesProto.Vote.Builder.class);
+    }
+
+    public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
+    private long proposalId_ = 0L;
+    /**
+     * <pre>
+     * proposal is the unique ID of the proposal.
+     * </pre>
+     *
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    @java.lang.Override
+    public long getProposalId() {
+      return proposalId_;
+    }
+
+    public static final int VOTER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voter_ = "";
+    /**
+     * <pre>
+     * voter is the account address of the voter.
+     * </pre>
+     *
+     * <code>string voter = 2 [json_name = "voter"];</code>
+     * @return The voter.
+     */
+    @java.lang.Override
+    public java.lang.String getVoter() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * voter is the account address of the voter.
+     * </pre>
+     *
+     * <code>string voter = 2 [json_name = "voter"];</code>
+     * @return The bytes for voter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoterBytes() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHOICE_FIELD_NUMBER = 3;
+    private int choice_ = 0;
+    /**
+     * <pre>
+     * choice is the voter's choice on the proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+     * @return The enum numeric value on the wire for choice.
+     */
+    @java.lang.Override public int getChoiceValue() {
+      return choice_;
+    }
+    /**
+     * <pre>
+     * choice is the voter's choice on the proposal.
+     * </pre>
+     *
+     * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+     * @return The choice.
+     */
+    @java.lang.Override public com.regen.group.v1alpha1.TypesProto.Choice getChoice() {
+      com.regen.group.v1alpha1.TypesProto.Choice result = com.regen.group.v1alpha1.TypesProto.Choice.forNumber(choice_);
+      return result == null ? com.regen.group.v1alpha1.TypesProto.Choice.UNRECOGNIZED : result;
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * metadata is any arbitrary metadata to attached to the vote.
+     * </pre>
+     *
+     * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMetadata() {
+      return metadata_;
+    }
+
+    public static final int SUBMITTED_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp submittedAt_;
+    /**
+     * <pre>
+     * submitted_at is the timestamp when the vote was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     * @return Whether the submittedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasSubmittedAt() {
+      return submittedAt_ != null;
+    }
+    /**
+     * <pre>
+     * submitted_at is the timestamp when the vote was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     * @return The submittedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getSubmittedAt() {
+      return submittedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : submittedAt_;
+    }
+    /**
+     * <pre>
+     * submitted_at is the timestamp when the vote was submitted.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getSubmittedAtOrBuilder() {
+      return submittedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : submittedAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proposalId_ != 0L) {
+        output.writeUInt64(1, proposalId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, voter_);
+      }
+      if (choice_ != com.regen.group.v1alpha1.TypesProto.Choice.CHOICE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, choice_);
+      }
+      if (!metadata_.isEmpty()) {
+        output.writeBytes(4, metadata_);
+      }
+      if (submittedAt_ != null) {
+        output.writeMessage(5, getSubmittedAt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proposalId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, proposalId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, voter_);
+      }
+      if (choice_ != com.regen.group.v1alpha1.TypesProto.Choice.CHOICE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, choice_);
+      }
+      if (!metadata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, metadata_);
+      }
+      if (submittedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSubmittedAt());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.group.v1alpha1.TypesProto.Vote)) {
+        return super.equals(obj);
+      }
+      com.regen.group.v1alpha1.TypesProto.Vote other = (com.regen.group.v1alpha1.TypesProto.Vote) obj;
+
+      if (getProposalId()
+          != other.getProposalId()) return false;
+      if (!getVoter()
+          .equals(other.getVoter())) return false;
+      if (choice_ != other.choice_) return false;
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+      if (hasSubmittedAt() != other.hasSubmittedAt()) return false;
+      if (hasSubmittedAt()) {
+        if (!getSubmittedAt()
+            .equals(other.getSubmittedAt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPOSAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProposalId());
+      hash = (37 * hash) + VOTER_FIELD_NUMBER;
+      hash = (53 * hash) + getVoter().hashCode();
+      hash = (37 * hash) + CHOICE_FIELD_NUMBER;
+      hash = (53 * hash) + choice_;
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
+      if (hasSubmittedAt()) {
+        hash = (37 * hash) + SUBMITTED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getSubmittedAt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.group.v1alpha1.TypesProto.Vote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.group.v1alpha1.TypesProto.Vote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Vote represents a vote for a proposal.
+     * </pre>
+     *
+     * Protobuf type {@code regen.group.v1alpha1.Vote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.group.v1alpha1.Vote)
+        com.regen.group.v1alpha1.TypesProto.VoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Vote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Vote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.group.v1alpha1.TypesProto.Vote.class, com.regen.group.v1alpha1.TypesProto.Vote.Builder.class);
+      }
+
+      // Construct using com.regen.group.v1alpha1.TypesProto.Vote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proposalId_ = 0L;
+        voter_ = "";
+        choice_ = 0;
+        metadata_ = com.google.protobuf.ByteString.EMPTY;
+        submittedAt_ = null;
+        if (submittedAtBuilder_ != null) {
+          submittedAtBuilder_.dispose();
+          submittedAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.group.v1alpha1.TypesProto.internal_static_regen_group_v1alpha1_Vote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Vote getDefaultInstanceForType() {
+        return com.regen.group.v1alpha1.TypesProto.Vote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Vote build() {
+        com.regen.group.v1alpha1.TypesProto.Vote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Vote buildPartial() {
+        com.regen.group.v1alpha1.TypesProto.Vote result = new com.regen.group.v1alpha1.TypesProto.Vote(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.group.v1alpha1.TypesProto.Vote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proposalId_ = proposalId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.voter_ = voter_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.choice_ = choice_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.metadata_ = metadata_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.submittedAt_ = submittedAtBuilder_ == null
+              ? submittedAt_
+              : submittedAtBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.group.v1alpha1.TypesProto.Vote) {
+          return mergeFrom((com.regen.group.v1alpha1.TypesProto.Vote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.group.v1alpha1.TypesProto.Vote other) {
+        if (other == com.regen.group.v1alpha1.TypesProto.Vote.getDefaultInstance()) return this;
+        if (other.getProposalId() != 0L) {
+          setProposalId(other.getProposalId());
+        }
+        if (!other.getVoter().isEmpty()) {
+          voter_ = other.voter_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.choice_ != 0) {
+          setChoiceValue(other.getChoiceValue());
+        }
+        if (other.getMetadata() != com.google.protobuf.ByteString.EMPTY) {
+          setMetadata(other.getMetadata());
+        }
+        if (other.hasSubmittedAt()) {
+          mergeSubmittedAt(other.getSubmittedAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                proposalId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                voter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                choice_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                metadata_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getSubmittedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long proposalId_ ;
+      /**
+       * <pre>
+       * proposal is the unique ID of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return The proposalId.
+       */
+      @java.lang.Override
+      public long getProposalId() {
+        return proposalId_;
+      }
+      /**
+       * <pre>
+       * proposal is the unique ID of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @param value The proposalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalId(long value) {
+
+        proposalId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal is the unique ID of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proposalId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object voter_ = "";
+      /**
+       * <pre>
+       * voter is the account address of the voter.
+       * </pre>
+       *
+       * <code>string voter = 2 [json_name = "voter"];</code>
+       * @return The voter.
+       */
+      public java.lang.String getVoter() {
+        java.lang.Object ref = voter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * voter is the account address of the voter.
+       * </pre>
+       *
+       * <code>string voter = 2 [json_name = "voter"];</code>
+       * @return The bytes for voter.
+       */
+      public com.google.protobuf.ByteString
+          getVoterBytes() {
+        java.lang.Object ref = voter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * voter is the account address of the voter.
+       * </pre>
+       *
+       * <code>string voter = 2 [json_name = "voter"];</code>
+       * @param value The voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voter is the account address of the voter.
+       * </pre>
+       *
+       * <code>string voter = 2 [json_name = "voter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoter() {
+        voter_ = getDefaultInstance().getVoter();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voter is the account address of the voter.
+       * </pre>
+       *
+       * <code>string voter = 2 [json_name = "voter"];</code>
+       * @param value The bytes for voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int choice_ = 0;
+      /**
+       * <pre>
+       * choice is the voter's choice on the proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+       * @return The enum numeric value on the wire for choice.
+       */
+      @java.lang.Override public int getChoiceValue() {
+        return choice_;
+      }
+      /**
+       * <pre>
+       * choice is the voter's choice on the proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+       * @param value The enum numeric value on the wire for choice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChoiceValue(int value) {
+        choice_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * choice is the voter's choice on the proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+       * @return The choice.
+       */
+      @java.lang.Override
+      public com.regen.group.v1alpha1.TypesProto.Choice getChoice() {
+        com.regen.group.v1alpha1.TypesProto.Choice result = com.regen.group.v1alpha1.TypesProto.Choice.forNumber(choice_);
+        return result == null ? com.regen.group.v1alpha1.TypesProto.Choice.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * choice is the voter's choice on the proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+       * @param value The choice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChoice(com.regen.group.v1alpha1.TypesProto.Choice value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        choice_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * choice is the voter's choice on the proposal.
+       * </pre>
+       *
+       * <code>.regen.group.v1alpha1.Choice choice = 3 [json_name = "choice"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChoice() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        choice_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the vote.
+       * </pre>
+       *
+       * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+       * @return The metadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMetadata() {
+        return metadata_;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the vote.
+       * </pre>
+       *
+       * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadata_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata is any arbitrary metadata to attached to the vote.
+       * </pre>
+       *
+       * <code>bytes metadata = 4 [json_name = "metadata"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        metadata_ = getDefaultInstance().getMetadata();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp submittedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> submittedAtBuilder_;
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       * @return Whether the submittedAt field is set.
+       */
+      public boolean hasSubmittedAt() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       * @return The submittedAt.
+       */
+      public com.google.protobuf.Timestamp getSubmittedAt() {
+        if (submittedAtBuilder_ == null) {
+          return submittedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : submittedAt_;
+        } else {
+          return submittedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSubmittedAt(com.google.protobuf.Timestamp value) {
+        if (submittedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          submittedAt_ = value;
+        } else {
+          submittedAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSubmittedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (submittedAtBuilder_ == null) {
+          submittedAt_ = builderForValue.build();
+        } else {
+          submittedAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSubmittedAt(com.google.protobuf.Timestamp value) {
+        if (submittedAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            submittedAt_ != null &&
+            submittedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getSubmittedAtBuilder().mergeFrom(value);
+          } else {
+            submittedAt_ = value;
+          }
+        } else {
+          submittedAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSubmittedAt() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        submittedAt_ = null;
+        if (submittedAtBuilder_ != null) {
+          submittedAtBuilder_.dispose();
+          submittedAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getSubmittedAtBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getSubmittedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getSubmittedAtOrBuilder() {
+        if (submittedAtBuilder_ != null) {
+          return submittedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return submittedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : submittedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * submitted_at is the timestamp when the vote was submitted.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp submitted_at = 5 [json_name = "submittedAt", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getSubmittedAtFieldBuilder() {
+        if (submittedAtBuilder_ == null) {
+          submittedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getSubmittedAt(),
+                  getParentForChildren(),
+                  isClean());
+          submittedAt_ = null;
+        }
+        return submittedAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.group.v1alpha1.Vote)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.group.v1alpha1.Vote)
+    private static final com.regen.group.v1alpha1.TypesProto.Vote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.group.v1alpha1.TypesProto.Vote();
+    }
+
+    public static com.regen.group.v1alpha1.TypesProto.Vote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Vote>
+        PARSER = new com.google.protobuf.AbstractParser<Vote>() {
+      @java.lang.Override
+      public Vote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Vote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Vote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.group.v1alpha1.TypesProto.Vote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_Member_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_Member_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_Members_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_Members_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_ThresholdDecisionPolicy_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_ThresholdDecisionPolicy_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_GroupInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_GroupInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_GroupMember_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_GroupMember_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_GroupAccountInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_GroupAccountInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_Proposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_Proposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_Tally_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_Tally_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_group_v1alpha1_Vote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_group_v1alpha1_Vote_fieldAccessorTable;
 
@@ -139,13 +12014,13 @@ public final class TypesProto {
       "\005 \001(\0132\032.google.protobuf.TimestampB\004\310\336\037\000R" +
       "\013submittedAt*d\n\006Choice\022\026\n\022CHOICE_UNSPECI" +
       "FIED\020\000\022\r\n\tCHOICE_NO\020\001\022\016\n\nCHOICE_YES\020\002\022\022\n" +
-      "\016CHOICE_ABSTAIN\020\003\022\017\n\013CHOICE_VETO\020\004B\307\001\n\030c" +
-      "om.regen.group.v1alpha1B\nTypesProtoP\001Z-g" +
-      "ithub.com/regen-network/regen-ledger/x/g" +
-      "roup\242\002\003RGX\252\002\024Regen.Group.V1alpha1\312\002\024Rege" +
-      "n\\Group\\V1alpha1\342\002 Regen\\Group\\V1alpha1\\" +
-      "GPBMetadata\352\002\026Regen::Group::V1alpha1b\006pr" +
-      "oto3"
+      "\016CHOICE_ABSTAIN\020\003\022\017\n\013CHOICE_VETO\020\004B\305\001\n\030c" +
+      "om.regen.group.v1alpha1B\nTypesProtoZ-git" +
+      "hub.com/regen-network/regen-ledger/x/gro" +
+      "up\242\002\003RGX\252\002\024Regen.Group.V1alpha1\312\002\024Regen\\" +
+      "Group\\V1alpha1\342\002 Regen\\Group\\V1alpha1\\GP" +
+      "BMetadata\352\002\026Regen::Group::V1alpha1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

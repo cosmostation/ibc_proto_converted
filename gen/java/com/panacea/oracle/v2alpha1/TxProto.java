@@ -14,24 +14,2210 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgRegisterOracleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha1.MsgRegisterOracle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Detail of oracle
+     * </pre>
+     *
+     * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+     * @return Whether the oracleDetail field is set.
+     */
+    boolean hasOracleDetail();
+    /**
+     * <pre>
+     * Detail of oracle
+     * </pre>
+     *
+     * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+     * @return The oracleDetail.
+     */
+    com.panacea.oracle.v2alpha1.OracleProto.Oracle getOracleDetail();
+    /**
+     * <pre>
+     * Detail of oracle
+     * </pre>
+     *
+     * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+     */
+    com.panacea.oracle.v2alpha1.OracleProto.OracleOrBuilder getOracleDetailOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgRegisterOracle defines the Msg/RegisterOracle request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha1.MsgRegisterOracle}
+   */
+  public static final class MsgRegisterOracle extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha1.MsgRegisterOracle)
+      MsgRegisterOracleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterOracle.newBuilder() to construct.
+    private MsgRegisterOracle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterOracle() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterOracle();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracle_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle.class, com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle.Builder.class);
+    }
+
+    public static final int ORACLE_DETAIL_FIELD_NUMBER = 1;
+    private com.panacea.oracle.v2alpha1.OracleProto.Oracle oracleDetail_;
+    /**
+     * <pre>
+     * Detail of oracle
+     * </pre>
+     *
+     * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+     * @return Whether the oracleDetail field is set.
+     */
+    @java.lang.Override
+    public boolean hasOracleDetail() {
+      return oracleDetail_ != null;
+    }
+    /**
+     * <pre>
+     * Detail of oracle
+     * </pre>
+     *
+     * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+     * @return The oracleDetail.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha1.OracleProto.Oracle getOracleDetail() {
+      return oracleDetail_ == null ? com.panacea.oracle.v2alpha1.OracleProto.Oracle.getDefaultInstance() : oracleDetail_;
+    }
+    /**
+     * <pre>
+     * Detail of oracle
+     * </pre>
+     *
+     * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha1.OracleProto.OracleOrBuilder getOracleDetailOrBuilder() {
+      return oracleDetail_ == null ? com.panacea.oracle.v2alpha1.OracleProto.Oracle.getDefaultInstance() : oracleDetail_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (oracleDetail_ != null) {
+        output.writeMessage(1, getOracleDetail());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (oracleDetail_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOracleDetail());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle other = (com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle) obj;
+
+      if (hasOracleDetail() != other.hasOracleDetail()) return false;
+      if (hasOracleDetail()) {
+        if (!getOracleDetail()
+            .equals(other.getOracleDetail())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOracleDetail()) {
+        hash = (37 * hash) + ORACLE_DETAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleDetail().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterOracle defines the Msg/RegisterOracle request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha1.MsgRegisterOracle}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha1.MsgRegisterOracle)
+        com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracle_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle.class, com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracleDetail_ = null;
+        if (oracleDetailBuilder_ != null) {
+          oracleDetailBuilder_.dispose();
+          oracleDetailBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracle_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle build() {
+        com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle buildPartial() {
+        com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle result = new com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracleDetail_ = oracleDetailBuilder_ == null
+              ? oracleDetail_
+              : oracleDetailBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle) {
+          return mergeFrom((com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle other) {
+        if (other == com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle.getDefaultInstance()) return this;
+        if (other.hasOracleDetail()) {
+          mergeOracleDetail(other.getOracleDetail());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOracleDetailFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.oracle.v2alpha1.OracleProto.Oracle oracleDetail_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha1.OracleProto.Oracle, com.panacea.oracle.v2alpha1.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha1.OracleProto.OracleOrBuilder> oracleDetailBuilder_;
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       * @return Whether the oracleDetail field is set.
+       */
+      public boolean hasOracleDetail() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       * @return The oracleDetail.
+       */
+      public com.panacea.oracle.v2alpha1.OracleProto.Oracle getOracleDetail() {
+        if (oracleDetailBuilder_ == null) {
+          return oracleDetail_ == null ? com.panacea.oracle.v2alpha1.OracleProto.Oracle.getDefaultInstance() : oracleDetail_;
+        } else {
+          return oracleDetailBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       */
+      public Builder setOracleDetail(com.panacea.oracle.v2alpha1.OracleProto.Oracle value) {
+        if (oracleDetailBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oracleDetail_ = value;
+        } else {
+          oracleDetailBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       */
+      public Builder setOracleDetail(
+          com.panacea.oracle.v2alpha1.OracleProto.Oracle.Builder builderForValue) {
+        if (oracleDetailBuilder_ == null) {
+          oracleDetail_ = builderForValue.build();
+        } else {
+          oracleDetailBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       */
+      public Builder mergeOracleDetail(com.panacea.oracle.v2alpha1.OracleProto.Oracle value) {
+        if (oracleDetailBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            oracleDetail_ != null &&
+            oracleDetail_ != com.panacea.oracle.v2alpha1.OracleProto.Oracle.getDefaultInstance()) {
+            getOracleDetailBuilder().mergeFrom(value);
+          } else {
+            oracleDetail_ = value;
+          }
+        } else {
+          oracleDetailBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       */
+      public Builder clearOracleDetail() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oracleDetail_ = null;
+        if (oracleDetailBuilder_ != null) {
+          oracleDetailBuilder_.dispose();
+          oracleDetailBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       */
+      public com.panacea.oracle.v2alpha1.OracleProto.Oracle.Builder getOracleDetailBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOracleDetailFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       */
+      public com.panacea.oracle.v2alpha1.OracleProto.OracleOrBuilder getOracleDetailOrBuilder() {
+        if (oracleDetailBuilder_ != null) {
+          return oracleDetailBuilder_.getMessageOrBuilder();
+        } else {
+          return oracleDetail_ == null ?
+              com.panacea.oracle.v2alpha1.OracleProto.Oracle.getDefaultInstance() : oracleDetail_;
+        }
+      }
+      /**
+       * <pre>
+       * Detail of oracle
+       * </pre>
+       *
+       * <code>.panacea.oracle.v2alpha1.Oracle oracle_detail = 1 [json_name = "oracleDetail"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha1.OracleProto.Oracle, com.panacea.oracle.v2alpha1.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha1.OracleProto.OracleOrBuilder> 
+          getOracleDetailFieldBuilder() {
+        if (oracleDetailBuilder_ == null) {
+          oracleDetailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha1.OracleProto.Oracle, com.panacea.oracle.v2alpha1.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha1.OracleProto.OracleOrBuilder>(
+                  getOracleDetail(),
+                  getParentForChildren(),
+                  isClean());
+          oracleDetail_ = null;
+        }
+        return oracleDetailBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha1.MsgRegisterOracle)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha1.MsgRegisterOracle)
+    private static final com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle();
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterOracle>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterOracle>() {
+      @java.lang.Override
+      public MsgRegisterOracle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterOracle> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterOracle> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracle getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRegisterOracleResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha1.MsgRegisterOracleResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRegisterOracleResponse defines the Msg/RegisterOracle response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha1.MsgRegisterOracleResponse}
+   */
+  public static final class MsgRegisterOracleResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha1.MsgRegisterOracleResponse)
+      MsgRegisterOracleResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterOracleResponse.newBuilder() to construct.
+    private MsgRegisterOracleResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterOracleResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterOracleResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracleResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracleResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse.class, com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse other = (com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterOracleResponse defines the Msg/RegisterOracle response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha1.MsgRegisterOracleResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha1.MsgRegisterOracleResponse)
+        com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracleResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse.class, com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgRegisterOracleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse build() {
+        com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse buildPartial() {
+        com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse result = new com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse) {
+          return mergeFrom((com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse other) {
+        if (other == com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha1.MsgRegisterOracleResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha1.MsgRegisterOracleResponse)
+    private static final com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse();
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterOracleResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterOracleResponse>() {
+      @java.lang.Override
+      public MsgRegisterOracleResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterOracleResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterOracleResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha1.TxProto.MsgRegisterOracleResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateOracleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha1.MsgUpdateOracle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string oracle = 1 [json_name = "oracle"];</code>
+     * @return The oracle.
+     */
+    java.lang.String getOracle();
+    /**
+     * <code>string oracle = 1 [json_name = "oracle"];</code>
+     * @return The bytes for oracle.
+     */
+    com.google.protobuf.ByteString
+        getOracleBytes();
+
+    /**
+     * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+     * @return The endpoint.
+     */
+    java.lang.String getEndpoint();
+    /**
+     * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+     * @return The bytes for endpoint.
+     */
+    com.google.protobuf.ByteString
+        getEndpointBytes();
+  }
+  /**
+   * <pre>
+   * MsgUpdateOracle defines the Msg/UpdateOracle request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha1.MsgUpdateOracle}
+   */
+  public static final class MsgUpdateOracle extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha1.MsgUpdateOracle)
+      MsgUpdateOracleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateOracle.newBuilder() to construct.
+    private MsgUpdateOracle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateOracle() {
+      oracle_ = "";
+      endpoint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateOracle();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracle_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle.class, com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle.Builder.class);
+    }
+
+    public static final int ORACLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object oracle_ = "";
+    /**
+     * <code>string oracle = 1 [json_name = "oracle"];</code>
+     * @return The oracle.
+     */
+    @java.lang.Override
+    public java.lang.String getOracle() {
+      java.lang.Object ref = oracle_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        oracle_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string oracle = 1 [json_name = "oracle"];</code>
+     * @return The bytes for oracle.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOracleBytes() {
+      java.lang.Object ref = oracle_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oracle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENDPOINT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endpoint_ = "";
+    /**
+     * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+     * @return The endpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpoint() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+     * @return The bytes for endpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointBytes() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracle_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, oracle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, endpoint_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracle_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, oracle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, endpoint_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle other = (com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle) obj;
+
+      if (!getOracle()
+          .equals(other.getOracle())) return false;
+      if (!getEndpoint()
+          .equals(other.getEndpoint())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORACLE_FIELD_NUMBER;
+      hash = (53 * hash) + getOracle().hashCode();
+      hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpoint().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateOracle defines the Msg/UpdateOracle request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha1.MsgUpdateOracle}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha1.MsgUpdateOracle)
+        com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracle_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle.class, com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracle_ = "";
+        endpoint_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracle_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle build() {
+        com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle buildPartial() {
+        com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle result = new com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracle_ = oracle_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.endpoint_ = endpoint_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle) {
+          return mergeFrom((com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle other) {
+        if (other == com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle.getDefaultInstance()) return this;
+        if (!other.getOracle().isEmpty()) {
+          oracle_ = other.oracle_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEndpoint().isEmpty()) {
+          endpoint_ = other.endpoint_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oracle_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                endpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object oracle_ = "";
+      /**
+       * <code>string oracle = 1 [json_name = "oracle"];</code>
+       * @return The oracle.
+       */
+      public java.lang.String getOracle() {
+        java.lang.Object ref = oracle_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          oracle_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string oracle = 1 [json_name = "oracle"];</code>
+       * @return The bytes for oracle.
+       */
+      public com.google.protobuf.ByteString
+          getOracleBytes() {
+        java.lang.Object ref = oracle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oracle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string oracle = 1 [json_name = "oracle"];</code>
+       * @param value The oracle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        oracle_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string oracle = 1 [json_name = "oracle"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracle() {
+        oracle_ = getDefaultInstance().getOracle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string oracle = 1 [json_name = "oracle"];</code>
+       * @param value The bytes for oracle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        oracle_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endpoint_ = "";
+      /**
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @return The endpoint.
+       */
+      public java.lang.String getEndpoint() {
+        java.lang.Object ref = endpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @return The bytes for endpoint.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointBytes() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @param value The endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpoint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endpoint_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpoint() {
+        endpoint_ = getDefaultInstance().getEndpoint();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @param value The bytes for endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endpoint_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha1.MsgUpdateOracle)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha1.MsgUpdateOracle)
+    private static final com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle();
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateOracle>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateOracle>() {
+      @java.lang.Override
+      public MsgUpdateOracle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateOracle> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateOracle> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracle getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateOracleResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha1.MsgUpdateOracleResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgUpdateOracleResponse defines the Msg/UpdateOracle response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha1.MsgUpdateOracleResponse}
+   */
+  public static final class MsgUpdateOracleResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha1.MsgUpdateOracleResponse)
+      MsgUpdateOracleResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateOracleResponse.newBuilder() to construct.
+    private MsgUpdateOracleResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateOracleResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateOracleResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracleResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracleResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse.class, com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse other = (com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateOracleResponse defines the Msg/UpdateOracle response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha1.MsgUpdateOracleResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha1.MsgUpdateOracleResponse)
+        com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracleResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse.class, com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha1.TxProto.internal_static_panacea_oracle_v2alpha1_MsgUpdateOracleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse build() {
+        com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse buildPartial() {
+        com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse result = new com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse) {
+          return mergeFrom((com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse other) {
+        if (other == com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha1.MsgUpdateOracleResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha1.MsgUpdateOracleResponse)
+    private static final com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse();
+    }
+
+    public static com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateOracleResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateOracleResponse>() {
+      @java.lang.Override
+      public MsgUpdateOracleResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateOracleResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateOracleResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha1.TxProto.MsgUpdateOracleResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha1_MsgRegisterOracle_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha1_MsgRegisterOracle_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha1_MsgRegisterOracleResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha1_MsgRegisterOracleResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha1_MsgUpdateOracle_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha1_MsgUpdateOracle_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha1_MsgUpdateOracleResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha1_MsgUpdateOracleResponse_fieldAccessorTable;
 
@@ -56,13 +2242,13 @@ public final class TxProto {
       "le.v2alpha1.MsgRegisterOracleResponse\022j\n" +
       "\014UpdateOracle\022(.panacea.oracle.v2alpha1." +
       "MsgUpdateOracle\0320.panacea.oracle.v2alpha" +
-      "1.MsgUpdateOracleResponseB\330\001\n\033com.panace" +
-      "a.oracle.v2alpha1B\007TxProtoP\001Z2github.com" +
-      "/medibloc/panacea-core/v2/x/oracle/types" +
-      "\242\002\003POX\252\002\027Panacea.Oracle.V2alpha1\312\002\027Panac" +
-      "ea\\Oracle\\V2alpha1\342\002#Panacea\\Oracle\\V2al" +
-      "pha1\\GPBMetadata\352\002\031Panacea::Oracle::V2al" +
-      "pha1b\006proto3"
+      "1.MsgUpdateOracleResponseB\326\001\n\033com.panace" +
+      "a.oracle.v2alpha1B\007TxProtoZ2github.com/m" +
+      "edibloc/panacea-core/v2/x/oracle/types\242\002" +
+      "\003POX\252\002\027Panacea.Oracle.V2alpha1\312\002\027Panacea" +
+      "\\Oracle\\V2alpha1\342\002#Panacea\\Oracle\\V2alph" +
+      "a1\\GPBMetadata\352\002\031Panacea::Oracle::V2alph" +
+      "a1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

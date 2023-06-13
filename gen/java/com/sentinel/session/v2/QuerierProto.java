@@ -14,74 +14,10628 @@ public final class QuerierProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QuerySessionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsRequest}
+   */
+  public static final class QuerySessionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsRequest)
+      QuerySessionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsRequest.newBuilder() to construct.
+    private QuerySessionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsRequest other = (com.sentinel.session.v2.QuerierProto.QuerySessionsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsRequest)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsRequest getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsRequest build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsRequest buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsRequest result = new com.sentinel.session.v2.QuerierProto.QuerySessionsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsRequest) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsRequest other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsRequest)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsRequest();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsRequest>() {
+      @java.lang.Override
+      public QuerySessionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsForAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsForAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsForAccountRequest}
+   */
+  public static final class QuerySessionsForAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsForAccountRequest)
+      QuerySessionsForAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsForAccountRequest.newBuilder() to construct.
+    private QuerySessionsForAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsForAccountRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsForAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest other = (com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsForAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsForAccountRequest)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest result = new com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsForAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsForAccountRequest)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsForAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsForAccountRequest>() {
+      @java.lang.Override
+      public QuerySessionsForAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsForAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsForAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsForNodeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsForNodeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsForNodeRequest}
+   */
+  public static final class QuerySessionsForNodeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsForNodeRequest)
+      QuerySessionsForNodeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsForNodeRequest.newBuilder() to construct.
+    private QuerySessionsForNodeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsForNodeRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsForNodeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest other = (com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsForNodeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsForNodeRequest)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest result = new com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsForNodeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsForNodeRequest)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsForNodeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsForNodeRequest>() {
+      @java.lang.Override
+      public QuerySessionsForNodeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsForNodeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsForNodeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsForSubscriptionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsForSubscriptionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsForSubscriptionRequest}
+   */
+  public static final class QuerySessionsForSubscriptionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsForSubscriptionRequest)
+      QuerySessionsForSubscriptionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsForSubscriptionRequest.newBuilder() to construct.
+    private QuerySessionsForSubscriptionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsForSubscriptionRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsForSubscriptionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest other = (com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsForSubscriptionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsForSubscriptionRequest)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest result = new com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsForSubscriptionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsForSubscriptionRequest)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsForSubscriptionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsForSubscriptionRequest>() {
+      @java.lang.Override
+      public QuerySessionsForSubscriptionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsForSubscriptionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsForSubscriptionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsForAllocationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsForAllocationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsForAllocationRequest}
+   */
+  public static final class QuerySessionsForAllocationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsForAllocationRequest)
+      QuerySessionsForAllocationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsForAllocationRequest.newBuilder() to construct.
+    private QuerySessionsForAllocationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsForAllocationRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsForAllocationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest other = (com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsForAllocationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsForAllocationRequest)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        address_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest result = new com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsForAllocationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsForAllocationRequest)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsForAllocationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsForAllocationRequest>() {
+      @java.lang.Override
+      public QuerySessionsForAllocationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsForAllocationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsForAllocationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionRequest}
+   */
+  public static final class QuerySessionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionRequest)
+      QuerySessionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionRequest.newBuilder() to construct.
+    private QuerySessionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionRequest other = (com.sentinel.session.v2.QuerierProto.QuerySessionRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionRequest)
+        com.sentinel.session.v2.QuerierProto.QuerySessionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionRequest.class, com.sentinel.session.v2.QuerierProto.QuerySessionRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionRequest getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionRequest build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionRequest buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionRequest result = new com.sentinel.session.v2.QuerierProto.QuerySessionRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionRequest) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionRequest other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionRequest)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionRequest();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionRequest>() {
+      @java.lang.Override
+      public QuerySessionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QueryParamsRequest.class, com.sentinel.session.v2.QuerierProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QueryParamsRequest other = (com.sentinel.session.v2.QuerierProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QueryParamsRequest)
+        com.sentinel.session.v2.QuerierProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QueryParamsRequest.class, com.sentinel.session.v2.QuerierProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QueryParamsRequest build() {
+        com.sentinel.session.v2.QuerierProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QueryParamsRequest buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QueryParamsRequest result = new com.sentinel.session.v2.QuerierProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QueryParamsRequest) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QueryParamsRequest other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QueryParamsRequest)
+    private static final com.sentinel.session.v2.QuerierProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QueryParamsRequest();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.session.v2.SessionProto.Session> 
+        getSessionsList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.Session getSessions(int index);
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    int getSessionsCount();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsResponse}
+   */
+  public static final class QuerySessionsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsResponse)
+      QuerySessionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsResponse.newBuilder() to construct.
+    private QuerySessionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsResponse() {
+      sessions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsResponse.Builder.class);
+    }
+
+    public static final int SESSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_;
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSessionsCount() {
+      return sessions_.size();
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+      return sessions_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index) {
+      return sessions_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < sessions_.size(); i++) {
+        output.writeMessage(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < sessions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsResponse other = (com.sentinel.session.v2.QuerierProto.QuerySessionsResponse) obj;
+
+      if (!getSessionsList()
+          .equals(other.getSessionsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSessionsCount() > 0) {
+        hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsResponse)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+        } else {
+          sessions_ = null;
+          sessionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsResponse getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsResponse build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsResponse buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsResponse result = new com.sentinel.session.v2.QuerierProto.QuerySessionsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.session.v2.QuerierProto.QuerySessionsResponse result) {
+        if (sessionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            sessions_ = java.util.Collections.unmodifiableList(sessions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.sessions_ = sessions_;
+        } else {
+          result.sessions_ = sessionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsResponse) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsResponse other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsResponse.getDefaultInstance()) return this;
+        if (sessionsBuilder_ == null) {
+          if (!other.sessions_.isEmpty()) {
+            if (sessions_.isEmpty()) {
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSessionsIsMutable();
+              sessions_.addAll(other.sessions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sessions_.isEmpty()) {
+            if (sessionsBuilder_.isEmpty()) {
+              sessionsBuilder_.dispose();
+              sessionsBuilder_ = null;
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              sessionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSessionsFieldBuilder() : null;
+            } else {
+              sessionsBuilder_.addAllMessages(other.sessions_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.session.v2.SessionProto.Session m =
+                    input.readMessage(
+                        com.sentinel.session.v2.SessionProto.Session.parser(),
+                        extensionRegistry);
+                if (sessionsBuilder_ == null) {
+                  ensureSessionsIsMutable();
+                  sessions_.add(m);
+                } else {
+                  sessionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_ =
+        java.util.Collections.emptyList();
+      private void ensureSessionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sessions_ = new java.util.ArrayList<com.sentinel.session.v2.SessionProto.Session>(sessions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> sessionsBuilder_;
+
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+        if (sessionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sessions_);
+        } else {
+          return sessionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSessionsCount() {
+        if (sessionsBuilder_ == null) {
+          return sessions_.size();
+        } else {
+          return sessionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);
+        } else {
+          return sessionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.set(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSessions(
+          java.lang.Iterable<? extends com.sentinel.session.v2.SessionProto.Session> values) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sessions_);
+          onChanged();
+        } else {
+          sessionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSessions() {
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          sessionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.remove(index);
+          onChanged();
+        } else {
+          sessionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder getSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+          int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);  } else {
+          return sessionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+           getSessionsOrBuilderList() {
+        if (sessionsBuilder_ != null) {
+          return sessionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sessions_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder() {
+        return getSessionsFieldBuilder().addBuilder(
+            com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().addBuilder(
+            index, com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session.Builder> 
+           getSessionsBuilderList() {
+        return getSessionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+          getSessionsFieldBuilder() {
+        if (sessionsBuilder_ == null) {
+          sessionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder>(
+                  sessions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sessions_ = null;
+        }
+        return sessionsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsResponse)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsResponse();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsResponse>() {
+      @java.lang.Override
+      public QuerySessionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsForAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsForAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.session.v2.SessionProto.Session> 
+        getSessionsList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.Session getSessions(int index);
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    int getSessionsCount();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsForAccountResponse}
+   */
+  public static final class QuerySessionsForAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsForAccountResponse)
+      QuerySessionsForAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsForAccountResponse.newBuilder() to construct.
+    private QuerySessionsForAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsForAccountResponse() {
+      sessions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsForAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse.Builder.class);
+    }
+
+    public static final int SESSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_;
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSessionsCount() {
+      return sessions_.size();
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+      return sessions_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index) {
+      return sessions_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < sessions_.size(); i++) {
+        output.writeMessage(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < sessions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse other = (com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse) obj;
+
+      if (!getSessionsList()
+          .equals(other.getSessionsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSessionsCount() > 0) {
+        hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsForAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsForAccountResponse)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+        } else {
+          sessions_ = null;
+          sessionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse result = new com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse result) {
+        if (sessionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            sessions_ = java.util.Collections.unmodifiableList(sessions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.sessions_ = sessions_;
+        } else {
+          result.sessions_ = sessionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse.getDefaultInstance()) return this;
+        if (sessionsBuilder_ == null) {
+          if (!other.sessions_.isEmpty()) {
+            if (sessions_.isEmpty()) {
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSessionsIsMutable();
+              sessions_.addAll(other.sessions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sessions_.isEmpty()) {
+            if (sessionsBuilder_.isEmpty()) {
+              sessionsBuilder_.dispose();
+              sessionsBuilder_ = null;
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              sessionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSessionsFieldBuilder() : null;
+            } else {
+              sessionsBuilder_.addAllMessages(other.sessions_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.session.v2.SessionProto.Session m =
+                    input.readMessage(
+                        com.sentinel.session.v2.SessionProto.Session.parser(),
+                        extensionRegistry);
+                if (sessionsBuilder_ == null) {
+                  ensureSessionsIsMutable();
+                  sessions_.add(m);
+                } else {
+                  sessionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_ =
+        java.util.Collections.emptyList();
+      private void ensureSessionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sessions_ = new java.util.ArrayList<com.sentinel.session.v2.SessionProto.Session>(sessions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> sessionsBuilder_;
+
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+        if (sessionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sessions_);
+        } else {
+          return sessionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSessionsCount() {
+        if (sessionsBuilder_ == null) {
+          return sessions_.size();
+        } else {
+          return sessionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);
+        } else {
+          return sessionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.set(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSessions(
+          java.lang.Iterable<? extends com.sentinel.session.v2.SessionProto.Session> values) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sessions_);
+          onChanged();
+        } else {
+          sessionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSessions() {
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          sessionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.remove(index);
+          onChanged();
+        } else {
+          sessionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder getSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+          int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);  } else {
+          return sessionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+           getSessionsOrBuilderList() {
+        if (sessionsBuilder_ != null) {
+          return sessionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sessions_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder() {
+        return getSessionsFieldBuilder().addBuilder(
+            com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().addBuilder(
+            index, com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session.Builder> 
+           getSessionsBuilderList() {
+        return getSessionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+          getSessionsFieldBuilder() {
+        if (sessionsBuilder_ == null) {
+          sessionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder>(
+                  sessions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sessions_ = null;
+        }
+        return sessionsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsForAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsForAccountResponse)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsForAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsForAccountResponse>() {
+      @java.lang.Override
+      public QuerySessionsForAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsForAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsForAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsForAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsForNodeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsForNodeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.session.v2.SessionProto.Session> 
+        getSessionsList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.Session getSessions(int index);
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    int getSessionsCount();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsForNodeResponse}
+   */
+  public static final class QuerySessionsForNodeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsForNodeResponse)
+      QuerySessionsForNodeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsForNodeResponse.newBuilder() to construct.
+    private QuerySessionsForNodeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsForNodeResponse() {
+      sessions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsForNodeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse.Builder.class);
+    }
+
+    public static final int SESSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_;
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSessionsCount() {
+      return sessions_.size();
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+      return sessions_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index) {
+      return sessions_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < sessions_.size(); i++) {
+        output.writeMessage(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < sessions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse other = (com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse) obj;
+
+      if (!getSessionsList()
+          .equals(other.getSessionsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSessionsCount() > 0) {
+        hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsForNodeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsForNodeResponse)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+        } else {
+          sessions_ = null;
+          sessionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForNodeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse result = new com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse result) {
+        if (sessionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            sessions_ = java.util.Collections.unmodifiableList(sessions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.sessions_ = sessions_;
+        } else {
+          result.sessions_ = sessionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse.getDefaultInstance()) return this;
+        if (sessionsBuilder_ == null) {
+          if (!other.sessions_.isEmpty()) {
+            if (sessions_.isEmpty()) {
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSessionsIsMutable();
+              sessions_.addAll(other.sessions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sessions_.isEmpty()) {
+            if (sessionsBuilder_.isEmpty()) {
+              sessionsBuilder_.dispose();
+              sessionsBuilder_ = null;
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              sessionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSessionsFieldBuilder() : null;
+            } else {
+              sessionsBuilder_.addAllMessages(other.sessions_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.session.v2.SessionProto.Session m =
+                    input.readMessage(
+                        com.sentinel.session.v2.SessionProto.Session.parser(),
+                        extensionRegistry);
+                if (sessionsBuilder_ == null) {
+                  ensureSessionsIsMutable();
+                  sessions_.add(m);
+                } else {
+                  sessionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_ =
+        java.util.Collections.emptyList();
+      private void ensureSessionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sessions_ = new java.util.ArrayList<com.sentinel.session.v2.SessionProto.Session>(sessions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> sessionsBuilder_;
+
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+        if (sessionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sessions_);
+        } else {
+          return sessionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSessionsCount() {
+        if (sessionsBuilder_ == null) {
+          return sessions_.size();
+        } else {
+          return sessionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);
+        } else {
+          return sessionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.set(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSessions(
+          java.lang.Iterable<? extends com.sentinel.session.v2.SessionProto.Session> values) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sessions_);
+          onChanged();
+        } else {
+          sessionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSessions() {
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          sessionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.remove(index);
+          onChanged();
+        } else {
+          sessionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder getSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+          int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);  } else {
+          return sessionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+           getSessionsOrBuilderList() {
+        if (sessionsBuilder_ != null) {
+          return sessionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sessions_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder() {
+        return getSessionsFieldBuilder().addBuilder(
+            com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().addBuilder(
+            index, com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session.Builder> 
+           getSessionsBuilderList() {
+        return getSessionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+          getSessionsFieldBuilder() {
+        if (sessionsBuilder_ == null) {
+          sessionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder>(
+                  sessions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sessions_ = null;
+        }
+        return sessionsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsForNodeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsForNodeResponse)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsForNodeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsForNodeResponse>() {
+      @java.lang.Override
+      public QuerySessionsForNodeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsForNodeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsForNodeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsForNodeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsForSubscriptionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsForSubscriptionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.session.v2.SessionProto.Session> 
+        getSessionsList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.Session getSessions(int index);
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    int getSessionsCount();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsForSubscriptionResponse}
+   */
+  public static final class QuerySessionsForSubscriptionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsForSubscriptionResponse)
+      QuerySessionsForSubscriptionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsForSubscriptionResponse.newBuilder() to construct.
+    private QuerySessionsForSubscriptionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsForSubscriptionResponse() {
+      sessions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsForSubscriptionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse.Builder.class);
+    }
+
+    public static final int SESSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_;
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSessionsCount() {
+      return sessions_.size();
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+      return sessions_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index) {
+      return sessions_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < sessions_.size(); i++) {
+        output.writeMessage(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < sessions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse other = (com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse) obj;
+
+      if (!getSessionsList()
+          .equals(other.getSessionsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSessionsCount() > 0) {
+        hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsForSubscriptionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsForSubscriptionResponse)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+        } else {
+          sessions_ = null;
+          sessionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForSubscriptionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse result = new com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse result) {
+        if (sessionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            sessions_ = java.util.Collections.unmodifiableList(sessions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.sessions_ = sessions_;
+        } else {
+          result.sessions_ = sessionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse.getDefaultInstance()) return this;
+        if (sessionsBuilder_ == null) {
+          if (!other.sessions_.isEmpty()) {
+            if (sessions_.isEmpty()) {
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSessionsIsMutable();
+              sessions_.addAll(other.sessions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sessions_.isEmpty()) {
+            if (sessionsBuilder_.isEmpty()) {
+              sessionsBuilder_.dispose();
+              sessionsBuilder_ = null;
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              sessionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSessionsFieldBuilder() : null;
+            } else {
+              sessionsBuilder_.addAllMessages(other.sessions_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.session.v2.SessionProto.Session m =
+                    input.readMessage(
+                        com.sentinel.session.v2.SessionProto.Session.parser(),
+                        extensionRegistry);
+                if (sessionsBuilder_ == null) {
+                  ensureSessionsIsMutable();
+                  sessions_.add(m);
+                } else {
+                  sessionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_ =
+        java.util.Collections.emptyList();
+      private void ensureSessionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sessions_ = new java.util.ArrayList<com.sentinel.session.v2.SessionProto.Session>(sessions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> sessionsBuilder_;
+
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+        if (sessionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sessions_);
+        } else {
+          return sessionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSessionsCount() {
+        if (sessionsBuilder_ == null) {
+          return sessions_.size();
+        } else {
+          return sessionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);
+        } else {
+          return sessionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.set(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSessions(
+          java.lang.Iterable<? extends com.sentinel.session.v2.SessionProto.Session> values) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sessions_);
+          onChanged();
+        } else {
+          sessionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSessions() {
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          sessionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.remove(index);
+          onChanged();
+        } else {
+          sessionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder getSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+          int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);  } else {
+          return sessionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+           getSessionsOrBuilderList() {
+        if (sessionsBuilder_ != null) {
+          return sessionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sessions_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder() {
+        return getSessionsFieldBuilder().addBuilder(
+            com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().addBuilder(
+            index, com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session.Builder> 
+           getSessionsBuilderList() {
+        return getSessionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+          getSessionsFieldBuilder() {
+        if (sessionsBuilder_ == null) {
+          sessionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder>(
+                  sessions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sessions_ = null;
+        }
+        return sessionsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsForSubscriptionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsForSubscriptionResponse)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsForSubscriptionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsForSubscriptionResponse>() {
+      @java.lang.Override
+      public QuerySessionsForSubscriptionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsForSubscriptionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsForSubscriptionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsForSubscriptionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionsForAllocationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionsForAllocationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.session.v2.SessionProto.Session> 
+        getSessionsList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.Session getSessions(int index);
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    int getSessionsCount();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList();
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionsForAllocationResponse}
+   */
+  public static final class QuerySessionsForAllocationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionsForAllocationResponse)
+      QuerySessionsForAllocationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionsForAllocationResponse.newBuilder() to construct.
+    private QuerySessionsForAllocationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionsForAllocationResponse() {
+      sessions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionsForAllocationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse.Builder.class);
+    }
+
+    public static final int SESSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_;
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+        getSessionsOrBuilderList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSessionsCount() {
+      return sessions_.size();
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+      return sessions_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+        int index) {
+      return sessions_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < sessions_.size(); i++) {
+        output.writeMessage(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < sessions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, sessions_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse other = (com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse) obj;
+
+      if (!getSessionsList()
+          .equals(other.getSessionsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSessionsCount() > 0) {
+        hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionsForAllocationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionsForAllocationResponse)
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+        } else {
+          sessions_ = null;
+          sessionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionsForAllocationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse result = new com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse result) {
+        if (sessionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            sessions_ = java.util.Collections.unmodifiableList(sessions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.sessions_ = sessions_;
+        } else {
+          result.sessions_ = sessionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse.getDefaultInstance()) return this;
+        if (sessionsBuilder_ == null) {
+          if (!other.sessions_.isEmpty()) {
+            if (sessions_.isEmpty()) {
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSessionsIsMutable();
+              sessions_.addAll(other.sessions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sessions_.isEmpty()) {
+            if (sessionsBuilder_.isEmpty()) {
+              sessionsBuilder_.dispose();
+              sessionsBuilder_ = null;
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              sessionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSessionsFieldBuilder() : null;
+            } else {
+              sessionsBuilder_.addAllMessages(other.sessions_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.session.v2.SessionProto.Session m =
+                    input.readMessage(
+                        com.sentinel.session.v2.SessionProto.Session.parser(),
+                        extensionRegistry);
+                if (sessionsBuilder_ == null) {
+                  ensureSessionsIsMutable();
+                  sessions_.add(m);
+                } else {
+                  sessionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.session.v2.SessionProto.Session> sessions_ =
+        java.util.Collections.emptyList();
+      private void ensureSessionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sessions_ = new java.util.ArrayList<com.sentinel.session.v2.SessionProto.Session>(sessions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> sessionsBuilder_;
+
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session> getSessionsList() {
+        if (sessionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sessions_);
+        } else {
+          return sessionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSessionsCount() {
+        if (sessionsBuilder_ == null) {
+          return sessions_.size();
+        } else {
+          return sessionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session getSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);
+        } else {
+          return sessionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.set(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSessions(
+          java.lang.Iterable<? extends com.sentinel.session.v2.SessionProto.Session> values) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sessions_);
+          onChanged();
+        } else {
+          sessionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSessions() {
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          sessionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.remove(index);
+          onChanged();
+        } else {
+          sessionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder getSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionsOrBuilder(
+          int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);  } else {
+          return sessionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+           getSessionsOrBuilderList() {
+        if (sessionsBuilder_ != null) {
+          return sessionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sessions_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder() {
+        return getSessionsFieldBuilder().addBuilder(
+            com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder addSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().addBuilder(
+            index, com.sentinel.session.v2.SessionProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.session.v2.Session sessions = 1 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.session.v2.SessionProto.Session.Builder> 
+           getSessionsBuilderList() {
+        return getSessionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+          getSessionsFieldBuilder() {
+        if (sessionsBuilder_ == null) {
+          sessionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder>(
+                  sessions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sessions_ = null;
+        }
+        return sessionsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionsForAllocationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionsForAllocationResponse)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionsForAllocationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionsForAllocationResponse>() {
+      @java.lang.Override
+      public QuerySessionsForAllocationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionsForAllocationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionsForAllocationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionsForAllocationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QuerySessionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+     * @return Whether the session field is set.
+     */
+    boolean hasSession();
+    /**
+     * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+     * @return The session.
+     */
+    com.sentinel.session.v2.SessionProto.Session getSession();
+    /**
+     * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QuerySessionResponse}
+   */
+  public static final class QuerySessionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QuerySessionResponse)
+      QuerySessionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionResponse.newBuilder() to construct.
+    private QuerySessionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QuerySessionResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionResponse.Builder.class);
+    }
+
+    public static final int SESSION_FIELD_NUMBER = 1;
+    private com.sentinel.session.v2.SessionProto.Session session_;
+    /**
+     * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+     * @return Whether the session field is set.
+     */
+    @java.lang.Override
+    public boolean hasSession() {
+      return session_ != null;
+    }
+    /**
+     * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+     * @return The session.
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.Session getSession() {
+      return session_ == null ? com.sentinel.session.v2.SessionProto.Session.getDefaultInstance() : session_;
+    }
+    /**
+     * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionOrBuilder() {
+      return session_ == null ? com.sentinel.session.v2.SessionProto.Session.getDefaultInstance() : session_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (session_ != null) {
+        output.writeMessage(1, getSession());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (session_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSession());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QuerySessionResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QuerySessionResponse other = (com.sentinel.session.v2.QuerierProto.QuerySessionResponse) obj;
+
+      if (hasSession() != other.hasSession()) return false;
+      if (hasSession()) {
+        if (!getSession()
+            .equals(other.getSession())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSession()) {
+        hash = (37 * hash) + SESSION_FIELD_NUMBER;
+        hash = (53 * hash) + getSession().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QuerySessionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QuerySessionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QuerySessionResponse)
+        com.sentinel.session.v2.QuerierProto.QuerySessionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QuerySessionResponse.class, com.sentinel.session.v2.QuerierProto.QuerySessionResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QuerySessionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        session_ = null;
+        if (sessionBuilder_ != null) {
+          sessionBuilder_.dispose();
+          sessionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QuerySessionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionResponse getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QuerySessionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionResponse build() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QuerySessionResponse buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QuerySessionResponse result = new com.sentinel.session.v2.QuerierProto.QuerySessionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QuerySessionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.session_ = sessionBuilder_ == null
+              ? session_
+              : sessionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QuerySessionResponse) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QuerySessionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QuerySessionResponse other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QuerySessionResponse.getDefaultInstance()) return this;
+        if (other.hasSession()) {
+          mergeSession(other.getSession());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSessionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.sentinel.session.v2.SessionProto.Session session_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> sessionBuilder_;
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       * @return Whether the session field is set.
+       */
+      public boolean hasSession() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       * @return The session.
+       */
+      public com.sentinel.session.v2.SessionProto.Session getSession() {
+        if (sessionBuilder_ == null) {
+          return session_ == null ? com.sentinel.session.v2.SessionProto.Session.getDefaultInstance() : session_;
+        } else {
+          return sessionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSession(com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          session_ = value;
+        } else {
+          sessionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSession(
+          com.sentinel.session.v2.SessionProto.Session.Builder builderForValue) {
+        if (sessionBuilder_ == null) {
+          session_ = builderForValue.build();
+        } else {
+          sessionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSession(com.sentinel.session.v2.SessionProto.Session value) {
+        if (sessionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            session_ != null &&
+            session_ != com.sentinel.session.v2.SessionProto.Session.getDefaultInstance()) {
+            getSessionBuilder().mergeFrom(value);
+          } else {
+            session_ = value;
+          }
+        } else {
+          sessionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSession() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        session_ = null;
+        if (sessionBuilder_ != null) {
+          sessionBuilder_.dispose();
+          sessionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.Session.Builder getSessionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSessionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.SessionProto.SessionOrBuilder getSessionOrBuilder() {
+        if (sessionBuilder_ != null) {
+          return sessionBuilder_.getMessageOrBuilder();
+        } else {
+          return session_ == null ?
+              com.sentinel.session.v2.SessionProto.Session.getDefaultInstance() : session_;
+        }
+      }
+      /**
+       * <code>.sentinel.session.v2.Session session = 1 [json_name = "session", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder> 
+          getSessionFieldBuilder() {
+        if (sessionBuilder_ == null) {
+          sessionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.session.v2.SessionProto.Session, com.sentinel.session.v2.SessionProto.Session.Builder, com.sentinel.session.v2.SessionProto.SessionOrBuilder>(
+                  getSession(),
+                  getParentForChildren(),
+                  isClean());
+          session_ = null;
+        }
+        return sessionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QuerySessionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QuerySessionResponse)
+    private static final com.sentinel.session.v2.QuerierProto.QuerySessionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QuerySessionResponse();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QuerySessionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionResponse>() {
+      @java.lang.Override
+      public QuerySessionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QuerySessionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.sentinel.session.v2.ParamsProto.Params getParams();
+    /**
+     * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.session.v2.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.QuerierProto.QueryParamsResponse.class, com.sentinel.session.v2.QuerierProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.sentinel.session.v2.ParamsProto.Params params_;
+    /**
+     * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.ParamsProto.Params getParams() {
+      return params_ == null ? com.sentinel.session.v2.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.sentinel.session.v2.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.QuerierProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.QuerierProto.QueryParamsResponse other = (com.sentinel.session.v2.QuerierProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.QuerierProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.QueryParamsResponse)
+        com.sentinel.session.v2.QuerierProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.QuerierProto.QueryParamsResponse.class, com.sentinel.session.v2.QuerierProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.QuerierProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.QuerierProto.internal_static_sentinel_session_v2_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.sentinel.session.v2.QuerierProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QueryParamsResponse build() {
+        com.sentinel.session.v2.QuerierProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.QuerierProto.QueryParamsResponse buildPartial() {
+        com.sentinel.session.v2.QuerierProto.QueryParamsResponse result = new com.sentinel.session.v2.QuerierProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.QuerierProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.QuerierProto.QueryParamsResponse) {
+          return mergeFrom((com.sentinel.session.v2.QuerierProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.QuerierProto.QueryParamsResponse other) {
+        if (other == com.sentinel.session.v2.QuerierProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.sentinel.session.v2.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.session.v2.ParamsProto.Params, com.sentinel.session.v2.ParamsProto.Params.Builder, com.sentinel.session.v2.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.sentinel.session.v2.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.sentinel.session.v2.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.sentinel.session.v2.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.sentinel.session.v2.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.sentinel.session.v2.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.sentinel.session.v2.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.session.v2.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.sentinel.session.v2.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.sentinel.session.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.session.v2.ParamsProto.Params, com.sentinel.session.v2.ParamsProto.Params.Builder, com.sentinel.session.v2.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.session.v2.ParamsProto.Params, com.sentinel.session.v2.ParamsProto.Params.Builder, com.sentinel.session.v2.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.QueryParamsResponse)
+    private static final com.sentinel.session.v2.QuerierProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.QuerierProto.QueryParamsResponse();
+    }
+
+    public static com.sentinel.session.v2.QuerierProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.QuerierProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsForAccountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsForAccountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsForNodeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsForNodeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsForSubscriptionRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsForSubscriptionRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsForAllocationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsForAllocationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsForAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsForAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsForNodeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsForNodeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsForSubscriptionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsForSubscriptionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionsForAllocationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionsForAllocationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QuerySessionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QuerySessionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_QueryParamsResponse_fieldAccessorTable;
 
@@ -171,12 +10725,12 @@ public final class QuerierProto {
       "ueryParams\022\'.sentinel.session.v2.QueryPa" +
       "ramsRequest\032(.sentinel.session.v2.QueryP" +
       "aramsResponse\"(\202\323\344\223\002\"\022 /sentinel/modules" +
-      "/session/paramsB\317\001\n\027com.sentinel.session" +
-      ".v2B\014QuerierProtoP\001Z0github.com/sentinel" +
-      "-official/hub/x/session/types\242\002\003SSX\252\002\023Se" +
-      "ntinel.Session.V2\312\002\023Sentinel\\Session\\V2\342" +
-      "\002\037Sentinel\\Session\\V2\\GPBMetadata\352\002\025Sent" +
-      "inel::Session::V2\310\341\036\000\250\342\036\000b\006proto3"
+      "/session/paramsB\315\001\n\027com.sentinel.session" +
+      ".v2B\014QuerierProtoZ0github.com/sentinel-o" +
+      "fficial/hub/x/session/types\242\002\003SSX\252\002\023Sent" +
+      "inel.Session.V2\312\002\023Sentinel\\Session\\V2\342\002\037" +
+      "Sentinel\\Session\\V2\\GPBMetadata\352\002\025Sentin" +
+      "el::Session::V2\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

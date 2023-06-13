@@ -14,24 +14,2518 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryRelayersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.relayers.QueryRelayersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string arena = 1 [json_name = "arena"];</code>
+     * @return The arena.
+     */
+    java.lang.String getArena();
+    /**
+     * <code>string arena = 1 [json_name = "arena"];</code>
+     * @return The bytes for arena.
+     */
+    com.google.protobuf.ByteString
+        getArenaBytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.relayers.QueryRelayersRequest}
+   */
+  public static final class QueryRelayersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.relayers.QueryRelayersRequest)
+      QueryRelayersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRelayersRequest.newBuilder() to construct.
+    private QueryRelayersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRelayersRequest() {
+      arena_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRelayersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest.class, com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest.Builder.class);
+    }
+
+    public static final int ARENA_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object arena_ = "";
+    /**
+     * <code>string arena = 1 [json_name = "arena"];</code>
+     * @return The arena.
+     */
+    @java.lang.Override
+    public java.lang.String getArena() {
+      java.lang.Object ref = arena_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        arena_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string arena = 1 [json_name = "arena"];</code>
+     * @return The bytes for arena.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getArenaBytes() {
+      java.lang.Object ref = arena_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        arena_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(arena_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, arena_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(arena_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, arena_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest other = (com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest) obj;
+
+      if (!getArena()
+          .equals(other.getArena())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ARENA_FIELD_NUMBER;
+      hash = (53 * hash) + getArena().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.relayers.QueryRelayersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.relayers.QueryRelayersRequest)
+        com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest.class, com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        arena_ = "";
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest build() {
+        com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest buildPartial() {
+        com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest result = new com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.arena_ = arena_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest) {
+          return mergeFrom((com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest other) {
+        if (other == com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest.getDefaultInstance()) return this;
+        if (!other.getArena().isEmpty()) {
+          arena_ = other.arena_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                arena_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object arena_ = "";
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @return The arena.
+       */
+      public java.lang.String getArena() {
+        java.lang.Object ref = arena_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          arena_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @return The bytes for arena.
+       */
+      public com.google.protobuf.ByteString
+          getArenaBytes() {
+        java.lang.Object ref = arena_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          arena_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @param value The arena to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArena(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        arena_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArena() {
+        arena_ = getDefaultInstance().getArena();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @param value The bytes for arena to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArenaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        arena_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.relayers.QueryRelayersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.relayers.QueryRelayersRequest)
+    private static final com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest();
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRelayersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRelayersRequest>() {
+      @java.lang.Override
+      public QueryRelayersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRelayersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRelayersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.relayers.QueryProto.QueryRelayersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRelayersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.relayers.QueryRelayersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+     * @return A list containing the relayers.
+     */
+    java.util.List<java.lang.String>
+        getRelayersList();
+    /**
+     * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+     * @return The count of relayers.
+     */
+    int getRelayersCount();
+    /**
+     * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+     * @param index The index of the element to return.
+     * @return The relayers at the given index.
+     */
+    java.lang.String getRelayers(int index);
+    /**
+     * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the relayers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRelayersBytes(int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.relayers.QueryRelayersResponse}
+   */
+  public static final class QueryRelayersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.relayers.QueryRelayersResponse)
+      QueryRelayersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRelayersResponse.newBuilder() to construct.
+    private QueryRelayersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRelayersResponse() {
+      relayers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRelayersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse.class, com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse.Builder.class);
+    }
+
+    public static final int RELAYERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList relayers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+     * @return A list containing the relayers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRelayersList() {
+      return relayers_;
+    }
+    /**
+     * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+     * @return The count of relayers.
+     */
+    public int getRelayersCount() {
+      return relayers_.size();
+    }
+    /**
+     * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+     * @param index The index of the element to return.
+     * @return The relayers at the given index.
+     */
+    public java.lang.String getRelayers(int index) {
+      return relayers_.get(index);
+    }
+    /**
+     * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the relayers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRelayersBytes(int index) {
+      return relayers_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < relayers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, relayers_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < relayers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(relayers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRelayersList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse other = (com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse) obj;
+
+      if (!getRelayersList()
+          .equals(other.getRelayersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRelayersCount() > 0) {
+        hash = (37 * hash) + RELAYERS_FIELD_NUMBER;
+        hash = (53 * hash) + getRelayersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.relayers.QueryRelayersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.relayers.QueryRelayersResponse)
+        com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse.class, com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        relayers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryRelayersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse build() {
+        com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse buildPartial() {
+        com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse result = new com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          relayers_.makeImmutable();
+          result.relayers_ = relayers_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse) {
+          return mergeFrom((com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse other) {
+        if (other == com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse.getDefaultInstance()) return this;
+        if (!other.relayers_.isEmpty()) {
+          if (relayers_.isEmpty()) {
+            relayers_ = other.relayers_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureRelayersIsMutable();
+            relayers_.addAll(other.relayers_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRelayersIsMutable();
+                relayers_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList relayers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRelayersIsMutable() {
+        if (!relayers_.isModifiable()) {
+          relayers_ = new com.google.protobuf.LazyStringArrayList(relayers_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @return A list containing the relayers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRelayersList() {
+        relayers_.makeImmutable();
+        return relayers_;
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @return The count of relayers.
+       */
+      public int getRelayersCount() {
+        return relayers_.size();
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @param index The index of the element to return.
+       * @return The relayers at the given index.
+       */
+      public java.lang.String getRelayers(int index) {
+        return relayers_.get(index);
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the relayers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRelayersBytes(int index) {
+        return relayers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @param index The index to set the value at.
+       * @param value The relayers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayers(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRelayersIsMutable();
+        relayers_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @param value The relayers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRelayers(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRelayersIsMutable();
+        relayers_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @param values The relayers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRelayers(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRelayersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, relayers_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelayers() {
+        relayers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string relayers = 1 [json_name = "relayers", (.gogoproto.nullable) = false];</code>
+       * @param value The bytes of the relayers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRelayersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureRelayersIsMutable();
+        relayers_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.relayers.QueryRelayersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.relayers.QueryRelayersResponse)
+    private static final com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse();
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRelayersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRelayersResponse>() {
+      @java.lang.Override
+      public QueryRelayersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRelayersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRelayersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.relayers.QueryProto.QueryRelayersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryThresholdRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.relayers.QueryThresholdRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string arena = 1 [json_name = "arena"];</code>
+     * @return The arena.
+     */
+    java.lang.String getArena();
+    /**
+     * <code>string arena = 1 [json_name = "arena"];</code>
+     * @return The bytes for arena.
+     */
+    com.google.protobuf.ByteString
+        getArenaBytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.relayers.QueryThresholdRequest}
+   */
+  public static final class QueryThresholdRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.relayers.QueryThresholdRequest)
+      QueryThresholdRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryThresholdRequest.newBuilder() to construct.
+    private QueryThresholdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryThresholdRequest() {
+      arena_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryThresholdRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest.class, com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest.Builder.class);
+    }
+
+    public static final int ARENA_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object arena_ = "";
+    /**
+     * <code>string arena = 1 [json_name = "arena"];</code>
+     * @return The arena.
+     */
+    @java.lang.Override
+    public java.lang.String getArena() {
+      java.lang.Object ref = arena_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        arena_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string arena = 1 [json_name = "arena"];</code>
+     * @return The bytes for arena.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getArenaBytes() {
+      java.lang.Object ref = arena_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        arena_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(arena_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, arena_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(arena_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, arena_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest other = (com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest) obj;
+
+      if (!getArena()
+          .equals(other.getArena())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ARENA_FIELD_NUMBER;
+      hash = (53 * hash) + getArena().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.relayers.QueryThresholdRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.relayers.QueryThresholdRequest)
+        com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest.class, com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        arena_ = "";
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest build() {
+        com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest buildPartial() {
+        com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest result = new com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.arena_ = arena_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest) {
+          return mergeFrom((com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest other) {
+        if (other == com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest.getDefaultInstance()) return this;
+        if (!other.getArena().isEmpty()) {
+          arena_ = other.arena_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                arena_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object arena_ = "";
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @return The arena.
+       */
+      public java.lang.String getArena() {
+        java.lang.Object ref = arena_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          arena_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @return The bytes for arena.
+       */
+      public com.google.protobuf.ByteString
+          getArenaBytes() {
+        java.lang.Object ref = arena_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          arena_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @param value The arena to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArena(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        arena_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArena() {
+        arena_ = getDefaultInstance().getArena();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string arena = 1 [json_name = "arena"];</code>
+       * @param value The bytes for arena to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArenaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        arena_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.relayers.QueryThresholdRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.relayers.QueryThresholdRequest)
+    private static final com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest();
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryThresholdRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryThresholdRequest>() {
+      @java.lang.Override
+      public QueryThresholdRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryThresholdRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryThresholdRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.relayers.QueryProto.QueryThresholdRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryThresholdResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.relayers.QueryThresholdResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 threshold = 1 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    int getThreshold();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.relayers.QueryThresholdResponse}
+   */
+  public static final class QueryThresholdResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.relayers.QueryThresholdResponse)
+      QueryThresholdResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryThresholdResponse.newBuilder() to construct.
+    private QueryThresholdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryThresholdResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryThresholdResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse.class, com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse.Builder.class);
+    }
+
+    public static final int THRESHOLD_FIELD_NUMBER = 1;
+    private int threshold_ = 0;
+    /**
+     * <code>uint32 threshold = 1 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    @java.lang.Override
+    public int getThreshold() {
+      return threshold_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (threshold_ != 0) {
+        output.writeUInt32(1, threshold_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (threshold_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, threshold_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse other = (com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse) obj;
+
+      if (getThreshold()
+          != other.getThreshold()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getThreshold();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.relayers.QueryThresholdResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.relayers.QueryThresholdResponse)
+        com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse.class, com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        threshold_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.relayers.QueryProto.internal_static_stafihub_stafihub_relayers_QueryThresholdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse build() {
+        com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse buildPartial() {
+        com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse result = new com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.threshold_ = threshold_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse) {
+          return mergeFrom((com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse other) {
+        if (other == com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse.getDefaultInstance()) return this;
+        if (other.getThreshold() != 0) {
+          setThreshold(other.getThreshold());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                threshold_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int threshold_ ;
+      /**
+       * <code>uint32 threshold = 1 [json_name = "threshold"];</code>
+       * @return The threshold.
+       */
+      @java.lang.Override
+      public int getThreshold() {
+        return threshold_;
+      }
+      /**
+       * <code>uint32 threshold = 1 [json_name = "threshold"];</code>
+       * @param value The threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThreshold(int value) {
+
+        threshold_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 threshold = 1 [json_name = "threshold"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        threshold_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.relayers.QueryThresholdResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.relayers.QueryThresholdResponse)
+    private static final com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse();
+    }
+
+    public static com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryThresholdResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryThresholdResponse>() {
+      @java.lang.Override
+      public QueryThresholdResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryThresholdResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryThresholdResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.relayers.QueryProto.QueryThresholdResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_relayers_QueryRelayersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_relayers_QueryRelayersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_relayers_QueryRelayersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_relayers_QueryRelayersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_relayers_QueryThresholdRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_relayers_QueryThresholdRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_relayers_QueryThresholdResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_relayers_QueryThresholdResponse_fieldAccessorTable;
 
@@ -62,13 +2556,13 @@ public final class QueryProto {
       "ldRequest\0322.stafihub.stafihub.relayers.Q" +
       "ueryThresholdResponse\"=\202\323\344\223\0027\0225/stafihub" +
       "/stafihub/relayers/threshold/{arena}/{de" +
-      "nom}B\345\001\n\036com.stafihub.stafihub.relayersB" +
-      "\nQueryProtoP\001Z-github.com/stafihub/stafi" +
-      "hub/x/relayers/types\242\002\003SSR\252\002\032Stafihub.St" +
-      "afihub.Relayers\312\002\032Stafihub\\Stafihub\\Rela" +
-      "yers\342\002&Stafihub\\Stafihub\\Relayers\\GPBMet" +
-      "adata\352\002\034Stafihub::Stafihub::Relayersb\006pr" +
-      "oto3"
+      "nom}B\343\001\n\036com.stafihub.stafihub.relayersB" +
+      "\nQueryProtoZ-github.com/stafihub/stafihu" +
+      "b/x/relayers/types\242\002\003SSR\252\002\032Stafihub.Staf" +
+      "ihub.Relayers\312\002\032Stafihub\\Stafihub\\Relaye" +
+      "rs\342\002&Stafihub\\Stafihub\\Relayers\\GPBMetad" +
+      "ata\352\002\034Stafihub::Stafihub::Relayersb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

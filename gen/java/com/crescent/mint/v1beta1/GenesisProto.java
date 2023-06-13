@@ -14,9 +14,933 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.mint.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * last_block_time defines the last block time, which is used to calculate inflation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastBlockTime field is set.
+     */
+    boolean hasLastBlockTime();
+    /**
+     * <pre>
+     * last_block_time defines the last block time, which is used to calculate inflation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastBlockTime.
+     */
+    com.google.protobuf.Timestamp getLastBlockTime();
+    /**
+     * <pre>
+     * last_block_time defines the last block time, which is used to calculate inflation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder();
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.crescent.mint.v1beta1.MintProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.mint.v1beta1.MintProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the mint module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.mint.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.mint.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.mint.v1beta1.GenesisProto.internal_static_crescent_mint_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.mint.v1beta1.GenesisProto.internal_static_crescent_mint_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.mint.v1beta1.GenesisProto.GenesisState.class, com.crescent.mint.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int LAST_BLOCK_TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp lastBlockTime_;
+    /**
+     * <pre>
+     * last_block_time defines the last block time, which is used to calculate inflation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastBlockTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastBlockTime() {
+      return lastBlockTime_ != null;
+    }
+    /**
+     * <pre>
+     * last_block_time defines the last block time, which is used to calculate inflation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastBlockTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastBlockTime() {
+      return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+    }
+    /**
+     * <pre>
+     * last_block_time defines the last block time, which is used to calculate inflation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder() {
+      return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.crescent.mint.v1beta1.MintProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.crescent.mint.v1beta1.MintProto.Params getParams() {
+      return params_ == null ? com.crescent.mint.v1beta1.MintProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.mint.v1beta1.MintProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.crescent.mint.v1beta1.MintProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lastBlockTime_ != null) {
+        output.writeMessage(1, getLastBlockTime());
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lastBlockTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLastBlockTime());
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.mint.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.crescent.mint.v1beta1.GenesisProto.GenesisState other = (com.crescent.mint.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasLastBlockTime() != other.hasLastBlockTime()) return false;
+      if (hasLastBlockTime()) {
+        if (!getLastBlockTime()
+            .equals(other.getLastBlockTime())) return false;
+      }
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLastBlockTime()) {
+        hash = (37 * hash) + LAST_BLOCK_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastBlockTime().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.mint.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the mint module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.mint.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.mint.v1beta1.GenesisState)
+        com.crescent.mint.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.mint.v1beta1.GenesisProto.internal_static_crescent_mint_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.mint.v1beta1.GenesisProto.internal_static_crescent_mint_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.mint.v1beta1.GenesisProto.GenesisState.class, com.crescent.mint.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.crescent.mint.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lastBlockTime_ = null;
+        if (lastBlockTimeBuilder_ != null) {
+          lastBlockTimeBuilder_.dispose();
+          lastBlockTimeBuilder_ = null;
+        }
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.mint.v1beta1.GenesisProto.internal_static_crescent_mint_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.crescent.mint.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.GenesisProto.GenesisState build() {
+        com.crescent.mint.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.crescent.mint.v1beta1.GenesisProto.GenesisState result = new com.crescent.mint.v1beta1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.mint.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lastBlockTime_ = lastBlockTimeBuilder_ == null
+              ? lastBlockTime_
+              : lastBlockTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.mint.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.crescent.mint.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.mint.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.crescent.mint.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasLastBlockTime()) {
+          mergeLastBlockTime(other.getLastBlockTime());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLastBlockTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp lastBlockTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastBlockTimeBuilder_;
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastBlockTime field is set.
+       */
+      public boolean hasLastBlockTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The lastBlockTime.
+       */
+      public com.google.protobuf.Timestamp getLastBlockTime() {
+        if (lastBlockTimeBuilder_ == null) {
+          return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+        } else {
+          return lastBlockTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastBlockTime(com.google.protobuf.Timestamp value) {
+        if (lastBlockTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastBlockTime_ = value;
+        } else {
+          lastBlockTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastBlockTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastBlockTimeBuilder_ == null) {
+          lastBlockTime_ = builderForValue.build();
+        } else {
+          lastBlockTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeLastBlockTime(com.google.protobuf.Timestamp value) {
+        if (lastBlockTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            lastBlockTime_ != null &&
+            lastBlockTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastBlockTimeBuilder().mergeFrom(value);
+          } else {
+            lastBlockTime_ = value;
+          }
+        } else {
+          lastBlockTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearLastBlockTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lastBlockTime_ = null;
+        if (lastBlockTimeBuilder_ != null) {
+          lastBlockTimeBuilder_.dispose();
+          lastBlockTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastBlockTimeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLastBlockTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder() {
+        if (lastBlockTimeBuilder_ != null) {
+          return lastBlockTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastBlockTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+        }
+      }
+      /**
+       * <pre>
+       * last_block_time defines the last block time, which is used to calculate inflation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastBlockTimeFieldBuilder() {
+        if (lastBlockTimeBuilder_ == null) {
+          lastBlockTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastBlockTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastBlockTime_ = null;
+        }
+        return lastBlockTimeBuilder_;
+      }
+
+      private com.crescent.mint.v1beta1.MintProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.mint.v1beta1.MintProto.Params, com.crescent.mint.v1beta1.MintProto.Params.Builder, com.crescent.mint.v1beta1.MintProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.crescent.mint.v1beta1.MintProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.crescent.mint.v1beta1.MintProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.crescent.mint.v1beta1.MintProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.crescent.mint.v1beta1.MintProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.crescent.mint.v1beta1.MintProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            params_ != null &&
+            params_ != com.crescent.mint.v1beta1.MintProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.mint.v1beta1.MintProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.mint.v1beta1.MintProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.crescent.mint.v1beta1.MintProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.crescent.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.mint.v1beta1.MintProto.Params, com.crescent.mint.v1beta1.MintProto.Params.Builder, com.crescent.mint.v1beta1.MintProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.mint.v1beta1.MintProto.Params, com.crescent.mint.v1beta1.MintProto.Params.Builder, com.crescent.mint.v1beta1.MintProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.mint.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.mint.v1beta1.GenesisState)
+    private static final com.crescent.mint.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.mint.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.crescent.mint.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.mint.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_mint_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_mint_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -36,12 +960,12 @@ public final class GenesisProto {
       ".protobuf.TimestampB\036\362\336\037\026yaml:\"last_bloc" +
       "k_time\"\220\337\037\001R\rlastBlockTime\022;\n\006params\030\002 \001" +
       "(\0132\035.crescent.mint.v1beta1.ParamsB\004\310\336\037\000R" +
-      "\006paramsB\325\001\n\031com.crescent.mint.v1beta1B\014G" +
-      "enesisProtoP\001Z4github.com/crescent-netwo" +
-      "rk/crescent/v5/x/mint/types\242\002\003CMX\252\002\025Cres" +
-      "cent.Mint.V1beta1\312\002\025Crescent\\Mint\\V1beta" +
-      "1\342\002!Crescent\\Mint\\V1beta1\\GPBMetadata\352\002\027" +
-      "Crescent::Mint::V1beta1b\006proto3"
+      "\006paramsB\323\001\n\031com.crescent.mint.v1beta1B\014G" +
+      "enesisProtoZ4github.com/crescent-network" +
+      "/crescent/v5/x/mint/types\242\002\003CMX\252\002\025Cresce" +
+      "nt.Mint.V1beta1\312\002\025Crescent\\Mint\\V1beta1\342" +
+      "\002!Crescent\\Mint\\V1beta1\\GPBMetadata\352\002\027Cr" +
+      "escent::Mint::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

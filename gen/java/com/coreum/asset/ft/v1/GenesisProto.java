@@ -14,14 +14,3230 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.coreum.asset.ft.v1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.ft.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.coreum.asset.ft.v1.TokenProto.Token> 
+        getTokensList();
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.ft.v1.TokenProto.Token getTokens(int index);
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    int getTokensCount();
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder> 
+        getTokensOrBuilderList();
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder getTokensOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> 
+        getFrozenBalancesList();
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.ft.v1.GenesisProto.Balance getFrozenBalances(int index);
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    int getFrozenBalancesCount();
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> 
+        getFrozenBalancesOrBuilderList();
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder getFrozenBalancesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> 
+        getWhitelistedBalancesList();
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.ft.v1.GenesisProto.Balance getWhitelistedBalances(int index);
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    int getWhitelistedBalancesCount();
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> 
+        getWhitelistedBalancesOrBuilderList();
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder getWhitelistedBalancesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the module genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.asset.ft.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      tokens_ = java.util.Collections.emptyList();
+      frozenBalances_ = java.util.Collections.emptyList();
+      whitelistedBalances_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.GenesisProto.GenesisState.class, com.coreum.asset.ft.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.coreum.asset.ft.v1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.coreum.asset.ft.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.coreum.asset.ft.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int TOKENS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.coreum.asset.ft.v1.TokenProto.Token> tokens_;
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.ft.v1.TokenProto.Token> getTokensList() {
+      return tokens_;
+    }
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder> 
+        getTokensOrBuilderList() {
+      return tokens_;
+    }
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTokensCount() {
+      return tokens_.size();
+    }
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TokenProto.Token getTokens(int index) {
+      return tokens_.get(index);
+    }
+    /**
+     * <pre>
+     * tokens keep the fungible token state
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder getTokensOrBuilder(
+        int index) {
+      return tokens_.get(index);
+    }
+
+    public static final int FROZEN_BALANCES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> frozenBalances_;
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> getFrozenBalancesList() {
+      return frozenBalances_;
+    }
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> 
+        getFrozenBalancesOrBuilderList() {
+      return frozenBalances_;
+    }
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFrozenBalancesCount() {
+      return frozenBalances_.size();
+    }
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.GenesisProto.Balance getFrozenBalances(int index) {
+      return frozenBalances_.get(index);
+    }
+    /**
+     * <pre>
+     * frozen_balances contains the frozen balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder getFrozenBalancesOrBuilder(
+        int index) {
+      return frozenBalances_.get(index);
+    }
+
+    public static final int WHITELISTED_BALANCES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> whitelistedBalances_;
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> getWhitelistedBalancesList() {
+      return whitelistedBalances_;
+    }
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> 
+        getWhitelistedBalancesOrBuilderList() {
+      return whitelistedBalances_;
+    }
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getWhitelistedBalancesCount() {
+      return whitelistedBalances_.size();
+    }
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.GenesisProto.Balance getWhitelistedBalances(int index) {
+      return whitelistedBalances_.get(index);
+    }
+    /**
+     * <pre>
+     * whitelisted_balances contains the whitelisted balances on all of the accounts
+     * </pre>
+     *
+     * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder getWhitelistedBalancesOrBuilder(
+        int index) {
+      return whitelistedBalances_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        output.writeMessage(2, tokens_.get(i));
+      }
+      for (int i = 0; i < frozenBalances_.size(); i++) {
+        output.writeMessage(3, frozenBalances_.get(i));
+      }
+      for (int i = 0; i < whitelistedBalances_.size(); i++) {
+        output.writeMessage(4, whitelistedBalances_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tokens_.get(i));
+      }
+      for (int i = 0; i < frozenBalances_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, frozenBalances_.get(i));
+      }
+      for (int i = 0; i < whitelistedBalances_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, whitelistedBalances_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.GenesisProto.GenesisState other = (com.coreum.asset.ft.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getTokensList()
+          .equals(other.getTokensList())) return false;
+      if (!getFrozenBalancesList()
+          .equals(other.getFrozenBalancesList())) return false;
+      if (!getWhitelistedBalancesList()
+          .equals(other.getWhitelistedBalancesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getTokensCount() > 0) {
+        hash = (37 * hash) + TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokensList().hashCode();
+      }
+      if (getFrozenBalancesCount() > 0) {
+        hash = (37 * hash) + FROZEN_BALANCES_FIELD_NUMBER;
+        hash = (53 * hash) + getFrozenBalancesList().hashCode();
+      }
+      if (getWhitelistedBalancesCount() > 0) {
+        hash = (37 * hash) + WHITELISTED_BALANCES_FIELD_NUMBER;
+        hash = (53 * hash) + getWhitelistedBalancesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the module genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.asset.ft.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.GenesisState)
+        com.coreum.asset.ft.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.GenesisProto.GenesisState.class, com.coreum.asset.ft.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+        } else {
+          tokens_ = null;
+          tokensBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (frozenBalancesBuilder_ == null) {
+          frozenBalances_ = java.util.Collections.emptyList();
+        } else {
+          frozenBalances_ = null;
+          frozenBalancesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (whitelistedBalancesBuilder_ == null) {
+          whitelistedBalances_ = java.util.Collections.emptyList();
+        } else {
+          whitelistedBalances_ = null;
+          whitelistedBalancesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.GenesisProto.GenesisState build() {
+        com.coreum.asset.ft.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.GenesisProto.GenesisState buildPartial() {
+        com.coreum.asset.ft.v1.GenesisProto.GenesisState result = new com.coreum.asset.ft.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.coreum.asset.ft.v1.GenesisProto.GenesisState result) {
+        if (tokensBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            tokens_ = java.util.Collections.unmodifiableList(tokens_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tokens_ = tokens_;
+        } else {
+          result.tokens_ = tokensBuilder_.build();
+        }
+        if (frozenBalancesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            frozenBalances_ = java.util.Collections.unmodifiableList(frozenBalances_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.frozenBalances_ = frozenBalances_;
+        } else {
+          result.frozenBalances_ = frozenBalancesBuilder_.build();
+        }
+        if (whitelistedBalancesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            whitelistedBalances_ = java.util.Collections.unmodifiableList(whitelistedBalances_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.whitelistedBalances_ = whitelistedBalances_;
+        } else {
+          result.whitelistedBalances_ = whitelistedBalancesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.coreum.asset.ft.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.GenesisProto.GenesisState other) {
+        if (other == com.coreum.asset.ft.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (tokensBuilder_ == null) {
+          if (!other.tokens_.isEmpty()) {
+            if (tokens_.isEmpty()) {
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTokensIsMutable();
+              tokens_.addAll(other.tokens_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokens_.isEmpty()) {
+            if (tokensBuilder_.isEmpty()) {
+              tokensBuilder_.dispose();
+              tokensBuilder_ = null;
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              tokensBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokensFieldBuilder() : null;
+            } else {
+              tokensBuilder_.addAllMessages(other.tokens_);
+            }
+          }
+        }
+        if (frozenBalancesBuilder_ == null) {
+          if (!other.frozenBalances_.isEmpty()) {
+            if (frozenBalances_.isEmpty()) {
+              frozenBalances_ = other.frozenBalances_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureFrozenBalancesIsMutable();
+              frozenBalances_.addAll(other.frozenBalances_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.frozenBalances_.isEmpty()) {
+            if (frozenBalancesBuilder_.isEmpty()) {
+              frozenBalancesBuilder_.dispose();
+              frozenBalancesBuilder_ = null;
+              frozenBalances_ = other.frozenBalances_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              frozenBalancesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFrozenBalancesFieldBuilder() : null;
+            } else {
+              frozenBalancesBuilder_.addAllMessages(other.frozenBalances_);
+            }
+          }
+        }
+        if (whitelistedBalancesBuilder_ == null) {
+          if (!other.whitelistedBalances_.isEmpty()) {
+            if (whitelistedBalances_.isEmpty()) {
+              whitelistedBalances_ = other.whitelistedBalances_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureWhitelistedBalancesIsMutable();
+              whitelistedBalances_.addAll(other.whitelistedBalances_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.whitelistedBalances_.isEmpty()) {
+            if (whitelistedBalancesBuilder_.isEmpty()) {
+              whitelistedBalancesBuilder_.dispose();
+              whitelistedBalancesBuilder_ = null;
+              whitelistedBalances_ = other.whitelistedBalances_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              whitelistedBalancesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWhitelistedBalancesFieldBuilder() : null;
+            } else {
+              whitelistedBalancesBuilder_.addAllMessages(other.whitelistedBalances_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.coreum.asset.ft.v1.TokenProto.Token m =
+                    input.readMessage(
+                        com.coreum.asset.ft.v1.TokenProto.Token.parser(),
+                        extensionRegistry);
+                if (tokensBuilder_ == null) {
+                  ensureTokensIsMutable();
+                  tokens_.add(m);
+                } else {
+                  tokensBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.coreum.asset.ft.v1.GenesisProto.Balance m =
+                    input.readMessage(
+                        com.coreum.asset.ft.v1.GenesisProto.Balance.parser(),
+                        extensionRegistry);
+                if (frozenBalancesBuilder_ == null) {
+                  ensureFrozenBalancesIsMutable();
+                  frozenBalances_.add(m);
+                } else {
+                  frozenBalancesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.coreum.asset.ft.v1.GenesisProto.Balance m =
+                    input.readMessage(
+                        com.coreum.asset.ft.v1.GenesisProto.Balance.parser(),
+                        extensionRegistry);
+                if (whitelistedBalancesBuilder_ == null) {
+                  ensureWhitelistedBalancesIsMutable();
+                  whitelistedBalances_.add(m);
+                } else {
+                  whitelistedBalancesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.coreum.asset.ft.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.asset.ft.v1.ParamsProto.Params, com.coreum.asset.ft.v1.ParamsProto.Params.Builder, com.coreum.asset.ft.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.coreum.asset.ft.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.coreum.asset.ft.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.coreum.asset.ft.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.coreum.asset.ft.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.coreum.asset.ft.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.coreum.asset.ft.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.coreum.asset.ft.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.asset.ft.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.asset.ft.v1.ParamsProto.Params, com.coreum.asset.ft.v1.ParamsProto.Params.Builder, com.coreum.asset.ft.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.coreum.asset.ft.v1.ParamsProto.Params, com.coreum.asset.ft.v1.ParamsProto.Params.Builder, com.coreum.asset.ft.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.coreum.asset.ft.v1.TokenProto.Token> tokens_ =
+        java.util.Collections.emptyList();
+      private void ensureTokensIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          tokens_ = new java.util.ArrayList<com.coreum.asset.ft.v1.TokenProto.Token>(tokens_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.ft.v1.TokenProto.Token, com.coreum.asset.ft.v1.TokenProto.Token.Builder, com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder> tokensBuilder_;
+
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.coreum.asset.ft.v1.TokenProto.Token> getTokensList() {
+        if (tokensBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokens_);
+        } else {
+          return tokensBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTokensCount() {
+        if (tokensBuilder_ == null) {
+          return tokens_.size();
+        } else {
+          return tokensBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.TokenProto.Token getTokens(int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);
+        } else {
+          return tokensBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokens(
+          int index, com.coreum.asset.ft.v1.TokenProto.Token value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.set(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokens(
+          int index, com.coreum.asset.ft.v1.TokenProto.Token.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokens(com.coreum.asset.ft.v1.TokenProto.Token value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokens(
+          int index, com.coreum.asset.ft.v1.TokenProto.Token value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokens(
+          com.coreum.asset.ft.v1.TokenProto.Token.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokens(
+          int index, com.coreum.asset.ft.v1.TokenProto.Token.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTokens(
+          java.lang.Iterable<? extends com.coreum.asset.ft.v1.TokenProto.Token> values) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokens_);
+          onChanged();
+        } else {
+          tokensBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokens() {
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          tokensBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTokens(int index) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.remove(index);
+          onChanged();
+        } else {
+          tokensBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.TokenProto.Token.Builder getTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder getTokensOrBuilder(
+          int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);  } else {
+          return tokensBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder> 
+           getTokensOrBuilderList() {
+        if (tokensBuilder_ != null) {
+          return tokensBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokens_);
+        }
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.TokenProto.Token.Builder addTokensBuilder() {
+        return getTokensFieldBuilder().addBuilder(
+            com.coreum.asset.ft.v1.TokenProto.Token.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.TokenProto.Token.Builder addTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().addBuilder(
+            index, com.coreum.asset.ft.v1.TokenProto.Token.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokens keep the fungible token state
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.coreum.asset.ft.v1.TokenProto.Token.Builder> 
+           getTokensBuilderList() {
+        return getTokensFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.ft.v1.TokenProto.Token, com.coreum.asset.ft.v1.TokenProto.Token.Builder, com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder> 
+          getTokensFieldBuilder() {
+        if (tokensBuilder_ == null) {
+          tokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.coreum.asset.ft.v1.TokenProto.Token, com.coreum.asset.ft.v1.TokenProto.Token.Builder, com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder>(
+                  tokens_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokens_ = null;
+        }
+        return tokensBuilder_;
+      }
+
+      private java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> frozenBalances_ =
+        java.util.Collections.emptyList();
+      private void ensureFrozenBalancesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          frozenBalances_ = new java.util.ArrayList<com.coreum.asset.ft.v1.GenesisProto.Balance>(frozenBalances_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.ft.v1.GenesisProto.Balance, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder, com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> frozenBalancesBuilder_;
+
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> getFrozenBalancesList() {
+        if (frozenBalancesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(frozenBalances_);
+        } else {
+          return frozenBalancesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFrozenBalancesCount() {
+        if (frozenBalancesBuilder_ == null) {
+          return frozenBalances_.size();
+        } else {
+          return frozenBalancesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.Balance getFrozenBalances(int index) {
+        if (frozenBalancesBuilder_ == null) {
+          return frozenBalances_.get(index);
+        } else {
+          return frozenBalancesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFrozenBalances(
+          int index, com.coreum.asset.ft.v1.GenesisProto.Balance value) {
+        if (frozenBalancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFrozenBalancesIsMutable();
+          frozenBalances_.set(index, value);
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFrozenBalances(
+          int index, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder builderForValue) {
+        if (frozenBalancesBuilder_ == null) {
+          ensureFrozenBalancesIsMutable();
+          frozenBalances_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFrozenBalances(com.coreum.asset.ft.v1.GenesisProto.Balance value) {
+        if (frozenBalancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFrozenBalancesIsMutable();
+          frozenBalances_.add(value);
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFrozenBalances(
+          int index, com.coreum.asset.ft.v1.GenesisProto.Balance value) {
+        if (frozenBalancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFrozenBalancesIsMutable();
+          frozenBalances_.add(index, value);
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFrozenBalances(
+          com.coreum.asset.ft.v1.GenesisProto.Balance.Builder builderForValue) {
+        if (frozenBalancesBuilder_ == null) {
+          ensureFrozenBalancesIsMutable();
+          frozenBalances_.add(builderForValue.build());
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFrozenBalances(
+          int index, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder builderForValue) {
+        if (frozenBalancesBuilder_ == null) {
+          ensureFrozenBalancesIsMutable();
+          frozenBalances_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFrozenBalances(
+          java.lang.Iterable<? extends com.coreum.asset.ft.v1.GenesisProto.Balance> values) {
+        if (frozenBalancesBuilder_ == null) {
+          ensureFrozenBalancesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, frozenBalances_);
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFrozenBalances() {
+        if (frozenBalancesBuilder_ == null) {
+          frozenBalances_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFrozenBalances(int index) {
+        if (frozenBalancesBuilder_ == null) {
+          ensureFrozenBalancesIsMutable();
+          frozenBalances_.remove(index);
+          onChanged();
+        } else {
+          frozenBalancesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.Balance.Builder getFrozenBalancesBuilder(
+          int index) {
+        return getFrozenBalancesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder getFrozenBalancesOrBuilder(
+          int index) {
+        if (frozenBalancesBuilder_ == null) {
+          return frozenBalances_.get(index);  } else {
+          return frozenBalancesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> 
+           getFrozenBalancesOrBuilderList() {
+        if (frozenBalancesBuilder_ != null) {
+          return frozenBalancesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(frozenBalances_);
+        }
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.Balance.Builder addFrozenBalancesBuilder() {
+        return getFrozenBalancesFieldBuilder().addBuilder(
+            com.coreum.asset.ft.v1.GenesisProto.Balance.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.Balance.Builder addFrozenBalancesBuilder(
+          int index) {
+        return getFrozenBalancesFieldBuilder().addBuilder(
+            index, com.coreum.asset.ft.v1.GenesisProto.Balance.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * frozen_balances contains the frozen balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance frozen_balances = 3 [json_name = "frozenBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance.Builder> 
+           getFrozenBalancesBuilderList() {
+        return getFrozenBalancesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.ft.v1.GenesisProto.Balance, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder, com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> 
+          getFrozenBalancesFieldBuilder() {
+        if (frozenBalancesBuilder_ == null) {
+          frozenBalancesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.coreum.asset.ft.v1.GenesisProto.Balance, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder, com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder>(
+                  frozenBalances_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          frozenBalances_ = null;
+        }
+        return frozenBalancesBuilder_;
+      }
+
+      private java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> whitelistedBalances_ =
+        java.util.Collections.emptyList();
+      private void ensureWhitelistedBalancesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          whitelistedBalances_ = new java.util.ArrayList<com.coreum.asset.ft.v1.GenesisProto.Balance>(whitelistedBalances_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.ft.v1.GenesisProto.Balance, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder, com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> whitelistedBalancesBuilder_;
+
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance> getWhitelistedBalancesList() {
+        if (whitelistedBalancesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(whitelistedBalances_);
+        } else {
+          return whitelistedBalancesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public int getWhitelistedBalancesCount() {
+        if (whitelistedBalancesBuilder_ == null) {
+          return whitelistedBalances_.size();
+        } else {
+          return whitelistedBalancesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.Balance getWhitelistedBalances(int index) {
+        if (whitelistedBalancesBuilder_ == null) {
+          return whitelistedBalances_.get(index);
+        } else {
+          return whitelistedBalancesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setWhitelistedBalances(
+          int index, com.coreum.asset.ft.v1.GenesisProto.Balance value) {
+        if (whitelistedBalancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedBalancesIsMutable();
+          whitelistedBalances_.set(index, value);
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setWhitelistedBalances(
+          int index, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder builderForValue) {
+        if (whitelistedBalancesBuilder_ == null) {
+          ensureWhitelistedBalancesIsMutable();
+          whitelistedBalances_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWhitelistedBalances(com.coreum.asset.ft.v1.GenesisProto.Balance value) {
+        if (whitelistedBalancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedBalancesIsMutable();
+          whitelistedBalances_.add(value);
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWhitelistedBalances(
+          int index, com.coreum.asset.ft.v1.GenesisProto.Balance value) {
+        if (whitelistedBalancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedBalancesIsMutable();
+          whitelistedBalances_.add(index, value);
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWhitelistedBalances(
+          com.coreum.asset.ft.v1.GenesisProto.Balance.Builder builderForValue) {
+        if (whitelistedBalancesBuilder_ == null) {
+          ensureWhitelistedBalancesIsMutable();
+          whitelistedBalances_.add(builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWhitelistedBalances(
+          int index, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder builderForValue) {
+        if (whitelistedBalancesBuilder_ == null) {
+          ensureWhitelistedBalancesIsMutable();
+          whitelistedBalances_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllWhitelistedBalances(
+          java.lang.Iterable<? extends com.coreum.asset.ft.v1.GenesisProto.Balance> values) {
+        if (whitelistedBalancesBuilder_ == null) {
+          ensureWhitelistedBalancesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, whitelistedBalances_);
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearWhitelistedBalances() {
+        if (whitelistedBalancesBuilder_ == null) {
+          whitelistedBalances_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeWhitelistedBalances(int index) {
+        if (whitelistedBalancesBuilder_ == null) {
+          ensureWhitelistedBalancesIsMutable();
+          whitelistedBalances_.remove(index);
+          onChanged();
+        } else {
+          whitelistedBalancesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.Balance.Builder getWhitelistedBalancesBuilder(
+          int index) {
+        return getWhitelistedBalancesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder getWhitelistedBalancesOrBuilder(
+          int index) {
+        if (whitelistedBalancesBuilder_ == null) {
+          return whitelistedBalances_.get(index);  } else {
+          return whitelistedBalancesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> 
+           getWhitelistedBalancesOrBuilderList() {
+        if (whitelistedBalancesBuilder_ != null) {
+          return whitelistedBalancesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(whitelistedBalances_);
+        }
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.Balance.Builder addWhitelistedBalancesBuilder() {
+        return getWhitelistedBalancesFieldBuilder().addBuilder(
+            com.coreum.asset.ft.v1.GenesisProto.Balance.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.asset.ft.v1.GenesisProto.Balance.Builder addWhitelistedBalancesBuilder(
+          int index) {
+        return getWhitelistedBalancesFieldBuilder().addBuilder(
+            index, com.coreum.asset.ft.v1.GenesisProto.Balance.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * whitelisted_balances contains the whitelisted balances on all of the accounts
+       * </pre>
+       *
+       * <code>repeated .coreum.asset.ft.v1.Balance whitelisted_balances = 4 [json_name = "whitelistedBalances", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.coreum.asset.ft.v1.GenesisProto.Balance.Builder> 
+           getWhitelistedBalancesBuilderList() {
+        return getWhitelistedBalancesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.coreum.asset.ft.v1.GenesisProto.Balance, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder, com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder> 
+          getWhitelistedBalancesFieldBuilder() {
+        if (whitelistedBalancesBuilder_ == null) {
+          whitelistedBalancesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.coreum.asset.ft.v1.GenesisProto.Balance, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder, com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder>(
+                  whitelistedBalances_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          whitelistedBalances_ = null;
+        }
+        return whitelistedBalancesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.GenesisState)
+    private static final com.coreum.asset.ft.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.coreum.asset.ft.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BalanceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.Balance)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address is the address of the balance holder.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address is the address of the balance holder.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getCoinsList();
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getCoinsCount();
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList();
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Balance defines an account address and balance pair used module genesis genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.asset.ft.v1.Balance}
+   */
+  public static final class Balance extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.Balance)
+      BalanceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Balance.newBuilder() to construct.
+    private Balance(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Balance() {
+      address_ = "";
+      coins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Balance();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_Balance_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_Balance_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.GenesisProto.Balance.class, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address is the address of the balance holder.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address is the address of the balance holder.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getCoinsCount() {
+      return coins_.size();
+    }
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+      return coins_.get(index);
+    }
+    /**
+     * <pre>
+     * coins defines the different coins this balance holds.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index) {
+      return coins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      for (int i = 0; i < coins_.size(); i++) {
+        output.writeMessage(2, coins_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      for (int i = 0; i < coins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, coins_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.GenesisProto.Balance)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.GenesisProto.Balance other = (com.coreum.asset.ft.v1.GenesisProto.Balance) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getCoinsList()
+          .equals(other.getCoinsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (getCoinsCount() > 0) {
+        hash = (37 * hash) + COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.GenesisProto.Balance prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Balance defines an account address and balance pair used module genesis genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.asset.ft.v1.Balance}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.Balance)
+        com.coreum.asset.ft.v1.GenesisProto.BalanceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_Balance_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_Balance_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.GenesisProto.Balance.class, com.coreum.asset.ft.v1.GenesisProto.Balance.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.GenesisProto.Balance.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+        } else {
+          coins_ = null;
+          coinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.GenesisProto.internal_static_coreum_asset_ft_v1_Balance_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.GenesisProto.Balance getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.GenesisProto.Balance.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.GenesisProto.Balance build() {
+        com.coreum.asset.ft.v1.GenesisProto.Balance result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.GenesisProto.Balance buildPartial() {
+        com.coreum.asset.ft.v1.GenesisProto.Balance result = new com.coreum.asset.ft.v1.GenesisProto.Balance(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.coreum.asset.ft.v1.GenesisProto.Balance result) {
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.coins_ = coins_;
+        } else {
+          result.coins_ = coinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.GenesisProto.Balance result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.GenesisProto.Balance) {
+          return mergeFrom((com.coreum.asset.ft.v1.GenesisProto.Balance)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.GenesisProto.Balance other) {
+        if (other == com.coreum.asset.ft.v1.GenesisProto.Balance.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (coinsBuilder_ == null) {
+          if (!other.coins_.isEmpty()) {
+            if (coins_.isEmpty()) {
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCoinsIsMutable();
+              coins_.addAll(other.coins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coins_.isEmpty()) {
+            if (coinsBuilder_.isEmpty()) {
+              coinsBuilder_.dispose();
+              coinsBuilder_ = null;
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              coinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsFieldBuilder() : null;
+            } else {
+              coinsBuilder_.addAllMessages(other.coins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (coinsBuilder_ == null) {
+                  ensureCoinsIsMutable();
+                  coins_.add(m);
+                } else {
+                  coinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address is the address of the balance holder.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the address of the balance holder.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the address of the balance holder.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the address of the balance holder.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the address of the balance holder.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        if (coinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coins_);
+        } else {
+          return coinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getCoinsCount() {
+        if (coinsBuilder_ == null) {
+          return coins_.size();
+        } else {
+          return coinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);
+        } else {
+          return coinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.set(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coins_);
+          onChanged();
+        } else {
+          coinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearCoins() {
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          coinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeCoins(int index) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.remove(index);
+          onChanged();
+        } else {
+          coinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);  } else {
+          return coinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getCoinsOrBuilderList() {
+        if (coinsBuilder_ != null) {
+          return coinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coins_);
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+        return getCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins defines the different coins this balance holds.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getCoinsBuilderList() {
+        return getCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsFieldBuilder() {
+        if (coinsBuilder_ == null) {
+          coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  coins_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coins_ = null;
+        }
+        return coinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.Balance)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.Balance)
+    private static final com.coreum.asset.ft.v1.GenesisProto.Balance DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.GenesisProto.Balance();
+    }
+
+    public static com.coreum.asset.ft.v1.GenesisProto.Balance getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Balance>
+        PARSER = new com.google.protobuf.AbstractParser<Balance>() {
+      @java.lang.Override
+      public Balance parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Balance> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Balance> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.GenesisProto.Balance getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_Balance_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_Balance_fieldAccessorTable;
 
@@ -48,12 +3264,12 @@ public final class GenesisProto {
       "\030\n\007address\030\001 \001(\tR\007address\022a\n\005coins\030\002 \003(\013" +
       "2\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(git" +
       "hub.com/cosmos/cosmos-sdk/types.CoinsR\005c" +
-      "oinsB\306\001\n\026com.coreum.asset.ft.v1B\014Genesis" +
-      "ProtoP\001Z3github.com/CoreumFoundation/cor" +
-      "eum/x/asset/ft/types\242\002\003CAF\252\002\022Coreum.Asse" +
-      "t.Ft.V1\312\002\022Coreum\\Asset\\Ft\\V1\342\002\036Coreum\\As" +
-      "set\\Ft\\V1\\GPBMetadata\352\002\025Coreum::Asset::F" +
-      "t::V1b\006proto3"
+      "oinsB\304\001\n\026com.coreum.asset.ft.v1B\014Genesis" +
+      "ProtoZ3github.com/CoreumFoundation/coreu" +
+      "m/x/asset/ft/types\242\002\003CAF\252\002\022Coreum.Asset." +
+      "Ft.V1\312\002\022Coreum\\Asset\\Ft\\V1\342\002\036Coreum\\Asse" +
+      "t\\Ft\\V1\\GPBMetadata\352\002\025Coreum::Asset::Ft:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

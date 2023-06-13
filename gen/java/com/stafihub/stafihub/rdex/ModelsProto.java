@@ -14,9 +14,1073 @@ public final class ModelsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface SwapPoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rdex.SwapPool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    int getIndex();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the lpToken field is set.
+     */
+    boolean hasLpToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The lpToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getLpToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLpTokenOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the baseToken field is set.
+     */
+    boolean hasBaseToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The baseToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBaseToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBaseTokenOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the token field is set.
+     */
+    boolean hasToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The token.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rdex.SwapPool}
+   */
+  public static final class SwapPool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rdex.SwapPool)
+      SwapPoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SwapPool.newBuilder() to construct.
+    private SwapPool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SwapPool() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SwapPool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rdex.ModelsProto.internal_static_stafihub_stafihub_rdex_SwapPool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rdex.ModelsProto.internal_static_stafihub_stafihub_rdex_SwapPool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rdex.ModelsProto.SwapPool.class, com.stafihub.stafihub.rdex.ModelsProto.SwapPool.Builder.class);
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private int index_ = 0;
+    /**
+     * <code>uint32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public int getIndex() {
+      return index_;
+    }
+
+    public static final int LPTOKEN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin lpToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the lpToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasLpToken() {
+      return lpToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The lpToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getLpToken() {
+      return lpToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : lpToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLpTokenOrBuilder() {
+      return lpToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : lpToken_;
+    }
+
+    public static final int BASETOKEN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin baseToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the baseToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasBaseToken() {
+      return baseToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The baseToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBaseToken() {
+      return baseToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : baseToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBaseTokenOrBuilder() {
+      return baseToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : baseToken_;
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin token_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the token field is set.
+     */
+    @java.lang.Override
+    public boolean hasToken() {
+      return token_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getToken() {
+      return token_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : token_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder() {
+      return token_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : token_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (index_ != 0) {
+        output.writeUInt32(1, index_);
+      }
+      if (lpToken_ != null) {
+        output.writeMessage(2, getLpToken());
+      }
+      if (baseToken_ != null) {
+        output.writeMessage(3, getBaseToken());
+      }
+      if (token_ != null) {
+        output.writeMessage(4, getToken());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (index_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, index_);
+      }
+      if (lpToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLpToken());
+      }
+      if (baseToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBaseToken());
+      }
+      if (token_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getToken());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rdex.ModelsProto.SwapPool)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rdex.ModelsProto.SwapPool other = (com.stafihub.stafihub.rdex.ModelsProto.SwapPool) obj;
+
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (hasLpToken() != other.hasLpToken()) return false;
+      if (hasLpToken()) {
+        if (!getLpToken()
+            .equals(other.getLpToken())) return false;
+      }
+      if (hasBaseToken() != other.hasBaseToken()) return false;
+      if (hasBaseToken()) {
+        if (!getBaseToken()
+            .equals(other.getBaseToken())) return false;
+      }
+      if (hasToken() != other.hasToken()) return false;
+      if (hasToken()) {
+        if (!getToken()
+            .equals(other.getToken())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex();
+      if (hasLpToken()) {
+        hash = (37 * hash) + LPTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getLpToken().hashCode();
+      }
+      if (hasBaseToken()) {
+        hash = (37 * hash) + BASETOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getBaseToken().hashCode();
+      }
+      if (hasToken()) {
+        hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getToken().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rdex.ModelsProto.SwapPool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rdex.SwapPool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rdex.SwapPool)
+        com.stafihub.stafihub.rdex.ModelsProto.SwapPoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rdex.ModelsProto.internal_static_stafihub_stafihub_rdex_SwapPool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rdex.ModelsProto.internal_static_stafihub_stafihub_rdex_SwapPool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rdex.ModelsProto.SwapPool.class, com.stafihub.stafihub.rdex.ModelsProto.SwapPool.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rdex.ModelsProto.SwapPool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        index_ = 0;
+        lpToken_ = null;
+        if (lpTokenBuilder_ != null) {
+          lpTokenBuilder_.dispose();
+          lpTokenBuilder_ = null;
+        }
+        baseToken_ = null;
+        if (baseTokenBuilder_ != null) {
+          baseTokenBuilder_.dispose();
+          baseTokenBuilder_ = null;
+        }
+        token_ = null;
+        if (tokenBuilder_ != null) {
+          tokenBuilder_.dispose();
+          tokenBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rdex.ModelsProto.internal_static_stafihub_stafihub_rdex_SwapPool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rdex.ModelsProto.SwapPool getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rdex.ModelsProto.SwapPool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rdex.ModelsProto.SwapPool build() {
+        com.stafihub.stafihub.rdex.ModelsProto.SwapPool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rdex.ModelsProto.SwapPool buildPartial() {
+        com.stafihub.stafihub.rdex.ModelsProto.SwapPool result = new com.stafihub.stafihub.rdex.ModelsProto.SwapPool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rdex.ModelsProto.SwapPool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lpToken_ = lpTokenBuilder_ == null
+              ? lpToken_
+              : lpTokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.baseToken_ = baseTokenBuilder_ == null
+              ? baseToken_
+              : baseTokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.token_ = tokenBuilder_ == null
+              ? token_
+              : tokenBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rdex.ModelsProto.SwapPool) {
+          return mergeFrom((com.stafihub.stafihub.rdex.ModelsProto.SwapPool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rdex.ModelsProto.SwapPool other) {
+        if (other == com.stafihub.stafihub.rdex.ModelsProto.SwapPool.getDefaultInstance()) return this;
+        if (other.getIndex() != 0) {
+          setIndex(other.getIndex());
+        }
+        if (other.hasLpToken()) {
+          mergeLpToken(other.getLpToken());
+        }
+        if (other.hasBaseToken()) {
+          mergeBaseToken(other.getBaseToken());
+        }
+        if (other.hasToken()) {
+          mergeToken(other.getToken());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                index_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getLpTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getBaseTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int index_ ;
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(int value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin lpToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> lpTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the lpToken field is set.
+       */
+      public boolean hasLpToken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The lpToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getLpToken() {
+        if (lpTokenBuilder_ == null) {
+          return lpToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : lpToken_;
+        } else {
+          return lpTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setLpToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (lpTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lpToken_ = value;
+        } else {
+          lpTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setLpToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (lpTokenBuilder_ == null) {
+          lpToken_ = builderForValue.build();
+        } else {
+          lpTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeLpToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (lpTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            lpToken_ != null &&
+            lpToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getLpTokenBuilder().mergeFrom(value);
+          } else {
+            lpToken_ = value;
+          }
+        } else {
+          lpTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearLpToken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lpToken_ = null;
+        if (lpTokenBuilder_ != null) {
+          lpTokenBuilder_.dispose();
+          lpTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getLpTokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getLpTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLpTokenOrBuilder() {
+        if (lpTokenBuilder_ != null) {
+          return lpTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return lpToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : lpToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getLpTokenFieldBuilder() {
+        if (lpTokenBuilder_ == null) {
+          lpTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getLpToken(),
+                  getParentForChildren(),
+                  isClean());
+          lpToken_ = null;
+        }
+        return lpTokenBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin baseToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> baseTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the baseToken field is set.
+       */
+      public boolean hasBaseToken() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The baseToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBaseToken() {
+        if (baseTokenBuilder_ == null) {
+          return baseToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : baseToken_;
+        } else {
+          return baseTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBaseToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (baseTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          baseToken_ = value;
+        } else {
+          baseTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBaseToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (baseTokenBuilder_ == null) {
+          baseToken_ = builderForValue.build();
+        } else {
+          baseTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeBaseToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (baseTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            baseToken_ != null &&
+            baseToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBaseTokenBuilder().mergeFrom(value);
+          } else {
+            baseToken_ = value;
+          }
+        } else {
+          baseTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearBaseToken() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        baseToken_ = null;
+        if (baseTokenBuilder_ != null) {
+          baseTokenBuilder_.dispose();
+          baseTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBaseTokenBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBaseTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBaseTokenOrBuilder() {
+        if (baseTokenBuilder_ != null) {
+          return baseTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return baseToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : baseToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBaseTokenFieldBuilder() {
+        if (baseTokenBuilder_ == null) {
+          baseTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBaseToken(),
+                  getParentForChildren(),
+                  isClean());
+          baseToken_ = null;
+        }
+        return baseTokenBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin token_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> tokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the token field is set.
+       */
+      public boolean hasToken() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The token.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getToken() {
+        if (tokenBuilder_ == null) {
+          return token_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : token_;
+        } else {
+          return tokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          token_ = value;
+        } else {
+          tokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (tokenBuilder_ == null) {
+          token_ = builderForValue.build();
+        } else {
+          tokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            token_ != null &&
+            token_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTokenBuilder().mergeFrom(value);
+          } else {
+            token_ = value;
+          }
+        } else {
+          tokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearToken() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        token_ = null;
+        if (tokenBuilder_ != null) {
+          tokenBuilder_.dispose();
+          tokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTokenBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder() {
+        if (tokenBuilder_ != null) {
+          return tokenBuilder_.getMessageOrBuilder();
+        } else {
+          return token_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : token_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTokenFieldBuilder() {
+        if (tokenBuilder_ == null) {
+          tokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getToken(),
+                  getParentForChildren(),
+                  isClean());
+          token_ = null;
+        }
+        return tokenBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rdex.SwapPool)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rdex.SwapPool)
+    private static final com.stafihub.stafihub.rdex.ModelsProto.SwapPool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rdex.ModelsProto.SwapPool();
+    }
+
+    public static com.stafihub.stafihub.rdex.ModelsProto.SwapPool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SwapPool>
+        PARSER = new com.google.protobuf.AbstractParser<SwapPool>() {
+      @java.lang.Override
+      public SwapPool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SwapPool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SwapPool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rdex.ModelsProto.SwapPool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rdex_SwapPool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rdex_SwapPool_fieldAccessorTable;
 
@@ -39,12 +1103,12 @@ public final class ModelsProto {
       "mos-sdk/types.CoinR\tbaseToken\022`\n\005token\030\004" +
       " \001(\0132\031.cosmos.base.v1beta1.CoinB/\310\336\037\000\252\337\037" +
       "\'github.com/cosmos/cosmos-sdk/types.Coin" +
-      "R\005tokenB\316\001\n\032com.stafihub.stafihub.rdexB\013" +
-      "ModelsProtoP\001Z)github.com/stafihub/stafi" +
-      "hub/x/rdex/types\242\002\003SSR\252\002\026Stafihub.Stafih" +
-      "ub.Rdex\312\002\026Stafihub\\Stafihub\\Rdex\342\002\"Stafi" +
-      "hub\\Stafihub\\Rdex\\GPBMetadata\352\002\030Stafihub" +
-      "::Stafihub::Rdexb\006proto3"
+      "R\005tokenB\314\001\n\032com.stafihub.stafihub.rdexB\013" +
+      "ModelsProtoZ)github.com/stafihub/stafihu" +
+      "b/x/rdex/types\242\002\003SSR\252\002\026Stafihub.Stafihub" +
+      ".Rdex\312\002\026Stafihub\\Stafihub\\Rdex\342\002\"Stafihu" +
+      "b\\Stafihub\\Rdex\\GPBMetadata\352\002\030Stafihub::" +
+      "Stafihub::Rdexb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

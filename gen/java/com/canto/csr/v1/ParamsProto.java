@@ -14,9 +14,698 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.csr.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * boolean to enable the csr module
+     * </pre>
+     *
+     * <code>bool enable_csr = 1 [json_name = "enableCsr"];</code>
+     * @return The enableCsr.
+     */
+    boolean getEnableCsr();
+
+    /**
+     * <pre>
+     * decimal to determine the transaction fee split between network operators (validators) and CSR
+     * </pre>
+     *
+     * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The csrShares.
+     */
+    java.lang.String getCsrShares();
+    /**
+     * <pre>
+     * decimal to determine the transaction fee split between network operators (validators) and CSR
+     * </pre>
+     *
+     * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for csrShares.
+     */
+    com.google.protobuf.ByteString
+        getCsrSharesBytes();
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the csr module
+   * </pre>
+   *
+   * Protobuf type {@code canto.csr.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.csr.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      csrShares_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.csr.v1.ParamsProto.internal_static_canto_csr_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.csr.v1.ParamsProto.internal_static_canto_csr_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.csr.v1.ParamsProto.Params.class, com.canto.csr.v1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int ENABLE_CSR_FIELD_NUMBER = 1;
+    private boolean enableCsr_ = false;
+    /**
+     * <pre>
+     * boolean to enable the csr module
+     * </pre>
+     *
+     * <code>bool enable_csr = 1 [json_name = "enableCsr"];</code>
+     * @return The enableCsr.
+     */
+    @java.lang.Override
+    public boolean getEnableCsr() {
+      return enableCsr_;
+    }
+
+    public static final int CSR_SHARES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object csrShares_ = "";
+    /**
+     * <pre>
+     * decimal to determine the transaction fee split between network operators (validators) and CSR
+     * </pre>
+     *
+     * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The csrShares.
+     */
+    @java.lang.Override
+    public java.lang.String getCsrShares() {
+      java.lang.Object ref = csrShares_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        csrShares_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * decimal to determine the transaction fee split between network operators (validators) and CSR
+     * </pre>
+     *
+     * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for csrShares.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCsrSharesBytes() {
+      java.lang.Object ref = csrShares_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        csrShares_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enableCsr_ != false) {
+        output.writeBool(1, enableCsr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csrShares_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, csrShares_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enableCsr_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableCsr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csrShares_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, csrShares_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.csr.v1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.canto.csr.v1.ParamsProto.Params other = (com.canto.csr.v1.ParamsProto.Params) obj;
+
+      if (getEnableCsr()
+          != other.getEnableCsr()) return false;
+      if (!getCsrShares()
+          .equals(other.getCsrShares())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_CSR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableCsr());
+      hash = (37 * hash) + CSR_SHARES_FIELD_NUMBER;
+      hash = (53 * hash) + getCsrShares().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.csr.v1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.csr.v1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.csr.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.csr.v1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the csr module
+     * </pre>
+     *
+     * Protobuf type {@code canto.csr.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.csr.v1.Params)
+        com.canto.csr.v1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.csr.v1.ParamsProto.internal_static_canto_csr_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.csr.v1.ParamsProto.internal_static_canto_csr_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.csr.v1.ParamsProto.Params.class, com.canto.csr.v1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.canto.csr.v1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        enableCsr_ = false;
+        csrShares_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.csr.v1.ParamsProto.internal_static_canto_csr_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.csr.v1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.canto.csr.v1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.csr.v1.ParamsProto.Params build() {
+        com.canto.csr.v1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.csr.v1.ParamsProto.Params buildPartial() {
+        com.canto.csr.v1.ParamsProto.Params result = new com.canto.csr.v1.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.csr.v1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enableCsr_ = enableCsr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.csrShares_ = csrShares_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.csr.v1.ParamsProto.Params) {
+          return mergeFrom((com.canto.csr.v1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.csr.v1.ParamsProto.Params other) {
+        if (other == com.canto.csr.v1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.getEnableCsr() != false) {
+          setEnableCsr(other.getEnableCsr());
+        }
+        if (!other.getCsrShares().isEmpty()) {
+          csrShares_ = other.csrShares_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enableCsr_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                csrShares_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableCsr_ ;
+      /**
+       * <pre>
+       * boolean to enable the csr module
+       * </pre>
+       *
+       * <code>bool enable_csr = 1 [json_name = "enableCsr"];</code>
+       * @return The enableCsr.
+       */
+      @java.lang.Override
+      public boolean getEnableCsr() {
+        return enableCsr_;
+      }
+      /**
+       * <pre>
+       * boolean to enable the csr module
+       * </pre>
+       *
+       * <code>bool enable_csr = 1 [json_name = "enableCsr"];</code>
+       * @param value The enableCsr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableCsr(boolean value) {
+
+        enableCsr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * boolean to enable the csr module
+       * </pre>
+       *
+       * <code>bool enable_csr = 1 [json_name = "enableCsr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableCsr() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enableCsr_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object csrShares_ = "";
+      /**
+       * <pre>
+       * decimal to determine the transaction fee split between network operators (validators) and CSR
+       * </pre>
+       *
+       * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The csrShares.
+       */
+      public java.lang.String getCsrShares() {
+        java.lang.Object ref = csrShares_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          csrShares_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * decimal to determine the transaction fee split between network operators (validators) and CSR
+       * </pre>
+       *
+       * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for csrShares.
+       */
+      public com.google.protobuf.ByteString
+          getCsrSharesBytes() {
+        java.lang.Object ref = csrShares_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          csrShares_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * decimal to determine the transaction fee split between network operators (validators) and CSR
+       * </pre>
+       *
+       * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The csrShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCsrShares(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        csrShares_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * decimal to determine the transaction fee split between network operators (validators) and CSR
+       * </pre>
+       *
+       * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCsrShares() {
+        csrShares_ = getDefaultInstance().getCsrShares();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * decimal to determine the transaction fee split between network operators (validators) and CSR
+       * </pre>
+       *
+       * <code>string csr_shares = 2 [json_name = "csrShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for csrShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCsrSharesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        csrShares_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.csr.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.csr.v1.Params)
+    private static final com.canto.csr.v1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.csr.v1.ParamsProto.Params();
+    }
+
+    public static com.canto.csr.v1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.csr.v1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_csr_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_csr_v1_Params_fieldAccessorTable;
 
@@ -32,11 +721,11 @@ public final class ParamsProto {
       "1\032\024gogoproto/gogo.proto\"v\n\006Params\022\035\n\nena" +
       "ble_csr\030\001 \001(\010R\tenableCsr\022M\n\ncsr_shares\030\002" +
       " \001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/cosmos-s" +
-      "dk/types.DecR\tcsrSharesB\240\001\n\020com.canto.cs" +
-      "r.v1B\013ParamsProtoP\001Z-github.com/Canto-Ne" +
-      "twork/Canto/v6/x/csr/types\242\002\003CCX\252\002\014Canto" +
-      ".Csr.V1\312\002\014Canto\\Csr\\V1\342\002\030Canto\\Csr\\V1\\GP" +
-      "BMetadata\352\002\016Canto::Csr::V1b\006proto3"
+      "dk/types.DecR\tcsrSharesB\236\001\n\020com.canto.cs" +
+      "r.v1B\013ParamsProtoZ-github.com/Canto-Netw" +
+      "ork/Canto/v6/x/csr/types\242\002\003CCX\252\002\014Canto.C" +
+      "sr.V1\312\002\014Canto\\Csr\\V1\342\002\030Canto\\Csr\\V1\\GPBM" +
+      "etadata\352\002\016Canto::Csr::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

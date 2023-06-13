@@ -14,114 +14,14223 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgCreateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+     * @return The amountIn.
+     */
+    java.lang.String getAmountIn();
+    /**
+     * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+     * @return The bytes for amountIn.
+     */
+    com.google.protobuf.ByteString
+        getAmountInBytes();
+
+    /**
+     * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+     * @return The amountOut.
+     */
+    java.lang.String getAmountOut();
+    /**
+     * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+     * @return The bytes for amountOut.
+     */
+    com.google.protobuf.ByteString
+        getAmountOutBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgCreateRequest}
+   */
+  public static final class MsgCreateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgCreateRequest)
+      MsgCreateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRequest.newBuilder() to construct.
+    private MsgCreateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRequest() {
+      from_ = "";
+      amountIn_ = "";
+      amountOut_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgCreateRequest.class, com.comdex.vault.v1beta1.TxProto.MsgCreateRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int AMOUNT_IN_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amountIn_ = "";
+    /**
+     * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+     * @return The amountIn.
+     */
+    @java.lang.Override
+    public java.lang.String getAmountIn() {
+      java.lang.Object ref = amountIn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amountIn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+     * @return The bytes for amountIn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountInBytes() {
+      java.lang.Object ref = amountIn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amountIn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_OUT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amountOut_ = "";
+    /**
+     * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+     * @return The amountOut.
+     */
+    @java.lang.Override
+    public java.lang.String getAmountOut() {
+      java.lang.Object ref = amountOut_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amountOut_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+     * @return The bytes for amountOut.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountOutBytes() {
+      java.lang.Object ref = amountOut_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amountOut_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountIn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, amountIn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountOut_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, amountOut_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountIn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, amountIn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountOut_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, amountOut_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgCreateRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgCreateRequest other = (com.comdex.vault.v1beta1.TxProto.MsgCreateRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (!getAmountIn()
+          .equals(other.getAmountIn())) return false;
+      if (!getAmountOut()
+          .equals(other.getAmountOut())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + AMOUNT_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getAmountIn().hashCode();
+      hash = (37 * hash) + AMOUNT_OUT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmountOut().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgCreateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgCreateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgCreateRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgCreateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgCreateRequest.class, com.comdex.vault.v1beta1.TxProto.MsgCreateRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgCreateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        amountIn_ = "";
+        amountOut_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgCreateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgCreateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgCreateRequest result = new com.comdex.vault.v1beta1.TxProto.MsgCreateRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgCreateRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.amountIn_ = amountIn_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.amountOut_ = amountOut_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgCreateRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgCreateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgCreateRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgCreateRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (!other.getAmountIn().isEmpty()) {
+          amountIn_ = other.amountIn_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getAmountOut().isEmpty()) {
+          amountOut_ = other.amountOut_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                amountIn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                amountOut_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amountIn_ = "";
+      /**
+       * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+       * @return The amountIn.
+       */
+      public java.lang.String getAmountIn() {
+        java.lang.Object ref = amountIn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amountIn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+       * @return The bytes for amountIn.
+       */
+      public com.google.protobuf.ByteString
+          getAmountInBytes() {
+        java.lang.Object ref = amountIn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amountIn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+       * @param value The amountIn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amountIn_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmountIn() {
+        amountIn_ = getDefaultInstance().getAmountIn();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount_in = 4 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;""];</code>
+       * @param value The bytes for amountIn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amountIn_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amountOut_ = "";
+      /**
+       * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+       * @return The amountOut.
+       */
+      public java.lang.String getAmountOut() {
+        java.lang.Object ref = amountOut_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amountOut_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+       * @return The bytes for amountOut.
+       */
+      public com.google.protobuf.ByteString
+          getAmountOutBytes() {
+        java.lang.Object ref = amountOut_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amountOut_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+       * @param value The amountOut to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountOut(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amountOut_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmountOut() {
+        amountOut_ = getDefaultInstance().getAmountOut();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount_out = 5 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;""];</code>
+       * @param value The bytes for amountOut to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountOutBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amountOut_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgCreateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgCreateRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgCreateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgCreateRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRequest>() {
+      @java.lang.Override
+      public MsgCreateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgCreateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgCreateResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgCreateResponse}
+   */
+  public static final class MsgCreateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgCreateResponse)
+      MsgCreateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateResponse.newBuilder() to construct.
+    private MsgCreateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgCreateResponse.class, com.comdex.vault.v1beta1.TxProto.MsgCreateResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgCreateResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgCreateResponse other = (com.comdex.vault.v1beta1.TxProto.MsgCreateResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgCreateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgCreateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgCreateResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgCreateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgCreateResponse.class, com.comdex.vault.v1beta1.TxProto.MsgCreateResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgCreateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgCreateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgCreateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgCreateResponse result = new com.comdex.vault.v1beta1.TxProto.MsgCreateResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgCreateResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgCreateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgCreateResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgCreateResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgCreateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgCreateResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgCreateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgCreateResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateResponse>() {
+      @java.lang.Override
+      public MsgCreateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgCreateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDepositRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgDepositRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    long getUserVaultId();
+
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgDepositRequest}
+   */
+  public static final class MsgDepositRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgDepositRequest)
+      MsgDepositRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDepositRequest.newBuilder() to construct.
+    private MsgDepositRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDepositRequest() {
+      from_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDepositRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgDepositRequest.class, com.comdex.vault.v1beta1.TxProto.MsgDepositRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int USER_VAULT_ID_FIELD_NUMBER = 4;
+    private long userVaultId_ = 0L;
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    @java.lang.Override
+    public long getUserVaultId() {
+      return userVaultId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        output.writeUInt64(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgDepositRequest other = (com.comdex.vault.v1beta1.TxProto.MsgDepositRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (getUserVaultId()
+          != other.getUserVaultId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + USER_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserVaultId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgDepositRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgDepositRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgDepositRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgDepositRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgDepositRequest.class, com.comdex.vault.v1beta1.TxProto.MsgDepositRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgDepositRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        userVaultId_ = 0L;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgDepositRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositRequest result = new com.comdex.vault.v1beta1.TxProto.MsgDepositRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgDepositRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.userVaultId_ = userVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgDepositRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgDepositRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgDepositRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (other.getUserVaultId() != 0L) {
+          setUserVaultId(other.getUserVaultId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                userVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long userVaultId_ ;
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return The userVaultId.
+       */
+      @java.lang.Override
+      public long getUserVaultId() {
+        return userVaultId_;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @param value The userVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserVaultId(long value) {
+
+        userVaultId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        userVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgDepositRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgDepositRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgDepositRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgDepositRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDepositRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDepositRequest>() {
+      @java.lang.Override
+      public MsgDepositRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDepositRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDepositRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgDepositRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDepositResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgDepositResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgDepositResponse}
+   */
+  public static final class MsgDepositResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgDepositResponse)
+      MsgDepositResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDepositResponse.newBuilder() to construct.
+    private MsgDepositResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDepositResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDepositResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgDepositResponse.class, com.comdex.vault.v1beta1.TxProto.MsgDepositResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgDepositResponse other = (com.comdex.vault.v1beta1.TxProto.MsgDepositResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgDepositResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgDepositResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgDepositResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgDepositResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgDepositResponse.class, com.comdex.vault.v1beta1.TxProto.MsgDepositResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgDepositResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgDepositResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositResponse result = new com.comdex.vault.v1beta1.TxProto.MsgDepositResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgDepositResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgDepositResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgDepositResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgDepositResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgDepositResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgDepositResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgDepositResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDepositResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDepositResponse>() {
+      @java.lang.Override
+      public MsgDepositResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDepositResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDepositResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgDepositResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWithdrawRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgWithdrawRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    long getUserVaultId();
+
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgWithdrawRequest}
+   */
+  public static final class MsgWithdrawRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgWithdrawRequest)
+      MsgWithdrawRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWithdrawRequest.newBuilder() to construct.
+    private MsgWithdrawRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWithdrawRequest() {
+      from_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWithdrawRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest.class, com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int USER_VAULT_ID_FIELD_NUMBER = 4;
+    private long userVaultId_ = 0L;
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    @java.lang.Override
+    public long getUserVaultId() {
+      return userVaultId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        output.writeUInt64(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest other = (com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (getUserVaultId()
+          != other.getUserVaultId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + USER_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserVaultId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgWithdrawRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgWithdrawRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest.class, com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        userVaultId_ = 0L;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest result = new com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.userVaultId_ = userVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (other.getUserVaultId() != 0L) {
+          setUserVaultId(other.getUserVaultId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                userVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long userVaultId_ ;
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return The userVaultId.
+       */
+      @java.lang.Override
+      public long getUserVaultId() {
+        return userVaultId_;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @param value The userVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserVaultId(long value) {
+
+        userVaultId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        userVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgWithdrawRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgWithdrawRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWithdrawRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWithdrawRequest>() {
+      @java.lang.Override
+      public MsgWithdrawRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWithdrawRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWithdrawRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgWithdrawRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWithdrawResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgWithdrawResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgWithdrawResponse}
+   */
+  public static final class MsgWithdrawResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgWithdrawResponse)
+      MsgWithdrawResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWithdrawResponse.newBuilder() to construct.
+    private MsgWithdrawResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWithdrawResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWithdrawResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse.class, com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse other = (com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgWithdrawResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgWithdrawResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse.class, com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse result = new com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgWithdrawResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgWithdrawResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWithdrawResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWithdrawResponse>() {
+      @java.lang.Override
+      public MsgWithdrawResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWithdrawResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWithdrawResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgWithdrawResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDrawRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgDrawRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    long getUserVaultId();
+
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgDrawRequest}
+   */
+  public static final class MsgDrawRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgDrawRequest)
+      MsgDrawRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDrawRequest.newBuilder() to construct.
+    private MsgDrawRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDrawRequest() {
+      from_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDrawRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgDrawRequest.class, com.comdex.vault.v1beta1.TxProto.MsgDrawRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int USER_VAULT_ID_FIELD_NUMBER = 4;
+    private long userVaultId_ = 0L;
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    @java.lang.Override
+    public long getUserVaultId() {
+      return userVaultId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        output.writeUInt64(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgDrawRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgDrawRequest other = (com.comdex.vault.v1beta1.TxProto.MsgDrawRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (getUserVaultId()
+          != other.getUserVaultId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + USER_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserVaultId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgDrawRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgDrawRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgDrawRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgDrawRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgDrawRequest.class, com.comdex.vault.v1beta1.TxProto.MsgDrawRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgDrawRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        userVaultId_ = 0L;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDrawRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgDrawRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDrawRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgDrawRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDrawRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgDrawRequest result = new com.comdex.vault.v1beta1.TxProto.MsgDrawRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgDrawRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.userVaultId_ = userVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgDrawRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgDrawRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgDrawRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgDrawRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (other.getUserVaultId() != 0L) {
+          setUserVaultId(other.getUserVaultId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                userVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long userVaultId_ ;
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return The userVaultId.
+       */
+      @java.lang.Override
+      public long getUserVaultId() {
+        return userVaultId_;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @param value The userVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserVaultId(long value) {
+
+        userVaultId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        userVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgDrawRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgDrawRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgDrawRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgDrawRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDrawRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDrawRequest>() {
+      @java.lang.Override
+      public MsgDrawRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDrawRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDrawRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgDrawRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDrawResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgDrawResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgDrawResponse}
+   */
+  public static final class MsgDrawResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgDrawResponse)
+      MsgDrawResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDrawResponse.newBuilder() to construct.
+    private MsgDrawResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDrawResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDrawResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgDrawResponse.class, com.comdex.vault.v1beta1.TxProto.MsgDrawResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgDrawResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgDrawResponse other = (com.comdex.vault.v1beta1.TxProto.MsgDrawResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgDrawResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgDrawResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgDrawResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgDrawResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgDrawResponse.class, com.comdex.vault.v1beta1.TxProto.MsgDrawResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgDrawResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDrawResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDrawResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgDrawResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDrawResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgDrawResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDrawResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgDrawResponse result = new com.comdex.vault.v1beta1.TxProto.MsgDrawResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgDrawResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgDrawResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgDrawResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgDrawResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgDrawResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgDrawResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgDrawResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgDrawResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDrawResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDrawResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDrawResponse>() {
+      @java.lang.Override
+      public MsgDrawResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDrawResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDrawResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgDrawResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRepayRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgRepayRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    long getUserVaultId();
+
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgRepayRequest}
+   */
+  public static final class MsgRepayRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgRepayRequest)
+      MsgRepayRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRepayRequest.newBuilder() to construct.
+    private MsgRepayRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRepayRequest() {
+      from_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRepayRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgRepayRequest.class, com.comdex.vault.v1beta1.TxProto.MsgRepayRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int USER_VAULT_ID_FIELD_NUMBER = 4;
+    private long userVaultId_ = 0L;
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    @java.lang.Override
+    public long getUserVaultId() {
+      return userVaultId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        output.writeUInt64(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgRepayRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgRepayRequest other = (com.comdex.vault.v1beta1.TxProto.MsgRepayRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (getUserVaultId()
+          != other.getUserVaultId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + USER_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserVaultId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgRepayRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgRepayRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgRepayRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgRepayRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgRepayRequest.class, com.comdex.vault.v1beta1.TxProto.MsgRepayRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgRepayRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        userVaultId_ = 0L;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgRepayRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgRepayRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgRepayRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgRepayRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgRepayRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgRepayRequest result = new com.comdex.vault.v1beta1.TxProto.MsgRepayRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgRepayRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.userVaultId_ = userVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgRepayRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgRepayRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgRepayRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgRepayRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (other.getUserVaultId() != 0L) {
+          setUserVaultId(other.getUserVaultId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                userVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long userVaultId_ ;
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return The userVaultId.
+       */
+      @java.lang.Override
+      public long getUserVaultId() {
+        return userVaultId_;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @param value The userVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserVaultId(long value) {
+
+        userVaultId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        userVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgRepayRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgRepayRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgRepayRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgRepayRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRepayRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRepayRequest>() {
+      @java.lang.Override
+      public MsgRepayRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRepayRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRepayRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgRepayRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRepayResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgRepayResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgRepayResponse}
+   */
+  public static final class MsgRepayResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgRepayResponse)
+      MsgRepayResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRepayResponse.newBuilder() to construct.
+    private MsgRepayResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRepayResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRepayResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgRepayResponse.class, com.comdex.vault.v1beta1.TxProto.MsgRepayResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgRepayResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgRepayResponse other = (com.comdex.vault.v1beta1.TxProto.MsgRepayResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgRepayResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgRepayResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgRepayResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgRepayResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgRepayResponse.class, com.comdex.vault.v1beta1.TxProto.MsgRepayResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgRepayResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgRepayResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgRepayResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgRepayResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgRepayResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgRepayResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgRepayResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgRepayResponse result = new com.comdex.vault.v1beta1.TxProto.MsgRepayResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgRepayResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgRepayResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgRepayResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgRepayResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgRepayResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgRepayResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgRepayResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgRepayResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgRepayResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRepayResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRepayResponse>() {
+      @java.lang.Override
+      public MsgRepayResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRepayResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRepayResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgRepayResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCloseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgCloseRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    long getUserVaultId();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgCloseRequest}
+   */
+  public static final class MsgCloseRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgCloseRequest)
+      MsgCloseRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCloseRequest.newBuilder() to construct.
+    private MsgCloseRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCloseRequest() {
+      from_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCloseRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgCloseRequest.class, com.comdex.vault.v1beta1.TxProto.MsgCloseRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int USER_VAULT_ID_FIELD_NUMBER = 4;
+    private long userVaultId_ = 0L;
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    @java.lang.Override
+    public long getUserVaultId() {
+      return userVaultId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        output.writeUInt64(4, userVaultId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, userVaultId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgCloseRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgCloseRequest other = (com.comdex.vault.v1beta1.TxProto.MsgCloseRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (getUserVaultId()
+          != other.getUserVaultId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + USER_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserVaultId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgCloseRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgCloseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgCloseRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgCloseRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgCloseRequest.class, com.comdex.vault.v1beta1.TxProto.MsgCloseRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgCloseRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        userVaultId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCloseRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgCloseRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCloseRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgCloseRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCloseRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgCloseRequest result = new com.comdex.vault.v1beta1.TxProto.MsgCloseRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgCloseRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.userVaultId_ = userVaultId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgCloseRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgCloseRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgCloseRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgCloseRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (other.getUserVaultId() != 0L) {
+          setUserVaultId(other.getUserVaultId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                userVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long userVaultId_ ;
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return The userVaultId.
+       */
+      @java.lang.Override
+      public long getUserVaultId() {
+        return userVaultId_;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @param value The userVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserVaultId(long value) {
+
+        userVaultId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        userVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgCloseRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgCloseRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgCloseRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgCloseRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCloseRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCloseRequest>() {
+      @java.lang.Override
+      public MsgCloseRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCloseRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCloseRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgCloseRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCloseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgCloseResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgCloseResponse}
+   */
+  public static final class MsgCloseResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgCloseResponse)
+      MsgCloseResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCloseResponse.newBuilder() to construct.
+    private MsgCloseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCloseResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCloseResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgCloseResponse.class, com.comdex.vault.v1beta1.TxProto.MsgCloseResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgCloseResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgCloseResponse other = (com.comdex.vault.v1beta1.TxProto.MsgCloseResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgCloseResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgCloseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgCloseResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgCloseResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgCloseResponse.class, com.comdex.vault.v1beta1.TxProto.MsgCloseResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgCloseResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCloseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCloseResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgCloseResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCloseResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgCloseResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCloseResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgCloseResponse result = new com.comdex.vault.v1beta1.TxProto.MsgCloseResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgCloseResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgCloseResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgCloseResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgCloseResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgCloseResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgCloseResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgCloseResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgCloseResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCloseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCloseResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCloseResponse>() {
+      @java.lang.Override
+      public MsgCloseResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCloseResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCloseResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgCloseResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDepositAndDrawRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgDepositAndDrawRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    long getUserVaultId();
+
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgDepositAndDrawRequest}
+   */
+  public static final class MsgDepositAndDrawRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgDepositAndDrawRequest)
+      MsgDepositAndDrawRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDepositAndDrawRequest.newBuilder() to construct.
+    private MsgDepositAndDrawRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDepositAndDrawRequest() {
+      from_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDepositAndDrawRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest.class, com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int USER_VAULT_ID_FIELD_NUMBER = 4;
+    private long userVaultId_ = 0L;
+    /**
+     * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    @java.lang.Override
+    public long getUserVaultId() {
+      return userVaultId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        output.writeUInt64(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (userVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, userVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest other = (com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (getUserVaultId()
+          != other.getUserVaultId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + USER_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserVaultId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgDepositAndDrawRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgDepositAndDrawRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest.class, com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        userVaultId_ = 0L;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest result = new com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.userVaultId_ = userVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (other.getUserVaultId() != 0L) {
+          setUserVaultId(other.getUserVaultId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                userVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long userVaultId_ ;
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return The userVaultId.
+       */
+      @java.lang.Override
+      public long getUserVaultId() {
+        return userVaultId_;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @param value The userVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserVaultId(long value) {
+
+        userVaultId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 user_vault_id = 4 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        userVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 5 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgDepositAndDrawRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgDepositAndDrawRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDepositAndDrawRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDepositAndDrawRequest>() {
+      @java.lang.Override
+      public MsgDepositAndDrawRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDepositAndDrawRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDepositAndDrawRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDepositAndDrawResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgDepositAndDrawResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgDepositAndDrawResponse}
+   */
+  public static final class MsgDepositAndDrawResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgDepositAndDrawResponse)
+      MsgDepositAndDrawResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDepositAndDrawResponse.newBuilder() to construct.
+    private MsgDepositAndDrawResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDepositAndDrawResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDepositAndDrawResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse.class, com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse other = (com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgDepositAndDrawResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgDepositAndDrawResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse.class, com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositAndDrawResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse result = new com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgDepositAndDrawResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgDepositAndDrawResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDepositAndDrawResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDepositAndDrawResponse>() {
+      @java.lang.Override
+      public MsgDepositAndDrawResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDepositAndDrawResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDepositAndDrawResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgDepositAndDrawResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateStableMintRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgCreateStableMintRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgCreateStableMintRequest}
+   */
+  public static final class MsgCreateStableMintRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgCreateStableMintRequest)
+      MsgCreateStableMintRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateStableMintRequest.newBuilder() to construct.
+    private MsgCreateStableMintRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateStableMintRequest() {
+      from_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateStableMintRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest.class, com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest other = (com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgCreateStableMintRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgCreateStableMintRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest.class, com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest result = new com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"Amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgCreateStableMintRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgCreateStableMintRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateStableMintRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateStableMintRequest>() {
+      @java.lang.Override
+      public MsgCreateStableMintRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateStableMintRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateStableMintRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateStableMintResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgCreateStableMintResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgCreateStableMintResponse}
+   */
+  public static final class MsgCreateStableMintResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgCreateStableMintResponse)
+      MsgCreateStableMintResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateStableMintResponse.newBuilder() to construct.
+    private MsgCreateStableMintResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateStableMintResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateStableMintResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse.class, com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse other = (com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgCreateStableMintResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgCreateStableMintResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse.class, com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgCreateStableMintResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse result = new com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgCreateStableMintResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgCreateStableMintResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateStableMintResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateStableMintResponse>() {
+      @java.lang.Override
+      public MsgCreateStableMintResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateStableMintResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateStableMintResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgCreateStableMintResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDepositStableMintRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgDepositStableMintRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+     * @return The stableVaultId.
+     */
+    long getStableVaultId();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgDepositStableMintRequest}
+   */
+  public static final class MsgDepositStableMintRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgDepositStableMintRequest)
+      MsgDepositStableMintRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDepositStableMintRequest.newBuilder() to construct.
+    private MsgDepositStableMintRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDepositStableMintRequest() {
+      from_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDepositStableMintRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest.class, com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STABLE_VAULT_ID_FIELD_NUMBER = 5;
+    private long stableVaultId_ = 0L;
+    /**
+     * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+     * @return The stableVaultId.
+     */
+    @java.lang.Override
+    public long getStableVaultId() {
+      return stableVaultId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, amount_);
+      }
+      if (stableVaultId_ != 0L) {
+        output.writeUInt64(5, stableVaultId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, amount_);
+      }
+      if (stableVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, stableVaultId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest other = (com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (getStableVaultId()
+          != other.getStableVaultId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + STABLE_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStableVaultId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgDepositStableMintRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgDepositStableMintRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest.class, com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        amount_ = "";
+        stableVaultId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest result = new com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.stableVaultId_ = stableVaultId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getStableVaultId() != 0L) {
+          setStableVaultId(other.getStableVaultId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                stableVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long stableVaultId_ ;
+      /**
+       * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+       * @return The stableVaultId.
+       */
+      @java.lang.Override
+      public long getStableVaultId() {
+        return stableVaultId_;
+      }
+      /**
+       * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+       * @param value The stableVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStableVaultId(long value) {
+
+        stableVaultId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStableVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        stableVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgDepositStableMintRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgDepositStableMintRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDepositStableMintRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDepositStableMintRequest>() {
+      @java.lang.Override
+      public MsgDepositStableMintRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDepositStableMintRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDepositStableMintRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDepositStableMintResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgDepositStableMintResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgDepositStableMintResponse}
+   */
+  public static final class MsgDepositStableMintResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgDepositStableMintResponse)
+      MsgDepositStableMintResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDepositStableMintResponse.newBuilder() to construct.
+    private MsgDepositStableMintResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDepositStableMintResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDepositStableMintResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse.class, com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse other = (com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgDepositStableMintResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgDepositStableMintResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse.class, com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgDepositStableMintResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse result = new com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgDepositStableMintResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgDepositStableMintResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDepositStableMintResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDepositStableMintResponse>() {
+      @java.lang.Override
+      public MsgDepositStableMintResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDepositStableMintResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDepositStableMintResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgDepositStableMintResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWithdrawStableMintRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgWithdrawStableMintRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    long getExtendedPairVaultId();
+
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+     * @return The stableVaultId.
+     */
+    long getStableVaultId();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgWithdrawStableMintRequest}
+   */
+  public static final class MsgWithdrawStableMintRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgWithdrawStableMintRequest)
+      MsgWithdrawStableMintRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWithdrawStableMintRequest.newBuilder() to construct.
+    private MsgWithdrawStableMintRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWithdrawStableMintRequest() {
+      from_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWithdrawStableMintRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest.class, com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER = 3;
+    private long extendedPairVaultId_ = 0L;
+    /**
+     * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+     * @return The extendedPairVaultId.
+     */
+    @java.lang.Override
+    public long getExtendedPairVaultId() {
+      return extendedPairVaultId_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STABLE_VAULT_ID_FIELD_NUMBER = 5;
+    private long stableVaultId_ = 0L;
+    /**
+     * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+     * @return The stableVaultId.
+     */
+    @java.lang.Override
+    public long getStableVaultId() {
+      return stableVaultId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        output.writeUInt64(3, extendedPairVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, amount_);
+      }
+      if (stableVaultId_ != 0L) {
+        output.writeUInt64(5, stableVaultId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (extendedPairVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, extendedPairVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, amount_);
+      }
+      if (stableVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, stableVaultId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest other = (com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getExtendedPairVaultId()
+          != other.getExtendedPairVaultId()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (getStableVaultId()
+          != other.getStableVaultId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + EXTENDED_PAIR_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExtendedPairVaultId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + STABLE_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStableVaultId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgWithdrawStableMintRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgWithdrawStableMintRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest.class, com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        extendedPairVaultId_ = 0L;
+        amount_ = "";
+        stableVaultId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest result = new com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extendedPairVaultId_ = extendedPairVaultId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.stableVaultId_ = stableVaultId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getExtendedPairVaultId() != 0L) {
+          setExtendedPairVaultId(other.getExtendedPairVaultId());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getStableVaultId() != 0L) {
+          setStableVaultId(other.getStableVaultId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                extendedPairVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                stableVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long extendedPairVaultId_ ;
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return The extendedPairVaultId.
+       */
+      @java.lang.Override
+      public long getExtendedPairVaultId() {
+        return extendedPairVaultId_;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @param value The extendedPairVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtendedPairVaultId(long value) {
+
+        extendedPairVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 extended_pair_vault_id = 3 [json_name = "extendedPairVaultId", (.gogoproto.moretags) = "yaml:&#92;"extended_pair_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtendedPairVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extendedPairVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long stableVaultId_ ;
+      /**
+       * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+       * @return The stableVaultId.
+       */
+      @java.lang.Override
+      public long getStableVaultId() {
+        return stableVaultId_;
+      }
+      /**
+       * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+       * @param value The stableVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStableVaultId(long value) {
+
+        stableVaultId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 stable_vault_id = 5 [json_name = "stableVaultId", (.gogoproto.moretags) = "yaml:&#92;"stable_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStableVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        stableVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgWithdrawStableMintRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgWithdrawStableMintRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWithdrawStableMintRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWithdrawStableMintRequest>() {
+      @java.lang.Override
+      public MsgWithdrawStableMintRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWithdrawStableMintRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWithdrawStableMintRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWithdrawStableMintResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgWithdrawStableMintResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgWithdrawStableMintResponse}
+   */
+  public static final class MsgWithdrawStableMintResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgWithdrawStableMintResponse)
+      MsgWithdrawStableMintResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWithdrawStableMintResponse.newBuilder() to construct.
+    private MsgWithdrawStableMintResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWithdrawStableMintResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWithdrawStableMintResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse.class, com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse other = (com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgWithdrawStableMintResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgWithdrawStableMintResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse.class, com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse result = new com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgWithdrawStableMintResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgWithdrawStableMintResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWithdrawStableMintResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWithdrawStableMintResponse>() {
+      @java.lang.Override
+      public MsgWithdrawStableMintResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWithdrawStableMintResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWithdrawStableMintResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgWithdrawStableMintResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgVaultInterestCalcRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgVaultInterestCalcRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 user_vault_id = 3 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    long getUserVaultId();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgVaultInterestCalcRequest}
+   */
+  public static final class MsgVaultInterestCalcRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgVaultInterestCalcRequest)
+      MsgVaultInterestCalcRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgVaultInterestCalcRequest.newBuilder() to construct.
+    private MsgVaultInterestCalcRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgVaultInterestCalcRequest() {
+      from_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgVaultInterestCalcRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest.class, com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int USER_VAULT_ID_FIELD_NUMBER = 3;
+    private long userVaultId_ = 0L;
+    /**
+     * <code>uint64 user_vault_id = 3 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+     * @return The userVaultId.
+     */
+    @java.lang.Override
+    public long getUserVaultId() {
+      return userVaultId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (userVaultId_ != 0L) {
+        output.writeUInt64(3, userVaultId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (userVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, userVaultId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest other = (com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getUserVaultId()
+          != other.getUserVaultId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + USER_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserVaultId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgVaultInterestCalcRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgVaultInterestCalcRequest)
+        com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest.class, com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        userVaultId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest build() {
+        com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest result = new com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.userVaultId_ = userVaultId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getUserVaultId() != 0L) {
+          setUserVaultId(other.getUserVaultId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                userVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long userVaultId_ ;
+      /**
+       * <code>uint64 user_vault_id = 3 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return The userVaultId.
+       */
+      @java.lang.Override
+      public long getUserVaultId() {
+        return userVaultId_;
+      }
+      /**
+       * <code>uint64 user_vault_id = 3 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @param value The userVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserVaultId(long value) {
+
+        userVaultId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 user_vault_id = 3 [json_name = "userVaultId", (.gogoproto.moretags) = "yaml:&#92;"user_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserVaultId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        userVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgVaultInterestCalcRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgVaultInterestCalcRequest)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgVaultInterestCalcRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgVaultInterestCalcRequest>() {
+      @java.lang.Override
+      public MsgVaultInterestCalcRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgVaultInterestCalcRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgVaultInterestCalcRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgVaultInterestCalcResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.MsgVaultInterestCalcResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.MsgVaultInterestCalcResponse}
+   */
+  public static final class MsgVaultInterestCalcResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.MsgVaultInterestCalcResponse)
+      MsgVaultInterestCalcResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgVaultInterestCalcResponse.newBuilder() to construct.
+    private MsgVaultInterestCalcResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgVaultInterestCalcResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgVaultInterestCalcResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse.class, com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse other = (com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.MsgVaultInterestCalcResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.MsgVaultInterestCalcResponse)
+        com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse.class, com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.TxProto.internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse build() {
+        com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse buildPartial() {
+        com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse result = new com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse) {
+          return mergeFrom((com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse other) {
+        if (other == com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.MsgVaultInterestCalcResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.MsgVaultInterestCalcResponse)
+    private static final com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse();
+    }
+
+    public static com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgVaultInterestCalcResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgVaultInterestCalcResponse>() {
+      @java.lang.Override
+      public MsgVaultInterestCalcResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgVaultInterestCalcResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgVaultInterestCalcResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.TxProto.MsgVaultInterestCalcResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgCreateRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgCreateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgCreateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgCreateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgDepositRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgDepositRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgDepositResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgDepositResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgWithdrawRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgWithdrawRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgWithdrawResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgWithdrawResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgDrawRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgDrawRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgDrawResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgDrawResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgRepayRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgRepayRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgRepayResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgRepayResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgCloseRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgCloseRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgCloseResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgCloseResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgDepositAndDrawRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgDepositAndDrawRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgDepositAndDrawResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgDepositAndDrawResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgCreateStableMintRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgCreateStableMintRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgCreateStableMintResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgCreateStableMintResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgDepositStableMintRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgDepositStableMintRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgDepositStableMintResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgDepositStableMintResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgWithdrawStableMintResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_MsgVaultInterestCalcResponse_fieldAccessorTable;
 
@@ -259,12 +14368,12 @@ public final class TxProto {
       "ableMintResponse\022}\n\024MsgVaultInterestCalc" +
       "\0221.comdex.vault.v1beta1.MsgVaultInterest" +
       "CalcRequest\0322.comdex.vault.v1beta1.MsgVa" +
-      "ultInterestCalcResponseB\316\001\n\030com.comdex.v" +
-      "ault.v1beta1B\007TxProtoP\001Z/github.com/comd" +
-      "ex-official/comdex/x/vault/types\242\002\003CVX\252\002" +
-      "\024Comdex.Vault.V1beta1\312\002\024Comdex\\Vault\\V1b" +
-      "eta1\342\002 Comdex\\Vault\\V1beta1\\GPBMetadata\352" +
-      "\002\026Comdex::Vault::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "ultInterestCalcResponseB\314\001\n\030com.comdex.v" +
+      "ault.v1beta1B\007TxProtoZ/github.com/comdex" +
+      "-official/comdex/x/vault/types\242\002\003CVX\252\002\024C" +
+      "omdex.Vault.V1beta1\312\002\024Comdex\\Vault\\V1bet" +
+      "a1\342\002 Comdex\\Vault\\V1beta1\\GPBMetadata\352\002\026" +
+      "Comdex::Vault::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

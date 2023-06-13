@@ -14,9 +14,486 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventAddPairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.EventAddPair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.EventAddPair}
+   */
+  public static final class EventAddPair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.EventAddPair)
+      EventAddPairOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventAddPair.newBuilder() to construct.
+    private EventAddPair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventAddPair() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventAddPair();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.EventsProto.internal_static_comdex_asset_v1beta1_EventAddPair_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.EventsProto.internal_static_comdex_asset_v1beta1_EventAddPair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.EventsProto.EventAddPair.class, com.comdex.asset.v1beta1.EventsProto.EventAddPair.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.EventsProto.EventAddPair)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.EventsProto.EventAddPair other = (com.comdex.asset.v1beta1.EventsProto.EventAddPair) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.EventsProto.EventAddPair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.EventAddPair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.EventAddPair)
+        com.comdex.asset.v1beta1.EventsProto.EventAddPairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.EventsProto.internal_static_comdex_asset_v1beta1_EventAddPair_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.EventsProto.internal_static_comdex_asset_v1beta1_EventAddPair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.EventsProto.EventAddPair.class, com.comdex.asset.v1beta1.EventsProto.EventAddPair.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.EventsProto.EventAddPair.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.EventsProto.internal_static_comdex_asset_v1beta1_EventAddPair_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.EventsProto.EventAddPair getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.EventsProto.EventAddPair.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.EventsProto.EventAddPair build() {
+        com.comdex.asset.v1beta1.EventsProto.EventAddPair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.EventsProto.EventAddPair buildPartial() {
+        com.comdex.asset.v1beta1.EventsProto.EventAddPair result = new com.comdex.asset.v1beta1.EventsProto.EventAddPair(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.EventsProto.EventAddPair result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.EventsProto.EventAddPair) {
+          return mergeFrom((com.comdex.asset.v1beta1.EventsProto.EventAddPair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.EventsProto.EventAddPair other) {
+        if (other == com.comdex.asset.v1beta1.EventsProto.EventAddPair.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.EventAddPair)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.EventAddPair)
+    private static final com.comdex.asset.v1beta1.EventsProto.EventAddPair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.EventsProto.EventAddPair();
+    }
+
+    public static com.comdex.asset.v1beta1.EventsProto.EventAddPair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventAddPair>
+        PARSER = new com.google.protobuf.AbstractParser<EventAddPair>() {
+      @java.lang.Override
+      public EventAddPair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventAddPair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventAddPair> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.EventsProto.EventAddPair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_EventAddPair_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_EventAddPair_fieldAccessorTable;
 
@@ -30,12 +507,12 @@ public final class EventsProto {
     java.lang.String[] descriptorData = {
       "\n!comdex/asset/v1beta1/events.proto\022\024com" +
       "dex.asset.v1beta1\"\036\n\014EventAddPair\022\016\n\002id\030" +
-      "\001 \001(\004R\002idB\312\001\n\030com.comdex.asset.v1beta1B\013" +
-      "EventsProtoP\001Z/github.com/comdex-officia" +
-      "l/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.As" +
-      "set.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Com" +
-      "dex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::" +
-      "Asset::V1beta1b\006proto3"
+      "\001 \001(\004R\002idB\310\001\n\030com.comdex.asset.v1beta1B\013" +
+      "EventsProtoZ/github.com/comdex-official/" +
+      "comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asse" +
+      "t.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comde" +
+      "x\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::As" +
+      "set::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

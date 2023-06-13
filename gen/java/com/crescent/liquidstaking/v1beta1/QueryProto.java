@@ -14,44 +14,4433 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest other = (com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.QueryParamsRequest)
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest result = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.QueryParamsRequest)
+    private static final com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getParams();
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params params_;
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getParams() {
+      return params_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse other = (com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.QueryParamsResponse)
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse result = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.QueryParamsResponse)
+    private static final com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLiquidValidatorsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryLiquidValidatorsRequest is the request type for the Query/LiquidValidators RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest}
+   */
+  public static final class QueryLiquidValidatorsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest)
+      QueryLiquidValidatorsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLiquidValidatorsRequest.newBuilder() to construct.
+    private QueryLiquidValidatorsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLiquidValidatorsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLiquidValidatorsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest other = (com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLiquidValidatorsRequest is the request type for the Query/LiquidValidators RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest)
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest build() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest buildPartial() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest result = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest other) {
+        if (other == com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest)
+    private static final com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLiquidValidatorsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLiquidValidatorsRequest>() {
+      @java.lang.Override
+      public QueryLiquidValidatorsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLiquidValidatorsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLiquidValidatorsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLiquidValidatorsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState> 
+        getLiquidValidatorsList();
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState getLiquidValidators(int index);
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    int getLiquidValidatorsCount();
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> 
+        getLiquidValidatorsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder getLiquidValidatorsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryLiquidValidatorsResponse is the response type for the Query/LiquidValidators RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryLiquidValidatorsResponse}
+   */
+  public static final class QueryLiquidValidatorsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsResponse)
+      QueryLiquidValidatorsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLiquidValidatorsResponse.newBuilder() to construct.
+    private QueryLiquidValidatorsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLiquidValidatorsResponse() {
+      liquidValidators_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLiquidValidatorsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse.Builder.class);
+    }
+
+    public static final int LIQUID_VALIDATORS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState> liquidValidators_;
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState> getLiquidValidatorsList() {
+      return liquidValidators_;
+    }
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> 
+        getLiquidValidatorsOrBuilderList() {
+      return liquidValidators_;
+    }
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getLiquidValidatorsCount() {
+      return liquidValidators_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState getLiquidValidators(int index) {
+      return liquidValidators_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder getLiquidValidatorsOrBuilder(
+        int index) {
+      return liquidValidators_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < liquidValidators_.size(); i++) {
+        output.writeMessage(1, liquidValidators_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < liquidValidators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, liquidValidators_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse other = (com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse) obj;
+
+      if (!getLiquidValidatorsList()
+          .equals(other.getLiquidValidatorsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLiquidValidatorsCount() > 0) {
+        hash = (37 * hash) + LIQUID_VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getLiquidValidatorsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLiquidValidatorsResponse is the response type for the Query/LiquidValidators RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryLiquidValidatorsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsResponse)
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidators_ = java.util.Collections.emptyList();
+        } else {
+          liquidValidators_ = null;
+          liquidValidatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse build() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse buildPartial() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse result = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse result) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            liquidValidators_ = java.util.Collections.unmodifiableList(liquidValidators_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.liquidValidators_ = liquidValidators_;
+        } else {
+          result.liquidValidators_ = liquidValidatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse other) {
+        if (other == com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse.getDefaultInstance()) return this;
+        if (liquidValidatorsBuilder_ == null) {
+          if (!other.liquidValidators_.isEmpty()) {
+            if (liquidValidators_.isEmpty()) {
+              liquidValidators_ = other.liquidValidators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLiquidValidatorsIsMutable();
+              liquidValidators_.addAll(other.liquidValidators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.liquidValidators_.isEmpty()) {
+            if (liquidValidatorsBuilder_.isEmpty()) {
+              liquidValidatorsBuilder_.dispose();
+              liquidValidatorsBuilder_ = null;
+              liquidValidators_ = other.liquidValidators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              liquidValidatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLiquidValidatorsFieldBuilder() : null;
+            } else {
+              liquidValidatorsBuilder_.addAllMessages(other.liquidValidators_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState m =
+                    input.readMessage(
+                        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.parser(),
+                        extensionRegistry);
+                if (liquidValidatorsBuilder_ == null) {
+                  ensureLiquidValidatorsIsMutable();
+                  liquidValidators_.add(m);
+                } else {
+                  liquidValidatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState> liquidValidators_ =
+        java.util.Collections.emptyList();
+      private void ensureLiquidValidatorsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          liquidValidators_ = new java.util.ArrayList<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState>(liquidValidators_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> liquidValidatorsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState> getLiquidValidatorsList() {
+        if (liquidValidatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(liquidValidators_);
+        } else {
+          return liquidValidatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public int getLiquidValidatorsCount() {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.size();
+        } else {
+          return liquidValidatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState getLiquidValidators(int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.get(index);
+        } else {
+          return liquidValidatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.set(index, value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidValidators(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(index, value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidValidators(
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllLiquidValidators(
+          java.lang.Iterable<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState> values) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, liquidValidators_);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLiquidValidators() {
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeLiquidValidators(int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.remove(index);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder getLiquidValidatorsBuilder(
+          int index) {
+        return getLiquidValidatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder getLiquidValidatorsOrBuilder(
+          int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.get(index);  } else {
+          return liquidValidatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> 
+           getLiquidValidatorsOrBuilderList() {
+        if (liquidValidatorsBuilder_ != null) {
+          return liquidValidatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(liquidValidators_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder addLiquidValidatorsBuilder() {
+        return getLiquidValidatorsFieldBuilder().addBuilder(
+            com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder addLiquidValidatorsBuilder(
+          int index) {
+        return getLiquidValidatorsFieldBuilder().addBuilder(
+            index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder> 
+           getLiquidValidatorsBuilderList() {
+        return getLiquidValidatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> 
+          getLiquidValidatorsFieldBuilder() {
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder>(
+                  liquidValidators_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          liquidValidators_ = null;
+        }
+        return liquidValidatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.QueryLiquidValidatorsResponse)
+    private static final com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLiquidValidatorsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLiquidValidatorsResponse>() {
+      @java.lang.Override
+      public QueryLiquidValidatorsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLiquidValidatorsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLiquidValidatorsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.QueryProto.QueryLiquidValidatorsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStatesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.QueryStatesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryStatesRequest is the request type for the Query/States RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryStatesRequest}
+   */
+  public static final class QueryStatesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.QueryStatesRequest)
+      QueryStatesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStatesRequest.newBuilder() to construct.
+    private QueryStatesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStatesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStatesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest other = (com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStatesRequest is the request type for the Query/States RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryStatesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.QueryStatesRequest)
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest build() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest buildPartial() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest result = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest other) {
+        if (other == com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.QueryStatesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.QueryStatesRequest)
+    private static final com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStatesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStatesRequest>() {
+      @java.lang.Override
+      public QueryStatesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStatesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStatesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStatesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.QueryStatesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the netAmountState field is set.
+     */
+    boolean hasNetAmountState();
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     * @return The netAmountState.
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState getNetAmountState();
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder getNetAmountStateOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryStatesResponse is the response type for the Query/States RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryStatesResponse}
+   */
+  public static final class QueryStatesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.QueryStatesResponse)
+      QueryStatesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStatesResponse.newBuilder() to construct.
+    private QueryStatesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStatesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStatesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.Builder.class);
+    }
+
+    public static final int NET_AMOUNT_STATE_FIELD_NUMBER = 1;
+    private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState netAmountState_;
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the netAmountState field is set.
+     */
+    @java.lang.Override
+    public boolean hasNetAmountState() {
+      return netAmountState_ != null;
+    }
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     * @return The netAmountState.
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState getNetAmountState() {
+      return netAmountState_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance() : netAmountState_;
+    }
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder getNetAmountStateOrBuilder() {
+      return netAmountState_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance() : netAmountState_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (netAmountState_ != null) {
+        output.writeMessage(1, getNetAmountState());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (netAmountState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getNetAmountState());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse other = (com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse) obj;
+
+      if (hasNetAmountState() != other.hasNetAmountState()) return false;
+      if (hasNetAmountState()) {
+        if (!getNetAmountState()
+            .equals(other.getNetAmountState())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasNetAmountState()) {
+        hash = (37 * hash) + NET_AMOUNT_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getNetAmountState().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStatesResponse is the response type for the Query/States RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryStatesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.QueryStatesResponse)
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        netAmountState_ = null;
+        if (netAmountStateBuilder_ != null) {
+          netAmountStateBuilder_.dispose();
+          netAmountStateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryStatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse build() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse buildPartial() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse result = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.netAmountState_ = netAmountStateBuilder_ == null
+              ? netAmountState_
+              : netAmountStateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse other) {
+        if (other == com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.getDefaultInstance()) return this;
+        if (other.hasNetAmountState()) {
+          mergeNetAmountState(other.getNetAmountState());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getNetAmountStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState netAmountState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder> netAmountStateBuilder_;
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       * @return Whether the netAmountState field is set.
+       */
+      public boolean hasNetAmountState() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       * @return The netAmountState.
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState getNetAmountState() {
+        if (netAmountStateBuilder_ == null) {
+          return netAmountState_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance() : netAmountState_;
+        } else {
+          return netAmountStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNetAmountState(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState value) {
+        if (netAmountStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          netAmountState_ = value;
+        } else {
+          netAmountStateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNetAmountState(
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.Builder builderForValue) {
+        if (netAmountStateBuilder_ == null) {
+          netAmountState_ = builderForValue.build();
+        } else {
+          netAmountStateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeNetAmountState(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState value) {
+        if (netAmountStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            netAmountState_ != null &&
+            netAmountState_ != com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance()) {
+            getNetAmountStateBuilder().mergeFrom(value);
+          } else {
+            netAmountState_ = value;
+          }
+        } else {
+          netAmountStateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearNetAmountState() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        netAmountState_ = null;
+        if (netAmountStateBuilder_ != null) {
+          netAmountStateBuilder_.dispose();
+          netAmountStateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.Builder getNetAmountStateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getNetAmountStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder getNetAmountStateOrBuilder() {
+        if (netAmountStateBuilder_ != null) {
+          return netAmountStateBuilder_.getMessageOrBuilder();
+        } else {
+          return netAmountState_ == null ?
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance() : netAmountState_;
+        }
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder> 
+          getNetAmountStateFieldBuilder() {
+        if (netAmountStateBuilder_ == null) {
+          netAmountStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder>(
+                  getNetAmountState(),
+                  getParentForChildren(),
+                  isClean());
+          netAmountState_ = null;
+        }
+        return netAmountStateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.QueryStatesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.QueryStatesResponse)
+    private static final com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStatesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStatesResponse>() {
+      @java.lang.Override
+      public QueryStatesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStatesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStatesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryVotingPowerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.QueryVotingPowerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string voter = 1 [json_name = "voter"];</code>
+     * @return The voter.
+     */
+    java.lang.String getVoter();
+    /**
+     * <code>string voter = 1 [json_name = "voter"];</code>
+     * @return The bytes for voter.
+     */
+    com.google.protobuf.ByteString
+        getVoterBytes();
+  }
+  /**
+   * <pre>
+   * QueryVotingPowerRequest is the request type for the Query/States RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryVotingPowerRequest}
+   */
+  public static final class QueryVotingPowerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.QueryVotingPowerRequest)
+      QueryVotingPowerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryVotingPowerRequest.newBuilder() to construct.
+    private QueryVotingPowerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryVotingPowerRequest() {
+      voter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryVotingPowerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest.Builder.class);
+    }
+
+    public static final int VOTER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voter_ = "";
+    /**
+     * <code>string voter = 1 [json_name = "voter"];</code>
+     * @return The voter.
+     */
+    @java.lang.Override
+    public java.lang.String getVoter() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string voter = 1 [json_name = "voter"];</code>
+     * @return The bytes for voter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoterBytes() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, voter_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, voter_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest other = (com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest) obj;
+
+      if (!getVoter()
+          .equals(other.getVoter())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VOTER_FIELD_NUMBER;
+      hash = (53 * hash) + getVoter().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryVotingPowerRequest is the request type for the Query/States RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryVotingPowerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.QueryVotingPowerRequest)
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        voter_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest build() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest buildPartial() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest result = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.voter_ = voter_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest other) {
+        if (other == com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest.getDefaultInstance()) return this;
+        if (!other.getVoter().isEmpty()) {
+          voter_ = other.voter_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                voter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object voter_ = "";
+      /**
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @return The voter.
+       */
+      public java.lang.String getVoter() {
+        java.lang.Object ref = voter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @return The bytes for voter.
+       */
+      public com.google.protobuf.ByteString
+          getVoterBytes() {
+        java.lang.Object ref = voter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @param value The voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoter() {
+        voter_ = getDefaultInstance().getVoter();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @param value The bytes for voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.QueryVotingPowerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.QueryVotingPowerRequest)
+    private static final com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryVotingPowerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryVotingPowerRequest>() {
+      @java.lang.Override
+      public QueryVotingPowerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryVotingPowerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryVotingPowerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryVotingPowerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.QueryVotingPowerResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingPower field is set.
+     */
+    boolean hasVotingPower();
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+     * @return The votingPower.
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower getVotingPower();
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPowerOrBuilder getVotingPowerOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryVotingPowerResponse is the response type for the Query/States RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryVotingPowerResponse}
+   */
+  public static final class QueryVotingPowerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.QueryVotingPowerResponse)
+      QueryVotingPowerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryVotingPowerResponse.newBuilder() to construct.
+    private QueryVotingPowerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryVotingPowerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryVotingPowerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.Builder.class);
+    }
+
+    public static final int VOTING_POWER_FIELD_NUMBER = 1;
+    private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower votingPower_;
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingPower field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingPower() {
+      return votingPower_ != null;
+    }
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+     * @return The votingPower.
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower getVotingPower() {
+      return votingPower_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.getDefaultInstance() : votingPower_;
+    }
+    /**
+     * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPowerOrBuilder getVotingPowerOrBuilder() {
+      return votingPower_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.getDefaultInstance() : votingPower_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (votingPower_ != null) {
+        output.writeMessage(1, getVotingPower());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (votingPower_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getVotingPower());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse other = (com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse) obj;
+
+      if (hasVotingPower() != other.hasVotingPower()) return false;
+      if (hasVotingPower()) {
+        if (!getVotingPower()
+            .equals(other.getVotingPower())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasVotingPower()) {
+        hash = (37 * hash) + VOTING_POWER_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingPower().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryVotingPowerResponse is the response type for the Query/States RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.QueryVotingPowerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.QueryVotingPowerResponse)
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        votingPower_ = null;
+        if (votingPowerBuilder_ != null) {
+          votingPowerBuilder_.dispose();
+          votingPowerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse build() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse buildPartial() {
+        com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse result = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.votingPower_ = votingPowerBuilder_ == null
+              ? votingPower_
+              : votingPowerBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse other) {
+        if (other == com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.getDefaultInstance()) return this;
+        if (other.hasVotingPower()) {
+          mergeVotingPower(other.getVotingPower());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getVotingPowerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower votingPower_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPowerOrBuilder> votingPowerBuilder_;
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       * @return Whether the votingPower field is set.
+       */
+      public boolean hasVotingPower() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       * @return The votingPower.
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower getVotingPower() {
+        if (votingPowerBuilder_ == null) {
+          return votingPower_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.getDefaultInstance() : votingPower_;
+        } else {
+          return votingPowerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingPower(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower value) {
+        if (votingPowerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingPower_ = value;
+        } else {
+          votingPowerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingPower(
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.Builder builderForValue) {
+        if (votingPowerBuilder_ == null) {
+          votingPower_ = builderForValue.build();
+        } else {
+          votingPowerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVotingPower(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower value) {
+        if (votingPowerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            votingPower_ != null &&
+            votingPower_ != com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.getDefaultInstance()) {
+            getVotingPowerBuilder().mergeFrom(value);
+          } else {
+            votingPower_ = value;
+          }
+        } else {
+          votingPowerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVotingPower() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        votingPower_ = null;
+        if (votingPowerBuilder_ != null) {
+          votingPowerBuilder_.dispose();
+          votingPowerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.Builder getVotingPowerBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getVotingPowerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPowerOrBuilder getVotingPowerOrBuilder() {
+        if (votingPowerBuilder_ != null) {
+          return votingPowerBuilder_.getMessageOrBuilder();
+        } else {
+          return votingPower_ == null ?
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.getDefaultInstance() : votingPower_;
+        }
+      }
+      /**
+       * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPowerOrBuilder> 
+          getVotingPowerFieldBuilder() {
+        if (votingPowerBuilder_ == null) {
+          votingPowerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPowerOrBuilder>(
+                  getVotingPower(),
+                  getParentForChildren(),
+                  isClean());
+          votingPower_ = null;
+        }
+        return votingPowerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.QueryVotingPowerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.QueryVotingPowerResponse)
+    private static final com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryVotingPowerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryVotingPowerResponse>() {
+      @java.lang.Override
+      public QueryVotingPowerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryVotingPowerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryVotingPowerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_QueryLiquidValidatorsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_QueryStatesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_QueryStatesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_QueryStatesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_QueryStatesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_QueryVotingPowerResponse_fieldAccessorTable;
 
@@ -100,14 +4489,14 @@ public final class QueryProto {
       "quidstaking.v1beta1.QueryStatesRequest\0323" +
       ".crescent.liquidstaking.v1beta1.QuerySta" +
       "tesResponse\".\202\323\344\223\002(\022&/crescent/liquidsta" +
-      "king/v1beta1/statesB\211\002\n\"com.crescent.liq" +
-      "uidstaking.v1beta1B\nQueryProtoP\001Z=github" +
-      ".com/crescent-network/crescent/v5/x/liqu" +
-      "idstaking/types\242\002\003CLX\252\002\036Crescent.Liquids" +
-      "taking.V1beta1\312\002\036Crescent\\Liquidstaking\\" +
-      "V1beta1\342\002*Crescent\\Liquidstaking\\V1beta1" +
-      "\\GPBMetadata\352\002 Crescent::Liquidstaking::" +
-      "V1beta1b\006proto3"
+      "king/v1beta1/statesB\207\002\n\"com.crescent.liq" +
+      "uidstaking.v1beta1B\nQueryProtoZ=github.c" +
+      "om/crescent-network/crescent/v5/x/liquid" +
+      "staking/types\242\002\003CLX\252\002\036Crescent.Liquidsta" +
+      "king.V1beta1\312\002\036Crescent\\Liquidstaking\\V1" +
+      "beta1\342\002*Crescent\\Liquidstaking\\V1beta1\\G" +
+      "PBMetadata\352\002 Crescent::Liquidstaking::V1" +
+      "beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

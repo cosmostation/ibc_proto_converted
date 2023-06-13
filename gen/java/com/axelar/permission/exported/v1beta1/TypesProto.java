@@ -15,6 +15,132 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code axelar.permission.exported.v1beta1.Role}
+   */
+  public enum Role
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ROLE_UNSPECIFIED = 0;</code>
+     */
+    ROLE_UNSPECIFIED(0),
+    /**
+     * <code>ROLE_UNRESTRICTED = 1;</code>
+     */
+    ROLE_UNRESTRICTED(1),
+    /**
+     * <code>ROLE_CHAIN_MANAGEMENT = 2;</code>
+     */
+    ROLE_CHAIN_MANAGEMENT(2),
+    /**
+     * <code>ROLE_ACCESS_CONTROL = 3;</code>
+     */
+    ROLE_ACCESS_CONTROL(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ROLE_UNSPECIFIED = 0;</code>
+     */
+    public static final int ROLE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>ROLE_UNRESTRICTED = 1;</code>
+     */
+    public static final int ROLE_UNRESTRICTED_VALUE = 1;
+    /**
+     * <code>ROLE_CHAIN_MANAGEMENT = 2;</code>
+     */
+    public static final int ROLE_CHAIN_MANAGEMENT_VALUE = 2;
+    /**
+     * <code>ROLE_ACCESS_CONTROL = 3;</code>
+     */
+    public static final int ROLE_ACCESS_CONTROL_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Role valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Role forNumber(int value) {
+      switch (value) {
+        case 0: return ROLE_UNSPECIFIED;
+        case 1: return ROLE_UNRESTRICTED;
+        case 2: return ROLE_CHAIN_MANAGEMENT;
+        case 3: return ROLE_ACCESS_CONTROL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Role>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Role> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Role>() {
+            public Role findValueByNumber(int number) {
+              return Role.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.axelar.permission.exported.v1beta1.TypesProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Role[] VALUES = values();
+
+    public static Role valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Role(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:axelar.permission.exported.v1beta1.Role)
+  }
+
   public static final int PERMISSION_ROLE_FIELD_NUMBER = 50000;
   /**
    * <pre>
@@ -26,9 +152,9 @@ public final class TypesProto {
   public static final
     com.google.protobuf.GeneratedMessage.GeneratedExtension<
       com.google.protobuf.DescriptorProtos.MessageOptions,
-      com.axelar.permission.exported.v1beta1.Role> permissionRole = com.google.protobuf.GeneratedMessage
+      com.axelar.permission.exported.v1beta1.TypesProto.Role> permissionRole = com.google.protobuf.GeneratedMessage
           .newFileScopedGeneratedExtension(
-        com.axelar.permission.exported.v1beta1.Role.class,
+        com.axelar.permission.exported.v1beta1.TypesProto.Role.class,
         null);
 
   public static com.google.protobuf.Descriptors.FileDescriptor
@@ -48,14 +174,14 @@ public final class TypesProto {
       "ROL\020\003\032\010\210\243\036\000\250\244\036\001:t\n\017permission_role\022\037.goo" +
       "gle.protobuf.MessageOptions\030\320\206\003 \001(\0162(.ax" +
       "elar.permission.exported.v1beta1.RoleR\016p" +
-      "ermissionRoleB\237\002\n&com.axelar.permission." +
-      "exported.v1beta1B\nTypesProtoP\001Z:github.c" +
-      "om/axelarnetwork/axelar-core/x/permissio" +
-      "n/exported\242\002\003APE\252\002\"Axelar.Permission.Exp" +
-      "orted.V1beta1\312\002\"Axelar\\Permission\\Export" +
-      "ed\\V1beta1\342\002.Axelar\\Permission\\Exported\\" +
-      "V1beta1\\GPBMetadata\352\002%Axelar::Permission" +
-      "::Exported::V1beta1\310\341\036\000b\006proto3"
+      "ermissionRoleB\235\002\n&com.axelar.permission." +
+      "exported.v1beta1B\nTypesProtoZ:github.com" +
+      "/axelarnetwork/axelar-core/x/permission/" +
+      "exported\242\002\003APE\252\002\"Axelar.Permission.Expor" +
+      "ted.V1beta1\312\002\"Axelar\\Permission\\Exported" +
+      "\\V1beta1\342\002.Axelar\\Permission\\Exported\\V1" +
+      "beta1\\GPBMetadata\352\002%Axelar::Permission::" +
+      "Exported::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

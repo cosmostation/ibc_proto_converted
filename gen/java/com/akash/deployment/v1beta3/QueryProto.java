@@ -14,34 +14,4830 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryDeploymentsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.QueryDeploymentsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filters field is set.
+     */
+    boolean hasFilters();
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return The filters.
+     */
+    com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters getFilters();
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.deployment.v1beta3.DeploymentProto.DeploymentFiltersOrBuilder getFiltersOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.QueryDeploymentsRequest}
+   */
+  public static final class QueryDeploymentsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.QueryDeploymentsRequest)
+      QueryDeploymentsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDeploymentsRequest.newBuilder() to construct.
+    private QueryDeploymentsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDeploymentsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDeploymentsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest.class, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest.Builder.class);
+    }
+
+    public static final int FILTERS_FIELD_NUMBER = 1;
+    private com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters filters_;
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilters() {
+      return filters_ != null;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return The filters.
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters getFilters() {
+      return filters_ == null ? com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.getDefaultInstance() : filters_;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.DeploymentProto.DeploymentFiltersOrBuilder getFiltersOrBuilder() {
+      return filters_ == null ? com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.getDefaultInstance() : filters_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (filters_ != null) {
+        output.writeMessage(1, getFilters());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (filters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFilters());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest other = (com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest) obj;
+
+      if (hasFilters() != other.hasFilters()) return false;
+      if (hasFilters()) {
+        if (!getFilters()
+            .equals(other.getFilters())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFilters()) {
+        hash = (37 * hash) + FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFilters().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.QueryDeploymentsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.QueryDeploymentsRequest)
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest.class, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
+          filtersBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest build() {
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest buildPartial() {
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest result = new com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest) {
+          return mergeFrom((com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest other) {
+        if (other == com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest.getDefaultInstance()) return this;
+        if (other.hasFilters()) {
+          mergeFilters(other.getFilters());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFiltersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters filters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters, com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentFiltersOrBuilder> filtersBuilder_;
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       * @return Whether the filters field is set.
+       */
+      public boolean hasFilters() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       * @return The filters.
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters getFilters() {
+        if (filtersBuilder_ == null) {
+          return filters_ == null ? com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.getDefaultInstance() : filters_;
+        } else {
+          return filtersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilters(com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters value) {
+        if (filtersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filters_ = value;
+        } else {
+          filtersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilters(
+          com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.Builder builderForValue) {
+        if (filtersBuilder_ == null) {
+          filters_ = builderForValue.build();
+        } else {
+          filtersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFilters(com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters value) {
+        if (filtersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            filters_ != null &&
+            filters_ != com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
+          } else {
+            filters_ = value;
+          }
+        } else {
+          filtersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFilters() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
+          filtersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.Builder getFiltersBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.DeploymentFiltersOrBuilder getFiltersOrBuilder() {
+        if (filtersBuilder_ != null) {
+          return filtersBuilder_.getMessageOrBuilder();
+        } else {
+          return filters_ == null ?
+              com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.getDefaultInstance() : filters_;
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters, com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentFiltersOrBuilder> 
+          getFiltersFieldBuilder() {
+        if (filtersBuilder_ == null) {
+          filtersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters, com.akash.deployment.v1beta3.DeploymentProto.DeploymentFilters.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentFiltersOrBuilder>(
+                  getFilters(),
+                  getParentForChildren(),
+                  isClean());
+          filters_ = null;
+        }
+        return filtersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.QueryDeploymentsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.QueryDeploymentsRequest)
+    private static final com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest();
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDeploymentsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDeploymentsRequest>() {
+      @java.lang.Override
+      public QueryDeploymentsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDeploymentsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDeploymentsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDeploymentsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.QueryDeploymentsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    java.util.List<com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse> 
+        getDeploymentsList();
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse getDeployments(int index);
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    int getDeploymentsCount();
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    java.util.List<? extends com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder> 
+        getDeploymentsOrBuilderList();
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder getDeploymentsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDeploymentsResponse is response type for the Query/Deployments RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.QueryDeploymentsResponse}
+   */
+  public static final class QueryDeploymentsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.QueryDeploymentsResponse)
+      QueryDeploymentsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDeploymentsResponse.newBuilder() to construct.
+    private QueryDeploymentsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDeploymentsResponse() {
+      deployments_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDeploymentsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse.class, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse.Builder.class);
+    }
+
+    public static final int DEPLOYMENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse> deployments_;
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse> getDeploymentsList() {
+      return deployments_;
+    }
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder> 
+        getDeploymentsOrBuilderList() {
+      return deployments_;
+    }
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    @java.lang.Override
+    public int getDeploymentsCount() {
+      return deployments_.size();
+    }
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse getDeployments(int index) {
+      return deployments_.get(index);
+    }
+    /**
+     * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder getDeploymentsOrBuilder(
+        int index) {
+      return deployments_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < deployments_.size(); i++) {
+        output.writeMessage(1, deployments_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < deployments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, deployments_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse other = (com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse) obj;
+
+      if (!getDeploymentsList()
+          .equals(other.getDeploymentsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDeploymentsCount() > 0) {
+        hash = (37 * hash) + DEPLOYMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDeploymentsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDeploymentsResponse is response type for the Query/Deployments RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.QueryDeploymentsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.QueryDeploymentsResponse)
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse.class, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (deploymentsBuilder_ == null) {
+          deployments_ = java.util.Collections.emptyList();
+        } else {
+          deployments_ = null;
+          deploymentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse build() {
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse buildPartial() {
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse result = new com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse result) {
+        if (deploymentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            deployments_ = java.util.Collections.unmodifiableList(deployments_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.deployments_ = deployments_;
+        } else {
+          result.deployments_ = deploymentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse) {
+          return mergeFrom((com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse other) {
+        if (other == com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse.getDefaultInstance()) return this;
+        if (deploymentsBuilder_ == null) {
+          if (!other.deployments_.isEmpty()) {
+            if (deployments_.isEmpty()) {
+              deployments_ = other.deployments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDeploymentsIsMutable();
+              deployments_.addAll(other.deployments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.deployments_.isEmpty()) {
+            if (deploymentsBuilder_.isEmpty()) {
+              deploymentsBuilder_.dispose();
+              deploymentsBuilder_ = null;
+              deployments_ = other.deployments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              deploymentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDeploymentsFieldBuilder() : null;
+            } else {
+              deploymentsBuilder_.addAllMessages(other.deployments_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse m =
+                    input.readMessage(
+                        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.parser(),
+                        extensionRegistry);
+                if (deploymentsBuilder_ == null) {
+                  ensureDeploymentsIsMutable();
+                  deployments_.add(m);
+                } else {
+                  deploymentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse> deployments_ =
+        java.util.Collections.emptyList();
+      private void ensureDeploymentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          deployments_ = new java.util.ArrayList<com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse>(deployments_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder> deploymentsBuilder_;
+
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public java.util.List<com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse> getDeploymentsList() {
+        if (deploymentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(deployments_);
+        } else {
+          return deploymentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public int getDeploymentsCount() {
+        if (deploymentsBuilder_ == null) {
+          return deployments_.size();
+        } else {
+          return deploymentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse getDeployments(int index) {
+        if (deploymentsBuilder_ == null) {
+          return deployments_.get(index);
+        } else {
+          return deploymentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder setDeployments(
+          int index, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse value) {
+        if (deploymentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeploymentsIsMutable();
+          deployments_.set(index, value);
+          onChanged();
+        } else {
+          deploymentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder setDeployments(
+          int index, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder builderForValue) {
+        if (deploymentsBuilder_ == null) {
+          ensureDeploymentsIsMutable();
+          deployments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          deploymentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder addDeployments(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse value) {
+        if (deploymentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeploymentsIsMutable();
+          deployments_.add(value);
+          onChanged();
+        } else {
+          deploymentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder addDeployments(
+          int index, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse value) {
+        if (deploymentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeploymentsIsMutable();
+          deployments_.add(index, value);
+          onChanged();
+        } else {
+          deploymentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder addDeployments(
+          com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder builderForValue) {
+        if (deploymentsBuilder_ == null) {
+          ensureDeploymentsIsMutable();
+          deployments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          deploymentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder addDeployments(
+          int index, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder builderForValue) {
+        if (deploymentsBuilder_ == null) {
+          ensureDeploymentsIsMutable();
+          deployments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          deploymentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder addAllDeployments(
+          java.lang.Iterable<? extends com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse> values) {
+        if (deploymentsBuilder_ == null) {
+          ensureDeploymentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, deployments_);
+          onChanged();
+        } else {
+          deploymentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder clearDeployments() {
+        if (deploymentsBuilder_ == null) {
+          deployments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          deploymentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public Builder removeDeployments(int index) {
+        if (deploymentsBuilder_ == null) {
+          ensureDeploymentsIsMutable();
+          deployments_.remove(index);
+          onChanged();
+        } else {
+          deploymentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder getDeploymentsBuilder(
+          int index) {
+        return getDeploymentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder getDeploymentsOrBuilder(
+          int index) {
+        if (deploymentsBuilder_ == null) {
+          return deployments_.get(index);  } else {
+          return deploymentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public java.util.List<? extends com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder> 
+           getDeploymentsOrBuilderList() {
+        if (deploymentsBuilder_ != null) {
+          return deploymentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(deployments_);
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder addDeploymentsBuilder() {
+        return getDeploymentsFieldBuilder().addBuilder(
+            com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder addDeploymentsBuilder(
+          int index) {
+        return getDeploymentsFieldBuilder().addBuilder(
+            index, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.QueryDeploymentResponse deployments = 1 [json_name = "deployments", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "DeploymentResponses"];</code>
+       */
+      public java.util.List<com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder> 
+           getDeploymentsBuilderList() {
+        return getDeploymentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder> 
+          getDeploymentsFieldBuilder() {
+        if (deploymentsBuilder_ == null) {
+          deploymentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder>(
+                  deployments_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          deployments_ = null;
+        }
+        return deploymentsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.QueryDeploymentsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.QueryDeploymentsResponse)
+    private static final com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse();
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDeploymentsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDeploymentsResponse>() {
+      @java.lang.Override
+      public QueryDeploymentsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDeploymentsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDeploymentsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDeploymentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.QueryDeploymentRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    com.akash.deployment.v1beta3.DeploymentProto.DeploymentID getId();
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    com.akash.deployment.v1beta3.DeploymentProto.DeploymentIDOrBuilder getIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDeploymentRequest is request type for the Query/Deployment RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.QueryDeploymentRequest}
+   */
+  public static final class QueryDeploymentRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.QueryDeploymentRequest)
+      QueryDeploymentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDeploymentRequest.newBuilder() to construct.
+    private QueryDeploymentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDeploymentRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDeploymentRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest.class, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.deployment.v1beta3.DeploymentProto.DeploymentID id_;
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.DeploymentProto.DeploymentID getId() {
+      return id_ == null ? com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.DeploymentProto.DeploymentIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.getDefaultInstance() : id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest other = (com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDeploymentRequest is request type for the Query/Deployment RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.QueryDeploymentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.QueryDeploymentRequest)
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest.class, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest build() {
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest buildPartial() {
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest result = new com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest) {
+          return mergeFrom((com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest other) {
+        if (other == com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.deployment.v1beta3.DeploymentProto.DeploymentID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.DeploymentProto.DeploymentID, com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentIDOrBuilder> idBuilder_;
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return The id.
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.DeploymentID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(com.akash.deployment.v1beta3.DeploymentProto.DeploymentID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(
+          com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder mergeId(com.akash.deployment.v1beta3.DeploymentProto.DeploymentID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.DeploymentIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.DeploymentProto.DeploymentID, com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.deployment.v1beta3.DeploymentProto.DeploymentID, com.akash.deployment.v1beta3.DeploymentProto.DeploymentID.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.QueryDeploymentRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.QueryDeploymentRequest)
+    private static final com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest();
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDeploymentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDeploymentRequest>() {
+      @java.lang.Override
+      public QueryDeploymentRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDeploymentRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDeploymentRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDeploymentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.QueryDeploymentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+     * @return Whether the deployment field is set.
+     */
+    boolean hasDeployment();
+    /**
+     * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+     * @return The deployment.
+     */
+    com.akash.deployment.v1beta3.DeploymentProto.Deployment getDeployment();
+    /**
+     * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+     */
+    com.akash.deployment.v1beta3.DeploymentProto.DeploymentOrBuilder getDeploymentOrBuilder();
+
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    java.util.List<com.akash.deployment.v1beta3.GroupProto.Group> 
+        getGroupsList();
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    com.akash.deployment.v1beta3.GroupProto.Group getGroups(int index);
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    int getGroupsCount();
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    java.util.List<? extends com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder> 
+        getGroupsOrBuilderList();
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+        int index);
+
+    /**
+     * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowAccount field is set.
+     */
+    boolean hasEscrowAccount();
+    /**
+     * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     * @return The escrowAccount.
+     */
+    com.akash.escrow.v1beta3.TypesProto.Account getEscrowAccount();
+    /**
+     * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.escrow.v1beta3.TypesProto.AccountOrBuilder getEscrowAccountOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDeploymentResponse is response type for the Query/Deployment RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.QueryDeploymentResponse}
+   */
+  public static final class QueryDeploymentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.QueryDeploymentResponse)
+      QueryDeploymentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDeploymentResponse.newBuilder() to construct.
+    private QueryDeploymentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDeploymentResponse() {
+      groups_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDeploymentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.class, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder.class);
+    }
+
+    public static final int DEPLOYMENT_FIELD_NUMBER = 1;
+    private com.akash.deployment.v1beta3.DeploymentProto.Deployment deployment_;
+    /**
+     * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+     * @return Whether the deployment field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeployment() {
+      return deployment_ != null;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+     * @return The deployment.
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.DeploymentProto.Deployment getDeployment() {
+      return deployment_ == null ? com.akash.deployment.v1beta3.DeploymentProto.Deployment.getDefaultInstance() : deployment_;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.DeploymentProto.DeploymentOrBuilder getDeploymentOrBuilder() {
+      return deployment_ == null ? com.akash.deployment.v1beta3.DeploymentProto.Deployment.getDefaultInstance() : deployment_;
+    }
+
+    public static final int GROUPS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.deployment.v1beta3.GroupProto.Group> groups_;
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.deployment.v1beta3.GroupProto.Group> getGroupsList() {
+      return groups_;
+    }
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder> 
+        getGroupsOrBuilderList() {
+      return groups_;
+    }
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getGroupsCount() {
+      return groups_.size();
+    }
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupProto.Group getGroups(int index) {
+      return groups_.get(index);
+    }
+    /**
+     * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+        int index) {
+      return groups_.get(index);
+    }
+
+    public static final int ESCROW_ACCOUNT_FIELD_NUMBER = 3;
+    private com.akash.escrow.v1beta3.TypesProto.Account escrowAccount_;
+    /**
+     * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowAccount field is set.
+     */
+    @java.lang.Override
+    public boolean hasEscrowAccount() {
+      return escrowAccount_ != null;
+    }
+    /**
+     * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     * @return The escrowAccount.
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta3.TypesProto.Account getEscrowAccount() {
+      return escrowAccount_ == null ? com.akash.escrow.v1beta3.TypesProto.Account.getDefaultInstance() : escrowAccount_;
+    }
+    /**
+     * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta3.TypesProto.AccountOrBuilder getEscrowAccountOrBuilder() {
+      return escrowAccount_ == null ? com.akash.escrow.v1beta3.TypesProto.Account.getDefaultInstance() : escrowAccount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (deployment_ != null) {
+        output.writeMessage(1, getDeployment());
+      }
+      for (int i = 0; i < groups_.size(); i++) {
+        output.writeMessage(2, groups_.get(i));
+      }
+      if (escrowAccount_ != null) {
+        output.writeMessage(3, getEscrowAccount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (deployment_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDeployment());
+      }
+      for (int i = 0; i < groups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, groups_.get(i));
+      }
+      if (escrowAccount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getEscrowAccount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse other = (com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse) obj;
+
+      if (hasDeployment() != other.hasDeployment()) return false;
+      if (hasDeployment()) {
+        if (!getDeployment()
+            .equals(other.getDeployment())) return false;
+      }
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
+      if (hasEscrowAccount() != other.hasEscrowAccount()) return false;
+      if (hasEscrowAccount()) {
+        if (!getEscrowAccount()
+            .equals(other.getEscrowAccount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDeployment()) {
+        hash = (37 * hash) + DEPLOYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeployment().hashCode();
+      }
+      if (getGroupsCount() > 0) {
+        hash = (37 * hash) + GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsList().hashCode();
+      }
+      if (hasEscrowAccount()) {
+        hash = (37 * hash) + ESCROW_ACCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getEscrowAccount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDeploymentResponse is response type for the Query/Deployment RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.QueryDeploymentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.QueryDeploymentResponse)
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.class, com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        deployment_ = null;
+        if (deploymentBuilder_ != null) {
+          deploymentBuilder_.dispose();
+          deploymentBuilder_ = null;
+        }
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+        } else {
+          groups_ = null;
+          groupsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        escrowAccount_ = null;
+        if (escrowAccountBuilder_ != null) {
+          escrowAccountBuilder_.dispose();
+          escrowAccountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryDeploymentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse build() {
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse buildPartial() {
+        com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse result = new com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse result) {
+        if (groupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            groups_ = java.util.Collections.unmodifiableList(groups_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.groups_ = groups_;
+        } else {
+          result.groups_ = groupsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.deployment_ = deploymentBuilder_ == null
+              ? deployment_
+              : deploymentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.escrowAccount_ = escrowAccountBuilder_ == null
+              ? escrowAccount_
+              : escrowAccountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse) {
+          return mergeFrom((com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse other) {
+        if (other == com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse.getDefaultInstance()) return this;
+        if (other.hasDeployment()) {
+          mergeDeployment(other.getDeployment());
+        }
+        if (groupsBuilder_ == null) {
+          if (!other.groups_.isEmpty()) {
+            if (groups_.isEmpty()) {
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureGroupsIsMutable();
+              groups_.addAll(other.groups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groups_.isEmpty()) {
+            if (groupsBuilder_.isEmpty()) {
+              groupsBuilder_.dispose();
+              groupsBuilder_ = null;
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              groupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupsFieldBuilder() : null;
+            } else {
+              groupsBuilder_.addAllMessages(other.groups_);
+            }
+          }
+        }
+        if (other.hasEscrowAccount()) {
+          mergeEscrowAccount(other.getEscrowAccount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDeploymentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.akash.deployment.v1beta3.GroupProto.Group m =
+                    input.readMessage(
+                        com.akash.deployment.v1beta3.GroupProto.Group.parser(),
+                        extensionRegistry);
+                if (groupsBuilder_ == null) {
+                  ensureGroupsIsMutable();
+                  groups_.add(m);
+                } else {
+                  groupsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getEscrowAccountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.deployment.v1beta3.DeploymentProto.Deployment deployment_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.DeploymentProto.Deployment, com.akash.deployment.v1beta3.DeploymentProto.Deployment.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentOrBuilder> deploymentBuilder_;
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       * @return Whether the deployment field is set.
+       */
+      public boolean hasDeployment() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       * @return The deployment.
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.Deployment getDeployment() {
+        if (deploymentBuilder_ == null) {
+          return deployment_ == null ? com.akash.deployment.v1beta3.DeploymentProto.Deployment.getDefaultInstance() : deployment_;
+        } else {
+          return deploymentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       */
+      public Builder setDeployment(com.akash.deployment.v1beta3.DeploymentProto.Deployment value) {
+        if (deploymentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deployment_ = value;
+        } else {
+          deploymentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       */
+      public Builder setDeployment(
+          com.akash.deployment.v1beta3.DeploymentProto.Deployment.Builder builderForValue) {
+        if (deploymentBuilder_ == null) {
+          deployment_ = builderForValue.build();
+        } else {
+          deploymentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       */
+      public Builder mergeDeployment(com.akash.deployment.v1beta3.DeploymentProto.Deployment value) {
+        if (deploymentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            deployment_ != null &&
+            deployment_ != com.akash.deployment.v1beta3.DeploymentProto.Deployment.getDefaultInstance()) {
+            getDeploymentBuilder().mergeFrom(value);
+          } else {
+            deployment_ = value;
+          }
+        } else {
+          deploymentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       */
+      public Builder clearDeployment() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        deployment_ = null;
+        if (deploymentBuilder_ != null) {
+          deploymentBuilder_.dispose();
+          deploymentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.Deployment.Builder getDeploymentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDeploymentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.DeploymentProto.DeploymentOrBuilder getDeploymentOrBuilder() {
+        if (deploymentBuilder_ != null) {
+          return deploymentBuilder_.getMessageOrBuilder();
+        } else {
+          return deployment_ == null ?
+              com.akash.deployment.v1beta3.DeploymentProto.Deployment.getDefaultInstance() : deployment_;
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.DeploymentProto.Deployment, com.akash.deployment.v1beta3.DeploymentProto.Deployment.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentOrBuilder> 
+          getDeploymentFieldBuilder() {
+        if (deploymentBuilder_ == null) {
+          deploymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.deployment.v1beta3.DeploymentProto.Deployment, com.akash.deployment.v1beta3.DeploymentProto.Deployment.Builder, com.akash.deployment.v1beta3.DeploymentProto.DeploymentOrBuilder>(
+                  getDeployment(),
+                  getParentForChildren(),
+                  isClean());
+          deployment_ = null;
+        }
+        return deploymentBuilder_;
+      }
+
+      private java.util.List<com.akash.deployment.v1beta3.GroupProto.Group> groups_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          groups_ = new java.util.ArrayList<com.akash.deployment.v1beta3.GroupProto.Group>(groups_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupProto.Group, com.akash.deployment.v1beta3.GroupProto.Group.Builder, com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder> groupsBuilder_;
+
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public java.util.List<com.akash.deployment.v1beta3.GroupProto.Group> getGroupsList() {
+        if (groupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groups_);
+        } else {
+          return groupsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public int getGroupsCount() {
+        if (groupsBuilder_ == null) {
+          return groups_.size();
+        } else {
+          return groupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupProto.Group getGroups(int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);
+        } else {
+          return groupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder setGroups(
+          int index, com.akash.deployment.v1beta3.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.set(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder setGroups(
+          int index, com.akash.deployment.v1beta3.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder addGroups(com.akash.deployment.v1beta3.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder addGroups(
+          int index, com.akash.deployment.v1beta3.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder addGroups(
+          com.akash.deployment.v1beta3.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder addGroups(
+          int index, com.akash.deployment.v1beta3.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder addAllGroups(
+          java.lang.Iterable<? extends com.akash.deployment.v1beta3.GroupProto.Group> values) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groups_);
+          onChanged();
+        } else {
+          groupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder clearGroups() {
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          groupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public Builder removeGroups(int index) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.remove(index);
+          onChanged();
+        } else {
+          groupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupProto.Group.Builder getGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+          int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);  } else {
+          return groupsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public java.util.List<? extends com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder> 
+           getGroupsOrBuilderList() {
+        if (groupsBuilder_ != null) {
+          return groupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groups_);
+        }
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupProto.Group.Builder addGroupsBuilder() {
+        return getGroupsFieldBuilder().addBuilder(
+            com.akash.deployment.v1beta3.GroupProto.Group.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupProto.Group.Builder addGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().addBuilder(
+            index, com.akash.deployment.v1beta3.GroupProto.Group.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.deployment.v1beta3.Group groups = 2 [json_name = "groups", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "groups", (.gogoproto.moretags) = "yaml:&#92;"groups&#92;""];</code>
+       */
+      public java.util.List<com.akash.deployment.v1beta3.GroupProto.Group.Builder> 
+           getGroupsBuilderList() {
+        return getGroupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupProto.Group, com.akash.deployment.v1beta3.GroupProto.Group.Builder, com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder> 
+          getGroupsFieldBuilder() {
+        if (groupsBuilder_ == null) {
+          groupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.deployment.v1beta3.GroupProto.Group, com.akash.deployment.v1beta3.GroupProto.Group.Builder, com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder>(
+                  groups_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groups_ = null;
+        }
+        return groupsBuilder_;
+      }
+
+      private com.akash.escrow.v1beta3.TypesProto.Account escrowAccount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta3.TypesProto.Account, com.akash.escrow.v1beta3.TypesProto.Account.Builder, com.akash.escrow.v1beta3.TypesProto.AccountOrBuilder> escrowAccountBuilder_;
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the escrowAccount field is set.
+       */
+      public boolean hasEscrowAccount() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       * @return The escrowAccount.
+       */
+      public com.akash.escrow.v1beta3.TypesProto.Account getEscrowAccount() {
+        if (escrowAccountBuilder_ == null) {
+          return escrowAccount_ == null ? com.akash.escrow.v1beta3.TypesProto.Account.getDefaultInstance() : escrowAccount_;
+        } else {
+          return escrowAccountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowAccount(com.akash.escrow.v1beta3.TypesProto.Account value) {
+        if (escrowAccountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          escrowAccount_ = value;
+        } else {
+          escrowAccountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowAccount(
+          com.akash.escrow.v1beta3.TypesProto.Account.Builder builderForValue) {
+        if (escrowAccountBuilder_ == null) {
+          escrowAccount_ = builderForValue.build();
+        } else {
+          escrowAccountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeEscrowAccount(com.akash.escrow.v1beta3.TypesProto.Account value) {
+        if (escrowAccountBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            escrowAccount_ != null &&
+            escrowAccount_ != com.akash.escrow.v1beta3.TypesProto.Account.getDefaultInstance()) {
+            getEscrowAccountBuilder().mergeFrom(value);
+          } else {
+            escrowAccount_ = value;
+          }
+        } else {
+          escrowAccountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEscrowAccount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        escrowAccount_ = null;
+        if (escrowAccountBuilder_ != null) {
+          escrowAccountBuilder_.dispose();
+          escrowAccountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.escrow.v1beta3.TypesProto.Account.Builder getEscrowAccountBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getEscrowAccountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.escrow.v1beta3.TypesProto.AccountOrBuilder getEscrowAccountOrBuilder() {
+        if (escrowAccountBuilder_ != null) {
+          return escrowAccountBuilder_.getMessageOrBuilder();
+        } else {
+          return escrowAccount_ == null ?
+              com.akash.escrow.v1beta3.TypesProto.Account.getDefaultInstance() : escrowAccount_;
+        }
+      }
+      /**
+       * <code>.akash.escrow.v1beta3.Account escrow_account = 3 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta3.TypesProto.Account, com.akash.escrow.v1beta3.TypesProto.Account.Builder, com.akash.escrow.v1beta3.TypesProto.AccountOrBuilder> 
+          getEscrowAccountFieldBuilder() {
+        if (escrowAccountBuilder_ == null) {
+          escrowAccountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.escrow.v1beta3.TypesProto.Account, com.akash.escrow.v1beta3.TypesProto.Account.Builder, com.akash.escrow.v1beta3.TypesProto.AccountOrBuilder>(
+                  getEscrowAccount(),
+                  getParentForChildren(),
+                  isClean());
+          escrowAccount_ = null;
+        }
+        return escrowAccountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.QueryDeploymentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.QueryDeploymentResponse)
+    private static final com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse();
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDeploymentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDeploymentResponse>() {
+      @java.lang.Override
+      public QueryDeploymentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDeploymentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDeploymentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.QueryProto.QueryDeploymentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.QueryGroupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    com.akash.deployment.v1beta3.GroupidProto.GroupID getId();
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryGroupRequest is request type for the Query/Group RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.QueryGroupRequest}
+   */
+  public static final class QueryGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.QueryGroupRequest)
+      QueryGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGroupRequest.newBuilder() to construct.
+    private QueryGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGroupRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGroupRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest.class, com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupID getId() {
+      return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest other = (com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryGroupRequest is request type for the Query/Group RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.QueryGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.QueryGroupRequest)
+        com.akash.deployment.v1beta3.QueryProto.QueryGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest.class, com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest build() {
+        com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest buildPartial() {
+        com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest result = new com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest) {
+          return mergeFrom((com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest other) {
+        if (other == com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder> idBuilder_;
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return The id.
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(com.akash.deployment.v1beta3.GroupidProto.GroupID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(
+          com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder mergeId(com.akash.deployment.v1beta3.GroupidProto.GroupID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.QueryGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.QueryGroupRequest)
+    private static final com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest();
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGroupRequest>() {
+      @java.lang.Override
+      public QueryGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.QueryProto.QueryGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGroupResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.QueryGroupResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     * @return Whether the group field is set.
+     */
+    boolean hasGroup();
+    /**
+     * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     * @return The group.
+     */
+    com.akash.deployment.v1beta3.GroupProto.Group getGroup();
+    /**
+     * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder getGroupOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryGroupResponse is response type for the Query/Group RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.QueryGroupResponse}
+   */
+  public static final class QueryGroupResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.QueryGroupResponse)
+      QueryGroupResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGroupResponse.newBuilder() to construct.
+    private QueryGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGroupResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGroupResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse.class, com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse.Builder.class);
+    }
+
+    public static final int GROUP_FIELD_NUMBER = 1;
+    private com.akash.deployment.v1beta3.GroupProto.Group group_;
+    /**
+     * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     * @return Whether the group field is set.
+     */
+    @java.lang.Override
+    public boolean hasGroup() {
+      return group_ != null;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     * @return The group.
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupProto.Group getGroup() {
+      return group_ == null ? com.akash.deployment.v1beta3.GroupProto.Group.getDefaultInstance() : group_;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder getGroupOrBuilder() {
+      return group_ == null ? com.akash.deployment.v1beta3.GroupProto.Group.getDefaultInstance() : group_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (group_ != null) {
+        output.writeMessage(1, getGroup());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (group_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getGroup());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse other = (com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse) obj;
+
+      if (hasGroup() != other.hasGroup()) return false;
+      if (hasGroup()) {
+        if (!getGroup()
+            .equals(other.getGroup())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGroup()) {
+        hash = (37 * hash) + GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getGroup().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryGroupResponse is response type for the Query/Group RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.QueryGroupResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.QueryGroupResponse)
+        com.akash.deployment.v1beta3.QueryProto.QueryGroupResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse.class, com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        group_ = null;
+        if (groupBuilder_ != null) {
+          groupBuilder_.dispose();
+          groupBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.QueryProto.internal_static_akash_deployment_v1beta3_QueryGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse build() {
+        com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse buildPartial() {
+        com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse result = new com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.group_ = groupBuilder_ == null
+              ? group_
+              : groupBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse) {
+          return mergeFrom((com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse other) {
+        if (other == com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse.getDefaultInstance()) return this;
+        if (other.hasGroup()) {
+          mergeGroup(other.getGroup());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getGroupFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.deployment.v1beta3.GroupProto.Group group_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupProto.Group, com.akash.deployment.v1beta3.GroupProto.Group.Builder, com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder> groupBuilder_;
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       * @return Whether the group field is set.
+       */
+      public boolean hasGroup() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       * @return The group.
+       */
+      public com.akash.deployment.v1beta3.GroupProto.Group getGroup() {
+        if (groupBuilder_ == null) {
+          return group_ == null ? com.akash.deployment.v1beta3.GroupProto.Group.getDefaultInstance() : group_;
+        } else {
+          return groupBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroup(com.akash.deployment.v1beta3.GroupProto.Group value) {
+        if (groupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          group_ = value;
+        } else {
+          groupBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroup(
+          com.akash.deployment.v1beta3.GroupProto.Group.Builder builderForValue) {
+        if (groupBuilder_ == null) {
+          group_ = builderForValue.build();
+        } else {
+          groupBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeGroup(com.akash.deployment.v1beta3.GroupProto.Group value) {
+        if (groupBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            group_ != null &&
+            group_ != com.akash.deployment.v1beta3.GroupProto.Group.getDefaultInstance()) {
+            getGroupBuilder().mergeFrom(value);
+          } else {
+            group_ = value;
+          }
+        } else {
+          groupBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGroup() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        group_ = null;
+        if (groupBuilder_ != null) {
+          groupBuilder_.dispose();
+          groupBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupProto.Group.Builder getGroupBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getGroupFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder getGroupOrBuilder() {
+        if (groupBuilder_ != null) {
+          return groupBuilder_.getMessageOrBuilder();
+        } else {
+          return group_ == null ?
+              com.akash.deployment.v1beta3.GroupProto.Group.getDefaultInstance() : group_;
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupProto.Group, com.akash.deployment.v1beta3.GroupProto.Group.Builder, com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder> 
+          getGroupFieldBuilder() {
+        if (groupBuilder_ == null) {
+          groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.deployment.v1beta3.GroupProto.Group, com.akash.deployment.v1beta3.GroupProto.Group.Builder, com.akash.deployment.v1beta3.GroupProto.GroupOrBuilder>(
+                  getGroup(),
+                  getParentForChildren(),
+                  isClean());
+          group_ = null;
+        }
+        return groupBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.QueryGroupResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.QueryGroupResponse)
+    private static final com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse();
+    }
+
+    public static com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGroupResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGroupResponse>() {
+      @java.lang.Override
+      public QueryGroupResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGroupResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGroupResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.QueryProto.QueryGroupResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_QueryDeploymentsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_QueryDeploymentsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_QueryDeploymentsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_QueryDeploymentsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_QueryDeploymentRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_QueryDeploymentRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_QueryDeploymentResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_QueryDeploymentResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_QueryGroupRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_QueryGroupRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_QueryGroupResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_QueryGroupResponse_fieldAccessorTable;
 
@@ -97,13 +4893,13 @@ public final class QueryProto {
       "+.akash.deployment.v1beta3.QueryGroupReq" +
       "uest\032,.akash.deployment.v1beta3.QueryGro" +
       "upResponse\"-\202\323\344\223\002\'\022%/akash/deployment/v1" +
-      "beta3/groups/infoB\353\001\n\034com.akash.deployme" +
-      "nt.v1beta3B\nQueryProtoP\001Z=github.com/aka" +
-      "sh-network/akash-api/go/node/deployment/" +
-      "v1beta3\242\002\003ADX\252\002\030Akash.Deployment.V1beta3" +
-      "\312\002\030Akash\\Deployment\\V1beta3\342\002$Akash\\Depl" +
-      "oyment\\V1beta3\\GPBMetadata\352\002\032Akash::Depl" +
-      "oyment::V1beta3b\006proto3"
+      "beta3/groups/infoB\351\001\n\034com.akash.deployme" +
+      "nt.v1beta3B\nQueryProtoZ=github.com/akash" +
+      "-network/akash-api/go/node/deployment/v1" +
+      "beta3\242\002\003ADX\252\002\030Akash.Deployment.V1beta3\312\002" +
+      "\030Akash\\Deployment\\V1beta3\342\002$Akash\\Deploy" +
+      "ment\\V1beta3\\GPBMetadata\352\002\032Akash::Deploy" +
+      "ment::V1beta3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

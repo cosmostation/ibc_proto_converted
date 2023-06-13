@@ -14,29 +14,3870 @@ public final class ParticipationrewardsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code quicksilver.participationrewards.v1.ProtocolDataType}
+   */
+  public enum ProtocolDataType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Undefined action (per protobuf spec)
+     * </pre>
+     *
+     * <code>ProtocolDataTypeUndefined = 0;</code>
+     */
+    ProtocolDataTypeUndefined(0),
+    /**
+     * <code>ProtocolDataTypeConnection = 1;</code>
+     */
+    ProtocolDataTypeConnection(1),
+    /**
+     * <code>ProtocolDataTypeOsmosisParams = 2;</code>
+     */
+    ProtocolDataTypeOsmosisParams(2),
+    /**
+     * <code>ProtocolDataTypeLiquidToken = 3;</code>
+     */
+    ProtocolDataTypeLiquidToken(3),
+    /**
+     * <code>ProtocolDataTypeOsmosisPool = 4;</code>
+     */
+    ProtocolDataTypeOsmosisPool(4),
+    /**
+     * <code>ProtocolDataTypeCrescentPool = 5;</code>
+     */
+    ProtocolDataTypeCrescentPool(5),
+    /**
+     * <code>ProtocolDataTypeSifchainPool = 6;</code>
+     */
+    ProtocolDataTypeSifchainPool(6),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Undefined action (per protobuf spec)
+     * </pre>
+     *
+     * <code>ProtocolDataTypeUndefined = 0;</code>
+     */
+    public static final int ProtocolDataTypeUndefined_VALUE = 0;
+    /**
+     * <code>ProtocolDataTypeConnection = 1;</code>
+     */
+    public static final int ProtocolDataTypeConnection_VALUE = 1;
+    /**
+     * <code>ProtocolDataTypeOsmosisParams = 2;</code>
+     */
+    public static final int ProtocolDataTypeOsmosisParams_VALUE = 2;
+    /**
+     * <code>ProtocolDataTypeLiquidToken = 3;</code>
+     */
+    public static final int ProtocolDataTypeLiquidToken_VALUE = 3;
+    /**
+     * <code>ProtocolDataTypeOsmosisPool = 4;</code>
+     */
+    public static final int ProtocolDataTypeOsmosisPool_VALUE = 4;
+    /**
+     * <code>ProtocolDataTypeCrescentPool = 5;</code>
+     */
+    public static final int ProtocolDataTypeCrescentPool_VALUE = 5;
+    /**
+     * <code>ProtocolDataTypeSifchainPool = 6;</code>
+     */
+    public static final int ProtocolDataTypeSifchainPool_VALUE = 6;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ProtocolDataType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ProtocolDataType forNumber(int value) {
+      switch (value) {
+        case 0: return ProtocolDataTypeUndefined;
+        case 1: return ProtocolDataTypeConnection;
+        case 2: return ProtocolDataTypeOsmosisParams;
+        case 3: return ProtocolDataTypeLiquidToken;
+        case 4: return ProtocolDataTypeOsmosisPool;
+        case 5: return ProtocolDataTypeCrescentPool;
+        case 6: return ProtocolDataTypeSifchainPool;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ProtocolDataType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ProtocolDataType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ProtocolDataType>() {
+            public ProtocolDataType findValueByNumber(int number) {
+              return ProtocolDataType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ProtocolDataType[] VALUES = values();
+
+    public static ProtocolDataType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ProtocolDataType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:quicksilver.participationrewards.v1.ProtocolDataType)
+  }
+
+  public interface DistributionProportionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.participationrewards.v1.DistributionProportions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The validatorSelectionAllocation.
+     */
+    java.lang.String getValidatorSelectionAllocation();
+    /**
+     * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for validatorSelectionAllocation.
+     */
+    com.google.protobuf.ByteString
+        getValidatorSelectionAllocationBytes();
+
+    /**
+     * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The holdingsAllocation.
+     */
+    java.lang.String getHoldingsAllocation();
+    /**
+     * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for holdingsAllocation.
+     */
+    com.google.protobuf.ByteString
+        getHoldingsAllocationBytes();
+
+    /**
+     * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The lockupAllocation.
+     */
+    java.lang.String getLockupAllocation();
+    /**
+     * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for lockupAllocation.
+     */
+    com.google.protobuf.ByteString
+        getLockupAllocationBytes();
+  }
+  /**
+   * <pre>
+   * DistributionProportions defines the proportions of minted QCK that is to be
+   * allocated as participation rewards.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.participationrewards.v1.DistributionProportions}
+   */
+  public static final class DistributionProportions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.participationrewards.v1.DistributionProportions)
+      DistributionProportionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DistributionProportions.newBuilder() to construct.
+    private DistributionProportions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DistributionProportions() {
+      validatorSelectionAllocation_ = "";
+      holdingsAllocation_ = "";
+      lockupAllocation_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DistributionProportions();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_DistributionProportions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_DistributionProportions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder.class);
+    }
+
+    public static final int VALIDATOR_SELECTION_ALLOCATION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorSelectionAllocation_ = "";
+    /**
+     * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The validatorSelectionAllocation.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorSelectionAllocation() {
+      java.lang.Object ref = validatorSelectionAllocation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorSelectionAllocation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for validatorSelectionAllocation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorSelectionAllocationBytes() {
+      java.lang.Object ref = validatorSelectionAllocation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorSelectionAllocation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOLDINGS_ALLOCATION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object holdingsAllocation_ = "";
+    /**
+     * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The holdingsAllocation.
+     */
+    @java.lang.Override
+    public java.lang.String getHoldingsAllocation() {
+      java.lang.Object ref = holdingsAllocation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        holdingsAllocation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for holdingsAllocation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHoldingsAllocationBytes() {
+      java.lang.Object ref = holdingsAllocation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        holdingsAllocation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCKUP_ALLOCATION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lockupAllocation_ = "";
+    /**
+     * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The lockupAllocation.
+     */
+    @java.lang.Override
+    public java.lang.String getLockupAllocation() {
+      java.lang.Object ref = lockupAllocation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lockupAllocation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for lockupAllocation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLockupAllocationBytes() {
+      java.lang.Object ref = lockupAllocation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lockupAllocation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorSelectionAllocation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorSelectionAllocation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(holdingsAllocation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, holdingsAllocation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockupAllocation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lockupAllocation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorSelectionAllocation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorSelectionAllocation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(holdingsAllocation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, holdingsAllocation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockupAllocation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lockupAllocation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions other = (com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions) obj;
+
+      if (!getValidatorSelectionAllocation()
+          .equals(other.getValidatorSelectionAllocation())) return false;
+      if (!getHoldingsAllocation()
+          .equals(other.getHoldingsAllocation())) return false;
+      if (!getLockupAllocation()
+          .equals(other.getLockupAllocation())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_SELECTION_ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorSelectionAllocation().hashCode();
+      hash = (37 * hash) + HOLDINGS_ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getHoldingsAllocation().hashCode();
+      hash = (37 * hash) + LOCKUP_ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLockupAllocation().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DistributionProportions defines the proportions of minted QCK that is to be
+     * allocated as participation rewards.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.participationrewards.v1.DistributionProportions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.participationrewards.v1.DistributionProportions)
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_DistributionProportions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_DistributionProportions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder.class);
+      }
+
+      // Construct using com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorSelectionAllocation_ = "";
+        holdingsAllocation_ = "";
+        lockupAllocation_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_DistributionProportions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDefaultInstanceForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions build() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions buildPartial() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions result = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorSelectionAllocation_ = validatorSelectionAllocation_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.holdingsAllocation_ = holdingsAllocation_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lockupAllocation_ = lockupAllocation_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions) {
+          return mergeFrom((com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions other) {
+        if (other == com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance()) return this;
+        if (!other.getValidatorSelectionAllocation().isEmpty()) {
+          validatorSelectionAllocation_ = other.validatorSelectionAllocation_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getHoldingsAllocation().isEmpty()) {
+          holdingsAllocation_ = other.holdingsAllocation_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getLockupAllocation().isEmpty()) {
+          lockupAllocation_ = other.lockupAllocation_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorSelectionAllocation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                holdingsAllocation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                lockupAllocation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorSelectionAllocation_ = "";
+      /**
+       * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The validatorSelectionAllocation.
+       */
+      public java.lang.String getValidatorSelectionAllocation() {
+        java.lang.Object ref = validatorSelectionAllocation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorSelectionAllocation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for validatorSelectionAllocation.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorSelectionAllocationBytes() {
+        java.lang.Object ref = validatorSelectionAllocation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorSelectionAllocation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The validatorSelectionAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorSelectionAllocation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorSelectionAllocation_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorSelectionAllocation() {
+        validatorSelectionAllocation_ = getDefaultInstance().getValidatorSelectionAllocation();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_selection_allocation = 1 [json_name = "validatorSelectionAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for validatorSelectionAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorSelectionAllocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorSelectionAllocation_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object holdingsAllocation_ = "";
+      /**
+       * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The holdingsAllocation.
+       */
+      public java.lang.String getHoldingsAllocation() {
+        java.lang.Object ref = holdingsAllocation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          holdingsAllocation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for holdingsAllocation.
+       */
+      public com.google.protobuf.ByteString
+          getHoldingsAllocationBytes() {
+        java.lang.Object ref = holdingsAllocation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          holdingsAllocation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The holdingsAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHoldingsAllocation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        holdingsAllocation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHoldingsAllocation() {
+        holdingsAllocation_ = getDefaultInstance().getHoldingsAllocation();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string holdings_allocation = 2 [json_name = "holdingsAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for holdingsAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHoldingsAllocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        holdingsAllocation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object lockupAllocation_ = "";
+      /**
+       * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The lockupAllocation.
+       */
+      public java.lang.String getLockupAllocation() {
+        java.lang.Object ref = lockupAllocation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lockupAllocation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for lockupAllocation.
+       */
+      public com.google.protobuf.ByteString
+          getLockupAllocationBytes() {
+        java.lang.Object ref = lockupAllocation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lockupAllocation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The lockupAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockupAllocation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        lockupAllocation_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockupAllocation() {
+        lockupAllocation_ = getDefaultInstance().getLockupAllocation();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string lockup_allocation = 3 [json_name = "lockupAllocation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for lockupAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockupAllocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        lockupAllocation_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.participationrewards.v1.DistributionProportions)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.participationrewards.v1.DistributionProportions)
+    private static final com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions();
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DistributionProportions>
+        PARSER = new com.google.protobuf.AbstractParser<DistributionProportions>() {
+      @java.lang.Override
+      public DistributionProportions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DistributionProportions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DistributionProportions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Params_v1OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.participationrewards.v1.Params_v1)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    boolean hasDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder();
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the participationrewards module.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.participationrewards.v1.Params_v1}
+   */
+  public static final class Params_v1 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.participationrewards.v1.Params_v1)
+      Params_v1OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params_v1.newBuilder() to construct.
+    private Params_v1(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params_v1() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params_v1();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_v1_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_v1_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.Builder.class);
+    }
+
+    public static final int DISTRIBUTION_PROPORTIONS_FIELD_NUMBER = 1;
+    private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions distributionProportions_;
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistributionProportions() {
+      return distributionProportions_ != null;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDistributionProportions() {
+      return distributionProportions_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+      return distributionProportions_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (distributionProportions_ != null) {
+        output.writeMessage(1, getDistributionProportions());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (distributionProportions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDistributionProportions());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 other = (com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1) obj;
+
+      if (hasDistributionProportions() != other.hasDistributionProportions()) return false;
+      if (hasDistributionProportions()) {
+        if (!getDistributionProportions()
+            .equals(other.getDistributionProportions())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDistributionProportions()) {
+        hash = (37 * hash) + DISTRIBUTION_PROPORTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDistributionProportions().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the participationrewards module.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.participationrewards.v1.Params_v1}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.participationrewards.v1.Params_v1)
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_v1_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_v1_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.Builder.class);
+      }
+
+      // Construct using com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_v1_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 getDefaultInstanceForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 build() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 buildPartial() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 result = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.distributionProportions_ = distributionProportionsBuilder_ == null
+              ? distributionProportions_
+              : distributionProportionsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1) {
+          return mergeFrom((com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 other) {
+        if (other == com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.getDefaultInstance()) return this;
+        if (other.hasDistributionProportions()) {
+          mergeDistributionProportions(other.getDistributionProportions());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDistributionProportionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions distributionProportions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder> distributionProportionsBuilder_;
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return Whether the distributionProportions field is set.
+       */
+      public boolean hasDistributionProportions() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return The distributionProportions.
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDistributionProportions() {
+        if (distributionProportionsBuilder_ == null) {
+          return distributionProportions_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        } else {
+          return distributionProportionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          distributionProportions_ = value;
+        } else {
+          distributionProportionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder builderForValue) {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportions_ = builderForValue.build();
+        } else {
+          distributionProportionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDistributionProportions(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            distributionProportions_ != null &&
+            distributionProportions_ != com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance()) {
+            getDistributionProportionsBuilder().mergeFrom(value);
+          } else {
+            distributionProportions_ = value;
+          }
+        } else {
+          distributionProportionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDistributionProportions() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder getDistributionProportionsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDistributionProportionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+        if (distributionProportionsBuilder_ != null) {
+          return distributionProportionsBuilder_.getMessageOrBuilder();
+        } else {
+          return distributionProportions_ == null ?
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder> 
+          getDistributionProportionsFieldBuilder() {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder>(
+                  getDistributionProportions(),
+                  getParentForChildren(),
+                  isClean());
+          distributionProportions_ = null;
+        }
+        return distributionProportionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.participationrewards.v1.Params_v1)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.participationrewards.v1.Params_v1)
+    private static final com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1();
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params_v1>
+        PARSER = new com.google.protobuf.AbstractParser<Params_v1>() {
+      @java.lang.Override
+      public Params_v1 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params_v1> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params_v1> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.participationrewards.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    boolean hasDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder();
+
+    /**
+     * <code>bool claims_enabled = 2 [json_name = "claimsEnabled"];</code>
+     * @return The claimsEnabled.
+     */
+    boolean getClaimsEnabled();
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the participationrewards module.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.participationrewards.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.participationrewards.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.Builder.class);
+    }
+
+    public static final int DISTRIBUTION_PROPORTIONS_FIELD_NUMBER = 1;
+    private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions distributionProportions_;
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistributionProportions() {
+      return distributionProportions_ != null;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDistributionProportions() {
+      return distributionProportions_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the proportions of the minted
+     * participation rewards;
+     * </pre>
+     *
+     * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+      return distributionProportions_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+
+    public static final int CLAIMS_ENABLED_FIELD_NUMBER = 2;
+    private boolean claimsEnabled_ = false;
+    /**
+     * <code>bool claims_enabled = 2 [json_name = "claimsEnabled"];</code>
+     * @return The claimsEnabled.
+     */
+    @java.lang.Override
+    public boolean getClaimsEnabled() {
+      return claimsEnabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (distributionProportions_ != null) {
+        output.writeMessage(1, getDistributionProportions());
+      }
+      if (claimsEnabled_ != false) {
+        output.writeBool(2, claimsEnabled_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (distributionProportions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDistributionProportions());
+      }
+      if (claimsEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, claimsEnabled_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params other = (com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params) obj;
+
+      if (hasDistributionProportions() != other.hasDistributionProportions()) return false;
+      if (hasDistributionProportions()) {
+        if (!getDistributionProportions()
+            .equals(other.getDistributionProportions())) return false;
+      }
+      if (getClaimsEnabled()
+          != other.getClaimsEnabled()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDistributionProportions()) {
+        hash = (37 * hash) + DISTRIBUTION_PROPORTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDistributionProportions().hashCode();
+      }
+      hash = (37 * hash) + CLAIMS_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getClaimsEnabled());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the participationrewards module.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.participationrewards.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.participationrewards.v1.Params)
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.Builder.class);
+      }
+
+      // Construct using com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        claimsEnabled_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params getDefaultInstanceForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params build() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params buildPartial() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params result = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.distributionProportions_ = distributionProportionsBuilder_ == null
+              ? distributionProportions_
+              : distributionProportionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.claimsEnabled_ = claimsEnabled_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params) {
+          return mergeFrom((com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params other) {
+        if (other == com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.getDefaultInstance()) return this;
+        if (other.hasDistributionProportions()) {
+          mergeDistributionProportions(other.getDistributionProportions());
+        }
+        if (other.getClaimsEnabled() != false) {
+          setClaimsEnabled(other.getClaimsEnabled());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDistributionProportionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                claimsEnabled_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions distributionProportions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder> distributionProportionsBuilder_;
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return Whether the distributionProportions field is set.
+       */
+      public boolean hasDistributionProportions() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return The distributionProportions.
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions getDistributionProportions() {
+        if (distributionProportionsBuilder_ == null) {
+          return distributionProportions_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        } else {
+          return distributionProportionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          distributionProportions_ = value;
+        } else {
+          distributionProportionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder builderForValue) {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportions_ = builderForValue.build();
+        } else {
+          distributionProportionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDistributionProportions(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            distributionProportions_ != null &&
+            distributionProportions_ != com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance()) {
+            getDistributionProportionsBuilder().mergeFrom(value);
+          } else {
+            distributionProportions_ = value;
+          }
+        } else {
+          distributionProportionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDistributionProportions() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder getDistributionProportionsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDistributionProportionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+        if (distributionProportionsBuilder_ != null) {
+          return distributionProportionsBuilder_.getMessageOrBuilder();
+        } else {
+          return distributionProportions_ == null ?
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportions of the minted
+       * participation rewards;
+       * </pre>
+       *
+       * <code>.quicksilver.participationrewards.v1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder> 
+          getDistributionProportionsFieldBuilder() {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportionsOrBuilder>(
+                  getDistributionProportions(),
+                  getParentForChildren(),
+                  isClean());
+          distributionProportions_ = null;
+        }
+        return distributionProportionsBuilder_;
+      }
+
+      private boolean claimsEnabled_ ;
+      /**
+       * <code>bool claims_enabled = 2 [json_name = "claimsEnabled"];</code>
+       * @return The claimsEnabled.
+       */
+      @java.lang.Override
+      public boolean getClaimsEnabled() {
+        return claimsEnabled_;
+      }
+      /**
+       * <code>bool claims_enabled = 2 [json_name = "claimsEnabled"];</code>
+       * @param value The claimsEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimsEnabled(boolean value) {
+
+        claimsEnabled_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool claims_enabled = 2 [json_name = "claimsEnabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimsEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        claimsEnabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.participationrewards.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.participationrewards.v1.Params)
+    private static final com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params();
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeyedProtocolDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.participationrewards.v1.KeyedProtocolData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+     * @return Whether the protocolData field is set.
+     */
+    boolean hasProtocolData();
+    /**
+     * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+     * @return The protocolData.
+     */
+    com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData getProtocolData();
+    /**
+     * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+     */
+    com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolDataOrBuilder getProtocolDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code quicksilver.participationrewards.v1.KeyedProtocolData}
+   */
+  public static final class KeyedProtocolData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.participationrewards.v1.KeyedProtocolData)
+      KeyedProtocolDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeyedProtocolData.newBuilder() to construct.
+    private KeyedProtocolData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeyedProtocolData() {
+      key_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeyedProtocolData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_KeyedProtocolData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_KeyedProtocolData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROTOCOL_DATA_FIELD_NUMBER = 2;
+    private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData protocolData_;
+    /**
+     * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+     * @return Whether the protocolData field is set.
+     */
+    @java.lang.Override
+    public boolean hasProtocolData() {
+      return protocolData_ != null;
+    }
+    /**
+     * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+     * @return The protocolData.
+     */
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData getProtocolData() {
+      return protocolData_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.getDefaultInstance() : protocolData_;
+    }
+    /**
+     * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolDataOrBuilder getProtocolDataOrBuilder() {
+      return protocolData_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.getDefaultInstance() : protocolData_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (protocolData_ != null) {
+        output.writeMessage(2, getProtocolData());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (protocolData_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getProtocolData());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData other = (com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (hasProtocolData() != other.hasProtocolData()) return false;
+      if (hasProtocolData()) {
+        if (!getProtocolData()
+            .equals(other.getProtocolData())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      if (hasProtocolData()) {
+        hash = (37 * hash) + PROTOCOL_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getProtocolData().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.participationrewards.v1.KeyedProtocolData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.participationrewards.v1.KeyedProtocolData)
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_KeyedProtocolData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_KeyedProtocolData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.Builder.class);
+      }
+
+      // Construct using com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = "";
+        protocolData_ = null;
+        if (protocolDataBuilder_ != null) {
+          protocolDataBuilder_.dispose();
+          protocolDataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_KeyedProtocolData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData getDefaultInstanceForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData build() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData buildPartial() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData result = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.protocolData_ = protocolDataBuilder_ == null
+              ? protocolData_
+              : protocolDataBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData) {
+          return mergeFrom((com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData other) {
+        if (other == com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasProtocolData()) {
+          mergeProtocolData(other.getProtocolData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getProtocolDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData protocolData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolDataOrBuilder> protocolDataBuilder_;
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       * @return Whether the protocolData field is set.
+       */
+      public boolean hasProtocolData() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       * @return The protocolData.
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData getProtocolData() {
+        if (protocolDataBuilder_ == null) {
+          return protocolData_ == null ? com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.getDefaultInstance() : protocolData_;
+        } else {
+          return protocolDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       */
+      public Builder setProtocolData(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData value) {
+        if (protocolDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          protocolData_ = value;
+        } else {
+          protocolDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       */
+      public Builder setProtocolData(
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.Builder builderForValue) {
+        if (protocolDataBuilder_ == null) {
+          protocolData_ = builderForValue.build();
+        } else {
+          protocolDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       */
+      public Builder mergeProtocolData(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData value) {
+        if (protocolDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            protocolData_ != null &&
+            protocolData_ != com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.getDefaultInstance()) {
+            getProtocolDataBuilder().mergeFrom(value);
+          } else {
+            protocolData_ = value;
+          }
+        } else {
+          protocolDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       */
+      public Builder clearProtocolData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        protocolData_ = null;
+        if (protocolDataBuilder_ != null) {
+          protocolDataBuilder_.dispose();
+          protocolDataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.Builder getProtocolDataBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getProtocolDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       */
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolDataOrBuilder getProtocolDataOrBuilder() {
+        if (protocolDataBuilder_ != null) {
+          return protocolDataBuilder_.getMessageOrBuilder();
+        } else {
+          return protocolData_ == null ?
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.getDefaultInstance() : protocolData_;
+        }
+      }
+      /**
+       * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolDataOrBuilder> 
+          getProtocolDataFieldBuilder() {
+        if (protocolDataBuilder_ == null) {
+          protocolDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.Builder, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolDataOrBuilder>(
+                  getProtocolData(),
+                  getParentForChildren(),
+                  isClean());
+          protocolData_ = null;
+        }
+        return protocolDataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.participationrewards.v1.KeyedProtocolData)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.participationrewards.v1.KeyedProtocolData)
+    private static final com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData();
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeyedProtocolData>
+        PARSER = new com.google.protobuf.AbstractParser<KeyedProtocolData>() {
+      @java.lang.Override
+      public KeyedProtocolData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeyedProtocolData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyedProtocolData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProtocolDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.participationrewards.v1.ProtocolData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>bytes data = 2 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * <pre>
+   * Protocol Data is an arbitrary data type held against a given zone for the
+   * determination of rewards.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.participationrewards.v1.ProtocolData}
+   */
+  public static final class ProtocolData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.participationrewards.v1.ProtocolData)
+      ProtocolDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProtocolData.newBuilder() to construct.
+    private ProtocolData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProtocolData() {
+      type_ = "";
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProtocolData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_ProtocolData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_ProtocolData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 2 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(2, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData other = (com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Protocol Data is an arbitrary data type held against a given zone for the
+     * determination of rewards.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.participationrewards.v1.ProtocolData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.participationrewards.v1.ProtocolData)
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_ProtocolData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_ProtocolData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.Builder.class);
+      }
+
+      // Construct using com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.internal_static_quicksilver_participationrewards_v1_ProtocolData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData getDefaultInstanceForType() {
+        return com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData build() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData buildPartial() {
+        com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData result = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData) {
+          return mergeFrom((com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData other) {
+        if (other == com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 2 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 2 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 2 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.participationrewards.v1.ProtocolData)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.participationrewards.v1.ProtocolData)
+    private static final com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData();
+    }
+
+    public static com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProtocolData>
+        PARSER = new com.google.protobuf.AbstractParser<ProtocolData>() {
+      @java.lang.Override
+      public ProtocolData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProtocolData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProtocolData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.participationrewards.v1.ParticipationrewardsProto.ProtocolData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_participationrewards_v1_DistributionProportions_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_participationrewards_v1_DistributionProportions_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_participationrewards_v1_Params_v1_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_participationrewards_v1_Params_v1_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_participationrewards_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_participationrewards_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_participationrewards_v1_KeyedProtocolData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_participationrewards_v1_KeyedProtocolData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_participationrewards_v1_ProtocolData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_participationrewards_v1_ProtocolData_fieldAccessorTable;
 
@@ -81,15 +3922,15 @@ public final class ParticipationrewardsProto {
       "ams\020\002\022\037\n\033ProtocolDataTypeLiquidToken\020\003\022\037" +
       "\n\033ProtocolDataTypeOsmosisPool\020\004\022 \n\034Proto" +
       "colDataTypeCrescentPool\020\005\022 \n\034ProtocolDat" +
-      "aTypeSifchainPool\020\006\032\004\210\243\036\000B\267\002\n\'com.quicks" +
+      "aTypeSifchainPool\020\006\032\004\210\243\036\000B\265\002\n\'com.quicks" +
       "ilver.participationrewards.v1B\031Participa" +
-      "tionrewardsProtoP\001ZCgithub.com/ingenuity" +
-      "-build/quicksilver/x/participationreward" +
-      "s/types\242\002\003QPX\252\002#Quicksilver.Participatio" +
-      "nrewards.V1\312\002#Quicksilver\\Participationr" +
-      "ewards\\V1\342\002/Quicksilver\\Participationrew" +
-      "ards\\V1\\GPBMetadata\352\002%Quicksilver::Parti" +
-      "cipationrewards::V1b\006proto3"
+      "tionrewardsProtoZCgithub.com/ingenuity-b" +
+      "uild/quicksilver/x/participationrewards/" +
+      "types\242\002\003QPX\252\002#Quicksilver.Participationr" +
+      "ewards.V1\312\002#Quicksilver\\Participationrew" +
+      "ards\\V1\342\002/Quicksilver\\Participationrewar" +
+      "ds\\V1\\GPBMetadata\352\002%Quicksilver::Partici" +
+      "pationrewards::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

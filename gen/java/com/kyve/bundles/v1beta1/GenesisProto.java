@@ -14,9 +14,1653 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.bundles.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.kyve.bundles.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.bundles.v1beta1.BundlesProto.BundleProposal> 
+        getBundleProposalListList();
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.BundleProposal getBundleProposalList(int index);
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    int getBundleProposalListCount();
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder> 
+        getBundleProposalListOrBuilderList();
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder getBundleProposalListOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> 
+        getFinalizedBundleListList();
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundleList(int index);
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    int getFinalizedBundleListCount();
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+        getFinalizedBundleListOrBuilderList();
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleListOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the bundles module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.bundles.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.bundles.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      bundleProposalList_ = java.util.Collections.emptyList();
+      finalizedBundleList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.bundles.v1beta1.GenesisProto.internal_static_kyve_bundles_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.bundles.v1beta1.GenesisProto.internal_static_kyve_bundles_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.bundles.v1beta1.GenesisProto.GenesisState.class, com.kyve.bundles.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.kyve.bundles.v1beta1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int BUNDLE_PROPOSAL_LIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.bundles.v1beta1.BundlesProto.BundleProposal> bundleProposalList_;
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.BundleProposal> getBundleProposalListList() {
+      return bundleProposalList_;
+    }
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder> 
+        getBundleProposalListOrBuilderList() {
+      return bundleProposalList_;
+    }
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBundleProposalListCount() {
+      return bundleProposalList_.size();
+    }
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.BundleProposal getBundleProposalList(int index) {
+      return bundleProposalList_.get(index);
+    }
+    /**
+     * <pre>
+     * bundle_proposal_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder getBundleProposalListOrBuilder(
+        int index) {
+      return bundleProposalList_.get(index);
+    }
+
+    public static final int FINALIZED_BUNDLE_LIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> finalizedBundleList_;
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> getFinalizedBundleListList() {
+      return finalizedBundleList_;
+    }
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+        getFinalizedBundleListOrBuilderList() {
+      return finalizedBundleList_;
+    }
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFinalizedBundleListCount() {
+      return finalizedBundleList_.size();
+    }
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundleList(int index) {
+      return finalizedBundleList_.get(index);
+    }
+    /**
+     * <pre>
+     * finalized_bundle_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleListOrBuilder(
+        int index) {
+      return finalizedBundleList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < bundleProposalList_.size(); i++) {
+        output.writeMessage(2, bundleProposalList_.get(i));
+      }
+      for (int i = 0; i < finalizedBundleList_.size(); i++) {
+        output.writeMessage(3, finalizedBundleList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < bundleProposalList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, bundleProposalList_.get(i));
+      }
+      for (int i = 0; i < finalizedBundleList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, finalizedBundleList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.bundles.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.kyve.bundles.v1beta1.GenesisProto.GenesisState other = (com.kyve.bundles.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getBundleProposalListList()
+          .equals(other.getBundleProposalListList())) return false;
+      if (!getFinalizedBundleListList()
+          .equals(other.getFinalizedBundleListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getBundleProposalListCount() > 0) {
+        hash = (37 * hash) + BUNDLE_PROPOSAL_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getBundleProposalListList().hashCode();
+      }
+      if (getFinalizedBundleListCount() > 0) {
+        hash = (37 * hash) + FINALIZED_BUNDLE_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getFinalizedBundleListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.bundles.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the bundles module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.bundles.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.bundles.v1beta1.GenesisState)
+        com.kyve.bundles.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.bundles.v1beta1.GenesisProto.internal_static_kyve_bundles_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.bundles.v1beta1.GenesisProto.internal_static_kyve_bundles_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.bundles.v1beta1.GenesisProto.GenesisState.class, com.kyve.bundles.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.kyve.bundles.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (bundleProposalListBuilder_ == null) {
+          bundleProposalList_ = java.util.Collections.emptyList();
+        } else {
+          bundleProposalList_ = null;
+          bundleProposalListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (finalizedBundleListBuilder_ == null) {
+          finalizedBundleList_ = java.util.Collections.emptyList();
+        } else {
+          finalizedBundleList_ = null;
+          finalizedBundleListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.bundles.v1beta1.GenesisProto.internal_static_kyve_bundles_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.bundles.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.kyve.bundles.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.bundles.v1beta1.GenesisProto.GenesisState build() {
+        com.kyve.bundles.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.bundles.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.kyve.bundles.v1beta1.GenesisProto.GenesisState result = new com.kyve.bundles.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.kyve.bundles.v1beta1.GenesisProto.GenesisState result) {
+        if (bundleProposalListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            bundleProposalList_ = java.util.Collections.unmodifiableList(bundleProposalList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.bundleProposalList_ = bundleProposalList_;
+        } else {
+          result.bundleProposalList_ = bundleProposalListBuilder_.build();
+        }
+        if (finalizedBundleListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            finalizedBundleList_ = java.util.Collections.unmodifiableList(finalizedBundleList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.finalizedBundleList_ = finalizedBundleList_;
+        } else {
+          result.finalizedBundleList_ = finalizedBundleListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.kyve.bundles.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.bundles.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.kyve.bundles.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.bundles.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.kyve.bundles.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (bundleProposalListBuilder_ == null) {
+          if (!other.bundleProposalList_.isEmpty()) {
+            if (bundleProposalList_.isEmpty()) {
+              bundleProposalList_ = other.bundleProposalList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureBundleProposalListIsMutable();
+              bundleProposalList_.addAll(other.bundleProposalList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bundleProposalList_.isEmpty()) {
+            if (bundleProposalListBuilder_.isEmpty()) {
+              bundleProposalListBuilder_.dispose();
+              bundleProposalListBuilder_ = null;
+              bundleProposalList_ = other.bundleProposalList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              bundleProposalListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBundleProposalListFieldBuilder() : null;
+            } else {
+              bundleProposalListBuilder_.addAllMessages(other.bundleProposalList_);
+            }
+          }
+        }
+        if (finalizedBundleListBuilder_ == null) {
+          if (!other.finalizedBundleList_.isEmpty()) {
+            if (finalizedBundleList_.isEmpty()) {
+              finalizedBundleList_ = other.finalizedBundleList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureFinalizedBundleListIsMutable();
+              finalizedBundleList_.addAll(other.finalizedBundleList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.finalizedBundleList_.isEmpty()) {
+            if (finalizedBundleListBuilder_.isEmpty()) {
+              finalizedBundleListBuilder_.dispose();
+              finalizedBundleListBuilder_ = null;
+              finalizedBundleList_ = other.finalizedBundleList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              finalizedBundleListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFinalizedBundleListFieldBuilder() : null;
+            } else {
+              finalizedBundleListBuilder_.addAllMessages(other.finalizedBundleList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.kyve.bundles.v1beta1.BundlesProto.BundleProposal m =
+                    input.readMessage(
+                        com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.parser(),
+                        extensionRegistry);
+                if (bundleProposalListBuilder_ == null) {
+                  ensureBundleProposalListIsMutable();
+                  bundleProposalList_.add(m);
+                } else {
+                  bundleProposalListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle m =
+                    input.readMessage(
+                        com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.parser(),
+                        extensionRegistry);
+                if (finalizedBundleListBuilder_ == null) {
+                  ensureFinalizedBundleListIsMutable();
+                  finalizedBundleList_.add(m);
+                } else {
+                  finalizedBundleListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.kyve.bundles.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.bundles.v1beta1.ParamsProto.Params, com.kyve.bundles.v1beta1.ParamsProto.Params.Builder, com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.kyve.bundles.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.kyve.bundles.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.kyve.bundles.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.kyve.bundles.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.bundles.v1beta1.ParamsProto.Params, com.kyve.bundles.v1beta1.ParamsProto.Params.Builder, com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.bundles.v1beta1.ParamsProto.Params, com.kyve.bundles.v1beta1.ParamsProto.Params.Builder, com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.kyve.bundles.v1beta1.BundlesProto.BundleProposal> bundleProposalList_ =
+        java.util.Collections.emptyList();
+      private void ensureBundleProposalListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          bundleProposalList_ = new java.util.ArrayList<com.kyve.bundles.v1beta1.BundlesProto.BundleProposal>(bundleProposalList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.BundleProposal, com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder, com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder> bundleProposalListBuilder_;
+
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.BundleProposal> getBundleProposalListList() {
+        if (bundleProposalListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bundleProposalList_);
+        } else {
+          return bundleProposalListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBundleProposalListCount() {
+        if (bundleProposalListBuilder_ == null) {
+          return bundleProposalList_.size();
+        } else {
+          return bundleProposalListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.BundleProposal getBundleProposalList(int index) {
+        if (bundleProposalListBuilder_ == null) {
+          return bundleProposalList_.get(index);
+        } else {
+          return bundleProposalListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBundleProposalList(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.BundleProposal value) {
+        if (bundleProposalListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBundleProposalListIsMutable();
+          bundleProposalList_.set(index, value);
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBundleProposalList(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder builderForValue) {
+        if (bundleProposalListBuilder_ == null) {
+          ensureBundleProposalListIsMutable();
+          bundleProposalList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBundleProposalList(com.kyve.bundles.v1beta1.BundlesProto.BundleProposal value) {
+        if (bundleProposalListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBundleProposalListIsMutable();
+          bundleProposalList_.add(value);
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBundleProposalList(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.BundleProposal value) {
+        if (bundleProposalListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBundleProposalListIsMutable();
+          bundleProposalList_.add(index, value);
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBundleProposalList(
+          com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder builderForValue) {
+        if (bundleProposalListBuilder_ == null) {
+          ensureBundleProposalListIsMutable();
+          bundleProposalList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBundleProposalList(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder builderForValue) {
+        if (bundleProposalListBuilder_ == null) {
+          ensureBundleProposalListIsMutable();
+          bundleProposalList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBundleProposalList(
+          java.lang.Iterable<? extends com.kyve.bundles.v1beta1.BundlesProto.BundleProposal> values) {
+        if (bundleProposalListBuilder_ == null) {
+          ensureBundleProposalListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bundleProposalList_);
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBundleProposalList() {
+        if (bundleProposalListBuilder_ == null) {
+          bundleProposalList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBundleProposalList(int index) {
+        if (bundleProposalListBuilder_ == null) {
+          ensureBundleProposalListIsMutable();
+          bundleProposalList_.remove(index);
+          onChanged();
+        } else {
+          bundleProposalListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder getBundleProposalListBuilder(
+          int index) {
+        return getBundleProposalListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder getBundleProposalListOrBuilder(
+          int index) {
+        if (bundleProposalListBuilder_ == null) {
+          return bundleProposalList_.get(index);  } else {
+          return bundleProposalListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder> 
+           getBundleProposalListOrBuilderList() {
+        if (bundleProposalListBuilder_ != null) {
+          return bundleProposalListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bundleProposalList_);
+        }
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder addBundleProposalListBuilder() {
+        return getBundleProposalListFieldBuilder().addBuilder(
+            com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder addBundleProposalListBuilder(
+          int index) {
+        return getBundleProposalListFieldBuilder().addBuilder(
+            index, com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * bundle_proposal_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.BundleProposal bundle_proposal_list = 2 [json_name = "bundleProposalList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder> 
+           getBundleProposalListBuilderList() {
+        return getBundleProposalListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.BundleProposal, com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder, com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder> 
+          getBundleProposalListFieldBuilder() {
+        if (bundleProposalListBuilder_ == null) {
+          bundleProposalListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.bundles.v1beta1.BundlesProto.BundleProposal, com.kyve.bundles.v1beta1.BundlesProto.BundleProposal.Builder, com.kyve.bundles.v1beta1.BundlesProto.BundleProposalOrBuilder>(
+                  bundleProposalList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bundleProposalList_ = null;
+        }
+        return bundleProposalListBuilder_;
+      }
+
+      private java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> finalizedBundleList_ =
+        java.util.Collections.emptyList();
+      private void ensureFinalizedBundleListIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          finalizedBundleList_ = new java.util.ArrayList<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle>(finalizedBundleList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> finalizedBundleListBuilder_;
+
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> getFinalizedBundleListList() {
+        if (finalizedBundleListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(finalizedBundleList_);
+        } else {
+          return finalizedBundleListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFinalizedBundleListCount() {
+        if (finalizedBundleListBuilder_ == null) {
+          return finalizedBundleList_.size();
+        } else {
+          return finalizedBundleListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundleList(int index) {
+        if (finalizedBundleListBuilder_ == null) {
+          return finalizedBundleList_.get(index);
+        } else {
+          return finalizedBundleListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFinalizedBundleList(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalizedBundleListIsMutable();
+          finalizedBundleList_.set(index, value);
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFinalizedBundleList(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder builderForValue) {
+        if (finalizedBundleListBuilder_ == null) {
+          ensureFinalizedBundleListIsMutable();
+          finalizedBundleList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFinalizedBundleList(com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalizedBundleListIsMutable();
+          finalizedBundleList_.add(value);
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFinalizedBundleList(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalizedBundleListIsMutable();
+          finalizedBundleList_.add(index, value);
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFinalizedBundleList(
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder builderForValue) {
+        if (finalizedBundleListBuilder_ == null) {
+          ensureFinalizedBundleListIsMutable();
+          finalizedBundleList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFinalizedBundleList(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder builderForValue) {
+        if (finalizedBundleListBuilder_ == null) {
+          ensureFinalizedBundleListIsMutable();
+          finalizedBundleList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFinalizedBundleList(
+          java.lang.Iterable<? extends com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> values) {
+        if (finalizedBundleListBuilder_ == null) {
+          ensureFinalizedBundleListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, finalizedBundleList_);
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFinalizedBundleList() {
+        if (finalizedBundleListBuilder_ == null) {
+          finalizedBundleList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFinalizedBundleList(int index) {
+        if (finalizedBundleListBuilder_ == null) {
+          ensureFinalizedBundleListIsMutable();
+          finalizedBundleList_.remove(index);
+          onChanged();
+        } else {
+          finalizedBundleListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder getFinalizedBundleListBuilder(
+          int index) {
+        return getFinalizedBundleListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleListOrBuilder(
+          int index) {
+        if (finalizedBundleListBuilder_ == null) {
+          return finalizedBundleList_.get(index);  } else {
+          return finalizedBundleListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+           getFinalizedBundleListOrBuilderList() {
+        if (finalizedBundleListBuilder_ != null) {
+          return finalizedBundleListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(finalizedBundleList_);
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder addFinalizedBundleListBuilder() {
+        return getFinalizedBundleListFieldBuilder().addBuilder(
+            com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder addFinalizedBundleListBuilder(
+          int index) {
+        return getFinalizedBundleListFieldBuilder().addBuilder(
+            index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * finalized_bundle_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundle_list = 3 [json_name = "finalizedBundleList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder> 
+           getFinalizedBundleListBuilderList() {
+        return getFinalizedBundleListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+          getFinalizedBundleListFieldBuilder() {
+        if (finalizedBundleListBuilder_ == null) {
+          finalizedBundleListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder>(
+                  finalizedBundleList_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          finalizedBundleList_ = null;
+        }
+        return finalizedBundleListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.bundles.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.bundles.v1beta1.GenesisState)
+    private static final com.kyve.bundles.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.bundles.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.kyve.bundles.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_bundles_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_bundles_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -38,12 +1682,12 @@ public final class GenesisProto {
       "1.BundleProposalB\004\310\336\037\000R\022bundleProposalLi" +
       "st\022_\n\025finalized_bundle_list\030\003 \003(\0132%.kyve" +
       ".bundles.v1beta1.FinalizedBundleB\004\310\336\037\000R\023" +
-      "finalizedBundleListB\310\001\n\030com.kyve.bundles" +
-      ".v1beta1B\014GenesisProtoP\001Z,github.com/KYV" +
-      "ENetwork/chain/x/bundles/types\242\002\003KBX\252\002\024K" +
-      "yve.Bundles.V1beta1\312\002\024Kyve\\Bundles\\V1bet" +
-      "a1\342\002 Kyve\\Bundles\\V1beta1\\GPBMetadata\352\002\026" +
-      "Kyve::Bundles::V1beta1b\006proto3"
+      "finalizedBundleListB\306\001\n\030com.kyve.bundles" +
+      ".v1beta1B\014GenesisProtoZ,github.com/KYVEN" +
+      "etwork/chain/x/bundles/types\242\002\003KBX\252\002\024Kyv" +
+      "e.Bundles.V1beta1\312\002\024Kyve\\Bundles\\V1beta1" +
+      "\342\002 Kyve\\Bundles\\V1beta1\\GPBMetadata\352\002\026Ky" +
+      "ve::Bundles::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

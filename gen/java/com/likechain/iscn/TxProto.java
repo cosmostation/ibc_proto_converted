@@ -14,39 +14,5499 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface IscnRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.IscnRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Using camelCases to make the record JSON in tx more like general JSON documents
+     * </pre>
+     *
+     * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+     * @return The recordNotes.
+     */
+    java.lang.String getRecordNotes();
+    /**
+     * <pre>
+     * Using camelCases to make the record JSON in tx more like general JSON documents
+     * </pre>
+     *
+     * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+     * @return The bytes for recordNotes.
+     */
+    com.google.protobuf.ByteString
+        getRecordNotesBytes();
+
+    /**
+     * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+     * @return A list containing the contentFingerprints.
+     */
+    java.util.List<java.lang.String>
+        getContentFingerprintsList();
+    /**
+     * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+     * @return The count of contentFingerprints.
+     */
+    int getContentFingerprintsCount();
+    /**
+     * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+     * @param index The index of the element to return.
+     * @return The contentFingerprints at the given index.
+     */
+    java.lang.String getContentFingerprints(int index);
+    /**
+     * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the contentFingerprints at the given index.
+     */
+    com.google.protobuf.ByteString
+        getContentFingerprintsBytes(int index);
+
+    /**
+     * <pre>
+     * Here, `IscnInput` is JSON encoded bytes
+     * </pre>
+     *
+     * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+     * @return A list containing the stakeholders.
+     */
+    java.util.List<com.google.protobuf.ByteString> getStakeholdersList();
+    /**
+     * <pre>
+     * Here, `IscnInput` is JSON encoded bytes
+     * </pre>
+     *
+     * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+     * @return The count of stakeholders.
+     */
+    int getStakeholdersCount();
+    /**
+     * <pre>
+     * Here, `IscnInput` is JSON encoded bytes
+     * </pre>
+     *
+     * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+     * @param index The index of the element to return.
+     * @return The stakeholders at the given index.
+     */
+    com.google.protobuf.ByteString getStakeholders(int index);
+
+    /**
+     * <code>bytes contentMetadata = 4 [json_name = "contentMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+     * @return The contentMetadata.
+     */
+    com.google.protobuf.ByteString getContentMetadata();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.IscnRecord}
+   */
+  public static final class IscnRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.IscnRecord)
+      IscnRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IscnRecord.newBuilder() to construct.
+    private IscnRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IscnRecord() {
+      recordNotes_ = "";
+      contentFingerprints_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      stakeholders_ = java.util.Collections.emptyList();
+      contentMetadata_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IscnRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_IscnRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_IscnRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.TxProto.IscnRecord.class, com.likechain.iscn.TxProto.IscnRecord.Builder.class);
+    }
+
+    public static final int RECORDNOTES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordNotes_ = "";
+    /**
+     * <pre>
+     * Using camelCases to make the record JSON in tx more like general JSON documents
+     * </pre>
+     *
+     * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+     * @return The recordNotes.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordNotes() {
+      java.lang.Object ref = recordNotes_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordNotes_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Using camelCases to make the record JSON in tx more like general JSON documents
+     * </pre>
+     *
+     * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+     * @return The bytes for recordNotes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordNotesBytes() {
+      java.lang.Object ref = recordNotes_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordNotes_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENTFINGERPRINTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList contentFingerprints_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+     * @return A list containing the contentFingerprints.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getContentFingerprintsList() {
+      return contentFingerprints_;
+    }
+    /**
+     * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+     * @return The count of contentFingerprints.
+     */
+    public int getContentFingerprintsCount() {
+      return contentFingerprints_.size();
+    }
+    /**
+     * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+     * @param index The index of the element to return.
+     * @return The contentFingerprints at the given index.
+     */
+    public java.lang.String getContentFingerprints(int index) {
+      return contentFingerprints_.get(index);
+    }
+    /**
+     * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the contentFingerprints at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getContentFingerprintsBytes(int index) {
+      return contentFingerprints_.getByteString(index);
+    }
+
+    public static final int STAKEHOLDERS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.ByteString> stakeholders_;
+    /**
+     * <pre>
+     * Here, `IscnInput` is JSON encoded bytes
+     * </pre>
+     *
+     * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+     * @return A list containing the stakeholders.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getStakeholdersList() {
+      return stakeholders_;
+    }
+    /**
+     * <pre>
+     * Here, `IscnInput` is JSON encoded bytes
+     * </pre>
+     *
+     * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+     * @return The count of stakeholders.
+     */
+    public int getStakeholdersCount() {
+      return stakeholders_.size();
+    }
+    /**
+     * <pre>
+     * Here, `IscnInput` is JSON encoded bytes
+     * </pre>
+     *
+     * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+     * @param index The index of the element to return.
+     * @return The stakeholders at the given index.
+     */
+    public com.google.protobuf.ByteString getStakeholders(int index) {
+      return stakeholders_.get(index);
+    }
+
+    public static final int CONTENTMETADATA_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString contentMetadata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes contentMetadata = 4 [json_name = "contentMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+     * @return The contentMetadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContentMetadata() {
+      return contentMetadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordNotes_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordNotes_);
+      }
+      for (int i = 0; i < contentFingerprints_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contentFingerprints_.getRaw(i));
+      }
+      for (int i = 0; i < stakeholders_.size(); i++) {
+        output.writeBytes(3, stakeholders_.get(i));
+      }
+      if (!contentMetadata_.isEmpty()) {
+        output.writeBytes(4, contentMetadata_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordNotes_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordNotes_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contentFingerprints_.size(); i++) {
+          dataSize += computeStringSizeNoTag(contentFingerprints_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getContentFingerprintsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < stakeholders_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(stakeholders_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getStakeholdersList().size();
+      }
+      if (!contentMetadata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, contentMetadata_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.TxProto.IscnRecord)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.TxProto.IscnRecord other = (com.likechain.iscn.TxProto.IscnRecord) obj;
+
+      if (!getRecordNotes()
+          .equals(other.getRecordNotes())) return false;
+      if (!getContentFingerprintsList()
+          .equals(other.getContentFingerprintsList())) return false;
+      if (!getStakeholdersList()
+          .equals(other.getStakeholdersList())) return false;
+      if (!getContentMetadata()
+          .equals(other.getContentMetadata())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORDNOTES_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordNotes().hashCode();
+      if (getContentFingerprintsCount() > 0) {
+        hash = (37 * hash) + CONTENTFINGERPRINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContentFingerprintsList().hashCode();
+      }
+      if (getStakeholdersCount() > 0) {
+        hash = (37 * hash) + STAKEHOLDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakeholdersList().hashCode();
+      }
+      hash = (37 * hash) + CONTENTMETADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getContentMetadata().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.TxProto.IscnRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.TxProto.IscnRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.IscnRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.TxProto.IscnRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.IscnRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.IscnRecord)
+        com.likechain.iscn.TxProto.IscnRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_IscnRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_IscnRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.TxProto.IscnRecord.class, com.likechain.iscn.TxProto.IscnRecord.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.TxProto.IscnRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordNotes_ = "";
+        contentFingerprints_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        stakeholders_ = java.util.Collections.emptyList();
+        contentMetadata_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_IscnRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.IscnRecord getDefaultInstanceForType() {
+        return com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.IscnRecord build() {
+        com.likechain.iscn.TxProto.IscnRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.IscnRecord buildPartial() {
+        com.likechain.iscn.TxProto.IscnRecord result = new com.likechain.iscn.TxProto.IscnRecord(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.likechain.iscn.TxProto.IscnRecord result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          stakeholders_ = java.util.Collections.unmodifiableList(stakeholders_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.stakeholders_ = stakeholders_;
+      }
+
+      private void buildPartial0(com.likechain.iscn.TxProto.IscnRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordNotes_ = recordNotes_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          contentFingerprints_.makeImmutable();
+          result.contentFingerprints_ = contentFingerprints_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.contentMetadata_ = contentMetadata_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.TxProto.IscnRecord) {
+          return mergeFrom((com.likechain.iscn.TxProto.IscnRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.TxProto.IscnRecord other) {
+        if (other == com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance()) return this;
+        if (!other.getRecordNotes().isEmpty()) {
+          recordNotes_ = other.recordNotes_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.contentFingerprints_.isEmpty()) {
+          if (contentFingerprints_.isEmpty()) {
+            contentFingerprints_ = other.contentFingerprints_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureContentFingerprintsIsMutable();
+            contentFingerprints_.addAll(other.contentFingerprints_);
+          }
+          onChanged();
+        }
+        if (!other.stakeholders_.isEmpty()) {
+          if (stakeholders_.isEmpty()) {
+            stakeholders_ = other.stakeholders_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureStakeholdersIsMutable();
+            stakeholders_.addAll(other.stakeholders_);
+          }
+          onChanged();
+        }
+        if (other.getContentMetadata() != com.google.protobuf.ByteString.EMPTY) {
+          setContentMetadata(other.getContentMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordNotes_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureContentFingerprintsIsMutable();
+                contentFingerprints_.add(s);
+                break;
+              } // case 18
+              case 26: {
+                com.google.protobuf.ByteString v = input.readBytes();
+                ensureStakeholdersIsMutable();
+                stakeholders_.add(v);
+                break;
+              } // case 26
+              case 34: {
+                contentMetadata_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recordNotes_ = "";
+      /**
+       * <pre>
+       * Using camelCases to make the record JSON in tx more like general JSON documents
+       * </pre>
+       *
+       * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+       * @return The recordNotes.
+       */
+      public java.lang.String getRecordNotes() {
+        java.lang.Object ref = recordNotes_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordNotes_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Using camelCases to make the record JSON in tx more like general JSON documents
+       * </pre>
+       *
+       * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+       * @return The bytes for recordNotes.
+       */
+      public com.google.protobuf.ByteString
+          getRecordNotesBytes() {
+        java.lang.Object ref = recordNotes_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordNotes_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Using camelCases to make the record JSON in tx more like general JSON documents
+       * </pre>
+       *
+       * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+       * @param value The recordNotes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordNotes(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordNotes_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Using camelCases to make the record JSON in tx more like general JSON documents
+       * </pre>
+       *
+       * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordNotes() {
+        recordNotes_ = getDefaultInstance().getRecordNotes();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Using camelCases to make the record JSON in tx more like general JSON documents
+       * </pre>
+       *
+       * <code>string recordNotes = 1 [json_name = "recordNotes"];</code>
+       * @param value The bytes for recordNotes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordNotesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordNotes_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList contentFingerprints_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureContentFingerprintsIsMutable() {
+        if (!contentFingerprints_.isModifiable()) {
+          contentFingerprints_ = new com.google.protobuf.LazyStringArrayList(contentFingerprints_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @return A list containing the contentFingerprints.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getContentFingerprintsList() {
+        contentFingerprints_.makeImmutable();
+        return contentFingerprints_;
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @return The count of contentFingerprints.
+       */
+      public int getContentFingerprintsCount() {
+        return contentFingerprints_.size();
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @param index The index of the element to return.
+       * @return The contentFingerprints at the given index.
+       */
+      public java.lang.String getContentFingerprints(int index) {
+        return contentFingerprints_.get(index);
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the contentFingerprints at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getContentFingerprintsBytes(int index) {
+        return contentFingerprints_.getByteString(index);
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @param index The index to set the value at.
+       * @param value The contentFingerprints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentFingerprints(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContentFingerprintsIsMutable();
+        contentFingerprints_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @param value The contentFingerprints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContentFingerprints(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContentFingerprintsIsMutable();
+        contentFingerprints_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @param values The contentFingerprints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContentFingerprints(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureContentFingerprintsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contentFingerprints_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentFingerprints() {
+        contentFingerprints_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string contentFingerprints = 2 [json_name = "contentFingerprints"];</code>
+       * @param value The bytes of the contentFingerprints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContentFingerprintsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureContentFingerprintsIsMutable();
+        contentFingerprints_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.protobuf.ByteString> stakeholders_ = java.util.Collections.emptyList();
+      private void ensureStakeholdersIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          stakeholders_ = new java.util.ArrayList<com.google.protobuf.ByteString>(stakeholders_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <pre>
+       * Here, `IscnInput` is JSON encoded bytes
+       * </pre>
+       *
+       * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+       * @return A list containing the stakeholders.
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getStakeholdersList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(stakeholders_) : stakeholders_;
+      }
+      /**
+       * <pre>
+       * Here, `IscnInput` is JSON encoded bytes
+       * </pre>
+       *
+       * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+       * @return The count of stakeholders.
+       */
+      public int getStakeholdersCount() {
+        return stakeholders_.size();
+      }
+      /**
+       * <pre>
+       * Here, `IscnInput` is JSON encoded bytes
+       * </pre>
+       *
+       * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+       * @param index The index of the element to return.
+       * @return The stakeholders at the given index.
+       */
+      public com.google.protobuf.ByteString getStakeholders(int index) {
+        return stakeholders_.get(index);
+      }
+      /**
+       * <pre>
+       * Here, `IscnInput` is JSON encoded bytes
+       * </pre>
+       *
+       * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+       * @param index The index to set the value at.
+       * @param value The stakeholders to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakeholders(
+          int index, com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureStakeholdersIsMutable();
+        stakeholders_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Here, `IscnInput` is JSON encoded bytes
+       * </pre>
+       *
+       * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+       * @param value The stakeholders to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStakeholders(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureStakeholdersIsMutable();
+        stakeholders_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Here, `IscnInput` is JSON encoded bytes
+       * </pre>
+       *
+       * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+       * @param values The stakeholders to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStakeholders(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        ensureStakeholdersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, stakeholders_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Here, `IscnInput` is JSON encoded bytes
+       * </pre>
+       *
+       * <code>repeated bytes stakeholders = 3 [json_name = "stakeholders", (.gogoproto.customtype) = "IscnInput"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakeholders() {
+        stakeholders_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString contentMetadata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes contentMetadata = 4 [json_name = "contentMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+       * @return The contentMetadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getContentMetadata() {
+        return contentMetadata_;
+      }
+      /**
+       * <code>bytes contentMetadata = 4 [json_name = "contentMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+       * @param value The contentMetadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentMetadata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        contentMetadata_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes contentMetadata = 4 [json_name = "contentMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        contentMetadata_ = getDefaultInstance().getContentMetadata();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.IscnRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.IscnRecord)
+    private static final com.likechain.iscn.TxProto.IscnRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.TxProto.IscnRecord();
+    }
+
+    public static com.likechain.iscn.TxProto.IscnRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IscnRecord>
+        PARSER = new com.google.protobuf.AbstractParser<IscnRecord>() {
+      @java.lang.Override
+      public IscnRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IscnRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IscnRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.IscnRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateIscnRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.MsgCreateIscnRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    boolean hasRecord();
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    com.likechain.iscn.TxProto.IscnRecord getRecord();
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.iscn.TxProto.IscnRecordOrBuilder getRecordOrBuilder();
+
+    /**
+     * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
+     * @return The nonce.
+     */
+    long getNonce();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.MsgCreateIscnRecord}
+   */
+  public static final class MsgCreateIscnRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.MsgCreateIscnRecord)
+      MsgCreateIscnRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateIscnRecord.newBuilder() to construct.
+    private MsgCreateIscnRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateIscnRecord() {
+      from_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateIscnRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.TxProto.MsgCreateIscnRecord.class, com.likechain.iscn.TxProto.MsgCreateIscnRecord.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 2;
+    private com.likechain.iscn.TxProto.IscnRecord record_;
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.IscnRecord getRecord() {
+      return record_ == null ? com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance() : record_;
+    }
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.IscnRecordOrBuilder getRecordOrBuilder() {
+      return record_ == null ? com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance() : record_;
+    }
+
+    public static final int NONCE_FIELD_NUMBER = 3;
+    private long nonce_ = 0L;
+    /**
+     * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
+     * @return The nonce.
+     */
+    @java.lang.Override
+    public long getNonce() {
+      return nonce_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (record_ != null) {
+        output.writeMessage(2, getRecord());
+      }
+      if (nonce_ != 0L) {
+        output.writeUInt64(3, nonce_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRecord());
+      }
+      if (nonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, nonce_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.TxProto.MsgCreateIscnRecord)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.TxProto.MsgCreateIscnRecord other = (com.likechain.iscn.TxProto.MsgCreateIscnRecord) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (hasRecord() != other.hasRecord()) return false;
+      if (hasRecord()) {
+        if (!getRecord()
+            .equals(other.getRecord())) return false;
+      }
+      if (getNonce()
+          != other.getNonce()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (37 * hash) + NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNonce());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.TxProto.MsgCreateIscnRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.MsgCreateIscnRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.MsgCreateIscnRecord)
+        com.likechain.iscn.TxProto.MsgCreateIscnRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.TxProto.MsgCreateIscnRecord.class, com.likechain.iscn.TxProto.MsgCreateIscnRecord.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.TxProto.MsgCreateIscnRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        nonce_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgCreateIscnRecord getDefaultInstanceForType() {
+        return com.likechain.iscn.TxProto.MsgCreateIscnRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgCreateIscnRecord build() {
+        com.likechain.iscn.TxProto.MsgCreateIscnRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgCreateIscnRecord buildPartial() {
+        com.likechain.iscn.TxProto.MsgCreateIscnRecord result = new com.likechain.iscn.TxProto.MsgCreateIscnRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.TxProto.MsgCreateIscnRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.record_ = recordBuilder_ == null
+              ? record_
+              : recordBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nonce_ = nonce_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.TxProto.MsgCreateIscnRecord) {
+          return mergeFrom((com.likechain.iscn.TxProto.MsgCreateIscnRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.TxProto.MsgCreateIscnRecord other) {
+        if (other == com.likechain.iscn.TxProto.MsgCreateIscnRecord.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        if (other.getNonce() != 0L) {
+          setNonce(other.getNonce());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                nonce_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.likechain.iscn.TxProto.IscnRecord record_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.iscn.TxProto.IscnRecord, com.likechain.iscn.TxProto.IscnRecord.Builder, com.likechain.iscn.TxProto.IscnRecordOrBuilder> recordBuilder_;
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return Whether the record field is set.
+       */
+      public boolean hasRecord() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return The record.
+       */
+      public com.likechain.iscn.TxProto.IscnRecord getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(com.likechain.iscn.TxProto.IscnRecord value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(
+          com.likechain.iscn.TxProto.IscnRecord.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRecord(com.likechain.iscn.TxProto.IscnRecord value) {
+        if (recordBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            record_ != null &&
+            record_ != com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance()) {
+            getRecordBuilder().mergeFrom(value);
+          } else {
+            record_ = value;
+          }
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.iscn.TxProto.IscnRecord.Builder getRecordBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.iscn.TxProto.IscnRecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.iscn.TxProto.IscnRecord, com.likechain.iscn.TxProto.IscnRecord.Builder, com.likechain.iscn.TxProto.IscnRecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.iscn.TxProto.IscnRecord, com.likechain.iscn.TxProto.IscnRecord.Builder, com.likechain.iscn.TxProto.IscnRecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+
+      private long nonce_ ;
+      /**
+       * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
+       * @return The nonce.
+       */
+      @java.lang.Override
+      public long getNonce() {
+        return nonce_;
+      }
+      /**
+       * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
+       * @param value The nonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNonce(long value) {
+
+        nonce_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 nonce = 3 [json_name = "nonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNonce() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nonce_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.MsgCreateIscnRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.MsgCreateIscnRecord)
+    private static final com.likechain.iscn.TxProto.MsgCreateIscnRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.TxProto.MsgCreateIscnRecord();
+    }
+
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateIscnRecord>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateIscnRecord>() {
+      @java.lang.Override
+      public MsgCreateIscnRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateIscnRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateIscnRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.MsgCreateIscnRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateIscnRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.MsgCreateIscnRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+     * @return The iscnId.
+     */
+    java.lang.String getIscnId();
+    /**
+     * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+     * @return The bytes for iscnId.
+     */
+    com.google.protobuf.ByteString
+        getIscnIdBytes();
+
+    /**
+     * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+     * @return The recordIpld.
+     */
+    java.lang.String getRecordIpld();
+    /**
+     * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+     * @return The bytes for recordIpld.
+     */
+    com.google.protobuf.ByteString
+        getRecordIpldBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.MsgCreateIscnRecordResponse}
+   */
+  public static final class MsgCreateIscnRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.MsgCreateIscnRecordResponse)
+      MsgCreateIscnRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateIscnRecordResponse.newBuilder() to construct.
+    private MsgCreateIscnRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateIscnRecordResponse() {
+      iscnId_ = "";
+      recordIpld_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateIscnRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse.class, com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse.Builder.class);
+    }
+
+    public static final int ISCN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iscnId_ = "";
+    /**
+     * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+     * @return The iscnId.
+     */
+    @java.lang.Override
+    public java.lang.String getIscnId() {
+      java.lang.Object ref = iscnId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iscnId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+     * @return The bytes for iscnId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIscnIdBytes() {
+      java.lang.Object ref = iscnId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iscnId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_IPLD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordIpld_ = "";
+    /**
+     * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+     * @return The recordIpld.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordIpld() {
+      java.lang.Object ref = recordIpld_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordIpld_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+     * @return The bytes for recordIpld.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordIpldBytes() {
+      java.lang.Object ref = recordIpld_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordIpld_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iscnId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordIpld_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recordIpld_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iscnId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordIpld_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recordIpld_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse other = (com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse) obj;
+
+      if (!getIscnId()
+          .equals(other.getIscnId())) return false;
+      if (!getRecordIpld()
+          .equals(other.getRecordIpld())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISCN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getIscnId().hashCode();
+      hash = (37 * hash) + RECORD_IPLD_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordIpld().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.MsgCreateIscnRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.MsgCreateIscnRecordResponse)
+        com.likechain.iscn.TxProto.MsgCreateIscnRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse.class, com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iscnId_ = "";
+        recordIpld_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgCreateIscnRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse getDefaultInstanceForType() {
+        return com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse build() {
+        com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse buildPartial() {
+        com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse result = new com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iscnId_ = iscnId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recordIpld_ = recordIpld_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse) {
+          return mergeFrom((com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse other) {
+        if (other == com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse.getDefaultInstance()) return this;
+        if (!other.getIscnId().isEmpty()) {
+          iscnId_ = other.iscnId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRecordIpld().isEmpty()) {
+          recordIpld_ = other.recordIpld_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iscnId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                recordIpld_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object iscnId_ = "";
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @return The iscnId.
+       */
+      public java.lang.String getIscnId() {
+        java.lang.Object ref = iscnId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iscnId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @return The bytes for iscnId.
+       */
+      public com.google.protobuf.ByteString
+          getIscnIdBytes() {
+        java.lang.Object ref = iscnId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iscnId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @param value The iscnId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iscnId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIscnId() {
+        iscnId_ = getDefaultInstance().getIscnId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @param value The bytes for iscnId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iscnId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recordIpld_ = "";
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @return The recordIpld.
+       */
+      public java.lang.String getRecordIpld() {
+        java.lang.Object ref = recordIpld_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordIpld_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @return The bytes for recordIpld.
+       */
+      public com.google.protobuf.ByteString
+          getRecordIpldBytes() {
+        java.lang.Object ref = recordIpld_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordIpld_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @param value The recordIpld to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIpld(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordIpld_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordIpld() {
+        recordIpld_ = getDefaultInstance().getRecordIpld();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @param value The bytes for recordIpld to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIpldBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordIpld_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.MsgCreateIscnRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.MsgCreateIscnRecordResponse)
+    private static final com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse();
+    }
+
+    public static com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateIscnRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateIscnRecordResponse>() {
+      @java.lang.Override
+      public MsgCreateIscnRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateIscnRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateIscnRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.MsgCreateIscnRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateIscnRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.MsgUpdateIscnRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+     * @return The iscnId.
+     */
+    java.lang.String getIscnId();
+    /**
+     * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+     * @return The bytes for iscnId.
+     */
+    com.google.protobuf.ByteString
+        getIscnIdBytes();
+
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    boolean hasRecord();
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    com.likechain.iscn.TxProto.IscnRecord getRecord();
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.iscn.TxProto.IscnRecordOrBuilder getRecordOrBuilder();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.MsgUpdateIscnRecord}
+   */
+  public static final class MsgUpdateIscnRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.MsgUpdateIscnRecord)
+      MsgUpdateIscnRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateIscnRecord.newBuilder() to construct.
+    private MsgUpdateIscnRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateIscnRecord() {
+      from_ = "";
+      iscnId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateIscnRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.TxProto.MsgUpdateIscnRecord.class, com.likechain.iscn.TxProto.MsgUpdateIscnRecord.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISCN_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iscnId_ = "";
+    /**
+     * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+     * @return The iscnId.
+     */
+    @java.lang.Override
+    public java.lang.String getIscnId() {
+      java.lang.Object ref = iscnId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iscnId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+     * @return The bytes for iscnId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIscnIdBytes() {
+      java.lang.Object ref = iscnId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iscnId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 3;
+    private com.likechain.iscn.TxProto.IscnRecord record_;
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.IscnRecord getRecord() {
+      return record_ == null ? com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance() : record_;
+    }
+    /**
+     * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.IscnRecordOrBuilder getRecordOrBuilder() {
+      return record_ == null ? com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance() : record_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, iscnId_);
+      }
+      if (record_ != null) {
+        output.writeMessage(3, getRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, iscnId_);
+      }
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.TxProto.MsgUpdateIscnRecord)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.TxProto.MsgUpdateIscnRecord other = (com.likechain.iscn.TxProto.MsgUpdateIscnRecord) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (!getIscnId()
+          .equals(other.getIscnId())) return false;
+      if (hasRecord() != other.hasRecord()) return false;
+      if (hasRecord()) {
+        if (!getRecord()
+            .equals(other.getRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + ISCN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getIscnId().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.TxProto.MsgUpdateIscnRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.MsgUpdateIscnRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.MsgUpdateIscnRecord)
+        com.likechain.iscn.TxProto.MsgUpdateIscnRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.TxProto.MsgUpdateIscnRecord.class, com.likechain.iscn.TxProto.MsgUpdateIscnRecord.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.TxProto.MsgUpdateIscnRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        iscnId_ = "";
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgUpdateIscnRecord getDefaultInstanceForType() {
+        return com.likechain.iscn.TxProto.MsgUpdateIscnRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgUpdateIscnRecord build() {
+        com.likechain.iscn.TxProto.MsgUpdateIscnRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgUpdateIscnRecord buildPartial() {
+        com.likechain.iscn.TxProto.MsgUpdateIscnRecord result = new com.likechain.iscn.TxProto.MsgUpdateIscnRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.TxProto.MsgUpdateIscnRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.iscnId_ = iscnId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.record_ = recordBuilder_ == null
+              ? record_
+              : recordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.TxProto.MsgUpdateIscnRecord) {
+          return mergeFrom((com.likechain.iscn.TxProto.MsgUpdateIscnRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.TxProto.MsgUpdateIscnRecord other) {
+        if (other == com.likechain.iscn.TxProto.MsgUpdateIscnRecord.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIscnId().isEmpty()) {
+          iscnId_ = other.iscnId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                iscnId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object iscnId_ = "";
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @return The iscnId.
+       */
+      public java.lang.String getIscnId() {
+        java.lang.Object ref = iscnId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iscnId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @return The bytes for iscnId.
+       */
+      public com.google.protobuf.ByteString
+          getIscnIdBytes() {
+        java.lang.Object ref = iscnId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iscnId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @param value The iscnId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iscnId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIscnId() {
+        iscnId_ = getDefaultInstance().getIscnId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @param value The bytes for iscnId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iscnId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.likechain.iscn.TxProto.IscnRecord record_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.iscn.TxProto.IscnRecord, com.likechain.iscn.TxProto.IscnRecord.Builder, com.likechain.iscn.TxProto.IscnRecordOrBuilder> recordBuilder_;
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return Whether the record field is set.
+       */
+      public boolean hasRecord() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return The record.
+       */
+      public com.likechain.iscn.TxProto.IscnRecord getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(com.likechain.iscn.TxProto.IscnRecord value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(
+          com.likechain.iscn.TxProto.IscnRecord.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRecord(com.likechain.iscn.TxProto.IscnRecord value) {
+        if (recordBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            record_ != null &&
+            record_ != com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance()) {
+            getRecordBuilder().mergeFrom(value);
+          } else {
+            record_ = value;
+          }
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.iscn.TxProto.IscnRecord.Builder getRecordBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.iscn.TxProto.IscnRecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              com.likechain.iscn.TxProto.IscnRecord.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.iscn.TxProto.IscnRecord, com.likechain.iscn.TxProto.IscnRecord.Builder, com.likechain.iscn.TxProto.IscnRecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.iscn.TxProto.IscnRecord, com.likechain.iscn.TxProto.IscnRecord.Builder, com.likechain.iscn.TxProto.IscnRecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.MsgUpdateIscnRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.MsgUpdateIscnRecord)
+    private static final com.likechain.iscn.TxProto.MsgUpdateIscnRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.TxProto.MsgUpdateIscnRecord();
+    }
+
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateIscnRecord>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateIscnRecord>() {
+      @java.lang.Override
+      public MsgUpdateIscnRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateIscnRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateIscnRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.MsgUpdateIscnRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateIscnRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.MsgUpdateIscnRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+     * @return The iscnId.
+     */
+    java.lang.String getIscnId();
+    /**
+     * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+     * @return The bytes for iscnId.
+     */
+    com.google.protobuf.ByteString
+        getIscnIdBytes();
+
+    /**
+     * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+     * @return The recordIpld.
+     */
+    java.lang.String getRecordIpld();
+    /**
+     * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+     * @return The bytes for recordIpld.
+     */
+    com.google.protobuf.ByteString
+        getRecordIpldBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.MsgUpdateIscnRecordResponse}
+   */
+  public static final class MsgUpdateIscnRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.MsgUpdateIscnRecordResponse)
+      MsgUpdateIscnRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateIscnRecordResponse.newBuilder() to construct.
+    private MsgUpdateIscnRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateIscnRecordResponse() {
+      iscnId_ = "";
+      recordIpld_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateIscnRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse.class, com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse.Builder.class);
+    }
+
+    public static final int ISCN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iscnId_ = "";
+    /**
+     * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+     * @return The iscnId.
+     */
+    @java.lang.Override
+    public java.lang.String getIscnId() {
+      java.lang.Object ref = iscnId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iscnId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+     * @return The bytes for iscnId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIscnIdBytes() {
+      java.lang.Object ref = iscnId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iscnId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_IPLD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordIpld_ = "";
+    /**
+     * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+     * @return The recordIpld.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordIpld() {
+      java.lang.Object ref = recordIpld_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordIpld_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+     * @return The bytes for recordIpld.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordIpldBytes() {
+      java.lang.Object ref = recordIpld_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordIpld_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iscnId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordIpld_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recordIpld_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iscnId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordIpld_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recordIpld_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse other = (com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse) obj;
+
+      if (!getIscnId()
+          .equals(other.getIscnId())) return false;
+      if (!getRecordIpld()
+          .equals(other.getRecordIpld())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISCN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getIscnId().hashCode();
+      hash = (37 * hash) + RECORD_IPLD_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordIpld().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.MsgUpdateIscnRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.MsgUpdateIscnRecordResponse)
+        com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse.class, com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iscnId_ = "";
+        recordIpld_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgUpdateIscnRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse getDefaultInstanceForType() {
+        return com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse build() {
+        com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse buildPartial() {
+        com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse result = new com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iscnId_ = iscnId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recordIpld_ = recordIpld_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse) {
+          return mergeFrom((com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse other) {
+        if (other == com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse.getDefaultInstance()) return this;
+        if (!other.getIscnId().isEmpty()) {
+          iscnId_ = other.iscnId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRecordIpld().isEmpty()) {
+          recordIpld_ = other.recordIpld_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iscnId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                recordIpld_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object iscnId_ = "";
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @return The iscnId.
+       */
+      public java.lang.String getIscnId() {
+        java.lang.Object ref = iscnId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iscnId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @return The bytes for iscnId.
+       */
+      public com.google.protobuf.ByteString
+          getIscnIdBytes() {
+        java.lang.Object ref = iscnId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iscnId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @param value The iscnId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iscnId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIscnId() {
+        iscnId_ = getDefaultInstance().getIscnId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id = 1 [json_name = "iscnId"];</code>
+       * @param value The bytes for iscnId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iscnId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recordIpld_ = "";
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @return The recordIpld.
+       */
+      public java.lang.String getRecordIpld() {
+        java.lang.Object ref = recordIpld_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordIpld_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @return The bytes for recordIpld.
+       */
+      public com.google.protobuf.ByteString
+          getRecordIpldBytes() {
+        java.lang.Object ref = recordIpld_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordIpld_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @param value The recordIpld to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIpld(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordIpld_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordIpld() {
+        recordIpld_ = getDefaultInstance().getRecordIpld();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string record_ipld = 2 [json_name = "recordIpld"];</code>
+       * @param value The bytes for recordIpld to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIpldBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordIpld_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.MsgUpdateIscnRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.MsgUpdateIscnRecordResponse)
+    private static final com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse();
+    }
+
+    public static com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateIscnRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateIscnRecordResponse>() {
+      @java.lang.Override
+      public MsgUpdateIscnRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateIscnRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateIscnRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.MsgUpdateIscnRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgChangeIscnRecordOwnershipOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.MsgChangeIscnRecordOwnership)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+     * @return The iscnId.
+     */
+    java.lang.String getIscnId();
+    /**
+     * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+     * @return The bytes for iscnId.
+     */
+    com.google.protobuf.ByteString
+        getIscnIdBytes();
+
+    /**
+     * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+     * @return The newOwner.
+     */
+    java.lang.String getNewOwner();
+    /**
+     * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+     * @return The bytes for newOwner.
+     */
+    com.google.protobuf.ByteString
+        getNewOwnerBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.MsgChangeIscnRecordOwnership}
+   */
+  public static final class MsgChangeIscnRecordOwnership extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.MsgChangeIscnRecordOwnership)
+      MsgChangeIscnRecordOwnershipOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgChangeIscnRecordOwnership.newBuilder() to construct.
+    private MsgChangeIscnRecordOwnership(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgChangeIscnRecordOwnership() {
+      from_ = "";
+      iscnId_ = "";
+      newOwner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgChangeIscnRecordOwnership();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnership_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnership_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership.class, com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISCN_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iscnId_ = "";
+    /**
+     * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+     * @return The iscnId.
+     */
+    @java.lang.Override
+    public java.lang.String getIscnId() {
+      java.lang.Object ref = iscnId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iscnId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+     * @return The bytes for iscnId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIscnIdBytes() {
+      java.lang.Object ref = iscnId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iscnId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newOwner_ = "";
+    /**
+     * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+     * @return The newOwner.
+     */
+    @java.lang.Override
+    public java.lang.String getNewOwner() {
+      java.lang.Object ref = newOwner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newOwner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+     * @return The bytes for newOwner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewOwnerBytes() {
+      java.lang.Object ref = newOwner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newOwner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, iscnId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newOwner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, newOwner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, iscnId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newOwner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, newOwner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership other = (com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (!getIscnId()
+          .equals(other.getIscnId())) return false;
+      if (!getNewOwner()
+          .equals(other.getNewOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + ISCN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getIscnId().hashCode();
+      hash = (37 * hash) + NEW_OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getNewOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.MsgChangeIscnRecordOwnership}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.MsgChangeIscnRecordOwnership)
+        com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnership_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnership_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership.class, com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        iscnId_ = "";
+        newOwner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnership_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership getDefaultInstanceForType() {
+        return com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership build() {
+        com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership buildPartial() {
+        com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership result = new com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.iscnId_ = iscnId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.newOwner_ = newOwner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership) {
+          return mergeFrom((com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership other) {
+        if (other == com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIscnId().isEmpty()) {
+          iscnId_ = other.iscnId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNewOwner().isEmpty()) {
+          newOwner_ = other.newOwner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                iscnId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                newOwner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object iscnId_ = "";
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @return The iscnId.
+       */
+      public java.lang.String getIscnId() {
+        java.lang.Object ref = iscnId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iscnId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @return The bytes for iscnId.
+       */
+      public com.google.protobuf.ByteString
+          getIscnIdBytes() {
+        java.lang.Object ref = iscnId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iscnId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @param value The iscnId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iscnId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIscnId() {
+        iscnId_ = getDefaultInstance().getIscnId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iscn_id = 2 [json_name = "iscnId"];</code>
+       * @param value The bytes for iscnId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIscnIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iscnId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newOwner_ = "";
+      /**
+       * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+       * @return The newOwner.
+       */
+      public java.lang.String getNewOwner() {
+        java.lang.Object ref = newOwner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newOwner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+       * @return The bytes for newOwner.
+       */
+      public com.google.protobuf.ByteString
+          getNewOwnerBytes() {
+        java.lang.Object ref = newOwner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newOwner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+       * @param value The newOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newOwner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewOwner() {
+        newOwner_ = getDefaultInstance().getNewOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_owner = 3 [json_name = "newOwner"];</code>
+       * @param value The bytes for newOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newOwner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.MsgChangeIscnRecordOwnership)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.MsgChangeIscnRecordOwnership)
+    private static final com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership();
+    }
+
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgChangeIscnRecordOwnership>
+        PARSER = new com.google.protobuf.AbstractParser<MsgChangeIscnRecordOwnership>() {
+      @java.lang.Override
+      public MsgChangeIscnRecordOwnership parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgChangeIscnRecordOwnership> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgChangeIscnRecordOwnership> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnership getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgChangeIscnRecordOwnershipResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.MsgChangeIscnRecordOwnershipResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.MsgChangeIscnRecordOwnershipResponse}
+   */
+  public static final class MsgChangeIscnRecordOwnershipResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.MsgChangeIscnRecordOwnershipResponse)
+      MsgChangeIscnRecordOwnershipResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgChangeIscnRecordOwnershipResponse.newBuilder() to construct.
+    private MsgChangeIscnRecordOwnershipResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgChangeIscnRecordOwnershipResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgChangeIscnRecordOwnershipResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnershipResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnershipResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse.class, com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse other = (com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.MsgChangeIscnRecordOwnershipResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.MsgChangeIscnRecordOwnershipResponse)
+        com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnershipResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnershipResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse.class, com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.TxProto.internal_static_likechain_iscn_MsgChangeIscnRecordOwnershipResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse getDefaultInstanceForType() {
+        return com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse build() {
+        com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse buildPartial() {
+        com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse result = new com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse) {
+          return mergeFrom((com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse other) {
+        if (other == com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.MsgChangeIscnRecordOwnershipResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.MsgChangeIscnRecordOwnershipResponse)
+    private static final com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse();
+    }
+
+    public static com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgChangeIscnRecordOwnershipResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgChangeIscnRecordOwnershipResponse>() {
+      @java.lang.Override
+      public MsgChangeIscnRecordOwnershipResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgChangeIscnRecordOwnershipResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgChangeIscnRecordOwnershipResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.TxProto.MsgChangeIscnRecordOwnershipResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_IscnRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_IscnRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_MsgCreateIscnRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_MsgCreateIscnRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_MsgCreateIscnRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_MsgCreateIscnRecordResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_MsgUpdateIscnRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_MsgUpdateIscnRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_MsgUpdateIscnRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_MsgUpdateIscnRecordResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_MsgChangeIscnRecordOwnership_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_MsgChangeIscnRecordOwnership_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_MsgChangeIscnRecordOwnershipResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_MsgChangeIscnRecordOwnershipResponse_fieldAccessorTable;
 
@@ -87,12 +5547,12 @@ public final class TxProto {
       "eIscnRecordResponse\022\177\n\031ChangeIscnRecordO" +
       "wnership\022,.likechain.iscn.MsgChangeIscnR" +
       "ecordOwnership\0324.likechain.iscn.MsgChang" +
-      "eIscnRecordOwnershipResponseB\252\001\n\022com.lik" +
-      "echain.iscnB\007TxProtoP\001Z2github.com/likec" +
-      "oin/likecoin-chain/v4/x/iscn/types\242\002\003LIX" +
-      "\252\002\016Likechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Lik" +
-      "echain\\Iscn\\GPBMetadata\352\002\017Likechain::Isc" +
-      "nb\006proto3"
+      "eIscnRecordOwnershipResponseB\250\001\n\022com.lik" +
+      "echain.iscnB\007TxProtoZ2github.com/likecoi" +
+      "n/likecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002" +
+      "\016Likechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likec" +
+      "hain\\Iscn\\GPBMetadata\352\002\017Likechain::Iscnb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

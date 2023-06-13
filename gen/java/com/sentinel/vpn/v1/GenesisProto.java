@@ -14,9 +14,1949 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.vpn.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.deposit.v1.DepositProto.Deposit> 
+        getDepositsList();
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.deposit.v1.DepositProto.Deposit getDeposits(int index);
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    int getDepositsCount();
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.deposit.v1.DepositProto.DepositOrBuilder> 
+        getDepositsOrBuilderList();
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.deposit.v1.DepositProto.DepositOrBuilder getDepositsOrBuilder(
+        int index);
+
+    /**
+     * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+     * @return Whether the nodes field is set.
+     */
+    boolean hasNodes();
+    /**
+     * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+     * @return The nodes.
+     */
+    com.sentinel.node.v2.GenesisProto.GenesisState getNodes();
+    /**
+     * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+     */
+    com.sentinel.node.v2.GenesisProto.GenesisStateOrBuilder getNodesOrBuilder();
+
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.plan.v2.GenesisProto.GenesisPlan> 
+        getPlansList();
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.plan.v2.GenesisProto.GenesisPlan getPlans(int index);
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    int getPlansCount();
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder> 
+        getPlansOrBuilderList();
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder getPlansOrBuilder(
+        int index);
+
+    /**
+     * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+     * @return Whether the providers field is set.
+     */
+    boolean hasProviders();
+    /**
+     * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+     * @return The providers.
+     */
+    com.sentinel.provider.v2.GenesisProto.GenesisState getProviders();
+    /**
+     * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+     */
+    com.sentinel.provider.v2.GenesisProto.GenesisStateOrBuilder getProvidersOrBuilder();
+
+    /**
+     * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+     * @return Whether the sessions field is set.
+     */
+    boolean hasSessions();
+    /**
+     * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+     * @return The sessions.
+     */
+    com.sentinel.session.v2.GenesisProto.GenesisState getSessions();
+    /**
+     * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+     */
+    com.sentinel.session.v2.GenesisProto.GenesisStateOrBuilder getSessionsOrBuilder();
+
+    /**
+     * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+     * @return Whether the subscriptions field is set.
+     */
+    boolean hasSubscriptions();
+    /**
+     * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+     * @return The subscriptions.
+     */
+    com.sentinel.subscription.v2.GenesisProto.GenesisState getSubscriptions();
+    /**
+     * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+     */
+    com.sentinel.subscription.v2.GenesisProto.GenesisStateOrBuilder getSubscriptionsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.vpn.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.vpn.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      deposits_ = java.util.Collections.emptyList();
+      plans_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.vpn.v1.GenesisProto.internal_static_sentinel_vpn_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.vpn.v1.GenesisProto.internal_static_sentinel_vpn_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.vpn.v1.GenesisProto.GenesisState.class, com.sentinel.vpn.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int DEPOSITS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.deposit.v1.DepositProto.Deposit> deposits_;
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.deposit.v1.DepositProto.Deposit> getDepositsList() {
+      return deposits_;
+    }
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.deposit.v1.DepositProto.DepositOrBuilder> 
+        getDepositsOrBuilderList() {
+      return deposits_;
+    }
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDepositsCount() {
+      return deposits_.size();
+    }
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.deposit.v1.DepositProto.Deposit getDeposits(int index) {
+      return deposits_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.deposit.v1.DepositProto.DepositOrBuilder getDepositsOrBuilder(
+        int index) {
+      return deposits_.get(index);
+    }
+
+    public static final int NODES_FIELD_NUMBER = 2;
+    private com.sentinel.node.v2.GenesisProto.GenesisState nodes_;
+    /**
+     * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+     * @return Whether the nodes field is set.
+     */
+    @java.lang.Override
+    public boolean hasNodes() {
+      return nodes_ != null;
+    }
+    /**
+     * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+     * @return The nodes.
+     */
+    @java.lang.Override
+    public com.sentinel.node.v2.GenesisProto.GenesisState getNodes() {
+      return nodes_ == null ? com.sentinel.node.v2.GenesisProto.GenesisState.getDefaultInstance() : nodes_;
+    }
+    /**
+     * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.node.v2.GenesisProto.GenesisStateOrBuilder getNodesOrBuilder() {
+      return nodes_ == null ? com.sentinel.node.v2.GenesisProto.GenesisState.getDefaultInstance() : nodes_;
+    }
+
+    public static final int PLANS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.plan.v2.GenesisProto.GenesisPlan> plans_;
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.plan.v2.GenesisProto.GenesisPlan> getPlansList() {
+      return plans_;
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder> 
+        getPlansOrBuilderList() {
+      return plans_;
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPlansCount() {
+      return plans_.size();
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.plan.v2.GenesisProto.GenesisPlan getPlans(int index) {
+      return plans_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder getPlansOrBuilder(
+        int index) {
+      return plans_.get(index);
+    }
+
+    public static final int PROVIDERS_FIELD_NUMBER = 4;
+    private com.sentinel.provider.v2.GenesisProto.GenesisState providers_;
+    /**
+     * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+     * @return Whether the providers field is set.
+     */
+    @java.lang.Override
+    public boolean hasProviders() {
+      return providers_ != null;
+    }
+    /**
+     * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+     * @return The providers.
+     */
+    @java.lang.Override
+    public com.sentinel.provider.v2.GenesisProto.GenesisState getProviders() {
+      return providers_ == null ? com.sentinel.provider.v2.GenesisProto.GenesisState.getDefaultInstance() : providers_;
+    }
+    /**
+     * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.provider.v2.GenesisProto.GenesisStateOrBuilder getProvidersOrBuilder() {
+      return providers_ == null ? com.sentinel.provider.v2.GenesisProto.GenesisState.getDefaultInstance() : providers_;
+    }
+
+    public static final int SESSIONS_FIELD_NUMBER = 5;
+    private com.sentinel.session.v2.GenesisProto.GenesisState sessions_;
+    /**
+     * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+     * @return Whether the sessions field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessions() {
+      return sessions_ != null;
+    }
+    /**
+     * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+     * @return The sessions.
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.GenesisProto.GenesisState getSessions() {
+      return sessions_ == null ? com.sentinel.session.v2.GenesisProto.GenesisState.getDefaultInstance() : sessions_;
+    }
+    /**
+     * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.session.v2.GenesisProto.GenesisStateOrBuilder getSessionsOrBuilder() {
+      return sessions_ == null ? com.sentinel.session.v2.GenesisProto.GenesisState.getDefaultInstance() : sessions_;
+    }
+
+    public static final int SUBSCRIPTIONS_FIELD_NUMBER = 6;
+    private com.sentinel.subscription.v2.GenesisProto.GenesisState subscriptions_;
+    /**
+     * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+     * @return Whether the subscriptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasSubscriptions() {
+      return subscriptions_ != null;
+    }
+    /**
+     * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+     * @return The subscriptions.
+     */
+    @java.lang.Override
+    public com.sentinel.subscription.v2.GenesisProto.GenesisState getSubscriptions() {
+      return subscriptions_ == null ? com.sentinel.subscription.v2.GenesisProto.GenesisState.getDefaultInstance() : subscriptions_;
+    }
+    /**
+     * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.subscription.v2.GenesisProto.GenesisStateOrBuilder getSubscriptionsOrBuilder() {
+      return subscriptions_ == null ? com.sentinel.subscription.v2.GenesisProto.GenesisState.getDefaultInstance() : subscriptions_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < deposits_.size(); i++) {
+        output.writeMessage(1, deposits_.get(i));
+      }
+      if (nodes_ != null) {
+        output.writeMessage(2, getNodes());
+      }
+      for (int i = 0; i < plans_.size(); i++) {
+        output.writeMessage(3, plans_.get(i));
+      }
+      if (providers_ != null) {
+        output.writeMessage(4, getProviders());
+      }
+      if (sessions_ != null) {
+        output.writeMessage(5, getSessions());
+      }
+      if (subscriptions_ != null) {
+        output.writeMessage(6, getSubscriptions());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < deposits_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, deposits_.get(i));
+      }
+      if (nodes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getNodes());
+      }
+      for (int i = 0; i < plans_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, plans_.get(i));
+      }
+      if (providers_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getProviders());
+      }
+      if (sessions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSessions());
+      }
+      if (subscriptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSubscriptions());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.vpn.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.sentinel.vpn.v1.GenesisProto.GenesisState other = (com.sentinel.vpn.v1.GenesisProto.GenesisState) obj;
+
+      if (!getDepositsList()
+          .equals(other.getDepositsList())) return false;
+      if (hasNodes() != other.hasNodes()) return false;
+      if (hasNodes()) {
+        if (!getNodes()
+            .equals(other.getNodes())) return false;
+      }
+      if (!getPlansList()
+          .equals(other.getPlansList())) return false;
+      if (hasProviders() != other.hasProviders()) return false;
+      if (hasProviders()) {
+        if (!getProviders()
+            .equals(other.getProviders())) return false;
+      }
+      if (hasSessions() != other.hasSessions()) return false;
+      if (hasSessions()) {
+        if (!getSessions()
+            .equals(other.getSessions())) return false;
+      }
+      if (hasSubscriptions() != other.hasSubscriptions()) return false;
+      if (hasSubscriptions()) {
+        if (!getSubscriptions()
+            .equals(other.getSubscriptions())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDepositsCount() > 0) {
+        hash = (37 * hash) + DEPOSITS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositsList().hashCode();
+      }
+      if (hasNodes()) {
+        hash = (37 * hash) + NODES_FIELD_NUMBER;
+        hash = (53 * hash) + getNodes().hashCode();
+      }
+      if (getPlansCount() > 0) {
+        hash = (37 * hash) + PLANS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlansList().hashCode();
+      }
+      if (hasProviders()) {
+        hash = (37 * hash) + PROVIDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getProviders().hashCode();
+      }
+      if (hasSessions()) {
+        hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSessions().hashCode();
+      }
+      if (hasSubscriptions()) {
+        hash = (37 * hash) + SUBSCRIPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubscriptions().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.vpn.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.vpn.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.vpn.v1.GenesisState)
+        com.sentinel.vpn.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.vpn.v1.GenesisProto.internal_static_sentinel_vpn_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.vpn.v1.GenesisProto.internal_static_sentinel_vpn_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.vpn.v1.GenesisProto.GenesisState.class, com.sentinel.vpn.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.sentinel.vpn.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (depositsBuilder_ == null) {
+          deposits_ = java.util.Collections.emptyList();
+        } else {
+          deposits_ = null;
+          depositsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nodes_ = null;
+        if (nodesBuilder_ != null) {
+          nodesBuilder_.dispose();
+          nodesBuilder_ = null;
+        }
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+        } else {
+          plans_ = null;
+          plansBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        providers_ = null;
+        if (providersBuilder_ != null) {
+          providersBuilder_.dispose();
+          providersBuilder_ = null;
+        }
+        sessions_ = null;
+        if (sessionsBuilder_ != null) {
+          sessionsBuilder_.dispose();
+          sessionsBuilder_ = null;
+        }
+        subscriptions_ = null;
+        if (subscriptionsBuilder_ != null) {
+          subscriptionsBuilder_.dispose();
+          subscriptionsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.vpn.v1.GenesisProto.internal_static_sentinel_vpn_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.vpn.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.sentinel.vpn.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.vpn.v1.GenesisProto.GenesisState build() {
+        com.sentinel.vpn.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.vpn.v1.GenesisProto.GenesisState buildPartial() {
+        com.sentinel.vpn.v1.GenesisProto.GenesisState result = new com.sentinel.vpn.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.vpn.v1.GenesisProto.GenesisState result) {
+        if (depositsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            deposits_ = java.util.Collections.unmodifiableList(deposits_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.deposits_ = deposits_;
+        } else {
+          result.deposits_ = depositsBuilder_.build();
+        }
+        if (plansBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            plans_ = java.util.Collections.unmodifiableList(plans_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.plans_ = plans_;
+        } else {
+          result.plans_ = plansBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.vpn.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nodes_ = nodesBuilder_ == null
+              ? nodes_
+              : nodesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.providers_ = providersBuilder_ == null
+              ? providers_
+              : providersBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.sessions_ = sessionsBuilder_ == null
+              ? sessions_
+              : sessionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.subscriptions_ = subscriptionsBuilder_ == null
+              ? subscriptions_
+              : subscriptionsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.vpn.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.sentinel.vpn.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.vpn.v1.GenesisProto.GenesisState other) {
+        if (other == com.sentinel.vpn.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (depositsBuilder_ == null) {
+          if (!other.deposits_.isEmpty()) {
+            if (deposits_.isEmpty()) {
+              deposits_ = other.deposits_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDepositsIsMutable();
+              deposits_.addAll(other.deposits_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.deposits_.isEmpty()) {
+            if (depositsBuilder_.isEmpty()) {
+              depositsBuilder_.dispose();
+              depositsBuilder_ = null;
+              deposits_ = other.deposits_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              depositsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDepositsFieldBuilder() : null;
+            } else {
+              depositsBuilder_.addAllMessages(other.deposits_);
+            }
+          }
+        }
+        if (other.hasNodes()) {
+          mergeNodes(other.getNodes());
+        }
+        if (plansBuilder_ == null) {
+          if (!other.plans_.isEmpty()) {
+            if (plans_.isEmpty()) {
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePlansIsMutable();
+              plans_.addAll(other.plans_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.plans_.isEmpty()) {
+            if (plansBuilder_.isEmpty()) {
+              plansBuilder_.dispose();
+              plansBuilder_ = null;
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              plansBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPlansFieldBuilder() : null;
+            } else {
+              plansBuilder_.addAllMessages(other.plans_);
+            }
+          }
+        }
+        if (other.hasProviders()) {
+          mergeProviders(other.getProviders());
+        }
+        if (other.hasSessions()) {
+          mergeSessions(other.getSessions());
+        }
+        if (other.hasSubscriptions()) {
+          mergeSubscriptions(other.getSubscriptions());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.deposit.v1.DepositProto.Deposit m =
+                    input.readMessage(
+                        com.sentinel.deposit.v1.DepositProto.Deposit.parser(),
+                        extensionRegistry);
+                if (depositsBuilder_ == null) {
+                  ensureDepositsIsMutable();
+                  deposits_.add(m);
+                } else {
+                  depositsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getNodesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.sentinel.plan.v2.GenesisProto.GenesisPlan m =
+                    input.readMessage(
+                        com.sentinel.plan.v2.GenesisProto.GenesisPlan.parser(),
+                        extensionRegistry);
+                if (plansBuilder_ == null) {
+                  ensurePlansIsMutable();
+                  plans_.add(m);
+                } else {
+                  plansBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getProvidersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getSessionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getSubscriptionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.deposit.v1.DepositProto.Deposit> deposits_ =
+        java.util.Collections.emptyList();
+      private void ensureDepositsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          deposits_ = new java.util.ArrayList<com.sentinel.deposit.v1.DepositProto.Deposit>(deposits_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.deposit.v1.DepositProto.Deposit, com.sentinel.deposit.v1.DepositProto.Deposit.Builder, com.sentinel.deposit.v1.DepositProto.DepositOrBuilder> depositsBuilder_;
+
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.deposit.v1.DepositProto.Deposit> getDepositsList() {
+        if (depositsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(deposits_);
+        } else {
+          return depositsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDepositsCount() {
+        if (depositsBuilder_ == null) {
+          return deposits_.size();
+        } else {
+          return depositsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.deposit.v1.DepositProto.Deposit getDeposits(int index) {
+        if (depositsBuilder_ == null) {
+          return deposits_.get(index);
+        } else {
+          return depositsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposits(
+          int index, com.sentinel.deposit.v1.DepositProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.set(index, value);
+          onChanged();
+        } else {
+          depositsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposits(
+          int index, com.sentinel.deposit.v1.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(com.sentinel.deposit.v1.DepositProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.add(value);
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          int index, com.sentinel.deposit.v1.DepositProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.add(index, value);
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          com.sentinel.deposit.v1.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.add(builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          int index, com.sentinel.deposit.v1.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDeposits(
+          java.lang.Iterable<? extends com.sentinel.deposit.v1.DepositProto.Deposit> values) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, deposits_);
+          onChanged();
+        } else {
+          depositsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDeposits() {
+        if (depositsBuilder_ == null) {
+          deposits_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          depositsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDeposits(int index) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.remove(index);
+          onChanged();
+        } else {
+          depositsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.deposit.v1.DepositProto.Deposit.Builder getDepositsBuilder(
+          int index) {
+        return getDepositsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.deposit.v1.DepositProto.DepositOrBuilder getDepositsOrBuilder(
+          int index) {
+        if (depositsBuilder_ == null) {
+          return deposits_.get(index);  } else {
+          return depositsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.deposit.v1.DepositProto.DepositOrBuilder> 
+           getDepositsOrBuilderList() {
+        if (depositsBuilder_ != null) {
+          return depositsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(deposits_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.deposit.v1.DepositProto.Deposit.Builder addDepositsBuilder() {
+        return getDepositsFieldBuilder().addBuilder(
+            com.sentinel.deposit.v1.DepositProto.Deposit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.deposit.v1.DepositProto.Deposit.Builder addDepositsBuilder(
+          int index) {
+        return getDepositsFieldBuilder().addBuilder(
+            index, com.sentinel.deposit.v1.DepositProto.Deposit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.deposit.v1.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.deposit.v1.DepositProto.Deposit.Builder> 
+           getDepositsBuilderList() {
+        return getDepositsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.deposit.v1.DepositProto.Deposit, com.sentinel.deposit.v1.DepositProto.Deposit.Builder, com.sentinel.deposit.v1.DepositProto.DepositOrBuilder> 
+          getDepositsFieldBuilder() {
+        if (depositsBuilder_ == null) {
+          depositsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.deposit.v1.DepositProto.Deposit, com.sentinel.deposit.v1.DepositProto.Deposit.Builder, com.sentinel.deposit.v1.DepositProto.DepositOrBuilder>(
+                  deposits_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          deposits_ = null;
+        }
+        return depositsBuilder_;
+      }
+
+      private com.sentinel.node.v2.GenesisProto.GenesisState nodes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.node.v2.GenesisProto.GenesisState, com.sentinel.node.v2.GenesisProto.GenesisState.Builder, com.sentinel.node.v2.GenesisProto.GenesisStateOrBuilder> nodesBuilder_;
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       * @return Whether the nodes field is set.
+       */
+      public boolean hasNodes() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       * @return The nodes.
+       */
+      public com.sentinel.node.v2.GenesisProto.GenesisState getNodes() {
+        if (nodesBuilder_ == null) {
+          return nodes_ == null ? com.sentinel.node.v2.GenesisProto.GenesisState.getDefaultInstance() : nodes_;
+        } else {
+          return nodesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       */
+      public Builder setNodes(com.sentinel.node.v2.GenesisProto.GenesisState value) {
+        if (nodesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nodes_ = value;
+        } else {
+          nodesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       */
+      public Builder setNodes(
+          com.sentinel.node.v2.GenesisProto.GenesisState.Builder builderForValue) {
+        if (nodesBuilder_ == null) {
+          nodes_ = builderForValue.build();
+        } else {
+          nodesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       */
+      public Builder mergeNodes(com.sentinel.node.v2.GenesisProto.GenesisState value) {
+        if (nodesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            nodes_ != null &&
+            nodes_ != com.sentinel.node.v2.GenesisProto.GenesisState.getDefaultInstance()) {
+            getNodesBuilder().mergeFrom(value);
+          } else {
+            nodes_ = value;
+          }
+        } else {
+          nodesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       */
+      public Builder clearNodes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nodes_ = null;
+        if (nodesBuilder_ != null) {
+          nodesBuilder_.dispose();
+          nodesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       */
+      public com.sentinel.node.v2.GenesisProto.GenesisState.Builder getNodesBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getNodesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       */
+      public com.sentinel.node.v2.GenesisProto.GenesisStateOrBuilder getNodesOrBuilder() {
+        if (nodesBuilder_ != null) {
+          return nodesBuilder_.getMessageOrBuilder();
+        } else {
+          return nodes_ == null ?
+              com.sentinel.node.v2.GenesisProto.GenesisState.getDefaultInstance() : nodes_;
+        }
+      }
+      /**
+       * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.node.v2.GenesisProto.GenesisState, com.sentinel.node.v2.GenesisProto.GenesisState.Builder, com.sentinel.node.v2.GenesisProto.GenesisStateOrBuilder> 
+          getNodesFieldBuilder() {
+        if (nodesBuilder_ == null) {
+          nodesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.node.v2.GenesisProto.GenesisState, com.sentinel.node.v2.GenesisProto.GenesisState.Builder, com.sentinel.node.v2.GenesisProto.GenesisStateOrBuilder>(
+                  getNodes(),
+                  getParentForChildren(),
+                  isClean());
+          nodes_ = null;
+        }
+        return nodesBuilder_;
+      }
+
+      private java.util.List<com.sentinel.plan.v2.GenesisProto.GenesisPlan> plans_ =
+        java.util.Collections.emptyList();
+      private void ensurePlansIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          plans_ = new java.util.ArrayList<com.sentinel.plan.v2.GenesisProto.GenesisPlan>(plans_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.plan.v2.GenesisProto.GenesisPlan, com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder, com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder> plansBuilder_;
+
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.plan.v2.GenesisProto.GenesisPlan> getPlansList() {
+        if (plansBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(plans_);
+        } else {
+          return plansBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPlansCount() {
+        if (plansBuilder_ == null) {
+          return plans_.size();
+        } else {
+          return plansBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.GenesisProto.GenesisPlan getPlans(int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);
+        } else {
+          return plansBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlans(
+          int index, com.sentinel.plan.v2.GenesisProto.GenesisPlan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.set(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlans(
+          int index, com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(com.sentinel.plan.v2.GenesisProto.GenesisPlan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          int index, com.sentinel.plan.v2.GenesisProto.GenesisPlan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          int index, com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPlans(
+          java.lang.Iterable<? extends com.sentinel.plan.v2.GenesisProto.GenesisPlan> values) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, plans_);
+          onChanged();
+        } else {
+          plansBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPlans() {
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          plansBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePlans(int index) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.remove(index);
+          onChanged();
+        } else {
+          plansBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder getPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder getPlansOrBuilder(
+          int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);  } else {
+          return plansBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder> 
+           getPlansOrBuilderList() {
+        if (plansBuilder_ != null) {
+          return plansBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(plans_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder addPlansBuilder() {
+        return getPlansFieldBuilder().addBuilder(
+            com.sentinel.plan.v2.GenesisProto.GenesisPlan.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder addPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().addBuilder(
+            index, com.sentinel.plan.v2.GenesisProto.GenesisPlan.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.GenesisPlan plans = 3 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder> 
+           getPlansBuilderList() {
+        return getPlansFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.plan.v2.GenesisProto.GenesisPlan, com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder, com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder> 
+          getPlansFieldBuilder() {
+        if (plansBuilder_ == null) {
+          plansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.plan.v2.GenesisProto.GenesisPlan, com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder, com.sentinel.plan.v2.GenesisProto.GenesisPlanOrBuilder>(
+                  plans_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          plans_ = null;
+        }
+        return plansBuilder_;
+      }
+
+      private com.sentinel.provider.v2.GenesisProto.GenesisState providers_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.provider.v2.GenesisProto.GenesisState, com.sentinel.provider.v2.GenesisProto.GenesisState.Builder, com.sentinel.provider.v2.GenesisProto.GenesisStateOrBuilder> providersBuilder_;
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       * @return Whether the providers field is set.
+       */
+      public boolean hasProviders() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       * @return The providers.
+       */
+      public com.sentinel.provider.v2.GenesisProto.GenesisState getProviders() {
+        if (providersBuilder_ == null) {
+          return providers_ == null ? com.sentinel.provider.v2.GenesisProto.GenesisState.getDefaultInstance() : providers_;
+        } else {
+          return providersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       */
+      public Builder setProviders(com.sentinel.provider.v2.GenesisProto.GenesisState value) {
+        if (providersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          providers_ = value;
+        } else {
+          providersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       */
+      public Builder setProviders(
+          com.sentinel.provider.v2.GenesisProto.GenesisState.Builder builderForValue) {
+        if (providersBuilder_ == null) {
+          providers_ = builderForValue.build();
+        } else {
+          providersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       */
+      public Builder mergeProviders(com.sentinel.provider.v2.GenesisProto.GenesisState value) {
+        if (providersBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            providers_ != null &&
+            providers_ != com.sentinel.provider.v2.GenesisProto.GenesisState.getDefaultInstance()) {
+            getProvidersBuilder().mergeFrom(value);
+          } else {
+            providers_ = value;
+          }
+        } else {
+          providersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       */
+      public Builder clearProviders() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        providers_ = null;
+        if (providersBuilder_ != null) {
+          providersBuilder_.dispose();
+          providersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       */
+      public com.sentinel.provider.v2.GenesisProto.GenesisState.Builder getProvidersBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getProvidersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       */
+      public com.sentinel.provider.v2.GenesisProto.GenesisStateOrBuilder getProvidersOrBuilder() {
+        if (providersBuilder_ != null) {
+          return providersBuilder_.getMessageOrBuilder();
+        } else {
+          return providers_ == null ?
+              com.sentinel.provider.v2.GenesisProto.GenesisState.getDefaultInstance() : providers_;
+        }
+      }
+      /**
+       * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.provider.v2.GenesisProto.GenesisState, com.sentinel.provider.v2.GenesisProto.GenesisState.Builder, com.sentinel.provider.v2.GenesisProto.GenesisStateOrBuilder> 
+          getProvidersFieldBuilder() {
+        if (providersBuilder_ == null) {
+          providersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.provider.v2.GenesisProto.GenesisState, com.sentinel.provider.v2.GenesisProto.GenesisState.Builder, com.sentinel.provider.v2.GenesisProto.GenesisStateOrBuilder>(
+                  getProviders(),
+                  getParentForChildren(),
+                  isClean());
+          providers_ = null;
+        }
+        return providersBuilder_;
+      }
+
+      private com.sentinel.session.v2.GenesisProto.GenesisState sessions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.session.v2.GenesisProto.GenesisState, com.sentinel.session.v2.GenesisProto.GenesisState.Builder, com.sentinel.session.v2.GenesisProto.GenesisStateOrBuilder> sessionsBuilder_;
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       * @return Whether the sessions field is set.
+       */
+      public boolean hasSessions() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       * @return The sessions.
+       */
+      public com.sentinel.session.v2.GenesisProto.GenesisState getSessions() {
+        if (sessionsBuilder_ == null) {
+          return sessions_ == null ? com.sentinel.session.v2.GenesisProto.GenesisState.getDefaultInstance() : sessions_;
+        } else {
+          return sessionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       */
+      public Builder setSessions(com.sentinel.session.v2.GenesisProto.GenesisState value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessions_ = value;
+        } else {
+          sessionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       */
+      public Builder setSessions(
+          com.sentinel.session.v2.GenesisProto.GenesisState.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          sessions_ = builderForValue.build();
+        } else {
+          sessionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       */
+      public Builder mergeSessions(com.sentinel.session.v2.GenesisProto.GenesisState value) {
+        if (sessionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            sessions_ != null &&
+            sessions_ != com.sentinel.session.v2.GenesisProto.GenesisState.getDefaultInstance()) {
+            getSessionsBuilder().mergeFrom(value);
+          } else {
+            sessions_ = value;
+          }
+        } else {
+          sessionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       */
+      public Builder clearSessions() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        sessions_ = null;
+        if (sessionsBuilder_ != null) {
+          sessionsBuilder_.dispose();
+          sessionsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       */
+      public com.sentinel.session.v2.GenesisProto.GenesisState.Builder getSessionsBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getSessionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       */
+      public com.sentinel.session.v2.GenesisProto.GenesisStateOrBuilder getSessionsOrBuilder() {
+        if (sessionsBuilder_ != null) {
+          return sessionsBuilder_.getMessageOrBuilder();
+        } else {
+          return sessions_ == null ?
+              com.sentinel.session.v2.GenesisProto.GenesisState.getDefaultInstance() : sessions_;
+        }
+      }
+      /**
+       * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.session.v2.GenesisProto.GenesisState, com.sentinel.session.v2.GenesisProto.GenesisState.Builder, com.sentinel.session.v2.GenesisProto.GenesisStateOrBuilder> 
+          getSessionsFieldBuilder() {
+        if (sessionsBuilder_ == null) {
+          sessionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.session.v2.GenesisProto.GenesisState, com.sentinel.session.v2.GenesisProto.GenesisState.Builder, com.sentinel.session.v2.GenesisProto.GenesisStateOrBuilder>(
+                  getSessions(),
+                  getParentForChildren(),
+                  isClean());
+          sessions_ = null;
+        }
+        return sessionsBuilder_;
+      }
+
+      private com.sentinel.subscription.v2.GenesisProto.GenesisState subscriptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.subscription.v2.GenesisProto.GenesisState, com.sentinel.subscription.v2.GenesisProto.GenesisState.Builder, com.sentinel.subscription.v2.GenesisProto.GenesisStateOrBuilder> subscriptionsBuilder_;
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       * @return Whether the subscriptions field is set.
+       */
+      public boolean hasSubscriptions() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       * @return The subscriptions.
+       */
+      public com.sentinel.subscription.v2.GenesisProto.GenesisState getSubscriptions() {
+        if (subscriptionsBuilder_ == null) {
+          return subscriptions_ == null ? com.sentinel.subscription.v2.GenesisProto.GenesisState.getDefaultInstance() : subscriptions_;
+        } else {
+          return subscriptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       */
+      public Builder setSubscriptions(com.sentinel.subscription.v2.GenesisProto.GenesisState value) {
+        if (subscriptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          subscriptions_ = value;
+        } else {
+          subscriptionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       */
+      public Builder setSubscriptions(
+          com.sentinel.subscription.v2.GenesisProto.GenesisState.Builder builderForValue) {
+        if (subscriptionsBuilder_ == null) {
+          subscriptions_ = builderForValue.build();
+        } else {
+          subscriptionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       */
+      public Builder mergeSubscriptions(com.sentinel.subscription.v2.GenesisProto.GenesisState value) {
+        if (subscriptionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            subscriptions_ != null &&
+            subscriptions_ != com.sentinel.subscription.v2.GenesisProto.GenesisState.getDefaultInstance()) {
+            getSubscriptionsBuilder().mergeFrom(value);
+          } else {
+            subscriptions_ = value;
+          }
+        } else {
+          subscriptionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       */
+      public Builder clearSubscriptions() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        subscriptions_ = null;
+        if (subscriptionsBuilder_ != null) {
+          subscriptionsBuilder_.dispose();
+          subscriptionsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       */
+      public com.sentinel.subscription.v2.GenesisProto.GenesisState.Builder getSubscriptionsBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getSubscriptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       */
+      public com.sentinel.subscription.v2.GenesisProto.GenesisStateOrBuilder getSubscriptionsOrBuilder() {
+        if (subscriptionsBuilder_ != null) {
+          return subscriptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return subscriptions_ == null ?
+              com.sentinel.subscription.v2.GenesisProto.GenesisState.getDefaultInstance() : subscriptions_;
+        }
+      }
+      /**
+       * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.subscription.v2.GenesisProto.GenesisState, com.sentinel.subscription.v2.GenesisProto.GenesisState.Builder, com.sentinel.subscription.v2.GenesisProto.GenesisStateOrBuilder> 
+          getSubscriptionsFieldBuilder() {
+        if (subscriptionsBuilder_ == null) {
+          subscriptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.subscription.v2.GenesisProto.GenesisState, com.sentinel.subscription.v2.GenesisProto.GenesisState.Builder, com.sentinel.subscription.v2.GenesisProto.GenesisStateOrBuilder>(
+                  getSubscriptions(),
+                  getParentForChildren(),
+                  isClean());
+          subscriptions_ = null;
+        }
+        return subscriptionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.vpn.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.vpn.v1.GenesisState)
+    private static final com.sentinel.vpn.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.vpn.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.sentinel.vpn.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.vpn.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_vpn_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_vpn_v1_GenesisState_fieldAccessorTable;
 
@@ -45,11 +1985,11 @@ public final class GenesisProto {
       ".sentinel.session.v2.GenesisStateR\010sessi" +
       "ons\022L\n\rsubscriptions\030\006 \001(\0132&.sentinel.su" +
       "bscription.v2.GenesisStateR\rsubscription" +
-      "sB\267\001\n\023com.sentinel.vpn.v1B\014GenesisProtoP" +
-      "\001Z,github.com/sentinel-official/hub/x/vp" +
-      "n/types\242\002\003SVX\252\002\017Sentinel.Vpn.V1\312\002\017Sentin" +
-      "el\\Vpn\\V1\342\002\033Sentinel\\Vpn\\V1\\GPBMetadata\352" +
-      "\002\021Sentinel::Vpn::V1\310\341\036\000\250\342\036\000b\006proto3"
+      "sB\265\001\n\023com.sentinel.vpn.v1B\014GenesisProtoZ" +
+      ",github.com/sentinel-official/hub/x/vpn/" +
+      "types\242\002\003SVX\252\002\017Sentinel.Vpn.V1\312\002\017Sentinel" +
+      "\\Vpn\\V1\342\002\033Sentinel\\Vpn\\V1\\GPBMetadata\352\002\021" +
+      "Sentinel::Vpn::V1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

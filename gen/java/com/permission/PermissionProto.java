@@ -14,19 +14,2529 @@ public final class PermissionProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AccountPermissionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:permission.AccountPermissions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+     * @return Whether the base field is set.
+     */
+    boolean hasBase();
+    /**
+     * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+     * @return The base.
+     */
+    com.permission.PermissionProto.BasePermissions getBase();
+    /**
+     * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+     */
+    com.permission.PermissionProto.BasePermissionsOrBuilder getBaseOrBuilder();
+
+    /**
+     * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+     * @return A list containing the roles.
+     */
+    java.util.List<java.lang.String>
+        getRolesList();
+    /**
+     * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+     * @return The count of roles.
+     */
+    int getRolesCount();
+    /**
+     * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+     * @param index The index of the element to return.
+     * @return The roles at the given index.
+     */
+    java.lang.String getRoles(int index);
+    /**
+     * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the roles at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRolesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code permission.AccountPermissions}
+   */
+  public static final class AccountPermissions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:permission.AccountPermissions)
+      AccountPermissionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccountPermissions.newBuilder() to construct.
+    private AccountPermissions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccountPermissions() {
+      roles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccountPermissions();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.permission.PermissionProto.internal_static_permission_AccountPermissions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.permission.PermissionProto.internal_static_permission_AccountPermissions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.permission.PermissionProto.AccountPermissions.class, com.permission.PermissionProto.AccountPermissions.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int BASE_FIELD_NUMBER = 1;
+    private com.permission.PermissionProto.BasePermissions base_;
+    /**
+     * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+     * @return Whether the base field is set.
+     */
+    @java.lang.Override
+    public boolean hasBase() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+     * @return The base.
+     */
+    @java.lang.Override
+    public com.permission.PermissionProto.BasePermissions getBase() {
+      return base_ == null ? com.permission.PermissionProto.BasePermissions.getDefaultInstance() : base_;
+    }
+    /**
+     * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.permission.PermissionProto.BasePermissionsOrBuilder getBaseOrBuilder() {
+      return base_ == null ? com.permission.PermissionProto.BasePermissions.getDefaultInstance() : base_;
+    }
+
+    public static final int ROLES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList roles_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+     * @return A list containing the roles.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRolesList() {
+      return roles_;
+    }
+    /**
+     * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+     * @return The count of roles.
+     */
+    public int getRolesCount() {
+      return roles_.size();
+    }
+    /**
+     * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+     * @param index The index of the element to return.
+     * @return The roles at the given index.
+     */
+    public java.lang.String getRoles(int index) {
+      return roles_.get(index);
+    }
+    /**
+     * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the roles at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRolesBytes(int index) {
+      return roles_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getBase());
+      }
+      for (int i = 0; i < roles_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roles_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBase());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < roles_.size(); i++) {
+          dataSize += computeStringSizeNoTag(roles_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRolesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.permission.PermissionProto.AccountPermissions)) {
+        return super.equals(obj);
+      }
+      com.permission.PermissionProto.AccountPermissions other = (com.permission.PermissionProto.AccountPermissions) obj;
+
+      if (hasBase() != other.hasBase()) return false;
+      if (hasBase()) {
+        if (!getBase()
+            .equals(other.getBase())) return false;
+      }
+      if (!getRolesList()
+          .equals(other.getRolesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBase()) {
+        hash = (37 * hash) + BASE_FIELD_NUMBER;
+        hash = (53 * hash) + getBase().hashCode();
+      }
+      if (getRolesCount() > 0) {
+        hash = (37 * hash) + ROLES_FIELD_NUMBER;
+        hash = (53 * hash) + getRolesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.permission.PermissionProto.AccountPermissions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.permission.PermissionProto.AccountPermissions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.permission.PermissionProto.AccountPermissions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.permission.PermissionProto.AccountPermissions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code permission.AccountPermissions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:permission.AccountPermissions)
+        com.permission.PermissionProto.AccountPermissionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.permission.PermissionProto.internal_static_permission_AccountPermissions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.permission.PermissionProto.internal_static_permission_AccountPermissions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.permission.PermissionProto.AccountPermissions.class, com.permission.PermissionProto.AccountPermissions.Builder.class);
+      }
+
+      // Construct using com.permission.PermissionProto.AccountPermissions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        base_ = null;
+        if (baseBuilder_ != null) {
+          baseBuilder_.dispose();
+          baseBuilder_ = null;
+        }
+        roles_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.permission.PermissionProto.internal_static_permission_AccountPermissions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.AccountPermissions getDefaultInstanceForType() {
+        return com.permission.PermissionProto.AccountPermissions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.AccountPermissions build() {
+        com.permission.PermissionProto.AccountPermissions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.AccountPermissions buildPartial() {
+        com.permission.PermissionProto.AccountPermissions result = new com.permission.PermissionProto.AccountPermissions(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.permission.PermissionProto.AccountPermissions result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.base_ = baseBuilder_ == null
+              ? base_
+              : baseBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          roles_.makeImmutable();
+          result.roles_ = roles_;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.permission.PermissionProto.AccountPermissions) {
+          return mergeFrom((com.permission.PermissionProto.AccountPermissions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.permission.PermissionProto.AccountPermissions other) {
+        if (other == com.permission.PermissionProto.AccountPermissions.getDefaultInstance()) return this;
+        if (other.hasBase()) {
+          mergeBase(other.getBase());
+        }
+        if (!other.roles_.isEmpty()) {
+          if (roles_.isEmpty()) {
+            roles_ = other.roles_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureRolesIsMutable();
+            roles_.addAll(other.roles_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBaseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                ensureRolesIsMutable();
+                roles_.add(bs);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.permission.PermissionProto.BasePermissions base_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.permission.PermissionProto.BasePermissions, com.permission.PermissionProto.BasePermissions.Builder, com.permission.PermissionProto.BasePermissionsOrBuilder> baseBuilder_;
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       * @return Whether the base field is set.
+       */
+      public boolean hasBase() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       * @return The base.
+       */
+      public com.permission.PermissionProto.BasePermissions getBase() {
+        if (baseBuilder_ == null) {
+          return base_ == null ? com.permission.PermissionProto.BasePermissions.getDefaultInstance() : base_;
+        } else {
+          return baseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBase(com.permission.PermissionProto.BasePermissions value) {
+        if (baseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          base_ = value;
+        } else {
+          baseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBase(
+          com.permission.PermissionProto.BasePermissions.Builder builderForValue) {
+        if (baseBuilder_ == null) {
+          base_ = builderForValue.build();
+        } else {
+          baseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBase(com.permission.PermissionProto.BasePermissions value) {
+        if (baseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            base_ != null &&
+            base_ != com.permission.PermissionProto.BasePermissions.getDefaultInstance()) {
+            getBaseBuilder().mergeFrom(value);
+          } else {
+            base_ = value;
+          }
+        } else {
+          baseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBase() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        base_ = null;
+        if (baseBuilder_ != null) {
+          baseBuilder_.dispose();
+          baseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       */
+      public com.permission.PermissionProto.BasePermissions.Builder getBaseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBaseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       */
+      public com.permission.PermissionProto.BasePermissionsOrBuilder getBaseOrBuilder() {
+        if (baseBuilder_ != null) {
+          return baseBuilder_.getMessageOrBuilder();
+        } else {
+          return base_ == null ?
+              com.permission.PermissionProto.BasePermissions.getDefaultInstance() : base_;
+        }
+      }
+      /**
+       * <code>optional .permission.BasePermissions Base = 1 [json_name = "Base", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.permission.PermissionProto.BasePermissions, com.permission.PermissionProto.BasePermissions.Builder, com.permission.PermissionProto.BasePermissionsOrBuilder> 
+          getBaseFieldBuilder() {
+        if (baseBuilder_ == null) {
+          baseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.permission.PermissionProto.BasePermissions, com.permission.PermissionProto.BasePermissions.Builder, com.permission.PermissionProto.BasePermissionsOrBuilder>(
+                  getBase(),
+                  getParentForChildren(),
+                  isClean());
+          base_ = null;
+        }
+        return baseBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList roles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRolesIsMutable() {
+        if (!roles_.isModifiable()) {
+          roles_ = new com.google.protobuf.LazyStringArrayList(roles_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @return A list containing the roles.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRolesList() {
+        roles_.makeImmutable();
+        return roles_;
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @return The count of roles.
+       */
+      public int getRolesCount() {
+        return roles_.size();
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @param index The index of the element to return.
+       * @return The roles at the given index.
+       */
+      public java.lang.String getRoles(int index) {
+        return roles_.get(index);
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the roles at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRolesBytes(int index) {
+        return roles_.getByteString(index);
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @param index The index to set the value at.
+       * @param value The roles to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoles(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRolesIsMutable();
+        roles_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @param value The roles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoles(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRolesIsMutable();
+        roles_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @param values The roles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRoles(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRolesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, roles_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoles() {
+        roles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Roles = 2 [json_name = "Roles"];</code>
+       * @param value The bytes of the roles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRolesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRolesIsMutable();
+        roles_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:permission.AccountPermissions)
+    }
+
+    // @@protoc_insertion_point(class_scope:permission.AccountPermissions)
+    private static final com.permission.PermissionProto.AccountPermissions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.permission.PermissionProto.AccountPermissions();
+    }
+
+    public static com.permission.PermissionProto.AccountPermissions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AccountPermissions>
+        PARSER = new com.google.protobuf.AbstractParser<AccountPermissions>() {
+      @java.lang.Override
+      public AccountPermissions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccountPermissions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccountPermissions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.permission.PermissionProto.AccountPermissions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BasePermissionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:permission.BasePermissions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 Perms = 1 [json_name = "Perms", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return Whether the perms field is set.
+     */
+    boolean hasPerms();
+    /**
+     * <code>optional uint64 Perms = 1 [json_name = "Perms", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return The perms.
+     */
+    long getPerms();
+
+    /**
+     * <code>optional uint64 SetBit = 2 [json_name = "SetBit", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return Whether the setBit field is set.
+     */
+    boolean hasSetBit();
+    /**
+     * <code>optional uint64 SetBit = 2 [json_name = "SetBit", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return The setBit.
+     */
+    long getSetBit();
+  }
+  /**
+   * Protobuf type {@code permission.BasePermissions}
+   */
+  public static final class BasePermissions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:permission.BasePermissions)
+      BasePermissionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BasePermissions.newBuilder() to construct.
+    private BasePermissions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BasePermissions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BasePermissions();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.permission.PermissionProto.internal_static_permission_BasePermissions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.permission.PermissionProto.internal_static_permission_BasePermissions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.permission.PermissionProto.BasePermissions.class, com.permission.PermissionProto.BasePermissions.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PERMS_FIELD_NUMBER = 1;
+    private long perms_ = 0L;
+    /**
+     * <code>optional uint64 Perms = 1 [json_name = "Perms", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return Whether the perms field is set.
+     */
+    @java.lang.Override
+    public boolean hasPerms() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 Perms = 1 [json_name = "Perms", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return The perms.
+     */
+    @java.lang.Override
+    public long getPerms() {
+      return perms_;
+    }
+
+    public static final int SETBIT_FIELD_NUMBER = 2;
+    private long setBit_ = 0L;
+    /**
+     * <code>optional uint64 SetBit = 2 [json_name = "SetBit", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return Whether the setBit field is set.
+     */
+    @java.lang.Override
+    public boolean hasSetBit() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 SetBit = 2 [json_name = "SetBit", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return The setBit.
+     */
+    @java.lang.Override
+    public long getSetBit() {
+      return setBit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, perms_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, setBit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, perms_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, setBit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.permission.PermissionProto.BasePermissions)) {
+        return super.equals(obj);
+      }
+      com.permission.PermissionProto.BasePermissions other = (com.permission.PermissionProto.BasePermissions) obj;
+
+      if (hasPerms() != other.hasPerms()) return false;
+      if (hasPerms()) {
+        if (getPerms()
+            != other.getPerms()) return false;
+      }
+      if (hasSetBit() != other.hasSetBit()) return false;
+      if (hasSetBit()) {
+        if (getSetBit()
+            != other.getSetBit()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPerms()) {
+        hash = (37 * hash) + PERMS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPerms());
+      }
+      if (hasSetBit()) {
+        hash = (37 * hash) + SETBIT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSetBit());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.permission.PermissionProto.BasePermissions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.permission.PermissionProto.BasePermissions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.permission.PermissionProto.BasePermissions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.permission.PermissionProto.BasePermissions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.permission.PermissionProto.BasePermissions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code permission.BasePermissions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:permission.BasePermissions)
+        com.permission.PermissionProto.BasePermissionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.permission.PermissionProto.internal_static_permission_BasePermissions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.permission.PermissionProto.internal_static_permission_BasePermissions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.permission.PermissionProto.BasePermissions.class, com.permission.PermissionProto.BasePermissions.Builder.class);
+      }
+
+      // Construct using com.permission.PermissionProto.BasePermissions.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        perms_ = 0L;
+        setBit_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.permission.PermissionProto.internal_static_permission_BasePermissions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.BasePermissions getDefaultInstanceForType() {
+        return com.permission.PermissionProto.BasePermissions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.BasePermissions build() {
+        com.permission.PermissionProto.BasePermissions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.BasePermissions buildPartial() {
+        com.permission.PermissionProto.BasePermissions result = new com.permission.PermissionProto.BasePermissions(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.permission.PermissionProto.BasePermissions result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.perms_ = perms_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.setBit_ = setBit_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.permission.PermissionProto.BasePermissions) {
+          return mergeFrom((com.permission.PermissionProto.BasePermissions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.permission.PermissionProto.BasePermissions other) {
+        if (other == com.permission.PermissionProto.BasePermissions.getDefaultInstance()) return this;
+        if (other.hasPerms()) {
+          setPerms(other.getPerms());
+        }
+        if (other.hasSetBit()) {
+          setSetBit(other.getSetBit());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                perms_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                setBit_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long perms_ ;
+      /**
+       * <code>optional uint64 Perms = 1 [json_name = "Perms", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return Whether the perms field is set.
+       */
+      @java.lang.Override
+      public boolean hasPerms() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 Perms = 1 [json_name = "Perms", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return The perms.
+       */
+      @java.lang.Override
+      public long getPerms() {
+        return perms_;
+      }
+      /**
+       * <code>optional uint64 Perms = 1 [json_name = "Perms", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @param value The perms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPerms(long value) {
+
+        perms_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 Perms = 1 [json_name = "Perms", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPerms() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        perms_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long setBit_ ;
+      /**
+       * <code>optional uint64 SetBit = 2 [json_name = "SetBit", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return Whether the setBit field is set.
+       */
+      @java.lang.Override
+      public boolean hasSetBit() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 SetBit = 2 [json_name = "SetBit", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return The setBit.
+       */
+      @java.lang.Override
+      public long getSetBit() {
+        return setBit_;
+      }
+      /**
+       * <code>optional uint64 SetBit = 2 [json_name = "SetBit", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @param value The setBit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSetBit(long value) {
+
+        setBit_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 SetBit = 2 [json_name = "SetBit", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSetBit() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        setBit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:permission.BasePermissions)
+    }
+
+    // @@protoc_insertion_point(class_scope:permission.BasePermissions)
+    private static final com.permission.PermissionProto.BasePermissions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.permission.PermissionProto.BasePermissions();
+    }
+
+    public static com.permission.PermissionProto.BasePermissions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<BasePermissions>
+        PARSER = new com.google.protobuf.AbstractParser<BasePermissions>() {
+      @java.lang.Override
+      public BasePermissions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BasePermissions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BasePermissions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.permission.PermissionProto.BasePermissions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PermArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:permission.PermArgs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The permission function
+     * </pre>
+     *
+     * <code>optional uint64 Action = 1 [json_name = "Action", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return Whether the action field is set.
+     */
+    boolean hasAction();
+    /**
+     * <pre>
+     * The permission function
+     * </pre>
+     *
+     * <code>optional uint64 Action = 1 [json_name = "Action", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return The action.
+     */
+    long getAction();
+
+    /**
+     * <pre>
+     * The target of the action
+     * </pre>
+     *
+     * <code>optional bytes Target = 2 [json_name = "Target", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return Whether the target field is set.
+     */
+    boolean hasTarget();
+    /**
+     * <pre>
+     * The target of the action
+     * </pre>
+     *
+     * <code>optional bytes Target = 2 [json_name = "Target", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The target.
+     */
+    com.google.protobuf.ByteString getTarget();
+
+    /**
+     * <pre>
+     * Possible arguments
+     * </pre>
+     *
+     * <code>optional uint64 Permission = 3 [json_name = "Permission", (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return Whether the permission field is set.
+     */
+    boolean hasPermission();
+    /**
+     * <pre>
+     * Possible arguments
+     * </pre>
+     *
+     * <code>optional uint64 Permission = 3 [json_name = "Permission", (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return The permission.
+     */
+    long getPermission();
+
+    /**
+     * <code>optional string Role = 4 [json_name = "Role"];</code>
+     * @return Whether the role field is set.
+     */
+    boolean hasRole();
+    /**
+     * <code>optional string Role = 4 [json_name = "Role"];</code>
+     * @return The role.
+     */
+    java.lang.String getRole();
+    /**
+     * <code>optional string Role = 4 [json_name = "Role"];</code>
+     * @return The bytes for role.
+     */
+    com.google.protobuf.ByteString
+        getRoleBytes();
+
+    /**
+     * <code>optional bool Value = 5 [json_name = "Value"];</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>optional bool Value = 5 [json_name = "Value"];</code>
+     * @return The value.
+     */
+    boolean getValue();
+  }
+  /**
+   * Protobuf type {@code permission.PermArgs}
+   */
+  public static final class PermArgs extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:permission.PermArgs)
+      PermArgsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PermArgs.newBuilder() to construct.
+    private PermArgs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PermArgs() {
+      target_ = com.google.protobuf.ByteString.EMPTY;
+      role_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PermArgs();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.permission.PermissionProto.internal_static_permission_PermArgs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.permission.PermissionProto.internal_static_permission_PermArgs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.permission.PermissionProto.PermArgs.class, com.permission.PermissionProto.PermArgs.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private long action_ = 0L;
+    /**
+     * <pre>
+     * The permission function
+     * </pre>
+     *
+     * <code>optional uint64 Action = 1 [json_name = "Action", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return Whether the action field is set.
+     */
+    @java.lang.Override
+    public boolean hasAction() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The permission function
+     * </pre>
+     *
+     * <code>optional uint64 Action = 1 [json_name = "Action", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public long getAction() {
+      return action_;
+    }
+
+    public static final int TARGET_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString target_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * The target of the action
+     * </pre>
+     *
+     * <code>optional bytes Target = 2 [json_name = "Target", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return Whether the target field is set.
+     */
+    @java.lang.Override
+    public boolean hasTarget() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The target of the action
+     * </pre>
+     *
+     * <code>optional bytes Target = 2 [json_name = "Target", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The target.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getTarget() {
+      return target_;
+    }
+
+    public static final int PERMISSION_FIELD_NUMBER = 3;
+    private long permission_ = 0L;
+    /**
+     * <pre>
+     * Possible arguments
+     * </pre>
+     *
+     * <code>optional uint64 Permission = 3 [json_name = "Permission", (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return Whether the permission field is set.
+     */
+    @java.lang.Override
+    public boolean hasPermission() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Possible arguments
+     * </pre>
+     *
+     * <code>optional uint64 Permission = 3 [json_name = "Permission", (.gogoproto.casttype) = "PermFlag"];</code>
+     * @return The permission.
+     */
+    @java.lang.Override
+    public long getPermission() {
+      return permission_;
+    }
+
+    public static final int ROLE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object role_ = "";
+    /**
+     * <code>optional string Role = 4 [json_name = "Role"];</code>
+     * @return Whether the role field is set.
+     */
+    @java.lang.Override
+    public boolean hasRole() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string Role = 4 [json_name = "Role"];</code>
+     * @return The role.
+     */
+    @java.lang.Override
+    public java.lang.String getRole() {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          role_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Role = 4 [json_name = "Role"];</code>
+     * @return The bytes for role.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoleBytes() {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        role_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 5;
+    private boolean value_ = false;
+    /**
+     * <code>optional bool Value = 5 [json_name = "Value"];</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional bool Value = 5 [json_name = "Value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public boolean getValue() {
+      return value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, action_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBytes(2, target_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, permission_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, role_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(5, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, action_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, target_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, permission_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, role_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.permission.PermissionProto.PermArgs)) {
+        return super.equals(obj);
+      }
+      com.permission.PermissionProto.PermArgs other = (com.permission.PermissionProto.PermArgs) obj;
+
+      if (hasAction() != other.hasAction()) return false;
+      if (hasAction()) {
+        if (getAction()
+            != other.getAction()) return false;
+      }
+      if (hasTarget() != other.hasTarget()) return false;
+      if (hasTarget()) {
+        if (!getTarget()
+            .equals(other.getTarget())) return false;
+      }
+      if (hasPermission() != other.hasPermission()) return false;
+      if (hasPermission()) {
+        if (getPermission()
+            != other.getPermission()) return false;
+      }
+      if (hasRole() != other.hasRole()) return false;
+      if (hasRole()) {
+        if (!getRole()
+            .equals(other.getRole())) return false;
+      }
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (getValue()
+            != other.getValue()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAction()) {
+        hash = (37 * hash) + ACTION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAction());
+      }
+      if (hasTarget()) {
+        hash = (37 * hash) + TARGET_FIELD_NUMBER;
+        hash = (53 * hash) + getTarget().hashCode();
+      }
+      if (hasPermission()) {
+        hash = (37 * hash) + PERMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPermission());
+      }
+      if (hasRole()) {
+        hash = (37 * hash) + ROLE_FIELD_NUMBER;
+        hash = (53 * hash) + getRole().hashCode();
+      }
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getValue());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.permission.PermissionProto.PermArgs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.permission.PermissionProto.PermArgs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.permission.PermissionProto.PermArgs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.permission.PermissionProto.PermArgs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.permission.PermissionProto.PermArgs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code permission.PermArgs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:permission.PermArgs)
+        com.permission.PermissionProto.PermArgsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.permission.PermissionProto.internal_static_permission_PermArgs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.permission.PermissionProto.internal_static_permission_PermArgs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.permission.PermissionProto.PermArgs.class, com.permission.PermissionProto.PermArgs.Builder.class);
+      }
+
+      // Construct using com.permission.PermissionProto.PermArgs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        action_ = 0L;
+        target_ = com.google.protobuf.ByteString.EMPTY;
+        permission_ = 0L;
+        role_ = "";
+        value_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.permission.PermissionProto.internal_static_permission_PermArgs_descriptor;
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.PermArgs getDefaultInstanceForType() {
+        return com.permission.PermissionProto.PermArgs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.PermArgs build() {
+        com.permission.PermissionProto.PermArgs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.permission.PermissionProto.PermArgs buildPartial() {
+        com.permission.PermissionProto.PermArgs result = new com.permission.PermissionProto.PermArgs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.permission.PermissionProto.PermArgs result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.action_ = action_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.target_ = target_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.permission_ = permission_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.role_ = role_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.value_ = value_;
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.permission.PermissionProto.PermArgs) {
+          return mergeFrom((com.permission.PermissionProto.PermArgs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.permission.PermissionProto.PermArgs other) {
+        if (other == com.permission.PermissionProto.PermArgs.getDefaultInstance()) return this;
+        if (other.hasAction()) {
+          setAction(other.getAction());
+        }
+        if (other.hasTarget()) {
+          setTarget(other.getTarget());
+        }
+        if (other.hasPermission()) {
+          setPermission(other.getPermission());
+        }
+        if (other.hasRole()) {
+          role_ = other.role_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                action_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                target_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                permission_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                role_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                value_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long action_ ;
+      /**
+       * <pre>
+       * The permission function
+       * </pre>
+       *
+       * <code>optional uint64 Action = 1 [json_name = "Action", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return Whether the action field is set.
+       */
+      @java.lang.Override
+      public boolean hasAction() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The permission function
+       * </pre>
+       *
+       * <code>optional uint64 Action = 1 [json_name = "Action", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public long getAction() {
+        return action_;
+      }
+      /**
+       * <pre>
+       * The permission function
+       * </pre>
+       *
+       * <code>optional uint64 Action = 1 [json_name = "Action", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(long value) {
+
+        action_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The permission function
+       * </pre>
+       *
+       * <code>optional uint64 Action = 1 [json_name = "Action", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        action_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString target_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * The target of the action
+       * </pre>
+       *
+       * <code>optional bytes Target = 2 [json_name = "Target", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return Whether the target field is set.
+       */
+      @java.lang.Override
+      public boolean hasTarget() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The target of the action
+       * </pre>
+       *
+       * <code>optional bytes Target = 2 [json_name = "Target", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return The target.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getTarget() {
+        return target_;
+      }
+      /**
+       * <pre>
+       * The target of the action
+       * </pre>
+       *
+       * <code>optional bytes Target = 2 [json_name = "Target", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @param value The target to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTarget(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        target_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The target of the action
+       * </pre>
+       *
+       * <code>optional bytes Target = 2 [json_name = "Target", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTarget() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        target_ = getDefaultInstance().getTarget();
+        onChanged();
+        return this;
+      }
+
+      private long permission_ ;
+      /**
+       * <pre>
+       * Possible arguments
+       * </pre>
+       *
+       * <code>optional uint64 Permission = 3 [json_name = "Permission", (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return Whether the permission field is set.
+       */
+      @java.lang.Override
+      public boolean hasPermission() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Possible arguments
+       * </pre>
+       *
+       * <code>optional uint64 Permission = 3 [json_name = "Permission", (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return The permission.
+       */
+      @java.lang.Override
+      public long getPermission() {
+        return permission_;
+      }
+      /**
+       * <pre>
+       * Possible arguments
+       * </pre>
+       *
+       * <code>optional uint64 Permission = 3 [json_name = "Permission", (.gogoproto.casttype) = "PermFlag"];</code>
+       * @param value The permission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermission(long value) {
+
+        permission_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Possible arguments
+       * </pre>
+       *
+       * <code>optional uint64 Permission = 3 [json_name = "Permission", (.gogoproto.casttype) = "PermFlag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermission() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        permission_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object role_ = "";
+      /**
+       * <code>optional string Role = 4 [json_name = "Role"];</code>
+       * @return Whether the role field is set.
+       */
+      public boolean hasRole() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string Role = 4 [json_name = "Role"];</code>
+       * @return The role.
+       */
+      public java.lang.String getRole() {
+        java.lang.Object ref = role_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            role_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Role = 4 [json_name = "Role"];</code>
+       * @return The bytes for role.
+       */
+      public com.google.protobuf.ByteString
+          getRoleBytes() {
+        java.lang.Object ref = role_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          role_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Role = 4 [json_name = "Role"];</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRole(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        role_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Role = 4 [json_name = "Role"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRole() {
+        role_ = getDefaultInstance().getRole();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Role = 4 [json_name = "Role"];</code>
+       * @param value The bytes for role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        role_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private boolean value_ ;
+      /**
+       * <code>optional bool Value = 5 [json_name = "Value"];</code>
+       * @return Whether the value field is set.
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional bool Value = 5 [json_name = "Value"];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public boolean getValue() {
+        return value_;
+      }
+      /**
+       * <code>optional bool Value = 5 [json_name = "Value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(boolean value) {
+
+        value_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool Value = 5 [json_name = "Value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        value_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:permission.PermArgs)
+    }
+
+    // @@protoc_insertion_point(class_scope:permission.PermArgs)
+    private static final com.permission.PermissionProto.PermArgs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.permission.PermissionProto.PermArgs();
+    }
+
+    public static com.permission.PermissionProto.PermArgs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PermArgs>
+        PARSER = new com.google.protobuf.AbstractParser<PermArgs>() {
+      @java.lang.Override
+      public PermArgs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PermArgs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PermArgs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.permission.PermissionProto.PermArgs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_permission_AccountPermissions_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_permission_AccountPermissions_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_permission_BasePermissions_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_permission_BasePermissions_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_permission_PermArgs_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_permission_PermArgs_fieldAccessorTable;
 
@@ -50,12 +2560,12 @@ public final class PermissionProto {
       "\014B0\332\336\037,github.com/hyperledger/burrow/cry" +
       "pto.AddressR\006Target\022,\n\nPermission\030\003 \001(\004B" +
       "\014\372\336\037\010PermFlagR\nPermission\022\022\n\004Role\030\004 \001(\tR" +
-      "\004Role\022\024\n\005Value\030\005 \001(\010R\005Value:\010\230\240\037\000\320\241\037\000B\247\001" +
-      "\n\016com.permissionB\017PermissionProtoP\001Z(git" +
-      "hub.com/hyperledger/burrow/permission\242\002\003" +
-      "PXX\252\002\nPermission\312\002\nPermission\342\002\026Permissi" +
-      "on\\GPBMetadata\352\002\nPermission\310\342\036\001\320\342\036\001\340\342\036\001\300" +
-      "\343\036\001\310\343\036\001"
+      "\004Role\022\024\n\005Value\030\005 \001(\010R\005Value:\010\230\240\037\000\320\241\037\000B\245\001" +
+      "\n\016com.permissionB\017PermissionProtoZ(githu" +
+      "b.com/hyperledger/burrow/permission\242\002\003PX" +
+      "X\252\002\nPermission\312\002\nPermission\342\002\026Permission" +
+      "\\GPBMetadata\352\002\nPermission\310\342\036\001\320\342\036\001\340\342\036\001\300\343\036" +
+      "\001\310\343\036\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

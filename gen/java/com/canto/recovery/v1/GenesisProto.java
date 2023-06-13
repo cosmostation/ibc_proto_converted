@@ -14,14 +14,1443 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.recovery.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.canto.recovery.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.recovery.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the recovery module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code canto.recovery.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.recovery.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.recovery.v1.GenesisProto.GenesisState.class, com.canto.recovery.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.canto.recovery.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.canto.recovery.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.canto.recovery.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.recovery.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.canto.recovery.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.recovery.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.canto.recovery.v1.GenesisProto.GenesisState other = (com.canto.recovery.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.recovery.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.recovery.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the recovery module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code canto.recovery.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.recovery.v1.GenesisState)
+        com.canto.recovery.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.recovery.v1.GenesisProto.GenesisState.class, com.canto.recovery.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.canto.recovery.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.recovery.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.canto.recovery.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.recovery.v1.GenesisProto.GenesisState build() {
+        com.canto.recovery.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.recovery.v1.GenesisProto.GenesisState buildPartial() {
+        com.canto.recovery.v1.GenesisProto.GenesisState result = new com.canto.recovery.v1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.recovery.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.recovery.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.canto.recovery.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.recovery.v1.GenesisProto.GenesisState other) {
+        if (other == com.canto.recovery.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.canto.recovery.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.recovery.v1.GenesisProto.Params, com.canto.recovery.v1.GenesisProto.Params.Builder, com.canto.recovery.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.canto.recovery.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.canto.recovery.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.canto.recovery.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.canto.recovery.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.canto.recovery.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.canto.recovery.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.recovery.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.recovery.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.canto.recovery.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.recovery.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.recovery.v1.GenesisProto.Params, com.canto.recovery.v1.GenesisProto.Params.Builder, com.canto.recovery.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.recovery.v1.GenesisProto.Params, com.canto.recovery.v1.GenesisProto.Params.Builder, com.canto.recovery.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.recovery.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.recovery.v1.GenesisState)
+    private static final com.canto.recovery.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.recovery.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.canto.recovery.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.recovery.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.recovery.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * enable recovery IBC middleware
+     * </pre>
+     *
+     * <code>bool enable_recovery = 1 [json_name = "enableRecovery"];</code>
+     * @return The enableRecovery.
+     */
+    boolean getEnableRecovery();
+
+    /**
+     * <pre>
+     * duration added to timeout timestamp for balances recovered via IBC packets
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the packetTimeoutDuration field is set.
+     */
+    boolean hasPacketTimeoutDuration();
+    /**
+     * <pre>
+     * duration added to timeout timestamp for balances recovered via IBC packets
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The packetTimeoutDuration.
+     */
+    com.google.protobuf.Duration getPacketTimeoutDuration();
+    /**
+     * <pre>
+     * duration added to timeout timestamp for balances recovered via IBC packets
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getPacketTimeoutDurationOrBuilder();
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the recovery module
+   * </pre>
+   *
+   * Protobuf type {@code canto.recovery.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.recovery.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.recovery.v1.GenesisProto.Params.class, com.canto.recovery.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int ENABLE_RECOVERY_FIELD_NUMBER = 1;
+    private boolean enableRecovery_ = false;
+    /**
+     * <pre>
+     * enable recovery IBC middleware
+     * </pre>
+     *
+     * <code>bool enable_recovery = 1 [json_name = "enableRecovery"];</code>
+     * @return The enableRecovery.
+     */
+    @java.lang.Override
+    public boolean getEnableRecovery() {
+      return enableRecovery_;
+    }
+
+    public static final int PACKET_TIMEOUT_DURATION_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration packetTimeoutDuration_;
+    /**
+     * <pre>
+     * duration added to timeout timestamp for balances recovered via IBC packets
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the packetTimeoutDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasPacketTimeoutDuration() {
+      return packetTimeoutDuration_ != null;
+    }
+    /**
+     * <pre>
+     * duration added to timeout timestamp for balances recovered via IBC packets
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The packetTimeoutDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getPacketTimeoutDuration() {
+      return packetTimeoutDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : packetTimeoutDuration_;
+    }
+    /**
+     * <pre>
+     * duration added to timeout timestamp for balances recovered via IBC packets
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getPacketTimeoutDurationOrBuilder() {
+      return packetTimeoutDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : packetTimeoutDuration_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enableRecovery_ != false) {
+        output.writeBool(1, enableRecovery_);
+      }
+      if (packetTimeoutDuration_ != null) {
+        output.writeMessage(2, getPacketTimeoutDuration());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enableRecovery_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableRecovery_);
+      }
+      if (packetTimeoutDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPacketTimeoutDuration());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.recovery.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.canto.recovery.v1.GenesisProto.Params other = (com.canto.recovery.v1.GenesisProto.Params) obj;
+
+      if (getEnableRecovery()
+          != other.getEnableRecovery()) return false;
+      if (hasPacketTimeoutDuration() != other.hasPacketTimeoutDuration()) return false;
+      if (hasPacketTimeoutDuration()) {
+        if (!getPacketTimeoutDuration()
+            .equals(other.getPacketTimeoutDuration())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_RECOVERY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableRecovery());
+      if (hasPacketTimeoutDuration()) {
+        hash = (37 * hash) + PACKET_TIMEOUT_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPacketTimeoutDuration().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.recovery.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.recovery.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.recovery.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.recovery.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the recovery module
+     * </pre>
+     *
+     * Protobuf type {@code canto.recovery.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.recovery.v1.Params)
+        com.canto.recovery.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.recovery.v1.GenesisProto.Params.class, com.canto.recovery.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.canto.recovery.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        enableRecovery_ = false;
+        packetTimeoutDuration_ = null;
+        if (packetTimeoutDurationBuilder_ != null) {
+          packetTimeoutDurationBuilder_.dispose();
+          packetTimeoutDurationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.recovery.v1.GenesisProto.internal_static_canto_recovery_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.recovery.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.canto.recovery.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.recovery.v1.GenesisProto.Params build() {
+        com.canto.recovery.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.recovery.v1.GenesisProto.Params buildPartial() {
+        com.canto.recovery.v1.GenesisProto.Params result = new com.canto.recovery.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.recovery.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enableRecovery_ = enableRecovery_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.packetTimeoutDuration_ = packetTimeoutDurationBuilder_ == null
+              ? packetTimeoutDuration_
+              : packetTimeoutDurationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.recovery.v1.GenesisProto.Params) {
+          return mergeFrom((com.canto.recovery.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.recovery.v1.GenesisProto.Params other) {
+        if (other == com.canto.recovery.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (other.getEnableRecovery() != false) {
+          setEnableRecovery(other.getEnableRecovery());
+        }
+        if (other.hasPacketTimeoutDuration()) {
+          mergePacketTimeoutDuration(other.getPacketTimeoutDuration());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enableRecovery_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getPacketTimeoutDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableRecovery_ ;
+      /**
+       * <pre>
+       * enable recovery IBC middleware
+       * </pre>
+       *
+       * <code>bool enable_recovery = 1 [json_name = "enableRecovery"];</code>
+       * @return The enableRecovery.
+       */
+      @java.lang.Override
+      public boolean getEnableRecovery() {
+        return enableRecovery_;
+      }
+      /**
+       * <pre>
+       * enable recovery IBC middleware
+       * </pre>
+       *
+       * <code>bool enable_recovery = 1 [json_name = "enableRecovery"];</code>
+       * @param value The enableRecovery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableRecovery(boolean value) {
+
+        enableRecovery_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * enable recovery IBC middleware
+       * </pre>
+       *
+       * <code>bool enable_recovery = 1 [json_name = "enableRecovery"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableRecovery() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enableRecovery_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration packetTimeoutDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> packetTimeoutDurationBuilder_;
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the packetTimeoutDuration field is set.
+       */
+      public boolean hasPacketTimeoutDuration() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The packetTimeoutDuration.
+       */
+      public com.google.protobuf.Duration getPacketTimeoutDuration() {
+        if (packetTimeoutDurationBuilder_ == null) {
+          return packetTimeoutDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : packetTimeoutDuration_;
+        } else {
+          return packetTimeoutDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setPacketTimeoutDuration(com.google.protobuf.Duration value) {
+        if (packetTimeoutDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          packetTimeoutDuration_ = value;
+        } else {
+          packetTimeoutDurationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setPacketTimeoutDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (packetTimeoutDurationBuilder_ == null) {
+          packetTimeoutDuration_ = builderForValue.build();
+        } else {
+          packetTimeoutDurationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergePacketTimeoutDuration(com.google.protobuf.Duration value) {
+        if (packetTimeoutDurationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            packetTimeoutDuration_ != null &&
+            packetTimeoutDuration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getPacketTimeoutDurationBuilder().mergeFrom(value);
+          } else {
+            packetTimeoutDuration_ = value;
+          }
+        } else {
+          packetTimeoutDurationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearPacketTimeoutDuration() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        packetTimeoutDuration_ = null;
+        if (packetTimeoutDurationBuilder_ != null) {
+          packetTimeoutDurationBuilder_.dispose();
+          packetTimeoutDurationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getPacketTimeoutDurationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPacketTimeoutDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getPacketTimeoutDurationOrBuilder() {
+        if (packetTimeoutDurationBuilder_ != null) {
+          return packetTimeoutDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return packetTimeoutDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : packetTimeoutDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * duration added to timeout timestamp for balances recovered via IBC packets
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration packet_timeout_duration = 2 [json_name = "packetTimeoutDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getPacketTimeoutDurationFieldBuilder() {
+        if (packetTimeoutDurationBuilder_ == null) {
+          packetTimeoutDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getPacketTimeoutDuration(),
+                  getParentForChildren(),
+                  isClean());
+          packetTimeoutDuration_ = null;
+        }
+        return packetTimeoutDurationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.recovery.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.recovery.v1.Params)
+    private static final com.canto.recovery.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.recovery.v1.GenesisProto.Params();
+    }
+
+    public static com.canto.recovery.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.recovery.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_recovery_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_recovery_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_recovery_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_recovery_v1_Params_fieldAccessorTable;
 
@@ -41,12 +1470,12 @@ public final class GenesisProto {
       "_recovery\030\001 \001(\010R\016enableRecovery\022[\n\027packe" +
       "t_timeout_duration\030\002 \001(\0132\031.google.protob" +
       "uf.DurationB\010\310\336\037\000\230\337\037\001R\025packetTimeoutDura" +
-      "tionB\277\001\n\025com.canto.recovery.v1B\014GenesisP" +
-      "rotoP\001Z2github.com/Canto-Network/Canto/v" +
-      "6/x/recovery/types\242\002\003CRX\252\002\021Canto.Recover" +
-      "y.V1\312\002\021Canto\\Recovery\\V1\342\002\035Canto\\Recover" +
-      "y\\V1\\GPBMetadata\352\002\023Canto::Recovery::V1b\006" +
-      "proto3"
+      "tionB\275\001\n\025com.canto.recovery.v1B\014GenesisP" +
+      "rotoZ2github.com/Canto-Network/Canto/v6/" +
+      "x/recovery/types\242\002\003CRX\252\002\021Canto.Recovery." +
+      "V1\312\002\021Canto\\Recovery\\V1\342\002\035Canto\\Recovery\\" +
+      "V1\\GPBMetadata\352\002\023Canto::Recovery::V1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

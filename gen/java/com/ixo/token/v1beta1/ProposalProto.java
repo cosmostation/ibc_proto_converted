@@ -14,9 +14,486 @@ public final class ProposalProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface SetTokenContractCodesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.SetTokenContractCodes)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 ixo1155_contract_code = 1 [json_name = "ixo1155ContractCode"];</code>
+     * @return The ixo1155ContractCode.
+     */
+    long getIxo1155ContractCode();
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.SetTokenContractCodes}
+   */
+  public static final class SetTokenContractCodes extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.SetTokenContractCodes)
+      SetTokenContractCodesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetTokenContractCodes.newBuilder() to construct.
+    private SetTokenContractCodes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetTokenContractCodes() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetTokenContractCodes();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.ProposalProto.internal_static_ixo_token_v1beta1_SetTokenContractCodes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.ProposalProto.internal_static_ixo_token_v1beta1_SetTokenContractCodes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes.class, com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes.Builder.class);
+    }
+
+    public static final int IXO1155_CONTRACT_CODE_FIELD_NUMBER = 1;
+    private long ixo1155ContractCode_ = 0L;
+    /**
+     * <code>uint64 ixo1155_contract_code = 1 [json_name = "ixo1155ContractCode"];</code>
+     * @return The ixo1155ContractCode.
+     */
+    @java.lang.Override
+    public long getIxo1155ContractCode() {
+      return ixo1155ContractCode_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (ixo1155ContractCode_ != 0L) {
+        output.writeUInt64(1, ixo1155ContractCode_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (ixo1155ContractCode_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, ixo1155ContractCode_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes other = (com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes) obj;
+
+      if (getIxo1155ContractCode()
+          != other.getIxo1155ContractCode()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IXO1155_CONTRACT_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIxo1155ContractCode());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.SetTokenContractCodes}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.SetTokenContractCodes)
+        com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.ProposalProto.internal_static_ixo_token_v1beta1_SetTokenContractCodes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.ProposalProto.internal_static_ixo_token_v1beta1_SetTokenContractCodes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes.class, com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ixo1155ContractCode_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.ProposalProto.internal_static_ixo_token_v1beta1_SetTokenContractCodes_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes build() {
+        com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes buildPartial() {
+        com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes result = new com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ixo1155ContractCode_ = ixo1155ContractCode_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes) {
+          return mergeFrom((com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes other) {
+        if (other == com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes.getDefaultInstance()) return this;
+        if (other.getIxo1155ContractCode() != 0L) {
+          setIxo1155ContractCode(other.getIxo1155ContractCode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                ixo1155ContractCode_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long ixo1155ContractCode_ ;
+      /**
+       * <code>uint64 ixo1155_contract_code = 1 [json_name = "ixo1155ContractCode"];</code>
+       * @return The ixo1155ContractCode.
+       */
+      @java.lang.Override
+      public long getIxo1155ContractCode() {
+        return ixo1155ContractCode_;
+      }
+      /**
+       * <code>uint64 ixo1155_contract_code = 1 [json_name = "ixo1155ContractCode"];</code>
+       * @param value The ixo1155ContractCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIxo1155ContractCode(long value) {
+
+        ixo1155ContractCode_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 ixo1155_contract_code = 1 [json_name = "ixo1155ContractCode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIxo1155ContractCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ixo1155ContractCode_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.SetTokenContractCodes)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.SetTokenContractCodes)
+    private static final com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes();
+    }
+
+    public static com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetTokenContractCodes>
+        PARSER = new com.google.protobuf.AbstractParser<SetTokenContractCodes>() {
+      @java.lang.Override
+      public SetTokenContractCodes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetTokenContractCodes> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetTokenContractCodes> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.ProposalProto.SetTokenContractCodes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_SetTokenContractCodes_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_SetTokenContractCodes_fieldAccessorTable;
 
@@ -32,12 +509,12 @@ public final class ProposalProto {
       "token.v1beta1\032\024gogoproto/gogo.proto\032\035ixo" +
       "/token/v1beta1/token.proto\"K\n\025SetTokenCo" +
       "ntractCodes\0222\n\025ixo1155_contract_code\030\001 \001" +
-      "(\004R\023ixo1155ContractCodeB\303\001\n\025com.ixo.toke" +
-      "n.v1beta1B\rProposalProtoP\001Z5github.com/i" +
-      "xofoundation/ixo-blockchain/x/token/type" +
-      "s\242\002\003ITX\252\002\021Ixo.Token.V1beta1\312\002\021Ixo\\Token\\" +
-      "V1beta1\342\002\035Ixo\\Token\\V1beta1\\GPBMetadata\352" +
-      "\002\023Ixo::Token::V1beta1b\006proto3"
+      "(\004R\023ixo1155ContractCodeB\301\001\n\025com.ixo.toke" +
+      "n.v1beta1B\rProposalProtoZ5github.com/ixo" +
+      "foundation/ixo-blockchain/x/token/types\242" +
+      "\002\003ITX\252\002\021Ixo.Token.V1beta1\312\002\021Ixo\\Token\\V1" +
+      "beta1\342\002\035Ixo\\Token\\V1beta1\\GPBMetadata\352\002\023" +
+      "Ixo::Token::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

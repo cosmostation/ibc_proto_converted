@@ -14,14 +14,2056 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.feerefunder.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.neutron.feerefunder.ParamsProto.Params getParams();
+    /**
+     * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.feerefunder.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.neutron.feerefunder.GenesisProto.FeeInfo> 
+        getFeeInfosList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.feerefunder.GenesisProto.FeeInfo getFeeInfos(int index);
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    int getFeeInfosCount();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder> 
+        getFeeInfosOrBuilderList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder getFeeInfosOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the fee module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.feerefunder.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.feerefunder.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      feeInfos_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.feerefunder.GenesisProto.GenesisState.class, com.neutron.feerefunder.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.neutron.feerefunder.ParamsProto.Params params_;
+    /**
+     * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.neutron.feerefunder.ParamsProto.Params getParams() {
+      return params_ == null ? com.neutron.feerefunder.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.feerefunder.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.neutron.feerefunder.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int FEE_INFOS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.neutron.feerefunder.GenesisProto.FeeInfo> feeInfos_;
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.neutron.feerefunder.GenesisProto.FeeInfo> getFeeInfosList() {
+      return feeInfos_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder> 
+        getFeeInfosOrBuilderList() {
+      return feeInfos_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFeeInfosCount() {
+      return feeInfos_.size();
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.feerefunder.GenesisProto.FeeInfo getFeeInfos(int index) {
+      return feeInfos_.get(index);
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder getFeeInfosOrBuilder(
+        int index) {
+      return feeInfos_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < feeInfos_.size(); i++) {
+        output.writeMessage(2, feeInfos_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < feeInfos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, feeInfos_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.feerefunder.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.neutron.feerefunder.GenesisProto.GenesisState other = (com.neutron.feerefunder.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getFeeInfosList()
+          .equals(other.getFeeInfosList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getFeeInfosCount() > 0) {
+        hash = (37 * hash) + FEE_INFOS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeeInfosList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feerefunder.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.feerefunder.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the fee module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.feerefunder.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.feerefunder.GenesisState)
+        com.neutron.feerefunder.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.feerefunder.GenesisProto.GenesisState.class, com.neutron.feerefunder.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.neutron.feerefunder.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (feeInfosBuilder_ == null) {
+          feeInfos_ = java.util.Collections.emptyList();
+        } else {
+          feeInfos_ = null;
+          feeInfosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.feerefunder.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.neutron.feerefunder.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.feerefunder.GenesisProto.GenesisState build() {
+        com.neutron.feerefunder.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.feerefunder.GenesisProto.GenesisState buildPartial() {
+        com.neutron.feerefunder.GenesisProto.GenesisState result = new com.neutron.feerefunder.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.neutron.feerefunder.GenesisProto.GenesisState result) {
+        if (feeInfosBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            feeInfos_ = java.util.Collections.unmodifiableList(feeInfos_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.feeInfos_ = feeInfos_;
+        } else {
+          result.feeInfos_ = feeInfosBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.neutron.feerefunder.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.feerefunder.GenesisProto.GenesisState) {
+          return mergeFrom((com.neutron.feerefunder.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.feerefunder.GenesisProto.GenesisState other) {
+        if (other == com.neutron.feerefunder.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (feeInfosBuilder_ == null) {
+          if (!other.feeInfos_.isEmpty()) {
+            if (feeInfos_.isEmpty()) {
+              feeInfos_ = other.feeInfos_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureFeeInfosIsMutable();
+              feeInfos_.addAll(other.feeInfos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.feeInfos_.isEmpty()) {
+            if (feeInfosBuilder_.isEmpty()) {
+              feeInfosBuilder_.dispose();
+              feeInfosBuilder_ = null;
+              feeInfos_ = other.feeInfos_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              feeInfosBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeeInfosFieldBuilder() : null;
+            } else {
+              feeInfosBuilder_.addAllMessages(other.feeInfos_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.neutron.feerefunder.GenesisProto.FeeInfo m =
+                    input.readMessage(
+                        com.neutron.feerefunder.GenesisProto.FeeInfo.parser(),
+                        extensionRegistry);
+                if (feeInfosBuilder_ == null) {
+                  ensureFeeInfosIsMutable();
+                  feeInfos_.add(m);
+                } else {
+                  feeInfosBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.neutron.feerefunder.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feerefunder.ParamsProto.Params, com.neutron.feerefunder.ParamsProto.Params.Builder, com.neutron.feerefunder.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.neutron.feerefunder.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.neutron.feerefunder.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.neutron.feerefunder.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.neutron.feerefunder.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.neutron.feerefunder.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.neutron.feerefunder.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.neutron.feerefunder.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.neutron.feerefunder.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feerefunder.ParamsProto.Params, com.neutron.feerefunder.ParamsProto.Params.Builder, com.neutron.feerefunder.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.feerefunder.ParamsProto.Params, com.neutron.feerefunder.ParamsProto.Params.Builder, com.neutron.feerefunder.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.neutron.feerefunder.GenesisProto.FeeInfo> feeInfos_ =
+        java.util.Collections.emptyList();
+      private void ensureFeeInfosIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          feeInfos_ = new java.util.ArrayList<com.neutron.feerefunder.GenesisProto.FeeInfo>(feeInfos_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.feerefunder.GenesisProto.FeeInfo, com.neutron.feerefunder.GenesisProto.FeeInfo.Builder, com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder> feeInfosBuilder_;
+
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.neutron.feerefunder.GenesisProto.FeeInfo> getFeeInfosList() {
+        if (feeInfosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(feeInfos_);
+        } else {
+          return feeInfosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFeeInfosCount() {
+        if (feeInfosBuilder_ == null) {
+          return feeInfos_.size();
+        } else {
+          return feeInfosBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.GenesisProto.FeeInfo getFeeInfos(int index) {
+        if (feeInfosBuilder_ == null) {
+          return feeInfos_.get(index);
+        } else {
+          return feeInfosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeeInfos(
+          int index, com.neutron.feerefunder.GenesisProto.FeeInfo value) {
+        if (feeInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeInfosIsMutable();
+          feeInfos_.set(index, value);
+          onChanged();
+        } else {
+          feeInfosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeeInfos(
+          int index, com.neutron.feerefunder.GenesisProto.FeeInfo.Builder builderForValue) {
+        if (feeInfosBuilder_ == null) {
+          ensureFeeInfosIsMutable();
+          feeInfos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeInfosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFeeInfos(com.neutron.feerefunder.GenesisProto.FeeInfo value) {
+        if (feeInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeInfosIsMutable();
+          feeInfos_.add(value);
+          onChanged();
+        } else {
+          feeInfosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFeeInfos(
+          int index, com.neutron.feerefunder.GenesisProto.FeeInfo value) {
+        if (feeInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeInfosIsMutable();
+          feeInfos_.add(index, value);
+          onChanged();
+        } else {
+          feeInfosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFeeInfos(
+          com.neutron.feerefunder.GenesisProto.FeeInfo.Builder builderForValue) {
+        if (feeInfosBuilder_ == null) {
+          ensureFeeInfosIsMutable();
+          feeInfos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feeInfosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFeeInfos(
+          int index, com.neutron.feerefunder.GenesisProto.FeeInfo.Builder builderForValue) {
+        if (feeInfosBuilder_ == null) {
+          ensureFeeInfosIsMutable();
+          feeInfos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeInfosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFeeInfos(
+          java.lang.Iterable<? extends com.neutron.feerefunder.GenesisProto.FeeInfo> values) {
+        if (feeInfosBuilder_ == null) {
+          ensureFeeInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, feeInfos_);
+          onChanged();
+        } else {
+          feeInfosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFeeInfos() {
+        if (feeInfosBuilder_ == null) {
+          feeInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          feeInfosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFeeInfos(int index) {
+        if (feeInfosBuilder_ == null) {
+          ensureFeeInfosIsMutable();
+          feeInfos_.remove(index);
+          onChanged();
+        } else {
+          feeInfosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.GenesisProto.FeeInfo.Builder getFeeInfosBuilder(
+          int index) {
+        return getFeeInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder getFeeInfosOrBuilder(
+          int index) {
+        if (feeInfosBuilder_ == null) {
+          return feeInfos_.get(index);  } else {
+          return feeInfosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder> 
+           getFeeInfosOrBuilderList() {
+        if (feeInfosBuilder_ != null) {
+          return feeInfosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(feeInfos_);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.GenesisProto.FeeInfo.Builder addFeeInfosBuilder() {
+        return getFeeInfosFieldBuilder().addBuilder(
+            com.neutron.feerefunder.GenesisProto.FeeInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.GenesisProto.FeeInfo.Builder addFeeInfosBuilder(
+          int index) {
+        return getFeeInfosFieldBuilder().addBuilder(
+            index, com.neutron.feerefunder.GenesisProto.FeeInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .neutron.feerefunder.FeeInfo fee_infos = 2 [json_name = "feeInfos", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.neutron.feerefunder.GenesisProto.FeeInfo.Builder> 
+           getFeeInfosBuilderList() {
+        return getFeeInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.feerefunder.GenesisProto.FeeInfo, com.neutron.feerefunder.GenesisProto.FeeInfo.Builder, com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder> 
+          getFeeInfosFieldBuilder() {
+        if (feeInfosBuilder_ == null) {
+          feeInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.neutron.feerefunder.GenesisProto.FeeInfo, com.neutron.feerefunder.GenesisProto.FeeInfo.Builder, com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder>(
+                  feeInfos_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          feeInfos_ = null;
+        }
+        return feeInfosBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.feerefunder.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.feerefunder.GenesisState)
+    private static final com.neutron.feerefunder.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.feerefunder.GenesisProto.GenesisState();
+    }
+
+    public static com.neutron.feerefunder.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.feerefunder.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeeInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.feerefunder.FeeInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string payer = 1 [json_name = "payer"];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <code>string payer = 1 [json_name = "payer"];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+     * @return Whether the packetId field is set.
+     */
+    boolean hasPacketId();
+    /**
+     * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+     * @return The packetId.
+     */
+    com.neutron.feerefunder.FeeProto.PacketID getPacketId();
+    /**
+     * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.feerefunder.FeeProto.PacketIDOrBuilder getPacketIdOrBuilder();
+
+    /**
+     * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     * @return Whether the fee field is set.
+     */
+    boolean hasFee();
+    /**
+     * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     * @return The fee.
+     */
+    com.neutron.feerefunder.FeeProto.Fee getFee();
+    /**
+     * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.feerefunder.FeeProto.FeeOrBuilder getFeeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.feerefunder.FeeInfo}
+   */
+  public static final class FeeInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.feerefunder.FeeInfo)
+      FeeInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeeInfo.newBuilder() to construct.
+    private FeeInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeeInfo() {
+      payer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeeInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_FeeInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_FeeInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.feerefunder.GenesisProto.FeeInfo.class, com.neutron.feerefunder.GenesisProto.FeeInfo.Builder.class);
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <code>string payer = 1 [json_name = "payer"];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string payer = 1 [json_name = "payer"];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PACKET_ID_FIELD_NUMBER = 2;
+    private com.neutron.feerefunder.FeeProto.PacketID packetId_;
+    /**
+     * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+     * @return Whether the packetId field is set.
+     */
+    @java.lang.Override
+    public boolean hasPacketId() {
+      return packetId_ != null;
+    }
+    /**
+     * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+     * @return The packetId.
+     */
+    @java.lang.Override
+    public com.neutron.feerefunder.FeeProto.PacketID getPacketId() {
+      return packetId_ == null ? com.neutron.feerefunder.FeeProto.PacketID.getDefaultInstance() : packetId_;
+    }
+    /**
+     * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.feerefunder.FeeProto.PacketIDOrBuilder getPacketIdOrBuilder() {
+      return packetId_ == null ? com.neutron.feerefunder.FeeProto.PacketID.getDefaultInstance() : packetId_;
+    }
+
+    public static final int FEE_FIELD_NUMBER = 3;
+    private com.neutron.feerefunder.FeeProto.Fee fee_;
+    /**
+     * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     * @return Whether the fee field is set.
+     */
+    @java.lang.Override
+    public boolean hasFee() {
+      return fee_ != null;
+    }
+    /**
+     * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     * @return The fee.
+     */
+    @java.lang.Override
+    public com.neutron.feerefunder.FeeProto.Fee getFee() {
+      return fee_ == null ? com.neutron.feerefunder.FeeProto.Fee.getDefaultInstance() : fee_;
+    }
+    /**
+     * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.feerefunder.FeeProto.FeeOrBuilder getFeeOrBuilder() {
+      return fee_ == null ? com.neutron.feerefunder.FeeProto.Fee.getDefaultInstance() : fee_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, payer_);
+      }
+      if (packetId_ != null) {
+        output.writeMessage(2, getPacketId());
+      }
+      if (fee_ != null) {
+        output.writeMessage(3, getFee());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, payer_);
+      }
+      if (packetId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPacketId());
+      }
+      if (fee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getFee());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.feerefunder.GenesisProto.FeeInfo)) {
+        return super.equals(obj);
+      }
+      com.neutron.feerefunder.GenesisProto.FeeInfo other = (com.neutron.feerefunder.GenesisProto.FeeInfo) obj;
+
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (hasPacketId() != other.hasPacketId()) return false;
+      if (hasPacketId()) {
+        if (!getPacketId()
+            .equals(other.getPacketId())) return false;
+      }
+      if (hasFee() != other.hasFee()) return false;
+      if (hasFee()) {
+        if (!getFee()
+            .equals(other.getFee())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      if (hasPacketId()) {
+        hash = (37 * hash) + PACKET_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getPacketId().hashCode();
+      }
+      if (hasFee()) {
+        hash = (37 * hash) + FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getFee().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.feerefunder.GenesisProto.FeeInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.feerefunder.FeeInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.feerefunder.FeeInfo)
+        com.neutron.feerefunder.GenesisProto.FeeInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_FeeInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_FeeInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.feerefunder.GenesisProto.FeeInfo.class, com.neutron.feerefunder.GenesisProto.FeeInfo.Builder.class);
+      }
+
+      // Construct using com.neutron.feerefunder.GenesisProto.FeeInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        payer_ = "";
+        packetId_ = null;
+        if (packetIdBuilder_ != null) {
+          packetIdBuilder_.dispose();
+          packetIdBuilder_ = null;
+        }
+        fee_ = null;
+        if (feeBuilder_ != null) {
+          feeBuilder_.dispose();
+          feeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.feerefunder.GenesisProto.internal_static_neutron_feerefunder_FeeInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.feerefunder.GenesisProto.FeeInfo getDefaultInstanceForType() {
+        return com.neutron.feerefunder.GenesisProto.FeeInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.feerefunder.GenesisProto.FeeInfo build() {
+        com.neutron.feerefunder.GenesisProto.FeeInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.feerefunder.GenesisProto.FeeInfo buildPartial() {
+        com.neutron.feerefunder.GenesisProto.FeeInfo result = new com.neutron.feerefunder.GenesisProto.FeeInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.feerefunder.GenesisProto.FeeInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.payer_ = payer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.packetId_ = packetIdBuilder_ == null
+              ? packetId_
+              : packetIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.fee_ = feeBuilder_ == null
+              ? fee_
+              : feeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.feerefunder.GenesisProto.FeeInfo) {
+          return mergeFrom((com.neutron.feerefunder.GenesisProto.FeeInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.feerefunder.GenesisProto.FeeInfo other) {
+        if (other == com.neutron.feerefunder.GenesisProto.FeeInfo.getDefaultInstance()) return this;
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPacketId()) {
+          mergePacketId(other.getPacketId());
+        }
+        if (other.hasFee()) {
+          mergeFee(other.getFee());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPacketIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <code>string payer = 1 [json_name = "payer"];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string payer = 1 [json_name = "payer"];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string payer = 1 [json_name = "payer"];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string payer = 1 [json_name = "payer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string payer = 1 [json_name = "payer"];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.neutron.feerefunder.FeeProto.PacketID packetId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feerefunder.FeeProto.PacketID, com.neutron.feerefunder.FeeProto.PacketID.Builder, com.neutron.feerefunder.FeeProto.PacketIDOrBuilder> packetIdBuilder_;
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       * @return Whether the packetId field is set.
+       */
+      public boolean hasPacketId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       * @return The packetId.
+       */
+      public com.neutron.feerefunder.FeeProto.PacketID getPacketId() {
+        if (packetIdBuilder_ == null) {
+          return packetId_ == null ? com.neutron.feerefunder.FeeProto.PacketID.getDefaultInstance() : packetId_;
+        } else {
+          return packetIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPacketId(com.neutron.feerefunder.FeeProto.PacketID value) {
+        if (packetIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          packetId_ = value;
+        } else {
+          packetIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPacketId(
+          com.neutron.feerefunder.FeeProto.PacketID.Builder builderForValue) {
+        if (packetIdBuilder_ == null) {
+          packetId_ = builderForValue.build();
+        } else {
+          packetIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePacketId(com.neutron.feerefunder.FeeProto.PacketID value) {
+        if (packetIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            packetId_ != null &&
+            packetId_ != com.neutron.feerefunder.FeeProto.PacketID.getDefaultInstance()) {
+            getPacketIdBuilder().mergeFrom(value);
+          } else {
+            packetId_ = value;
+          }
+        } else {
+          packetIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPacketId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        packetId_ = null;
+        if (packetIdBuilder_ != null) {
+          packetIdBuilder_.dispose();
+          packetIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.FeeProto.PacketID.Builder getPacketIdBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPacketIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.FeeProto.PacketIDOrBuilder getPacketIdOrBuilder() {
+        if (packetIdBuilder_ != null) {
+          return packetIdBuilder_.getMessageOrBuilder();
+        } else {
+          return packetId_ == null ?
+              com.neutron.feerefunder.FeeProto.PacketID.getDefaultInstance() : packetId_;
+        }
+      }
+      /**
+       * <code>.neutron.feerefunder.PacketID packet_id = 2 [json_name = "packetId", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feerefunder.FeeProto.PacketID, com.neutron.feerefunder.FeeProto.PacketID.Builder, com.neutron.feerefunder.FeeProto.PacketIDOrBuilder> 
+          getPacketIdFieldBuilder() {
+        if (packetIdBuilder_ == null) {
+          packetIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.feerefunder.FeeProto.PacketID, com.neutron.feerefunder.FeeProto.PacketID.Builder, com.neutron.feerefunder.FeeProto.PacketIDOrBuilder>(
+                  getPacketId(),
+                  getParentForChildren(),
+                  isClean());
+          packetId_ = null;
+        }
+        return packetIdBuilder_;
+      }
+
+      private com.neutron.feerefunder.FeeProto.Fee fee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feerefunder.FeeProto.Fee, com.neutron.feerefunder.FeeProto.Fee.Builder, com.neutron.feerefunder.FeeProto.FeeOrBuilder> feeBuilder_;
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       * @return Whether the fee field is set.
+       */
+      public boolean hasFee() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       * @return The fee.
+       */
+      public com.neutron.feerefunder.FeeProto.Fee getFee() {
+        if (feeBuilder_ == null) {
+          return fee_ == null ? com.neutron.feerefunder.FeeProto.Fee.getDefaultInstance() : fee_;
+        } else {
+          return feeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFee(com.neutron.feerefunder.FeeProto.Fee value) {
+        if (feeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fee_ = value;
+        } else {
+          feeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFee(
+          com.neutron.feerefunder.FeeProto.Fee.Builder builderForValue) {
+        if (feeBuilder_ == null) {
+          fee_ = builderForValue.build();
+        } else {
+          feeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFee(com.neutron.feerefunder.FeeProto.Fee value) {
+        if (feeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            fee_ != null &&
+            fee_ != com.neutron.feerefunder.FeeProto.Fee.getDefaultInstance()) {
+            getFeeBuilder().mergeFrom(value);
+          } else {
+            fee_ = value;
+          }
+        } else {
+          feeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFee() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fee_ = null;
+        if (feeBuilder_ != null) {
+          feeBuilder_.dispose();
+          feeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.FeeProto.Fee.Builder getFeeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feerefunder.FeeProto.FeeOrBuilder getFeeOrBuilder() {
+        if (feeBuilder_ != null) {
+          return feeBuilder_.getMessageOrBuilder();
+        } else {
+          return fee_ == null ?
+              com.neutron.feerefunder.FeeProto.Fee.getDefaultInstance() : fee_;
+        }
+      }
+      /**
+       * <code>.neutron.feerefunder.Fee fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feerefunder.FeeProto.Fee, com.neutron.feerefunder.FeeProto.Fee.Builder, com.neutron.feerefunder.FeeProto.FeeOrBuilder> 
+          getFeeFieldBuilder() {
+        if (feeBuilder_ == null) {
+          feeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.feerefunder.FeeProto.Fee, com.neutron.feerefunder.FeeProto.Fee.Builder, com.neutron.feerefunder.FeeProto.FeeOrBuilder>(
+                  getFee(),
+                  getParentForChildren(),
+                  isClean());
+          fee_ = null;
+        }
+        return feeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.feerefunder.FeeInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.feerefunder.FeeInfo)
+    private static final com.neutron.feerefunder.GenesisProto.FeeInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.feerefunder.GenesisProto.FeeInfo();
+    }
+
+    public static com.neutron.feerefunder.GenesisProto.FeeInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeeInfo>
+        PARSER = new com.google.protobuf.AbstractParser<FeeInfo>() {
+      @java.lang.Override
+      public FeeInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeeInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeeInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.feerefunder.GenesisProto.FeeInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_feerefunder_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_feerefunder_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_feerefunder_FeeInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_feerefunder_FeeInfo_fieldAccessorTable;
 
@@ -43,13 +2085,13 @@ public final class GenesisProto {
       "nfos\"\223\001\n\007FeeInfo\022\024\n\005payer\030\001 \001(\tR\005payer\022@" +
       "\n\tpacket_id\030\002 \001(\0132\035.neutron.feerefunder." +
       "PacketIDB\004\310\336\037\000R\010packetId\0220\n\003fee\030\003 \001(\0132\030." +
-      "neutron.feerefunder.FeeB\004\310\336\037\000R\003feeB\310\001\n\027c" +
-      "om.neutron.feerefunderB\014GenesisProtoP\001Z2" +
-      "github.com/neutron-org/neutron/x/feerefu" +
-      "nder/types\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002" +
-      "\023Neutron\\Feerefunder\342\002\037Neutron\\Feerefund" +
-      "er\\GPBMetadata\352\002\024Neutron::Feerefunderb\006p" +
-      "roto3"
+      "neutron.feerefunder.FeeB\004\310\336\037\000R\003feeB\306\001\n\027c" +
+      "om.neutron.feerefunderB\014GenesisProtoZ2gi" +
+      "thub.com/neutron-org/neutron/x/feerefund" +
+      "er/types\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023N" +
+      "eutron\\Feerefunder\342\002\037Neutron\\Feerefunder" +
+      "\\GPBMetadata\352\002\024Neutron::Feerefunderb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

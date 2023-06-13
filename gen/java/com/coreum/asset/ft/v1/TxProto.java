@@ -14,49 +14,7931 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgIssueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.MsgIssue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string issuer = 1 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    java.lang.String getIssuer();
+    /**
+     * <code>string issuer = 1 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
+
+    /**
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+
+    /**
+     * <code>string subunit = 3 [json_name = "subunit"];</code>
+     * @return The subunit.
+     */
+    java.lang.String getSubunit();
+    /**
+     * <code>string subunit = 3 [json_name = "subunit"];</code>
+     * @return The bytes for subunit.
+     */
+    com.google.protobuf.ByteString
+        getSubunitBytes();
+
+    /**
+     * <code>uint32 precision = 4 [json_name = "precision"];</code>
+     * @return The precision.
+     */
+    int getPrecision();
+
+    /**
+     * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The initialAmount.
+     */
+    java.lang.String getInitialAmount();
+    /**
+     * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for initialAmount.
+     */
+    com.google.protobuf.ByteString
+        getInitialAmountBytes();
+
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @return A list containing the features.
+     */
+    java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @return The count of features.
+     */
+    int getFeaturesCount();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @param index The index of the element to return.
+     * @return The features at the given index.
+     */
+    com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index);
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @return A list containing the enum numeric values on the wire for features.
+     */
+    java.util.List<java.lang.Integer>
+    getFeaturesValueList();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of features at the given index.
+     */
+    int getFeaturesValue(int index);
+
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRate.
+     */
+    java.lang.String getBurnRate();
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRate.
+     */
+    com.google.protobuf.ByteString
+        getBurnRateBytes();
+
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The sendCommissionRate.
+     */
+    java.lang.String getSendCommissionRate();
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for sendCommissionRate.
+     */
+    com.google.protobuf.ByteString
+        getSendCommissionRateBytes();
+  }
+  /**
+   * <pre>
+   * MsgIssue defines message to issue new fungible token.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.asset.ft.v1.MsgIssue}
+   */
+  public static final class MsgIssue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.MsgIssue)
+      MsgIssueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgIssue.newBuilder() to construct.
+    private MsgIssue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgIssue() {
+      issuer_ = "";
+      symbol_ = "";
+      subunit_ = "";
+      initialAmount_ = "";
+      description_ = "";
+      features_ = java.util.Collections.emptyList();
+      burnRate_ = "";
+      sendCommissionRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgIssue();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgIssue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgIssue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.MsgIssue.class, com.coreum.asset.ft.v1.TxProto.MsgIssue.Builder.class);
+    }
+
+    public static final int ISSUER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
+    /**
+     * <code>string issuer = 1 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string issuer = 1 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBUNIT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subunit_ = "";
+    /**
+     * <code>string subunit = 3 [json_name = "subunit"];</code>
+     * @return The subunit.
+     */
+    @java.lang.Override
+    public java.lang.String getSubunit() {
+      java.lang.Object ref = subunit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subunit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subunit = 3 [json_name = "subunit"];</code>
+     * @return The bytes for subunit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubunitBytes() {
+      java.lang.Object ref = subunit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subunit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRECISION_FIELD_NUMBER = 4;
+    private int precision_ = 0;
+    /**
+     * <code>uint32 precision = 4 [json_name = "precision"];</code>
+     * @return The precision.
+     */
+    @java.lang.Override
+    public int getPrecision() {
+      return precision_;
+    }
+
+    public static final int INITIAL_AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object initialAmount_ = "";
+    /**
+     * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The initialAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getInitialAmount() {
+      java.lang.Object ref = initialAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        initialAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for initialAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInitialAmountBytes() {
+      java.lang.Object ref = initialAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        initialAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEATURES_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> features_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature> features_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>() {
+              public com.coreum.asset.ft.v1.TokenProto.Feature convert(java.lang.Integer from) {
+                com.coreum.asset.ft.v1.TokenProto.Feature result = com.coreum.asset.ft.v1.TokenProto.Feature.forNumber(from);
+                return result == null ? com.coreum.asset.ft.v1.TokenProto.Feature.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @return A list containing the features.
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>(features_, features_converter_);
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @return The count of features.
+     */
+    @java.lang.Override
+    public int getFeaturesCount() {
+      return features_.size();
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @param index The index of the element to return.
+     * @return The features at the given index.
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index) {
+      return features_converter_.convert(features_.get(index));
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @return A list containing the enum numeric values on the wire for features.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getFeaturesValueList() {
+      return features_;
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of features at the given index.
+     */
+    @java.lang.Override
+    public int getFeaturesValue(int index) {
+      return features_.get(index);
+    }
+    private int featuresMemoizedSerializedSize;
+
+    public static final int BURN_RATE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object burnRate_ = "";
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRate.
+     */
+    @java.lang.Override
+    public java.lang.String getBurnRate() {
+      java.lang.Object ref = burnRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        burnRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBurnRateBytes() {
+      java.lang.Object ref = burnRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        burnRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEND_COMMISSION_RATE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sendCommissionRate_ = "";
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The sendCommissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getSendCommissionRate() {
+      java.lang.Object ref = sendCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sendCommissionRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for sendCommissionRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSendCommissionRateBytes() {
+      java.lang.Object ref = sendCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sendCommissionRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subunit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subunit_);
+      }
+      if (precision_ != 0) {
+        output.writeUInt32(4, precision_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, initialAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
+      }
+      if (getFeaturesList().size() > 0) {
+        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(featuresMemoizedSerializedSize);
+      }
+      for (int i = 0; i < features_.size(); i++) {
+        output.writeEnumNoTag(features_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, burnRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sendCommissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, sendCommissionRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subunit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subunit_);
+      }
+      if (precision_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, precision_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, initialAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < features_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(features_.get(i));
+        }
+        size += dataSize;
+        if (!getFeaturesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }featuresMemoizedSerializedSize = dataSize;
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, burnRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sendCommissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, sendCommissionRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.MsgIssue)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.MsgIssue other = (com.coreum.asset.ft.v1.TxProto.MsgIssue) obj;
+
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (!getSubunit()
+          .equals(other.getSubunit())) return false;
+      if (getPrecision()
+          != other.getPrecision()) return false;
+      if (!getInitialAmount()
+          .equals(other.getInitialAmount())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!features_.equals(other.features_)) return false;
+      if (!getBurnRate()
+          .equals(other.getBurnRate())) return false;
+      if (!getSendCommissionRate()
+          .equals(other.getSendCommissionRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISSUER_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuer().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (37 * hash) + SUBUNIT_FIELD_NUMBER;
+      hash = (53 * hash) + getSubunit().hashCode();
+      hash = (37 * hash) + PRECISION_FIELD_NUMBER;
+      hash = (53 * hash) + getPrecision();
+      hash = (37 * hash) + INITIAL_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getInitialAmount().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getFeaturesCount() > 0) {
+        hash = (37 * hash) + FEATURES_FIELD_NUMBER;
+        hash = (53 * hash) + features_.hashCode();
+      }
+      hash = (37 * hash) + BURN_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getBurnRate().hashCode();
+      hash = (37 * hash) + SEND_COMMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getSendCommissionRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.MsgIssue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgIssue defines message to issue new fungible token.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.asset.ft.v1.MsgIssue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.MsgIssue)
+        com.coreum.asset.ft.v1.TxProto.MsgIssueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgIssue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgIssue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.MsgIssue.class, com.coreum.asset.ft.v1.TxProto.MsgIssue.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.MsgIssue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        issuer_ = "";
+        symbol_ = "";
+        subunit_ = "";
+        precision_ = 0;
+        initialAmount_ = "";
+        description_ = "";
+        features_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        burnRate_ = "";
+        sendCommissionRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgIssue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgIssue getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.MsgIssue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgIssue build() {
+        com.coreum.asset.ft.v1.TxProto.MsgIssue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgIssue buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.MsgIssue result = new com.coreum.asset.ft.v1.TxProto.MsgIssue(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.coreum.asset.ft.v1.TxProto.MsgIssue result) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          features_ = java.util.Collections.unmodifiableList(features_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.features_ = features_;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TxProto.MsgIssue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.issuer_ = issuer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.symbol_ = symbol_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.subunit_ = subunit_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.precision_ = precision_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.initialAmount_ = initialAmount_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.burnRate_ = burnRate_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.sendCommissionRate_ = sendCommissionRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.MsgIssue) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.MsgIssue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.MsgIssue other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.MsgIssue.getDefaultInstance()) return this;
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSubunit().isEmpty()) {
+          subunit_ = other.subunit_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getPrecision() != 0) {
+          setPrecision(other.getPrecision());
+        }
+        if (!other.getInitialAmount().isEmpty()) {
+          initialAmount_ = other.initialAmount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.features_.isEmpty()) {
+          if (features_.isEmpty()) {
+            features_ = other.features_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureFeaturesIsMutable();
+            features_.addAll(other.features_);
+          }
+          onChanged();
+        }
+        if (!other.getBurnRate().isEmpty()) {
+          burnRate_ = other.burnRate_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getSendCommissionRate().isEmpty()) {
+          sendCommissionRate_ = other.sendCommissionRate_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                issuer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                subunit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                precision_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                initialAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                int tmpRaw = input.readEnum();
+                ensureFeaturesIsMutable();
+                features_.add(tmpRaw);
+                break;
+              } // case 56
+              case 58: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureFeaturesIsMutable();
+                  features_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 58
+              case 66: {
+                burnRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                sendCommissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object issuer_ = "";
+      /**
+       * <code>string issuer = 1 [json_name = "issuer"];</code>
+       * @return The issuer.
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 1 [json_name = "issuer"];</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 1 [json_name = "issuer"];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issuer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 1 [json_name = "issuer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 1 [json_name = "issuer"];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subunit_ = "";
+      /**
+       * <code>string subunit = 3 [json_name = "subunit"];</code>
+       * @return The subunit.
+       */
+      public java.lang.String getSubunit() {
+        java.lang.Object ref = subunit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subunit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subunit = 3 [json_name = "subunit"];</code>
+       * @return The bytes for subunit.
+       */
+      public com.google.protobuf.ByteString
+          getSubunitBytes() {
+        java.lang.Object ref = subunit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subunit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subunit = 3 [json_name = "subunit"];</code>
+       * @param value The subunit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubunit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subunit_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subunit = 3 [json_name = "subunit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubunit() {
+        subunit_ = getDefaultInstance().getSubunit();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subunit = 3 [json_name = "subunit"];</code>
+       * @param value The bytes for subunit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubunitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subunit_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int precision_ ;
+      /**
+       * <code>uint32 precision = 4 [json_name = "precision"];</code>
+       * @return The precision.
+       */
+      @java.lang.Override
+      public int getPrecision() {
+        return precision_;
+      }
+      /**
+       * <code>uint32 precision = 4 [json_name = "precision"];</code>
+       * @param value The precision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrecision(int value) {
+
+        precision_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 precision = 4 [json_name = "precision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrecision() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        precision_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object initialAmount_ = "";
+      /**
+       * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The initialAmount.
+       */
+      public java.lang.String getInitialAmount() {
+        java.lang.Object ref = initialAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          initialAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for initialAmount.
+       */
+      public com.google.protobuf.ByteString
+          getInitialAmountBytes() {
+        java.lang.Object ref = initialAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          initialAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The initialAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        initialAmount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitialAmount() {
+        initialAmount_ = getDefaultInstance().getInitialAmount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string initial_amount = 5 [json_name = "initialAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for initialAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        initialAmount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> features_ =
+        java.util.Collections.emptyList();
+      private void ensureFeaturesIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          features_ = new java.util.ArrayList<java.lang.Integer>(features_);
+          bitField0_ |= 0x00000040;
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @return A list containing the features.
+       */
+      public java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>(features_, features_converter_);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @return The count of features.
+       */
+      public int getFeaturesCount() {
+        return features_.size();
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @param index The index of the element to return.
+       * @return The features at the given index.
+       */
+      public com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index) {
+        return features_converter_.convert(features_.get(index));
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @param index The index to set the value at.
+       * @param value The features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeatures(
+          int index, com.coreum.asset.ft.v1.TokenProto.Feature value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeaturesIsMutable();
+        features_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @param value The features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeatures(com.coreum.asset.ft.v1.TokenProto.Feature value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeaturesIsMutable();
+        features_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @param values The features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeatures(
+          java.lang.Iterable<? extends com.coreum.asset.ft.v1.TokenProto.Feature> values) {
+        ensureFeaturesIsMutable();
+        for (com.coreum.asset.ft.v1.TokenProto.Feature value : values) {
+          features_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeatures() {
+        features_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @return A list containing the enum numeric values on the wire for features.
+       */
+      public java.util.List<java.lang.Integer>
+      getFeaturesValueList() {
+        return java.util.Collections.unmodifiableList(features_);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of features at the given index.
+       */
+      public int getFeaturesValue(int index) {
+        return features_.get(index);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeaturesValue(
+          int index, int value) {
+        ensureFeaturesIsMutable();
+        features_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @param value The enum numeric value on the wire for features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeaturesValue(int value) {
+        ensureFeaturesIsMutable();
+        features_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 7 [json_name = "features"];</code>
+       * @param values The enum numeric values on the wire for features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeaturesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureFeaturesIsMutable();
+        for (int value : values) {
+          features_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object burnRate_ = "";
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The burnRate.
+       */
+      public java.lang.String getBurnRate() {
+        java.lang.Object ref = burnRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          burnRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for burnRate.
+       */
+      public com.google.protobuf.ByteString
+          getBurnRateBytes() {
+        java.lang.Object ref = burnRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          burnRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The burnRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        burnRate_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnRate() {
+        burnRate_ = getDefaultInstance().getBurnRate();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 8 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for burnRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        burnRate_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sendCommissionRate_ = "";
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The sendCommissionRate.
+       */
+      public java.lang.String getSendCommissionRate() {
+        java.lang.Object ref = sendCommissionRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sendCommissionRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for sendCommissionRate.
+       */
+      public com.google.protobuf.ByteString
+          getSendCommissionRateBytes() {
+        java.lang.Object ref = sendCommissionRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sendCommissionRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The sendCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSendCommissionRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sendCommissionRate_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSendCommissionRate() {
+        sendCommissionRate_ = getDefaultInstance().getSendCommissionRate();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 9 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for sendCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSendCommissionRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sendCommissionRate_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.MsgIssue)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.MsgIssue)
+    private static final com.coreum.asset.ft.v1.TxProto.MsgIssue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.MsgIssue();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgIssue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgIssue>
+        PARSER = new com.google.protobuf.AbstractParser<MsgIssue>() {
+      @java.lang.Override
+      public MsgIssue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgIssue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgIssue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.MsgIssue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgMintOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.MsgMint)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.ft.v1.MsgMint}
+   */
+  public static final class MsgMint extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.MsgMint)
+      MsgMintOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgMint.newBuilder() to construct.
+    private MsgMint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgMint() {
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgMint();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgMint_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgMint_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.MsgMint.class, com.coreum.asset.ft.v1.TxProto.MsgMint.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COIN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (coin_ != null) {
+        output.writeMessage(2, getCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.MsgMint)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.MsgMint other = (com.coreum.asset.ft.v1.TxProto.MsgMint) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.MsgMint prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.ft.v1.MsgMint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.MsgMint)
+        com.coreum.asset.ft.v1.TxProto.MsgMintOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgMint_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgMint_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.MsgMint.class, com.coreum.asset.ft.v1.TxProto.MsgMint.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.MsgMint.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgMint_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgMint getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.MsgMint.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgMint build() {
+        com.coreum.asset.ft.v1.TxProto.MsgMint result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgMint buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.MsgMint result = new com.coreum.asset.ft.v1.TxProto.MsgMint(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TxProto.MsgMint result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.MsgMint) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.MsgMint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.MsgMint other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.MsgMint.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.MsgMint)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.MsgMint)
+    private static final com.coreum.asset.ft.v1.TxProto.MsgMint DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.MsgMint();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgMint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgMint>
+        PARSER = new com.google.protobuf.AbstractParser<MsgMint>() {
+      @java.lang.Override
+      public MsgMint parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgMint> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgMint> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.MsgMint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgBurnOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.MsgBurn)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.ft.v1.MsgBurn}
+   */
+  public static final class MsgBurn extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.MsgBurn)
+      MsgBurnOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgBurn.newBuilder() to construct.
+    private MsgBurn(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgBurn() {
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgBurn();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgBurn_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgBurn_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.MsgBurn.class, com.coreum.asset.ft.v1.TxProto.MsgBurn.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COIN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (coin_ != null) {
+        output.writeMessage(3, getCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.MsgBurn)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.MsgBurn other = (com.coreum.asset.ft.v1.TxProto.MsgBurn) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.MsgBurn prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.ft.v1.MsgBurn}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.MsgBurn)
+        com.coreum.asset.ft.v1.TxProto.MsgBurnOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgBurn_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgBurn_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.MsgBurn.class, com.coreum.asset.ft.v1.TxProto.MsgBurn.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.MsgBurn.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgBurn_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgBurn getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.MsgBurn.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgBurn build() {
+        com.coreum.asset.ft.v1.TxProto.MsgBurn result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgBurn buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.MsgBurn result = new com.coreum.asset.ft.v1.TxProto.MsgBurn(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TxProto.MsgBurn result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.MsgBurn) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.MsgBurn)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.MsgBurn other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.MsgBurn.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 26: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.MsgBurn)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.MsgBurn)
+    private static final com.coreum.asset.ft.v1.TxProto.MsgBurn DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.MsgBurn();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgBurn getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgBurn>
+        PARSER = new com.google.protobuf.AbstractParser<MsgBurn>() {
+      @java.lang.Override
+      public MsgBurn parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgBurn> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgBurn> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.MsgBurn getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgFreezeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.MsgFreeze)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.ft.v1.MsgFreeze}
+   */
+  public static final class MsgFreeze extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.MsgFreeze)
+      MsgFreezeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgFreeze.newBuilder() to construct.
+    private MsgFreeze(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgFreeze() {
+      sender_ = "";
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgFreeze();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgFreeze_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgFreeze_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.MsgFreeze.class, com.coreum.asset.ft.v1.TxProto.MsgFreeze.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COIN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
+      }
+      if (coin_ != null) {
+        output.writeMessage(3, getCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
+      }
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.MsgFreeze)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.MsgFreeze other = (com.coreum.asset.ft.v1.TxProto.MsgFreeze) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.MsgFreeze prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.ft.v1.MsgFreeze}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.MsgFreeze)
+        com.coreum.asset.ft.v1.TxProto.MsgFreezeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgFreeze_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgFreeze_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.MsgFreeze.class, com.coreum.asset.ft.v1.TxProto.MsgFreeze.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.MsgFreeze.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        account_ = "";
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgFreeze_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgFreeze getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.MsgFreeze.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgFreeze build() {
+        com.coreum.asset.ft.v1.TxProto.MsgFreeze result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgFreeze buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.MsgFreeze result = new com.coreum.asset.ft.v1.TxProto.MsgFreeze(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TxProto.MsgFreeze result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.MsgFreeze) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.MsgFreeze)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.MsgFreeze other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.MsgFreeze.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.MsgFreeze)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.MsgFreeze)
+    private static final com.coreum.asset.ft.v1.TxProto.MsgFreeze DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.MsgFreeze();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgFreeze getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgFreeze>
+        PARSER = new com.google.protobuf.AbstractParser<MsgFreeze>() {
+      @java.lang.Override
+      public MsgFreeze parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgFreeze> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgFreeze> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.MsgFreeze getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUnfreezeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.MsgUnfreeze)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.ft.v1.MsgUnfreeze}
+   */
+  public static final class MsgUnfreeze extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.MsgUnfreeze)
+      MsgUnfreezeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUnfreeze.newBuilder() to construct.
+    private MsgUnfreeze(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUnfreeze() {
+      sender_ = "";
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUnfreeze();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgUnfreeze_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgUnfreeze_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.class, com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COIN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
+      }
+      if (coin_ != null) {
+        output.writeMessage(3, getCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
+      }
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.MsgUnfreeze)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.MsgUnfreeze other = (com.coreum.asset.ft.v1.TxProto.MsgUnfreeze) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.MsgUnfreeze prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.ft.v1.MsgUnfreeze}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.MsgUnfreeze)
+        com.coreum.asset.ft.v1.TxProto.MsgUnfreezeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgUnfreeze_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgUnfreeze_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.class, com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        account_ = "";
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgUnfreeze_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgUnfreeze getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgUnfreeze build() {
+        com.coreum.asset.ft.v1.TxProto.MsgUnfreeze result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgUnfreeze buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.MsgUnfreeze result = new com.coreum.asset.ft.v1.TxProto.MsgUnfreeze(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TxProto.MsgUnfreeze result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.MsgUnfreeze) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.MsgUnfreeze)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.MsgUnfreeze other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.MsgUnfreeze)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.MsgUnfreeze)
+    private static final com.coreum.asset.ft.v1.TxProto.MsgUnfreeze DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.MsgUnfreeze();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgUnfreeze getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUnfreeze>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUnfreeze>() {
+      @java.lang.Override
+      public MsgUnfreeze parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUnfreeze> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUnfreeze> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.MsgUnfreeze getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgGloballyFreezeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.MsgGloballyFreeze)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.ft.v1.MsgGloballyFreeze}
+   */
+  public static final class MsgGloballyFreeze extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.MsgGloballyFreeze)
+      MsgGloballyFreezeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgGloballyFreeze.newBuilder() to construct.
+    private MsgGloballyFreeze(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgGloballyFreeze() {
+      sender_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgGloballyFreeze();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyFreeze_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyFreeze_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze.class, com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze other = (com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.ft.v1.MsgGloballyFreeze}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.MsgGloballyFreeze)
+        com.coreum.asset.ft.v1.TxProto.MsgGloballyFreezeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyFreeze_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyFreeze_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze.class, com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyFreeze_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze build() {
+        com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze result = new com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.MsgGloballyFreeze)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.MsgGloballyFreeze)
+    private static final com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgGloballyFreeze>
+        PARSER = new com.google.protobuf.AbstractParser<MsgGloballyFreeze>() {
+      @java.lang.Override
+      public MsgGloballyFreeze parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgGloballyFreeze> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgGloballyFreeze> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.MsgGloballyFreeze getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgGloballyUnfreezeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.MsgGloballyUnfreeze)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.ft.v1.MsgGloballyUnfreeze}
+   */
+  public static final class MsgGloballyUnfreeze extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.MsgGloballyUnfreeze)
+      MsgGloballyUnfreezeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgGloballyUnfreeze.newBuilder() to construct.
+    private MsgGloballyUnfreeze(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgGloballyUnfreeze() {
+      sender_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgGloballyUnfreeze();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyUnfreeze_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyUnfreeze_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze.class, com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze other = (com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.ft.v1.MsgGloballyUnfreeze}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.MsgGloballyUnfreeze)
+        com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreezeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyUnfreeze_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyUnfreeze_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze.class, com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgGloballyUnfreeze_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze build() {
+        com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze result = new com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.MsgGloballyUnfreeze)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.MsgGloballyUnfreeze)
+    private static final com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgGloballyUnfreeze>
+        PARSER = new com.google.protobuf.AbstractParser<MsgGloballyUnfreeze>() {
+      @java.lang.Override
+      public MsgGloballyUnfreeze parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgGloballyUnfreeze> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgGloballyUnfreeze> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.MsgGloballyUnfreeze getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetWhitelistedLimitOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.MsgSetWhitelistedLimit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.ft.v1.MsgSetWhitelistedLimit}
+   */
+  public static final class MsgSetWhitelistedLimit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.MsgSetWhitelistedLimit)
+      MsgSetWhitelistedLimitOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetWhitelistedLimit.newBuilder() to construct.
+    private MsgSetWhitelistedLimit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetWhitelistedLimit() {
+      sender_ = "";
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetWhitelistedLimit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgSetWhitelistedLimit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgSetWhitelistedLimit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.class, com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COIN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
+      }
+      if (coin_ != null) {
+        output.writeMessage(3, getCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
+      }
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit other = (com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.ft.v1.MsgSetWhitelistedLimit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.MsgSetWhitelistedLimit)
+        com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimitOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgSetWhitelistedLimit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgSetWhitelistedLimit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.class, com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        account_ = "";
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_MsgSetWhitelistedLimit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit build() {
+        com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit result = new com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.MsgSetWhitelistedLimit)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.MsgSetWhitelistedLimit)
+    private static final com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetWhitelistedLimit>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetWhitelistedLimit>() {
+      @java.lang.Override
+      public MsgSetWhitelistedLimit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetWhitelistedLimit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetWhitelistedLimit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EmptyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.EmptyResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code coreum.asset.ft.v1.EmptyResponse}
+   */
+  public static final class EmptyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.EmptyResponse)
+      EmptyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EmptyResponse.newBuilder() to construct.
+    private EmptyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EmptyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EmptyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_EmptyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_EmptyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TxProto.EmptyResponse.class, com.coreum.asset.ft.v1.TxProto.EmptyResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TxProto.EmptyResponse)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TxProto.EmptyResponse other = (com.coreum.asset.ft.v1.TxProto.EmptyResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TxProto.EmptyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.ft.v1.EmptyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.EmptyResponse)
+        com.coreum.asset.ft.v1.TxProto.EmptyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_EmptyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_EmptyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TxProto.EmptyResponse.class, com.coreum.asset.ft.v1.TxProto.EmptyResponse.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TxProto.EmptyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TxProto.internal_static_coreum_asset_ft_v1_EmptyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.EmptyResponse getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TxProto.EmptyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.EmptyResponse build() {
+        com.coreum.asset.ft.v1.TxProto.EmptyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TxProto.EmptyResponse buildPartial() {
+        com.coreum.asset.ft.v1.TxProto.EmptyResponse result = new com.coreum.asset.ft.v1.TxProto.EmptyResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TxProto.EmptyResponse) {
+          return mergeFrom((com.coreum.asset.ft.v1.TxProto.EmptyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TxProto.EmptyResponse other) {
+        if (other == com.coreum.asset.ft.v1.TxProto.EmptyResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.EmptyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.EmptyResponse)
+    private static final com.coreum.asset.ft.v1.TxProto.EmptyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TxProto.EmptyResponse();
+    }
+
+    public static com.coreum.asset.ft.v1.TxProto.EmptyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmptyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<EmptyResponse>() {
+      @java.lang.Override
+      public EmptyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmptyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmptyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TxProto.EmptyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_MsgIssue_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_MsgIssue_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_MsgMint_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_MsgMint_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_MsgBurn_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_MsgBurn_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_MsgFreeze_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_MsgFreeze_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_MsgUnfreeze_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_MsgUnfreeze_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_MsgGloballyFreeze_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_MsgGloballyFreeze_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_MsgGloballyUnfreeze_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_MsgGloballyUnfreeze_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_MsgSetWhitelistedLimit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_MsgSetWhitelistedLimit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_EmptyResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_EmptyResponse_fieldAccessorTable;
 
@@ -118,12 +8000,12 @@ public final class TxProto {
       "eeze\032!.coreum.asset.ft.v1.EmptyResponse\022" +
       "d\n\023SetWhitelistedLimit\022*.coreum.asset.ft" +
       ".v1.MsgSetWhitelistedLimit\032!.coreum.asse" +
-      "t.ft.v1.EmptyResponseB\305\001\n\026com.coreum.ass" +
-      "et.ft.v1B\007TxProtoP\001Z3github.com/CoreumFo" +
-      "undation/coreum/x/asset/ft/types\242\002\003CAF\252\002" +
-      "\022Coreum.Asset.Ft.V1\312\002\022Coreum\\Asset\\Ft\\V1" +
-      "\342\002\036Coreum\\Asset\\Ft\\V1\\GPBMetadata\352\002\025Core" +
-      "um::Asset::Ft::V1\310\341\036\000b\006proto3"
+      "t.ft.v1.EmptyResponseB\303\001\n\026com.coreum.ass" +
+      "et.ft.v1B\007TxProtoZ3github.com/CoreumFoun" +
+      "dation/coreum/x/asset/ft/types\242\002\003CAF\252\002\022C" +
+      "oreum.Asset.Ft.V1\312\002\022Coreum\\Asset\\Ft\\V1\342\002" +
+      "\036Coreum\\Asset\\Ft\\V1\\GPBMetadata\352\002\025Coreum" +
+      "::Asset::Ft::V1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

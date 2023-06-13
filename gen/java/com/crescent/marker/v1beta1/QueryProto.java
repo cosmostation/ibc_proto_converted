@@ -14,24 +14,2018 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.marker.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code crescent.marker.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.marker.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest.class, com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest other = (com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.marker.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.marker.v1beta1.QueryParamsRequest)
+        com.crescent.marker.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest.class, com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest result = new com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.marker.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.marker.v1beta1.QueryParamsRequest)
+    private static final com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.marker.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.marker.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.crescent.marker.v1beta1.MarkerProto.Params getParams();
+    /**
+     * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.marker.v1beta1.MarkerProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code crescent.marker.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.marker.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.crescent.marker.v1beta1.MarkerProto.Params params_;
+    /**
+     * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.crescent.marker.v1beta1.MarkerProto.Params getParams() {
+      return params_ == null ? com.crescent.marker.v1beta1.MarkerProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.marker.v1beta1.MarkerProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.crescent.marker.v1beta1.MarkerProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse other = (com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.marker.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.marker.v1beta1.QueryParamsResponse)
+        com.crescent.marker.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse result = new com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.marker.v1beta1.MarkerProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.marker.v1beta1.MarkerProto.Params, com.crescent.marker.v1beta1.MarkerProto.Params.Builder, com.crescent.marker.v1beta1.MarkerProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.crescent.marker.v1beta1.MarkerProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.crescent.marker.v1beta1.MarkerProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.crescent.marker.v1beta1.MarkerProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.crescent.marker.v1beta1.MarkerProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.crescent.marker.v1beta1.MarkerProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.crescent.marker.v1beta1.MarkerProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.marker.v1beta1.MarkerProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.marker.v1beta1.MarkerProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.crescent.marker.v1beta1.MarkerProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.crescent.marker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.marker.v1beta1.MarkerProto.Params, com.crescent.marker.v1beta1.MarkerProto.Params.Builder, com.crescent.marker.v1beta1.MarkerProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.marker.v1beta1.MarkerProto.Params, com.crescent.marker.v1beta1.MarkerProto.Params.Builder, com.crescent.marker.v1beta1.MarkerProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.marker.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.marker.v1beta1.QueryParamsResponse)
+    private static final com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.marker.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLastBlockTimeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.marker.v1beta1.QueryLastBlockTimeRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code crescent.marker.v1beta1.QueryLastBlockTimeRequest}
+   */
+  public static final class QueryLastBlockTimeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.marker.v1beta1.QueryLastBlockTimeRequest)
+      QueryLastBlockTimeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLastBlockTimeRequest.newBuilder() to construct.
+    private QueryLastBlockTimeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLastBlockTimeRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLastBlockTimeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest.class, com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest other = (com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.marker.v1beta1.QueryLastBlockTimeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.marker.v1beta1.QueryLastBlockTimeRequest)
+        com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest.class, com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest getDefaultInstanceForType() {
+        return com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest build() {
+        com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest buildPartial() {
+        com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest result = new com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest) {
+          return mergeFrom((com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest other) {
+        if (other == com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.marker.v1beta1.QueryLastBlockTimeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.marker.v1beta1.QueryLastBlockTimeRequest)
+    private static final com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest();
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLastBlockTimeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLastBlockTimeRequest>() {
+      @java.lang.Override
+      public QueryLastBlockTimeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLastBlockTimeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLastBlockTimeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLastBlockTimeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.marker.v1beta1.QueryLastBlockTimeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastBlockTime field is set.
+     */
+    boolean hasLastBlockTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     * @return The lastBlockTime.
+     */
+    com.google.protobuf.Timestamp getLastBlockTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code crescent.marker.v1beta1.QueryLastBlockTimeResponse}
+   */
+  public static final class QueryLastBlockTimeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.marker.v1beta1.QueryLastBlockTimeResponse)
+      QueryLastBlockTimeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLastBlockTimeResponse.newBuilder() to construct.
+    private QueryLastBlockTimeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLastBlockTimeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLastBlockTimeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse.class, com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse.Builder.class);
+    }
+
+    public static final int LAST_BLOCK_TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp lastBlockTime_;
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastBlockTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastBlockTime() {
+      return lastBlockTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     * @return The lastBlockTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastBlockTime() {
+      return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder() {
+      return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lastBlockTime_ != null) {
+        output.writeMessage(1, getLastBlockTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lastBlockTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLastBlockTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse other = (com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse) obj;
+
+      if (hasLastBlockTime() != other.hasLastBlockTime()) return false;
+      if (hasLastBlockTime()) {
+        if (!getLastBlockTime()
+            .equals(other.getLastBlockTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLastBlockTime()) {
+        hash = (37 * hash) + LAST_BLOCK_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastBlockTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.marker.v1beta1.QueryLastBlockTimeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.marker.v1beta1.QueryLastBlockTimeResponse)
+        com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse.class, com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lastBlockTime_ = null;
+        if (lastBlockTimeBuilder_ != null) {
+          lastBlockTimeBuilder_.dispose();
+          lastBlockTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.marker.v1beta1.QueryProto.internal_static_crescent_marker_v1beta1_QueryLastBlockTimeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse getDefaultInstanceForType() {
+        return com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse build() {
+        com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse buildPartial() {
+        com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse result = new com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lastBlockTime_ = lastBlockTimeBuilder_ == null
+              ? lastBlockTime_
+              : lastBlockTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse) {
+          return mergeFrom((com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse other) {
+        if (other == com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse.getDefaultInstance()) return this;
+        if (other.hasLastBlockTime()) {
+          mergeLastBlockTime(other.getLastBlockTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLastBlockTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp lastBlockTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastBlockTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastBlockTime field is set.
+       */
+      public boolean hasLastBlockTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       * @return The lastBlockTime.
+       */
+      public com.google.protobuf.Timestamp getLastBlockTime() {
+        if (lastBlockTimeBuilder_ == null) {
+          return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+        } else {
+          return lastBlockTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastBlockTime(com.google.protobuf.Timestamp value) {
+        if (lastBlockTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastBlockTime_ = value;
+        } else {
+          lastBlockTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastBlockTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastBlockTimeBuilder_ == null) {
+          lastBlockTime_ = builderForValue.build();
+        } else {
+          lastBlockTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeLastBlockTime(com.google.protobuf.Timestamp value) {
+        if (lastBlockTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            lastBlockTime_ != null &&
+            lastBlockTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastBlockTimeBuilder().mergeFrom(value);
+          } else {
+            lastBlockTime_ = value;
+          }
+        } else {
+          lastBlockTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearLastBlockTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lastBlockTime_ = null;
+        if (lastBlockTimeBuilder_ != null) {
+          lastBlockTimeBuilder_.dispose();
+          lastBlockTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastBlockTimeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLastBlockTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder() {
+        if (lastBlockTimeBuilder_ != null) {
+          return lastBlockTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastBlockTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 1 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastBlockTimeFieldBuilder() {
+        if (lastBlockTimeBuilder_ == null) {
+          lastBlockTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastBlockTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastBlockTime_ = null;
+        }
+        return lastBlockTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.marker.v1beta1.QueryLastBlockTimeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.marker.v1beta1.QueryLastBlockTimeResponse)
+    private static final com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse();
+    }
+
+    public static com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLastBlockTimeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLastBlockTimeResponse>() {
+      @java.lang.Override
+      public QueryLastBlockTimeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLastBlockTimeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLastBlockTimeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.marker.v1beta1.QueryProto.QueryLastBlockTimeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_marker_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_marker_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_marker_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_marker_v1beta1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_marker_v1beta1_QueryLastBlockTimeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_marker_v1beta1_QueryLastBlockTimeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_marker_v1beta1_QueryLastBlockTimeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_marker_v1beta1_QueryLastBlockTimeResponse_fieldAccessorTable;
 
@@ -61,13 +2055,13 @@ public final class QueryProto {
       "crescent.marker.v1beta1.QueryLastBlockTi" +
       "meRequest\0323.crescent.marker.v1beta1.Quer" +
       "yLastBlockTimeResponse\"0\202\323\344\223\002*\022(/crescen" +
-      "t/marker/v1beta1/last_block_timeB\337\001\n\033com" +
-      ".crescent.marker.v1beta1B\nQueryProtoP\001Z6" +
-      "github.com/crescent-network/crescent/v5/" +
-      "x/marker/types\242\002\003CMX\252\002\027Crescent.Marker.V" +
-      "1beta1\312\002\027Crescent\\Marker\\V1beta1\342\002#Cresc" +
-      "ent\\Marker\\V1beta1\\GPBMetadata\352\002\031Crescen" +
-      "t::Marker::V1beta1b\006proto3"
+      "t/marker/v1beta1/last_block_timeB\335\001\n\033com" +
+      ".crescent.marker.v1beta1B\nQueryProtoZ6gi" +
+      "thub.com/crescent-network/crescent/v5/x/" +
+      "marker/types\242\002\003CMX\252\002\027Crescent.Marker.V1b" +
+      "eta1\312\002\027Crescent\\Marker\\V1beta1\342\002#Crescen" +
+      "t\\Marker\\V1beta1\\GPBMetadata\352\002\031Crescent:" +
+      ":Marker::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

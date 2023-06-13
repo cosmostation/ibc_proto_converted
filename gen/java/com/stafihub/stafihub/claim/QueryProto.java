@@ -14,34 +14,3088 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.claim.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code stafihub.stafihub.claim.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.claim.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest.class, com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest other = (com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code stafihub.stafihub.claim.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.claim.QueryParamsRequest)
+        com.stafihub.stafihub.claim.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest.class, com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest build() {
+        com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest buildPartial() {
+        com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest result = new com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest other) {
+        if (other == com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.claim.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.claim.QueryParamsRequest)
+    private static final com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.claim.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.claim.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.stafihub.stafihub.claim.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.stafihub.stafihub.claim.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code stafihub.stafihub.claim.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.claim.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse.class, com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.stafihub.stafihub.claim.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.claim.ParamsProto.Params getParams() {
+      return params_ == null ? com.stafihub.stafihub.claim.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.claim.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.stafihub.stafihub.claim.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse other = (com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code stafihub.stafihub.claim.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.claim.QueryParamsResponse)
+        com.stafihub.stafihub.claim.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse.class, com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse build() {
+        com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse buildPartial() {
+        com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse result = new com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse other) {
+        if (other == com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.stafihub.stafihub.claim.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.claim.ParamsProto.Params, com.stafihub.stafihub.claim.ParamsProto.Params.Builder, com.stafihub.stafihub.claim.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.stafihub.stafihub.claim.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.stafihub.stafihub.claim.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.stafihub.stafihub.claim.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.stafihub.stafihub.claim.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.stafihub.stafihub.claim.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.stafihub.stafihub.claim.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.claim.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.claim.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.stafihub.stafihub.claim.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.claim.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.claim.ParamsProto.Params, com.stafihub.stafihub.claim.ParamsProto.Params.Builder, com.stafihub.stafihub.claim.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.claim.ParamsProto.Params, com.stafihub.stafihub.claim.ParamsProto.Params.Builder, com.stafihub.stafihub.claim.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.claim.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.claim.QueryParamsResponse)
+    private static final com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.claim.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIsClaimedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.claim.QueryIsClaimedRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 round = 1 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <code>uint64 index = 2 [json_name = "index"];</code>
+     * @return The index.
+     */
+    long getIndex();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.claim.QueryIsClaimedRequest}
+   */
+  public static final class QueryIsClaimedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.claim.QueryIsClaimedRequest)
+      QueryIsClaimedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIsClaimedRequest.newBuilder() to construct.
+    private QueryIsClaimedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIsClaimedRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIsClaimedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest.class, com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest.Builder.class);
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 1;
+    private long round_ = 0L;
+    /**
+     * <code>uint64 round = 1 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 2;
+    private long index_ = 0L;
+    /**
+     * <code>uint64 index = 2 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public long getIndex() {
+      return index_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (round_ != 0L) {
+        output.writeUInt64(1, round_);
+      }
+      if (index_ != 0L) {
+        output.writeUInt64(2, index_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, round_);
+      }
+      if (index_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, index_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest other = (com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest) obj;
+
+      if (getRound()
+          != other.getRound()) return false;
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIndex());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.claim.QueryIsClaimedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.claim.QueryIsClaimedRequest)
+        com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest.class, com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        round_ = 0L;
+        index_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest build() {
+        com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest buildPartial() {
+        com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest result = new com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.index_ = index_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest) {
+          return mergeFrom((com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest other) {
+        if (other == com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest.getDefaultInstance()) return this;
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (other.getIndex() != 0L) {
+          setIndex(other.getIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                index_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long round_ ;
+      /**
+       * <code>uint64 round = 1 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <code>uint64 round = 1 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 round = 1 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long index_ ;
+      /**
+       * <code>uint64 index = 2 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public long getIndex() {
+        return index_;
+      }
+      /**
+       * <code>uint64 index = 2 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(long value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 index = 2 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        index_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.claim.QueryIsClaimedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.claim.QueryIsClaimedRequest)
+    private static final com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest();
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIsClaimedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIsClaimedRequest>() {
+      @java.lang.Override
+      public QueryIsClaimedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIsClaimedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIsClaimedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIsClaimedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.claim.QueryIsClaimedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool isClaimed = 1 [json_name = "isClaimed"];</code>
+     * @return The isClaimed.
+     */
+    boolean getIsClaimed();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.claim.QueryIsClaimedResponse}
+   */
+  public static final class QueryIsClaimedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.claim.QueryIsClaimedResponse)
+      QueryIsClaimedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIsClaimedResponse.newBuilder() to construct.
+    private QueryIsClaimedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIsClaimedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIsClaimedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse.class, com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse.Builder.class);
+    }
+
+    public static final int ISCLAIMED_FIELD_NUMBER = 1;
+    private boolean isClaimed_ = false;
+    /**
+     * <code>bool isClaimed = 1 [json_name = "isClaimed"];</code>
+     * @return The isClaimed.
+     */
+    @java.lang.Override
+    public boolean getIsClaimed() {
+      return isClaimed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isClaimed_ != false) {
+        output.writeBool(1, isClaimed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isClaimed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isClaimed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse other = (com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse) obj;
+
+      if (getIsClaimed()
+          != other.getIsClaimed()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISCLAIMED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsClaimed());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.claim.QueryIsClaimedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.claim.QueryIsClaimedResponse)
+        com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse.class, com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isClaimed_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryIsClaimedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse build() {
+        com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse buildPartial() {
+        com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse result = new com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isClaimed_ = isClaimed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse) {
+          return mergeFrom((com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse other) {
+        if (other == com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse.getDefaultInstance()) return this;
+        if (other.getIsClaimed() != false) {
+          setIsClaimed(other.getIsClaimed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isClaimed_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isClaimed_ ;
+      /**
+       * <code>bool isClaimed = 1 [json_name = "isClaimed"];</code>
+       * @return The isClaimed.
+       */
+      @java.lang.Override
+      public boolean getIsClaimed() {
+        return isClaimed_;
+      }
+      /**
+       * <code>bool isClaimed = 1 [json_name = "isClaimed"];</code>
+       * @param value The isClaimed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsClaimed(boolean value) {
+
+        isClaimed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isClaimed = 1 [json_name = "isClaimed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsClaimed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isClaimed_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.claim.QueryIsClaimedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.claim.QueryIsClaimedResponse)
+    private static final com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse();
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIsClaimedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIsClaimedResponse>() {
+      @java.lang.Override
+      public QueryIsClaimedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIsClaimedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIsClaimedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.claim.QueryProto.QueryIsClaimedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimSwitchRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.claim.QueryClaimSwitchRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 round = 1 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.claim.QueryClaimSwitchRequest}
+   */
+  public static final class QueryClaimSwitchRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.claim.QueryClaimSwitchRequest)
+      QueryClaimSwitchRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimSwitchRequest.newBuilder() to construct.
+    private QueryClaimSwitchRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimSwitchRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimSwitchRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest.class, com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest.Builder.class);
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 1;
+    private long round_ = 0L;
+    /**
+     * <code>uint64 round = 1 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (round_ != 0L) {
+        output.writeUInt64(1, round_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, round_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest other = (com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest) obj;
+
+      if (getRound()
+          != other.getRound()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.claim.QueryClaimSwitchRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.claim.QueryClaimSwitchRequest)
+        com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest.class, com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        round_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest build() {
+        com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest buildPartial() {
+        com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest result = new com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.round_ = round_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest) {
+          return mergeFrom((com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest other) {
+        if (other == com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest.getDefaultInstance()) return this;
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long round_ ;
+      /**
+       * <code>uint64 round = 1 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <code>uint64 round = 1 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 round = 1 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.claim.QueryClaimSwitchRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.claim.QueryClaimSwitchRequest)
+    private static final com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest();
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimSwitchRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimSwitchRequest>() {
+      @java.lang.Override
+      public QueryClaimSwitchRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimSwitchRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimSwitchRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimSwitchResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.claim.QueryClaimSwitchResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool isOpen = 1 [json_name = "isOpen"];</code>
+     * @return The isOpen.
+     */
+    boolean getIsOpen();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.claim.QueryClaimSwitchResponse}
+   */
+  public static final class QueryClaimSwitchResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.claim.QueryClaimSwitchResponse)
+      QueryClaimSwitchResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimSwitchResponse.newBuilder() to construct.
+    private QueryClaimSwitchResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimSwitchResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimSwitchResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse.class, com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse.Builder.class);
+    }
+
+    public static final int ISOPEN_FIELD_NUMBER = 1;
+    private boolean isOpen_ = false;
+    /**
+     * <code>bool isOpen = 1 [json_name = "isOpen"];</code>
+     * @return The isOpen.
+     */
+    @java.lang.Override
+    public boolean getIsOpen() {
+      return isOpen_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isOpen_ != false) {
+        output.writeBool(1, isOpen_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isOpen_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isOpen_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse other = (com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse) obj;
+
+      if (getIsOpen()
+          != other.getIsOpen()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISOPEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsOpen());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.claim.QueryClaimSwitchResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.claim.QueryClaimSwitchResponse)
+        com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse.class, com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isOpen_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.claim.QueryProto.internal_static_stafihub_stafihub_claim_QueryClaimSwitchResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse build() {
+        com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse buildPartial() {
+        com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse result = new com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isOpen_ = isOpen_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse) {
+          return mergeFrom((com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse other) {
+        if (other == com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse.getDefaultInstance()) return this;
+        if (other.getIsOpen() != false) {
+          setIsOpen(other.getIsOpen());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isOpen_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isOpen_ ;
+      /**
+       * <code>bool isOpen = 1 [json_name = "isOpen"];</code>
+       * @return The isOpen.
+       */
+      @java.lang.Override
+      public boolean getIsOpen() {
+        return isOpen_;
+      }
+      /**
+       * <code>bool isOpen = 1 [json_name = "isOpen"];</code>
+       * @param value The isOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOpen(boolean value) {
+
+        isOpen_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isOpen = 1 [json_name = "isOpen"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsOpen() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isOpen_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.claim.QueryClaimSwitchResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.claim.QueryClaimSwitchResponse)
+    private static final com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse();
+    }
+
+    public static com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimSwitchResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimSwitchResponse>() {
+      @java.lang.Override
+      public QueryClaimSwitchResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimSwitchResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimSwitchResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.claim.QueryProto.QueryClaimSwitchResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_claim_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_claim_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_claim_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_claim_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_claim_QueryIsClaimedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_claim_QueryIsClaimedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_claim_QueryIsClaimedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_claim_QueryIsClaimedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_claim_QueryClaimSwitchRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_claim_QueryClaimSwitchRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_claim_QueryClaimSwitchResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_claim_QueryClaimSwitchResponse_fieldAccessorTable;
 
@@ -78,12 +3132,12 @@ public final class QueryProto {
       "QueryClaimSwitchRequest\0321.stafihub.stafi" +
       "hub.claim.QueryClaimSwitchResponse\"5\202\323\344\223" +
       "\002/\022-/stafihub/stafihub/claim/claim_switc" +
-      "h/{round}B\323\001\n\033com.stafihub.stafihub.clai" +
-      "mB\nQueryProtoP\001Z*github.com/stafihub/sta" +
-      "fihub/x/claim/types\242\002\003SSC\252\002\027Stafihub.Sta" +
-      "fihub.Claim\312\002\027Stafihub\\Stafihub\\Claim\342\002#" +
-      "Stafihub\\Stafihub\\Claim\\GPBMetadata\352\002\031St" +
-      "afihub::Stafihub::Claimb\006proto3"
+      "h/{round}B\321\001\n\033com.stafihub.stafihub.clai" +
+      "mB\nQueryProtoZ*github.com/stafihub/stafi" +
+      "hub/x/claim/types\242\002\003SSC\252\002\027Stafihub.Stafi" +
+      "hub.Claim\312\002\027Stafihub\\Stafihub\\Claim\342\002#St" +
+      "afihub\\Stafihub\\Claim\\GPBMetadata\352\002\031Staf" +
+      "ihub::Stafihub::Claimb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

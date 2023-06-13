@@ -24,12 +24,12 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034canto/govshuttle/v1/tx.proto\022\023canto.go" +
-      "vshuttle.v12\005\n\003MsgB\306\001\n\027com.canto.govshut" +
-      "tle.v1B\007TxProtoP\001Z4github.com/Canto-Netw" +
-      "ork/Canto/v6/x/govshuttle/types\242\002\003CGX\252\002\023" +
-      "Canto.Govshuttle.V1\312\002\023Canto\\Govshuttle\\V" +
-      "1\342\002\037Canto\\Govshuttle\\V1\\GPBMetadata\352\002\025Ca" +
-      "nto::Govshuttle::V1b\006proto3"
+      "vshuttle.v12\005\n\003MsgB\304\001\n\027com.canto.govshut" +
+      "tle.v1B\007TxProtoZ4github.com/Canto-Networ" +
+      "k/Canto/v6/x/govshuttle/types\242\002\003CGX\252\002\023Ca" +
+      "nto.Govshuttle.V1\312\002\023Canto\\Govshuttle\\V1\342" +
+      "\002\037Canto\\Govshuttle\\V1\\GPBMetadata\352\002\025Cant" +
+      "o::Govshuttle::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

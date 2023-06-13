@@ -14,24 +14,2451 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgSetProposalLifeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvote.MsgSetProposalLife)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>int64 proposalLife = 2 [json_name = "proposalLife", (.gogoproto.jsontag) = "proposalLife"];</code>
+     * @return The proposalLife.
+     */
+    long getProposalLife();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvote.MsgSetProposalLife}
+   */
+  public static final class MsgSetProposalLife extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvote.MsgSetProposalLife)
+      MsgSetProposalLifeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetProposalLife.newBuilder() to construct.
+    private MsgSetProposalLife(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetProposalLife() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetProposalLife();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLife_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLife_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife.class, com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROPOSALLIFE_FIELD_NUMBER = 2;
+    private long proposalLife_ = 0L;
+    /**
+     * <code>int64 proposalLife = 2 [json_name = "proposalLife", (.gogoproto.jsontag) = "proposalLife"];</code>
+     * @return The proposalLife.
+     */
+    @java.lang.Override
+    public long getProposalLife() {
+      return proposalLife_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (proposalLife_ != 0L) {
+        output.writeInt64(2, proposalLife_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (proposalLife_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, proposalLife_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife other = (com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getProposalLife()
+          != other.getProposalLife()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + PROPOSALLIFE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProposalLife());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvote.MsgSetProposalLife}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvote.MsgSetProposalLife)
+        com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLife_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLife_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife.class, com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        proposalLife_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLife_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife build() {
+        com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife buildPartial() {
+        com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife result = new com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.proposalLife_ = proposalLife_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife) {
+          return mergeFrom((com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife other) {
+        if (other == com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getProposalLife() != 0L) {
+          setProposalLife(other.getProposalLife());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                proposalLife_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long proposalLife_ ;
+      /**
+       * <code>int64 proposalLife = 2 [json_name = "proposalLife", (.gogoproto.jsontag) = "proposalLife"];</code>
+       * @return The proposalLife.
+       */
+      @java.lang.Override
+      public long getProposalLife() {
+        return proposalLife_;
+      }
+      /**
+       * <code>int64 proposalLife = 2 [json_name = "proposalLife", (.gogoproto.jsontag) = "proposalLife"];</code>
+       * @param value The proposalLife to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalLife(long value) {
+
+        proposalLife_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 proposalLife = 2 [json_name = "proposalLife", (.gogoproto.jsontag) = "proposalLife"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalLife() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        proposalLife_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvote.MsgSetProposalLife)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvote.MsgSetProposalLife)
+    private static final com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife();
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetProposalLife>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetProposalLife>() {
+      @java.lang.Override
+      public MsgSetProposalLife parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetProposalLife> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetProposalLife> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLife getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetProposalLifeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvote.MsgSetProposalLifeResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvote.MsgSetProposalLifeResponse}
+   */
+  public static final class MsgSetProposalLifeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvote.MsgSetProposalLifeResponse)
+      MsgSetProposalLifeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetProposalLifeResponse.newBuilder() to construct.
+    private MsgSetProposalLifeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetProposalLifeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetProposalLifeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLifeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLifeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse.class, com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse other = (com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvote.MsgSetProposalLifeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvote.MsgSetProposalLifeResponse)
+        com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLifeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLifeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse.class, com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSetProposalLifeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse build() {
+        com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse buildPartial() {
+        com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse result = new com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse) {
+          return mergeFrom((com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse other) {
+        if (other == com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvote.MsgSetProposalLifeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvote.MsgSetProposalLifeResponse)
+    private static final com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse();
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetProposalLifeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetProposalLifeResponse>() {
+      @java.lang.Override
+      public MsgSetProposalLifeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetProposalLifeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetProposalLifeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvote.TxProto.MsgSetProposalLifeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSubmitProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvote.MsgSubmitProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string proposer = 1 [json_name = "proposer"];</code>
+     * @return The proposer.
+     */
+    java.lang.String getProposer();
+    /**
+     * <code>string proposer = 1 [json_name = "proposer"];</code>
+     * @return The bytes for proposer.
+     */
+    com.google.protobuf.ByteString
+        getProposerBytes();
+
+    /**
+     * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     * @return The content.
+     */
+    com.google.protobuf.Any getContent();
+    /**
+     * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getContentOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvote.MsgSubmitProposal}
+   */
+  public static final class MsgSubmitProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvote.MsgSubmitProposal)
+      MsgSubmitProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSubmitProposal.newBuilder() to construct.
+    private MsgSubmitProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSubmitProposal() {
+      proposer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSubmitProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.class, com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.Builder.class);
+    }
+
+    public static final int PROPOSER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proposer_ = "";
+    /**
+     * <code>string proposer = 1 [json_name = "proposer"];</code>
+     * @return The proposer.
+     */
+    @java.lang.Override
+    public java.lang.String getProposer() {
+      java.lang.Object ref = proposer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proposer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proposer = 1 [json_name = "proposer"];</code>
+     * @return The bytes for proposer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProposerBytes() {
+      java.lang.Object ref = proposer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proposer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Any content_;
+    /**
+     * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     * @return Whether the content field is set.
+     */
+    @java.lang.Override
+    public boolean hasContent() {
+      return content_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     * @return The content.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getContent() {
+      return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
+    }
+    /**
+     * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getContentOrBuilder() {
+      return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, proposer_);
+      }
+      if (content_ != null) {
+        output.writeMessage(2, getContent());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, proposer_);
+      }
+      if (content_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getContent());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal other = (com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal) obj;
+
+      if (!getProposer()
+          .equals(other.getProposer())) return false;
+      if (hasContent() != other.hasContent()) return false;
+      if (hasContent()) {
+        if (!getContent()
+            .equals(other.getContent())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPOSER_FIELD_NUMBER;
+      hash = (53 * hash) + getProposer().hashCode();
+      if (hasContent()) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContent().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvote.MsgSubmitProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvote.MsgSubmitProposal)
+        com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.class, com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proposer_ = "";
+        content_ = null;
+        if (contentBuilder_ != null) {
+          contentBuilder_.dispose();
+          contentBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal build() {
+        com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal buildPartial() {
+        com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal result = new com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proposer_ = proposer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.content_ = contentBuilder_ == null
+              ? content_
+              : contentBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal) {
+          return mergeFrom((com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal other) {
+        if (other == com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.getDefaultInstance()) return this;
+        if (!other.getProposer().isEmpty()) {
+          proposer_ = other.proposer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasContent()) {
+          mergeContent(other.getContent());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                proposer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getContentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object proposer_ = "";
+      /**
+       * <code>string proposer = 1 [json_name = "proposer"];</code>
+       * @return The proposer.
+       */
+      public java.lang.String getProposer() {
+        java.lang.Object ref = proposer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proposer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proposer = 1 [json_name = "proposer"];</code>
+       * @return The bytes for proposer.
+       */
+      public com.google.protobuf.ByteString
+          getProposerBytes() {
+        java.lang.Object ref = proposer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proposer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proposer = 1 [json_name = "proposer"];</code>
+       * @param value The proposer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proposer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proposer = 1 [json_name = "proposer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposer() {
+        proposer_ = getDefaultInstance().getProposer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proposer = 1 [json_name = "proposer"];</code>
+       * @param value The bytes for proposer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proposer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Any content_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> contentBuilder_;
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       * @return The content.
+       */
+      public com.google.protobuf.Any getContent() {
+        if (contentBuilder_ == null) {
+          return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
+        } else {
+          return contentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public Builder setContent(com.google.protobuf.Any value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          content_ = value;
+        } else {
+          contentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public Builder setContent(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          content_ = builderForValue.build();
+        } else {
+          contentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public Builder mergeContent(com.google.protobuf.Any value) {
+        if (contentBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            content_ != null &&
+            content_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getContentBuilder().mergeFrom(value);
+          } else {
+            content_ = value;
+          }
+        } else {
+          contentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public Builder clearContent() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        content_ = null;
+        if (contentBuilder_ != null) {
+          contentBuilder_.dispose();
+          contentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public com.google.protobuf.Any.Builder getContentBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getContentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getContentOrBuilder() {
+        if (contentBuilder_ != null) {
+          return contentBuilder_.getMessageOrBuilder();
+        } else {
+          return content_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : content_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getContentFieldBuilder() {
+        if (contentBuilder_ == null) {
+          contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getContent(),
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        return contentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvote.MsgSubmitProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvote.MsgSubmitProposal)
+    private static final com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal();
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSubmitProposal>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSubmitProposal>() {
+      @java.lang.Override
+      public MsgSubmitProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSubmitProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSubmitProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSubmitProposalResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvote.MsgSubmitProposalResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string propId = 1 [json_name = "propId"];</code>
+     * @return The propId.
+     */
+    java.lang.String getPropId();
+    /**
+     * <code>string propId = 1 [json_name = "propId"];</code>
+     * @return The bytes for propId.
+     */
+    com.google.protobuf.ByteString
+        getPropIdBytes();
+
+    /**
+     * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus getStatus();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvote.MsgSubmitProposalResponse}
+   */
+  public static final class MsgSubmitProposalResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvote.MsgSubmitProposalResponse)
+      MsgSubmitProposalResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSubmitProposalResponse.newBuilder() to construct.
+    private MsgSubmitProposalResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSubmitProposalResponse() {
+      propId_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSubmitProposalResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposalResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposalResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse.class, com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse.Builder.class);
+    }
+
+    public static final int PROPID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object propId_ = "";
+    /**
+     * <code>string propId = 1 [json_name = "propId"];</code>
+     * @return The propId.
+     */
+    @java.lang.Override
+    public java.lang.String getPropId() {
+      java.lang.Object ref = propId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        propId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string propId = 1 [json_name = "propId"];</code>
+     * @return The bytes for propId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPropIdBytes() {
+      java.lang.Object ref = propId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        propId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_ = 0;
+    /**
+     * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus getStatus() {
+      com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus result = com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.forNumber(status_);
+      return result == null ? com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(propId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, propId_);
+      }
+      if (status_ != com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.PROPOSAL_STATUS_INITIATED.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(propId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, propId_);
+      }
+      if (status_ != com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.PROPOSAL_STATUS_INITIATED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse other = (com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse) obj;
+
+      if (!getPropId()
+          .equals(other.getPropId())) return false;
+      if (status_ != other.status_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPID_FIELD_NUMBER;
+      hash = (53 * hash) + getPropId().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvote.MsgSubmitProposalResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvote.MsgSubmitProposalResponse)
+        com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposalResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposalResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse.class, com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        propId_ = "";
+        status_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvote.TxProto.internal_static_stafihub_stafihub_rvote_MsgSubmitProposalResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse build() {
+        com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse buildPartial() {
+        com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse result = new com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.propId_ = propId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse) {
+          return mergeFrom((com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse other) {
+        if (other == com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse.getDefaultInstance()) return this;
+        if (!other.getPropId().isEmpty()) {
+          propId_ = other.propId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                propId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object propId_ = "";
+      /**
+       * <code>string propId = 1 [json_name = "propId"];</code>
+       * @return The propId.
+       */
+      public java.lang.String getPropId() {
+        java.lang.Object ref = propId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          propId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string propId = 1 [json_name = "propId"];</code>
+       * @return The bytes for propId.
+       */
+      public com.google.protobuf.ByteString
+          getPropIdBytes() {
+        java.lang.Object ref = propId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          propId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string propId = 1 [json_name = "propId"];</code>
+       * @param value The propId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPropId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        propId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string propId = 1 [json_name = "propId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPropId() {
+        propId_ = getDefaultInstance().getPropId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string propId = 1 [json_name = "propId"];</code>
+       * @param value The bytes for propId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPropIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        propId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus getStatus() {
+        com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus result = com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.forNumber(status_);
+        return result == null ? com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvote.MsgSubmitProposalResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvote.MsgSubmitProposalResponse)
+    private static final com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse();
+    }
+
+    public static com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSubmitProposalResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSubmitProposalResponse>() {
+      @java.lang.Override
+      public MsgSubmitProposalResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSubmitProposalResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSubmitProposalResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposalResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvote_MsgSetProposalLife_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvote_MsgSetProposalLife_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvote_MsgSetProposalLifeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvote_MsgSetProposalLifeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvote_MsgSubmitProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvote_MsgSubmitProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvote_MsgSubmitProposalResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvote_MsgSubmitProposalResponse_fieldAccessorTable;
 
@@ -62,12 +2489,12 @@ public final class TxProto {
       "ProposalLifeResponse\022p\n\016SubmitProposal\022*" +
       ".stafihub.stafihub.rvote.MsgSubmitPropos" +
       "al\0322.stafihub.stafihub.rvote.MsgSubmitPr" +
-      "oposalResponseB\320\001\n\033com.stafihub.stafihub" +
-      ".rvoteB\007TxProtoP\001Z*github.com/stafihub/s" +
-      "tafihub/x/rvote/types\242\002\003SSR\252\002\027Stafihub.S" +
-      "tafihub.Rvote\312\002\027Stafihub\\Stafihub\\Rvote\342" +
-      "\002#Stafihub\\Stafihub\\Rvote\\GPBMetadata\352\002\031" +
-      "Stafihub::Stafihub::Rvoteb\006proto3"
+      "oposalResponseB\316\001\n\033com.stafihub.stafihub" +
+      ".rvoteB\007TxProtoZ*github.com/stafihub/sta" +
+      "fihub/x/rvote/types\242\002\003SSR\252\002\027Stafihub.Sta" +
+      "fihub.Rvote\312\002\027Stafihub\\Stafihub\\Rvote\342\002#" +
+      "Stafihub\\Stafihub\\Rvote\\GPBMetadata\352\002\031St" +
+      "afihub::Stafihub::Rvoteb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

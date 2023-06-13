@@ -14,64 +14,7185 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgLiquidFarmOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgLiquidFarm)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the farmingCoin field is set.
+     */
+    boolean hasFarmingCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The farmingCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFarmingCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmingCoinOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgLiquidFarm defines a SDK message for farming pool coin for a liquid farm.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidFarm}
+   */
+  public static final class MsgLiquidFarm extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgLiquidFarm)
+      MsgLiquidFarmOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgLiquidFarm.newBuilder() to construct.
+    private MsgLiquidFarm(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgLiquidFarm() {
+      farmer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgLiquidFarm();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarm_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarm_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FARMING_COIN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin farmingCoin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the farmingCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasFarmingCoin() {
+      return farmingCoin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The farmingCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFarmingCoin() {
+      return farmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmingCoin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmingCoinOrBuilder() {
+      return farmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmingCoin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, farmer_);
+      }
+      if (farmingCoin_ != null) {
+        output.writeMessage(3, getFarmingCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, farmer_);
+      }
+      if (farmingCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getFarmingCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (hasFarmingCoin() != other.hasFarmingCoin()) return false;
+      if (hasFarmingCoin()) {
+        if (!getFarmingCoin()
+            .equals(other.getFarmingCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      if (hasFarmingCoin()) {
+        hash = (37 * hash) + FARMING_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getFarmingCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgLiquidFarm defines a SDK message for farming pool coin for a liquid farm.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidFarm}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgLiquidFarm)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarm_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarm_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        farmer_ = "";
+        farmingCoin_ = null;
+        if (farmingCoinBuilder_ != null) {
+          farmingCoinBuilder_.dispose();
+          farmingCoinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarm_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.farmingCoin_ = farmingCoinBuilder_ == null
+              ? farmingCoin_
+              : farmingCoinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasFarmingCoin()) {
+          mergeFarmingCoin(other.getFarmingCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getFarmingCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin farmingCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> farmingCoinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the farmingCoin field is set.
+       */
+      public boolean hasFarmingCoin() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The farmingCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFarmingCoin() {
+        if (farmingCoinBuilder_ == null) {
+          return farmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmingCoin_;
+        } else {
+          return farmingCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setFarmingCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (farmingCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          farmingCoin_ = value;
+        } else {
+          farmingCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setFarmingCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (farmingCoinBuilder_ == null) {
+          farmingCoin_ = builderForValue.build();
+        } else {
+          farmingCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeFarmingCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (farmingCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            farmingCoin_ != null &&
+            farmingCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getFarmingCoinBuilder().mergeFrom(value);
+          } else {
+            farmingCoin_ = value;
+          }
+        } else {
+          farmingCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearFarmingCoin() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        farmingCoin_ = null;
+        if (farmingCoinBuilder_ != null) {
+          farmingCoinBuilder_.dispose();
+          farmingCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFarmingCoinBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getFarmingCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmingCoinOrBuilder() {
+        if (farmingCoinBuilder_ != null) {
+          return farmingCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return farmingCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmingCoin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFarmingCoinFieldBuilder() {
+        if (farmingCoinBuilder_ == null) {
+          farmingCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getFarmingCoin(),
+                  getParentForChildren(),
+                  isClean());
+          farmingCoin_ = null;
+        }
+        return farmingCoinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgLiquidFarm)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgLiquidFarm)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgLiquidFarm>
+        PARSER = new com.google.protobuf.AbstractParser<MsgLiquidFarm>() {
+      @java.lang.Override
+      public MsgLiquidFarm parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgLiquidFarm> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgLiquidFarm> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgLiquidFarmResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgLiquidFarmResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgLiquidFarmResponse defines the MsgLiquidFarmResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidFarmResponse}
+   */
+  public static final class MsgLiquidFarmResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgLiquidFarmResponse)
+      MsgLiquidFarmResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgLiquidFarmResponse.newBuilder() to construct.
+    private MsgLiquidFarmResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgLiquidFarmResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgLiquidFarmResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarmResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarmResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgLiquidFarmResponse defines the MsgLiquidFarmResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidFarmResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgLiquidFarmResponse)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarmResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarmResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarmResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgLiquidFarmResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgLiquidFarmResponse)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgLiquidFarmResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgLiquidFarmResponse>() {
+      @java.lang.Override
+      public MsgLiquidFarmResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgLiquidFarmResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgLiquidFarmResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarmResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgLiquidUnfarmOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgLiquidUnfarm)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the unfarmingCoin field is set.
+     */
+    boolean hasUnfarmingCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The unfarmingCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUnfarmingCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnfarmingCoinOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgLiquidUnfarm defines a SDK message for unfarming LFCoin.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidUnfarm}
+   */
+  public static final class MsgLiquidUnfarm extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgLiquidUnfarm)
+      MsgLiquidUnfarmOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgLiquidUnfarm.newBuilder() to construct.
+    private MsgLiquidUnfarm(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgLiquidUnfarm() {
+      farmer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgLiquidUnfarm();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarm_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarm_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNFARMING_COIN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin unfarmingCoin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the unfarmingCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnfarmingCoin() {
+      return unfarmingCoin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The unfarmingCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUnfarmingCoin() {
+      return unfarmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : unfarmingCoin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnfarmingCoinOrBuilder() {
+      return unfarmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : unfarmingCoin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, farmer_);
+      }
+      if (unfarmingCoin_ != null) {
+        output.writeMessage(3, getUnfarmingCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, farmer_);
+      }
+      if (unfarmingCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUnfarmingCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (hasUnfarmingCoin() != other.hasUnfarmingCoin()) return false;
+      if (hasUnfarmingCoin()) {
+        if (!getUnfarmingCoin()
+            .equals(other.getUnfarmingCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      if (hasUnfarmingCoin()) {
+        hash = (37 * hash) + UNFARMING_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getUnfarmingCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgLiquidUnfarm defines a SDK message for unfarming LFCoin.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidUnfarm}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgLiquidUnfarm)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarm_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarm_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        farmer_ = "";
+        unfarmingCoin_ = null;
+        if (unfarmingCoinBuilder_ != null) {
+          unfarmingCoinBuilder_.dispose();
+          unfarmingCoinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarm_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.unfarmingCoin_ = unfarmingCoinBuilder_ == null
+              ? unfarmingCoin_
+              : unfarmingCoinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasUnfarmingCoin()) {
+          mergeUnfarmingCoin(other.getUnfarmingCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getUnfarmingCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin unfarmingCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> unfarmingCoinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the unfarmingCoin field is set.
+       */
+      public boolean hasUnfarmingCoin() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The unfarmingCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUnfarmingCoin() {
+        if (unfarmingCoinBuilder_ == null) {
+          return unfarmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : unfarmingCoin_;
+        } else {
+          return unfarmingCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setUnfarmingCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unfarmingCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unfarmingCoin_ = value;
+        } else {
+          unfarmingCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setUnfarmingCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (unfarmingCoinBuilder_ == null) {
+          unfarmingCoin_ = builderForValue.build();
+        } else {
+          unfarmingCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeUnfarmingCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unfarmingCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            unfarmingCoin_ != null &&
+            unfarmingCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getUnfarmingCoinBuilder().mergeFrom(value);
+          } else {
+            unfarmingCoin_ = value;
+          }
+        } else {
+          unfarmingCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearUnfarmingCoin() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        unfarmingCoin_ = null;
+        if (unfarmingCoinBuilder_ != null) {
+          unfarmingCoinBuilder_.dispose();
+          unfarmingCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUnfarmingCoinBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getUnfarmingCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnfarmingCoinOrBuilder() {
+        if (unfarmingCoinBuilder_ != null) {
+          return unfarmingCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return unfarmingCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : unfarmingCoin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUnfarmingCoinFieldBuilder() {
+        if (unfarmingCoinBuilder_ == null) {
+          unfarmingCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getUnfarmingCoin(),
+                  getParentForChildren(),
+                  isClean());
+          unfarmingCoin_ = null;
+        }
+        return unfarmingCoinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgLiquidUnfarm)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgLiquidUnfarm)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgLiquidUnfarm>
+        PARSER = new com.google.protobuf.AbstractParser<MsgLiquidUnfarm>() {
+      @java.lang.Override
+      public MsgLiquidUnfarm parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgLiquidUnfarm> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgLiquidUnfarm> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgLiquidUnfarmResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgLiquidUnfarmResponse defines the MsgLiquidUnfarmResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidUnfarmResponse}
+   */
+  public static final class MsgLiquidUnfarmResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmResponse)
+      MsgLiquidUnfarmResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgLiquidUnfarmResponse.newBuilder() to construct.
+    private MsgLiquidUnfarmResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgLiquidUnfarmResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgLiquidUnfarmResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgLiquidUnfarmResponse defines the MsgLiquidUnfarmResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidUnfarmResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmResponse)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmResponse)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgLiquidUnfarmResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgLiquidUnfarmResponse>() {
+      @java.lang.Override
+      public MsgLiquidUnfarmResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgLiquidUnfarmResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgLiquidUnfarmResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgLiquidUnfarmAndWithdrawOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdraw)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the unfarmingCoin field is set.
+     */
+    boolean hasUnfarmingCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The unfarmingCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUnfarmingCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnfarmingCoinOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgLiquidUnfarmAndWithdraw defines a SDK message for unfarming LFCoin.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdraw}
+   */
+  public static final class MsgLiquidUnfarmAndWithdraw extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdraw)
+      MsgLiquidUnfarmAndWithdrawOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgLiquidUnfarmAndWithdraw.newBuilder() to construct.
+    private MsgLiquidUnfarmAndWithdraw(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgLiquidUnfarmAndWithdraw() {
+      farmer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgLiquidUnfarmAndWithdraw();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdraw_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdraw_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 2 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNFARMING_COIN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin unfarmingCoin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the unfarmingCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnfarmingCoin() {
+      return unfarmingCoin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The unfarmingCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUnfarmingCoin() {
+      return unfarmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : unfarmingCoin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnfarmingCoinOrBuilder() {
+      return unfarmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : unfarmingCoin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, farmer_);
+      }
+      if (unfarmingCoin_ != null) {
+        output.writeMessage(3, getUnfarmingCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, farmer_);
+      }
+      if (unfarmingCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUnfarmingCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (hasUnfarmingCoin() != other.hasUnfarmingCoin()) return false;
+      if (hasUnfarmingCoin()) {
+        if (!getUnfarmingCoin()
+            .equals(other.getUnfarmingCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      if (hasUnfarmingCoin()) {
+        hash = (37 * hash) + UNFARMING_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getUnfarmingCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgLiquidUnfarmAndWithdraw defines a SDK message for unfarming LFCoin.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdraw}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdraw)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdraw_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdraw_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        farmer_ = "";
+        unfarmingCoin_ = null;
+        if (unfarmingCoinBuilder_ != null) {
+          unfarmingCoinBuilder_.dispose();
+          unfarmingCoinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdraw_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.unfarmingCoin_ = unfarmingCoinBuilder_ == null
+              ? unfarmingCoin_
+              : unfarmingCoinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasUnfarmingCoin()) {
+          mergeUnfarmingCoin(other.getUnfarmingCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getUnfarmingCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 2 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin unfarmingCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> unfarmingCoinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the unfarmingCoin field is set.
+       */
+      public boolean hasUnfarmingCoin() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The unfarmingCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUnfarmingCoin() {
+        if (unfarmingCoinBuilder_ == null) {
+          return unfarmingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : unfarmingCoin_;
+        } else {
+          return unfarmingCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setUnfarmingCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unfarmingCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unfarmingCoin_ = value;
+        } else {
+          unfarmingCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setUnfarmingCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (unfarmingCoinBuilder_ == null) {
+          unfarmingCoin_ = builderForValue.build();
+        } else {
+          unfarmingCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeUnfarmingCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unfarmingCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            unfarmingCoin_ != null &&
+            unfarmingCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getUnfarmingCoinBuilder().mergeFrom(value);
+          } else {
+            unfarmingCoin_ = value;
+          }
+        } else {
+          unfarmingCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearUnfarmingCoin() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        unfarmingCoin_ = null;
+        if (unfarmingCoinBuilder_ != null) {
+          unfarmingCoinBuilder_.dispose();
+          unfarmingCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUnfarmingCoinBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getUnfarmingCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnfarmingCoinOrBuilder() {
+        if (unfarmingCoinBuilder_ != null) {
+          return unfarmingCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return unfarmingCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : unfarmingCoin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUnfarmingCoinFieldBuilder() {
+        if (unfarmingCoinBuilder_ == null) {
+          unfarmingCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getUnfarmingCoin(),
+                  getParentForChildren(),
+                  isClean());
+          unfarmingCoin_ = null;
+        }
+        return unfarmingCoinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdraw)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdraw)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgLiquidUnfarmAndWithdraw>
+        PARSER = new com.google.protobuf.AbstractParser<MsgLiquidUnfarmAndWithdraw>() {
+      @java.lang.Override
+      public MsgLiquidUnfarmAndWithdraw parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgLiquidUnfarmAndWithdraw> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgLiquidUnfarmAndWithdraw> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgLiquidUnfarmAndWithdrawResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdrawResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgLiquidUnfarmAndWithdrawResponse defines the MsgLiquidUnfarmAndWithdrawResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdrawResponse}
+   */
+  public static final class MsgLiquidUnfarmAndWithdrawResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdrawResponse)
+      MsgLiquidUnfarmAndWithdrawResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgLiquidUnfarmAndWithdrawResponse.newBuilder() to construct.
+    private MsgLiquidUnfarmAndWithdrawResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgLiquidUnfarmAndWithdrawResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgLiquidUnfarmAndWithdrawResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdrawResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdrawResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgLiquidUnfarmAndWithdrawResponse defines the MsgLiquidUnfarmAndWithdrawResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdrawResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdrawResponse)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdrawResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdrawResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdrawResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdrawResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgLiquidUnfarmAndWithdrawResponse)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgLiquidUnfarmAndWithdrawResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgLiquidUnfarmAndWithdrawResponse>() {
+      @java.lang.Override
+      public MsgLiquidUnfarmAndWithdrawResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgLiquidUnfarmAndWithdrawResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgLiquidUnfarmAndWithdrawResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdrawResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPlaceBidOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgPlaceBid)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+     * @return The auctionId.
+     */
+    long getAuctionId();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string bidder = 3 [json_name = "bidder"];</code>
+     * @return The bidder.
+     */
+    java.lang.String getBidder();
+    /**
+     * <code>string bidder = 3 [json_name = "bidder"];</code>
+     * @return The bytes for bidder.
+     */
+    com.google.protobuf.ByteString
+        getBidderBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the biddingCoin field is set.
+     */
+    boolean hasBiddingCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The biddingCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBiddingCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBiddingCoinOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgPlaceBid defines a SDK message for placing a bid for a rewards auction.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgPlaceBid}
+   */
+  public static final class MsgPlaceBid extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgPlaceBid)
+      MsgPlaceBidOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPlaceBid.newBuilder() to construct.
+    private MsgPlaceBid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPlaceBid() {
+      bidder_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPlaceBid();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBid_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBid_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.Builder.class);
+    }
+
+    public static final int AUCTION_ID_FIELD_NUMBER = 1;
+    private long auctionId_ = 0L;
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+     * @return The auctionId.
+     */
+    @java.lang.Override
+    public long getAuctionId() {
+      return auctionId_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int BIDDER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bidder_ = "";
+    /**
+     * <code>string bidder = 3 [json_name = "bidder"];</code>
+     * @return The bidder.
+     */
+    @java.lang.Override
+    public java.lang.String getBidder() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bidder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bidder = 3 [json_name = "bidder"];</code>
+     * @return The bytes for bidder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBidderBytes() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bidder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BIDDING_COIN_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin biddingCoin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the biddingCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasBiddingCoin() {
+      return biddingCoin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The biddingCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBiddingCoin() {
+      return biddingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : biddingCoin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBiddingCoinOrBuilder() {
+      return biddingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : biddingCoin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (auctionId_ != 0L) {
+        output.writeUInt64(1, auctionId_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bidder_);
+      }
+      if (biddingCoin_ != null) {
+        output.writeMessage(4, getBiddingCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (auctionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, auctionId_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bidder_);
+      }
+      if (biddingCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getBiddingCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid) obj;
+
+      if (getAuctionId()
+          != other.getAuctionId()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getBidder()
+          .equals(other.getBidder())) return false;
+      if (hasBiddingCoin() != other.hasBiddingCoin()) return false;
+      if (hasBiddingCoin()) {
+        if (!getBiddingCoin()
+            .equals(other.getBiddingCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUCTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionId());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + BIDDER_FIELD_NUMBER;
+      hash = (53 * hash) + getBidder().hashCode();
+      if (hasBiddingCoin()) {
+        hash = (37 * hash) + BIDDING_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getBiddingCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgPlaceBid defines a SDK message for placing a bid for a rewards auction.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgPlaceBid}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgPlaceBid)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        auctionId_ = 0L;
+        poolId_ = 0L;
+        bidder_ = "";
+        biddingCoin_ = null;
+        if (biddingCoinBuilder_ != null) {
+          biddingCoinBuilder_.dispose();
+          biddingCoinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBid_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.auctionId_ = auctionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bidder_ = bidder_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.biddingCoin_ = biddingCoinBuilder_ == null
+              ? biddingCoin_
+              : biddingCoinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.getDefaultInstance()) return this;
+        if (other.getAuctionId() != 0L) {
+          setAuctionId(other.getAuctionId());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getBidder().isEmpty()) {
+          bidder_ = other.bidder_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasBiddingCoin()) {
+          mergeBiddingCoin(other.getBiddingCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                auctionId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                bidder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getBiddingCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long auctionId_ ;
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @return The auctionId.
+       */
+      @java.lang.Override
+      public long getAuctionId() {
+        return auctionId_;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @param value The auctionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionId(long value) {
+
+        auctionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        auctionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bidder_ = "";
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @return The bidder.
+       */
+      public java.lang.String getBidder() {
+        java.lang.Object ref = bidder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bidder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @return The bytes for bidder.
+       */
+      public com.google.protobuf.ByteString
+          getBidderBytes() {
+        java.lang.Object ref = bidder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bidder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @param value The bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bidder_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidder() {
+        bidder_ = getDefaultInstance().getBidder();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @param value The bytes for bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bidder_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin biddingCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> biddingCoinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the biddingCoin field is set.
+       */
+      public boolean hasBiddingCoin() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The biddingCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBiddingCoin() {
+        if (biddingCoinBuilder_ == null) {
+          return biddingCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : biddingCoin_;
+        } else {
+          return biddingCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBiddingCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (biddingCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          biddingCoin_ = value;
+        } else {
+          biddingCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBiddingCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (biddingCoinBuilder_ == null) {
+          biddingCoin_ = builderForValue.build();
+        } else {
+          biddingCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeBiddingCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (biddingCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            biddingCoin_ != null &&
+            biddingCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBiddingCoinBuilder().mergeFrom(value);
+          } else {
+            biddingCoin_ = value;
+          }
+        } else {
+          biddingCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearBiddingCoin() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        biddingCoin_ = null;
+        if (biddingCoinBuilder_ != null) {
+          biddingCoinBuilder_.dispose();
+          biddingCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBiddingCoinBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getBiddingCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBiddingCoinOrBuilder() {
+        if (biddingCoinBuilder_ != null) {
+          return biddingCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return biddingCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : biddingCoin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBiddingCoinFieldBuilder() {
+        if (biddingCoinBuilder_ == null) {
+          biddingCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBiddingCoin(),
+                  getParentForChildren(),
+                  isClean());
+          biddingCoin_ = null;
+        }
+        return biddingCoinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgPlaceBid)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgPlaceBid)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPlaceBid>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPlaceBid>() {
+      @java.lang.Override
+      public MsgPlaceBid parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPlaceBid> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPlaceBid> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPlaceBidResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgPlaceBidResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgPlaceBidResponse defines the MsgPlaceBidResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgPlaceBidResponse}
+   */
+  public static final class MsgPlaceBidResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgPlaceBidResponse)
+      MsgPlaceBidResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPlaceBidResponse.newBuilder() to construct.
+    private MsgPlaceBidResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPlaceBidResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPlaceBidResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBidResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBidResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgPlaceBidResponse defines the MsgPlaceBidResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgPlaceBidResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgPlaceBidResponse)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBidResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgPlaceBidResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgPlaceBidResponse)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPlaceBidResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPlaceBidResponse>() {
+      @java.lang.Override
+      public MsgPlaceBidResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPlaceBidResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPlaceBidResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBidResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRefundBidOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgRefundBid)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+     * @return The auctionId.
+     */
+    long getAuctionId();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string bidder = 3 [json_name = "bidder"];</code>
+     * @return The bidder.
+     */
+    java.lang.String getBidder();
+    /**
+     * <code>string bidder = 3 [json_name = "bidder"];</code>
+     * @return The bytes for bidder.
+     */
+    com.google.protobuf.ByteString
+        getBidderBytes();
+  }
+  /**
+   * <pre>
+   * MsgRefundBid defines a SDK message for refunding the bid that is not winning for the auction.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgRefundBid}
+   */
+  public static final class MsgRefundBid extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgRefundBid)
+      MsgRefundBidOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRefundBid.newBuilder() to construct.
+    private MsgRefundBid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRefundBid() {
+      bidder_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRefundBid();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBid_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBid_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid.Builder.class);
+    }
+
+    public static final int AUCTION_ID_FIELD_NUMBER = 1;
+    private long auctionId_ = 0L;
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+     * @return The auctionId.
+     */
+    @java.lang.Override
+    public long getAuctionId() {
+      return auctionId_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int BIDDER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bidder_ = "";
+    /**
+     * <code>string bidder = 3 [json_name = "bidder"];</code>
+     * @return The bidder.
+     */
+    @java.lang.Override
+    public java.lang.String getBidder() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bidder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bidder = 3 [json_name = "bidder"];</code>
+     * @return The bytes for bidder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBidderBytes() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bidder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (auctionId_ != 0L) {
+        output.writeUInt64(1, auctionId_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bidder_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (auctionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, auctionId_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bidder_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid) obj;
+
+      if (getAuctionId()
+          != other.getAuctionId()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getBidder()
+          .equals(other.getBidder())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUCTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionId());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + BIDDER_FIELD_NUMBER;
+      hash = (53 * hash) + getBidder().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRefundBid defines a SDK message for refunding the bid that is not winning for the auction.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgRefundBid}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgRefundBid)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        auctionId_ = 0L;
+        poolId_ = 0L;
+        bidder_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBid_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.auctionId_ = auctionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bidder_ = bidder_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid.getDefaultInstance()) return this;
+        if (other.getAuctionId() != 0L) {
+          setAuctionId(other.getAuctionId());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getBidder().isEmpty()) {
+          bidder_ = other.bidder_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                auctionId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                bidder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long auctionId_ ;
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @return The auctionId.
+       */
+      @java.lang.Override
+      public long getAuctionId() {
+        return auctionId_;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @param value The auctionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionId(long value) {
+
+        auctionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        auctionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bidder_ = "";
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @return The bidder.
+       */
+      public java.lang.String getBidder() {
+        java.lang.Object ref = bidder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bidder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @return The bytes for bidder.
+       */
+      public com.google.protobuf.ByteString
+          getBidderBytes() {
+        java.lang.Object ref = bidder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bidder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @param value The bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bidder_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidder() {
+        bidder_ = getDefaultInstance().getBidder();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bidder = 3 [json_name = "bidder"];</code>
+       * @param value The bytes for bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bidder_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgRefundBid)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgRefundBid)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRefundBid>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRefundBid>() {
+      @java.lang.Override
+      public MsgRefundBid parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRefundBid> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRefundBid> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBid getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRefundBidResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgRefundBidResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRefundBidResponse defines the MsgRefundBidResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgRefundBidResponse}
+   */
+  public static final class MsgRefundBidResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgRefundBidResponse)
+      MsgRefundBidResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRefundBidResponse.newBuilder() to construct.
+    private MsgRefundBidResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRefundBidResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRefundBidResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBidResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBidResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRefundBidResponse defines the MsgRefundBidResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgRefundBidResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgRefundBidResponse)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBidResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgRefundBidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgRefundBidResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgRefundBidResponse)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRefundBidResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRefundBidResponse>() {
+      @java.lang.Override
+      public MsgRefundBidResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRefundBidResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRefundBidResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgRefundBidResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAdvanceAuctionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgAdvanceAuction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * requester defines the bech32-encoded address of the requester
+     * </pre>
+     *
+     * <code>string requester = 1 [json_name = "requester"];</code>
+     * @return The requester.
+     */
+    java.lang.String getRequester();
+    /**
+     * <pre>
+     * requester defines the bech32-encoded address of the requester
+     * </pre>
+     *
+     * <code>string requester = 1 [json_name = "requester"];</code>
+     * @return The bytes for requester.
+     */
+    com.google.protobuf.ByteString
+        getRequesterBytes();
+  }
+  /**
+   * <pre>
+   * MsgAdvanceAuction defines a message to advance rewards auction by one.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgAdvanceAuction}
+   */
+  public static final class MsgAdvanceAuction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgAdvanceAuction)
+      MsgAdvanceAuctionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAdvanceAuction.newBuilder() to construct.
+    private MsgAdvanceAuction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAdvanceAuction() {
+      requester_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAdvanceAuction();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction.Builder.class);
+    }
+
+    public static final int REQUESTER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requester_ = "";
+    /**
+     * <pre>
+     * requester defines the bech32-encoded address of the requester
+     * </pre>
+     *
+     * <code>string requester = 1 [json_name = "requester"];</code>
+     * @return The requester.
+     */
+    @java.lang.Override
+    public java.lang.String getRequester() {
+      java.lang.Object ref = requester_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requester_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * requester defines the bech32-encoded address of the requester
+     * </pre>
+     *
+     * <code>string requester = 1 [json_name = "requester"];</code>
+     * @return The bytes for requester.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequesterBytes() {
+      java.lang.Object ref = requester_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requester_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requester_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requester_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction) obj;
+
+      if (!getRequester()
+          .equals(other.getRequester())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUESTER_FIELD_NUMBER;
+      hash = (53 * hash) + getRequester().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAdvanceAuction defines a message to advance rewards auction by one.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgAdvanceAuction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgAdvanceAuction)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requester_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requester_ = requester_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction.getDefaultInstance()) return this;
+        if (!other.getRequester().isEmpty()) {
+          requester_ = other.requester_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requester_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requester_ = "";
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @return The requester.
+       */
+      public java.lang.String getRequester() {
+        java.lang.Object ref = requester_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requester_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @return The bytes for requester.
+       */
+      public com.google.protobuf.ByteString
+          getRequesterBytes() {
+        java.lang.Object ref = requester_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requester_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @param value The requester to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequester(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requester_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequester() {
+        requester_ = getDefaultInstance().getRequester();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @param value The bytes for requester to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequesterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requester_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgAdvanceAuction)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgAdvanceAuction)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAdvanceAuction>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAdvanceAuction>() {
+      @java.lang.Override
+      public MsgAdvanceAuction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAdvanceAuction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAdvanceAuction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAdvanceAuctionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.MsgAdvanceAuctionResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgAdvanceAuctionResponse defines the Msg/AdvanceAuction response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgAdvanceAuctionResponse}
+   */
+  public static final class MsgAdvanceAuctionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.MsgAdvanceAuctionResponse)
+      MsgAdvanceAuctionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAdvanceAuctionResponse.newBuilder() to construct.
+    private MsgAdvanceAuctionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAdvanceAuctionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAdvanceAuctionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuctionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuctionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse other = (com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAdvanceAuctionResponse defines the Msg/AdvanceAuction response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.MsgAdvanceAuctionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.MsgAdvanceAuctionResponse)
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuctionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuctionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuctionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse build() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse result = new com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.MsgAdvanceAuctionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.MsgAdvanceAuctionResponse)
+    private static final com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAdvanceAuctionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAdvanceAuctionResponse>() {
+      @java.lang.Override
+      public MsgAdvanceAuctionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAdvanceAuctionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAdvanceAuctionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.TxProto.MsgAdvanceAuctionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarm_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarm_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarmResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgLiquidFarmResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarm_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarm_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdraw_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdraw_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdrawResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgLiquidUnfarmAndWithdrawResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBid_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBid_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBidResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgPlaceBidResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgRefundBid_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgRefundBid_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgRefundBidResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgRefundBidResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuction_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuction_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuctionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_MsgAdvanceAuctionResponse_fieldAccessorTable;
 
@@ -133,14 +7254,14 @@ public final class TxProto {
       ".v1beta1.MsgRefundBidResponse\022~\n\016Advance" +
       "Auction\0221.crescent.liquidfarming.v1beta1" +
       ".MsgAdvanceAuction\0329.crescent.liquidfarm" +
-      "ing.v1beta1.MsgAdvanceAuctionResponseB\206\002" +
+      "ing.v1beta1.MsgAdvanceAuctionResponseB\204\002" +
       "\n\"com.crescent.liquidfarming.v1beta1B\007Tx" +
-      "ProtoP\001Z=github.com/crescent-network/cre" +
-      "scent/v5/x/liquidfarming/types\242\002\003CLX\252\002\036C" +
-      "rescent.Liquidfarming.V1beta1\312\002\036Crescent" +
-      "\\Liquidfarming\\V1beta1\342\002*Crescent\\Liquid" +
-      "farming\\V1beta1\\GPBMetadata\352\002 Crescent::" +
-      "Liquidfarming::V1beta1b\006proto3"
+      "ProtoZ=github.com/crescent-network/cresc" +
+      "ent/v5/x/liquidfarming/types\242\002\003CLX\252\002\036Cre" +
+      "scent.Liquidfarming.V1beta1\312\002\036Crescent\\L" +
+      "iquidfarming\\V1beta1\342\002*Crescent\\Liquidfa" +
+      "rming\\V1beta1\\GPBMetadata\352\002 Crescent::Li" +
+      "quidfarming::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

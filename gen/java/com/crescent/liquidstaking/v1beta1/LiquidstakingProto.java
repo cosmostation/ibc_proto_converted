@@ -14,34 +14,7414 @@ public final class LiquidstakingProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * ValidatorStatus enumerates the status of a liquid validator.
+   * </pre>
+   *
+   * Protobuf enum {@code crescent.liquidstaking.v1beta1.ValidatorStatus}
+   */
+  public enum ValidatorStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * VALIDATOR_STATUS_UNSPECIFIED defines the unspecified invalid status.
+     * </pre>
+     *
+     * <code>VALIDATOR_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ValidatorStatusUnspecified"];</code>
+     */
+    VALIDATOR_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * VALIDATOR_STATUS_ACTIVE defines the active, valid status
+     * </pre>
+     *
+     * <code>VALIDATOR_STATUS_ACTIVE = 1 [(.gogoproto.enumvalue_customname) = "ValidatorStatusActive"];</code>
+     */
+    VALIDATOR_STATUS_ACTIVE(1),
+    /**
+     * <pre>
+     * VALIDATOR_STATUS_INACTIVE defines the inactive, invalid status
+     * </pre>
+     *
+     * <code>VALIDATOR_STATUS_INACTIVE = 2 [(.gogoproto.enumvalue_customname) = "ValidatorStatusInactive"];</code>
+     */
+    VALIDATOR_STATUS_INACTIVE(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * VALIDATOR_STATUS_UNSPECIFIED defines the unspecified invalid status.
+     * </pre>
+     *
+     * <code>VALIDATOR_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ValidatorStatusUnspecified"];</code>
+     */
+    public static final int VALIDATOR_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * VALIDATOR_STATUS_ACTIVE defines the active, valid status
+     * </pre>
+     *
+     * <code>VALIDATOR_STATUS_ACTIVE = 1 [(.gogoproto.enumvalue_customname) = "ValidatorStatusActive"];</code>
+     */
+    public static final int VALIDATOR_STATUS_ACTIVE_VALUE = 1;
+    /**
+     * <pre>
+     * VALIDATOR_STATUS_INACTIVE defines the inactive, invalid status
+     * </pre>
+     *
+     * <code>VALIDATOR_STATUS_INACTIVE = 2 [(.gogoproto.enumvalue_customname) = "ValidatorStatusInactive"];</code>
+     */
+    public static final int VALIDATOR_STATUS_INACTIVE_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ValidatorStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ValidatorStatus forNumber(int value) {
+      switch (value) {
+        case 0: return VALIDATOR_STATUS_UNSPECIFIED;
+        case 1: return VALIDATOR_STATUS_ACTIVE;
+        case 2: return VALIDATOR_STATUS_INACTIVE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ValidatorStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ValidatorStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ValidatorStatus>() {
+            public ValidatorStatus findValueByNumber(int number) {
+              return ValidatorStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ValidatorStatus[] VALUES = values();
+
+    public static ValidatorStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ValidatorStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:crescent.liquidstaking.v1beta1.ValidatorStatus)
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+     * through NetAmount.
+     * </pre>
+     *
+     * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+     * @return The liquidBondDenom.
+     */
+    java.lang.String getLiquidBondDenom();
+    /**
+     * <pre>
+     * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+     * through NetAmount.
+     * </pre>
+     *
+     * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+     * @return The bytes for liquidBondDenom.
+     */
+    com.google.protobuf.ByteString
+        getLiquidBondDenomBytes();
+
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator> 
+        getWhitelistedValidatorsList();
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator getWhitelistedValidators(int index);
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    int getWhitelistedValidatorsCount();
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder> 
+        getWhitelistedValidatorsOrBuilderList();
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder getWhitelistedValidatorsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+     * unbondingAmount
+     * </pre>
+     *
+     * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+     * @return The unstakeFeeRate.
+     */
+    java.lang.String getUnstakeFeeRate();
+    /**
+     * <pre>
+     * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+     * unbondingAmount
+     * </pre>
+     *
+     * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+     * @return The bytes for unstakeFeeRate.
+     */
+    com.google.protobuf.ByteString
+        getUnstakeFeeRateBytes();
+
+    /**
+     * <pre>
+     * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+     * staking to minimize decimal loss and consider gas efficiency.
+     * </pre>
+     *
+     * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+     * @return The minLiquidStakingAmount.
+     */
+    java.lang.String getMinLiquidStakingAmount();
+    /**
+     * <pre>
+     * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+     * staking to minimize decimal loss and consider gas efficiency.
+     * </pre>
+     *
+     * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+     * @return The bytes for minLiquidStakingAmount.
+     */
+    com.google.protobuf.ByteString
+        getMinLiquidStakingAmountBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the set of params for the liquidstaking module.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      liquidBondDenom_ = "";
+      whitelistedValidators_ = java.util.Collections.emptyList();
+      unstakeFeeRate_ = "";
+      minLiquidStakingAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder.class);
+    }
+
+    public static final int LIQUID_BOND_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidBondDenom_ = "";
+    /**
+     * <pre>
+     * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+     * through NetAmount.
+     * </pre>
+     *
+     * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+     * @return The liquidBondDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidBondDenom() {
+      java.lang.Object ref = liquidBondDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidBondDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+     * through NetAmount.
+     * </pre>
+     *
+     * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+     * @return The bytes for liquidBondDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidBondDenomBytes() {
+      java.lang.Object ref = liquidBondDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidBondDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WHITELISTED_VALIDATORS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator> whitelistedValidators_;
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator> getWhitelistedValidatorsList() {
+      return whitelistedValidators_;
+    }
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder> 
+        getWhitelistedValidatorsOrBuilderList() {
+      return whitelistedValidators_;
+    }
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getWhitelistedValidatorsCount() {
+      return whitelistedValidators_.size();
+    }
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator getWhitelistedValidators(int index) {
+      return whitelistedValidators_.get(index);
+    }
+    /**
+     * <pre>
+     * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+     * </pre>
+     *
+     * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder getWhitelistedValidatorsOrBuilder(
+        int index) {
+      return whitelistedValidators_.get(index);
+    }
+
+    public static final int UNSTAKE_FEE_RATE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object unstakeFeeRate_ = "";
+    /**
+     * <pre>
+     * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+     * unbondingAmount
+     * </pre>
+     *
+     * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+     * @return The unstakeFeeRate.
+     */
+    @java.lang.Override
+    public java.lang.String getUnstakeFeeRate() {
+      java.lang.Object ref = unstakeFeeRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unstakeFeeRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+     * unbondingAmount
+     * </pre>
+     *
+     * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+     * @return The bytes for unstakeFeeRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnstakeFeeRateBytes() {
+      java.lang.Object ref = unstakeFeeRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unstakeFeeRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_LIQUID_STAKING_AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minLiquidStakingAmount_ = "";
+    /**
+     * <pre>
+     * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+     * staking to minimize decimal loss and consider gas efficiency.
+     * </pre>
+     *
+     * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+     * @return The minLiquidStakingAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMinLiquidStakingAmount() {
+      java.lang.Object ref = minLiquidStakingAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minLiquidStakingAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+     * staking to minimize decimal loss and consider gas efficiency.
+     * </pre>
+     *
+     * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+     * @return The bytes for minLiquidStakingAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinLiquidStakingAmountBytes() {
+      java.lang.Object ref = minLiquidStakingAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minLiquidStakingAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidBondDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, liquidBondDenom_);
+      }
+      for (int i = 0; i < whitelistedValidators_.size(); i++) {
+        output.writeMessage(2, whitelistedValidators_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unstakeFeeRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, unstakeFeeRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minLiquidStakingAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, minLiquidStakingAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidBondDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, liquidBondDenom_);
+      }
+      for (int i = 0; i < whitelistedValidators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, whitelistedValidators_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unstakeFeeRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, unstakeFeeRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minLiquidStakingAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, minLiquidStakingAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params other = (com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params) obj;
+
+      if (!getLiquidBondDenom()
+          .equals(other.getLiquidBondDenom())) return false;
+      if (!getWhitelistedValidatorsList()
+          .equals(other.getWhitelistedValidatorsList())) return false;
+      if (!getUnstakeFeeRate()
+          .equals(other.getUnstakeFeeRate())) return false;
+      if (!getMinLiquidStakingAmount()
+          .equals(other.getMinLiquidStakingAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LIQUID_BOND_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidBondDenom().hashCode();
+      if (getWhitelistedValidatorsCount() > 0) {
+        hash = (37 * hash) + WHITELISTED_VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getWhitelistedValidatorsList().hashCode();
+      }
+      hash = (37 * hash) + UNSTAKE_FEE_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getUnstakeFeeRate().hashCode();
+      hash = (37 * hash) + MIN_LIQUID_STAKING_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinLiquidStakingAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the set of params for the liquidstaking module.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.Params)
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        liquidBondDenom_ = "";
+        if (whitelistedValidatorsBuilder_ == null) {
+          whitelistedValidators_ = java.util.Collections.emptyList();
+        } else {
+          whitelistedValidators_ = null;
+          whitelistedValidatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        unstakeFeeRate_ = "";
+        minLiquidStakingAmount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params build() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params buildPartial() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params result = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params result) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            whitelistedValidators_ = java.util.Collections.unmodifiableList(whitelistedValidators_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.whitelistedValidators_ = whitelistedValidators_;
+        } else {
+          result.whitelistedValidators_ = whitelistedValidatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.liquidBondDenom_ = liquidBondDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.unstakeFeeRate_ = unstakeFeeRate_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.minLiquidStakingAmount_ = minLiquidStakingAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params other) {
+        if (other == com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance()) return this;
+        if (!other.getLiquidBondDenom().isEmpty()) {
+          liquidBondDenom_ = other.liquidBondDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (whitelistedValidatorsBuilder_ == null) {
+          if (!other.whitelistedValidators_.isEmpty()) {
+            if (whitelistedValidators_.isEmpty()) {
+              whitelistedValidators_ = other.whitelistedValidators_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureWhitelistedValidatorsIsMutable();
+              whitelistedValidators_.addAll(other.whitelistedValidators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.whitelistedValidators_.isEmpty()) {
+            if (whitelistedValidatorsBuilder_.isEmpty()) {
+              whitelistedValidatorsBuilder_.dispose();
+              whitelistedValidatorsBuilder_ = null;
+              whitelistedValidators_ = other.whitelistedValidators_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              whitelistedValidatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWhitelistedValidatorsFieldBuilder() : null;
+            } else {
+              whitelistedValidatorsBuilder_.addAllMessages(other.whitelistedValidators_);
+            }
+          }
+        }
+        if (!other.getUnstakeFeeRate().isEmpty()) {
+          unstakeFeeRate_ = other.unstakeFeeRate_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMinLiquidStakingAmount().isEmpty()) {
+          minLiquidStakingAmount_ = other.minLiquidStakingAmount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                liquidBondDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator m =
+                    input.readMessage(
+                        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.parser(),
+                        extensionRegistry);
+                if (whitelistedValidatorsBuilder_ == null) {
+                  ensureWhitelistedValidatorsIsMutable();
+                  whitelistedValidators_.add(m);
+                } else {
+                  whitelistedValidatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                unstakeFeeRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 42: {
+                minLiquidStakingAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object liquidBondDenom_ = "";
+      /**
+       * <pre>
+       * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+       * through NetAmount.
+       * </pre>
+       *
+       * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+       * @return The liquidBondDenom.
+       */
+      public java.lang.String getLiquidBondDenom() {
+        java.lang.Object ref = liquidBondDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidBondDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+       * through NetAmount.
+       * </pre>
+       *
+       * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+       * @return The bytes for liquidBondDenom.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidBondDenomBytes() {
+        java.lang.Object ref = liquidBondDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidBondDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+       * through NetAmount.
+       * </pre>
+       *
+       * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+       * @param value The liquidBondDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidBondDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidBondDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+       * through NetAmount.
+       * </pre>
+       *
+       * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidBondDenom() {
+        liquidBondDenom_ = getDefaultInstance().getLiquidBondDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * LiquidBondDenom specifies the denomination of the token receiving after LiquidStaking, The value is calculated
+       * through NetAmount.
+       * </pre>
+       *
+       * <code>string liquid_bond_denom = 1 [json_name = "liquidBondDenom", (.gogoproto.moretags) = "yaml:&#92;"liquid_bond_denom&#92;""];</code>
+       * @param value The bytes for liquidBondDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidBondDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidBondDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator> whitelistedValidators_ =
+        java.util.Collections.emptyList();
+      private void ensureWhitelistedValidatorsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          whitelistedValidators_ = new java.util.ArrayList<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator>(whitelistedValidators_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder> whitelistedValidatorsBuilder_;
+
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator> getWhitelistedValidatorsList() {
+        if (whitelistedValidatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(whitelistedValidators_);
+        } else {
+          return whitelistedValidatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public int getWhitelistedValidatorsCount() {
+        if (whitelistedValidatorsBuilder_ == null) {
+          return whitelistedValidators_.size();
+        } else {
+          return whitelistedValidatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator getWhitelistedValidators(int index) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          return whitelistedValidators_.get(index);
+        } else {
+          return whitelistedValidatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder setWhitelistedValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator value) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedValidatorsIsMutable();
+          whitelistedValidators_.set(index, value);
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder setWhitelistedValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder builderForValue) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          ensureWhitelistedValidatorsIsMutable();
+          whitelistedValidators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder addWhitelistedValidators(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator value) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedValidatorsIsMutable();
+          whitelistedValidators_.add(value);
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder addWhitelistedValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator value) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhitelistedValidatorsIsMutable();
+          whitelistedValidators_.add(index, value);
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder addWhitelistedValidators(
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder builderForValue) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          ensureWhitelistedValidatorsIsMutable();
+          whitelistedValidators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder addWhitelistedValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder builderForValue) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          ensureWhitelistedValidatorsIsMutable();
+          whitelistedValidators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder addAllWhitelistedValidators(
+          java.lang.Iterable<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator> values) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          ensureWhitelistedValidatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, whitelistedValidators_);
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder clearWhitelistedValidators() {
+        if (whitelistedValidatorsBuilder_ == null) {
+          whitelistedValidators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public Builder removeWhitelistedValidators(int index) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          ensureWhitelistedValidatorsIsMutable();
+          whitelistedValidators_.remove(index);
+          onChanged();
+        } else {
+          whitelistedValidatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder getWhitelistedValidatorsBuilder(
+          int index) {
+        return getWhitelistedValidatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder getWhitelistedValidatorsOrBuilder(
+          int index) {
+        if (whitelistedValidatorsBuilder_ == null) {
+          return whitelistedValidators_.get(index);  } else {
+          return whitelistedValidatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder> 
+           getWhitelistedValidatorsOrBuilderList() {
+        if (whitelistedValidatorsBuilder_ != null) {
+          return whitelistedValidatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(whitelistedValidators_);
+        }
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder addWhitelistedValidatorsBuilder() {
+        return getWhitelistedValidatorsFieldBuilder().addBuilder(
+            com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder addWhitelistedValidatorsBuilder(
+          int index) {
+        return getWhitelistedValidatorsFieldBuilder().addBuilder(
+            index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * WhitelistedValidators specifies the validators elected to become Active Liquid Validators.
+       * </pre>
+       *
+       * <code>repeated .crescent.liquidstaking.v1beta1.WhitelistedValidator whitelisted_validators = 2 [json_name = "whitelistedValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"whitelisted_validators&#92;""];</code>
+       */
+      public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder> 
+           getWhitelistedValidatorsBuilderList() {
+        return getWhitelistedValidatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder> 
+          getWhitelistedValidatorsFieldBuilder() {
+        if (whitelistedValidatorsBuilder_ == null) {
+          whitelistedValidatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder>(
+                  whitelistedValidators_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          whitelistedValidators_ = null;
+        }
+        return whitelistedValidatorsBuilder_;
+      }
+
+      private java.lang.Object unstakeFeeRate_ = "";
+      /**
+       * <pre>
+       * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+       * unbondingAmount
+       * </pre>
+       *
+       * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+       * @return The unstakeFeeRate.
+       */
+      public java.lang.String getUnstakeFeeRate() {
+        java.lang.Object ref = unstakeFeeRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          unstakeFeeRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+       * unbondingAmount
+       * </pre>
+       *
+       * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+       * @return The bytes for unstakeFeeRate.
+       */
+      public com.google.protobuf.ByteString
+          getUnstakeFeeRateBytes() {
+        java.lang.Object ref = unstakeFeeRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unstakeFeeRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+       * unbondingAmount
+       * </pre>
+       *
+       * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+       * @param value The unstakeFeeRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstakeFeeRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        unstakeFeeRate_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+       * unbondingAmount
+       * </pre>
+       *
+       * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnstakeFeeRate() {
+        unstakeFeeRate_ = getDefaultInstance().getUnstakeFeeRate();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UnstakeFeeRate specifies the fee rate when liquid unstake is requested, unbonded by subtracting it from
+       * unbondingAmount
+       * </pre>
+       *
+       * <code>string unstake_fee_rate = 3 [json_name = "unstakeFeeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"unstake_fee_rate&#92;""];</code>
+       * @param value The bytes for unstakeFeeRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstakeFeeRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        unstakeFeeRate_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minLiquidStakingAmount_ = "";
+      /**
+       * <pre>
+       * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+       * staking to minimize decimal loss and consider gas efficiency.
+       * </pre>
+       *
+       * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+       * @return The minLiquidStakingAmount.
+       */
+      public java.lang.String getMinLiquidStakingAmount() {
+        java.lang.Object ref = minLiquidStakingAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minLiquidStakingAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+       * staking to minimize decimal loss and consider gas efficiency.
+       * </pre>
+       *
+       * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+       * @return The bytes for minLiquidStakingAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMinLiquidStakingAmountBytes() {
+        java.lang.Object ref = minLiquidStakingAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minLiquidStakingAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+       * staking to minimize decimal loss and consider gas efficiency.
+       * </pre>
+       *
+       * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+       * @param value The minLiquidStakingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinLiquidStakingAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minLiquidStakingAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+       * staking to minimize decimal loss and consider gas efficiency.
+       * </pre>
+       *
+       * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinLiquidStakingAmount() {
+        minLiquidStakingAmount_ = getDefaultInstance().getMinLiquidStakingAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MinLiquidStakingAmount specifies the minimum number of coins to be staked to the active liquid validators on liquid
+       * staking to minimize decimal loss and consider gas efficiency.
+       * </pre>
+       *
+       * <code>string min_liquid_staking_amount = 5 [json_name = "minLiquidStakingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_liquid_staking_amount&#92;""];</code>
+       * @param value The bytes for minLiquidStakingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinLiquidStakingAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minLiquidStakingAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.Params)
+    private static final com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WhitelistedValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.WhitelistedValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator_address defines the bech32-encoded address that whitelisted validator
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <pre>
+     * validator_address defines the bech32-encoded address that whitelisted validator
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+
+    /**
+     * <pre>
+     * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+     * the real weight to be derived according to the active status
+     * </pre>
+     *
+     * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+     * @return The targetWeight.
+     */
+    java.lang.String getTargetWeight();
+    /**
+     * <pre>
+     * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+     * the real weight to be derived according to the active status
+     * </pre>
+     *
+     * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+     * @return The bytes for targetWeight.
+     */
+    com.google.protobuf.ByteString
+        getTargetWeightBytes();
+  }
+  /**
+   * <pre>
+   * WhitelistedValidator consists of the validator operator address and the target weight, which is a value for
+   * calculating the real weight to be derived according to the active status. In the case of inactive, it is calculated
+   * as zero.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.WhitelistedValidator}
+   */
+  public static final class WhitelistedValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.WhitelistedValidator)
+      WhitelistedValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WhitelistedValidator.newBuilder() to construct.
+    private WhitelistedValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WhitelistedValidator() {
+      validatorAddress_ = "";
+      targetWeight_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WhitelistedValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_WhitelistedValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_WhitelistedValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <pre>
+     * validator_address defines the bech32-encoded address that whitelisted validator
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator_address defines the bech32-encoded address that whitelisted validator
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGET_WEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object targetWeight_ = "";
+    /**
+     * <pre>
+     * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+     * the real weight to be derived according to the active status
+     * </pre>
+     *
+     * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+     * @return The targetWeight.
+     */
+    @java.lang.Override
+    public java.lang.String getTargetWeight() {
+      java.lang.Object ref = targetWeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        targetWeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+     * the real weight to be derived according to the active status
+     * </pre>
+     *
+     * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+     * @return The bytes for targetWeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTargetWeightBytes() {
+      java.lang.Object ref = targetWeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        targetWeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetWeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targetWeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetWeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, targetWeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator other = (com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator) obj;
+
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (!getTargetWeight()
+          .equals(other.getTargetWeight())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (37 * hash) + TARGET_WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetWeight().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WhitelistedValidator consists of the validator operator address and the target weight, which is a value for
+     * calculating the real weight to be derived according to the active status. In the case of inactive, it is calculated
+     * as zero.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.WhitelistedValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.WhitelistedValidator)
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_WhitelistedValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_WhitelistedValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddress_ = "";
+        targetWeight_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_WhitelistedValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator build() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator buildPartial() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator result = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.targetWeight_ = targetWeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator other) {
+        if (other == com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator.getDefaultInstance()) return this;
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTargetWeight().isEmpty()) {
+          targetWeight_ = other.targetWeight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                targetWeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <pre>
+       * validator_address defines the bech32-encoded address that whitelisted validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_address defines the bech32-encoded address that whitelisted validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_address defines the bech32-encoded address that whitelisted validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_address defines the bech32-encoded address that whitelisted validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_address defines the bech32-encoded address that whitelisted validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"validator_address&#92;""];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object targetWeight_ = "";
+      /**
+       * <pre>
+       * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+       * the real weight to be derived according to the active status
+       * </pre>
+       *
+       * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+       * @return The targetWeight.
+       */
+      public java.lang.String getTargetWeight() {
+        java.lang.Object ref = targetWeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          targetWeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+       * the real weight to be derived according to the active status
+       * </pre>
+       *
+       * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+       * @return The bytes for targetWeight.
+       */
+      public com.google.protobuf.ByteString
+          getTargetWeightBytes() {
+        java.lang.Object ref = targetWeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          targetWeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+       * the real weight to be derived according to the active status
+       * </pre>
+       *
+       * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+       * @param value The targetWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetWeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        targetWeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+       * the real weight to be derived according to the active status
+       * </pre>
+       *
+       * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetWeight() {
+        targetWeight_ = getDefaultInstance().getTargetWeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * target_weight specifies the target weight for liquid staking, unstaking amount, which is a value for calculating
+       * the real weight to be derived according to the active status
+       * </pre>
+       *
+       * <code>string target_weight = 2 [json_name = "targetWeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"target_weight&#92;""];</code>
+       * @param value The bytes for targetWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetWeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        targetWeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.WhitelistedValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.WhitelistedValidator)
+    private static final com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WhitelistedValidator>
+        PARSER = new com.google.protobuf.AbstractParser<WhitelistedValidator>() {
+      @java.lang.Override
+      public WhitelistedValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<WhitelistedValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WhitelistedValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.WhitelistedValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LiquidValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.LiquidValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * operator_address defines the address of the validator's operator; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    java.lang.String getOperatorAddress();
+    /**
+     * <pre>
+     * operator_address defines the address of the validator's operator; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getOperatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * LiquidValidator defines a Validator that can be the target of LiquidStaking and LiquidUnstaking, Active, Weight, etc.
+   * fields are derived as functions to deal with by maintaining consistency with the state of the staking module.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.LiquidValidator}
+   */
+  public static final class LiquidValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.LiquidValidator)
+      LiquidValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LiquidValidator.newBuilder() to construct.
+    private LiquidValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LiquidValidator() {
+      operatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LiquidValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder.class);
+    }
+
+    public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatorAddress_ = "";
+    /**
+     * <pre>
+     * operator_address defines the address of the validator's operator; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOperatorAddress() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * operator_address defines the address of the validator's operator; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorAddressBytes() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator other = (com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator) obj;
+
+      if (!getOperatorAddress()
+          .equals(other.getOperatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * LiquidValidator defines a Validator that can be the target of LiquidStaking and LiquidUnstaking, Active, Weight, etc.
+     * fields are derived as functions to deal with by maintaining consistency with the state of the staking module.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.LiquidValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.LiquidValidator)
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        operatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator build() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator buildPartial() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator result = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.operatorAddress_ = operatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator other) {
+        if (other == com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.getDefaultInstance()) return this;
+        if (!other.getOperatorAddress().isEmpty()) {
+          operatorAddress_ = other.operatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                operatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object operatorAddress_ = "";
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The operatorAddress.
+       */
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The bytes for operatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorAddress() {
+        operatorAddress_ = getDefaultInstance().getOperatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The bytes for operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.LiquidValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.LiquidValidator)
+    private static final com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LiquidValidator>
+        PARSER = new com.google.protobuf.AbstractParser<LiquidValidator>() {
+      @java.lang.Override
+      public LiquidValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LiquidValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LiquidValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LiquidValidatorStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.LiquidValidatorState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * operator_address defines the address of the validator's operator; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    java.lang.String getOperatorAddress();
+    /**
+     * <pre>
+     * operator_address defines the address of the validator's operator; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getOperatorAddressBytes();
+
+    /**
+     * <pre>
+     * weight specifies the weight for liquid staking, unstaking amount
+     * </pre>
+     *
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The weight.
+     */
+    java.lang.String getWeight();
+    /**
+     * <pre>
+     * weight specifies the weight for liquid staking, unstaking amount
+     * </pre>
+     *
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The bytes for weight.
+     */
+    com.google.protobuf.ByteString
+        getWeightBytes();
+
+    /**
+     * <pre>
+     * status is the liquid validator status
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * status is the liquid validator status
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus getStatus();
+
+    /**
+     * <pre>
+     * del_shares define the delegation shares of the validator
+     * </pre>
+     *
+     * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The delShares.
+     */
+    java.lang.String getDelShares();
+    /**
+     * <pre>
+     * del_shares define the delegation shares of the validator
+     * </pre>
+     *
+     * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for delShares.
+     */
+    com.google.protobuf.ByteString
+        getDelSharesBytes();
+
+    /**
+     * <pre>
+     * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+     * </pre>
+     *
+     * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The liquidTokens.
+     */
+    java.lang.String getLiquidTokens();
+    /**
+     * <pre>
+     * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+     * </pre>
+     *
+     * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for liquidTokens.
+     */
+    com.google.protobuf.ByteString
+        getLiquidTokensBytes();
+  }
+  /**
+   * <pre>
+   * LiquidValidatorState is type LiquidValidator with state added to return to query results.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.LiquidValidatorState}
+   */
+  public static final class LiquidValidatorState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.LiquidValidatorState)
+      LiquidValidatorStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LiquidValidatorState.newBuilder() to construct.
+    private LiquidValidatorState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LiquidValidatorState() {
+      operatorAddress_ = "";
+      weight_ = "";
+      status_ = 0;
+      delShares_ = "";
+      liquidTokens_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LiquidValidatorState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidatorState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidatorState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder.class);
+    }
+
+    public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatorAddress_ = "";
+    /**
+     * <pre>
+     * operator_address defines the address of the validator's operator; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOperatorAddress() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * operator_address defines the address of the validator's operator; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorAddressBytes() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object weight_ = "";
+    /**
+     * <pre>
+     * weight specifies the weight for liquid staking, unstaking amount
+     * </pre>
+     *
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public java.lang.String getWeight() {
+      java.lang.Object ref = weight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        weight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * weight specifies the weight for liquid staking, unstaking amount
+     * </pre>
+     *
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The bytes for weight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWeightBytes() {
+      java.lang.Object ref = weight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        weight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 3;
+    private int status_ = 0;
+    /**
+     * <pre>
+     * status is the liquid validator status
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * status is the liquid validator status
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus getStatus() {
+      com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus result = com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus.forNumber(status_);
+      return result == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int DEL_SHARES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delShares_ = "";
+    /**
+     * <pre>
+     * del_shares define the delegation shares of the validator
+     * </pre>
+     *
+     * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The delShares.
+     */
+    @java.lang.Override
+    public java.lang.String getDelShares() {
+      java.lang.Object ref = delShares_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delShares_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * del_shares define the delegation shares of the validator
+     * </pre>
+     *
+     * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for delShares.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelSharesBytes() {
+      java.lang.Object ref = delShares_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delShares_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIQUID_TOKENS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidTokens_ = "";
+    /**
+     * <pre>
+     * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+     * </pre>
+     *
+     * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The liquidTokens.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidTokens() {
+      java.lang.Object ref = liquidTokens_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidTokens_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+     * </pre>
+     *
+     * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for liquidTokens.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidTokensBytes() {
+      java.lang.Object ref = liquidTokens_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidTokens_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, weight_);
+      }
+      if (status_ != com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus.VALIDATOR_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delShares_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, delShares_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidTokens_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, liquidTokens_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, weight_);
+      }
+      if (status_ != com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus.VALIDATOR_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delShares_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, delShares_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidTokens_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, liquidTokens_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState other = (com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState) obj;
+
+      if (!getOperatorAddress()
+          .equals(other.getOperatorAddress())) return false;
+      if (!getWeight()
+          .equals(other.getWeight())) return false;
+      if (status_ != other.status_) return false;
+      if (!getDelShares()
+          .equals(other.getDelShares())) return false;
+      if (!getLiquidTokens()
+          .equals(other.getLiquidTokens())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatorAddress().hashCode();
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getWeight().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + DEL_SHARES_FIELD_NUMBER;
+      hash = (53 * hash) + getDelShares().hashCode();
+      hash = (37 * hash) + LIQUID_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidTokens().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * LiquidValidatorState is type LiquidValidator with state added to return to query results.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.LiquidValidatorState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.LiquidValidatorState)
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidatorState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidatorState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        operatorAddress_ = "";
+        weight_ = "";
+        status_ = 0;
+        delShares_ = "";
+        liquidTokens_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_LiquidValidatorState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState build() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState buildPartial() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState result = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.operatorAddress_ = operatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.weight_ = weight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.delShares_ = delShares_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.liquidTokens_ = liquidTokens_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState other) {
+        if (other == com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState.getDefaultInstance()) return this;
+        if (!other.getOperatorAddress().isEmpty()) {
+          operatorAddress_ = other.operatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getWeight().isEmpty()) {
+          weight_ = other.weight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (!other.getDelShares().isEmpty()) {
+          delShares_ = other.delShares_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getLiquidTokens().isEmpty()) {
+          liquidTokens_ = other.liquidTokens_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                operatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                weight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                delShares_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                liquidTokens_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object operatorAddress_ = "";
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The operatorAddress.
+       */
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The bytes for operatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorAddress() {
+        operatorAddress_ = getDefaultInstance().getOperatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * operator_address defines the address of the validator's operator; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The bytes for operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object weight_ = "";
+      /**
+       * <pre>
+       * weight specifies the weight for liquid staking, unstaking amount
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return The weight.
+       */
+      public java.lang.String getWeight() {
+        java.lang.Object ref = weight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          weight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * weight specifies the weight for liquid staking, unstaking amount
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return The bytes for weight.
+       */
+      public com.google.protobuf.ByteString
+          getWeightBytes() {
+        java.lang.Object ref = weight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          weight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * weight specifies the weight for liquid staking, unstaking amount
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * weight specifies the weight for liquid staking, unstaking amount
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        weight_ = getDefaultInstance().getWeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * weight specifies the weight for liquid staking, unstaking amount
+       * </pre>
+       *
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @param value The bytes for weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * status is the liquid validator status
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * status is the liquid validator status
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status is the liquid validator status
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus getStatus() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus result = com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus.forNumber(status_);
+        return result == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * status is the liquid validator status
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ValidatorStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status is the liquid validator status
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.ValidatorStatus status = 3 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object delShares_ = "";
+      /**
+       * <pre>
+       * del_shares define the delegation shares of the validator
+       * </pre>
+       *
+       * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The delShares.
+       */
+      public java.lang.String getDelShares() {
+        java.lang.Object ref = delShares_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delShares_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * del_shares define the delegation shares of the validator
+       * </pre>
+       *
+       * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for delShares.
+       */
+      public com.google.protobuf.ByteString
+          getDelSharesBytes() {
+        java.lang.Object ref = delShares_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delShares_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * del_shares define the delegation shares of the validator
+       * </pre>
+       *
+       * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The delShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelShares(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delShares_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * del_shares define the delegation shares of the validator
+       * </pre>
+       *
+       * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelShares() {
+        delShares_ = getDefaultInstance().getDelShares();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * del_shares define the delegation shares of the validator
+       * </pre>
+       *
+       * <code>string del_shares = 4 [json_name = "delShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for delShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelSharesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delShares_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object liquidTokens_ = "";
+      /**
+       * <pre>
+       * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+       * </pre>
+       *
+       * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The liquidTokens.
+       */
+      public java.lang.String getLiquidTokens() {
+        java.lang.Object ref = liquidTokens_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidTokens_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+       * </pre>
+       *
+       * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for liquidTokens.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidTokensBytes() {
+        java.lang.Object ref = liquidTokens_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidTokens_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+       * </pre>
+       *
+       * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The liquidTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidTokens(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidTokens_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+       * </pre>
+       *
+       * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidTokens() {
+        liquidTokens_ = getDefaultInstance().getLiquidTokens();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * liquid_tokens define the token amount worth of delegation shares of the validator (slashing applied amount)
+       * </pre>
+       *
+       * <code>string liquid_tokens = 5 [json_name = "liquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for liquidTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidTokensBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidTokens_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.LiquidValidatorState)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.LiquidValidatorState)
+    private static final com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LiquidValidatorState>
+        PARSER = new com.google.protobuf.AbstractParser<LiquidValidatorState>() {
+      @java.lang.Override
+      public LiquidValidatorState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LiquidValidatorState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LiquidValidatorState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NetAmountStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.NetAmountState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * mint_rate is bTokenTotalSupply / NetAmount
+     * </pre>
+     *
+     * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The mintRate.
+     */
+    java.lang.String getMintRate();
+    /**
+     * <pre>
+     * mint_rate is bTokenTotalSupply / NetAmount
+     * </pre>
+     *
+     * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for mintRate.
+     */
+    com.google.protobuf.ByteString
+        getMintRateBytes();
+
+    /**
+     * <pre>
+     * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+     * </pre>
+     *
+     * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The btokenTotalSupply.
+     */
+    java.lang.String getBtokenTotalSupply();
+    /**
+     * <pre>
+     * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+     * </pre>
+     *
+     * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for btokenTotalSupply.
+     */
+    com.google.protobuf.ByteString
+        getBtokenTotalSupplyBytes();
+
+    /**
+     * <pre>
+     * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+     * unbonding balance
+     * </pre>
+     *
+     * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The netAmount.
+     */
+    java.lang.String getNetAmount();
+    /**
+     * <pre>
+     * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+     * unbonding balance
+     * </pre>
+     *
+     * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for netAmount.
+     */
+    com.google.protobuf.ByteString
+        getNetAmountBytes();
+
+    /**
+     * <pre>
+     * total_del_shares define the delegation shares of all liquid validators
+     * </pre>
+     *
+     * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The totalDelShares.
+     */
+    java.lang.String getTotalDelShares();
+    /**
+     * <pre>
+     * total_del_shares define the delegation shares of all liquid validators
+     * </pre>
+     *
+     * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for totalDelShares.
+     */
+    com.google.protobuf.ByteString
+        getTotalDelSharesBytes();
+
+    /**
+     * <pre>
+     * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+     * amount)
+     * </pre>
+     *
+     * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalLiquidTokens.
+     */
+    java.lang.String getTotalLiquidTokens();
+    /**
+     * <pre>
+     * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+     * amount)
+     * </pre>
+     *
+     * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalLiquidTokens.
+     */
+    com.google.protobuf.ByteString
+        getTotalLiquidTokensBytes();
+
+    /**
+     * <pre>
+     * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+     * </pre>
+     *
+     * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The totalRemainingRewards.
+     */
+    java.lang.String getTotalRemainingRewards();
+    /**
+     * <pre>
+     * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+     * </pre>
+     *
+     * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for totalRemainingRewards.
+     */
+    com.google.protobuf.ByteString
+        getTotalRemainingRewardsBytes();
+
+    /**
+     * <pre>
+     * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+     * amount)
+     * </pre>
+     *
+     * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalUnbondingBalance.
+     */
+    java.lang.String getTotalUnbondingBalance();
+    /**
+     * <pre>
+     * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+     * amount)
+     * </pre>
+     *
+     * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalUnbondingBalance.
+     */
+    com.google.protobuf.ByteString
+        getTotalUnbondingBalanceBytes();
+
+    /**
+     * <pre>
+     * proxy_acc_balance define the balance of proxy account for the native token
+     * </pre>
+     *
+     * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The proxyAccBalance.
+     */
+    java.lang.String getProxyAccBalance();
+    /**
+     * <pre>
+     * proxy_acc_balance define the balance of proxy account for the native token
+     * </pre>
+     *
+     * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for proxyAccBalance.
+     */
+    com.google.protobuf.ByteString
+        getProxyAccBalanceBytes();
+  }
+  /**
+   * <pre>
+   * NetAmountState is type for net amount raw data and mint rate, This is a value that depends on the several module
+   * state every time, so it is used only for calculation and query and is not stored in kv.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.NetAmountState}
+   */
+  public static final class NetAmountState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.NetAmountState)
+      NetAmountStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NetAmountState.newBuilder() to construct.
+    private NetAmountState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NetAmountState() {
+      mintRate_ = "";
+      btokenTotalSupply_ = "";
+      netAmount_ = "";
+      totalDelShares_ = "";
+      totalLiquidTokens_ = "";
+      totalRemainingRewards_ = "";
+      totalUnbondingBalance_ = "";
+      proxyAccBalance_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NetAmountState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_NetAmountState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_NetAmountState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.Builder.class);
+    }
+
+    public static final int MINT_RATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintRate_ = "";
+    /**
+     * <pre>
+     * mint_rate is bTokenTotalSupply / NetAmount
+     * </pre>
+     *
+     * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The mintRate.
+     */
+    @java.lang.Override
+    public java.lang.String getMintRate() {
+      java.lang.Object ref = mintRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * mint_rate is bTokenTotalSupply / NetAmount
+     * </pre>
+     *
+     * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for mintRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintRateBytes() {
+      java.lang.Object ref = mintRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BTOKEN_TOTAL_SUPPLY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object btokenTotalSupply_ = "";
+    /**
+     * <pre>
+     * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+     * </pre>
+     *
+     * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The btokenTotalSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getBtokenTotalSupply() {
+      java.lang.Object ref = btokenTotalSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        btokenTotalSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+     * </pre>
+     *
+     * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for btokenTotalSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBtokenTotalSupplyBytes() {
+      java.lang.Object ref = btokenTotalSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        btokenTotalSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NET_AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object netAmount_ = "";
+    /**
+     * <pre>
+     * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+     * unbonding balance
+     * </pre>
+     *
+     * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The netAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getNetAmount() {
+      java.lang.Object ref = netAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        netAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+     * unbonding balance
+     * </pre>
+     *
+     * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for netAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNetAmountBytes() {
+      java.lang.Object ref = netAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        netAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_DEL_SHARES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalDelShares_ = "";
+    /**
+     * <pre>
+     * total_del_shares define the delegation shares of all liquid validators
+     * </pre>
+     *
+     * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The totalDelShares.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalDelShares() {
+      java.lang.Object ref = totalDelShares_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalDelShares_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total_del_shares define the delegation shares of all liquid validators
+     * </pre>
+     *
+     * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for totalDelShares.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalDelSharesBytes() {
+      java.lang.Object ref = totalDelShares_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalDelShares_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_LIQUID_TOKENS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalLiquidTokens_ = "";
+    /**
+     * <pre>
+     * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+     * amount)
+     * </pre>
+     *
+     * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalLiquidTokens.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalLiquidTokens() {
+      java.lang.Object ref = totalLiquidTokens_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalLiquidTokens_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+     * amount)
+     * </pre>
+     *
+     * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalLiquidTokens.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalLiquidTokensBytes() {
+      java.lang.Object ref = totalLiquidTokens_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalLiquidTokens_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_REMAINING_REWARDS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalRemainingRewards_ = "";
+    /**
+     * <pre>
+     * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+     * </pre>
+     *
+     * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The totalRemainingRewards.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalRemainingRewards() {
+      java.lang.Object ref = totalRemainingRewards_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalRemainingRewards_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+     * </pre>
+     *
+     * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for totalRemainingRewards.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalRemainingRewardsBytes() {
+      java.lang.Object ref = totalRemainingRewards_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalRemainingRewards_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_UNBONDING_BALANCE_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalUnbondingBalance_ = "";
+    /**
+     * <pre>
+     * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+     * amount)
+     * </pre>
+     *
+     * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalUnbondingBalance.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalUnbondingBalance() {
+      java.lang.Object ref = totalUnbondingBalance_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalUnbondingBalance_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+     * amount)
+     * </pre>
+     *
+     * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalUnbondingBalance.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalUnbondingBalanceBytes() {
+      java.lang.Object ref = totalUnbondingBalance_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalUnbondingBalance_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROXY_ACC_BALANCE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proxyAccBalance_ = "";
+    /**
+     * <pre>
+     * proxy_acc_balance define the balance of proxy account for the native token
+     * </pre>
+     *
+     * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The proxyAccBalance.
+     */
+    @java.lang.Override
+    public java.lang.String getProxyAccBalance() {
+      java.lang.Object ref = proxyAccBalance_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proxyAccBalance_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * proxy_acc_balance define the balance of proxy account for the native token
+     * </pre>
+     *
+     * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for proxyAccBalance.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProxyAccBalanceBytes() {
+      java.lang.Object ref = proxyAccBalance_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proxyAccBalance_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mintRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btokenTotalSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, btokenTotalSupply_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(netAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, netAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalDelShares_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, totalDelShares_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalLiquidTokens_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, totalLiquidTokens_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalRemainingRewards_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, totalRemainingRewards_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalUnbondingBalance_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, totalUnbondingBalance_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proxyAccBalance_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, proxyAccBalance_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mintRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btokenTotalSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, btokenTotalSupply_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(netAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, netAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalDelShares_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, totalDelShares_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalLiquidTokens_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, totalLiquidTokens_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalRemainingRewards_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, totalRemainingRewards_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalUnbondingBalance_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, totalUnbondingBalance_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proxyAccBalance_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, proxyAccBalance_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState other = (com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState) obj;
+
+      if (!getMintRate()
+          .equals(other.getMintRate())) return false;
+      if (!getBtokenTotalSupply()
+          .equals(other.getBtokenTotalSupply())) return false;
+      if (!getNetAmount()
+          .equals(other.getNetAmount())) return false;
+      if (!getTotalDelShares()
+          .equals(other.getTotalDelShares())) return false;
+      if (!getTotalLiquidTokens()
+          .equals(other.getTotalLiquidTokens())) return false;
+      if (!getTotalRemainingRewards()
+          .equals(other.getTotalRemainingRewards())) return false;
+      if (!getTotalUnbondingBalance()
+          .equals(other.getTotalUnbondingBalance())) return false;
+      if (!getProxyAccBalance()
+          .equals(other.getProxyAccBalance())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINT_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getMintRate().hashCode();
+      hash = (37 * hash) + BTOKEN_TOTAL_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getBtokenTotalSupply().hashCode();
+      hash = (37 * hash) + NET_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getNetAmount().hashCode();
+      hash = (37 * hash) + TOTAL_DEL_SHARES_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalDelShares().hashCode();
+      hash = (37 * hash) + TOTAL_LIQUID_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalLiquidTokens().hashCode();
+      hash = (37 * hash) + TOTAL_REMAINING_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalRemainingRewards().hashCode();
+      hash = (37 * hash) + TOTAL_UNBONDING_BALANCE_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalUnbondingBalance().hashCode();
+      hash = (37 * hash) + PROXY_ACC_BALANCE_FIELD_NUMBER;
+      hash = (53 * hash) + getProxyAccBalance().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * NetAmountState is type for net amount raw data and mint rate, This is a value that depends on the several module
+     * state every time, so it is used only for calculation and query and is not stored in kv.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.NetAmountState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.NetAmountState)
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_NetAmountState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_NetAmountState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintRate_ = "";
+        btokenTotalSupply_ = "";
+        netAmount_ = "";
+        totalDelShares_ = "";
+        totalLiquidTokens_ = "";
+        totalRemainingRewards_ = "";
+        totalUnbondingBalance_ = "";
+        proxyAccBalance_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_NetAmountState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState build() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState buildPartial() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState result = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintRate_ = mintRate_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.btokenTotalSupply_ = btokenTotalSupply_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.netAmount_ = netAmount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalDelShares_ = totalDelShares_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.totalLiquidTokens_ = totalLiquidTokens_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.totalRemainingRewards_ = totalRemainingRewards_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.totalUnbondingBalance_ = totalUnbondingBalance_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.proxyAccBalance_ = proxyAccBalance_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState other) {
+        if (other == com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance()) return this;
+        if (!other.getMintRate().isEmpty()) {
+          mintRate_ = other.mintRate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBtokenTotalSupply().isEmpty()) {
+          btokenTotalSupply_ = other.btokenTotalSupply_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNetAmount().isEmpty()) {
+          netAmount_ = other.netAmount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getTotalDelShares().isEmpty()) {
+          totalDelShares_ = other.totalDelShares_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getTotalLiquidTokens().isEmpty()) {
+          totalLiquidTokens_ = other.totalLiquidTokens_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getTotalRemainingRewards().isEmpty()) {
+          totalRemainingRewards_ = other.totalRemainingRewards_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getTotalUnbondingBalance().isEmpty()) {
+          totalUnbondingBalance_ = other.totalUnbondingBalance_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getProxyAccBalance().isEmpty()) {
+          proxyAccBalance_ = other.proxyAccBalance_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mintRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                btokenTotalSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                netAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                totalDelShares_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                totalLiquidTokens_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                totalRemainingRewards_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                totalUnbondingBalance_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                proxyAccBalance_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mintRate_ = "";
+      /**
+       * <pre>
+       * mint_rate is bTokenTotalSupply / NetAmount
+       * </pre>
+       *
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The mintRate.
+       */
+      public java.lang.String getMintRate() {
+        java.lang.Object ref = mintRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * mint_rate is bTokenTotalSupply / NetAmount
+       * </pre>
+       *
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for mintRate.
+       */
+      public com.google.protobuf.ByteString
+          getMintRateBytes() {
+        java.lang.Object ref = mintRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * mint_rate is bTokenTotalSupply / NetAmount
+       * </pre>
+       *
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The mintRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mint_rate is bTokenTotalSupply / NetAmount
+       * </pre>
+       *
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintRate() {
+        mintRate_ = getDefaultInstance().getMintRate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mint_rate is bTokenTotalSupply / NetAmount
+       * </pre>
+       *
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for mintRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object btokenTotalSupply_ = "";
+      /**
+       * <pre>
+       * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+       * </pre>
+       *
+       * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The btokenTotalSupply.
+       */
+      public java.lang.String getBtokenTotalSupply() {
+        java.lang.Object ref = btokenTotalSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          btokenTotalSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+       * </pre>
+       *
+       * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for btokenTotalSupply.
+       */
+      public com.google.protobuf.ByteString
+          getBtokenTotalSupplyBytes() {
+        java.lang.Object ref = btokenTotalSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          btokenTotalSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+       * </pre>
+       *
+       * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The btokenTotalSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtokenTotalSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        btokenTotalSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+       * </pre>
+       *
+       * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBtokenTotalSupply() {
+        btokenTotalSupply_ = getDefaultInstance().getBtokenTotalSupply();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btoken_total_supply returns the total supply of btoken(liquid_bond_denom)
+       * </pre>
+       *
+       * <code>string btoken_total_supply = 2 [json_name = "btokenTotalSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for btokenTotalSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtokenTotalSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        btokenTotalSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object netAmount_ = "";
+      /**
+       * <pre>
+       * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+       * unbonding balance
+       * </pre>
+       *
+       * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The netAmount.
+       */
+      public java.lang.String getNetAmount() {
+        java.lang.Object ref = netAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          netAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+       * unbonding balance
+       * </pre>
+       *
+       * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for netAmount.
+       */
+      public com.google.protobuf.ByteString
+          getNetAmountBytes() {
+        java.lang.Object ref = netAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          netAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+       * unbonding balance
+       * </pre>
+       *
+       * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The netAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        netAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+       * unbonding balance
+       * </pre>
+       *
+       * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNetAmount() {
+        netAmount_ = getDefaultInstance().getNetAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * net_amount is proxy account's native token balance + total liquid tokens + total remaining rewards + total
+       * unbonding balance
+       * </pre>
+       *
+       * <code>string net_amount = 3 [json_name = "netAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for netAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        netAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalDelShares_ = "";
+      /**
+       * <pre>
+       * total_del_shares define the delegation shares of all liquid validators
+       * </pre>
+       *
+       * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The totalDelShares.
+       */
+      public java.lang.String getTotalDelShares() {
+        java.lang.Object ref = totalDelShares_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalDelShares_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_del_shares define the delegation shares of all liquid validators
+       * </pre>
+       *
+       * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for totalDelShares.
+       */
+      public com.google.protobuf.ByteString
+          getTotalDelSharesBytes() {
+        java.lang.Object ref = totalDelShares_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalDelShares_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_del_shares define the delegation shares of all liquid validators
+       * </pre>
+       *
+       * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The totalDelShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalDelShares(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalDelShares_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_del_shares define the delegation shares of all liquid validators
+       * </pre>
+       *
+       * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalDelShares() {
+        totalDelShares_ = getDefaultInstance().getTotalDelShares();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_del_shares define the delegation shares of all liquid validators
+       * </pre>
+       *
+       * <code>string total_del_shares = 4 [json_name = "totalDelShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for totalDelShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalDelSharesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalDelShares_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalLiquidTokens_ = "";
+      /**
+       * <pre>
+       * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The totalLiquidTokens.
+       */
+      public java.lang.String getTotalLiquidTokens() {
+        java.lang.Object ref = totalLiquidTokens_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalLiquidTokens_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for totalLiquidTokens.
+       */
+      public com.google.protobuf.ByteString
+          getTotalLiquidTokensBytes() {
+        java.lang.Object ref = totalLiquidTokens_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalLiquidTokens_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The totalLiquidTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalLiquidTokens(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalLiquidTokens_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalLiquidTokens() {
+        totalLiquidTokens_ = getDefaultInstance().getTotalLiquidTokens();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_liquid_tokens define the token amount worth of delegation shares of all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_liquid_tokens = 5 [json_name = "totalLiquidTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for totalLiquidTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalLiquidTokensBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalLiquidTokens_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalRemainingRewards_ = "";
+      /**
+       * <pre>
+       * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+       * </pre>
+       *
+       * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The totalRemainingRewards.
+       */
+      public java.lang.String getTotalRemainingRewards() {
+        java.lang.Object ref = totalRemainingRewards_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalRemainingRewards_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+       * </pre>
+       *
+       * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for totalRemainingRewards.
+       */
+      public com.google.protobuf.ByteString
+          getTotalRemainingRewardsBytes() {
+        java.lang.Object ref = totalRemainingRewards_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalRemainingRewards_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+       * </pre>
+       *
+       * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The totalRemainingRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalRemainingRewards(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalRemainingRewards_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+       * </pre>
+       *
+       * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalRemainingRewards() {
+        totalRemainingRewards_ = getDefaultInstance().getTotalRemainingRewards();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_remaining_rewards define the sum of remaining rewards of proxy account by all liquid validators
+       * </pre>
+       *
+       * <code>string total_remaining_rewards = 6 [json_name = "totalRemainingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for totalRemainingRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalRemainingRewardsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalRemainingRewards_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalUnbondingBalance_ = "";
+      /**
+       * <pre>
+       * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The totalUnbondingBalance.
+       */
+      public java.lang.String getTotalUnbondingBalance() {
+        java.lang.Object ref = totalUnbondingBalance_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalUnbondingBalance_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for totalUnbondingBalance.
+       */
+      public com.google.protobuf.ByteString
+          getTotalUnbondingBalanceBytes() {
+        java.lang.Object ref = totalUnbondingBalance_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalUnbondingBalance_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The totalUnbondingBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalUnbondingBalance(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalUnbondingBalance_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalUnbondingBalance() {
+        totalUnbondingBalance_ = getDefaultInstance().getTotalUnbondingBalance();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_unbonding_balance define the unbonding balance of proxy account by all liquid validator (slashing applied
+       * amount)
+       * </pre>
+       *
+       * <code>string total_unbonding_balance = 7 [json_name = "totalUnbondingBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for totalUnbondingBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalUnbondingBalanceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalUnbondingBalance_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proxyAccBalance_ = "";
+      /**
+       * <pre>
+       * proxy_acc_balance define the balance of proxy account for the native token
+       * </pre>
+       *
+       * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The proxyAccBalance.
+       */
+      public java.lang.String getProxyAccBalance() {
+        java.lang.Object ref = proxyAccBalance_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proxyAccBalance_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proxy_acc_balance define the balance of proxy account for the native token
+       * </pre>
+       *
+       * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for proxyAccBalance.
+       */
+      public com.google.protobuf.ByteString
+          getProxyAccBalanceBytes() {
+        java.lang.Object ref = proxyAccBalance_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proxyAccBalance_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proxy_acc_balance define the balance of proxy account for the native token
+       * </pre>
+       *
+       * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The proxyAccBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProxyAccBalance(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proxyAccBalance_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proxy_acc_balance define the balance of proxy account for the native token
+       * </pre>
+       *
+       * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProxyAccBalance() {
+        proxyAccBalance_ = getDefaultInstance().getProxyAccBalance();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proxy_acc_balance define the balance of proxy account for the native token
+       * </pre>
+       *
+       * <code>string proxy_acc_balance = 8 [json_name = "proxyAccBalance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for proxyAccBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProxyAccBalanceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proxyAccBalance_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.NetAmountState)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.NetAmountState)
+    private static final com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NetAmountState>
+        PARSER = new com.google.protobuf.AbstractParser<NetAmountState>() {
+      @java.lang.Override
+      public NetAmountState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<NetAmountState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NetAmountState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VotingPowerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.VotingPower)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * voter defines the address of the voter; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string voter = 1 [json_name = "voter"];</code>
+     * @return The voter.
+     */
+    java.lang.String getVoter();
+    /**
+     * <pre>
+     * voter defines the address of the voter; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string voter = 1 [json_name = "voter"];</code>
+     * @return The bytes for voter.
+     */
+    com.google.protobuf.ByteString
+        getVoterBytes();
+
+    /**
+     * <pre>
+     * staking_voting_power return the voting power of staking that can be exercised.
+     * </pre>
+     *
+     * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The stakingVotingPower.
+     */
+    java.lang.String getStakingVotingPower();
+    /**
+     * <pre>
+     * staking_voting_power return the voting power of staking that can be exercised.
+     * </pre>
+     *
+     * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for stakingVotingPower.
+     */
+    com.google.protobuf.ByteString
+        getStakingVotingPowerBytes();
+
+    /**
+     * <pre>
+     * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+     * </pre>
+     *
+     * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The liquidStakingVotingPower.
+     */
+    java.lang.String getLiquidStakingVotingPower();
+    /**
+     * <pre>
+     * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+     * </pre>
+     *
+     * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for liquidStakingVotingPower.
+     */
+    com.google.protobuf.ByteString
+        getLiquidStakingVotingPowerBytes();
+
+    /**
+     * <pre>
+     * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+     * exercised.
+     * </pre>
+     *
+     * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The validatorVotingPower.
+     */
+    java.lang.String getValidatorVotingPower();
+    /**
+     * <pre>
+     * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+     * exercised.
+     * </pre>
+     *
+     * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for validatorVotingPower.
+     */
+    com.google.protobuf.ByteString
+        getValidatorVotingPowerBytes();
+  }
+  /**
+   * <pre>
+   * VotingPower is type for current voting power of the voter including staking module's voting power and liquid staking
+   * module's voting power, It depends on the amount of delegation of staking module, the bonded state of the delegated
+   * validator, the value of btoken(liquid_bond_denom), and the pool coin and farming position containing btoken..
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.VotingPower}
+   */
+  public static final class VotingPower extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.VotingPower)
+      VotingPowerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VotingPower.newBuilder() to construct.
+    private VotingPower(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VotingPower() {
+      voter_ = "";
+      stakingVotingPower_ = "";
+      liquidStakingVotingPower_ = "";
+      validatorVotingPower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VotingPower();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_VotingPower_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_VotingPower_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.Builder.class);
+    }
+
+    public static final int VOTER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voter_ = "";
+    /**
+     * <pre>
+     * voter defines the address of the voter; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string voter = 1 [json_name = "voter"];</code>
+     * @return The voter.
+     */
+    @java.lang.Override
+    public java.lang.String getVoter() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * voter defines the address of the voter; bech encoded in JSON.
+     * </pre>
+     *
+     * <code>string voter = 1 [json_name = "voter"];</code>
+     * @return The bytes for voter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoterBytes() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_VOTING_POWER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingVotingPower_ = "";
+    /**
+     * <pre>
+     * staking_voting_power return the voting power of staking that can be exercised.
+     * </pre>
+     *
+     * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The stakingVotingPower.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingVotingPower() {
+      java.lang.Object ref = stakingVotingPower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingVotingPower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_voting_power return the voting power of staking that can be exercised.
+     * </pre>
+     *
+     * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for stakingVotingPower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingVotingPowerBytes() {
+      java.lang.Object ref = stakingVotingPower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingVotingPower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIQUID_STAKING_VOTING_POWER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidStakingVotingPower_ = "";
+    /**
+     * <pre>
+     * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+     * </pre>
+     *
+     * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The liquidStakingVotingPower.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidStakingVotingPower() {
+      java.lang.Object ref = liquidStakingVotingPower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidStakingVotingPower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+     * </pre>
+     *
+     * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for liquidStakingVotingPower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidStakingVotingPowerBytes() {
+      java.lang.Object ref = liquidStakingVotingPower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidStakingVotingPower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALIDATOR_VOTING_POWER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorVotingPower_ = "";
+    /**
+     * <pre>
+     * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+     * exercised.
+     * </pre>
+     *
+     * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The validatorVotingPower.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorVotingPower() {
+      java.lang.Object ref = validatorVotingPower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorVotingPower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+     * exercised.
+     * </pre>
+     *
+     * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for validatorVotingPower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorVotingPowerBytes() {
+      java.lang.Object ref = validatorVotingPower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorVotingPower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, voter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingVotingPower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingVotingPower_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidStakingVotingPower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, liquidStakingVotingPower_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorVotingPower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, validatorVotingPower_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, voter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingVotingPower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingVotingPower_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidStakingVotingPower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, liquidStakingVotingPower_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorVotingPower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, validatorVotingPower_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower other = (com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower) obj;
+
+      if (!getVoter()
+          .equals(other.getVoter())) return false;
+      if (!getStakingVotingPower()
+          .equals(other.getStakingVotingPower())) return false;
+      if (!getLiquidStakingVotingPower()
+          .equals(other.getLiquidStakingVotingPower())) return false;
+      if (!getValidatorVotingPower()
+          .equals(other.getValidatorVotingPower())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VOTER_FIELD_NUMBER;
+      hash = (53 * hash) + getVoter().hashCode();
+      hash = (37 * hash) + STAKING_VOTING_POWER_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingVotingPower().hashCode();
+      hash = (37 * hash) + LIQUID_STAKING_VOTING_POWER_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidStakingVotingPower().hashCode();
+      hash = (37 * hash) + VALIDATOR_VOTING_POWER_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorVotingPower().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * VotingPower is type for current voting power of the voter including staking module's voting power and liquid staking
+     * module's voting power, It depends on the amount of delegation of staking module, the bonded state of the delegated
+     * validator, the value of btoken(liquid_bond_denom), and the pool coin and farming position containing btoken..
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.VotingPower}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.VotingPower)
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPowerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_VotingPower_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_VotingPower_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.class, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        voter_ = "";
+        stakingVotingPower_ = "";
+        liquidStakingVotingPower_ = "";
+        validatorVotingPower_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.internal_static_crescent_liquidstaking_v1beta1_VotingPower_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower build() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower buildPartial() {
+        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower result = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.voter_ = voter_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakingVotingPower_ = stakingVotingPower_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.liquidStakingVotingPower_ = liquidStakingVotingPower_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.validatorVotingPower_ = validatorVotingPower_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower other) {
+        if (other == com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower.getDefaultInstance()) return this;
+        if (!other.getVoter().isEmpty()) {
+          voter_ = other.voter_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStakingVotingPower().isEmpty()) {
+          stakingVotingPower_ = other.stakingVotingPower_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getLiquidStakingVotingPower().isEmpty()) {
+          liquidStakingVotingPower_ = other.liquidStakingVotingPower_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getValidatorVotingPower().isEmpty()) {
+          validatorVotingPower_ = other.validatorVotingPower_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                voter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakingVotingPower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                liquidStakingVotingPower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                validatorVotingPower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object voter_ = "";
+      /**
+       * <pre>
+       * voter defines the address of the voter; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @return The voter.
+       */
+      public java.lang.String getVoter() {
+        java.lang.Object ref = voter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * voter defines the address of the voter; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @return The bytes for voter.
+       */
+      public com.google.protobuf.ByteString
+          getVoterBytes() {
+        java.lang.Object ref = voter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * voter defines the address of the voter; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @param value The voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voter defines the address of the voter; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoter() {
+        voter_ = getDefaultInstance().getVoter();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voter defines the address of the voter; bech encoded in JSON.
+       * </pre>
+       *
+       * <code>string voter = 1 [json_name = "voter"];</code>
+       * @param value The bytes for voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingVotingPower_ = "";
+      /**
+       * <pre>
+       * staking_voting_power return the voting power of staking that can be exercised.
+       * </pre>
+       *
+       * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The stakingVotingPower.
+       */
+      public java.lang.String getStakingVotingPower() {
+        java.lang.Object ref = stakingVotingPower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingVotingPower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_voting_power return the voting power of staking that can be exercised.
+       * </pre>
+       *
+       * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for stakingVotingPower.
+       */
+      public com.google.protobuf.ByteString
+          getStakingVotingPowerBytes() {
+        java.lang.Object ref = stakingVotingPower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingVotingPower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_voting_power return the voting power of staking that can be exercised.
+       * </pre>
+       *
+       * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The stakingVotingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingVotingPower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingVotingPower_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_voting_power return the voting power of staking that can be exercised.
+       * </pre>
+       *
+       * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingVotingPower() {
+        stakingVotingPower_ = getDefaultInstance().getStakingVotingPower();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_voting_power return the voting power of staking that can be exercised.
+       * </pre>
+       *
+       * <code>string staking_voting_power = 2 [json_name = "stakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for stakingVotingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingVotingPowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingVotingPower_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object liquidStakingVotingPower_ = "";
+      /**
+       * <pre>
+       * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+       * </pre>
+       *
+       * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The liquidStakingVotingPower.
+       */
+      public java.lang.String getLiquidStakingVotingPower() {
+        java.lang.Object ref = liquidStakingVotingPower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidStakingVotingPower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+       * </pre>
+       *
+       * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for liquidStakingVotingPower.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidStakingVotingPowerBytes() {
+        java.lang.Object ref = liquidStakingVotingPower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidStakingVotingPower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+       * </pre>
+       *
+       * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The liquidStakingVotingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidStakingVotingPower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidStakingVotingPower_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+       * </pre>
+       *
+       * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidStakingVotingPower() {
+        liquidStakingVotingPower_ = getDefaultInstance().getLiquidStakingVotingPower();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * liquid_staking_voting_power return the voting power of liquid staking that can be exercised.
+       * </pre>
+       *
+       * <code>string liquid_staking_voting_power = 3 [json_name = "liquidStakingVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for liquidStakingVotingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidStakingVotingPowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidStakingVotingPower_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validatorVotingPower_ = "";
+      /**
+       * <pre>
+       * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+       * exercised.
+       * </pre>
+       *
+       * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The validatorVotingPower.
+       */
+      public java.lang.String getValidatorVotingPower() {
+        java.lang.Object ref = validatorVotingPower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorVotingPower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+       * exercised.
+       * </pre>
+       *
+       * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for validatorVotingPower.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorVotingPowerBytes() {
+        java.lang.Object ref = validatorVotingPower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorVotingPower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+       * exercised.
+       * </pre>
+       *
+       * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The validatorVotingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorVotingPower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorVotingPower_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+       * exercised.
+       * </pre>
+       *
+       * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorVotingPower() {
+        validatorVotingPower_ = getDefaultInstance().getValidatorVotingPower();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_voting_power return the voting power of the validator if the voter is the validator operator that can be
+       * exercised.
+       * </pre>
+       *
+       * <code>string validator_voting_power = 4 [json_name = "validatorVotingPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for validatorVotingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorVotingPowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorVotingPower_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.VotingPower)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.VotingPower)
+    private static final com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VotingPower>
+        PARSER = new com.google.protobuf.AbstractParser<VotingPower>() {
+      @java.lang.Override
+      public VotingPower parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VotingPower> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VotingPower> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_WhitelistedValidator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_WhitelistedValidator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_LiquidValidator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_LiquidValidator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_LiquidValidatorState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_LiquidValidatorState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_NetAmountState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_NetAmountState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_VotingPower_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_VotingPower_fieldAccessorTable;
 
@@ -122,14 +7502,14 @@ public final class LiquidstakingProto {
       "lidatorStatusUnspecified\0226\n\027VALIDATOR_ST" +
       "ATUS_ACTIVE\020\001\032\031\212\235 \025ValidatorStatusActive" +
       "\022:\n\031VALIDATOR_STATUS_INACTIVE\020\002\032\033\212\235 \027Val" +
-      "idatorStatusInactive\032\004\210\243\036\000B\221\002\n\"com.cresc" +
+      "idatorStatusInactive\032\004\210\243\036\000B\217\002\n\"com.cresc" +
       "ent.liquidstaking.v1beta1B\022Liquidstaking" +
-      "ProtoP\001Z=github.com/crescent-network/cre" +
-      "scent/v5/x/liquidstaking/types\242\002\003CLX\252\002\036C" +
-      "rescent.Liquidstaking.V1beta1\312\002\036Crescent" +
-      "\\Liquidstaking\\V1beta1\342\002*Crescent\\Liquid" +
-      "staking\\V1beta1\\GPBMetadata\352\002 Crescent::" +
-      "Liquidstaking::V1beta1b\006proto3"
+      "ProtoZ=github.com/crescent-network/cresc" +
+      "ent/v5/x/liquidstaking/types\242\002\003CLX\252\002\036Cre" +
+      "scent.Liquidstaking.V1beta1\312\002\036Crescent\\L" +
+      "iquidstaking\\V1beta1\342\002*Crescent\\Liquidst" +
+      "aking\\V1beta1\\GPBMetadata\352\002 Crescent::Li" +
+      "quidstaking::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,14 +14,1390 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgClaimOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:passage3d.claim.v1beta1.MsgClaim)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+     * @return The claimAction.
+     */
+    java.lang.String getClaimAction();
+    /**
+     * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+     * @return The bytes for claimAction.
+     */
+    com.google.protobuf.ByteString
+        getClaimActionBytes();
+  }
+  /**
+   * <pre>
+   * MsgInitialClaim defines request message for InitialClaim RPC request
+   * </pre>
+   *
+   * Protobuf type {@code passage3d.claim.v1beta1.MsgClaim}
+   */
+  public static final class MsgClaim extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:passage3d.claim.v1beta1.MsgClaim)
+      MsgClaimOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaim.newBuilder() to construct.
+    private MsgClaim(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaim() {
+      sender_ = "";
+      claimAction_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaim();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaim_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaim_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passage3d.claim.v1beta1.TxProto.MsgClaim.class, com.passage3d.claim.v1beta1.TxProto.MsgClaim.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLAIM_ACTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimAction_ = "";
+    /**
+     * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+     * @return The claimAction.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimAction() {
+      java.lang.Object ref = claimAction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimAction_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+     * @return The bytes for claimAction.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimActionBytes() {
+      java.lang.Object ref = claimAction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimAction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimAction_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, claimAction_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimAction_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, claimAction_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passage3d.claim.v1beta1.TxProto.MsgClaim)) {
+        return super.equals(obj);
+      }
+      com.passage3d.claim.v1beta1.TxProto.MsgClaim other = (com.passage3d.claim.v1beta1.TxProto.MsgClaim) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getClaimAction()
+          .equals(other.getClaimAction())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CLAIM_ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimAction().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passage3d.claim.v1beta1.TxProto.MsgClaim prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgInitialClaim defines request message for InitialClaim RPC request
+     * </pre>
+     *
+     * Protobuf type {@code passage3d.claim.v1beta1.MsgClaim}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:passage3d.claim.v1beta1.MsgClaim)
+        com.passage3d.claim.v1beta1.TxProto.MsgClaimOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaim_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaim_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passage3d.claim.v1beta1.TxProto.MsgClaim.class, com.passage3d.claim.v1beta1.TxProto.MsgClaim.Builder.class);
+      }
+
+      // Construct using com.passage3d.claim.v1beta1.TxProto.MsgClaim.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        claimAction_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaim_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.TxProto.MsgClaim getDefaultInstanceForType() {
+        return com.passage3d.claim.v1beta1.TxProto.MsgClaim.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.TxProto.MsgClaim build() {
+        com.passage3d.claim.v1beta1.TxProto.MsgClaim result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.TxProto.MsgClaim buildPartial() {
+        com.passage3d.claim.v1beta1.TxProto.MsgClaim result = new com.passage3d.claim.v1beta1.TxProto.MsgClaim(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.passage3d.claim.v1beta1.TxProto.MsgClaim result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.claimAction_ = claimAction_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passage3d.claim.v1beta1.TxProto.MsgClaim) {
+          return mergeFrom((com.passage3d.claim.v1beta1.TxProto.MsgClaim)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passage3d.claim.v1beta1.TxProto.MsgClaim other) {
+        if (other == com.passage3d.claim.v1beta1.TxProto.MsgClaim.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getClaimAction().isEmpty()) {
+          claimAction_ = other.claimAction_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                claimAction_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object claimAction_ = "";
+      /**
+       * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+       * @return The claimAction.
+       */
+      public java.lang.String getClaimAction() {
+        java.lang.Object ref = claimAction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimAction_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+       * @return The bytes for claimAction.
+       */
+      public com.google.protobuf.ByteString
+          getClaimActionBytes() {
+        java.lang.Object ref = claimAction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimAction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+       * @param value The claimAction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimAction(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimAction_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimAction() {
+        claimAction_ = getDefaultInstance().getClaimAction();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_action = 2 [json_name = "claimAction"];</code>
+       * @param value The bytes for claimAction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimAction_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:passage3d.claim.v1beta1.MsgClaim)
+    }
+
+    // @@protoc_insertion_point(class_scope:passage3d.claim.v1beta1.MsgClaim)
+    private static final com.passage3d.claim.v1beta1.TxProto.MsgClaim DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passage3d.claim.v1beta1.TxProto.MsgClaim();
+    }
+
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaim getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaim>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaim>() {
+      @java.lang.Override
+      public MsgClaim parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaim> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaim> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passage3d.claim.v1beta1.TxProto.MsgClaim getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:passage3d.claim.v1beta1.MsgClaimResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * total initial claimable amount for the user
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the claimedAmount field is set.
+     */
+    boolean hasClaimedAmount();
+    /**
+     * <pre>
+     * total initial claimable amount for the user
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The claimedAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getClaimedAmount();
+    /**
+     * <pre>
+     * total initial claimable amount for the user
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimedAmountOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgInitialClaimResponse defines response for InitialClaim RPC request
+   * </pre>
+   *
+   * Protobuf type {@code passage3d.claim.v1beta1.MsgClaimResponse}
+   */
+  public static final class MsgClaimResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:passage3d.claim.v1beta1.MsgClaimResponse)
+      MsgClaimResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimResponse.newBuilder() to construct.
+    private MsgClaimResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaimResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaimResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse.class, com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse.Builder.class);
+    }
+
+    public static final int CLAIMED_AMOUNT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin claimedAmount_;
+    /**
+     * <pre>
+     * total initial claimable amount for the user
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the claimedAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasClaimedAmount() {
+      return claimedAmount_ != null;
+    }
+    /**
+     * <pre>
+     * total initial claimable amount for the user
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The claimedAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getClaimedAmount() {
+      return claimedAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : claimedAmount_;
+    }
+    /**
+     * <pre>
+     * total initial claimable amount for the user
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimedAmountOrBuilder() {
+      return claimedAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : claimedAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (claimedAmount_ != null) {
+        output.writeMessage(2, getClaimedAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (claimedAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getClaimedAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse)) {
+        return super.equals(obj);
+      }
+      com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse other = (com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse) obj;
+
+      if (hasClaimedAmount() != other.hasClaimedAmount()) return false;
+      if (hasClaimedAmount()) {
+        if (!getClaimedAmount()
+            .equals(other.getClaimedAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClaimedAmount()) {
+        hash = (37 * hash) + CLAIMED_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimedAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgInitialClaimResponse defines response for InitialClaim RPC request
+     * </pre>
+     *
+     * Protobuf type {@code passage3d.claim.v1beta1.MsgClaimResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:passage3d.claim.v1beta1.MsgClaimResponse)
+        com.passage3d.claim.v1beta1.TxProto.MsgClaimResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaimResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaimResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse.class, com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse.Builder.class);
+      }
+
+      // Construct using com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimedAmount_ = null;
+        if (claimedAmountBuilder_ != null) {
+          claimedAmountBuilder_.dispose();
+          claimedAmountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passage3d.claim.v1beta1.TxProto.internal_static_passage3d_claim_v1beta1_MsgClaimResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse getDefaultInstanceForType() {
+        return com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse build() {
+        com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse buildPartial() {
+        com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse result = new com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimedAmount_ = claimedAmountBuilder_ == null
+              ? claimedAmount_
+              : claimedAmountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse) {
+          return mergeFrom((com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse other) {
+        if (other == com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse.getDefaultInstance()) return this;
+        if (other.hasClaimedAmount()) {
+          mergeClaimedAmount(other.getClaimedAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                input.readMessage(
+                    getClaimedAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin claimedAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> claimedAmountBuilder_;
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return Whether the claimedAmount field is set.
+       */
+      public boolean hasClaimedAmount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return The claimedAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getClaimedAmount() {
+        if (claimedAmountBuilder_ == null) {
+          return claimedAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : claimedAmount_;
+        } else {
+          return claimedAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setClaimedAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (claimedAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          claimedAmount_ = value;
+        } else {
+          claimedAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setClaimedAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (claimedAmountBuilder_ == null) {
+          claimedAmount_ = builderForValue.build();
+        } else {
+          claimedAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder mergeClaimedAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (claimedAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            claimedAmount_ != null &&
+            claimedAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getClaimedAmountBuilder().mergeFrom(value);
+          } else {
+            claimedAmount_ = value;
+          }
+        } else {
+          claimedAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearClaimedAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        claimedAmount_ = null;
+        if (claimedAmountBuilder_ != null) {
+          claimedAmountBuilder_.dispose();
+          claimedAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getClaimedAmountBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getClaimedAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimedAmountOrBuilder() {
+        if (claimedAmountBuilder_ != null) {
+          return claimedAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return claimedAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : claimedAmount_;
+        }
+      }
+      /**
+       * <pre>
+       * total initial claimable amount for the user
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claimed_amount = 2 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claimed_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getClaimedAmountFieldBuilder() {
+        if (claimedAmountBuilder_ == null) {
+          claimedAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getClaimedAmount(),
+                  getParentForChildren(),
+                  isClean());
+          claimedAmount_ = null;
+        }
+        return claimedAmountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:passage3d.claim.v1beta1.MsgClaimResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:passage3d.claim.v1beta1.MsgClaimResponse)
+    private static final com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse();
+    }
+
+    public static com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimResponse>() {
+      @java.lang.Override
+      public MsgClaimResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passage3d.claim.v1beta1.TxProto.MsgClaimResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_passage3d_claim_v1beta1_MsgClaim_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_passage3d_claim_v1beta1_MsgClaim_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_passage3d_claim_v1beta1_MsgClaimResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_passage3d_claim_v1beta1_MsgClaimResponse_fieldAccessorTable;
 
@@ -44,12 +1420,12 @@ public final class TxProto {
       "/types.CoinsR\rclaimedAmount2\\\n\003Msg\022U\n\005Cl" +
       "aim\022!.passage3d.claim.v1beta1.MsgClaim\032)" +
       ".passage3d.claim.v1beta1.MsgClaimRespons" +
-      "eB\320\001\n\033com.passage3d.claim.v1beta1B\007TxPro" +
-      "toP\001Z*github.com/envadiv/passage3d/x/cla" +
-      "im/types\242\002\003PCX\252\002\027Passage3d.Claim.V1beta1" +
-      "\312\002\027Passage3d\\Claim\\V1beta1\342\002#Passage3d\\C" +
-      "laim\\V1beta1\\GPBMetadata\352\002\031Passage3d::Cl" +
-      "aim::V1beta1b\006proto3"
+      "eB\316\001\n\033com.passage3d.claim.v1beta1B\007TxPro" +
+      "toZ*github.com/envadiv/passage3d/x/claim" +
+      "/types\242\002\003PCX\252\002\027Passage3d.Claim.V1beta1\312\002" +
+      "\027Passage3d\\Claim\\V1beta1\342\002#Passage3d\\Cla" +
+      "im\\V1beta1\\GPBMetadata\352\002\031Passage3d::Clai" +
+      "m::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

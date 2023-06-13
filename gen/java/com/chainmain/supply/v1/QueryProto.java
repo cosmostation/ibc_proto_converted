@@ -14,14 +14,1325 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface SupplyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:chainmain.supply.v1.SupplyRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * SupplyRequest is the request type for the Query/TotalSupply RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code chainmain.supply.v1.SupplyRequest}
+   */
+  public static final class SupplyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:chainmain.supply.v1.SupplyRequest)
+      SupplyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SupplyRequest.newBuilder() to construct.
+    private SupplyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SupplyRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SupplyRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.chainmain.supply.v1.QueryProto.SupplyRequest.class, com.chainmain.supply.v1.QueryProto.SupplyRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.chainmain.supply.v1.QueryProto.SupplyRequest)) {
+        return super.equals(obj);
+      }
+      com.chainmain.supply.v1.QueryProto.SupplyRequest other = (com.chainmain.supply.v1.QueryProto.SupplyRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.chainmain.supply.v1.QueryProto.SupplyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SupplyRequest is the request type for the Query/TotalSupply RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code chainmain.supply.v1.SupplyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:chainmain.supply.v1.SupplyRequest)
+        com.chainmain.supply.v1.QueryProto.SupplyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.chainmain.supply.v1.QueryProto.SupplyRequest.class, com.chainmain.supply.v1.QueryProto.SupplyRequest.Builder.class);
+      }
+
+      // Construct using com.chainmain.supply.v1.QueryProto.SupplyRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.chainmain.supply.v1.QueryProto.SupplyRequest getDefaultInstanceForType() {
+        return com.chainmain.supply.v1.QueryProto.SupplyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.chainmain.supply.v1.QueryProto.SupplyRequest build() {
+        com.chainmain.supply.v1.QueryProto.SupplyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.chainmain.supply.v1.QueryProto.SupplyRequest buildPartial() {
+        com.chainmain.supply.v1.QueryProto.SupplyRequest result = new com.chainmain.supply.v1.QueryProto.SupplyRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.chainmain.supply.v1.QueryProto.SupplyRequest) {
+          return mergeFrom((com.chainmain.supply.v1.QueryProto.SupplyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.chainmain.supply.v1.QueryProto.SupplyRequest other) {
+        if (other == com.chainmain.supply.v1.QueryProto.SupplyRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:chainmain.supply.v1.SupplyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:chainmain.supply.v1.SupplyRequest)
+    private static final com.chainmain.supply.v1.QueryProto.SupplyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.chainmain.supply.v1.QueryProto.SupplyRequest();
+    }
+
+    public static com.chainmain.supply.v1.QueryProto.SupplyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SupplyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SupplyRequest>() {
+      @java.lang.Override
+      public SupplyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SupplyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SupplyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.chainmain.supply.v1.QueryProto.SupplyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SupplyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:chainmain.supply.v1.SupplyResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getSupplyList();
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getSupply(int index);
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getSupplyCount();
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getSupplyOrBuilderList();
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSupplyOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * SupplyResponse is the response type for the Query/TotalSupply RPC
+   * method
+   * </pre>
+   *
+   * Protobuf type {@code chainmain.supply.v1.SupplyResponse}
+   */
+  public static final class SupplyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:chainmain.supply.v1.SupplyResponse)
+      SupplyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SupplyResponse.newBuilder() to construct.
+    private SupplyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SupplyResponse() {
+      supply_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SupplyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.chainmain.supply.v1.QueryProto.SupplyResponse.class, com.chainmain.supply.v1.QueryProto.SupplyResponse.Builder.class);
+    }
+
+    public static final int SUPPLY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> supply_;
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getSupplyList() {
+      return supply_;
+    }
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getSupplyOrBuilderList() {
+      return supply_;
+    }
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getSupplyCount() {
+      return supply_.size();
+    }
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getSupply(int index) {
+      return supply_.get(index);
+    }
+    /**
+     * <pre>
+     * supply is the supply of the coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSupplyOrBuilder(
+        int index) {
+      return supply_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < supply_.size(); i++) {
+        output.writeMessage(1, supply_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < supply_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, supply_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.chainmain.supply.v1.QueryProto.SupplyResponse)) {
+        return super.equals(obj);
+      }
+      com.chainmain.supply.v1.QueryProto.SupplyResponse other = (com.chainmain.supply.v1.QueryProto.SupplyResponse) obj;
+
+      if (!getSupplyList()
+          .equals(other.getSupplyList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSupplyCount() > 0) {
+        hash = (37 * hash) + SUPPLY_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplyList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.chainmain.supply.v1.QueryProto.SupplyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SupplyResponse is the response type for the Query/TotalSupply RPC
+     * method
+     * </pre>
+     *
+     * Protobuf type {@code chainmain.supply.v1.SupplyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:chainmain.supply.v1.SupplyResponse)
+        com.chainmain.supply.v1.QueryProto.SupplyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.chainmain.supply.v1.QueryProto.SupplyResponse.class, com.chainmain.supply.v1.QueryProto.SupplyResponse.Builder.class);
+      }
+
+      // Construct using com.chainmain.supply.v1.QueryProto.SupplyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (supplyBuilder_ == null) {
+          supply_ = java.util.Collections.emptyList();
+        } else {
+          supply_ = null;
+          supplyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.chainmain.supply.v1.QueryProto.internal_static_chainmain_supply_v1_SupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.chainmain.supply.v1.QueryProto.SupplyResponse getDefaultInstanceForType() {
+        return com.chainmain.supply.v1.QueryProto.SupplyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.chainmain.supply.v1.QueryProto.SupplyResponse build() {
+        com.chainmain.supply.v1.QueryProto.SupplyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.chainmain.supply.v1.QueryProto.SupplyResponse buildPartial() {
+        com.chainmain.supply.v1.QueryProto.SupplyResponse result = new com.chainmain.supply.v1.QueryProto.SupplyResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.chainmain.supply.v1.QueryProto.SupplyResponse result) {
+        if (supplyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            supply_ = java.util.Collections.unmodifiableList(supply_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.supply_ = supply_;
+        } else {
+          result.supply_ = supplyBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.chainmain.supply.v1.QueryProto.SupplyResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.chainmain.supply.v1.QueryProto.SupplyResponse) {
+          return mergeFrom((com.chainmain.supply.v1.QueryProto.SupplyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.chainmain.supply.v1.QueryProto.SupplyResponse other) {
+        if (other == com.chainmain.supply.v1.QueryProto.SupplyResponse.getDefaultInstance()) return this;
+        if (supplyBuilder_ == null) {
+          if (!other.supply_.isEmpty()) {
+            if (supply_.isEmpty()) {
+              supply_ = other.supply_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSupplyIsMutable();
+              supply_.addAll(other.supply_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supply_.isEmpty()) {
+            if (supplyBuilder_.isEmpty()) {
+              supplyBuilder_.dispose();
+              supplyBuilder_ = null;
+              supply_ = other.supply_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              supplyBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplyFieldBuilder() : null;
+            } else {
+              supplyBuilder_.addAllMessages(other.supply_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (supplyBuilder_ == null) {
+                  ensureSupplyIsMutable();
+                  supply_.add(m);
+                } else {
+                  supplyBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> supply_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplyIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          supply_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(supply_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> supplyBuilder_;
+
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getSupplyList() {
+        if (supplyBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supply_);
+        } else {
+          return supplyBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getSupplyCount() {
+        if (supplyBuilder_ == null) {
+          return supply_.size();
+        } else {
+          return supplyBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getSupply(int index) {
+        if (supplyBuilder_ == null) {
+          return supply_.get(index);
+        } else {
+          return supplyBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setSupply(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (supplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplyIsMutable();
+          supply_.set(index, value);
+          onChanged();
+        } else {
+          supplyBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setSupply(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (supplyBuilder_ == null) {
+          ensureSupplyIsMutable();
+          supply_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplyBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (supplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplyIsMutable();
+          supply_.add(value);
+          onChanged();
+        } else {
+          supplyBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addSupply(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (supplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplyIsMutable();
+          supply_.add(index, value);
+          onChanged();
+        } else {
+          supplyBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addSupply(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (supplyBuilder_ == null) {
+          ensureSupplyIsMutable();
+          supply_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplyBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addSupply(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (supplyBuilder_ == null) {
+          ensureSupplyIsMutable();
+          supply_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplyBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllSupply(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (supplyBuilder_ == null) {
+          ensureSupplyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supply_);
+          onChanged();
+        } else {
+          supplyBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearSupply() {
+        if (supplyBuilder_ == null) {
+          supply_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          supplyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeSupply(int index) {
+        if (supplyBuilder_ == null) {
+          ensureSupplyIsMutable();
+          supply_.remove(index);
+          onChanged();
+        } else {
+          supplyBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getSupplyBuilder(
+          int index) {
+        return getSupplyFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSupplyOrBuilder(
+          int index) {
+        if (supplyBuilder_ == null) {
+          return supply_.get(index);  } else {
+          return supplyBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getSupplyOrBuilderList() {
+        if (supplyBuilder_ != null) {
+          return supplyBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supply_);
+        }
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addSupplyBuilder() {
+        return getSupplyFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addSupplyBuilder(
+          int index) {
+        return getSupplyFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * supply is the supply of the coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin supply = 1 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getSupplyBuilderList() {
+        return getSupplyFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getSupplyFieldBuilder() {
+        if (supplyBuilder_ == null) {
+          supplyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  supply_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supply_ = null;
+        }
+        return supplyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:chainmain.supply.v1.SupplyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:chainmain.supply.v1.SupplyResponse)
+    private static final com.chainmain.supply.v1.QueryProto.SupplyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.chainmain.supply.v1.QueryProto.SupplyResponse();
+    }
+
+    public static com.chainmain.supply.v1.QueryProto.SupplyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SupplyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SupplyResponse>() {
+      @java.lang.Override
+      public SupplyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SupplyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SupplyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.chainmain.supply.v1.QueryProto.SupplyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_chainmain_supply_v1_SupplyRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_chainmain_supply_v1_SupplyRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_chainmain_supply_v1_SupplyResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_chainmain_supply_v1_SupplyResponse_fieldAccessorTable;
 
@@ -46,12 +1357,12 @@ public final class QueryProto {
       "v1/total\022|\n\014LiquidSupply\022\".chainmain.sup" +
       "ply.v1.SupplyRequest\032#.chainmain.supply." +
       "v1.SupplyResponse\"#\202\323\344\223\002\035\022\033/chainmain/su" +
-      "pply/v1/liquid\032\003\210\002\001B\312\001\n\027com.chainmain.su" +
-      "pply.v1B\nQueryProtoP\001Z5github.com/crypto" +
-      "-org-chain/chain-main/x/supply/types\242\002\003C" +
-      "SX\252\002\023Chainmain.Supply.V1\312\002\023Chainmain\\Sup" +
-      "ply\\V1\342\002\037Chainmain\\Supply\\V1\\GPBMetadata" +
-      "\352\002\025Chainmain::Supply::V1b\006proto3"
+      "pply/v1/liquid\032\003\210\002\001B\310\001\n\027com.chainmain.su" +
+      "pply.v1B\nQueryProtoZ5github.com/crypto-o" +
+      "rg-chain/chain-main/x/supply/types\242\002\003CSX" +
+      "\252\002\023Chainmain.Supply.V1\312\002\023Chainmain\\Suppl" +
+      "y\\V1\342\002\037Chainmain\\Supply\\V1\\GPBMetadata\352\002" +
+      "\025Chainmain::Supply::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

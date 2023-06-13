@@ -14,9 +14,2109 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> 
+        getAssetsList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.AssetProto.Asset getAssets(int index);
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    int getAssetsCount();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+        getAssetsOrBuilderList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> 
+        getPairsList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.PairProto.Pair getPairs(int index);
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    int getPairsCount();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+        getPairsOrBuilderList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    java.util.List<com.comdex.asset.v1beta1.AppProto.AppData> 
+        getAppDataList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.AppProto.AppData getAppData(int index);
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    int getAppDataCount();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> 
+        getAppDataOrBuilderList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppDataOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    java.util.List<com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault> 
+        getExtendedPairVaultList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault getExtendedPairVault(int index);
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    int getExtendedPairVaultCount();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder> 
+        getExtendedPairVaultOrBuilderList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder getExtendedPairVaultOrBuilder(
+        int index);
+
+    /**
+     * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return The params.
+     */
+    com.comdex.asset.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      assets_ = java.util.Collections.emptyList();
+      pairs_ = java.util.Collections.emptyList();
+      appData_ = java.util.Collections.emptyList();
+      extendedPairVault_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GenesisProto.internal_static_comdex_asset_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GenesisProto.internal_static_comdex_asset_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GenesisProto.GenesisState.class, com.comdex.asset.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int ASSETS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> assets_;
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> getAssetsList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+        getAssetsOrBuilderList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAssetsCount() {
+      return assets_.size();
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AssetProto.Asset getAssets(int index) {
+      return assets_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder(
+        int index) {
+      return assets_.get(index);
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> pairs_;
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> getPairsList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+        getPairsOrBuilderList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getPairsCount() {
+      return pairs_.size();
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.Pair getPairs(int index) {
+      return pairs_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder(
+        int index) {
+      return pairs_.get(index);
+    }
+
+    public static final int APPDATA_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.asset.v1beta1.AppProto.AppData> appData_;
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.asset.v1beta1.AppProto.AppData> getAppDataList() {
+      return appData_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> 
+        getAppDataOrBuilderList() {
+      return appData_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAppDataCount() {
+      return appData_.size();
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppData getAppData(int index) {
+      return appData_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppDataOrBuilder(
+        int index) {
+      return appData_.get(index);
+    }
+
+    public static final int EXTENDEDPAIRVAULT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault> extendedPairVault_;
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault> getExtendedPairVaultList() {
+      return extendedPairVault_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder> 
+        getExtendedPairVaultOrBuilderList() {
+      return extendedPairVault_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getExtendedPairVaultCount() {
+      return extendedPairVault_.size();
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault getExtendedPairVault(int index) {
+      return extendedPairVault_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder getExtendedPairVaultOrBuilder(
+        int index) {
+      return extendedPairVault_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 5;
+    private com.comdex.asset.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.comdex.asset.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.comdex.asset.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < assets_.size(); i++) {
+        output.writeMessage(1, assets_.get(i));
+      }
+      for (int i = 0; i < pairs_.size(); i++) {
+        output.writeMessage(2, pairs_.get(i));
+      }
+      for (int i = 0; i < appData_.size(); i++) {
+        output.writeMessage(3, appData_.get(i));
+      }
+      for (int i = 0; i < extendedPairVault_.size(); i++) {
+        output.writeMessage(4, extendedPairVault_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(5, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < assets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, assets_.get(i));
+      }
+      for (int i = 0; i < pairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, pairs_.get(i));
+      }
+      for (int i = 0; i < appData_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, appData_.get(i));
+      }
+      for (int i = 0; i < extendedPairVault_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, extendedPairVault_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GenesisProto.GenesisState other = (com.comdex.asset.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getAssetsList()
+          .equals(other.getAssetsList())) return false;
+      if (!getPairsList()
+          .equals(other.getPairsList())) return false;
+      if (!getAppDataList()
+          .equals(other.getAppDataList())) return false;
+      if (!getExtendedPairVaultList()
+          .equals(other.getExtendedPairVaultList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAssetsCount() > 0) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsList().hashCode();
+      }
+      if (getPairsCount() > 0) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairsList().hashCode();
+      }
+      if (getAppDataCount() > 0) {
+        hash = (37 * hash) + APPDATA_FIELD_NUMBER;
+        hash = (53 * hash) + getAppDataList().hashCode();
+      }
+      if (getExtendedPairVaultCount() > 0) {
+        hash = (37 * hash) + EXTENDEDPAIRVAULT_FIELD_NUMBER;
+        hash = (53 * hash) + getExtendedPairVaultList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.GenesisState)
+        com.comdex.asset.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GenesisProto.internal_static_comdex_asset_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GenesisProto.internal_static_comdex_asset_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GenesisProto.GenesisState.class, com.comdex.asset.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+        } else {
+          assets_ = null;
+          assetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+        } else {
+          pairs_ = null;
+          pairsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (appDataBuilder_ == null) {
+          appData_ = java.util.Collections.emptyList();
+        } else {
+          appData_ = null;
+          appDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (extendedPairVaultBuilder_ == null) {
+          extendedPairVault_ = java.util.Collections.emptyList();
+        } else {
+          extendedPairVault_ = null;
+          extendedPairVaultBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GenesisProto.internal_static_comdex_asset_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GenesisProto.GenesisState build() {
+        com.comdex.asset.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.comdex.asset.v1beta1.GenesisProto.GenesisState result = new com.comdex.asset.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.asset.v1beta1.GenesisProto.GenesisState result) {
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            assets_ = java.util.Collections.unmodifiableList(assets_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.assets_ = assets_;
+        } else {
+          result.assets_ = assetsBuilder_.build();
+        }
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            pairs_ = java.util.Collections.unmodifiableList(pairs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.pairs_ = pairs_;
+        } else {
+          result.pairs_ = pairsBuilder_.build();
+        }
+        if (appDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            appData_ = java.util.Collections.unmodifiableList(appData_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.appData_ = appData_;
+        } else {
+          result.appData_ = appDataBuilder_.build();
+        }
+        if (extendedPairVaultBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            extendedPairVault_ = java.util.Collections.unmodifiableList(extendedPairVault_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.extendedPairVault_ = extendedPairVault_;
+        } else {
+          result.extendedPairVault_ = extendedPairVaultBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.comdex.asset.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.comdex.asset.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (assetsBuilder_ == null) {
+          if (!other.assets_.isEmpty()) {
+            if (assets_.isEmpty()) {
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAssetsIsMutable();
+              assets_.addAll(other.assets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assets_.isEmpty()) {
+            if (assetsBuilder_.isEmpty()) {
+              assetsBuilder_.dispose();
+              assetsBuilder_ = null;
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              assetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsFieldBuilder() : null;
+            } else {
+              assetsBuilder_.addAllMessages(other.assets_);
+            }
+          }
+        }
+        if (pairsBuilder_ == null) {
+          if (!other.pairs_.isEmpty()) {
+            if (pairs_.isEmpty()) {
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePairsIsMutable();
+              pairs_.addAll(other.pairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pairs_.isEmpty()) {
+            if (pairsBuilder_.isEmpty()) {
+              pairsBuilder_.dispose();
+              pairsBuilder_ = null;
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              pairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPairsFieldBuilder() : null;
+            } else {
+              pairsBuilder_.addAllMessages(other.pairs_);
+            }
+          }
+        }
+        if (appDataBuilder_ == null) {
+          if (!other.appData_.isEmpty()) {
+            if (appData_.isEmpty()) {
+              appData_ = other.appData_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAppDataIsMutable();
+              appData_.addAll(other.appData_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.appData_.isEmpty()) {
+            if (appDataBuilder_.isEmpty()) {
+              appDataBuilder_.dispose();
+              appDataBuilder_ = null;
+              appData_ = other.appData_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              appDataBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAppDataFieldBuilder() : null;
+            } else {
+              appDataBuilder_.addAllMessages(other.appData_);
+            }
+          }
+        }
+        if (extendedPairVaultBuilder_ == null) {
+          if (!other.extendedPairVault_.isEmpty()) {
+            if (extendedPairVault_.isEmpty()) {
+              extendedPairVault_ = other.extendedPairVault_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureExtendedPairVaultIsMutable();
+              extendedPairVault_.addAll(other.extendedPairVault_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.extendedPairVault_.isEmpty()) {
+            if (extendedPairVaultBuilder_.isEmpty()) {
+              extendedPairVaultBuilder_.dispose();
+              extendedPairVaultBuilder_ = null;
+              extendedPairVault_ = other.extendedPairVault_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              extendedPairVaultBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getExtendedPairVaultFieldBuilder() : null;
+            } else {
+              extendedPairVaultBuilder_.addAllMessages(other.extendedPairVault_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.asset.v1beta1.AssetProto.Asset m =
+                    input.readMessage(
+                        com.comdex.asset.v1beta1.AssetProto.Asset.parser(),
+                        extensionRegistry);
+                if (assetsBuilder_ == null) {
+                  ensureAssetsIsMutable();
+                  assets_.add(m);
+                } else {
+                  assetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.comdex.asset.v1beta1.PairProto.Pair m =
+                    input.readMessage(
+                        com.comdex.asset.v1beta1.PairProto.Pair.parser(),
+                        extensionRegistry);
+                if (pairsBuilder_ == null) {
+                  ensurePairsIsMutable();
+                  pairs_.add(m);
+                } else {
+                  pairsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.comdex.asset.v1beta1.AppProto.AppData m =
+                    input.readMessage(
+                        com.comdex.asset.v1beta1.AppProto.AppData.parser(),
+                        extensionRegistry);
+                if (appDataBuilder_ == null) {
+                  ensureAppDataIsMutable();
+                  appData_.add(m);
+                } else {
+                  appDataBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault m =
+                    input.readMessage(
+                        com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.parser(),
+                        extensionRegistry);
+                if (extendedPairVaultBuilder_ == null) {
+                  ensureExtendedPairVaultIsMutable();
+                  extendedPairVault_.add(m);
+                } else {
+                  extendedPairVaultBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> assets_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          assets_ = new java.util.ArrayList<com.comdex.asset.v1beta1.AssetProto.Asset>(assets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> assetsBuilder_;
+
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> getAssetsList() {
+        if (assetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assets_);
+        } else {
+          return assetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public int getAssetsCount() {
+        if (assetsBuilder_ == null) {
+          return assets_.size();
+        } else {
+          return assetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset getAssets(int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);
+        } else {
+          return assetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder setAssets(
+          int index, com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.set(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder setAssets(
+          int index, com.comdex.asset.v1beta1.AssetProto.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAssets(com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAssets(
+          int index, com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAssets(
+          com.comdex.asset.v1beta1.AssetProto.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAssets(
+          int index, com.comdex.asset.v1beta1.AssetProto.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAllAssets(
+          java.lang.Iterable<? extends com.comdex.asset.v1beta1.AssetProto.Asset> values) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assets_);
+          onChanged();
+        } else {
+          assetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder clearAssets() {
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          assetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder removeAssets(int index) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.remove(index);
+          onChanged();
+        } else {
+          assetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset.Builder getAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder(
+          int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);  } else {
+          return assetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+           getAssetsOrBuilderList() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assets_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset.Builder addAssetsBuilder() {
+        return getAssetsFieldBuilder().addBuilder(
+            com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset.Builder addAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().addBuilder(
+            index, com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset.Builder> 
+           getAssetsBuilderList() {
+        return getAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder>(
+                  assets_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+
+      private java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> pairs_ =
+        java.util.Collections.emptyList();
+      private void ensurePairsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          pairs_ = new java.util.ArrayList<com.comdex.asset.v1beta1.PairProto.Pair>(pairs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder> pairsBuilder_;
+
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> getPairsList() {
+        if (pairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pairs_);
+        } else {
+          return pairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public int getPairsCount() {
+        if (pairsBuilder_ == null) {
+          return pairs_.size();
+        } else {
+          return pairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair getPairs(int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);
+        } else {
+          return pairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder setPairs(
+          int index, com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.set(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder setPairs(
+          int index, com.comdex.asset.v1beta1.PairProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder addPairs(com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder addPairs(
+          int index, com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder addPairs(
+          com.comdex.asset.v1beta1.PairProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder addPairs(
+          int index, com.comdex.asset.v1beta1.PairProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder addAllPairs(
+          java.lang.Iterable<? extends com.comdex.asset.v1beta1.PairProto.Pair> values) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pairs_);
+          onChanged();
+        } else {
+          pairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder clearPairs() {
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public Builder removePairs(int index) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.remove(index);
+          onChanged();
+        } else {
+          pairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair.Builder getPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder(
+          int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);  } else {
+          return pairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+           getPairsOrBuilderList() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pairs_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair.Builder addPairsBuilder() {
+        return getPairsFieldBuilder().addBuilder(
+            com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair.Builder addPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().addBuilder(
+            index, com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 2 [json_name = "pairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pairs&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.PairProto.Pair.Builder> 
+           getPairsBuilderList() {
+        return getPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder>(
+                  pairs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+
+      private java.util.List<com.comdex.asset.v1beta1.AppProto.AppData> appData_ =
+        java.util.Collections.emptyList();
+      private void ensureAppDataIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          appData_ = new java.util.ArrayList<com.comdex.asset.v1beta1.AppProto.AppData>(appData_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> appDataBuilder_;
+
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.AppProto.AppData> getAppDataList() {
+        if (appDataBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(appData_);
+        } else {
+          return appDataBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public int getAppDataCount() {
+        if (appDataBuilder_ == null) {
+          return appData_.size();
+        } else {
+          return appDataBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppData getAppData(int index) {
+        if (appDataBuilder_ == null) {
+          return appData_.get(index);
+        } else {
+          return appDataBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder setAppData(
+          int index, com.comdex.asset.v1beta1.AppProto.AppData value) {
+        if (appDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAppDataIsMutable();
+          appData_.set(index, value);
+          onChanged();
+        } else {
+          appDataBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder setAppData(
+          int index, com.comdex.asset.v1beta1.AppProto.AppData.Builder builderForValue) {
+        if (appDataBuilder_ == null) {
+          ensureAppDataIsMutable();
+          appData_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          appDataBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder addAppData(com.comdex.asset.v1beta1.AppProto.AppData value) {
+        if (appDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAppDataIsMutable();
+          appData_.add(value);
+          onChanged();
+        } else {
+          appDataBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder addAppData(
+          int index, com.comdex.asset.v1beta1.AppProto.AppData value) {
+        if (appDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAppDataIsMutable();
+          appData_.add(index, value);
+          onChanged();
+        } else {
+          appDataBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder addAppData(
+          com.comdex.asset.v1beta1.AppProto.AppData.Builder builderForValue) {
+        if (appDataBuilder_ == null) {
+          ensureAppDataIsMutable();
+          appData_.add(builderForValue.build());
+          onChanged();
+        } else {
+          appDataBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder addAppData(
+          int index, com.comdex.asset.v1beta1.AppProto.AppData.Builder builderForValue) {
+        if (appDataBuilder_ == null) {
+          ensureAppDataIsMutable();
+          appData_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          appDataBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder addAllAppData(
+          java.lang.Iterable<? extends com.comdex.asset.v1beta1.AppProto.AppData> values) {
+        if (appDataBuilder_ == null) {
+          ensureAppDataIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, appData_);
+          onChanged();
+        } else {
+          appDataBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder clearAppData() {
+        if (appDataBuilder_ == null) {
+          appData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          appDataBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public Builder removeAppData(int index) {
+        if (appDataBuilder_ == null) {
+          ensureAppDataIsMutable();
+          appData_.remove(index);
+          onChanged();
+        } else {
+          appDataBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppData.Builder getAppDataBuilder(
+          int index) {
+        return getAppDataFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppDataOrBuilder(
+          int index) {
+        if (appDataBuilder_ == null) {
+          return appData_.get(index);  } else {
+          return appDataBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> 
+           getAppDataOrBuilderList() {
+        if (appDataBuilder_ != null) {
+          return appDataBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(appData_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppData.Builder addAppDataBuilder() {
+        return getAppDataFieldBuilder().addBuilder(
+            com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppData.Builder addAppDataBuilder(
+          int index) {
+        return getAppDataFieldBuilder().addBuilder(
+            index, com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AppData appData = 3 [json_name = "appData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"appData&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.AppProto.AppData.Builder> 
+           getAppDataBuilderList() {
+        return getAppDataFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> 
+          getAppDataFieldBuilder() {
+        if (appDataBuilder_ == null) {
+          appDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder>(
+                  appData_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          appData_ = null;
+        }
+        return appDataBuilder_;
+      }
+
+      private java.util.List<com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault> extendedPairVault_ =
+        java.util.Collections.emptyList();
+      private void ensureExtendedPairVaultIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          extendedPairVault_ = new java.util.ArrayList<com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault>(extendedPairVault_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder> extendedPairVaultBuilder_;
+
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault> getExtendedPairVaultList() {
+        if (extendedPairVaultBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(extendedPairVault_);
+        } else {
+          return extendedPairVaultBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public int getExtendedPairVaultCount() {
+        if (extendedPairVaultBuilder_ == null) {
+          return extendedPairVault_.size();
+        } else {
+          return extendedPairVaultBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault getExtendedPairVault(int index) {
+        if (extendedPairVaultBuilder_ == null) {
+          return extendedPairVault_.get(index);
+        } else {
+          return extendedPairVaultBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder setExtendedPairVault(
+          int index, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault value) {
+        if (extendedPairVaultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExtendedPairVaultIsMutable();
+          extendedPairVault_.set(index, value);
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder setExtendedPairVault(
+          int index, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder builderForValue) {
+        if (extendedPairVaultBuilder_ == null) {
+          ensureExtendedPairVaultIsMutable();
+          extendedPairVault_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder addExtendedPairVault(com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault value) {
+        if (extendedPairVaultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExtendedPairVaultIsMutable();
+          extendedPairVault_.add(value);
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder addExtendedPairVault(
+          int index, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault value) {
+        if (extendedPairVaultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExtendedPairVaultIsMutable();
+          extendedPairVault_.add(index, value);
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder addExtendedPairVault(
+          com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder builderForValue) {
+        if (extendedPairVaultBuilder_ == null) {
+          ensureExtendedPairVaultIsMutable();
+          extendedPairVault_.add(builderForValue.build());
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder addExtendedPairVault(
+          int index, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder builderForValue) {
+        if (extendedPairVaultBuilder_ == null) {
+          ensureExtendedPairVaultIsMutable();
+          extendedPairVault_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder addAllExtendedPairVault(
+          java.lang.Iterable<? extends com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault> values) {
+        if (extendedPairVaultBuilder_ == null) {
+          ensureExtendedPairVaultIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, extendedPairVault_);
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder clearExtendedPairVault() {
+        if (extendedPairVaultBuilder_ == null) {
+          extendedPairVault_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public Builder removeExtendedPairVault(int index) {
+        if (extendedPairVaultBuilder_ == null) {
+          ensureExtendedPairVaultIsMutable();
+          extendedPairVault_.remove(index);
+          onChanged();
+        } else {
+          extendedPairVaultBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder getExtendedPairVaultBuilder(
+          int index) {
+        return getExtendedPairVaultFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder getExtendedPairVaultOrBuilder(
+          int index) {
+        if (extendedPairVaultBuilder_ == null) {
+          return extendedPairVault_.get(index);  } else {
+          return extendedPairVaultBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder> 
+           getExtendedPairVaultOrBuilderList() {
+        if (extendedPairVaultBuilder_ != null) {
+          return extendedPairVaultBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(extendedPairVault_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder addExtendedPairVaultBuilder() {
+        return getExtendedPairVaultFieldBuilder().addBuilder(
+            com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder addExtendedPairVaultBuilder(
+          int index) {
+        return getExtendedPairVaultFieldBuilder().addBuilder(
+            index, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.ExtendedPairVault extendedPairVault = 4 [json_name = "extendedPairVault", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"extendedPairVault&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder> 
+           getExtendedPairVaultBuilderList() {
+        return getExtendedPairVaultFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder> 
+          getExtendedPairVaultFieldBuilder() {
+        if (extendedPairVaultBuilder_ == null) {
+          extendedPairVaultBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVaultOrBuilder>(
+                  extendedPairVault_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          extendedPairVault_ = null;
+        }
+        return extendedPairVaultBuilder_;
+      }
+
+      private com.comdex.asset.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.ParamsProto.Params, com.comdex.asset.v1beta1.ParamsProto.Params.Builder, com.comdex.asset.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       * @return The params.
+       */
+      public com.comdex.asset.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.comdex.asset.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder setParams(com.comdex.asset.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder setParams(
+          com.comdex.asset.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder mergeParams(com.comdex.asset.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            params_ != null &&
+            params_ != com.comdex.asset.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.comdex.asset.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Params params = 5 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.ParamsProto.Params, com.comdex.asset.v1beta1.ParamsProto.Params.Builder, com.comdex.asset.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.asset.v1beta1.ParamsProto.Params, com.comdex.asset.v1beta1.ParamsProto.Params.Builder, com.comdex.asset.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.GenesisState)
+    private static final com.comdex.asset.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.comdex.asset.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -45,13 +2145,13 @@ public final class GenesisProto {
       "endedPairVaultB \310\336\037\000\362\336\037\030yaml:\"extendedPa" +
       "irVault\"R\021extendedPairVault\022K\n\006params\030\005 " +
       "\001(\0132\034.comdex.asset.v1beta1.ParamsB\025\310\336\037\000\362" +
-      "\336\037\ryaml:\"params\"R\006paramsB\323\001\n\030com.comdex." +
-      "asset.v1beta1B\014GenesisProtoP\001Z/github.co" +
-      "m/comdex-official/comdex/x/asset/types\242\002" +
-      "\003CAX\252\002\024Comdex.Asset.V1beta1\312\002\024Comdex\\Ass" +
-      "et\\V1beta1\342\002 Comdex\\Asset\\V1beta1\\GPBMet" +
-      "adata\352\002\026Comdex::Asset::V1beta1\310\341\036\000\250\342\036\000b\006" +
-      "proto3"
+      "\336\037\ryaml:\"params\"R\006paramsB\321\001\n\030com.comdex." +
+      "asset.v1beta1B\014GenesisProtoZ/github.com/" +
+      "comdex-official/comdex/x/asset/types\242\002\003C" +
+      "AX\252\002\024Comdex.Asset.V1beta1\312\002\024Comdex\\Asset" +
+      "\\V1beta1\342\002 Comdex\\Asset\\V1beta1\\GPBMetad" +
+      "ata\352\002\026Comdex::Asset::V1beta1\310\341\036\000\250\342\036\000b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

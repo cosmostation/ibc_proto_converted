@@ -14,14 +14,1077 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TalliedVoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.vote.v1beta1.TalliedVote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes tally = 1 [json_name = "tally", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The tally.
+     */
+    com.google.protobuf.ByteString getTally();
+
+    /**
+     * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     * @return Whether the data field is set.
+     */
+    boolean hasData();
+    /**
+     * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.Any getData();
+    /**
+     * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getDataOrBuilder();
+
+    /**
+     * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+     * @return The pollId.
+     */
+    long getPollId();
+
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    int getIsVoterLateCount();
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    boolean containsIsVoterLate(
+        java.lang.String key);
+    /**
+     * Use {@link #getIsVoterLateMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getIsVoterLate();
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getIsVoterLateMap();
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    boolean getIsVoterLateOrDefault(
+        java.lang.String key,
+        boolean defaultValue);
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    boolean getIsVoterLateOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * <pre>
+   * TalliedVote represents a vote for a poll with the accumulated stake of all
+   * validators voting for the same data
+   * </pre>
+   *
+   * Protobuf type {@code axelar.vote.v1beta1.TalliedVote}
+   */
+  public static final class TalliedVote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.vote.v1beta1.TalliedVote)
+      TalliedVoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TalliedVote.newBuilder() to construct.
+    private TalliedVote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TalliedVote() {
+      tally_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TalliedVote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.vote.v1beta1.TypesProto.internal_static_axelar_vote_v1beta1_TalliedVote_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetIsVoterLate();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.vote.v1beta1.TypesProto.internal_static_axelar_vote_v1beta1_TalliedVote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.vote.v1beta1.TypesProto.TalliedVote.class, com.axelar.vote.v1beta1.TypesProto.TalliedVote.Builder.class);
+    }
+
+    public static final int TALLY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString tally_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes tally = 1 [json_name = "tally", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The tally.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getTally() {
+      return tally_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 3;
+    private com.google.protobuf.Any data_;
+    /**
+     * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     * @return Whether the data field is set.
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return data_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getData() {
+      return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
+    }
+    /**
+     * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
+      return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
+    }
+
+    public static final int POLL_ID_FIELD_NUMBER = 4;
+    private long pollId_ = 0L;
+    /**
+     * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+     * @return The pollId.
+     */
+    @java.lang.Override
+    public long getPollId() {
+      return pollId_;
+    }
+
+    public static final int IS_VOTER_LATE_FIELD_NUMBER = 5;
+    private static final class IsVoterLateDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Boolean> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                  com.axelar.vote.v1beta1.TypesProto.internal_static_axelar_vote_v1beta1_TalliedVote_IsVoterLateEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> isVoterLate_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+    internalGetIsVoterLate() {
+      if (isVoterLate_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            IsVoterLateDefaultEntryHolder.defaultEntry);
+      }
+      return isVoterLate_;
+    }
+    public int getIsVoterLateCount() {
+      return internalGetIsVoterLate().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    @java.lang.Override
+    public boolean containsIsVoterLate(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetIsVoterLate().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getIsVoterLateMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getIsVoterLate() {
+      return getIsVoterLateMap();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.Boolean> getIsVoterLateMap() {
+      return internalGetIsVoterLate().getMap();
+    }
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    @java.lang.Override
+    public boolean getIsVoterLateOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetIsVoterLate().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+     */
+    @java.lang.Override
+    public boolean getIsVoterLateOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetIsVoterLate().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!tally_.isEmpty()) {
+        output.writeBytes(1, tally_);
+      }
+      if (data_ != null) {
+        output.writeMessage(3, getData());
+      }
+      if (pollId_ != 0L) {
+        output.writeUInt64(4, pollId_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetIsVoterLate(),
+          IsVoterLateDefaultEntryHolder.defaultEntry,
+          5);
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!tally_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, tally_);
+      }
+      if (data_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getData());
+      }
+      if (pollId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, pollId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetIsVoterLate().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        isVoterLate__ = IsVoterLateDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, isVoterLate__);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.vote.v1beta1.TypesProto.TalliedVote)) {
+        return super.equals(obj);
+      }
+      com.axelar.vote.v1beta1.TypesProto.TalliedVote other = (com.axelar.vote.v1beta1.TypesProto.TalliedVote) obj;
+
+      if (!getTally()
+          .equals(other.getTally())) return false;
+      if (hasData() != other.hasData()) return false;
+      if (hasData()) {
+        if (!getData()
+            .equals(other.getData())) return false;
+      }
+      if (getPollId()
+          != other.getPollId()) return false;
+      if (!internalGetIsVoterLate().equals(
+          other.internalGetIsVoterLate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TALLY_FIELD_NUMBER;
+      hash = (53 * hash) + getTally().hashCode();
+      if (hasData()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getData().hashCode();
+      }
+      hash = (37 * hash) + POLL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPollId());
+      if (!internalGetIsVoterLate().getMap().isEmpty()) {
+        hash = (37 * hash) + IS_VOTER_LATE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetIsVoterLate().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.vote.v1beta1.TypesProto.TalliedVote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TalliedVote represents a vote for a poll with the accumulated stake of all
+     * validators voting for the same data
+     * </pre>
+     *
+     * Protobuf type {@code axelar.vote.v1beta1.TalliedVote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.vote.v1beta1.TalliedVote)
+        com.axelar.vote.v1beta1.TypesProto.TalliedVoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.vote.v1beta1.TypesProto.internal_static_axelar_vote_v1beta1_TalliedVote_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetIsVoterLate();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetMutableIsVoterLate();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.vote.v1beta1.TypesProto.internal_static_axelar_vote_v1beta1_TalliedVote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.vote.v1beta1.TypesProto.TalliedVote.class, com.axelar.vote.v1beta1.TypesProto.TalliedVote.Builder.class);
+      }
+
+      // Construct using com.axelar.vote.v1beta1.TypesProto.TalliedVote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tally_ = com.google.protobuf.ByteString.EMPTY;
+        data_ = null;
+        if (dataBuilder_ != null) {
+          dataBuilder_.dispose();
+          dataBuilder_ = null;
+        }
+        pollId_ = 0L;
+        internalGetMutableIsVoterLate().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.vote.v1beta1.TypesProto.internal_static_axelar_vote_v1beta1_TalliedVote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TypesProto.TalliedVote getDefaultInstanceForType() {
+        return com.axelar.vote.v1beta1.TypesProto.TalliedVote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TypesProto.TalliedVote build() {
+        com.axelar.vote.v1beta1.TypesProto.TalliedVote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TypesProto.TalliedVote buildPartial() {
+        com.axelar.vote.v1beta1.TypesProto.TalliedVote result = new com.axelar.vote.v1beta1.TypesProto.TalliedVote(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.vote.v1beta1.TypesProto.TalliedVote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tally_ = tally_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.data_ = dataBuilder_ == null
+              ? data_
+              : dataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pollId_ = pollId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isVoterLate_ = internalGetIsVoterLate();
+          result.isVoterLate_.makeImmutable();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.vote.v1beta1.TypesProto.TalliedVote) {
+          return mergeFrom((com.axelar.vote.v1beta1.TypesProto.TalliedVote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.vote.v1beta1.TypesProto.TalliedVote other) {
+        if (other == com.axelar.vote.v1beta1.TypesProto.TalliedVote.getDefaultInstance()) return this;
+        if (other.getTally() != com.google.protobuf.ByteString.EMPTY) {
+          setTally(other.getTally());
+        }
+        if (other.hasData()) {
+          mergeData(other.getData());
+        }
+        if (other.getPollId() != 0L) {
+          setPollId(other.getPollId());
+        }
+        internalGetMutableIsVoterLate().mergeFrom(
+            other.internalGetIsVoterLate());
+        bitField0_ |= 0x00000008;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                tally_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 26: {
+                input.readMessage(
+                    getDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              case 32: {
+                pollId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 32
+              case 42: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+                isVoterLate__ = input.readMessage(
+                    IsVoterLateDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableIsVoterLate().getMutableMap().put(
+                    isVoterLate__.getKey(), isVoterLate__.getValue());
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString tally_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes tally = 1 [json_name = "tally", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return The tally.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getTally() {
+        return tally_;
+      }
+      /**
+       * <code>bytes tally = 1 [json_name = "tally", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @param value The tally to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTally(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        tally_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes tally = 1 [json_name = "tally", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTally() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tally_ = getDefaultInstance().getTally();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Any data_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       * @return Whether the data field is set.
+       */
+      public boolean hasData() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       * @return The data.
+       */
+      public com.google.protobuf.Any getData() {
+        if (dataBuilder_ == null) {
+          return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
+        } else {
+          return dataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public Builder setData(com.google.protobuf.Any value) {
+        if (dataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+        } else {
+          dataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public Builder setData(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (dataBuilder_ == null) {
+          data_ = builderForValue.build();
+        } else {
+          dataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public Builder mergeData(com.google.protobuf.Any value) {
+        if (dataBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            data_ != null &&
+            data_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getDataBuilder().mergeFrom(value);
+          } else {
+            data_ = value;
+          }
+        } else {
+          dataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = null;
+        if (dataBuilder_ != null) {
+          dataBuilder_.dispose();
+          dataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public com.google.protobuf.Any.Builder getDataBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
+        if (dataBuilder_ != null) {
+          return dataBuilder_.getMessageOrBuilder();
+        } else {
+          return data_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : data_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getDataFieldBuilder() {
+        if (dataBuilder_ == null) {
+          dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getData(),
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        return dataBuilder_;
+      }
+
+      private long pollId_ ;
+      /**
+       * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+       * @return The pollId.
+       */
+      @java.lang.Override
+      public long getPollId() {
+        return pollId_;
+      }
+      /**
+       * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+       * @param value The pollId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPollId(long value) {
+
+        pollId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPollId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pollId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Boolean> isVoterLate_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+          internalGetIsVoterLate() {
+        if (isVoterLate_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              IsVoterLateDefaultEntryHolder.defaultEntry);
+        }
+        return isVoterLate_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+          internalGetMutableIsVoterLate() {
+        if (isVoterLate_ == null) {
+          isVoterLate_ = com.google.protobuf.MapField.newMapField(
+              IsVoterLateDefaultEntryHolder.defaultEntry);
+        }
+        if (!isVoterLate_.isMutable()) {
+          isVoterLate_ = isVoterLate_.copy();
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return isVoterLate_;
+      }
+      public int getIsVoterLateCount() {
+        return internalGetIsVoterLate().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+       */
+      @java.lang.Override
+      public boolean containsIsVoterLate(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetIsVoterLate().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getIsVoterLateMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean> getIsVoterLate() {
+        return getIsVoterLateMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.Boolean> getIsVoterLateMap() {
+        return internalGetIsVoterLate().getMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+       */
+      @java.lang.Override
+      public boolean getIsVoterLateOrDefault(
+          java.lang.String key,
+          boolean defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetIsVoterLate().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+       */
+      @java.lang.Override
+      public boolean getIsVoterLateOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetIsVoterLate().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearIsVoterLate() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        internalGetMutableIsVoterLate().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+       */
+      public Builder removeIsVoterLate(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableIsVoterLate().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean>
+          getMutableIsVoterLate() {
+        bitField0_ |= 0x00000008;
+        return internalGetMutableIsVoterLate().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+       */
+      public Builder putIsVoterLate(
+          java.lang.String key,
+          boolean value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+
+        internalGetMutableIsVoterLate().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bool&gt; is_voter_late = 5 [json_name = "isVoterLate"];</code>
+       */
+      public Builder putAllIsVoterLate(
+          java.util.Map<java.lang.String, java.lang.Boolean> values) {
+        internalGetMutableIsVoterLate().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.vote.v1beta1.TalliedVote)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.vote.v1beta1.TalliedVote)
+    private static final com.axelar.vote.v1beta1.TypesProto.TalliedVote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.vote.v1beta1.TypesProto.TalliedVote();
+    }
+
+    public static com.axelar.vote.v1beta1.TypesProto.TalliedVote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TalliedVote>
+        PARSER = new com.google.protobuf.AbstractParser<TalliedVote>() {
+      @java.lang.Override
+      public TalliedVote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TalliedVote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TalliedVote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.vote.v1beta1.TypesProto.TalliedVote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_vote_v1beta1_TalliedVote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_vote_v1beta1_TalliedVote_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_vote_v1beta1_TalliedVote_IsVoterLateEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_vote_v1beta1_TalliedVote_IsVoterLateEntry_fieldAccessorTable;
 
@@ -48,12 +1111,12 @@ public final class TypesProto {
       "r.vote.v1beta1.TalliedVote.IsVoterLateEn" +
       "tryR\013isVoterLate\032>\n\020IsVoterLateEntry\022\020\n\003" +
       "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\010R\005value:\0028\001" +
-      ":\004\230\241\037\001J\004\010\002\020\003B\312\001\n\027com.axelar.vote.v1beta1" +
-      "B\nTypesProtoP\001Z1github.com/axelarnetwork" +
-      "/axelar-core/x/vote/types\242\002\003AVX\252\002\023Axelar" +
-      ".Vote.V1beta1\312\002\023Axelar\\Vote\\V1beta1\342\002\037Ax" +
-      "elar\\Vote\\V1beta1\\GPBMetadata\352\002\025Axelar::" +
-      "Vote::V1beta1\310\341\036\000b\006proto3"
+      ":\004\230\241\037\001J\004\010\002\020\003B\310\001\n\027com.axelar.vote.v1beta1" +
+      "B\nTypesProtoZ1github.com/axelarnetwork/a" +
+      "xelar-core/x/vote/types\242\002\003AVX\252\002\023Axelar.V" +
+      "ote.V1beta1\312\002\023Axelar\\Vote\\V1beta1\342\002\037Axel" +
+      "ar\\Vote\\V1beta1\\GPBMetadata\352\002\025Axelar::Vo" +
+      "te::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

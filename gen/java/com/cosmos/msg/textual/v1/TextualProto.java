@@ -51,11 +51,11 @@ public final class TextualProto {
       "osmos.msg.textual.v1\032 google/protobuf/de" +
       "scriptor.proto:X\n\026expert_custom_renderer" +
       "\022\037.google.protobuf.MessageOptions\030\371\214\246\005 \001" +
-      "(\tR\024expertCustomRendererB\240\001\n\031com.cosmos." +
-      "msg.textual.v1B\014TextualProtoP\001\242\002\003CMT\252\002\025C" +
-      "osmos.Msg.Textual.V1\312\002\025Cosmos\\Msg\\Textua" +
-      "l\\V1\342\002!Cosmos\\Msg\\Textual\\V1\\GPBMetadata" +
-      "\352\002\030Cosmos::Msg::Textual::V1b\006proto3"
+      "(\tR\024expertCustomRendererB\236\001\n\031com.cosmos." +
+      "msg.textual.v1B\014TextualProto\242\002\003CMT\252\002\025Cos" +
+      "mos.Msg.Textual.V1\312\002\025Cosmos\\Msg\\Textual\\" +
+      "V1\342\002!Cosmos\\Msg\\Textual\\V1\\GPBMetadata\352\002" +
+      "\030Cosmos::Msg::Textual::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

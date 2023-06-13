@@ -36,16 +36,16 @@ public final class ServiceProto {
       "est\032J.assetmantle.modules.classification" +
       "s.queries.classifications.QueryResponse\"" +
       "7\202\323\344\223\0021\022//mantle/classifications/v1beta1" +
-      "/classificationsB\341\002\n?com.assetmantle.mod" +
+      "/classificationsB\337\002\n?com.assetmantle.mod" +
       "ules.classifications.queries.classificat" +
-      "ionsB\014ServiceProtoP\001\242\002\005AMCQC\252\002;Assetmant" +
-      "le.Modules.Classifications.Queries.Class" +
-      "ifications\312\002;Assetmantle\\Modules\\Classif" +
-      "ications\\Queries\\Classifications\342\002GAsset" +
-      "mantle\\Modules\\Classifications\\Queries\\C" +
-      "lassifications\\GPBMetadata\352\002?Assetmantle" +
-      "::Modules::Classifications::Queries::Cla" +
-      "ssificationsb\006proto3"
+      "ionsB\014ServiceProto\242\002\005AMCQC\252\002;Assetmantle" +
+      ".Modules.Classifications.Queries.Classif" +
+      "ications\312\002;Assetmantle\\Modules\\Classific" +
+      "ations\\Queries\\Classifications\342\002GAssetma" +
+      "ntle\\Modules\\Classifications\\Queries\\Cla" +
+      "ssifications\\GPBMetadata\352\002?Assetmantle::" +
+      "Modules::Classifications::Queries::Class" +
+      "ificationsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

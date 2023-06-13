@@ -14,9 +14,1615 @@ public final class CollectionProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.Collection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> 
+        getMintRoyaltiesList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index);
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    int getMintRoyaltiesCount();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getMintRoyaltiesOrBuilderList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> 
+        getResaleRoyaltiesList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index);
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    int getResaleRoyaltiesCount();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getResaleRoyaltiesOrBuilderList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+        int index);
+
+    /**
+     * <code>bool verified = 5 [json_name = "verified"];</code>
+     * @return The verified.
+     */
+    boolean getVerified();
+
+    /**
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * <pre>
+   * Collection listed for sale in the marketplace
+   * </pre>
+   *
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.Collection}
+   */
+  public static final class Collection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.Collection)
+      CollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Collection.newBuilder() to construct.
+    private Collection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Collection() {
+      denomId_ = "";
+      mintRoyalties_ = java.util.Collections.emptyList();
+      resaleRoyalties_ = java.util.Collections.emptyList();
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Collection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.CollectionProto.internal_static_cudoventures_cudosnode_marketplace_Collection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.CollectionProto.internal_static_cudoventures_cudosnode_marketplace_Collection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.CollectionProto.Collection.class, com.cudoventures.cudosnode.marketplace.CollectionProto.Collection.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int DENOMID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINTROYALTIES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> mintRoyalties_;
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getMintRoyaltiesList() {
+      return mintRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getMintRoyaltiesOrBuilderList() {
+      return mintRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMintRoyaltiesCount() {
+      return mintRoyalties_.size();
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index) {
+      return mintRoyalties_.get(index);
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+        int index) {
+      return mintRoyalties_.get(index);
+    }
+
+    public static final int RESALEROYALTIES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> resaleRoyalties_;
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getResaleRoyaltiesList() {
+      return resaleRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getResaleRoyaltiesOrBuilderList() {
+      return resaleRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getResaleRoyaltiesCount() {
+      return resaleRoyalties_.size();
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index) {
+      return resaleRoyalties_.get(index);
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+        int index) {
+      return resaleRoyalties_.get(index);
+    }
+
+    public static final int VERIFIED_FIELD_NUMBER = 5;
+    private boolean verified_ = false;
+    /**
+     * <code>bool verified = 5 [json_name = "verified"];</code>
+     * @return The verified.
+     */
+    @java.lang.Override
+    public boolean getVerified() {
+      return verified_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denomId_);
+      }
+      for (int i = 0; i < mintRoyalties_.size(); i++) {
+        output.writeMessage(3, mintRoyalties_.get(i));
+      }
+      for (int i = 0; i < resaleRoyalties_.size(); i++) {
+        output.writeMessage(4, resaleRoyalties_.get(i));
+      }
+      if (verified_ != false) {
+        output.writeBool(5, verified_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denomId_);
+      }
+      for (int i = 0; i < mintRoyalties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, mintRoyalties_.get(i));
+      }
+      for (int i = 0; i < resaleRoyalties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, resaleRoyalties_.get(i));
+      }
+      if (verified_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, verified_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.CollectionProto.Collection)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.CollectionProto.Collection other = (com.cudoventures.cudosnode.marketplace.CollectionProto.Collection) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getMintRoyaltiesList()
+          .equals(other.getMintRoyaltiesList())) return false;
+      if (!getResaleRoyaltiesList()
+          .equals(other.getResaleRoyaltiesList())) return false;
+      if (getVerified()
+          != other.getVerified()) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + DENOMID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      if (getMintRoyaltiesCount() > 0) {
+        hash = (37 * hash) + MINTROYALTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getMintRoyaltiesList().hashCode();
+      }
+      if (getResaleRoyaltiesCount() > 0) {
+        hash = (37 * hash) + RESALEROYALTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getResaleRoyaltiesList().hashCode();
+      }
+      hash = (37 * hash) + VERIFIED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getVerified());
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.CollectionProto.Collection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Collection listed for sale in the marketplace
+     * </pre>
+     *
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.Collection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.Collection)
+        com.cudoventures.cudosnode.marketplace.CollectionProto.CollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.CollectionProto.internal_static_cudoventures_cudosnode_marketplace_Collection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.CollectionProto.internal_static_cudoventures_cudosnode_marketplace_Collection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.CollectionProto.Collection.class, com.cudoventures.cudosnode.marketplace.CollectionProto.Collection.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.CollectionProto.Collection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        denomId_ = "";
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyalties_ = java.util.Collections.emptyList();
+        } else {
+          mintRoyalties_ = null;
+          mintRoyaltiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyalties_ = java.util.Collections.emptyList();
+        } else {
+          resaleRoyalties_ = null;
+          resaleRoyaltiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        verified_ = false;
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.CollectionProto.internal_static_cudoventures_cudosnode_marketplace_Collection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.CollectionProto.Collection getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.CollectionProto.Collection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.CollectionProto.Collection build() {
+        com.cudoventures.cudosnode.marketplace.CollectionProto.Collection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.CollectionProto.Collection buildPartial() {
+        com.cudoventures.cudosnode.marketplace.CollectionProto.Collection result = new com.cudoventures.cudosnode.marketplace.CollectionProto.Collection(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cudoventures.cudosnode.marketplace.CollectionProto.Collection result) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            mintRoyalties_ = java.util.Collections.unmodifiableList(mintRoyalties_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.mintRoyalties_ = mintRoyalties_;
+        } else {
+          result.mintRoyalties_ = mintRoyaltiesBuilder_.build();
+        }
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            resaleRoyalties_ = java.util.Collections.unmodifiableList(resaleRoyalties_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.resaleRoyalties_ = resaleRoyalties_;
+        } else {
+          result.resaleRoyalties_ = resaleRoyaltiesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.CollectionProto.Collection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.verified_ = verified_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.CollectionProto.Collection) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.CollectionProto.Collection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.CollectionProto.Collection other) {
+        if (other == com.cudoventures.cudosnode.marketplace.CollectionProto.Collection.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (mintRoyaltiesBuilder_ == null) {
+          if (!other.mintRoyalties_.isEmpty()) {
+            if (mintRoyalties_.isEmpty()) {
+              mintRoyalties_ = other.mintRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureMintRoyaltiesIsMutable();
+              mintRoyalties_.addAll(other.mintRoyalties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mintRoyalties_.isEmpty()) {
+            if (mintRoyaltiesBuilder_.isEmpty()) {
+              mintRoyaltiesBuilder_.dispose();
+              mintRoyaltiesBuilder_ = null;
+              mintRoyalties_ = other.mintRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              mintRoyaltiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintRoyaltiesFieldBuilder() : null;
+            } else {
+              mintRoyaltiesBuilder_.addAllMessages(other.mintRoyalties_);
+            }
+          }
+        }
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (!other.resaleRoyalties_.isEmpty()) {
+            if (resaleRoyalties_.isEmpty()) {
+              resaleRoyalties_ = other.resaleRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureResaleRoyaltiesIsMutable();
+              resaleRoyalties_.addAll(other.resaleRoyalties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.resaleRoyalties_.isEmpty()) {
+            if (resaleRoyaltiesBuilder_.isEmpty()) {
+              resaleRoyaltiesBuilder_.dispose();
+              resaleRoyaltiesBuilder_ = null;
+              resaleRoyalties_ = other.resaleRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              resaleRoyaltiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResaleRoyaltiesFieldBuilder() : null;
+            } else {
+              resaleRoyaltiesBuilder_.addAllMessages(other.resaleRoyalties_);
+            }
+          }
+        }
+        if (other.getVerified() != false) {
+          setVerified(other.getVerified());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty m =
+                    input.readMessage(
+                        com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.parser(),
+                        extensionRegistry);
+                if (mintRoyaltiesBuilder_ == null) {
+                  ensureMintRoyaltiesIsMutable();
+                  mintRoyalties_.add(m);
+                } else {
+                  mintRoyaltiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty m =
+                    input.readMessage(
+                        com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.parser(),
+                        extensionRegistry);
+                if (resaleRoyaltiesBuilder_ == null) {
+                  ensureResaleRoyaltiesIsMutable();
+                  resaleRoyalties_.add(m);
+                } else {
+                  resaleRoyaltiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 40: {
+                verified_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> mintRoyalties_ =
+        java.util.Collections.emptyList();
+      private void ensureMintRoyaltiesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          mintRoyalties_ = new java.util.ArrayList<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty>(mintRoyalties_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> mintRoyaltiesBuilder_;
+
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getMintRoyaltiesList() {
+        if (mintRoyaltiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mintRoyalties_);
+        } else {
+          return mintRoyaltiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMintRoyaltiesCount() {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.size();
+        } else {
+          return mintRoyaltiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.get(index);
+        } else {
+          return mintRoyaltiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.set(index, value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(index, value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMintRoyalties(
+          java.lang.Iterable<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> values) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mintRoyalties_);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMintRoyalties() {
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyalties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMintRoyalties(int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.remove(index);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder getMintRoyaltiesBuilder(
+          int index) {
+        return getMintRoyaltiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+          int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.get(index);  } else {
+          return mintRoyaltiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+           getMintRoyaltiesOrBuilderList() {
+        if (mintRoyaltiesBuilder_ != null) {
+          return mintRoyaltiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mintRoyalties_);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addMintRoyaltiesBuilder() {
+        return getMintRoyaltiesFieldBuilder().addBuilder(
+            com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addMintRoyaltiesBuilder(
+          int index) {
+        return getMintRoyaltiesFieldBuilder().addBuilder(
+            index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder> 
+           getMintRoyaltiesBuilderList() {
+        return getMintRoyaltiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+          getMintRoyaltiesFieldBuilder() {
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyaltiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder>(
+                  mintRoyalties_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mintRoyalties_ = null;
+        }
+        return mintRoyaltiesBuilder_;
+      }
+
+      private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> resaleRoyalties_ =
+        java.util.Collections.emptyList();
+      private void ensureResaleRoyaltiesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          resaleRoyalties_ = new java.util.ArrayList<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty>(resaleRoyalties_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> resaleRoyaltiesBuilder_;
+
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getResaleRoyaltiesList() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resaleRoyalties_);
+        } else {
+          return resaleRoyaltiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getResaleRoyaltiesCount() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.size();
+        } else {
+          return resaleRoyaltiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.get(index);
+        } else {
+          return resaleRoyaltiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.set(index, value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(index, value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllResaleRoyalties(
+          java.lang.Iterable<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> values) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resaleRoyalties_);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResaleRoyalties() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyalties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeResaleRoyalties(int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.remove(index);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder getResaleRoyaltiesBuilder(
+          int index) {
+        return getResaleRoyaltiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+          int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.get(index);  } else {
+          return resaleRoyaltiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+           getResaleRoyaltiesOrBuilderList() {
+        if (resaleRoyaltiesBuilder_ != null) {
+          return resaleRoyaltiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(resaleRoyalties_);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addResaleRoyaltiesBuilder() {
+        return getResaleRoyaltiesFieldBuilder().addBuilder(
+            com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addResaleRoyaltiesBuilder(
+          int index) {
+        return getResaleRoyaltiesFieldBuilder().addBuilder(
+            index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder> 
+           getResaleRoyaltiesBuilderList() {
+        return getResaleRoyaltiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+          getResaleRoyaltiesFieldBuilder() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyaltiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder>(
+                  resaleRoyalties_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          resaleRoyalties_ = null;
+        }
+        return resaleRoyaltiesBuilder_;
+      }
+
+      private boolean verified_ ;
+      /**
+       * <code>bool verified = 5 [json_name = "verified"];</code>
+       * @return The verified.
+       */
+      @java.lang.Override
+      public boolean getVerified() {
+        return verified_;
+      }
+      /**
+       * <code>bool verified = 5 [json_name = "verified"];</code>
+       * @param value The verified to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerified(boolean value) {
+
+        verified_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool verified = 5 [json_name = "verified"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVerified() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        verified_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.Collection)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.Collection)
+    private static final com.cudoventures.cudosnode.marketplace.CollectionProto.Collection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.CollectionProto.Collection();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.CollectionProto.Collection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Collection>
+        PARSER = new com.google.protobuf.AbstractParser<Collection>() {
+      @java.lang.Override
+      public Collection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Collection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Collection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.CollectionProto.Collection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_Collection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_Collection_fieldAccessorTable;
 
@@ -38,14 +1644,14 @@ public final class CollectionProto {
       "aleRoyalties\030\004 \003(\0132+.cudoventures.cudosn" +
       "ode.marketplace.RoyaltyB\004\310\336\037\000R\017resaleRoy" +
       "alties\022\032\n\010verified\030\005 \001(\010R\010verified\022\024\n\005ow" +
-      "ner\030\006 \001(\tR\005ownerB\233\002\n&com.cudoventures.cu" +
-      "dosnode.marketplaceB\017CollectionProtoP\001Z6" +
-      "github.com/CudoVentures/cudos-node/x/mar" +
-      "ketplace/types\242\002\003CCM\252\002\"Cudoventures.Cudo" +
-      "snode.Marketplace\312\002\"Cudoventures\\Cudosno" +
-      "de\\Marketplace\342\002.Cudoventures\\Cudosnode\\" +
-      "Marketplace\\GPBMetadata\352\002$Cudoventures::" +
-      "Cudosnode::Marketplaceb\006proto3"
+      "ner\030\006 \001(\tR\005ownerB\231\002\n&com.cudoventures.cu" +
+      "dosnode.marketplaceB\017CollectionProtoZ6gi" +
+      "thub.com/CudoVentures/cudos-node/x/marke" +
+      "tplace/types\242\002\003CCM\252\002\"Cudoventures.Cudosn" +
+      "ode.Marketplace\312\002\"Cudoventures\\Cudosnode" +
+      "\\Marketplace\342\002.Cudoventures\\Cudosnode\\Ma" +
+      "rketplace\\GPBMetadata\352\002$Cudoventures::Cu" +
+      "dosnode::Marketplaceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

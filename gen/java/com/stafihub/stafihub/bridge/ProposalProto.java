@@ -14,14 +14,1601 @@ public final class ProposalProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.bridge.Proposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+     * @return The content.
+     */
+    com.stafihub.stafihub.bridge.ProposalProto.ProposalContent getContent();
+    /**
+     * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+     */
+    com.stafihub.stafihub.bridge.ProposalProto.ProposalContentOrBuilder getContentOrBuilder();
+
+    /**
+     * <code>bool executed = 2 [json_name = "executed"];</code>
+     * @return The executed.
+     */
+    boolean getExecuted();
+
+    /**
+     * <code>repeated string voters = 3 [json_name = "voters"];</code>
+     * @return A list containing the voters.
+     */
+    java.util.List<java.lang.String>
+        getVotersList();
+    /**
+     * <code>repeated string voters = 3 [json_name = "voters"];</code>
+     * @return The count of voters.
+     */
+    int getVotersCount();
+    /**
+     * <code>repeated string voters = 3 [json_name = "voters"];</code>
+     * @param index The index of the element to return.
+     * @return The voters at the given index.
+     */
+    java.lang.String getVoters(int index);
+    /**
+     * <code>repeated string voters = 3 [json_name = "voters"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the voters at the given index.
+     */
+    com.google.protobuf.ByteString
+        getVotersBytes(int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.bridge.Proposal}
+   */
+  public static final class Proposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.bridge.Proposal)
+      ProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Proposal.newBuilder() to construct.
+    private Proposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Proposal() {
+      voters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Proposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_Proposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_Proposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.bridge.ProposalProto.Proposal.class, com.stafihub.stafihub.bridge.ProposalProto.Proposal.Builder.class);
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 1;
+    private com.stafihub.stafihub.bridge.ProposalProto.ProposalContent content_;
+    /**
+     * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+     * @return Whether the content field is set.
+     */
+    @java.lang.Override
+    public boolean hasContent() {
+      return content_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+     * @return The content.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.ProposalProto.ProposalContent getContent() {
+      return content_ == null ? com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.getDefaultInstance() : content_;
+    }
+    /**
+     * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.ProposalProto.ProposalContentOrBuilder getContentOrBuilder() {
+      return content_ == null ? com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.getDefaultInstance() : content_;
+    }
+
+    public static final int EXECUTED_FIELD_NUMBER = 2;
+    private boolean executed_ = false;
+    /**
+     * <code>bool executed = 2 [json_name = "executed"];</code>
+     * @return The executed.
+     */
+    @java.lang.Override
+    public boolean getExecuted() {
+      return executed_;
+    }
+
+    public static final int VOTERS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList voters_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string voters = 3 [json_name = "voters"];</code>
+     * @return A list containing the voters.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getVotersList() {
+      return voters_;
+    }
+    /**
+     * <code>repeated string voters = 3 [json_name = "voters"];</code>
+     * @return The count of voters.
+     */
+    public int getVotersCount() {
+      return voters_.size();
+    }
+    /**
+     * <code>repeated string voters = 3 [json_name = "voters"];</code>
+     * @param index The index of the element to return.
+     * @return The voters at the given index.
+     */
+    public java.lang.String getVoters(int index) {
+      return voters_.get(index);
+    }
+    /**
+     * <code>repeated string voters = 3 [json_name = "voters"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the voters at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getVotersBytes(int index) {
+      return voters_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (content_ != null) {
+        output.writeMessage(1, getContent());
+      }
+      if (executed_ != false) {
+        output.writeBool(2, executed_);
+      }
+      for (int i = 0; i < voters_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, voters_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (content_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getContent());
+      }
+      if (executed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, executed_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < voters_.size(); i++) {
+          dataSize += computeStringSizeNoTag(voters_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getVotersList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.bridge.ProposalProto.Proposal)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.bridge.ProposalProto.Proposal other = (com.stafihub.stafihub.bridge.ProposalProto.Proposal) obj;
+
+      if (hasContent() != other.hasContent()) return false;
+      if (hasContent()) {
+        if (!getContent()
+            .equals(other.getContent())) return false;
+      }
+      if (getExecuted()
+          != other.getExecuted()) return false;
+      if (!getVotersList()
+          .equals(other.getVotersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasContent()) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContent().hashCode();
+      }
+      hash = (37 * hash) + EXECUTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExecuted());
+      if (getVotersCount() > 0) {
+        hash = (37 * hash) + VOTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getVotersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.bridge.ProposalProto.Proposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.bridge.Proposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.bridge.Proposal)
+        com.stafihub.stafihub.bridge.ProposalProto.ProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_Proposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.bridge.ProposalProto.Proposal.class, com.stafihub.stafihub.bridge.ProposalProto.Proposal.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.bridge.ProposalProto.Proposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        content_ = null;
+        if (contentBuilder_ != null) {
+          contentBuilder_.dispose();
+          contentBuilder_ = null;
+        }
+        executed_ = false;
+        voters_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.ProposalProto.Proposal getDefaultInstanceForType() {
+        return com.stafihub.stafihub.bridge.ProposalProto.Proposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.ProposalProto.Proposal build() {
+        com.stafihub.stafihub.bridge.ProposalProto.Proposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.ProposalProto.Proposal buildPartial() {
+        com.stafihub.stafihub.bridge.ProposalProto.Proposal result = new com.stafihub.stafihub.bridge.ProposalProto.Proposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.bridge.ProposalProto.Proposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.content_ = contentBuilder_ == null
+              ? content_
+              : contentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.executed_ = executed_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          voters_.makeImmutable();
+          result.voters_ = voters_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.bridge.ProposalProto.Proposal) {
+          return mergeFrom((com.stafihub.stafihub.bridge.ProposalProto.Proposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.bridge.ProposalProto.Proposal other) {
+        if (other == com.stafihub.stafihub.bridge.ProposalProto.Proposal.getDefaultInstance()) return this;
+        if (other.hasContent()) {
+          mergeContent(other.getContent());
+        }
+        if (other.getExecuted() != false) {
+          setExecuted(other.getExecuted());
+        }
+        if (!other.voters_.isEmpty()) {
+          if (voters_.isEmpty()) {
+            voters_ = other.voters_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureVotersIsMutable();
+            voters_.addAll(other.voters_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getContentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                executed_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureVotersIsMutable();
+                voters_.add(s);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.stafihub.stafihub.bridge.ProposalProto.ProposalContent content_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.bridge.ProposalProto.ProposalContent, com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.Builder, com.stafihub.stafihub.bridge.ProposalProto.ProposalContentOrBuilder> contentBuilder_;
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       * @return The content.
+       */
+      public com.stafihub.stafihub.bridge.ProposalProto.ProposalContent getContent() {
+        if (contentBuilder_ == null) {
+          return content_ == null ? com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.getDefaultInstance() : content_;
+        } else {
+          return contentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       */
+      public Builder setContent(com.stafihub.stafihub.bridge.ProposalProto.ProposalContent value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          content_ = value;
+        } else {
+          contentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       */
+      public Builder setContent(
+          com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          content_ = builderForValue.build();
+        } else {
+          contentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       */
+      public Builder mergeContent(com.stafihub.stafihub.bridge.ProposalProto.ProposalContent value) {
+        if (contentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            content_ != null &&
+            content_ != com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.getDefaultInstance()) {
+            getContentBuilder().mergeFrom(value);
+          } else {
+            content_ = value;
+          }
+        } else {
+          contentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       */
+      public Builder clearContent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        content_ = null;
+        if (contentBuilder_ != null) {
+          contentBuilder_.dispose();
+          contentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       */
+      public com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.Builder getContentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getContentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       */
+      public com.stafihub.stafihub.bridge.ProposalProto.ProposalContentOrBuilder getContentOrBuilder() {
+        if (contentBuilder_ != null) {
+          return contentBuilder_.getMessageOrBuilder();
+        } else {
+          return content_ == null ?
+              com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.getDefaultInstance() : content_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.bridge.ProposalProto.ProposalContent, com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.Builder, com.stafihub.stafihub.bridge.ProposalProto.ProposalContentOrBuilder> 
+          getContentFieldBuilder() {
+        if (contentBuilder_ == null) {
+          contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.bridge.ProposalProto.ProposalContent, com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.Builder, com.stafihub.stafihub.bridge.ProposalProto.ProposalContentOrBuilder>(
+                  getContent(),
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        return contentBuilder_;
+      }
+
+      private boolean executed_ ;
+      /**
+       * <code>bool executed = 2 [json_name = "executed"];</code>
+       * @return The executed.
+       */
+      @java.lang.Override
+      public boolean getExecuted() {
+        return executed_;
+      }
+      /**
+       * <code>bool executed = 2 [json_name = "executed"];</code>
+       * @param value The executed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecuted(boolean value) {
+
+        executed_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool executed = 2 [json_name = "executed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecuted() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        executed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList voters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureVotersIsMutable() {
+        if (!voters_.isModifiable()) {
+          voters_ = new com.google.protobuf.LazyStringArrayList(voters_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @return A list containing the voters.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getVotersList() {
+        voters_.makeImmutable();
+        return voters_;
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @return The count of voters.
+       */
+      public int getVotersCount() {
+        return voters_.size();
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @param index The index of the element to return.
+       * @return The voters at the given index.
+       */
+      public java.lang.String getVoters(int index) {
+        return voters_.get(index);
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the voters at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getVotersBytes(int index) {
+        return voters_.getByteString(index);
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @param index The index to set the value at.
+       * @param value The voters to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoters(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureVotersIsMutable();
+        voters_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @param value The voters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addVoters(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureVotersIsMutable();
+        voters_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @param values The voters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllVoters(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureVotersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, voters_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoters() {
+        voters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string voters = 3 [json_name = "voters"];</code>
+       * @param value The bytes of the voters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addVotersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureVotersIsMutable();
+        voters_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.bridge.Proposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.bridge.Proposal)
+    private static final com.stafihub.stafihub.bridge.ProposalProto.Proposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.bridge.ProposalProto.Proposal();
+    }
+
+    public static com.stafihub.stafihub.bridge.ProposalProto.Proposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Proposal>
+        PARSER = new com.google.protobuf.AbstractParser<Proposal>() {
+      @java.lang.Override
+      public Proposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Proposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Proposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.ProposalProto.Proposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProposalContentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.bridge.ProposalContent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The receiver.
+     */
+    java.lang.String getReceiver();
+    /**
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The bytes for receiver.
+     */
+    com.google.protobuf.ByteString
+        getReceiverBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.bridge.ProposalContent}
+   */
+  public static final class ProposalContent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.bridge.ProposalContent)
+      ProposalContentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProposalContent.newBuilder() to construct.
+    private ProposalContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProposalContent() {
+      amount_ = "";
+      receiver_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProposalContent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_ProposalContent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_ProposalContent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.class, com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIVER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiver_ = "";
+    /**
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The receiver.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiver() {
+      java.lang.Object ref = receiver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The bytes for receiver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverBytes() {
+      java.lang.Object ref = receiver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receiver_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receiver_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.bridge.ProposalProto.ProposalContent)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.bridge.ProposalProto.ProposalContent other = (com.stafihub.stafihub.bridge.ProposalProto.ProposalContent) obj;
+
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getReceiver()
+          .equals(other.getReceiver())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + RECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiver().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.bridge.ProposalProto.ProposalContent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.bridge.ProposalContent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.bridge.ProposalContent)
+        com.stafihub.stafihub.bridge.ProposalProto.ProposalContentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_ProposalContent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_ProposalContent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.class, com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = "";
+        receiver_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.bridge.ProposalProto.internal_static_stafihub_stafihub_bridge_ProposalContent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.ProposalProto.ProposalContent getDefaultInstanceForType() {
+        return com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.ProposalProto.ProposalContent build() {
+        com.stafihub.stafihub.bridge.ProposalProto.ProposalContent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.ProposalProto.ProposalContent buildPartial() {
+        com.stafihub.stafihub.bridge.ProposalProto.ProposalContent result = new com.stafihub.stafihub.bridge.ProposalProto.ProposalContent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.bridge.ProposalProto.ProposalContent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.receiver_ = receiver_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.bridge.ProposalProto.ProposalContent) {
+          return mergeFrom((com.stafihub.stafihub.bridge.ProposalProto.ProposalContent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.bridge.ProposalProto.ProposalContent other) {
+        if (other == com.stafihub.stafihub.bridge.ProposalProto.ProposalContent.getDefaultInstance()) return this;
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getReceiver().isEmpty()) {
+          receiver_ = other.receiver_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                receiver_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiver_ = "";
+      /**
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return The receiver.
+       */
+      public java.lang.String getReceiver() {
+        java.lang.Object ref = receiver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return The bytes for receiver.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverBytes() {
+        java.lang.Object ref = receiver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @param value The receiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiver(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiver_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiver() {
+        receiver_ = getDefaultInstance().getReceiver();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @param value The bytes for receiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiver_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.bridge.ProposalContent)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.bridge.ProposalContent)
+    private static final com.stafihub.stafihub.bridge.ProposalProto.ProposalContent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.bridge.ProposalProto.ProposalContent();
+    }
+
+    public static com.stafihub.stafihub.bridge.ProposalProto.ProposalContent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProposalContent>
+        PARSER = new com.google.protobuf.AbstractParser<ProposalContent>() {
+      @java.lang.Override
+      public ProposalContent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProposalContent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProposalContent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.ProposalProto.ProposalContent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_bridge_Proposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_bridge_Proposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_bridge_ProposalContent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_bridge_ProposalContent_fieldAccessorTable;
 
@@ -41,13 +1628,13 @@ public final class ProposalProto {
       "\030\003 \003(\tR\006voters\"u\n\017ProposalContent\022F\n\006amo" +
       "unt\030\001 \001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/cos" +
       "mos-sdk/types.IntR\006amount\022\032\n\010receiver\030\002 " +
-      "\001(\tR\010receiverB\334\001\n\034com.stafihub.stafihub." +
-      "bridgeB\rProposalProtoP\001Z+github.com/staf" +
-      "ihub/stafihub/x/bridge/types\242\002\003SSB\252\002\030Sta" +
-      "fihub.Stafihub.Bridge\312\002\030Stafihub\\Stafihu" +
-      "b\\Bridge\342\002$Stafihub\\Stafihub\\Bridge\\GPBM" +
-      "etadata\352\002\032Stafihub::Stafihub::Bridgeb\006pr" +
-      "oto3"
+      "\001(\tR\010receiverB\332\001\n\034com.stafihub.stafihub." +
+      "bridgeB\rProposalProtoZ+github.com/stafih" +
+      "ub/stafihub/x/bridge/types\242\002\003SSB\252\002\030Stafi" +
+      "hub.Stafihub.Bridge\312\002\030Stafihub\\Stafihub\\" +
+      "Bridge\342\002$Stafihub\\Stafihub\\Bridge\\GPBMet" +
+      "adata\352\002\032Stafihub::Stafihub::Bridgeb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,34 +14,3073 @@ public final class GroupmsgProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCloseGroupOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.MsgCloseGroup)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    com.akash.deployment.v1beta3.GroupidProto.GroupID getId();
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgCloseGroup defines SDK message to close a single Group within a Deployment.
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.MsgCloseGroup}
+   */
+  public static final class MsgCloseGroup extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.MsgCloseGroup)
+      MsgCloseGroupOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCloseGroup.newBuilder() to construct.
+    private MsgCloseGroup(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCloseGroup() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCloseGroup();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroup_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroup_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupID getId() {
+      return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup other = (com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCloseGroup defines SDK message to close a single Group within a Deployment.
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.MsgCloseGroup}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.MsgCloseGroup)
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroup_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroup_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroup_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup build() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup buildPartial() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup result = new com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup) {
+          return mergeFrom((com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup other) {
+        if (other == com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder> idBuilder_;
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The id.
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setId(com.akash.deployment.v1beta3.GroupidProto.GroupID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setId(
+          com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder mergeId(com.akash.deployment.v1beta3.GroupidProto.GroupID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.MsgCloseGroup)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.MsgCloseGroup)
+    private static final com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup();
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCloseGroup>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCloseGroup>() {
+      @java.lang.Override
+      public MsgCloseGroup parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCloseGroup> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCloseGroup> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCloseGroupResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.MsgCloseGroupResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCloseGroupResponse defines the Msg/CloseGroup response type.
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.MsgCloseGroupResponse}
+   */
+  public static final class MsgCloseGroupResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.MsgCloseGroupResponse)
+      MsgCloseGroupResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCloseGroupResponse.newBuilder() to construct.
+    private MsgCloseGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCloseGroupResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCloseGroupResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroupResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroupResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse other = (com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCloseGroupResponse defines the Msg/CloseGroup response type.
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.MsgCloseGroupResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.MsgCloseGroupResponse)
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroupResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgCloseGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse build() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse buildPartial() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse result = new com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse) {
+          return mergeFrom((com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse other) {
+        if (other == com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.MsgCloseGroupResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.MsgCloseGroupResponse)
+    private static final com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse();
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCloseGroupResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCloseGroupResponse>() {
+      @java.lang.Override
+      public MsgCloseGroupResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCloseGroupResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCloseGroupResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroupResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPauseGroupOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.MsgPauseGroup)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    com.akash.deployment.v1beta3.GroupidProto.GroupID getId();
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgPauseGroup defines SDK message to close a single Group within a Deployment.
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.MsgPauseGroup}
+   */
+  public static final class MsgPauseGroup extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.MsgPauseGroup)
+      MsgPauseGroupOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPauseGroup.newBuilder() to construct.
+    private MsgPauseGroup(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPauseGroup() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPauseGroup();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroup_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroup_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupID getId() {
+      return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup other = (com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgPauseGroup defines SDK message to close a single Group within a Deployment.
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.MsgPauseGroup}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.MsgPauseGroup)
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroup_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroup_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroup_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup build() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup buildPartial() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup result = new com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup) {
+          return mergeFrom((com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup other) {
+        if (other == com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder> idBuilder_;
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The id.
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setId(com.akash.deployment.v1beta3.GroupidProto.GroupID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setId(
+          com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder mergeId(com.akash.deployment.v1beta3.GroupidProto.GroupID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.MsgPauseGroup)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.MsgPauseGroup)
+    private static final com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup();
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPauseGroup>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPauseGroup>() {
+      @java.lang.Override
+      public MsgPauseGroup parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPauseGroup> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPauseGroup> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPauseGroupResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.MsgPauseGroupResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgPauseGroupResponse defines the Msg/PauseGroup response type.
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.MsgPauseGroupResponse}
+   */
+  public static final class MsgPauseGroupResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.MsgPauseGroupResponse)
+      MsgPauseGroupResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPauseGroupResponse.newBuilder() to construct.
+    private MsgPauseGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPauseGroupResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPauseGroupResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroupResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroupResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse other = (com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgPauseGroupResponse defines the Msg/PauseGroup response type.
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.MsgPauseGroupResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.MsgPauseGroupResponse)
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroupResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgPauseGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse build() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse buildPartial() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse result = new com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse) {
+          return mergeFrom((com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse other) {
+        if (other == com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.MsgPauseGroupResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.MsgPauseGroupResponse)
+    private static final com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse();
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPauseGroupResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPauseGroupResponse>() {
+      @java.lang.Override
+      public MsgPauseGroupResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPauseGroupResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPauseGroupResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroupResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStartGroupOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.MsgStartGroup)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    com.akash.deployment.v1beta3.GroupidProto.GroupID getId();
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgStartGroup defines SDK message to close a single Group within a Deployment.
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.MsgStartGroup}
+   */
+  public static final class MsgStartGroup extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.MsgStartGroup)
+      MsgStartGroupOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStartGroup.newBuilder() to construct.
+    private MsgStartGroup(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStartGroup() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStartGroup();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroup_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroup_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupID getId() {
+      return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup other = (com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgStartGroup defines SDK message to close a single Group within a Deployment.
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.MsgStartGroup}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.MsgStartGroup)
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroup_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroup_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroup_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup build() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup buildPartial() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup result = new com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup) {
+          return mergeFrom((com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup other) {
+        if (other == com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder> idBuilder_;
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The id.
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setId(com.akash.deployment.v1beta3.GroupidProto.GroupID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setId(
+          com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder mergeId(com.akash.deployment.v1beta3.GroupidProto.GroupID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.deployment.v1beta3.GroupidProto.GroupID, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder, com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.MsgStartGroup)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.MsgStartGroup)
+    private static final com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup();
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStartGroup>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStartGroup>() {
+      @java.lang.Override
+      public MsgStartGroup parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStartGroup> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStartGroup> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStartGroupResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.MsgStartGroupResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgStartGroupResponse defines the Msg/StartGroup response type.
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.MsgStartGroupResponse}
+   */
+  public static final class MsgStartGroupResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.MsgStartGroupResponse)
+      MsgStartGroupResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStartGroupResponse.newBuilder() to construct.
+    private MsgStartGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStartGroupResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStartGroupResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroupResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroupResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse other = (com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgStartGroupResponse defines the Msg/StartGroup response type.
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.MsgStartGroupResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.MsgStartGroupResponse)
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroupResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.internal_static_akash_deployment_v1beta3_MsgStartGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse build() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse buildPartial() {
+        com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse result = new com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse) {
+          return mergeFrom((com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse other) {
+        if (other == com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.MsgStartGroupResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.MsgStartGroupResponse)
+    private static final com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse();
+    }
+
+    public static com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStartGroupResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStartGroupResponse>() {
+      @java.lang.Override
+      public MsgStartGroupResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStartGroupResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStartGroupResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroupResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_MsgCloseGroup_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_MsgCloseGroup_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_MsgCloseGroupResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_MsgCloseGroupResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_MsgPauseGroup_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_MsgPauseGroup_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_MsgPauseGroupResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_MsgPauseGroupResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_MsgStartGroup_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_MsgStartGroup_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_MsgStartGroupResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_MsgStartGroupResponse_fieldAccessorTable;
 
@@ -66,13 +3105,13 @@ public final class GroupmsgProto {
       "tGroup\022P\n\002id\030\001 \001(\0132!.akash.deployment.v1" +
       "beta3.GroupIDB\035\310\336\037\000\342\336\037\002ID\352\336\037\002id\362\336\037\tyaml:" +
       "\"id\"R\002id:\004\350\240\037\000\"\027\n\025MsgStartGroupResponseB" +
-      "\356\001\n\034com.akash.deployment.v1beta3B\rGroupm" +
-      "sgProtoP\001Z=github.com/akash-network/akas" +
-      "h-api/go/node/deployment/v1beta3\242\002\003ADX\252\002" +
-      "\030Akash.Deployment.V1beta3\312\002\030Akash\\Deploy" +
-      "ment\\V1beta3\342\002$Akash\\Deployment\\V1beta3\\" +
-      "GPBMetadata\352\002\032Akash::Deployment::V1beta3" +
-      "b\006proto3"
+      "\354\001\n\034com.akash.deployment.v1beta3B\rGroupm" +
+      "sgProtoZ=github.com/akash-network/akash-" +
+      "api/go/node/deployment/v1beta3\242\002\003ADX\252\002\030A" +
+      "kash.Deployment.V1beta3\312\002\030Akash\\Deployme" +
+      "nt\\V1beta3\342\002$Akash\\Deployment\\V1beta3\\GP" +
+      "BMetadata\352\002\032Akash::Deployment::V1beta3b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

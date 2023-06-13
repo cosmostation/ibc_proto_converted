@@ -14,9 +14,936 @@ public final class AnyPropertyProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AnyPropertyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:assetmantle.schema.properties.base.AnyProperty)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+     * @return Whether the mesaProperty field is set.
+     */
+    boolean hasMesaProperty();
+    /**
+     * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+     * @return The mesaProperty.
+     */
+    com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty getMesaProperty();
+    /**
+     * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+     */
+    com.assetmantle.schema.properties.base.MesaPropertyProto.MesaPropertyOrBuilder getMesaPropertyOrBuilder();
+
+    /**
+     * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+     * @return Whether the metaProperty field is set.
+     */
+    boolean hasMetaProperty();
+    /**
+     * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+     * @return The metaProperty.
+     */
+    com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty getMetaProperty();
+    /**
+     * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+     */
+    com.assetmantle.schema.properties.base.MetaPropertyProto.MetaPropertyOrBuilder getMetaPropertyOrBuilder();
+
+    com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty.ImplCase getImplCase();
+  }
+  /**
+   * Protobuf type {@code assetmantle.schema.properties.base.AnyProperty}
+   */
+  public static final class AnyProperty extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:assetmantle.schema.properties.base.AnyProperty)
+      AnyPropertyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AnyProperty.newBuilder() to construct.
+    private AnyProperty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AnyProperty() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AnyProperty();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.assetmantle.schema.properties.base.AnyPropertyProto.internal_static_assetmantle_schema_properties_base_AnyProperty_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.assetmantle.schema.properties.base.AnyPropertyProto.internal_static_assetmantle_schema_properties_base_AnyProperty_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty.class, com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty.Builder.class);
+    }
+
+    private int implCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object impl_;
+    public enum ImplCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      MESA_PROPERTY(1),
+      META_PROPERTY(2),
+      IMPL_NOT_SET(0);
+      private final int value;
+      private ImplCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ImplCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ImplCase forNumber(int value) {
+        switch (value) {
+          case 1: return MESA_PROPERTY;
+          case 2: return META_PROPERTY;
+          case 0: return IMPL_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ImplCase
+    getImplCase() {
+      return ImplCase.forNumber(
+          implCase_);
+    }
+
+    public static final int MESA_PROPERTY_FIELD_NUMBER = 1;
+    /**
+     * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+     * @return Whether the mesaProperty field is set.
+     */
+    @java.lang.Override
+    public boolean hasMesaProperty() {
+      return implCase_ == 1;
+    }
+    /**
+     * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+     * @return The mesaProperty.
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty getMesaProperty() {
+      if (implCase_ == 1) {
+         return (com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty) impl_;
+      }
+      return com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.getDefaultInstance();
+    }
+    /**
+     * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.properties.base.MesaPropertyProto.MesaPropertyOrBuilder getMesaPropertyOrBuilder() {
+      if (implCase_ == 1) {
+         return (com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty) impl_;
+      }
+      return com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.getDefaultInstance();
+    }
+
+    public static final int META_PROPERTY_FIELD_NUMBER = 2;
+    /**
+     * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+     * @return Whether the metaProperty field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetaProperty() {
+      return implCase_ == 2;
+    }
+    /**
+     * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+     * @return The metaProperty.
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty getMetaProperty() {
+      if (implCase_ == 2) {
+         return (com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty) impl_;
+      }
+      return com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.getDefaultInstance();
+    }
+    /**
+     * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.properties.base.MetaPropertyProto.MetaPropertyOrBuilder getMetaPropertyOrBuilder() {
+      if (implCase_ == 2) {
+         return (com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty) impl_;
+      }
+      return com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (implCase_ == 1) {
+        output.writeMessage(1, (com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty) impl_);
+      }
+      if (implCase_ == 2) {
+        output.writeMessage(2, (com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty) impl_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (implCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty) impl_);
+      }
+      if (implCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty) impl_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty)) {
+        return super.equals(obj);
+      }
+      com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty other = (com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty) obj;
+
+      if (!getImplCase().equals(other.getImplCase())) return false;
+      switch (implCase_) {
+        case 1:
+          if (!getMesaProperty()
+              .equals(other.getMesaProperty())) return false;
+          break;
+        case 2:
+          if (!getMetaProperty()
+              .equals(other.getMetaProperty())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (implCase_) {
+        case 1:
+          hash = (37 * hash) + MESA_PROPERTY_FIELD_NUMBER;
+          hash = (53 * hash) + getMesaProperty().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + META_PROPERTY_FIELD_NUMBER;
+          hash = (53 * hash) + getMetaProperty().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code assetmantle.schema.properties.base.AnyProperty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:assetmantle.schema.properties.base.AnyProperty)
+        com.assetmantle.schema.properties.base.AnyPropertyProto.AnyPropertyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.assetmantle.schema.properties.base.AnyPropertyProto.internal_static_assetmantle_schema_properties_base_AnyProperty_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.assetmantle.schema.properties.base.AnyPropertyProto.internal_static_assetmantle_schema_properties_base_AnyProperty_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty.class, com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty.Builder.class);
+      }
+
+      // Construct using com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (mesaPropertyBuilder_ != null) {
+          mesaPropertyBuilder_.clear();
+        }
+        if (metaPropertyBuilder_ != null) {
+          metaPropertyBuilder_.clear();
+        }
+        implCase_ = 0;
+        impl_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.assetmantle.schema.properties.base.AnyPropertyProto.internal_static_assetmantle_schema_properties_base_AnyProperty_descriptor;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty getDefaultInstanceForType() {
+        return com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty build() {
+        com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty buildPartial() {
+        com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty result = new com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty result) {
+        result.implCase_ = implCase_;
+        result.impl_ = this.impl_;
+        if (implCase_ == 1 &&
+            mesaPropertyBuilder_ != null) {
+          result.impl_ = mesaPropertyBuilder_.build();
+        }
+        if (implCase_ == 2 &&
+            metaPropertyBuilder_ != null) {
+          result.impl_ = metaPropertyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty) {
+          return mergeFrom((com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty other) {
+        if (other == com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty.getDefaultInstance()) return this;
+        switch (other.getImplCase()) {
+          case MESA_PROPERTY: {
+            mergeMesaProperty(other.getMesaProperty());
+            break;
+          }
+          case META_PROPERTY: {
+            mergeMetaProperty(other.getMetaProperty());
+            break;
+          }
+          case IMPL_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMesaPropertyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                implCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getMetaPropertyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                implCase_ = 2;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int implCase_ = 0;
+      private java.lang.Object impl_;
+      public ImplCase
+          getImplCase() {
+        return ImplCase.forNumber(
+            implCase_);
+      }
+
+      public Builder clearImpl() {
+        implCase_ = 0;
+        impl_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty, com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.Builder, com.assetmantle.schema.properties.base.MesaPropertyProto.MesaPropertyOrBuilder> mesaPropertyBuilder_;
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       * @return Whether the mesaProperty field is set.
+       */
+      @java.lang.Override
+      public boolean hasMesaProperty() {
+        return implCase_ == 1;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       * @return The mesaProperty.
+       */
+      @java.lang.Override
+      public com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty getMesaProperty() {
+        if (mesaPropertyBuilder_ == null) {
+          if (implCase_ == 1) {
+            return (com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty) impl_;
+          }
+          return com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.getDefaultInstance();
+        } else {
+          if (implCase_ == 1) {
+            return mesaPropertyBuilder_.getMessage();
+          }
+          return com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       */
+      public Builder setMesaProperty(com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty value) {
+        if (mesaPropertyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          impl_ = value;
+          onChanged();
+        } else {
+          mesaPropertyBuilder_.setMessage(value);
+        }
+        implCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       */
+      public Builder setMesaProperty(
+          com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.Builder builderForValue) {
+        if (mesaPropertyBuilder_ == null) {
+          impl_ = builderForValue.build();
+          onChanged();
+        } else {
+          mesaPropertyBuilder_.setMessage(builderForValue.build());
+        }
+        implCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       */
+      public Builder mergeMesaProperty(com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty value) {
+        if (mesaPropertyBuilder_ == null) {
+          if (implCase_ == 1 &&
+              impl_ != com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.getDefaultInstance()) {
+            impl_ = com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.newBuilder((com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty) impl_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            impl_ = value;
+          }
+          onChanged();
+        } else {
+          if (implCase_ == 1) {
+            mesaPropertyBuilder_.mergeFrom(value);
+          } else {
+            mesaPropertyBuilder_.setMessage(value);
+          }
+        }
+        implCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       */
+      public Builder clearMesaProperty() {
+        if (mesaPropertyBuilder_ == null) {
+          if (implCase_ == 1) {
+            implCase_ = 0;
+            impl_ = null;
+            onChanged();
+          }
+        } else {
+          if (implCase_ == 1) {
+            implCase_ = 0;
+            impl_ = null;
+          }
+          mesaPropertyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       */
+      public com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.Builder getMesaPropertyBuilder() {
+        return getMesaPropertyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       */
+      @java.lang.Override
+      public com.assetmantle.schema.properties.base.MesaPropertyProto.MesaPropertyOrBuilder getMesaPropertyOrBuilder() {
+        if ((implCase_ == 1) && (mesaPropertyBuilder_ != null)) {
+          return mesaPropertyBuilder_.getMessageOrBuilder();
+        } else {
+          if (implCase_ == 1) {
+            return (com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty) impl_;
+          }
+          return com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MesaProperty mesa_property = 1 [json_name = "mesaProperty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty, com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.Builder, com.assetmantle.schema.properties.base.MesaPropertyProto.MesaPropertyOrBuilder> 
+          getMesaPropertyFieldBuilder() {
+        if (mesaPropertyBuilder_ == null) {
+          if (!(implCase_ == 1)) {
+            impl_ = com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.getDefaultInstance();
+          }
+          mesaPropertyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty, com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty.Builder, com.assetmantle.schema.properties.base.MesaPropertyProto.MesaPropertyOrBuilder>(
+                  (com.assetmantle.schema.properties.base.MesaPropertyProto.MesaProperty) impl_,
+                  getParentForChildren(),
+                  isClean());
+          impl_ = null;
+        }
+        implCase_ = 1;
+        onChanged();
+        return mesaPropertyBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty, com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.Builder, com.assetmantle.schema.properties.base.MetaPropertyProto.MetaPropertyOrBuilder> metaPropertyBuilder_;
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       * @return Whether the metaProperty field is set.
+       */
+      @java.lang.Override
+      public boolean hasMetaProperty() {
+        return implCase_ == 2;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       * @return The metaProperty.
+       */
+      @java.lang.Override
+      public com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty getMetaProperty() {
+        if (metaPropertyBuilder_ == null) {
+          if (implCase_ == 2) {
+            return (com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty) impl_;
+          }
+          return com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.getDefaultInstance();
+        } else {
+          if (implCase_ == 2) {
+            return metaPropertyBuilder_.getMessage();
+          }
+          return com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       */
+      public Builder setMetaProperty(com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty value) {
+        if (metaPropertyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          impl_ = value;
+          onChanged();
+        } else {
+          metaPropertyBuilder_.setMessage(value);
+        }
+        implCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       */
+      public Builder setMetaProperty(
+          com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.Builder builderForValue) {
+        if (metaPropertyBuilder_ == null) {
+          impl_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaPropertyBuilder_.setMessage(builderForValue.build());
+        }
+        implCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       */
+      public Builder mergeMetaProperty(com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty value) {
+        if (metaPropertyBuilder_ == null) {
+          if (implCase_ == 2 &&
+              impl_ != com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.getDefaultInstance()) {
+            impl_ = com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.newBuilder((com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty) impl_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            impl_ = value;
+          }
+          onChanged();
+        } else {
+          if (implCase_ == 2) {
+            metaPropertyBuilder_.mergeFrom(value);
+          } else {
+            metaPropertyBuilder_.setMessage(value);
+          }
+        }
+        implCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       */
+      public Builder clearMetaProperty() {
+        if (metaPropertyBuilder_ == null) {
+          if (implCase_ == 2) {
+            implCase_ = 0;
+            impl_ = null;
+            onChanged();
+          }
+        } else {
+          if (implCase_ == 2) {
+            implCase_ = 0;
+            impl_ = null;
+          }
+          metaPropertyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       */
+      public com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.Builder getMetaPropertyBuilder() {
+        return getMetaPropertyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       */
+      @java.lang.Override
+      public com.assetmantle.schema.properties.base.MetaPropertyProto.MetaPropertyOrBuilder getMetaPropertyOrBuilder() {
+        if ((implCase_ == 2) && (metaPropertyBuilder_ != null)) {
+          return metaPropertyBuilder_.getMessageOrBuilder();
+        } else {
+          if (implCase_ == 2) {
+            return (com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty) impl_;
+          }
+          return com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 2 [json_name = "metaProperty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty, com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.Builder, com.assetmantle.schema.properties.base.MetaPropertyProto.MetaPropertyOrBuilder> 
+          getMetaPropertyFieldBuilder() {
+        if (metaPropertyBuilder_ == null) {
+          if (!(implCase_ == 2)) {
+            impl_ = com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.getDefaultInstance();
+          }
+          metaPropertyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty, com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.Builder, com.assetmantle.schema.properties.base.MetaPropertyProto.MetaPropertyOrBuilder>(
+                  (com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty) impl_,
+                  getParentForChildren(),
+                  isClean());
+          impl_ = null;
+        }
+        implCase_ = 2;
+        onChanged();
+        return metaPropertyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:assetmantle.schema.properties.base.AnyProperty)
+    }
+
+    // @@protoc_insertion_point(class_scope:assetmantle.schema.properties.base.AnyProperty)
+    private static final com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty();
+    }
+
+    public static com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AnyProperty>
+        PARSER = new com.google.protobuf.AbstractParser<AnyProperty>() {
+      @java.lang.Override
+      public AnyProperty parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AnyProperty> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AnyProperty> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.assetmantle.schema.properties.base.AnyPropertyProto.AnyProperty getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_assetmantle_schema_properties_base_AnyProperty_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_assetmantle_schema_properties_base_AnyProperty_fieldAccessorTable;
 
@@ -38,13 +965,13 @@ public final class AnyPropertyProto {
       ".MesaPropertyH\000R\014mesaProperty\022W\n\rmeta_pr" +
       "operty\030\002 \001(\01320.assetmantle.schema.proper" +
       "ties.base.MetaPropertyH\000R\014metaProperty:\004" +
-      "\210\240\037\000B\006\n\004implB\346\001\n&com.assetmantle.schema." +
-      "properties.baseB\020AnyPropertyProtoP\001\242\002\004AS" +
-      "PB\252\002\"Assetmantle.Schema.Properties.Base\312" +
-      "\002\"Assetmantle\\Schema\\Properties\\Base\342\002.A" +
-      "ssetmantle\\Schema\\Properties\\Base\\GPBMet" +
-      "adata\352\002%Assetmantle::Schema::Properties:" +
-      ":Baseb\006proto3"
+      "\210\240\037\000B\006\n\004implB\344\001\n&com.assetmantle.schema." +
+      "properties.baseB\020AnyPropertyProto\242\002\004ASPB" +
+      "\252\002\"Assetmantle.Schema.Properties.Base\312\002\"" +
+      "Assetmantle\\Schema\\Properties\\Base\342\002.Ass" +
+      "etmantle\\Schema\\Properties\\Base\\GPBMetad" +
+      "ata\352\002%Assetmantle::Schema::Properties::B" +
+      "aseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

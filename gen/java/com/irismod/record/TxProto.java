@@ -14,14 +14,1512 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.record.MsgCreateRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.irismod.record.RecordProto.Content> 
+        getContentsList();
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.record.RecordProto.Content getContents(int index);
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    int getContentsCount();
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.irismod.record.RecordProto.ContentOrBuilder> 
+        getContentsOrBuilderList();
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.record.RecordProto.ContentOrBuilder getContentsOrBuilder(
+        int index);
+
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgCreateRecord defines an SDK message for creating a new record
+   * </pre>
+   *
+   * Protobuf type {@code irismod.record.MsgCreateRecord}
+   */
+  public static final class MsgCreateRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.record.MsgCreateRecord)
+      MsgCreateRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRecord.newBuilder() to construct.
+    private MsgCreateRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRecord() {
+      contents_ = java.util.Collections.emptyList();
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.record.TxProto.MsgCreateRecord.class, com.irismod.record.TxProto.MsgCreateRecord.Builder.class);
+    }
+
+    public static final int CONTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.record.RecordProto.Content> contents_;
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.record.RecordProto.Content> getContentsList() {
+      return contents_;
+    }
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.record.RecordProto.ContentOrBuilder> 
+        getContentsOrBuilderList() {
+      return contents_;
+    }
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getContentsCount() {
+      return contents_.size();
+    }
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.record.RecordProto.Content getContents(int index) {
+      return contents_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.record.RecordProto.ContentOrBuilder getContentsOrBuilder(
+        int index) {
+      return contents_.get(index);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < contents_.size(); i++) {
+        output.writeMessage(1, contents_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, creator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < contents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, contents_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, creator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.record.TxProto.MsgCreateRecord)) {
+        return super.equals(obj);
+      }
+      com.irismod.record.TxProto.MsgCreateRecord other = (com.irismod.record.TxProto.MsgCreateRecord) obj;
+
+      if (!getContentsList()
+          .equals(other.getContentsList())) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContentsCount() > 0) {
+        hash = (37 * hash) + CONTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContentsList().hashCode();
+      }
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.record.TxProto.MsgCreateRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.record.TxProto.MsgCreateRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.record.TxProto.MsgCreateRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateRecord defines an SDK message for creating a new record
+     * </pre>
+     *
+     * Protobuf type {@code irismod.record.MsgCreateRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.record.MsgCreateRecord)
+        com.irismod.record.TxProto.MsgCreateRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.record.TxProto.MsgCreateRecord.class, com.irismod.record.TxProto.MsgCreateRecord.Builder.class);
+      }
+
+      // Construct using com.irismod.record.TxProto.MsgCreateRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (contentsBuilder_ == null) {
+          contents_ = java.util.Collections.emptyList();
+        } else {
+          contents_ = null;
+          contentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        creator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.record.TxProto.MsgCreateRecord getDefaultInstanceForType() {
+        return com.irismod.record.TxProto.MsgCreateRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.record.TxProto.MsgCreateRecord build() {
+        com.irismod.record.TxProto.MsgCreateRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.record.TxProto.MsgCreateRecord buildPartial() {
+        com.irismod.record.TxProto.MsgCreateRecord result = new com.irismod.record.TxProto.MsgCreateRecord(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.record.TxProto.MsgCreateRecord result) {
+        if (contentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            contents_ = java.util.Collections.unmodifiableList(contents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.contents_ = contents_;
+        } else {
+          result.contents_ = contentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.record.TxProto.MsgCreateRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creator_ = creator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.record.TxProto.MsgCreateRecord) {
+          return mergeFrom((com.irismod.record.TxProto.MsgCreateRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.record.TxProto.MsgCreateRecord other) {
+        if (other == com.irismod.record.TxProto.MsgCreateRecord.getDefaultInstance()) return this;
+        if (contentsBuilder_ == null) {
+          if (!other.contents_.isEmpty()) {
+            if (contents_.isEmpty()) {
+              contents_ = other.contents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContentsIsMutable();
+              contents_.addAll(other.contents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contents_.isEmpty()) {
+            if (contentsBuilder_.isEmpty()) {
+              contentsBuilder_.dispose();
+              contentsBuilder_ = null;
+              contents_ = other.contents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContentsFieldBuilder() : null;
+            } else {
+              contentsBuilder_.addAllMessages(other.contents_);
+            }
+          }
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.record.RecordProto.Content m =
+                    input.readMessage(
+                        com.irismod.record.RecordProto.Content.parser(),
+                        extensionRegistry);
+                if (contentsBuilder_ == null) {
+                  ensureContentsIsMutable();
+                  contents_.add(m);
+                } else {
+                  contentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.record.RecordProto.Content> contents_ =
+        java.util.Collections.emptyList();
+      private void ensureContentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          contents_ = new java.util.ArrayList<com.irismod.record.RecordProto.Content>(contents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.record.RecordProto.Content, com.irismod.record.RecordProto.Content.Builder, com.irismod.record.RecordProto.ContentOrBuilder> contentsBuilder_;
+
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.record.RecordProto.Content> getContentsList() {
+        if (contentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contents_);
+        } else {
+          return contentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public int getContentsCount() {
+        if (contentsBuilder_ == null) {
+          return contents_.size();
+        } else {
+          return contentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.record.RecordProto.Content getContents(int index) {
+        if (contentsBuilder_ == null) {
+          return contents_.get(index);
+        } else {
+          return contentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContents(
+          int index, com.irismod.record.RecordProto.Content value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.set(index, value);
+          onChanged();
+        } else {
+          contentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContents(
+          int index, com.irismod.record.RecordProto.Content.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContents(com.irismod.record.RecordProto.Content value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.add(value);
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContents(
+          int index, com.irismod.record.RecordProto.Content value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.add(index, value);
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContents(
+          com.irismod.record.RecordProto.Content.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContents(
+          int index, com.irismod.record.RecordProto.Content.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllContents(
+          java.lang.Iterable<? extends com.irismod.record.RecordProto.Content> values) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contents_);
+          onChanged();
+        } else {
+          contentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearContents() {
+        if (contentsBuilder_ == null) {
+          contents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeContents(int index) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.remove(index);
+          onChanged();
+        } else {
+          contentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.record.RecordProto.Content.Builder getContentsBuilder(
+          int index) {
+        return getContentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.record.RecordProto.ContentOrBuilder getContentsOrBuilder(
+          int index) {
+        if (contentsBuilder_ == null) {
+          return contents_.get(index);  } else {
+          return contentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.irismod.record.RecordProto.ContentOrBuilder> 
+           getContentsOrBuilderList() {
+        if (contentsBuilder_ != null) {
+          return contentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contents_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.record.RecordProto.Content.Builder addContentsBuilder() {
+        return getContentsFieldBuilder().addBuilder(
+            com.irismod.record.RecordProto.Content.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.record.RecordProto.Content.Builder addContentsBuilder(
+          int index) {
+        return getContentsFieldBuilder().addBuilder(
+            index, com.irismod.record.RecordProto.Content.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.record.Content contents = 1 [json_name = "contents", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.record.RecordProto.Content.Builder> 
+           getContentsBuilderList() {
+        return getContentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.record.RecordProto.Content, com.irismod.record.RecordProto.Content.Builder, com.irismod.record.RecordProto.ContentOrBuilder> 
+          getContentsFieldBuilder() {
+        if (contentsBuilder_ == null) {
+          contentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.record.RecordProto.Content, com.irismod.record.RecordProto.Content.Builder, com.irismod.record.RecordProto.ContentOrBuilder>(
+                  contents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contents_ = null;
+        }
+        return contentsBuilder_;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.record.MsgCreateRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.record.MsgCreateRecord)
+    private static final com.irismod.record.TxProto.MsgCreateRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.record.TxProto.MsgCreateRecord();
+    }
+
+    public static com.irismod.record.TxProto.MsgCreateRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRecord>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRecord>() {
+      @java.lang.Override
+      public MsgCreateRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.record.TxProto.MsgCreateRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.record.MsgCreateRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * MsgCreateRecordResponse defines the Msg/CreateRecord response type
+   * </pre>
+   *
+   * Protobuf type {@code irismod.record.MsgCreateRecordResponse}
+   */
+  public static final class MsgCreateRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.record.MsgCreateRecordResponse)
+      MsgCreateRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRecordResponse.newBuilder() to construct.
+    private MsgCreateRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRecordResponse() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.record.TxProto.MsgCreateRecordResponse.class, com.irismod.record.TxProto.MsgCreateRecordResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.record.TxProto.MsgCreateRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.record.TxProto.MsgCreateRecordResponse other = (com.irismod.record.TxProto.MsgCreateRecordResponse) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.record.TxProto.MsgCreateRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateRecordResponse defines the Msg/CreateRecord response type
+     * </pre>
+     *
+     * Protobuf type {@code irismod.record.MsgCreateRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.record.MsgCreateRecordResponse)
+        com.irismod.record.TxProto.MsgCreateRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.record.TxProto.MsgCreateRecordResponse.class, com.irismod.record.TxProto.MsgCreateRecordResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.record.TxProto.MsgCreateRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.record.TxProto.internal_static_irismod_record_MsgCreateRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.record.TxProto.MsgCreateRecordResponse getDefaultInstanceForType() {
+        return com.irismod.record.TxProto.MsgCreateRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.record.TxProto.MsgCreateRecordResponse build() {
+        com.irismod.record.TxProto.MsgCreateRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.record.TxProto.MsgCreateRecordResponse buildPartial() {
+        com.irismod.record.TxProto.MsgCreateRecordResponse result = new com.irismod.record.TxProto.MsgCreateRecordResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.record.TxProto.MsgCreateRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.record.TxProto.MsgCreateRecordResponse) {
+          return mergeFrom((com.irismod.record.TxProto.MsgCreateRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.record.TxProto.MsgCreateRecordResponse other) {
+        if (other == com.irismod.record.TxProto.MsgCreateRecordResponse.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.record.MsgCreateRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.record.MsgCreateRecordResponse)
+    private static final com.irismod.record.TxProto.MsgCreateRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.record.TxProto.MsgCreateRecordResponse();
+    }
+
+    public static com.irismod.record.TxProto.MsgCreateRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRecordResponse>() {
+      @java.lang.Override
+      public MsgCreateRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.record.TxProto.MsgCreateRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_record_MsgCreateRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_record_MsgCreateRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_record_MsgCreateRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_record_MsgCreateRecordResponse_fieldAccessorTable;
 
@@ -41,12 +1539,12 @@ public final class TxProto {
       "\037\001\")\n\027MsgCreateRecordResponse\022\016\n\002id\030\001 \001(" +
       "\tR\002id2_\n\003Msg\022X\n\014CreateRecord\022\037.irismod.r" +
       "ecord.MsgCreateRecord\032\'.irismod.record.M" +
-      "sgCreateRecordResponseB\253\001\n\022com.irismod.r" +
-      "ecordB\007TxProtoP\001Z/github.com/irisnet/iri" +
-      "smod/modules/record/types\242\002\003IRX\252\002\016Irismo" +
-      "d.Record\312\002\016Irismod\\Record\342\002\032Irismod\\Reco" +
-      "rd\\GPBMetadata\352\002\017Irismod::Record\310\341\036\000b\006pr" +
-      "oto3"
+      "sgCreateRecordResponseB\251\001\n\022com.irismod.r" +
+      "ecordB\007TxProtoZ/github.com/irisnet/irism" +
+      "od/modules/record/types\242\002\003IRX\252\002\016Irismod." +
+      "Record\312\002\016Irismod\\Record\342\002\032Irismod\\Record" +
+      "\\GPBMetadata\352\002\017Irismod::Record\310\341\036\000b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

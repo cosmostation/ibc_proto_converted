@@ -24,13 +24,12 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037omniflix/alloc/v1beta1/tx.proto\022\026omnif" +
-      "lix.alloc.v1beta12\005\n\003MsgB\316\001\n\032com.omnifli" +
-      "x.alloc.v1beta1B\007TxProtoP\001Z-github.com/O" +
-      "mniFlix/omniflixhub/x/alloc/types\242\002\003OAX\252" +
-      "\002\026Omniflix.Alloc.V1beta1\312\002\026Omniflix\\Allo" +
-      "c\\V1beta1\342\002\"Omniflix\\Alloc\\V1beta1\\GPBMe" +
-      "tadata\352\002\030Omniflix::Alloc::V1beta1b\006proto" +
-      "3"
+      "lix.alloc.v1beta12\005\n\003MsgB\314\001\n\032com.omnifli" +
+      "x.alloc.v1beta1B\007TxProtoZ-github.com/Omn" +
+      "iFlix/omniflixhub/x/alloc/types\242\002\003OAX\252\002\026" +
+      "Omniflix.Alloc.V1beta1\312\002\026Omniflix\\Alloc\\" +
+      "V1beta1\342\002\"Omniflix\\Alloc\\V1beta1\\GPBMeta" +
+      "data\352\002\030Omniflix::Alloc::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

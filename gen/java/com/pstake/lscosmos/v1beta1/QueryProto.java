@@ -14,164 +14,18037 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryParamsRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryParamsRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.pstake.lscosmos.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.pstake.lscosmos.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.pstake.lscosmos.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryParamsResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.ParamsProto.Params, com.pstake.lscosmos.v1beta1.ParamsProto.Params.Builder, com.pstake.lscosmos.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.pstake.lscosmos.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.pstake.lscosmos.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.pstake.lscosmos.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.pstake.lscosmos.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.pstake.lscosmos.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.pstake.lscosmos.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.pstake.lscosmos.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.pstake.lscosmos.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.ParamsProto.Params, com.pstake.lscosmos.v1beta1.ParamsProto.Params.Builder, com.pstake.lscosmos.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.ParamsProto.Params, com.pstake.lscosmos.v1beta1.ParamsProto.Params.Builder, com.pstake.lscosmos.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryParamsResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHostChainParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryHostChainParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryHostChainParamsRequest is request for the Ouery/HostChainParams methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostChainParamsRequest}
+   */
+  public static final class QueryHostChainParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryHostChainParamsRequest)
+      QueryHostChainParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHostChainParamsRequest.newBuilder() to construct.
+    private QueryHostChainParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHostChainParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHostChainParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHostChainParamsRequest is request for the Ouery/HostChainParams methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostChainParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryHostChainParamsRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryHostChainParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryHostChainParamsRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHostChainParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHostChainParamsRequest>() {
+      @java.lang.Override
+      public QueryHostChainParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHostChainParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHostChainParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHostChainParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryHostChainParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the hostChainParams field is set.
+     */
+    boolean hasHostChainParams();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+     * @return The hostChainParams.
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams getHostChainParams();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParamsOrBuilder getHostChainParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryHostChainParamsResponse is response for the Ouery/HostChainParams
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostChainParamsResponse}
+   */
+  public static final class QueryHostChainParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryHostChainParamsResponse)
+      QueryHostChainParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHostChainParamsResponse.newBuilder() to construct.
+    private QueryHostChainParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHostChainParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHostChainParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse.Builder.class);
+    }
+
+    public static final int HOST_CHAIN_PARAMS_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams hostChainParams_;
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the hostChainParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasHostChainParams() {
+      return hostChainParams_ != null;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+     * @return The hostChainParams.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams getHostChainParams() {
+      return hostChainParams_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.getDefaultInstance() : hostChainParams_;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParamsOrBuilder getHostChainParamsOrBuilder() {
+      return hostChainParams_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.getDefaultInstance() : hostChainParams_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hostChainParams_ != null) {
+        output.writeMessage(1, getHostChainParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hostChainParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHostChainParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse) obj;
+
+      if (hasHostChainParams() != other.hasHostChainParams()) return false;
+      if (hasHostChainParams()) {
+        if (!getHostChainParams()
+            .equals(other.getHostChainParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHostChainParams()) {
+        hash = (37 * hash) + HOST_CHAIN_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostChainParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHostChainParamsResponse is response for the Ouery/HostChainParams
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostChainParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryHostChainParamsResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hostChainParams_ = null;
+        if (hostChainParamsBuilder_ != null) {
+          hostChainParamsBuilder_.dispose();
+          hostChainParamsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hostChainParams_ = hostChainParamsBuilder_ == null
+              ? hostChainParams_
+              : hostChainParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse.getDefaultInstance()) return this;
+        if (other.hasHostChainParams()) {
+          mergeHostChainParams(other.getHostChainParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHostChainParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams hostChainParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams, com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParamsOrBuilder> hostChainParamsBuilder_;
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the hostChainParams field is set.
+       */
+      public boolean hasHostChainParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       * @return The hostChainParams.
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams getHostChainParams() {
+        if (hostChainParamsBuilder_ == null) {
+          return hostChainParams_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.getDefaultInstance() : hostChainParams_;
+        } else {
+          return hostChainParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHostChainParams(com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams value) {
+        if (hostChainParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hostChainParams_ = value;
+        } else {
+          hostChainParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHostChainParams(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.Builder builderForValue) {
+        if (hostChainParamsBuilder_ == null) {
+          hostChainParams_ = builderForValue.build();
+        } else {
+          hostChainParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeHostChainParams(com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams value) {
+        if (hostChainParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            hostChainParams_ != null &&
+            hostChainParams_ != com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.getDefaultInstance()) {
+            getHostChainParamsBuilder().mergeFrom(value);
+          } else {
+            hostChainParams_ = value;
+          }
+        } else {
+          hostChainParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearHostChainParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hostChainParams_ = null;
+        if (hostChainParamsBuilder_ != null) {
+          hostChainParamsBuilder_.dispose();
+          hostChainParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.Builder getHostChainParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHostChainParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParamsOrBuilder getHostChainParamsOrBuilder() {
+        if (hostChainParamsBuilder_ != null) {
+          return hostChainParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return hostChainParams_ == null ?
+              com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.getDefaultInstance() : hostChainParams_;
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostChainParams host_chain_params = 1 [json_name = "hostChainParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams, com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParamsOrBuilder> 
+          getHostChainParamsFieldBuilder() {
+        if (hostChainParamsBuilder_ == null) {
+          hostChainParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams, com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParams.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostChainParamsOrBuilder>(
+                  getHostChainParams(),
+                  getParentForChildren(),
+                  isClean());
+          hostChainParams_ = null;
+        }
+        return hostChainParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryHostChainParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryHostChainParamsResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHostChainParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHostChainParamsResponse>() {
+      @java.lang.Override
+      public QueryHostChainParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHostChainParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHostChainParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostChainParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDelegationStateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryDelegationStateRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryDelegationStateRequest is request for the Ouery/DelegationState methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDelegationStateRequest}
+   */
+  public static final class QueryDelegationStateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryDelegationStateRequest)
+      QueryDelegationStateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDelegationStateRequest.newBuilder() to construct.
+    private QueryDelegationStateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDelegationStateRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDelegationStateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDelegationStateRequest is request for the Ouery/DelegationState methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDelegationStateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryDelegationStateRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryDelegationStateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryDelegationStateRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDelegationStateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDelegationStateRequest>() {
+      @java.lang.Override
+      public QueryDelegationStateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDelegationStateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDelegationStateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDelegationStateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryDelegationStateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the delegationState field is set.
+     */
+    boolean hasDelegationState();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+     * @return The delegationState.
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState getDelegationState();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationStateOrBuilder getDelegationStateOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDelegationStateResponse is response for the Ouery/DelegationState
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDelegationStateResponse}
+   */
+  public static final class QueryDelegationStateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryDelegationStateResponse)
+      QueryDelegationStateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDelegationStateResponse.newBuilder() to construct.
+    private QueryDelegationStateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDelegationStateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDelegationStateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse.Builder.class);
+    }
+
+    public static final int DELEGATION_STATE_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState delegationState_;
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the delegationState field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelegationState() {
+      return delegationState_ != null;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+     * @return The delegationState.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState getDelegationState() {
+      return delegationState_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.getDefaultInstance() : delegationState_;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationStateOrBuilder getDelegationStateOrBuilder() {
+      return delegationState_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.getDefaultInstance() : delegationState_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (delegationState_ != null) {
+        output.writeMessage(1, getDelegationState());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (delegationState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDelegationState());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse) obj;
+
+      if (hasDelegationState() != other.hasDelegationState()) return false;
+      if (hasDelegationState()) {
+        if (!getDelegationState()
+            .equals(other.getDelegationState())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDelegationState()) {
+        hash = (37 * hash) + DELEGATION_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDelegationState().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDelegationStateResponse is response for the Ouery/DelegationState
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDelegationStateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryDelegationStateResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegationState_ = null;
+        if (delegationStateBuilder_ != null) {
+          delegationStateBuilder_.dispose();
+          delegationStateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegationState_ = delegationStateBuilder_ == null
+              ? delegationState_
+              : delegationStateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse.getDefaultInstance()) return this;
+        if (other.hasDelegationState()) {
+          mergeDelegationState(other.getDelegationState());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDelegationStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState delegationState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationStateOrBuilder> delegationStateBuilder_;
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       * @return Whether the delegationState field is set.
+       */
+      public boolean hasDelegationState() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       * @return The delegationState.
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState getDelegationState() {
+        if (delegationStateBuilder_ == null) {
+          return delegationState_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.getDefaultInstance() : delegationState_;
+        } else {
+          return delegationStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDelegationState(com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState value) {
+        if (delegationStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delegationState_ = value;
+        } else {
+          delegationStateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDelegationState(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.Builder builderForValue) {
+        if (delegationStateBuilder_ == null) {
+          delegationState_ = builderForValue.build();
+        } else {
+          delegationStateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDelegationState(com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState value) {
+        if (delegationStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            delegationState_ != null &&
+            delegationState_ != com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.getDefaultInstance()) {
+            getDelegationStateBuilder().mergeFrom(value);
+          } else {
+            delegationState_ = value;
+          }
+        } else {
+          delegationStateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDelegationState() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        delegationState_ = null;
+        if (delegationStateBuilder_ != null) {
+          delegationStateBuilder_.dispose();
+          delegationStateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.Builder getDelegationStateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDelegationStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationStateOrBuilder getDelegationStateOrBuilder() {
+        if (delegationStateBuilder_ != null) {
+          return delegationStateBuilder_.getMessageOrBuilder();
+        } else {
+          return delegationState_ == null ?
+              com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.getDefaultInstance() : delegationState_;
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegationState delegation_state = 1 [json_name = "delegationState", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationStateOrBuilder> 
+          getDelegationStateFieldBuilder() {
+        if (delegationStateBuilder_ == null) {
+          delegationStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationState.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegationStateOrBuilder>(
+                  getDelegationState(),
+                  getParentForChildren(),
+                  isClean());
+          delegationState_ = null;
+        }
+        return delegationStateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryDelegationStateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryDelegationStateResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDelegationStateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDelegationStateResponse>() {
+      @java.lang.Override
+      public QueryDelegationStateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDelegationStateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDelegationStateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegationStateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllowListedValidatorsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryListedValidatorsRequest is a request for the Query/AllowListedValidators
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryAllowListedValidatorsRequest}
+   */
+  public static final class QueryAllowListedValidatorsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsRequest)
+      QueryAllowListedValidatorsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllowListedValidatorsRequest.newBuilder() to construct.
+    private QueryAllowListedValidatorsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllowListedValidatorsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllowListedValidatorsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryListedValidatorsRequest is a request for the Query/AllowListedValidators
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryAllowListedValidatorsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllowListedValidatorsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllowListedValidatorsRequest>() {
+      @java.lang.Override
+      public QueryAllowListedValidatorsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllowListedValidatorsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllowListedValidatorsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllowListedValidatorsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+     * @return Whether the allowListedValidators field is set.
+     */
+    boolean hasAllowListedValidators();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+     * @return The allowListedValidators.
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators getAllowListedValidators();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidatorsOrBuilder getAllowListedValidatorsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryListedValidatorsResponse is a response for the
+   * Query/AllowListedValidators methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryAllowListedValidatorsResponse}
+   */
+  public static final class QueryAllowListedValidatorsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsResponse)
+      QueryAllowListedValidatorsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllowListedValidatorsResponse.newBuilder() to construct.
+    private QueryAllowListedValidatorsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllowListedValidatorsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllowListedValidatorsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse.Builder.class);
+    }
+
+    public static final int ALLOW_LISTED_VALIDATORS_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators allowListedValidators_;
+    /**
+     * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+     * @return Whether the allowListedValidators field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowListedValidators() {
+      return allowListedValidators_ != null;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+     * @return The allowListedValidators.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators getAllowListedValidators() {
+      return allowListedValidators_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.getDefaultInstance() : allowListedValidators_;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidatorsOrBuilder getAllowListedValidatorsOrBuilder() {
+      return allowListedValidators_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.getDefaultInstance() : allowListedValidators_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (allowListedValidators_ != null) {
+        output.writeMessage(1, getAllowListedValidators());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (allowListedValidators_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAllowListedValidators());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse) obj;
+
+      if (hasAllowListedValidators() != other.hasAllowListedValidators()) return false;
+      if (hasAllowListedValidators()) {
+        if (!getAllowListedValidators()
+            .equals(other.getAllowListedValidators())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAllowListedValidators()) {
+        hash = (37 * hash) + ALLOW_LISTED_VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowListedValidators().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryListedValidatorsResponse is a response for the
+     * Query/AllowListedValidators methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryAllowListedValidatorsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        allowListedValidators_ = null;
+        if (allowListedValidatorsBuilder_ != null) {
+          allowListedValidatorsBuilder_.dispose();
+          allowListedValidatorsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.allowListedValidators_ = allowListedValidatorsBuilder_ == null
+              ? allowListedValidators_
+              : allowListedValidatorsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse.getDefaultInstance()) return this;
+        if (other.hasAllowListedValidators()) {
+          mergeAllowListedValidators(other.getAllowListedValidators());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAllowListedValidatorsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators allowListedValidators_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators, com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidatorsOrBuilder> allowListedValidatorsBuilder_;
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       * @return Whether the allowListedValidators field is set.
+       */
+      public boolean hasAllowListedValidators() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       * @return The allowListedValidators.
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators getAllowListedValidators() {
+        if (allowListedValidatorsBuilder_ == null) {
+          return allowListedValidators_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.getDefaultInstance() : allowListedValidators_;
+        } else {
+          return allowListedValidatorsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAllowListedValidators(com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators value) {
+        if (allowListedValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allowListedValidators_ = value;
+        } else {
+          allowListedValidatorsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAllowListedValidators(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.Builder builderForValue) {
+        if (allowListedValidatorsBuilder_ == null) {
+          allowListedValidators_ = builderForValue.build();
+        } else {
+          allowListedValidatorsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAllowListedValidators(com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators value) {
+        if (allowListedValidatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            allowListedValidators_ != null &&
+            allowListedValidators_ != com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.getDefaultInstance()) {
+            getAllowListedValidatorsBuilder().mergeFrom(value);
+          } else {
+            allowListedValidators_ = value;
+          }
+        } else {
+          allowListedValidatorsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAllowListedValidators() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        allowListedValidators_ = null;
+        if (allowListedValidatorsBuilder_ != null) {
+          allowListedValidatorsBuilder_.dispose();
+          allowListedValidatorsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.Builder getAllowListedValidatorsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAllowListedValidatorsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidatorsOrBuilder getAllowListedValidatorsOrBuilder() {
+        if (allowListedValidatorsBuilder_ != null) {
+          return allowListedValidatorsBuilder_.getMessageOrBuilder();
+        } else {
+          return allowListedValidators_ == null ?
+              com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.getDefaultInstance() : allowListedValidators_;
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.AllowListedValidators allow_listed_validators = 1 [json_name = "allowListedValidators", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators, com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidatorsOrBuilder> 
+          getAllowListedValidatorsFieldBuilder() {
+        if (allowListedValidatorsBuilder_ == null) {
+          allowListedValidatorsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators, com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidators.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.AllowListedValidatorsOrBuilder>(
+                  getAllowListedValidators(),
+                  getParentForChildren(),
+                  isClean());
+          allowListedValidators_ = null;
+        }
+        return allowListedValidatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryAllowListedValidatorsResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllowListedValidatorsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllowListedValidatorsResponse>() {
+      @java.lang.Override
+      public QueryAllowListedValidatorsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllowListedValidatorsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllowListedValidatorsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllowListedValidatorsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCValueRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryCValueRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryCValueRequest is a request for the Query/CValue methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryCValueRequest}
+   */
+  public static final class QueryCValueRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryCValueRequest)
+      QueryCValueRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCValueRequest.newBuilder() to construct.
+    private QueryCValueRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCValueRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCValueRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCValueRequest is a request for the Query/CValue methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryCValueRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryCValueRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryCValueRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryCValueRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCValueRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCValueRequest>() {
+      @java.lang.Override
+      public QueryCValueRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCValueRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCValueRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCValueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryCValueResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The cValue.
+     */
+    java.lang.String getCValue();
+    /**
+     * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for cValue.
+     */
+    com.google.protobuf.ByteString
+        getCValueBytes();
+  }
+  /**
+   * <pre>
+   * QueryCValueRequest is a response for the Query/CValue methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryCValueResponse}
+   */
+  public static final class QueryCValueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryCValueResponse)
+      QueryCValueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCValueResponse.newBuilder() to construct.
+    private QueryCValueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCValueResponse() {
+      cValue_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCValueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse.Builder.class);
+    }
+
+    public static final int C_VALUE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object cValue_ = "";
+    /**
+     * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The cValue.
+     */
+    @java.lang.Override
+    public java.lang.String getCValue() {
+      java.lang.Object ref = cValue_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cValue_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for cValue.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCValueBytes() {
+      java.lang.Object ref = cValue_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cValue_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cValue_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cValue_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cValue_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cValue_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse) obj;
+
+      if (!getCValue()
+          .equals(other.getCValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + C_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getCValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCValueRequest is a response for the Query/CValue methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryCValueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryCValueResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cValue_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryCValueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cValue_ = cValue_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse.getDefaultInstance()) return this;
+        if (!other.getCValue().isEmpty()) {
+          cValue_ = other.cValue_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                cValue_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object cValue_ = "";
+      /**
+       * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The cValue.
+       */
+      public java.lang.String getCValue() {
+        java.lang.Object ref = cValue_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cValue_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for cValue.
+       */
+      public com.google.protobuf.ByteString
+          getCValueBytes() {
+        java.lang.Object ref = cValue_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cValue_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The cValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        cValue_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCValue() {
+        cValue_ = getDefaultInstance().getCValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string c_value = 1 [json_name = "cValue", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for cValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        cValue_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryCValueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryCValueResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCValueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCValueResponse>() {
+      @java.lang.Override
+      public QueryCValueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCValueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCValueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryCValueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryModuleStateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryModuleStateRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryModuleStateRequest is a request for the Query/ModuleState methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryModuleStateRequest}
+   */
+  public static final class QueryModuleStateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryModuleStateRequest)
+      QueryModuleStateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryModuleStateRequest.newBuilder() to construct.
+    private QueryModuleStateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryModuleStateRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryModuleStateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryModuleStateRequest is a request for the Query/ModuleState methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryModuleStateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryModuleStateRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryModuleStateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryModuleStateRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryModuleStateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryModuleStateRequest>() {
+      @java.lang.Override
+      public QueryModuleStateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryModuleStateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryModuleStateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryModuleStateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryModuleStateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool module_state = 1 [json_name = "moduleState"];</code>
+     * @return The moduleState.
+     */
+    boolean getModuleState();
+  }
+  /**
+   * <pre>
+   * QueryModuleStateRequest is a response for the Query/ModuleState methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryModuleStateResponse}
+   */
+  public static final class QueryModuleStateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryModuleStateResponse)
+      QueryModuleStateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryModuleStateResponse.newBuilder() to construct.
+    private QueryModuleStateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryModuleStateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryModuleStateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse.Builder.class);
+    }
+
+    public static final int MODULE_STATE_FIELD_NUMBER = 1;
+    private boolean moduleState_ = false;
+    /**
+     * <code>bool module_state = 1 [json_name = "moduleState"];</code>
+     * @return The moduleState.
+     */
+    @java.lang.Override
+    public boolean getModuleState() {
+      return moduleState_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (moduleState_ != false) {
+        output.writeBool(1, moduleState_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (moduleState_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, moduleState_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse) obj;
+
+      if (getModuleState()
+          != other.getModuleState()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getModuleState());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryModuleStateRequest is a response for the Query/ModuleState methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryModuleStateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryModuleStateResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        moduleState_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryModuleStateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.moduleState_ = moduleState_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse.getDefaultInstance()) return this;
+        if (other.getModuleState() != false) {
+          setModuleState(other.getModuleState());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                moduleState_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean moduleState_ ;
+      /**
+       * <code>bool module_state = 1 [json_name = "moduleState"];</code>
+       * @return The moduleState.
+       */
+      @java.lang.Override
+      public boolean getModuleState() {
+        return moduleState_;
+      }
+      /**
+       * <code>bool module_state = 1 [json_name = "moduleState"];</code>
+       * @param value The moduleState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleState(boolean value) {
+
+        moduleState_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool module_state = 1 [json_name = "moduleState"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleState() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        moduleState_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryModuleStateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryModuleStateResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryModuleStateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryModuleStateResponse>() {
+      @java.lang.Override
+      public QueryModuleStateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryModuleStateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryModuleStateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryModuleStateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIBCTransientStoreRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryIBCTransientStoreRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryIBCTransientStoreRequest is a request for the Query/IBCTransientStore
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryIBCTransientStoreRequest}
+   */
+  public static final class QueryIBCTransientStoreRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryIBCTransientStoreRequest)
+      QueryIBCTransientStoreRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIBCTransientStoreRequest.newBuilder() to construct.
+    private QueryIBCTransientStoreRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIBCTransientStoreRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIBCTransientStoreRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryIBCTransientStoreRequest is a request for the Query/IBCTransientStore
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryIBCTransientStoreRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryIBCTransientStoreRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryIBCTransientStoreRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryIBCTransientStoreRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIBCTransientStoreRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIBCTransientStoreRequest>() {
+      @java.lang.Override
+      public QueryIBCTransientStoreRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIBCTransientStoreRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIBCTransientStoreRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIBCTransientStoreResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryIBCTransientStoreResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+     * @return Whether the iBCTransientStore field is set.
+     */
+    boolean hasIBCTransientStore();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+     * @return The iBCTransientStore.
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore getIBCTransientStore();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStoreOrBuilder getIBCTransientStoreOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryIBCTransientStoreRequest is a response for the Query/IBCTransientStore
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryIBCTransientStoreResponse}
+   */
+  public static final class QueryIBCTransientStoreResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryIBCTransientStoreResponse)
+      QueryIBCTransientStoreResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIBCTransientStoreResponse.newBuilder() to construct.
+    private QueryIBCTransientStoreResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIBCTransientStoreResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIBCTransientStoreResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse.Builder.class);
+    }
+
+    public static final int I_B_C_TRANSIENT_STORE_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore iBCTransientStore_;
+    /**
+     * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+     * @return Whether the iBCTransientStore field is set.
+     */
+    @java.lang.Override
+    public boolean hasIBCTransientStore() {
+      return iBCTransientStore_ != null;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+     * @return The iBCTransientStore.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore getIBCTransientStore() {
+      return iBCTransientStore_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.getDefaultInstance() : iBCTransientStore_;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStoreOrBuilder getIBCTransientStoreOrBuilder() {
+      return iBCTransientStore_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.getDefaultInstance() : iBCTransientStore_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (iBCTransientStore_ != null) {
+        output.writeMessage(1, getIBCTransientStore());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (iBCTransientStore_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getIBCTransientStore());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse) obj;
+
+      if (hasIBCTransientStore() != other.hasIBCTransientStore()) return false;
+      if (hasIBCTransientStore()) {
+        if (!getIBCTransientStore()
+            .equals(other.getIBCTransientStore())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIBCTransientStore()) {
+        hash = (37 * hash) + I_B_C_TRANSIENT_STORE_FIELD_NUMBER;
+        hash = (53 * hash) + getIBCTransientStore().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryIBCTransientStoreRequest is a response for the Query/IBCTransientStore
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryIBCTransientStoreResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryIBCTransientStoreResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iBCTransientStore_ = null;
+        if (iBCTransientStoreBuilder_ != null) {
+          iBCTransientStoreBuilder_.dispose();
+          iBCTransientStoreBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iBCTransientStore_ = iBCTransientStoreBuilder_ == null
+              ? iBCTransientStore_
+              : iBCTransientStoreBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse.getDefaultInstance()) return this;
+        if (other.hasIBCTransientStore()) {
+          mergeIBCTransientStore(other.getIBCTransientStore());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIBCTransientStoreFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore iBCTransientStore_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore, com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStoreOrBuilder> iBCTransientStoreBuilder_;
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       * @return Whether the iBCTransientStore field is set.
+       */
+      public boolean hasIBCTransientStore() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       * @return The iBCTransientStore.
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore getIBCTransientStore() {
+        if (iBCTransientStoreBuilder_ == null) {
+          return iBCTransientStore_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.getDefaultInstance() : iBCTransientStore_;
+        } else {
+          return iBCTransientStoreBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIBCTransientStore(com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore value) {
+        if (iBCTransientStoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          iBCTransientStore_ = value;
+        } else {
+          iBCTransientStoreBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIBCTransientStore(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.Builder builderForValue) {
+        if (iBCTransientStoreBuilder_ == null) {
+          iBCTransientStore_ = builderForValue.build();
+        } else {
+          iBCTransientStoreBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeIBCTransientStore(com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore value) {
+        if (iBCTransientStoreBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            iBCTransientStore_ != null &&
+            iBCTransientStore_ != com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.getDefaultInstance()) {
+            getIBCTransientStoreBuilder().mergeFrom(value);
+          } else {
+            iBCTransientStore_ = value;
+          }
+        } else {
+          iBCTransientStoreBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearIBCTransientStore() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        iBCTransientStore_ = null;
+        if (iBCTransientStoreBuilder_ != null) {
+          iBCTransientStoreBuilder_.dispose();
+          iBCTransientStoreBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.Builder getIBCTransientStoreBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIBCTransientStoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStoreOrBuilder getIBCTransientStoreOrBuilder() {
+        if (iBCTransientStoreBuilder_ != null) {
+          return iBCTransientStoreBuilder_.getMessageOrBuilder();
+        } else {
+          return iBCTransientStore_ == null ?
+              com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.getDefaultInstance() : iBCTransientStore_;
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.IBCAmountTransientStore i_b_c_transient_store = 1 [json_name = "iBCTransientStore", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore, com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStoreOrBuilder> 
+          getIBCTransientStoreFieldBuilder() {
+        if (iBCTransientStoreBuilder_ == null) {
+          iBCTransientStoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore, com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStore.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.IBCAmountTransientStoreOrBuilder>(
+                  getIBCTransientStore(),
+                  getParentForChildren(),
+                  isClean());
+          iBCTransientStore_ = null;
+        }
+        return iBCTransientStoreBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryIBCTransientStoreResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryIBCTransientStoreResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIBCTransientStoreResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIBCTransientStoreResponse>() {
+      @java.lang.Override
+      public QueryIBCTransientStoreResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIBCTransientStoreResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIBCTransientStoreResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryIBCTransientStoreResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnclaimedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryUnclaimedRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    java.lang.String getDelegatorAddress();
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryUnclaimedRequest is a request for the Query/Unclaimed methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryUnclaimedRequest}
+   */
+  public static final class QueryUnclaimedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryUnclaimedRequest)
+      QueryUnclaimedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnclaimedRequest.newBuilder() to construct.
+    private QueryUnclaimedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnclaimedRequest() {
+      delegatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnclaimedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest.Builder.class);
+    }
+
+    public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegatorAddress_ = "";
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegatorAddress() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorAddressBytes() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest) obj;
+
+      if (!getDelegatorAddress()
+          .equals(other.getDelegatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryUnclaimedRequest is a request for the Query/Unclaimed methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryUnclaimedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryUnclaimedRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorAddress_ = delegatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest.getDefaultInstance()) return this;
+        if (!other.getDelegatorAddress().isEmpty()) {
+          delegatorAddress_ = other.delegatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegatorAddress_ = "";
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The delegatorAddress.
+       */
+      public java.lang.String getDelegatorAddress() {
+        java.lang.Object ref = delegatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The bytes for delegatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorAddressBytes() {
+        java.lang.Object ref = delegatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorAddress() {
+        delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The bytes for delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryUnclaimedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryUnclaimedRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnclaimedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnclaimedRequest>() {
+      @java.lang.Override
+      public QueryUnclaimedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnclaimedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnclaimedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnclaimedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryUnclaimedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> 
+        getUnclaimedList();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getUnclaimed(int index);
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    int getUnclaimedCount();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+        getUnclaimedOrBuilderList();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getUnclaimedOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryUnclaimedResponse is a response for the Query/Unclaimed methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryUnclaimedResponse}
+   */
+  public static final class QueryUnclaimedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryUnclaimedResponse)
+      QueryUnclaimedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnclaimedResponse.newBuilder() to construct.
+    private QueryUnclaimedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnclaimedResponse() {
+      unclaimed_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnclaimedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse.Builder.class);
+    }
+
+    public static final int UNCLAIMED_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> unclaimed_;
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> getUnclaimedList() {
+      return unclaimed_;
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+        getUnclaimedOrBuilderList() {
+      return unclaimed_;
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getUnclaimedCount() {
+      return unclaimed_.size();
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getUnclaimed(int index) {
+      return unclaimed_.get(index);
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getUnclaimedOrBuilder(
+        int index) {
+      return unclaimed_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < unclaimed_.size(); i++) {
+        output.writeMessage(1, unclaimed_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < unclaimed_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, unclaimed_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse) obj;
+
+      if (!getUnclaimedList()
+          .equals(other.getUnclaimedList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getUnclaimedCount() > 0) {
+        hash = (37 * hash) + UNCLAIMED_FIELD_NUMBER;
+        hash = (53 * hash) + getUnclaimedList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryUnclaimedResponse is a response for the Query/Unclaimed methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryUnclaimedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryUnclaimedResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (unclaimedBuilder_ == null) {
+          unclaimed_ = java.util.Collections.emptyList();
+        } else {
+          unclaimed_ = null;
+          unclaimedBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse result) {
+        if (unclaimedBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            unclaimed_ = java.util.Collections.unmodifiableList(unclaimed_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.unclaimed_ = unclaimed_;
+        } else {
+          result.unclaimed_ = unclaimedBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse.getDefaultInstance()) return this;
+        if (unclaimedBuilder_ == null) {
+          if (!other.unclaimed_.isEmpty()) {
+            if (unclaimed_.isEmpty()) {
+              unclaimed_ = other.unclaimed_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureUnclaimedIsMutable();
+              unclaimed_.addAll(other.unclaimed_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unclaimed_.isEmpty()) {
+            if (unclaimedBuilder_.isEmpty()) {
+              unclaimedBuilder_.dispose();
+              unclaimedBuilder_ = null;
+              unclaimed_ = other.unclaimed_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              unclaimedBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnclaimedFieldBuilder() : null;
+            } else {
+              unclaimedBuilder_.addAllMessages(other.unclaimed_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue m =
+                    input.readMessage(
+                        com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.parser(),
+                        extensionRegistry);
+                if (unclaimedBuilder_ == null) {
+                  ensureUnclaimedIsMutable();
+                  unclaimed_.add(m);
+                } else {
+                  unclaimedBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> unclaimed_ =
+        java.util.Collections.emptyList();
+      private void ensureUnclaimedIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          unclaimed_ = new java.util.ArrayList<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue>(unclaimed_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> unclaimedBuilder_;
+
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> getUnclaimedList() {
+        if (unclaimedBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unclaimed_);
+        } else {
+          return unclaimedBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public int getUnclaimedCount() {
+        if (unclaimedBuilder_ == null) {
+          return unclaimed_.size();
+        } else {
+          return unclaimedBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getUnclaimed(int index) {
+        if (unclaimedBuilder_ == null) {
+          return unclaimed_.get(index);
+        } else {
+          return unclaimedBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnclaimed(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (unclaimedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnclaimedIsMutable();
+          unclaimed_.set(index, value);
+          onChanged();
+        } else {
+          unclaimedBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnclaimed(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (unclaimedBuilder_ == null) {
+          ensureUnclaimedIsMutable();
+          unclaimed_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unclaimedBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnclaimed(com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (unclaimedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnclaimedIsMutable();
+          unclaimed_.add(value);
+          onChanged();
+        } else {
+          unclaimedBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnclaimed(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (unclaimedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnclaimedIsMutable();
+          unclaimed_.add(index, value);
+          onChanged();
+        } else {
+          unclaimedBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnclaimed(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (unclaimedBuilder_ == null) {
+          ensureUnclaimedIsMutable();
+          unclaimed_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unclaimedBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnclaimed(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (unclaimedBuilder_ == null) {
+          ensureUnclaimedIsMutable();
+          unclaimed_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unclaimedBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllUnclaimed(
+          java.lang.Iterable<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> values) {
+        if (unclaimedBuilder_ == null) {
+          ensureUnclaimedIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unclaimed_);
+          onChanged();
+        } else {
+          unclaimedBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUnclaimed() {
+        if (unclaimedBuilder_ == null) {
+          unclaimed_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          unclaimedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeUnclaimed(int index) {
+        if (unclaimedBuilder_ == null) {
+          ensureUnclaimedIsMutable();
+          unclaimed_.remove(index);
+          onChanged();
+        } else {
+          unclaimedBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder getUnclaimedBuilder(
+          int index) {
+        return getUnclaimedFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getUnclaimedOrBuilder(
+          int index) {
+        if (unclaimedBuilder_ == null) {
+          return unclaimed_.get(index);  } else {
+          return unclaimedBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+           getUnclaimedOrBuilderList() {
+        if (unclaimedBuilder_ != null) {
+          return unclaimedBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unclaimed_);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder addUnclaimedBuilder() {
+        return getUnclaimedFieldBuilder().addBuilder(
+            com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder addUnclaimedBuilder(
+          int index) {
+        return getUnclaimedFieldBuilder().addBuilder(
+            index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue unclaimed = 1 [json_name = "unclaimed", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder> 
+           getUnclaimedBuilderList() {
+        return getUnclaimedFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+          getUnclaimedFieldBuilder() {
+        if (unclaimedBuilder_ == null) {
+          unclaimedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder>(
+                  unclaimed_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unclaimed_ = null;
+        }
+        return unclaimedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryUnclaimedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryUnclaimedResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnclaimedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnclaimedResponse>() {
+      @java.lang.Override
+      public QueryUnclaimedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnclaimedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnclaimedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnclaimedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFailedUnbondingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryFailedUnbondingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    java.lang.String getDelegatorAddress();
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryFailedUnbondingsRequest is a request for the Query/FailedUnbondings
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryFailedUnbondingsRequest}
+   */
+  public static final class QueryFailedUnbondingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryFailedUnbondingsRequest)
+      QueryFailedUnbondingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFailedUnbondingsRequest.newBuilder() to construct.
+    private QueryFailedUnbondingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFailedUnbondingsRequest() {
+      delegatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFailedUnbondingsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest.Builder.class);
+    }
+
+    public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegatorAddress_ = "";
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegatorAddress() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorAddressBytes() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest) obj;
+
+      if (!getDelegatorAddress()
+          .equals(other.getDelegatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFailedUnbondingsRequest is a request for the Query/FailedUnbondings
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryFailedUnbondingsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryFailedUnbondingsRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorAddress_ = delegatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest.getDefaultInstance()) return this;
+        if (!other.getDelegatorAddress().isEmpty()) {
+          delegatorAddress_ = other.delegatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegatorAddress_ = "";
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The delegatorAddress.
+       */
+      public java.lang.String getDelegatorAddress() {
+        java.lang.Object ref = delegatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The bytes for delegatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorAddressBytes() {
+        java.lang.Object ref = delegatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorAddress() {
+        delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The bytes for delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryFailedUnbondingsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryFailedUnbondingsRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFailedUnbondingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFailedUnbondingsRequest>() {
+      @java.lang.Override
+      public QueryFailedUnbondingsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFailedUnbondingsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFailedUnbondingsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFailedUnbondingsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryFailedUnbondingsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> 
+        getFailedUnbondingsList();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getFailedUnbondings(int index);
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    int getFailedUnbondingsCount();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+        getFailedUnbondingsOrBuilderList();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getFailedUnbondingsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryFailedUnbondingsResponse a response for the Query/FailedUnbondings
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryFailedUnbondingsResponse}
+   */
+  public static final class QueryFailedUnbondingsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryFailedUnbondingsResponse)
+      QueryFailedUnbondingsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFailedUnbondingsResponse.newBuilder() to construct.
+    private QueryFailedUnbondingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFailedUnbondingsResponse() {
+      failedUnbondings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFailedUnbondingsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse.Builder.class);
+    }
+
+    public static final int FAILED_UNBONDINGS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> failedUnbondings_;
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> getFailedUnbondingsList() {
+      return failedUnbondings_;
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+        getFailedUnbondingsOrBuilderList() {
+      return failedUnbondings_;
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFailedUnbondingsCount() {
+      return failedUnbondings_.size();
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getFailedUnbondings(int index) {
+      return failedUnbondings_.get(index);
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getFailedUnbondingsOrBuilder(
+        int index) {
+      return failedUnbondings_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < failedUnbondings_.size(); i++) {
+        output.writeMessage(1, failedUnbondings_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < failedUnbondings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, failedUnbondings_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse) obj;
+
+      if (!getFailedUnbondingsList()
+          .equals(other.getFailedUnbondingsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFailedUnbondingsCount() > 0) {
+        hash = (37 * hash) + FAILED_UNBONDINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getFailedUnbondingsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFailedUnbondingsResponse a response for the Query/FailedUnbondings
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryFailedUnbondingsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryFailedUnbondingsResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (failedUnbondingsBuilder_ == null) {
+          failedUnbondings_ = java.util.Collections.emptyList();
+        } else {
+          failedUnbondings_ = null;
+          failedUnbondingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse result) {
+        if (failedUnbondingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            failedUnbondings_ = java.util.Collections.unmodifiableList(failedUnbondings_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.failedUnbondings_ = failedUnbondings_;
+        } else {
+          result.failedUnbondings_ = failedUnbondingsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse.getDefaultInstance()) return this;
+        if (failedUnbondingsBuilder_ == null) {
+          if (!other.failedUnbondings_.isEmpty()) {
+            if (failedUnbondings_.isEmpty()) {
+              failedUnbondings_ = other.failedUnbondings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFailedUnbondingsIsMutable();
+              failedUnbondings_.addAll(other.failedUnbondings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.failedUnbondings_.isEmpty()) {
+            if (failedUnbondingsBuilder_.isEmpty()) {
+              failedUnbondingsBuilder_.dispose();
+              failedUnbondingsBuilder_ = null;
+              failedUnbondings_ = other.failedUnbondings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              failedUnbondingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFailedUnbondingsFieldBuilder() : null;
+            } else {
+              failedUnbondingsBuilder_.addAllMessages(other.failedUnbondings_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue m =
+                    input.readMessage(
+                        com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.parser(),
+                        extensionRegistry);
+                if (failedUnbondingsBuilder_ == null) {
+                  ensureFailedUnbondingsIsMutable();
+                  failedUnbondings_.add(m);
+                } else {
+                  failedUnbondingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> failedUnbondings_ =
+        java.util.Collections.emptyList();
+      private void ensureFailedUnbondingsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          failedUnbondings_ = new java.util.ArrayList<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue>(failedUnbondings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> failedUnbondingsBuilder_;
+
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> getFailedUnbondingsList() {
+        if (failedUnbondingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(failedUnbondings_);
+        } else {
+          return failedUnbondingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFailedUnbondingsCount() {
+        if (failedUnbondingsBuilder_ == null) {
+          return failedUnbondings_.size();
+        } else {
+          return failedUnbondingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getFailedUnbondings(int index) {
+        if (failedUnbondingsBuilder_ == null) {
+          return failedUnbondings_.get(index);
+        } else {
+          return failedUnbondingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFailedUnbondings(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (failedUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFailedUnbondingsIsMutable();
+          failedUnbondings_.set(index, value);
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFailedUnbondings(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (failedUnbondingsBuilder_ == null) {
+          ensureFailedUnbondingsIsMutable();
+          failedUnbondings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFailedUnbondings(com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (failedUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFailedUnbondingsIsMutable();
+          failedUnbondings_.add(value);
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFailedUnbondings(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (failedUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFailedUnbondingsIsMutable();
+          failedUnbondings_.add(index, value);
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFailedUnbondings(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (failedUnbondingsBuilder_ == null) {
+          ensureFailedUnbondingsIsMutable();
+          failedUnbondings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFailedUnbondings(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (failedUnbondingsBuilder_ == null) {
+          ensureFailedUnbondingsIsMutable();
+          failedUnbondings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFailedUnbondings(
+          java.lang.Iterable<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> values) {
+        if (failedUnbondingsBuilder_ == null) {
+          ensureFailedUnbondingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, failedUnbondings_);
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFailedUnbondings() {
+        if (failedUnbondingsBuilder_ == null) {
+          failedUnbondings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFailedUnbondings(int index) {
+        if (failedUnbondingsBuilder_ == null) {
+          ensureFailedUnbondingsIsMutable();
+          failedUnbondings_.remove(index);
+          onChanged();
+        } else {
+          failedUnbondingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder getFailedUnbondingsBuilder(
+          int index) {
+        return getFailedUnbondingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getFailedUnbondingsOrBuilder(
+          int index) {
+        if (failedUnbondingsBuilder_ == null) {
+          return failedUnbondings_.get(index);  } else {
+          return failedUnbondingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+           getFailedUnbondingsOrBuilderList() {
+        if (failedUnbondingsBuilder_ != null) {
+          return failedUnbondingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(failedUnbondings_);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder addFailedUnbondingsBuilder() {
+        return getFailedUnbondingsFieldBuilder().addBuilder(
+            com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder addFailedUnbondingsBuilder(
+          int index) {
+        return getFailedUnbondingsFieldBuilder().addBuilder(
+            index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue failed_unbondings = 1 [json_name = "failedUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder> 
+           getFailedUnbondingsBuilderList() {
+        return getFailedUnbondingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+          getFailedUnbondingsFieldBuilder() {
+        if (failedUnbondingsBuilder_ == null) {
+          failedUnbondingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder>(
+                  failedUnbondings_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          failedUnbondings_ = null;
+        }
+        return failedUnbondingsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryFailedUnbondingsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryFailedUnbondingsResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFailedUnbondingsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFailedUnbondingsResponse>() {
+      @java.lang.Override
+      public QueryFailedUnbondingsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFailedUnbondingsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFailedUnbondingsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryFailedUnbondingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPendingUnbondingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryPendingUnbondingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    java.lang.String getDelegatorAddress();
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryPendingUnbondingsRequest is a request for the Query/PendingUnbondings
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryPendingUnbondingsRequest}
+   */
+  public static final class QueryPendingUnbondingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryPendingUnbondingsRequest)
+      QueryPendingUnbondingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPendingUnbondingsRequest.newBuilder() to construct.
+    private QueryPendingUnbondingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPendingUnbondingsRequest() {
+      delegatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPendingUnbondingsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest.Builder.class);
+    }
+
+    public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegatorAddress_ = "";
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegatorAddress() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorAddressBytes() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest) obj;
+
+      if (!getDelegatorAddress()
+          .equals(other.getDelegatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPendingUnbondingsRequest is a request for the Query/PendingUnbondings
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryPendingUnbondingsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryPendingUnbondingsRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorAddress_ = delegatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest.getDefaultInstance()) return this;
+        if (!other.getDelegatorAddress().isEmpty()) {
+          delegatorAddress_ = other.delegatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegatorAddress_ = "";
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The delegatorAddress.
+       */
+      public java.lang.String getDelegatorAddress() {
+        java.lang.Object ref = delegatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The bytes for delegatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorAddressBytes() {
+        java.lang.Object ref = delegatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorAddress() {
+        delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The bytes for delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryPendingUnbondingsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryPendingUnbondingsRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPendingUnbondingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPendingUnbondingsRequest>() {
+      @java.lang.Override
+      public QueryPendingUnbondingsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPendingUnbondingsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPendingUnbondingsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPendingUnbondingsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryPendingUnbondingsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> 
+        getPendingUnbondingsList();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getPendingUnbondings(int index);
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    int getPendingUnbondingsCount();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+        getPendingUnbondingsOrBuilderList();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getPendingUnbondingsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryPendingUnbondingsResponse is a response for the Query/PendingUnbondings
+   * methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryPendingUnbondingsResponse}
+   */
+  public static final class QueryPendingUnbondingsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryPendingUnbondingsResponse)
+      QueryPendingUnbondingsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPendingUnbondingsResponse.newBuilder() to construct.
+    private QueryPendingUnbondingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPendingUnbondingsResponse() {
+      pendingUnbondings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPendingUnbondingsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse.Builder.class);
+    }
+
+    public static final int PENDING_UNBONDINGS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> pendingUnbondings_;
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> getPendingUnbondingsList() {
+      return pendingUnbondings_;
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+        getPendingUnbondingsOrBuilderList() {
+      return pendingUnbondings_;
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPendingUnbondingsCount() {
+      return pendingUnbondings_.size();
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getPendingUnbondings(int index) {
+      return pendingUnbondings_.get(index);
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getPendingUnbondingsOrBuilder(
+        int index) {
+      return pendingUnbondings_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pendingUnbondings_.size(); i++) {
+        output.writeMessage(1, pendingUnbondings_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pendingUnbondings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pendingUnbondings_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse) obj;
+
+      if (!getPendingUnbondingsList()
+          .equals(other.getPendingUnbondingsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPendingUnbondingsCount() > 0) {
+        hash = (37 * hash) + PENDING_UNBONDINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getPendingUnbondingsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPendingUnbondingsResponse is a response for the Query/PendingUnbondings
+     * methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryPendingUnbondingsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryPendingUnbondingsResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (pendingUnbondingsBuilder_ == null) {
+          pendingUnbondings_ = java.util.Collections.emptyList();
+        } else {
+          pendingUnbondings_ = null;
+          pendingUnbondingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse result) {
+        if (pendingUnbondingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pendingUnbondings_ = java.util.Collections.unmodifiableList(pendingUnbondings_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pendingUnbondings_ = pendingUnbondings_;
+        } else {
+          result.pendingUnbondings_ = pendingUnbondingsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse.getDefaultInstance()) return this;
+        if (pendingUnbondingsBuilder_ == null) {
+          if (!other.pendingUnbondings_.isEmpty()) {
+            if (pendingUnbondings_.isEmpty()) {
+              pendingUnbondings_ = other.pendingUnbondings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePendingUnbondingsIsMutable();
+              pendingUnbondings_.addAll(other.pendingUnbondings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pendingUnbondings_.isEmpty()) {
+            if (pendingUnbondingsBuilder_.isEmpty()) {
+              pendingUnbondingsBuilder_.dispose();
+              pendingUnbondingsBuilder_ = null;
+              pendingUnbondings_ = other.pendingUnbondings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              pendingUnbondingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPendingUnbondingsFieldBuilder() : null;
+            } else {
+              pendingUnbondingsBuilder_.addAllMessages(other.pendingUnbondings_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue m =
+                    input.readMessage(
+                        com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.parser(),
+                        extensionRegistry);
+                if (pendingUnbondingsBuilder_ == null) {
+                  ensurePendingUnbondingsIsMutable();
+                  pendingUnbondings_.add(m);
+                } else {
+                  pendingUnbondingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> pendingUnbondings_ =
+        java.util.Collections.emptyList();
+      private void ensurePendingUnbondingsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pendingUnbondings_ = new java.util.ArrayList<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue>(pendingUnbondings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> pendingUnbondingsBuilder_;
+
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> getPendingUnbondingsList() {
+        if (pendingUnbondingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pendingUnbondings_);
+        } else {
+          return pendingUnbondingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPendingUnbondingsCount() {
+        if (pendingUnbondingsBuilder_ == null) {
+          return pendingUnbondings_.size();
+        } else {
+          return pendingUnbondingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getPendingUnbondings(int index) {
+        if (pendingUnbondingsBuilder_ == null) {
+          return pendingUnbondings_.get(index);
+        } else {
+          return pendingUnbondingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPendingUnbondings(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (pendingUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingUnbondingsIsMutable();
+          pendingUnbondings_.set(index, value);
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPendingUnbondings(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (pendingUnbondingsBuilder_ == null) {
+          ensurePendingUnbondingsIsMutable();
+          pendingUnbondings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingUnbondings(com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (pendingUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingUnbondingsIsMutable();
+          pendingUnbondings_.add(value);
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingUnbondings(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (pendingUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingUnbondingsIsMutable();
+          pendingUnbondings_.add(index, value);
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingUnbondings(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (pendingUnbondingsBuilder_ == null) {
+          ensurePendingUnbondingsIsMutable();
+          pendingUnbondings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingUnbondings(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (pendingUnbondingsBuilder_ == null) {
+          ensurePendingUnbondingsIsMutable();
+          pendingUnbondings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPendingUnbondings(
+          java.lang.Iterable<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue> values) {
+        if (pendingUnbondingsBuilder_ == null) {
+          ensurePendingUnbondingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pendingUnbondings_);
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPendingUnbondings() {
+        if (pendingUnbondingsBuilder_ == null) {
+          pendingUnbondings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePendingUnbondings(int index) {
+        if (pendingUnbondingsBuilder_ == null) {
+          ensurePendingUnbondingsIsMutable();
+          pendingUnbondings_.remove(index);
+          onChanged();
+        } else {
+          pendingUnbondingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder getPendingUnbondingsBuilder(
+          int index) {
+        return getPendingUnbondingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getPendingUnbondingsOrBuilder(
+          int index) {
+        if (pendingUnbondingsBuilder_ == null) {
+          return pendingUnbondings_.get(index);  } else {
+          return pendingUnbondingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+           getPendingUnbondingsOrBuilderList() {
+        if (pendingUnbondingsBuilder_ != null) {
+          return pendingUnbondingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pendingUnbondings_);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder addPendingUnbondingsBuilder() {
+        return getPendingUnbondingsFieldBuilder().addBuilder(
+            com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder addPendingUnbondingsBuilder(
+          int index) {
+        return getPendingUnbondingsFieldBuilder().addBuilder(
+            index, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.UnbondingEpochCValue pending_unbondings = 1 [json_name = "pendingUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder> 
+           getPendingUnbondingsBuilderList() {
+        return getPendingUnbondingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+          getPendingUnbondingsFieldBuilder() {
+        if (pendingUnbondingsBuilder_ == null) {
+          pendingUnbondingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder>(
+                  pendingUnbondings_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pendingUnbondings_ = null;
+        }
+        return pendingUnbondingsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryPendingUnbondingsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryPendingUnbondingsResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPendingUnbondingsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPendingUnbondingsResponse>() {
+      @java.lang.Override
+      public QueryPendingUnbondingsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPendingUnbondingsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPendingUnbondingsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryPendingUnbondingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnbondingEpochCValueRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+     * @return The epochNumber.
+     */
+    long getEpochNumber();
+  }
+  /**
+   * <pre>
+   * QueryUnbondingEpochCValueRequest is a request for the
+   * Query/UnbondingEpochCValue methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueRequest}
+   */
+  public static final class QueryUnbondingEpochCValueRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueRequest)
+      QueryUnbondingEpochCValueRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnbondingEpochCValueRequest.newBuilder() to construct.
+    private QueryUnbondingEpochCValueRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnbondingEpochCValueRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnbondingEpochCValueRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest.Builder.class);
+    }
+
+    public static final int EPOCH_NUMBER_FIELD_NUMBER = 1;
+    private long epochNumber_ = 0L;
+    /**
+     * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+     * @return The epochNumber.
+     */
+    @java.lang.Override
+    public long getEpochNumber() {
+      return epochNumber_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (epochNumber_ != 0L) {
+        output.writeInt64(1, epochNumber_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (epochNumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, epochNumber_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest) obj;
+
+      if (getEpochNumber()
+          != other.getEpochNumber()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EPOCH_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpochNumber());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryUnbondingEpochCValueRequest is a request for the
+     * Query/UnbondingEpochCValue methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        epochNumber_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.epochNumber_ = epochNumber_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest.getDefaultInstance()) return this;
+        if (other.getEpochNumber() != 0L) {
+          setEpochNumber(other.getEpochNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                epochNumber_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long epochNumber_ ;
+      /**
+       * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+       * @return The epochNumber.
+       */
+      @java.lang.Override
+      public long getEpochNumber() {
+        return epochNumber_;
+      }
+      /**
+       * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+       * @param value The epochNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochNumber(long value) {
+
+        epochNumber_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        epochNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnbondingEpochCValueRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnbondingEpochCValueRequest>() {
+      @java.lang.Override
+      public QueryUnbondingEpochCValueRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnbondingEpochCValueRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnbondingEpochCValueRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnbondingEpochCValueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+     * @return Whether the unbondingEpochCValue field is set.
+     */
+    boolean hasUnbondingEpochCValue();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+     * @return The unbondingEpochCValue.
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getUnbondingEpochCValue();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getUnbondingEpochCValueOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryUnbondingEpochCValueResponse is a response for the
+   * Query/UnbondingEpochCValue methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueResponse}
+   */
+  public static final class QueryUnbondingEpochCValueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueResponse)
+      QueryUnbondingEpochCValueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnbondingEpochCValueResponse.newBuilder() to construct.
+    private QueryUnbondingEpochCValueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnbondingEpochCValueResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnbondingEpochCValueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse.Builder.class);
+    }
+
+    public static final int UNBONDING_EPOCH_C_VALUE_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue unbondingEpochCValue_;
+    /**
+     * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+     * @return Whether the unbondingEpochCValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnbondingEpochCValue() {
+      return unbondingEpochCValue_ != null;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+     * @return The unbondingEpochCValue.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getUnbondingEpochCValue() {
+      return unbondingEpochCValue_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance() : unbondingEpochCValue_;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getUnbondingEpochCValueOrBuilder() {
+      return unbondingEpochCValue_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance() : unbondingEpochCValue_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (unbondingEpochCValue_ != null) {
+        output.writeMessage(1, getUnbondingEpochCValue());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (unbondingEpochCValue_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUnbondingEpochCValue());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse) obj;
+
+      if (hasUnbondingEpochCValue() != other.hasUnbondingEpochCValue()) return false;
+      if (hasUnbondingEpochCValue()) {
+        if (!getUnbondingEpochCValue()
+            .equals(other.getUnbondingEpochCValue())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUnbondingEpochCValue()) {
+        hash = (37 * hash) + UNBONDING_EPOCH_C_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbondingEpochCValue().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryUnbondingEpochCValueResponse is a response for the
+     * Query/UnbondingEpochCValue methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        unbondingEpochCValue_ = null;
+        if (unbondingEpochCValueBuilder_ != null) {
+          unbondingEpochCValueBuilder_.dispose();
+          unbondingEpochCValueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.unbondingEpochCValue_ = unbondingEpochCValueBuilder_ == null
+              ? unbondingEpochCValue_
+              : unbondingEpochCValueBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse.getDefaultInstance()) return this;
+        if (other.hasUnbondingEpochCValue()) {
+          mergeUnbondingEpochCValue(other.getUnbondingEpochCValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getUnbondingEpochCValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue unbondingEpochCValue_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> unbondingEpochCValueBuilder_;
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       * @return Whether the unbondingEpochCValue field is set.
+       */
+      public boolean hasUnbondingEpochCValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       * @return The unbondingEpochCValue.
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue getUnbondingEpochCValue() {
+        if (unbondingEpochCValueBuilder_ == null) {
+          return unbondingEpochCValue_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance() : unbondingEpochCValue_;
+        } else {
+          return unbondingEpochCValueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnbondingEpochCValue(com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (unbondingEpochCValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unbondingEpochCValue_ = value;
+        } else {
+          unbondingEpochCValueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnbondingEpochCValue(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder builderForValue) {
+        if (unbondingEpochCValueBuilder_ == null) {
+          unbondingEpochCValue_ = builderForValue.build();
+        } else {
+          unbondingEpochCValueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeUnbondingEpochCValue(com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue value) {
+        if (unbondingEpochCValueBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            unbondingEpochCValue_ != null &&
+            unbondingEpochCValue_ != com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance()) {
+            getUnbondingEpochCValueBuilder().mergeFrom(value);
+          } else {
+            unbondingEpochCValue_ = value;
+          }
+        } else {
+          unbondingEpochCValueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUnbondingEpochCValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        unbondingEpochCValue_ = null;
+        if (unbondingEpochCValueBuilder_ != null) {
+          unbondingEpochCValueBuilder_.dispose();
+          unbondingEpochCValueBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder getUnbondingEpochCValueBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getUnbondingEpochCValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder getUnbondingEpochCValueOrBuilder() {
+        if (unbondingEpochCValueBuilder_ != null) {
+          return unbondingEpochCValueBuilder_.getMessageOrBuilder();
+        } else {
+          return unbondingEpochCValue_ == null ?
+              com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.getDefaultInstance() : unbondingEpochCValue_;
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.UnbondingEpochCValue unbonding_epoch_c_value = 1 [json_name = "unbondingEpochCValue", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder> 
+          getUnbondingEpochCValueFieldBuilder() {
+        if (unbondingEpochCValueBuilder_ == null) {
+          unbondingEpochCValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValue.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.UnbondingEpochCValueOrBuilder>(
+                  getUnbondingEpochCValue(),
+                  getParentForChildren(),
+                  isClean());
+          unbondingEpochCValue_ = null;
+        }
+        return unbondingEpochCValueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryUnbondingEpochCValueResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnbondingEpochCValueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnbondingEpochCValueResponse>() {
+      @java.lang.Override
+      public QueryUnbondingEpochCValueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnbondingEpochCValueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnbondingEpochCValueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryUnbondingEpochCValueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHostAccountUndelegationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+     * @return The epochNumber.
+     */
+    long getEpochNumber();
+  }
+  /**
+   * <pre>
+   * QueryHostAccountUndelegationRequest is a request for the
+   * Query/HostAccountUndelegation methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostAccountUndelegationRequest}
+   */
+  public static final class QueryHostAccountUndelegationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationRequest)
+      QueryHostAccountUndelegationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHostAccountUndelegationRequest.newBuilder() to construct.
+    private QueryHostAccountUndelegationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHostAccountUndelegationRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHostAccountUndelegationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest.Builder.class);
+    }
+
+    public static final int EPOCH_NUMBER_FIELD_NUMBER = 1;
+    private long epochNumber_ = 0L;
+    /**
+     * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+     * @return The epochNumber.
+     */
+    @java.lang.Override
+    public long getEpochNumber() {
+      return epochNumber_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (epochNumber_ != 0L) {
+        output.writeInt64(1, epochNumber_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (epochNumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, epochNumber_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest) obj;
+
+      if (getEpochNumber()
+          != other.getEpochNumber()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EPOCH_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpochNumber());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHostAccountUndelegationRequest is a request for the
+     * Query/HostAccountUndelegation methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostAccountUndelegationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        epochNumber_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.epochNumber_ = epochNumber_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest.getDefaultInstance()) return this;
+        if (other.getEpochNumber() != 0L) {
+          setEpochNumber(other.getEpochNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                epochNumber_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long epochNumber_ ;
+      /**
+       * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+       * @return The epochNumber.
+       */
+      @java.lang.Override
+      public long getEpochNumber() {
+        return epochNumber_;
+      }
+      /**
+       * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+       * @param value The epochNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochNumber(long value) {
+
+        epochNumber_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 epoch_number = 1 [json_name = "epochNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        epochNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHostAccountUndelegationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHostAccountUndelegationRequest>() {
+      @java.lang.Override
+      public QueryHostAccountUndelegationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHostAccountUndelegationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHostAccountUndelegationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHostAccountUndelegationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+     * @return Whether the hostAccountUndelegation field is set.
+     */
+    boolean hasHostAccountUndelegation();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+     * @return The hostAccountUndelegation.
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation getHostAccountUndelegation();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegationOrBuilder getHostAccountUndelegationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryHostAccountUndelegationResponse is a response for the
+   * Query/HostAccountUndelegation methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostAccountUndelegationResponse}
+   */
+  public static final class QueryHostAccountUndelegationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationResponse)
+      QueryHostAccountUndelegationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHostAccountUndelegationResponse.newBuilder() to construct.
+    private QueryHostAccountUndelegationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHostAccountUndelegationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHostAccountUndelegationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse.Builder.class);
+    }
+
+    public static final int HOST_ACCOUNT_UNDELEGATION_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation hostAccountUndelegation_;
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+     * @return Whether the hostAccountUndelegation field is set.
+     */
+    @java.lang.Override
+    public boolean hasHostAccountUndelegation() {
+      return hostAccountUndelegation_ != null;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+     * @return The hostAccountUndelegation.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation getHostAccountUndelegation() {
+      return hostAccountUndelegation_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.getDefaultInstance() : hostAccountUndelegation_;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegationOrBuilder getHostAccountUndelegationOrBuilder() {
+      return hostAccountUndelegation_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.getDefaultInstance() : hostAccountUndelegation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hostAccountUndelegation_ != null) {
+        output.writeMessage(1, getHostAccountUndelegation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hostAccountUndelegation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHostAccountUndelegation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse) obj;
+
+      if (hasHostAccountUndelegation() != other.hasHostAccountUndelegation()) return false;
+      if (hasHostAccountUndelegation()) {
+        if (!getHostAccountUndelegation()
+            .equals(other.getHostAccountUndelegation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHostAccountUndelegation()) {
+        hash = (37 * hash) + HOST_ACCOUNT_UNDELEGATION_FIELD_NUMBER;
+        hash = (53 * hash) + getHostAccountUndelegation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHostAccountUndelegationResponse is a response for the
+     * Query/HostAccountUndelegation methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostAccountUndelegationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hostAccountUndelegation_ = null;
+        if (hostAccountUndelegationBuilder_ != null) {
+          hostAccountUndelegationBuilder_.dispose();
+          hostAccountUndelegationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hostAccountUndelegation_ = hostAccountUndelegationBuilder_ == null
+              ? hostAccountUndelegation_
+              : hostAccountUndelegationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse.getDefaultInstance()) return this;
+        if (other.hasHostAccountUndelegation()) {
+          mergeHostAccountUndelegation(other.getHostAccountUndelegation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHostAccountUndelegationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation hostAccountUndelegation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegationOrBuilder> hostAccountUndelegationBuilder_;
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       * @return Whether the hostAccountUndelegation field is set.
+       */
+      public boolean hasHostAccountUndelegation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       * @return The hostAccountUndelegation.
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation getHostAccountUndelegation() {
+        if (hostAccountUndelegationBuilder_ == null) {
+          return hostAccountUndelegation_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.getDefaultInstance() : hostAccountUndelegation_;
+        } else {
+          return hostAccountUndelegationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHostAccountUndelegation(com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation value) {
+        if (hostAccountUndelegationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hostAccountUndelegation_ = value;
+        } else {
+          hostAccountUndelegationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHostAccountUndelegation(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.Builder builderForValue) {
+        if (hostAccountUndelegationBuilder_ == null) {
+          hostAccountUndelegation_ = builderForValue.build();
+        } else {
+          hostAccountUndelegationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeHostAccountUndelegation(com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation value) {
+        if (hostAccountUndelegationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            hostAccountUndelegation_ != null &&
+            hostAccountUndelegation_ != com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.getDefaultInstance()) {
+            getHostAccountUndelegationBuilder().mergeFrom(value);
+          } else {
+            hostAccountUndelegation_ = value;
+          }
+        } else {
+          hostAccountUndelegationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearHostAccountUndelegation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hostAccountUndelegation_ = null;
+        if (hostAccountUndelegationBuilder_ != null) {
+          hostAccountUndelegationBuilder_.dispose();
+          hostAccountUndelegationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.Builder getHostAccountUndelegationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHostAccountUndelegationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegationOrBuilder getHostAccountUndelegationOrBuilder() {
+        if (hostAccountUndelegationBuilder_ != null) {
+          return hostAccountUndelegationBuilder_.getMessageOrBuilder();
+        } else {
+          return hostAccountUndelegation_ == null ?
+              com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.getDefaultInstance() : hostAccountUndelegation_;
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccountUndelegation host_account_undelegation = 1 [json_name = "hostAccountUndelegation", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegationOrBuilder> 
+          getHostAccountUndelegationFieldBuilder() {
+        if (hostAccountUndelegationBuilder_ == null) {
+          hostAccountUndelegationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegation.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountUndelegationOrBuilder>(
+                  getHostAccountUndelegation(),
+                  getParentForChildren(),
+                  isClean());
+          hostAccountUndelegation_ = null;
+        }
+        return hostAccountUndelegationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryHostAccountUndelegationResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHostAccountUndelegationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHostAccountUndelegationResponse>() {
+      @java.lang.Override
+      public QueryHostAccountUndelegationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHostAccountUndelegationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHostAccountUndelegationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountUndelegationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDelegatorUnbondingEpochEntryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    java.lang.String getDelegatorAddress();
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorAddressBytes();
+
+    /**
+     * <code>int64 epoch_number = 2 [json_name = "epochNumber"];</code>
+     * @return The epochNumber.
+     */
+    long getEpochNumber();
+  }
+  /**
+   * <pre>
+   * QueryDelegatorUnbondingEpochEntryRequest is a request for the
+   * Query/DelegatorUnbondingEpochEntry methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryRequest}
+   */
+  public static final class QueryDelegatorUnbondingEpochEntryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryRequest)
+      QueryDelegatorUnbondingEpochEntryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDelegatorUnbondingEpochEntryRequest.newBuilder() to construct.
+    private QueryDelegatorUnbondingEpochEntryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDelegatorUnbondingEpochEntryRequest() {
+      delegatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDelegatorUnbondingEpochEntryRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest.Builder.class);
+    }
+
+    public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegatorAddress_ = "";
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegatorAddress() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorAddressBytes() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EPOCH_NUMBER_FIELD_NUMBER = 2;
+    private long epochNumber_ = 0L;
+    /**
+     * <code>int64 epoch_number = 2 [json_name = "epochNumber"];</code>
+     * @return The epochNumber.
+     */
+    @java.lang.Override
+    public long getEpochNumber() {
+      return epochNumber_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegatorAddress_);
+      }
+      if (epochNumber_ != 0L) {
+        output.writeInt64(2, epochNumber_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegatorAddress_);
+      }
+      if (epochNumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, epochNumber_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest) obj;
+
+      if (!getDelegatorAddress()
+          .equals(other.getDelegatorAddress())) return false;
+      if (getEpochNumber()
+          != other.getEpochNumber()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegatorAddress().hashCode();
+      hash = (37 * hash) + EPOCH_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpochNumber());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDelegatorUnbondingEpochEntryRequest is a request for the
+     * Query/DelegatorUnbondingEpochEntry methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorAddress_ = "";
+        epochNumber_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorAddress_ = delegatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.epochNumber_ = epochNumber_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest.getDefaultInstance()) return this;
+        if (!other.getDelegatorAddress().isEmpty()) {
+          delegatorAddress_ = other.delegatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEpochNumber() != 0L) {
+          setEpochNumber(other.getEpochNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                epochNumber_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegatorAddress_ = "";
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The delegatorAddress.
+       */
+      public java.lang.String getDelegatorAddress() {
+        java.lang.Object ref = delegatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The bytes for delegatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorAddressBytes() {
+        java.lang.Object ref = delegatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorAddress() {
+        delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The bytes for delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long epochNumber_ ;
+      /**
+       * <code>int64 epoch_number = 2 [json_name = "epochNumber"];</code>
+       * @return The epochNumber.
+       */
+      @java.lang.Override
+      public long getEpochNumber() {
+        return epochNumber_;
+      }
+      /**
+       * <code>int64 epoch_number = 2 [json_name = "epochNumber"];</code>
+       * @param value The epochNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochNumber(long value) {
+
+        epochNumber_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 epoch_number = 2 [json_name = "epochNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        epochNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDelegatorUnbondingEpochEntryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDelegatorUnbondingEpochEntryRequest>() {
+      @java.lang.Override
+      public QueryDelegatorUnbondingEpochEntryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDelegatorUnbondingEpochEntryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDelegatorUnbondingEpochEntryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDelegatorUnbondingEpochEntryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+     * @return Whether the delegatorUnbodingEpochEntry field is set.
+     */
+    boolean hasDelegatorUnbodingEpochEntry();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+     * @return The delegatorUnbodingEpochEntry.
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry getDelegatorUnbodingEpochEntry();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder getDelegatorUnbodingEpochEntryOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDelegatorUnbondingEpochEntryResponse is a response for the
+   * Query/DelegatorUnbondingEpochEntry methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryResponse}
+   */
+  public static final class QueryDelegatorUnbondingEpochEntryResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryResponse)
+      QueryDelegatorUnbondingEpochEntryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDelegatorUnbondingEpochEntryResponse.newBuilder() to construct.
+    private QueryDelegatorUnbondingEpochEntryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDelegatorUnbondingEpochEntryResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDelegatorUnbondingEpochEntryResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse.Builder.class);
+    }
+
+    public static final int DELEGATOR_UNBODING_EPOCH_ENTRY_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry delegatorUnbodingEpochEntry_;
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+     * @return Whether the delegatorUnbodingEpochEntry field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelegatorUnbodingEpochEntry() {
+      return delegatorUnbodingEpochEntry_ != null;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+     * @return The delegatorUnbodingEpochEntry.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry getDelegatorUnbodingEpochEntry() {
+      return delegatorUnbodingEpochEntry_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.getDefaultInstance() : delegatorUnbodingEpochEntry_;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder getDelegatorUnbodingEpochEntryOrBuilder() {
+      return delegatorUnbodingEpochEntry_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.getDefaultInstance() : delegatorUnbodingEpochEntry_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (delegatorUnbodingEpochEntry_ != null) {
+        output.writeMessage(1, getDelegatorUnbodingEpochEntry());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (delegatorUnbodingEpochEntry_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDelegatorUnbodingEpochEntry());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse) obj;
+
+      if (hasDelegatorUnbodingEpochEntry() != other.hasDelegatorUnbodingEpochEntry()) return false;
+      if (hasDelegatorUnbodingEpochEntry()) {
+        if (!getDelegatorUnbodingEpochEntry()
+            .equals(other.getDelegatorUnbodingEpochEntry())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDelegatorUnbodingEpochEntry()) {
+        hash = (37 * hash) + DELEGATOR_UNBODING_EPOCH_ENTRY_FIELD_NUMBER;
+        hash = (53 * hash) + getDelegatorUnbodingEpochEntry().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDelegatorUnbondingEpochEntryResponse is a response for the
+     * Query/DelegatorUnbondingEpochEntry methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorUnbodingEpochEntry_ = null;
+        if (delegatorUnbodingEpochEntryBuilder_ != null) {
+          delegatorUnbodingEpochEntryBuilder_.dispose();
+          delegatorUnbodingEpochEntryBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorUnbodingEpochEntry_ = delegatorUnbodingEpochEntryBuilder_ == null
+              ? delegatorUnbodingEpochEntry_
+              : delegatorUnbodingEpochEntryBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse.getDefaultInstance()) return this;
+        if (other.hasDelegatorUnbodingEpochEntry()) {
+          mergeDelegatorUnbodingEpochEntry(other.getDelegatorUnbodingEpochEntry());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDelegatorUnbodingEpochEntryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry delegatorUnbodingEpochEntry_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder> delegatorUnbodingEpochEntryBuilder_;
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       * @return Whether the delegatorUnbodingEpochEntry field is set.
+       */
+      public boolean hasDelegatorUnbodingEpochEntry() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       * @return The delegatorUnbodingEpochEntry.
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry getDelegatorUnbodingEpochEntry() {
+        if (delegatorUnbodingEpochEntryBuilder_ == null) {
+          return delegatorUnbodingEpochEntry_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.getDefaultInstance() : delegatorUnbodingEpochEntry_;
+        } else {
+          return delegatorUnbodingEpochEntryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDelegatorUnbodingEpochEntry(com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry value) {
+        if (delegatorUnbodingEpochEntryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delegatorUnbodingEpochEntry_ = value;
+        } else {
+          delegatorUnbodingEpochEntryBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDelegatorUnbodingEpochEntry(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder builderForValue) {
+        if (delegatorUnbodingEpochEntryBuilder_ == null) {
+          delegatorUnbodingEpochEntry_ = builderForValue.build();
+        } else {
+          delegatorUnbodingEpochEntryBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDelegatorUnbodingEpochEntry(com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry value) {
+        if (delegatorUnbodingEpochEntryBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            delegatorUnbodingEpochEntry_ != null &&
+            delegatorUnbodingEpochEntry_ != com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.getDefaultInstance()) {
+            getDelegatorUnbodingEpochEntryBuilder().mergeFrom(value);
+          } else {
+            delegatorUnbodingEpochEntry_ = value;
+          }
+        } else {
+          delegatorUnbodingEpochEntryBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDelegatorUnbodingEpochEntry() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        delegatorUnbodingEpochEntry_ = null;
+        if (delegatorUnbodingEpochEntryBuilder_ != null) {
+          delegatorUnbodingEpochEntryBuilder_.dispose();
+          delegatorUnbodingEpochEntryBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder getDelegatorUnbodingEpochEntryBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDelegatorUnbodingEpochEntryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder getDelegatorUnbodingEpochEntryOrBuilder() {
+        if (delegatorUnbodingEpochEntryBuilder_ != null) {
+          return delegatorUnbodingEpochEntryBuilder_.getMessageOrBuilder();
+        } else {
+          return delegatorUnbodingEpochEntry_ == null ?
+              com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.getDefaultInstance() : delegatorUnbodingEpochEntry_;
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unboding_epoch_entry = 1 [json_name = "delegatorUnbodingEpochEntry", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder> 
+          getDelegatorUnbodingEpochEntryFieldBuilder() {
+        if (delegatorUnbodingEpochEntryBuilder_ == null) {
+          delegatorUnbodingEpochEntryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder>(
+                  getDelegatorUnbodingEpochEntry(),
+                  getParentForChildren(),
+                  isClean());
+          delegatorUnbodingEpochEntry_ = null;
+        }
+        return delegatorUnbodingEpochEntryBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryDelegatorUnbondingEpochEntryResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDelegatorUnbondingEpochEntryResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDelegatorUnbondingEpochEntryResponse>() {
+      @java.lang.Override
+      public QueryDelegatorUnbondingEpochEntryResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDelegatorUnbondingEpochEntryResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDelegatorUnbondingEpochEntryResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryDelegatorUnbondingEpochEntryResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHostAccountsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryHostAccountsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryHostAccountsRequest is a request for the Query/HostAccounts methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostAccountsRequest}
+   */
+  public static final class QueryHostAccountsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryHostAccountsRequest)
+      QueryHostAccountsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHostAccountsRequest.newBuilder() to construct.
+    private QueryHostAccountsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHostAccountsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHostAccountsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHostAccountsRequest is a request for the Query/HostAccounts methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostAccountsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryHostAccountsRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryHostAccountsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryHostAccountsRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHostAccountsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHostAccountsRequest>() {
+      @java.lang.Override
+      public QueryHostAccountsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHostAccountsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHostAccountsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHostAccountsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryHostAccountsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+     * @return Whether the hostAccounts field is set.
+     */
+    boolean hasHostAccounts();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+     * @return The hostAccounts.
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts getHostAccounts();
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountsOrBuilder getHostAccountsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryHostAccountsResponse is a response for the Query/HostAccounts methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostAccountsResponse}
+   */
+  public static final class QueryHostAccountsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryHostAccountsResponse)
+      QueryHostAccountsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHostAccountsResponse.newBuilder() to construct.
+    private QueryHostAccountsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHostAccountsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHostAccountsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse.Builder.class);
+    }
+
+    public static final int HOST_ACCOUNTS_FIELD_NUMBER = 1;
+    private com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts hostAccounts_;
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+     * @return Whether the hostAccounts field is set.
+     */
+    @java.lang.Override
+    public boolean hasHostAccounts() {
+      return hostAccounts_ != null;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+     * @return The hostAccounts.
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts getHostAccounts() {
+      return hostAccounts_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.getDefaultInstance() : hostAccounts_;
+    }
+    /**
+     * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountsOrBuilder getHostAccountsOrBuilder() {
+      return hostAccounts_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.getDefaultInstance() : hostAccounts_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hostAccounts_ != null) {
+        output.writeMessage(1, getHostAccounts());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hostAccounts_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHostAccounts());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse) obj;
+
+      if (hasHostAccounts() != other.hasHostAccounts()) return false;
+      if (hasHostAccounts()) {
+        if (!getHostAccounts()
+            .equals(other.getHostAccounts())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHostAccounts()) {
+        hash = (37 * hash) + HOST_ACCOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostAccounts().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHostAccountsResponse is a response for the Query/HostAccounts methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryHostAccountsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryHostAccountsResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hostAccounts_ = null;
+        if (hostAccountsBuilder_ != null) {
+          hostAccountsBuilder_.dispose();
+          hostAccountsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hostAccounts_ = hostAccountsBuilder_ == null
+              ? hostAccounts_
+              : hostAccountsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse.getDefaultInstance()) return this;
+        if (other.hasHostAccounts()) {
+          mergeHostAccounts(other.getHostAccounts());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHostAccountsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts hostAccounts_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountsOrBuilder> hostAccountsBuilder_;
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       * @return Whether the hostAccounts field is set.
+       */
+      public boolean hasHostAccounts() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       * @return The hostAccounts.
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts getHostAccounts() {
+        if (hostAccountsBuilder_ == null) {
+          return hostAccounts_ == null ? com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.getDefaultInstance() : hostAccounts_;
+        } else {
+          return hostAccountsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHostAccounts(com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts value) {
+        if (hostAccountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hostAccounts_ = value;
+        } else {
+          hostAccountsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHostAccounts(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.Builder builderForValue) {
+        if (hostAccountsBuilder_ == null) {
+          hostAccounts_ = builderForValue.build();
+        } else {
+          hostAccountsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeHostAccounts(com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts value) {
+        if (hostAccountsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            hostAccounts_ != null &&
+            hostAccounts_ != com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.getDefaultInstance()) {
+            getHostAccountsBuilder().mergeFrom(value);
+          } else {
+            hostAccounts_ = value;
+          }
+        } else {
+          hostAccountsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearHostAccounts() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hostAccounts_ = null;
+        if (hostAccountsBuilder_ != null) {
+          hostAccountsBuilder_.dispose();
+          hostAccountsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.Builder getHostAccountsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHostAccountsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountsOrBuilder getHostAccountsOrBuilder() {
+        if (hostAccountsBuilder_ != null) {
+          return hostAccountsBuilder_.getMessageOrBuilder();
+        } else {
+          return hostAccounts_ == null ?
+              com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.getDefaultInstance() : hostAccounts_;
+        }
+      }
+      /**
+       * <code>.pstake.lscosmos.v1beta1.HostAccounts host_accounts = 1 [json_name = "hostAccounts", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountsOrBuilder> 
+          getHostAccountsFieldBuilder() {
+        if (hostAccountsBuilder_ == null) {
+          hostAccountsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccounts.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.HostAccountsOrBuilder>(
+                  getHostAccounts(),
+                  getParentForChildren(),
+                  isClean());
+          hostAccounts_ = null;
+        }
+        return hostAccountsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryHostAccountsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryHostAccountsResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHostAccountsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHostAccountsResponse>() {
+      @java.lang.Override
+      public QueryHostAccountsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHostAccountsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHostAccountsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryHostAccountsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDepositModuleAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryDepositModuleAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryDepositModuleAccountRequest is a request for the
+   * Query/DepositModuleAccount methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDepositModuleAccountRequest}
+   */
+  public static final class QueryDepositModuleAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryDepositModuleAccountRequest)
+      QueryDepositModuleAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDepositModuleAccountRequest.newBuilder() to construct.
+    private QueryDepositModuleAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDepositModuleAccountRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDepositModuleAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDepositModuleAccountRequest is a request for the
+     * Query/DepositModuleAccount methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDepositModuleAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryDepositModuleAccountRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryDepositModuleAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryDepositModuleAccountRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDepositModuleAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDepositModuleAccountRequest>() {
+      @java.lang.Override
+      public QueryDepositModuleAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDepositModuleAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDepositModuleAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDepositModuleAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryDepositModuleAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return Whether the balance field is set.
+     */
+    boolean hasBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return The balance.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDepositModuleAccountResponse is a response for the
+   * Query/DepositModuleAccount methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDepositModuleAccountResponse}
+   */
+  public static final class QueryDepositModuleAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryDepositModuleAccountResponse)
+      QueryDepositModuleAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDepositModuleAccountResponse.newBuilder() to construct.
+    private QueryDepositModuleAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDepositModuleAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDepositModuleAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse.Builder.class);
+    }
+
+    public static final int BALANCE_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return Whether the balance field is set.
+     */
+    @java.lang.Override
+    public boolean hasBalance() {
+      return balance_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return The balance.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (balance_ != null) {
+        output.writeMessage(1, getBalance());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (balance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBalance());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse) obj;
+
+      if (hasBalance() != other.hasBalance()) return false;
+      if (hasBalance()) {
+        if (!getBalance()
+            .equals(other.getBalance())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBalance()) {
+        hash = (37 * hash) + BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getBalance().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDepositModuleAccountResponse is a response for the
+     * Query/DepositModuleAccount methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryDepositModuleAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryDepositModuleAccountResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.balance_ = balanceBuilder_ == null
+              ? balance_
+              : balanceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse.getDefaultInstance()) return this;
+        if (other.hasBalance()) {
+          mergeBalance(other.getBalance());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBalanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> balanceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       * @return Whether the balance field is set.
+       */
+      public boolean hasBalance() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       * @return The balance.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+        if (balanceBuilder_ == null) {
+          return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        } else {
+          return balanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          balance_ = value;
+        } else {
+          balanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balanceBuilder_ == null) {
+          balance_ = builderForValue.build();
+        } else {
+          balanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            balance_ != null &&
+            balance_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBalanceBuilder().mergeFrom(value);
+          } else {
+            balance_ = value;
+          }
+        } else {
+          balanceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBalance() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBalanceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+        if (balanceBuilder_ != null) {
+          return balanceBuilder_.getMessageOrBuilder();
+        } else {
+          return balance_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBalanceFieldBuilder() {
+        if (balanceBuilder_ == null) {
+          balanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBalance(),
+                  getParentForChildren(),
+                  isClean());
+          balance_ = null;
+        }
+        return balanceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryDepositModuleAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryDepositModuleAccountResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDepositModuleAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDepositModuleAccountResponse>() {
+      @java.lang.Override
+      public QueryDepositModuleAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDepositModuleAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDepositModuleAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryDepositModuleAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllDelegatorUnbondingEpochEntriesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    java.lang.String getDelegatorAddress();
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryAllDelegatorUnbondingEpochEntriesRequest is a request for the
+   * Query/DelegatorUnbondingEpochEntries methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesRequest}
+   */
+  public static final class QueryAllDelegatorUnbondingEpochEntriesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesRequest)
+      QueryAllDelegatorUnbondingEpochEntriesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllDelegatorUnbondingEpochEntriesRequest.newBuilder() to construct.
+    private QueryAllDelegatorUnbondingEpochEntriesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllDelegatorUnbondingEpochEntriesRequest() {
+      delegatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllDelegatorUnbondingEpochEntriesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest.Builder.class);
+    }
+
+    public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegatorAddress_ = "";
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegatorAddress() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorAddressBytes() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest) obj;
+
+      if (!getDelegatorAddress()
+          .equals(other.getDelegatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAllDelegatorUnbondingEpochEntriesRequest is a request for the
+     * Query/DelegatorUnbondingEpochEntries methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesRequest)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorAddress_ = delegatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest.getDefaultInstance()) return this;
+        if (!other.getDelegatorAddress().isEmpty()) {
+          delegatorAddress_ = other.delegatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegatorAddress_ = "";
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The delegatorAddress.
+       */
+      public java.lang.String getDelegatorAddress() {
+        java.lang.Object ref = delegatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The bytes for delegatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorAddressBytes() {
+        java.lang.Object ref = delegatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorAddress() {
+        delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The bytes for delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesRequest)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllDelegatorUnbondingEpochEntriesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllDelegatorUnbondingEpochEntriesRequest>() {
+      @java.lang.Override
+      public QueryAllDelegatorUnbondingEpochEntriesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllDelegatorUnbondingEpochEntriesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllDelegatorUnbondingEpochEntriesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllDelegatorUnbondingEpochEntriesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry> 
+        getDelegatorUnbondingEpochEntriesList();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry getDelegatorUnbondingEpochEntries(int index);
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    int getDelegatorUnbondingEpochEntriesCount();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder> 
+        getDelegatorUnbondingEpochEntriesOrBuilderList();
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder getDelegatorUnbondingEpochEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryAllDelegatorUnbondingEpochEntriesResponse is a response for the
+   * Query/DelegatorUnbondingEpochEntries methods.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesResponse}
+   */
+  public static final class QueryAllDelegatorUnbondingEpochEntriesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesResponse)
+      QueryAllDelegatorUnbondingEpochEntriesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllDelegatorUnbondingEpochEntriesResponse.newBuilder() to construct.
+    private QueryAllDelegatorUnbondingEpochEntriesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllDelegatorUnbondingEpochEntriesResponse() {
+      delegatorUnbondingEpochEntries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllDelegatorUnbondingEpochEntriesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse.Builder.class);
+    }
+
+    public static final int DELEGATOR_UNBONDING_EPOCH_ENTRIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry> delegatorUnbondingEpochEntries_;
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry> getDelegatorUnbondingEpochEntriesList() {
+      return delegatorUnbondingEpochEntries_;
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder> 
+        getDelegatorUnbondingEpochEntriesOrBuilderList() {
+      return delegatorUnbondingEpochEntries_;
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDelegatorUnbondingEpochEntriesCount() {
+      return delegatorUnbondingEpochEntries_.size();
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry getDelegatorUnbondingEpochEntries(int index) {
+      return delegatorUnbondingEpochEntries_.get(index);
+    }
+    /**
+     * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder getDelegatorUnbondingEpochEntriesOrBuilder(
+        int index) {
+      return delegatorUnbondingEpochEntries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < delegatorUnbondingEpochEntries_.size(); i++) {
+        output.writeMessage(1, delegatorUnbondingEpochEntries_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < delegatorUnbondingEpochEntries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, delegatorUnbondingEpochEntries_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse other = (com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse) obj;
+
+      if (!getDelegatorUnbondingEpochEntriesList()
+          .equals(other.getDelegatorUnbondingEpochEntriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDelegatorUnbondingEpochEntriesCount() > 0) {
+        hash = (37 * hash) + DELEGATOR_UNBONDING_EPOCH_ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getDelegatorUnbondingEpochEntriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAllDelegatorUnbondingEpochEntriesResponse is a response for the
+     * Query/DelegatorUnbondingEpochEntries methods.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesResponse)
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse.class, com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          delegatorUnbondingEpochEntries_ = java.util.Collections.emptyList();
+        } else {
+          delegatorUnbondingEpochEntries_ = null;
+          delegatorUnbondingEpochEntriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse getDefaultInstanceForType() {
+        return com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse build() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse buildPartial() {
+        com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse result = new com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse result) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            delegatorUnbondingEpochEntries_ = java.util.Collections.unmodifiableList(delegatorUnbondingEpochEntries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.delegatorUnbondingEpochEntries_ = delegatorUnbondingEpochEntries_;
+        } else {
+          result.delegatorUnbondingEpochEntries_ = delegatorUnbondingEpochEntriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse) {
+          return mergeFrom((com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse other) {
+        if (other == com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse.getDefaultInstance()) return this;
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          if (!other.delegatorUnbondingEpochEntries_.isEmpty()) {
+            if (delegatorUnbondingEpochEntries_.isEmpty()) {
+              delegatorUnbondingEpochEntries_ = other.delegatorUnbondingEpochEntries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDelegatorUnbondingEpochEntriesIsMutable();
+              delegatorUnbondingEpochEntries_.addAll(other.delegatorUnbondingEpochEntries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.delegatorUnbondingEpochEntries_.isEmpty()) {
+            if (delegatorUnbondingEpochEntriesBuilder_.isEmpty()) {
+              delegatorUnbondingEpochEntriesBuilder_.dispose();
+              delegatorUnbondingEpochEntriesBuilder_ = null;
+              delegatorUnbondingEpochEntries_ = other.delegatorUnbondingEpochEntries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              delegatorUnbondingEpochEntriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDelegatorUnbondingEpochEntriesFieldBuilder() : null;
+            } else {
+              delegatorUnbondingEpochEntriesBuilder_.addAllMessages(other.delegatorUnbondingEpochEntries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry m =
+                    input.readMessage(
+                        com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.parser(),
+                        extensionRegistry);
+                if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+                  ensureDelegatorUnbondingEpochEntriesIsMutable();
+                  delegatorUnbondingEpochEntries_.add(m);
+                } else {
+                  delegatorUnbondingEpochEntriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry> delegatorUnbondingEpochEntries_ =
+        java.util.Collections.emptyList();
+      private void ensureDelegatorUnbondingEpochEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          delegatorUnbondingEpochEntries_ = new java.util.ArrayList<com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry>(delegatorUnbondingEpochEntries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder> delegatorUnbondingEpochEntriesBuilder_;
+
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry> getDelegatorUnbondingEpochEntriesList() {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(delegatorUnbondingEpochEntries_);
+        } else {
+          return delegatorUnbondingEpochEntriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDelegatorUnbondingEpochEntriesCount() {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          return delegatorUnbondingEpochEntries_.size();
+        } else {
+          return delegatorUnbondingEpochEntriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry getDelegatorUnbondingEpochEntries(int index) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          return delegatorUnbondingEpochEntries_.get(index);
+        } else {
+          return delegatorUnbondingEpochEntriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDelegatorUnbondingEpochEntries(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry value) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDelegatorUnbondingEpochEntriesIsMutable();
+          delegatorUnbondingEpochEntries_.set(index, value);
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDelegatorUnbondingEpochEntries(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder builderForValue) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          ensureDelegatorUnbondingEpochEntriesIsMutable();
+          delegatorUnbondingEpochEntries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDelegatorUnbondingEpochEntries(com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry value) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDelegatorUnbondingEpochEntriesIsMutable();
+          delegatorUnbondingEpochEntries_.add(value);
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDelegatorUnbondingEpochEntries(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry value) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDelegatorUnbondingEpochEntriesIsMutable();
+          delegatorUnbondingEpochEntries_.add(index, value);
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDelegatorUnbondingEpochEntries(
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder builderForValue) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          ensureDelegatorUnbondingEpochEntriesIsMutable();
+          delegatorUnbondingEpochEntries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDelegatorUnbondingEpochEntries(
+          int index, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder builderForValue) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          ensureDelegatorUnbondingEpochEntriesIsMutable();
+          delegatorUnbondingEpochEntries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDelegatorUnbondingEpochEntries(
+          java.lang.Iterable<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry> values) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          ensureDelegatorUnbondingEpochEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, delegatorUnbondingEpochEntries_);
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDelegatorUnbondingEpochEntries() {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          delegatorUnbondingEpochEntries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDelegatorUnbondingEpochEntries(int index) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          ensureDelegatorUnbondingEpochEntriesIsMutable();
+          delegatorUnbondingEpochEntries_.remove(index);
+          onChanged();
+        } else {
+          delegatorUnbondingEpochEntriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder getDelegatorUnbondingEpochEntriesBuilder(
+          int index) {
+        return getDelegatorUnbondingEpochEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder getDelegatorUnbondingEpochEntriesOrBuilder(
+          int index) {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          return delegatorUnbondingEpochEntries_.get(index);  } else {
+          return delegatorUnbondingEpochEntriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder> 
+           getDelegatorUnbondingEpochEntriesOrBuilderList() {
+        if (delegatorUnbondingEpochEntriesBuilder_ != null) {
+          return delegatorUnbondingEpochEntriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(delegatorUnbondingEpochEntries_);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder addDelegatorUnbondingEpochEntriesBuilder() {
+        return getDelegatorUnbondingEpochEntriesFieldBuilder().addBuilder(
+            com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder addDelegatorUnbondingEpochEntriesBuilder(
+          int index) {
+        return getDelegatorUnbondingEpochEntriesFieldBuilder().addBuilder(
+            index, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lscosmos.v1beta1.DelegatorUnbondingEpochEntry delegator_unbonding_epoch_entries = 1 [json_name = "delegatorUnbondingEpochEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder> 
+           getDelegatorUnbondingEpochEntriesBuilderList() {
+        return getDelegatorUnbondingEpochEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder> 
+          getDelegatorUnbondingEpochEntriesFieldBuilder() {
+        if (delegatorUnbondingEpochEntriesBuilder_ == null) {
+          delegatorUnbondingEpochEntriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntry.Builder, com.pstake.lscosmos.v1beta1.LscosmosProto.DelegatorUnbondingEpochEntryOrBuilder>(
+                  delegatorUnbondingEpochEntries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          delegatorUnbondingEpochEntries_ = null;
+        }
+        return delegatorUnbondingEpochEntriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lscosmos.v1beta1.QueryAllDelegatorUnbondingEpochEntriesResponse)
+    private static final com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse();
+    }
+
+    public static com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllDelegatorUnbondingEpochEntriesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllDelegatorUnbondingEpochEntriesResponse>() {
+      @java.lang.Override
+      public QueryAllDelegatorUnbondingEpochEntriesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllDelegatorUnbondingEpochEntriesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllDelegatorUnbondingEpochEntriesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lscosmos.v1beta1.QueryProto.QueryAllDelegatorUnbondingEpochEntriesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryHostChainParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryDelegationStateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryAllowListedValidatorsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryCValueRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryCValueRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryCValueResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryCValueResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryModuleStateRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryModuleStateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryModuleStateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryModuleStateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryIBCTransientStoreResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryUnclaimedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryFailedUnbondingsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryPendingUnbondingsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryUnbondingEpochCValueResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryHostAccountUndelegationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryDelegatorUnbondingEpochEntryResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryHostAccountsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryDepositModuleAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lscosmos_v1beta1_QueryAllDelegatorUnbondingEpochEntriesResponse_fieldAccessorTable;
 
@@ -342,13 +18215,13 @@ public final class QueryProto {
       "ke.lscosmos.v1beta1.QueryAllDelegatorUnb" +
       "ondingEpochEntriesResponse\"V\202\323\344\223\002P\022N/pst" +
       "ake/lscosmos/v1beta1/delegator_unbonding" +
-      "_epoch_entries/{delegator_address}B\344\001\n\033c" +
-      "om.pstake.lscosmos.v1beta1B\nQueryProtoP\001" +
-      "Z;github.com/persistenceOne/pstake-nativ" +
-      "e/v2/x/lscosmos/types\242\002\003PLX\252\002\027Pstake.Lsc" +
-      "osmos.V1beta1\312\002\027Pstake\\Lscosmos\\V1beta1\342" +
-      "\002#Pstake\\Lscosmos\\V1beta1\\GPBMetadata\352\002\031" +
-      "Pstake::Lscosmos::V1beta1b\006proto3"
+      "_epoch_entries/{delegator_address}B\342\001\n\033c" +
+      "om.pstake.lscosmos.v1beta1B\nQueryProtoZ;" +
+      "github.com/persistenceOne/pstake-native/" +
+      "v2/x/lscosmos/types\242\002\003PLX\252\002\027Pstake.Lscos" +
+      "mos.V1beta1\312\002\027Pstake\\Lscosmos\\V1beta1\342\002#" +
+      "Pstake\\Lscosmos\\V1beta1\\GPBMetadata\352\002\031Ps" +
+      "take::Lscosmos::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

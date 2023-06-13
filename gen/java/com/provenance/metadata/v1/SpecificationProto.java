@@ -14,29 +14,8428 @@ public final class SpecificationProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * DefinitionType indicates the required definition type for this value
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.DefinitionType}
+   */
+  public enum DefinitionType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * DEFINITION_TYPE_UNSPECIFIED indicates an unknown/invalid value
+     * </pre>
+     *
+     * <code>DEFINITION_TYPE_UNSPECIFIED = 0;</code>
+     */
+    DEFINITION_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * DEFINITION_TYPE_PROPOSED indicates a proposed value is used here (a record that is not on-chain)
+     * </pre>
+     *
+     * <code>DEFINITION_TYPE_PROPOSED = 1;</code>
+     */
+    DEFINITION_TYPE_PROPOSED(1),
+    /**
+     * <pre>
+     * DEFINITION_TYPE_RECORD indicates the value must be a reference to a record on chain
+     * </pre>
+     *
+     * <code>DEFINITION_TYPE_RECORD = 2;</code>
+     */
+    DEFINITION_TYPE_RECORD(2),
+    /**
+     * <pre>
+     * DEFINITION_TYPE_RECORD_LIST indicates the value maybe a reference to a collection of values on chain having
+     * the same name
+     * </pre>
+     *
+     * <code>DEFINITION_TYPE_RECORD_LIST = 3;</code>
+     */
+    DEFINITION_TYPE_RECORD_LIST(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * DEFINITION_TYPE_UNSPECIFIED indicates an unknown/invalid value
+     * </pre>
+     *
+     * <code>DEFINITION_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int DEFINITION_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * DEFINITION_TYPE_PROPOSED indicates a proposed value is used here (a record that is not on-chain)
+     * </pre>
+     *
+     * <code>DEFINITION_TYPE_PROPOSED = 1;</code>
+     */
+    public static final int DEFINITION_TYPE_PROPOSED_VALUE = 1;
+    /**
+     * <pre>
+     * DEFINITION_TYPE_RECORD indicates the value must be a reference to a record on chain
+     * </pre>
+     *
+     * <code>DEFINITION_TYPE_RECORD = 2;</code>
+     */
+    public static final int DEFINITION_TYPE_RECORD_VALUE = 2;
+    /**
+     * <pre>
+     * DEFINITION_TYPE_RECORD_LIST indicates the value maybe a reference to a collection of values on chain having
+     * the same name
+     * </pre>
+     *
+     * <code>DEFINITION_TYPE_RECORD_LIST = 3;</code>
+     */
+    public static final int DEFINITION_TYPE_RECORD_LIST_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DefinitionType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static DefinitionType forNumber(int value) {
+      switch (value) {
+        case 0: return DEFINITION_TYPE_UNSPECIFIED;
+        case 1: return DEFINITION_TYPE_PROPOSED;
+        case 2: return DEFINITION_TYPE_RECORD;
+        case 3: return DEFINITION_TYPE_RECORD_LIST;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DefinitionType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DefinitionType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DefinitionType>() {
+            public DefinitionType findValueByNumber(int number) {
+              return DefinitionType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.SpecificationProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final DefinitionType[] VALUES = values();
+
+    public static DefinitionType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private DefinitionType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.DefinitionType)
+  }
+
+  /**
+   * <pre>
+   * PartyType are the different roles parties on a contract may use
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.PartyType}
+   */
+  public enum PartyType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * PARTY_TYPE_UNSPECIFIED is an error condition
+     * </pre>
+     *
+     * <code>PARTY_TYPE_UNSPECIFIED = 0;</code>
+     */
+    PARTY_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * PARTY_TYPE_ORIGINATOR is an asset originator
+     * </pre>
+     *
+     * <code>PARTY_TYPE_ORIGINATOR = 1;</code>
+     */
+    PARTY_TYPE_ORIGINATOR(1),
+    /**
+     * <pre>
+     * PARTY_TYPE_SERVICER provides debt servicing functions
+     * </pre>
+     *
+     * <code>PARTY_TYPE_SERVICER = 2;</code>
+     */
+    PARTY_TYPE_SERVICER(2),
+    /**
+     * <pre>
+     * PARTY_TYPE_INVESTOR is a generic investor
+     * </pre>
+     *
+     * <code>PARTY_TYPE_INVESTOR = 3;</code>
+     */
+    PARTY_TYPE_INVESTOR(3),
+    /**
+     * <pre>
+     * PARTY_TYPE_CUSTODIAN is an entity that provides custodian services for assets
+     * </pre>
+     *
+     * <code>PARTY_TYPE_CUSTODIAN = 4;</code>
+     */
+    PARTY_TYPE_CUSTODIAN(4),
+    /**
+     * <pre>
+     * PARTY_TYPE_OWNER indicates this party is an owner of the item
+     * </pre>
+     *
+     * <code>PARTY_TYPE_OWNER = 5;</code>
+     */
+    PARTY_TYPE_OWNER(5),
+    /**
+     * <pre>
+     * PARTY_TYPE_AFFILIATE is a party with an affiliate agreement
+     * </pre>
+     *
+     * <code>PARTY_TYPE_AFFILIATE = 6;</code>
+     */
+    PARTY_TYPE_AFFILIATE(6),
+    /**
+     * <pre>
+     * PARTY_TYPE_OMNIBUS is a special type of party that controls an omnibus bank account
+     * </pre>
+     *
+     * <code>PARTY_TYPE_OMNIBUS = 7;</code>
+     */
+    PARTY_TYPE_OMNIBUS(7),
+    /**
+     * <pre>
+     * PARTY_TYPE_PROVENANCE is used to indicate this party represents the blockchain or a smart contract action
+     * </pre>
+     *
+     * <code>PARTY_TYPE_PROVENANCE = 8;</code>
+     */
+    PARTY_TYPE_PROVENANCE(8),
+    /**
+     * <pre>
+     * PARTY_TYPE_CONTROLLER is an entity which controls a specific asset on chain (ie enote)
+     * </pre>
+     *
+     * <code>PARTY_TYPE_CONTROLLER = 10;</code>
+     */
+    PARTY_TYPE_CONTROLLER(10),
+    /**
+     * <pre>
+     * PARTY_TYPE_VALIDATOR is an entity which validates given assets on chain
+     * </pre>
+     *
+     * <code>PARTY_TYPE_VALIDATOR = 11;</code>
+     */
+    PARTY_TYPE_VALIDATOR(11),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * PARTY_TYPE_UNSPECIFIED is an error condition
+     * </pre>
+     *
+     * <code>PARTY_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int PARTY_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * PARTY_TYPE_ORIGINATOR is an asset originator
+     * </pre>
+     *
+     * <code>PARTY_TYPE_ORIGINATOR = 1;</code>
+     */
+    public static final int PARTY_TYPE_ORIGINATOR_VALUE = 1;
+    /**
+     * <pre>
+     * PARTY_TYPE_SERVICER provides debt servicing functions
+     * </pre>
+     *
+     * <code>PARTY_TYPE_SERVICER = 2;</code>
+     */
+    public static final int PARTY_TYPE_SERVICER_VALUE = 2;
+    /**
+     * <pre>
+     * PARTY_TYPE_INVESTOR is a generic investor
+     * </pre>
+     *
+     * <code>PARTY_TYPE_INVESTOR = 3;</code>
+     */
+    public static final int PARTY_TYPE_INVESTOR_VALUE = 3;
+    /**
+     * <pre>
+     * PARTY_TYPE_CUSTODIAN is an entity that provides custodian services for assets
+     * </pre>
+     *
+     * <code>PARTY_TYPE_CUSTODIAN = 4;</code>
+     */
+    public static final int PARTY_TYPE_CUSTODIAN_VALUE = 4;
+    /**
+     * <pre>
+     * PARTY_TYPE_OWNER indicates this party is an owner of the item
+     * </pre>
+     *
+     * <code>PARTY_TYPE_OWNER = 5;</code>
+     */
+    public static final int PARTY_TYPE_OWNER_VALUE = 5;
+    /**
+     * <pre>
+     * PARTY_TYPE_AFFILIATE is a party with an affiliate agreement
+     * </pre>
+     *
+     * <code>PARTY_TYPE_AFFILIATE = 6;</code>
+     */
+    public static final int PARTY_TYPE_AFFILIATE_VALUE = 6;
+    /**
+     * <pre>
+     * PARTY_TYPE_OMNIBUS is a special type of party that controls an omnibus bank account
+     * </pre>
+     *
+     * <code>PARTY_TYPE_OMNIBUS = 7;</code>
+     */
+    public static final int PARTY_TYPE_OMNIBUS_VALUE = 7;
+    /**
+     * <pre>
+     * PARTY_TYPE_PROVENANCE is used to indicate this party represents the blockchain or a smart contract action
+     * </pre>
+     *
+     * <code>PARTY_TYPE_PROVENANCE = 8;</code>
+     */
+    public static final int PARTY_TYPE_PROVENANCE_VALUE = 8;
+    /**
+     * <pre>
+     * PARTY_TYPE_CONTROLLER is an entity which controls a specific asset on chain (ie enote)
+     * </pre>
+     *
+     * <code>PARTY_TYPE_CONTROLLER = 10;</code>
+     */
+    public static final int PARTY_TYPE_CONTROLLER_VALUE = 10;
+    /**
+     * <pre>
+     * PARTY_TYPE_VALIDATOR is an entity which validates given assets on chain
+     * </pre>
+     *
+     * <code>PARTY_TYPE_VALIDATOR = 11;</code>
+     */
+    public static final int PARTY_TYPE_VALIDATOR_VALUE = 11;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PartyType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PartyType forNumber(int value) {
+      switch (value) {
+        case 0: return PARTY_TYPE_UNSPECIFIED;
+        case 1: return PARTY_TYPE_ORIGINATOR;
+        case 2: return PARTY_TYPE_SERVICER;
+        case 3: return PARTY_TYPE_INVESTOR;
+        case 4: return PARTY_TYPE_CUSTODIAN;
+        case 5: return PARTY_TYPE_OWNER;
+        case 6: return PARTY_TYPE_AFFILIATE;
+        case 7: return PARTY_TYPE_OMNIBUS;
+        case 8: return PARTY_TYPE_PROVENANCE;
+        case 10: return PARTY_TYPE_CONTROLLER;
+        case 11: return PARTY_TYPE_VALIDATOR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PartyType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PartyType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PartyType>() {
+            public PartyType findValueByNumber(int number) {
+              return PartyType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.SpecificationProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final PartyType[] VALUES = values();
+
+    public static PartyType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PartyType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.PartyType)
+  }
+
+  public interface ScopeSpecificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.ScopeSpecification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * unique identifier for this specification on chain
+     * </pre>
+     *
+     * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    com.google.protobuf.ByteString getSpecificationId();
+
+    /**
+     * <pre>
+     * General information about this scope specification.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <pre>
+     * General information about this scope specification.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    com.provenance.metadata.v1.SpecificationProto.Description getDescription();
+    /**
+     * <pre>
+     * General information about this scope specification.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder getDescriptionOrBuilder();
+
+    /**
+     * <pre>
+     * Addresses of the owners of this scope specification.
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @return A list containing the ownerAddresses.
+     */
+    java.util.List<java.lang.String>
+        getOwnerAddressesList();
+    /**
+     * <pre>
+     * Addresses of the owners of this scope specification.
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @return The count of ownerAddresses.
+     */
+    int getOwnerAddressesCount();
+    /**
+     * <pre>
+     * Addresses of the owners of this scope specification.
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The ownerAddresses at the given index.
+     */
+    java.lang.String getOwnerAddresses(int index);
+    /**
+     * <pre>
+     * Addresses of the owners of this scope specification.
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ownerAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressesBytes(int index);
+
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return A list containing the partiesInvolved.
+     */
+    java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getPartiesInvolvedList();
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return The count of partiesInvolved.
+     */
+    int getPartiesInvolvedCount();
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The partiesInvolved at the given index.
+     */
+    com.provenance.metadata.v1.SpecificationProto.PartyType getPartiesInvolved(int index);
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return A list containing the enum numeric values on the wire for partiesInvolved.
+     */
+    java.util.List<java.lang.Integer>
+    getPartiesInvolvedValueList();
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of partiesInvolved at the given index.
+     */
+    int getPartiesInvolvedValue(int index);
+
+    /**
+     * <pre>
+     * A list of contract specification ids allowed for a scope based on this specification.
+     * </pre>
+     *
+     * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+     * @return A list containing the contractSpecIds.
+     */
+    java.util.List<com.google.protobuf.ByteString> getContractSpecIdsList();
+    /**
+     * <pre>
+     * A list of contract specification ids allowed for a scope based on this specification.
+     * </pre>
+     *
+     * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+     * @return The count of contractSpecIds.
+     */
+    int getContractSpecIdsCount();
+    /**
+     * <pre>
+     * A list of contract specification ids allowed for a scope based on this specification.
+     * </pre>
+     *
+     * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The contractSpecIds at the given index.
+     */
+    com.google.protobuf.ByteString getContractSpecIds(int index);
+  }
+  /**
+   * <pre>
+   * ScopeSpecification defines the required parties, resources, conditions, and consideration outputs for a contract
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.ScopeSpecification}
+   */
+  public static final class ScopeSpecification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.ScopeSpecification)
+      ScopeSpecificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScopeSpecification.newBuilder() to construct.
+    private ScopeSpecification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScopeSpecification() {
+      specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      ownerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      partiesInvolved_ = java.util.Collections.emptyList();
+      contractSpecIds_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScopeSpecification();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ScopeSpecification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ScopeSpecification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.class, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder.class);
+    }
+
+    public static final int SPECIFICATION_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * unique identifier for this specification on chain
+     * </pre>
+     *
+     * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpecificationId() {
+      return specificationId_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.SpecificationProto.Description description_;
+    /**
+     * <pre>
+     * General information about this scope specification.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return description_ != null;
+    }
+    /**
+     * <pre>
+     * General information about this scope specification.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.Description getDescription() {
+      return description_ == null ? com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance() : description_;
+    }
+    /**
+     * <pre>
+     * General information about this scope specification.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder getDescriptionOrBuilder() {
+      return description_ == null ? com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance() : description_;
+    }
+
+    public static final int OWNER_ADDRESSES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList ownerAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Addresses of the owners of this scope specification.
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @return A list containing the ownerAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOwnerAddressesList() {
+      return ownerAddresses_;
+    }
+    /**
+     * <pre>
+     * Addresses of the owners of this scope specification.
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @return The count of ownerAddresses.
+     */
+    public int getOwnerAddressesCount() {
+      return ownerAddresses_.size();
+    }
+    /**
+     * <pre>
+     * Addresses of the owners of this scope specification.
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The ownerAddresses at the given index.
+     */
+    public java.lang.String getOwnerAddresses(int index) {
+      return ownerAddresses_.get(index);
+    }
+    /**
+     * <pre>
+     * Addresses of the owners of this scope specification.
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ownerAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOwnerAddressesBytes(int index) {
+      return ownerAddresses_.getByteString(index);
+    }
+
+    public static final int PARTIES_INVOLVED_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> partiesInvolved_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType> partiesInvolved_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>() {
+              public com.provenance.metadata.v1.SpecificationProto.PartyType convert(java.lang.Integer from) {
+                com.provenance.metadata.v1.SpecificationProto.PartyType result = com.provenance.metadata.v1.SpecificationProto.PartyType.forNumber(from);
+                return result == null ? com.provenance.metadata.v1.SpecificationProto.PartyType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return A list containing the partiesInvolved.
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getPartiesInvolvedList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>(partiesInvolved_, partiesInvolved_converter_);
+    }
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return The count of partiesInvolved.
+     */
+    @java.lang.Override
+    public int getPartiesInvolvedCount() {
+      return partiesInvolved_.size();
+    }
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The partiesInvolved at the given index.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.PartyType getPartiesInvolved(int index) {
+      return partiesInvolved_converter_.convert(partiesInvolved_.get(index));
+    }
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return A list containing the enum numeric values on the wire for partiesInvolved.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getPartiesInvolvedValueList() {
+      return partiesInvolved_;
+    }
+    /**
+     * <pre>
+     * A list of parties that must be present on a scope (and their associated roles)
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of partiesInvolved at the given index.
+     */
+    @java.lang.Override
+    public int getPartiesInvolvedValue(int index) {
+      return partiesInvolved_.get(index);
+    }
+    private int partiesInvolvedMemoizedSerializedSize;
+
+    public static final int CONTRACT_SPEC_IDS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.ByteString> contractSpecIds_;
+    /**
+     * <pre>
+     * A list of contract specification ids allowed for a scope based on this specification.
+     * </pre>
+     *
+     * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+     * @return A list containing the contractSpecIds.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getContractSpecIdsList() {
+      return contractSpecIds_;
+    }
+    /**
+     * <pre>
+     * A list of contract specification ids allowed for a scope based on this specification.
+     * </pre>
+     *
+     * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+     * @return The count of contractSpecIds.
+     */
+    public int getContractSpecIdsCount() {
+      return contractSpecIds_.size();
+    }
+    /**
+     * <pre>
+     * A list of contract specification ids allowed for a scope based on this specification.
+     * </pre>
+     *
+     * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The contractSpecIds at the given index.
+     */
+    public com.google.protobuf.ByteString getContractSpecIds(int index) {
+      return contractSpecIds_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!specificationId_.isEmpty()) {
+        output.writeBytes(1, specificationId_);
+      }
+      if (description_ != null) {
+        output.writeMessage(2, getDescription());
+      }
+      for (int i = 0; i < ownerAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ownerAddresses_.getRaw(i));
+      }
+      if (getPartiesInvolvedList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(partiesInvolvedMemoizedSerializedSize);
+      }
+      for (int i = 0; i < partiesInvolved_.size(); i++) {
+        output.writeEnumNoTag(partiesInvolved_.get(i));
+      }
+      for (int i = 0; i < contractSpecIds_.size(); i++) {
+        output.writeBytes(5, contractSpecIds_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!specificationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, specificationId_);
+      }
+      if (description_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDescription());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ownerAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(ownerAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOwnerAddressesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < partiesInvolved_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(partiesInvolved_.get(i));
+        }
+        size += dataSize;
+        if (!getPartiesInvolvedList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }partiesInvolvedMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contractSpecIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(contractSpecIds_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getContractSpecIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.SpecificationProto.ScopeSpecification)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.SpecificationProto.ScopeSpecification other = (com.provenance.metadata.v1.SpecificationProto.ScopeSpecification) obj;
+
+      if (!getSpecificationId()
+          .equals(other.getSpecificationId())) return false;
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (!getOwnerAddressesList()
+          .equals(other.getOwnerAddressesList())) return false;
+      if (!partiesInvolved_.equals(other.partiesInvolved_)) return false;
+      if (!getContractSpecIdsList()
+          .equals(other.getContractSpecIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPECIFICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSpecificationId().hashCode();
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (getOwnerAddressesCount() > 0) {
+        hash = (37 * hash) + OWNER_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getOwnerAddressesList().hashCode();
+      }
+      if (getPartiesInvolvedCount() > 0) {
+        hash = (37 * hash) + PARTIES_INVOLVED_FIELD_NUMBER;
+        hash = (53 * hash) + partiesInvolved_.hashCode();
+      }
+      if (getContractSpecIdsCount() > 0) {
+        hash = (37 * hash) + CONTRACT_SPEC_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getContractSpecIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.SpecificationProto.ScopeSpecification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ScopeSpecification defines the required parties, resources, conditions, and consideration outputs for a contract
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.ScopeSpecification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.ScopeSpecification)
+        com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ScopeSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ScopeSpecification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.class, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        specificationId_ = com.google.protobuf.ByteString.EMPTY;
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        ownerAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        partiesInvolved_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        contractSpecIds_ = java.util.Collections.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ScopeSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification build() {
+        com.provenance.metadata.v1.SpecificationProto.ScopeSpecification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification buildPartial() {
+        com.provenance.metadata.v1.SpecificationProto.ScopeSpecification result = new com.provenance.metadata.v1.SpecificationProto.ScopeSpecification(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.SpecificationProto.ScopeSpecification result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          partiesInvolved_ = java.util.Collections.unmodifiableList(partiesInvolved_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.partiesInvolved_ = partiesInvolved_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          contractSpecIds_ = java.util.Collections.unmodifiableList(contractSpecIds_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.contractSpecIds_ = contractSpecIds_;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.SpecificationProto.ScopeSpecification result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.specificationId_ = specificationId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = descriptionBuilder_ == null
+              ? description_
+              : descriptionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          ownerAddresses_.makeImmutable();
+          result.ownerAddresses_ = ownerAddresses_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.SpecificationProto.ScopeSpecification) {
+          return mergeFrom((com.provenance.metadata.v1.SpecificationProto.ScopeSpecification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.SpecificationProto.ScopeSpecification other) {
+        if (other == com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.getDefaultInstance()) return this;
+        if (other.getSpecificationId() != com.google.protobuf.ByteString.EMPTY) {
+          setSpecificationId(other.getSpecificationId());
+        }
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
+        }
+        if (!other.ownerAddresses_.isEmpty()) {
+          if (ownerAddresses_.isEmpty()) {
+            ownerAddresses_ = other.ownerAddresses_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureOwnerAddressesIsMutable();
+            ownerAddresses_.addAll(other.ownerAddresses_);
+          }
+          onChanged();
+        }
+        if (!other.partiesInvolved_.isEmpty()) {
+          if (partiesInvolved_.isEmpty()) {
+            partiesInvolved_ = other.partiesInvolved_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensurePartiesInvolvedIsMutable();
+            partiesInvolved_.addAll(other.partiesInvolved_);
+          }
+          onChanged();
+        }
+        if (!other.contractSpecIds_.isEmpty()) {
+          if (contractSpecIds_.isEmpty()) {
+            contractSpecIds_ = other.contractSpecIds_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureContractSpecIdsIsMutable();
+            contractSpecIds_.addAll(other.contractSpecIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                specificationId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getDescriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureOwnerAddressesIsMutable();
+                ownerAddresses_.add(s);
+                break;
+              } // case 26
+              case 32: {
+                int tmpRaw = input.readEnum();
+                ensurePartiesInvolvedIsMutable();
+                partiesInvolved_.add(tmpRaw);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensurePartiesInvolvedIsMutable();
+                  partiesInvolved_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 34
+              case 42: {
+                com.google.protobuf.ByteString v = input.readBytes();
+                ensureContractSpecIdsIsMutable();
+                contractSpecIds_.add(v);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return The specificationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpecificationId() {
+        return specificationId_;
+      }
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @param value The specificationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpecificationId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        specificationId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpecificationId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        specificationId_ = getDefaultInstance().getSpecificationId();
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.SpecificationProto.Description description_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.Description, com.provenance.metadata.v1.SpecificationProto.Description.Builder, com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder> descriptionBuilder_;
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public com.provenance.metadata.v1.SpecificationProto.Description getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public Builder setDescription(com.provenance.metadata.v1.SpecificationProto.Description value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public Builder setDescription(
+          com.provenance.metadata.v1.SpecificationProto.Description.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public Builder mergeDescription(com.provenance.metadata.v1.SpecificationProto.Description value) {
+        if (descriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            description_ != null &&
+            description_ != com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance()) {
+            getDescriptionBuilder().mergeFrom(value);
+          } else {
+            description_ = value;
+          }
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.Description.Builder getDescriptionBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <pre>
+       * General information about this scope specification.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.Description, com.provenance.metadata.v1.SpecificationProto.Description.Builder, com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder> 
+          getDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.SpecificationProto.Description, com.provenance.metadata.v1.SpecificationProto.Description.Builder, com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList ownerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureOwnerAddressesIsMutable() {
+        if (!ownerAddresses_.isModifiable()) {
+          ownerAddresses_ = new com.google.protobuf.LazyStringArrayList(ownerAddresses_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @return A list containing the ownerAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOwnerAddressesList() {
+        ownerAddresses_.makeImmutable();
+        return ownerAddresses_;
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @return The count of ownerAddresses.
+       */
+      public int getOwnerAddressesCount() {
+        return ownerAddresses_.size();
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The ownerAddresses at the given index.
+       */
+      public java.lang.String getOwnerAddresses(int index) {
+        return ownerAddresses_.get(index);
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ownerAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressesBytes(int index) {
+        return ownerAddresses_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The ownerAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOwnerAddressesIsMutable();
+        ownerAddresses_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param value The ownerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOwnerAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOwnerAddressesIsMutable();
+        ownerAddresses_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param values The ownerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOwnerAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOwnerAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ownerAddresses_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddresses() {
+        ownerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses of the owners of this scope specification.
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param value The bytes of the ownerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOwnerAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureOwnerAddressesIsMutable();
+        ownerAddresses_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> partiesInvolved_ =
+        java.util.Collections.emptyList();
+      private void ensurePartiesInvolvedIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          partiesInvolved_ = new java.util.ArrayList<java.lang.Integer>(partiesInvolved_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @return A list containing the partiesInvolved.
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getPartiesInvolvedList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>(partiesInvolved_, partiesInvolved_converter_);
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @return The count of partiesInvolved.
+       */
+      public int getPartiesInvolvedCount() {
+        return partiesInvolved_.size();
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The partiesInvolved at the given index.
+       */
+      public com.provenance.metadata.v1.SpecificationProto.PartyType getPartiesInvolved(int index) {
+        return partiesInvolved_converter_.convert(partiesInvolved_.get(index));
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The partiesInvolved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartiesInvolved(
+          int index, com.provenance.metadata.v1.SpecificationProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param value The partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartiesInvolved(com.provenance.metadata.v1.SpecificationProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param values The partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartiesInvolved(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.SpecificationProto.PartyType> values) {
+        ensurePartiesInvolvedIsMutable();
+        for (com.provenance.metadata.v1.SpecificationProto.PartyType value : values) {
+          partiesInvolved_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartiesInvolved() {
+        partiesInvolved_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @return A list containing the enum numeric values on the wire for partiesInvolved.
+       */
+      public java.util.List<java.lang.Integer>
+      getPartiesInvolvedValueList() {
+        return java.util.Collections.unmodifiableList(partiesInvolved_);
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of partiesInvolved at the given index.
+       */
+      public int getPartiesInvolvedValue(int index) {
+        return partiesInvolved_.get(index);
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for partiesInvolved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartiesInvolvedValue(
+          int index, int value) {
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param value The enum numeric value on the wire for partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartiesInvolvedValue(int value) {
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of parties that must be present on a scope (and their associated roles)
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param values The enum numeric values on the wire for partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartiesInvolvedValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensurePartiesInvolvedIsMutable();
+        for (int value : values) {
+          partiesInvolved_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.protobuf.ByteString> contractSpecIds_ = java.util.Collections.emptyList();
+      private void ensureContractSpecIdsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          contractSpecIds_ = new java.util.ArrayList<com.google.protobuf.ByteString>(contractSpecIds_);
+          bitField0_ |= 0x00000010;
+        }
+      }
+      /**
+       * <pre>
+       * A list of contract specification ids allowed for a scope based on this specification.
+       * </pre>
+       *
+       * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+       * @return A list containing the contractSpecIds.
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getContractSpecIdsList() {
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(contractSpecIds_) : contractSpecIds_;
+      }
+      /**
+       * <pre>
+       * A list of contract specification ids allowed for a scope based on this specification.
+       * </pre>
+       *
+       * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+       * @return The count of contractSpecIds.
+       */
+      public int getContractSpecIdsCount() {
+        return contractSpecIds_.size();
+      }
+      /**
+       * <pre>
+       * A list of contract specification ids allowed for a scope based on this specification.
+       * </pre>
+       *
+       * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The contractSpecIds at the given index.
+       */
+      public com.google.protobuf.ByteString getContractSpecIds(int index) {
+        return contractSpecIds_.get(index);
+      }
+      /**
+       * <pre>
+       * A list of contract specification ids allowed for a scope based on this specification.
+       * </pre>
+       *
+       * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The contractSpecIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecIds(
+          int index, com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContractSpecIdsIsMutable();
+        contractSpecIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of contract specification ids allowed for a scope based on this specification.
+       * </pre>
+       *
+       * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+       * @param value The contractSpecIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContractSpecIds(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContractSpecIdsIsMutable();
+        contractSpecIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of contract specification ids allowed for a scope based on this specification.
+       * </pre>
+       *
+       * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+       * @param values The contractSpecIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContractSpecIds(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        ensureContractSpecIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contractSpecIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of contract specification ids allowed for a scope based on this specification.
+       * </pre>
+       *
+       * <code>repeated bytes contract_spec_ids = 5 [json_name = "contractSpecIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_ids&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecIds() {
+        contractSpecIds_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.ScopeSpecification)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.ScopeSpecification)
+    private static final com.provenance.metadata.v1.SpecificationProto.ScopeSpecification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.SpecificationProto.ScopeSpecification();
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.ScopeSpecification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScopeSpecification>
+        PARSER = new com.google.protobuf.AbstractParser<ScopeSpecification>() {
+      @java.lang.Override
+      public ScopeSpecification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScopeSpecification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScopeSpecification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContractSpecificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.ContractSpecification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * unique identifier for this specification on chain
+     * </pre>
+     *
+     * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    com.google.protobuf.ByteString getSpecificationId();
+
+    /**
+     * <pre>
+     * Description information for this contract specification
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <pre>
+     * Description information for this contract specification
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    com.provenance.metadata.v1.SpecificationProto.Description getDescription();
+    /**
+     * <pre>
+     * Description information for this contract specification
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder getDescriptionOrBuilder();
+
+    /**
+     * <pre>
+     * Address of the account that owns this specificaiton
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @return A list containing the ownerAddresses.
+     */
+    java.util.List<java.lang.String>
+        getOwnerAddressesList();
+    /**
+     * <pre>
+     * Address of the account that owns this specificaiton
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @return The count of ownerAddresses.
+     */
+    int getOwnerAddressesCount();
+    /**
+     * <pre>
+     * Address of the account that owns this specificaiton
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The ownerAddresses at the given index.
+     */
+    java.lang.String getOwnerAddresses(int index);
+    /**
+     * <pre>
+     * Address of the account that owns this specificaiton
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ownerAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressesBytes(int index);
+
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return A list containing the partiesInvolved.
+     */
+    java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getPartiesInvolvedList();
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return The count of partiesInvolved.
+     */
+    int getPartiesInvolvedCount();
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The partiesInvolved at the given index.
+     */
+    com.provenance.metadata.v1.SpecificationProto.PartyType getPartiesInvolved(int index);
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return A list containing the enum numeric values on the wire for partiesInvolved.
+     */
+    java.util.List<java.lang.Integer>
+    getPartiesInvolvedValueList();
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of partiesInvolved at the given index.
+     */
+    int getPartiesInvolvedValue(int index);
+
+    /**
+     * <pre>
+     * the address of a record on chain that represents this contract
+     * </pre>
+     *
+     * <code>bytes resource_id = 5 [json_name = "resourceId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"resource_id&#92;""];</code>
+     * @return Whether the resourceId field is set.
+     */
+    boolean hasResourceId();
+    /**
+     * <pre>
+     * the address of a record on chain that represents this contract
+     * </pre>
+     *
+     * <code>bytes resource_id = 5 [json_name = "resourceId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"resource_id&#92;""];</code>
+     * @return The resourceId.
+     */
+    com.google.protobuf.ByteString getResourceId();
+
+    /**
+     * <pre>
+     * the hash of contract binary (off-chain instance)
+     * </pre>
+     *
+     * <code>string hash = 6 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    boolean hasHash();
+    /**
+     * <pre>
+     * the hash of contract binary (off-chain instance)
+     * </pre>
+     *
+     * <code>string hash = 6 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <pre>
+     * the hash of contract binary (off-chain instance)
+     * </pre>
+     *
+     * <code>string hash = 6 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <pre>
+     * name of the class/type of this contract executable
+     * </pre>
+     *
+     * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+     * @return The className.
+     */
+    java.lang.String getClassName();
+    /**
+     * <pre>
+     * name of the class/type of this contract executable
+     * </pre>
+     *
+     * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+     * @return The bytes for className.
+     */
+    com.google.protobuf.ByteString
+        getClassNameBytes();
+
+    com.provenance.metadata.v1.SpecificationProto.ContractSpecification.SourceCase getSourceCase();
+  }
+  /**
+   * <pre>
+   * ContractSpecification defines the required parties, resources, conditions, and consideration outputs for a contract
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.ContractSpecification}
+   */
+  public static final class ContractSpecification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.ContractSpecification)
+      ContractSpecificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContractSpecification.newBuilder() to construct.
+    private ContractSpecification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContractSpecification() {
+      specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      ownerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      partiesInvolved_ = java.util.Collections.emptyList();
+      className_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContractSpecification();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ContractSpecification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ContractSpecification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.SpecificationProto.ContractSpecification.class, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder.class);
+    }
+
+    private int sourceCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object source_;
+    public enum SourceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      RESOURCE_ID(5),
+      HASH(6),
+      SOURCE_NOT_SET(0);
+      private final int value;
+      private SourceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SourceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SourceCase forNumber(int value) {
+        switch (value) {
+          case 5: return RESOURCE_ID;
+          case 6: return HASH;
+          case 0: return SOURCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SourceCase
+    getSourceCase() {
+      return SourceCase.forNumber(
+          sourceCase_);
+    }
+
+    public static final int SPECIFICATION_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * unique identifier for this specification on chain
+     * </pre>
+     *
+     * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpecificationId() {
+      return specificationId_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.SpecificationProto.Description description_;
+    /**
+     * <pre>
+     * Description information for this contract specification
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return description_ != null;
+    }
+    /**
+     * <pre>
+     * Description information for this contract specification
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.Description getDescription() {
+      return description_ == null ? com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance() : description_;
+    }
+    /**
+     * <pre>
+     * Description information for this contract specification
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder getDescriptionOrBuilder() {
+      return description_ == null ? com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance() : description_;
+    }
+
+    public static final int OWNER_ADDRESSES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList ownerAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Address of the account that owns this specificaiton
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @return A list containing the ownerAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOwnerAddressesList() {
+      return ownerAddresses_;
+    }
+    /**
+     * <pre>
+     * Address of the account that owns this specificaiton
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @return The count of ownerAddresses.
+     */
+    public int getOwnerAddressesCount() {
+      return ownerAddresses_.size();
+    }
+    /**
+     * <pre>
+     * Address of the account that owns this specificaiton
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The ownerAddresses at the given index.
+     */
+    public java.lang.String getOwnerAddresses(int index) {
+      return ownerAddresses_.get(index);
+    }
+    /**
+     * <pre>
+     * Address of the account that owns this specificaiton
+     * </pre>
+     *
+     * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ownerAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOwnerAddressesBytes(int index) {
+      return ownerAddresses_.getByteString(index);
+    }
+
+    public static final int PARTIES_INVOLVED_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> partiesInvolved_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType> partiesInvolved_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>() {
+              public com.provenance.metadata.v1.SpecificationProto.PartyType convert(java.lang.Integer from) {
+                com.provenance.metadata.v1.SpecificationProto.PartyType result = com.provenance.metadata.v1.SpecificationProto.PartyType.forNumber(from);
+                return result == null ? com.provenance.metadata.v1.SpecificationProto.PartyType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return A list containing the partiesInvolved.
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getPartiesInvolvedList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>(partiesInvolved_, partiesInvolved_converter_);
+    }
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return The count of partiesInvolved.
+     */
+    @java.lang.Override
+    public int getPartiesInvolvedCount() {
+      return partiesInvolved_.size();
+    }
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The partiesInvolved at the given index.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.PartyType getPartiesInvolved(int index) {
+      return partiesInvolved_converter_.convert(partiesInvolved_.get(index));
+    }
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @return A list containing the enum numeric values on the wire for partiesInvolved.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getPartiesInvolvedValueList() {
+      return partiesInvolved_;
+    }
+    /**
+     * <pre>
+     * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of partiesInvolved at the given index.
+     */
+    @java.lang.Override
+    public int getPartiesInvolvedValue(int index) {
+      return partiesInvolved_.get(index);
+    }
+    private int partiesInvolvedMemoizedSerializedSize;
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * the address of a record on chain that represents this contract
+     * </pre>
+     *
+     * <code>bytes resource_id = 5 [json_name = "resourceId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"resource_id&#92;""];</code>
+     * @return Whether the resourceId field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourceId() {
+      return sourceCase_ == 5;
+    }
+    /**
+     * <pre>
+     * the address of a record on chain that represents this contract
+     * </pre>
+     *
+     * <code>bytes resource_id = 5 [json_name = "resourceId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"resource_id&#92;""];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getResourceId() {
+      if (sourceCase_ == 5) {
+        return (com.google.protobuf.ByteString) source_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int HASH_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * the hash of contract binary (off-chain instance)
+     * </pre>
+     *
+     * <code>string hash = 6 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    public boolean hasHash() {
+      return sourceCase_ == 6;
+    }
+    /**
+     * <pre>
+     * the hash of contract binary (off-chain instance)
+     * </pre>
+     *
+     * <code>string hash = 6 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    public java.lang.String getHash() {
+      java.lang.Object ref = "";
+      if (sourceCase_ == 6) {
+        ref = source_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (sourceCase_ == 6) {
+          source_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the hash of contract binary (off-chain instance)
+     * </pre>
+     *
+     * <code>string hash = 6 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = "";
+      if (sourceCase_ == 6) {
+        ref = source_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (sourceCase_ == 6) {
+          source_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_NAME_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object className_ = "";
+    /**
+     * <pre>
+     * name of the class/type of this contract executable
+     * </pre>
+     *
+     * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+     * @return The className.
+     */
+    @java.lang.Override
+    public java.lang.String getClassName() {
+      java.lang.Object ref = className_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        className_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name of the class/type of this contract executable
+     * </pre>
+     *
+     * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+     * @return The bytes for className.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassNameBytes() {
+      java.lang.Object ref = className_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        className_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!specificationId_.isEmpty()) {
+        output.writeBytes(1, specificationId_);
+      }
+      if (description_ != null) {
+        output.writeMessage(2, getDescription());
+      }
+      for (int i = 0; i < ownerAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ownerAddresses_.getRaw(i));
+      }
+      if (getPartiesInvolvedList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(partiesInvolvedMemoizedSerializedSize);
+      }
+      for (int i = 0; i < partiesInvolved_.size(); i++) {
+        output.writeEnumNoTag(partiesInvolved_.get(i));
+      }
+      if (sourceCase_ == 5) {
+        output.writeBytes(
+            5, (com.google.protobuf.ByteString) source_);
+      }
+      if (sourceCase_ == 6) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(className_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, className_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!specificationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, specificationId_);
+      }
+      if (description_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDescription());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ownerAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(ownerAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOwnerAddressesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < partiesInvolved_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(partiesInvolved_.get(i));
+        }
+        size += dataSize;
+        if (!getPartiesInvolvedList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }partiesInvolvedMemoizedSerializedSize = dataSize;
+      }
+      if (sourceCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              5, (com.google.protobuf.ByteString) source_);
+      }
+      if (sourceCase_ == 6) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(className_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, className_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.SpecificationProto.ContractSpecification)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.SpecificationProto.ContractSpecification other = (com.provenance.metadata.v1.SpecificationProto.ContractSpecification) obj;
+
+      if (!getSpecificationId()
+          .equals(other.getSpecificationId())) return false;
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (!getOwnerAddressesList()
+          .equals(other.getOwnerAddressesList())) return false;
+      if (!partiesInvolved_.equals(other.partiesInvolved_)) return false;
+      if (!getClassName()
+          .equals(other.getClassName())) return false;
+      if (!getSourceCase().equals(other.getSourceCase())) return false;
+      switch (sourceCase_) {
+        case 5:
+          if (!getResourceId()
+              .equals(other.getResourceId())) return false;
+          break;
+        case 6:
+          if (!getHash()
+              .equals(other.getHash())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPECIFICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSpecificationId().hashCode();
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (getOwnerAddressesCount() > 0) {
+        hash = (37 * hash) + OWNER_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getOwnerAddressesList().hashCode();
+      }
+      if (getPartiesInvolvedCount() > 0) {
+        hash = (37 * hash) + PARTIES_INVOLVED_FIELD_NUMBER;
+        hash = (53 * hash) + partiesInvolved_.hashCode();
+      }
+      hash = (37 * hash) + CLASS_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClassName().hashCode();
+      switch (sourceCase_) {
+        case 5:
+          hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getResourceId().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + HASH_FIELD_NUMBER;
+          hash = (53 * hash) + getHash().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.SpecificationProto.ContractSpecification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ContractSpecification defines the required parties, resources, conditions, and consideration outputs for a contract
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.ContractSpecification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.ContractSpecification)
+        com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ContractSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ContractSpecification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.SpecificationProto.ContractSpecification.class, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.SpecificationProto.ContractSpecification.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        specificationId_ = com.google.protobuf.ByteString.EMPTY;
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        ownerAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        partiesInvolved_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        className_ = "";
+        sourceCase_ = 0;
+        source_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_ContractSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.ContractSpecification getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.SpecificationProto.ContractSpecification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.ContractSpecification build() {
+        com.provenance.metadata.v1.SpecificationProto.ContractSpecification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.ContractSpecification buildPartial() {
+        com.provenance.metadata.v1.SpecificationProto.ContractSpecification result = new com.provenance.metadata.v1.SpecificationProto.ContractSpecification(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.SpecificationProto.ContractSpecification result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          partiesInvolved_ = java.util.Collections.unmodifiableList(partiesInvolved_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.partiesInvolved_ = partiesInvolved_;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.SpecificationProto.ContractSpecification result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.specificationId_ = specificationId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = descriptionBuilder_ == null
+              ? description_
+              : descriptionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          ownerAddresses_.makeImmutable();
+          result.ownerAddresses_ = ownerAddresses_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.className_ = className_;
+        }
+      }
+
+      private void buildPartialOneofs(com.provenance.metadata.v1.SpecificationProto.ContractSpecification result) {
+        result.sourceCase_ = sourceCase_;
+        result.source_ = this.source_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.SpecificationProto.ContractSpecification) {
+          return mergeFrom((com.provenance.metadata.v1.SpecificationProto.ContractSpecification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.SpecificationProto.ContractSpecification other) {
+        if (other == com.provenance.metadata.v1.SpecificationProto.ContractSpecification.getDefaultInstance()) return this;
+        if (other.getSpecificationId() != com.google.protobuf.ByteString.EMPTY) {
+          setSpecificationId(other.getSpecificationId());
+        }
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
+        }
+        if (!other.ownerAddresses_.isEmpty()) {
+          if (ownerAddresses_.isEmpty()) {
+            ownerAddresses_ = other.ownerAddresses_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureOwnerAddressesIsMutable();
+            ownerAddresses_.addAll(other.ownerAddresses_);
+          }
+          onChanged();
+        }
+        if (!other.partiesInvolved_.isEmpty()) {
+          if (partiesInvolved_.isEmpty()) {
+            partiesInvolved_ = other.partiesInvolved_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensurePartiesInvolvedIsMutable();
+            partiesInvolved_.addAll(other.partiesInvolved_);
+          }
+          onChanged();
+        }
+        if (!other.getClassName().isEmpty()) {
+          className_ = other.className_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        switch (other.getSourceCase()) {
+          case RESOURCE_ID: {
+            setResourceId(other.getResourceId());
+            break;
+          }
+          case HASH: {
+            sourceCase_ = 6;
+            source_ = other.source_;
+            onChanged();
+            break;
+          }
+          case SOURCE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                specificationId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getDescriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureOwnerAddressesIsMutable();
+                ownerAddresses_.add(s);
+                break;
+              } // case 26
+              case 32: {
+                int tmpRaw = input.readEnum();
+                ensurePartiesInvolvedIsMutable();
+                partiesInvolved_.add(tmpRaw);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensurePartiesInvolvedIsMutable();
+                  partiesInvolved_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 34
+              case 42: {
+                source_ = input.readBytes();
+                sourceCase_ = 5;
+                break;
+              } // case 42
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                sourceCase_ = 6;
+                source_ = s;
+                break;
+              } // case 50
+              case 58: {
+                className_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int sourceCase_ = 0;
+      private java.lang.Object source_;
+      public SourceCase
+          getSourceCase() {
+        return SourceCase.forNumber(
+            sourceCase_);
+      }
+
+      public Builder clearSource() {
+        sourceCase_ = 0;
+        source_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return The specificationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpecificationId() {
+        return specificationId_;
+      }
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @param value The specificationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpecificationId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        specificationId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpecificationId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        specificationId_ = getDefaultInstance().getSpecificationId();
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.SpecificationProto.Description description_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.Description, com.provenance.metadata.v1.SpecificationProto.Description.Builder, com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder> descriptionBuilder_;
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public com.provenance.metadata.v1.SpecificationProto.Description getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public Builder setDescription(com.provenance.metadata.v1.SpecificationProto.Description value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public Builder setDescription(
+          com.provenance.metadata.v1.SpecificationProto.Description.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public Builder mergeDescription(com.provenance.metadata.v1.SpecificationProto.Description value) {
+        if (descriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            description_ != null &&
+            description_ != com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance()) {
+            getDescriptionBuilder().mergeFrom(value);
+          } else {
+            description_ = value;
+          }
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.Description.Builder getDescriptionBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <pre>
+       * Description information for this contract specification
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Description description = 2 [json_name = "description"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.Description, com.provenance.metadata.v1.SpecificationProto.Description.Builder, com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder> 
+          getDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.SpecificationProto.Description, com.provenance.metadata.v1.SpecificationProto.Description.Builder, com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList ownerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureOwnerAddressesIsMutable() {
+        if (!ownerAddresses_.isModifiable()) {
+          ownerAddresses_ = new com.google.protobuf.LazyStringArrayList(ownerAddresses_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @return A list containing the ownerAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOwnerAddressesList() {
+        ownerAddresses_.makeImmutable();
+        return ownerAddresses_;
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @return The count of ownerAddresses.
+       */
+      public int getOwnerAddressesCount() {
+        return ownerAddresses_.size();
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The ownerAddresses at the given index.
+       */
+      public java.lang.String getOwnerAddresses(int index) {
+        return ownerAddresses_.get(index);
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ownerAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressesBytes(int index) {
+        return ownerAddresses_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The ownerAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOwnerAddressesIsMutable();
+        ownerAddresses_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param value The ownerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOwnerAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOwnerAddressesIsMutable();
+        ownerAddresses_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param values The ownerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOwnerAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOwnerAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ownerAddresses_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddresses() {
+        ownerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address of the account that owns this specificaiton
+       * </pre>
+       *
+       * <code>repeated string owner_addresses = 3 [json_name = "ownerAddresses", (.gogoproto.moretags) = "yaml:&#92;"owner_addresses&#92;""];</code>
+       * @param value The bytes of the ownerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOwnerAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureOwnerAddressesIsMutable();
+        ownerAddresses_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> partiesInvolved_ =
+        java.util.Collections.emptyList();
+      private void ensurePartiesInvolvedIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          partiesInvolved_ = new java.util.ArrayList<java.lang.Integer>(partiesInvolved_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @return A list containing the partiesInvolved.
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getPartiesInvolvedList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>(partiesInvolved_, partiesInvolved_converter_);
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @return The count of partiesInvolved.
+       */
+      public int getPartiesInvolvedCount() {
+        return partiesInvolved_.size();
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The partiesInvolved at the given index.
+       */
+      public com.provenance.metadata.v1.SpecificationProto.PartyType getPartiesInvolved(int index) {
+        return partiesInvolved_converter_.convert(partiesInvolved_.get(index));
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The partiesInvolved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartiesInvolved(
+          int index, com.provenance.metadata.v1.SpecificationProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param value The partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartiesInvolved(com.provenance.metadata.v1.SpecificationProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param values The partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartiesInvolved(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.SpecificationProto.PartyType> values) {
+        ensurePartiesInvolvedIsMutable();
+        for (com.provenance.metadata.v1.SpecificationProto.PartyType value : values) {
+          partiesInvolved_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartiesInvolved() {
+        partiesInvolved_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @return A list containing the enum numeric values on the wire for partiesInvolved.
+       */
+      public java.util.List<java.lang.Integer>
+      getPartiesInvolvedValueList() {
+        return java.util.Collections.unmodifiableList(partiesInvolved_);
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of partiesInvolved at the given index.
+       */
+      public int getPartiesInvolvedValue(int index) {
+        return partiesInvolved_.get(index);
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for partiesInvolved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartiesInvolvedValue(
+          int index, int value) {
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param value The enum numeric value on the wire for partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartiesInvolvedValue(int value) {
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a list of party roles that must be fullfilled when signing a transaction for this contract specification
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType parties_involved = 4 [json_name = "partiesInvolved", (.gogoproto.moretags) = "yaml:&#92;"parties_involved&#92;""];</code>
+       * @param values The enum numeric values on the wire for partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartiesInvolvedValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensurePartiesInvolvedIsMutable();
+        for (int value : values) {
+          partiesInvolved_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the address of a record on chain that represents this contract
+       * </pre>
+       *
+       * <code>bytes resource_id = 5 [json_name = "resourceId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"resource_id&#92;""];</code>
+       * @return Whether the resourceId field is set.
+       */
+      public boolean hasResourceId() {
+        return sourceCase_ == 5;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain that represents this contract
+       * </pre>
+       *
+       * <code>bytes resource_id = 5 [json_name = "resourceId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"resource_id&#92;""];</code>
+       * @return The resourceId.
+       */
+      public com.google.protobuf.ByteString getResourceId() {
+        if (sourceCase_ == 5) {
+          return (com.google.protobuf.ByteString) source_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain that represents this contract
+       * </pre>
+       *
+       * <code>bytes resource_id = 5 [json_name = "resourceId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"resource_id&#92;""];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceCase_ = 5;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain that represents this contract
+       * </pre>
+       *
+       * <code>bytes resource_id = 5 [json_name = "resourceId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"resource_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        if (sourceCase_ == 5) {
+          sourceCase_ = 0;
+          source_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the hash of contract binary (off-chain instance)
+       * </pre>
+       *
+       * <code>string hash = 6 [json_name = "hash"];</code>
+       * @return Whether the hash field is set.
+       */
+      @java.lang.Override
+      public boolean hasHash() {
+        return sourceCase_ == 6;
+      }
+      /**
+       * <pre>
+       * the hash of contract binary (off-chain instance)
+       * </pre>
+       *
+       * <code>string hash = 6 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      @java.lang.Override
+      public java.lang.String getHash() {
+        java.lang.Object ref = "";
+        if (sourceCase_ == 6) {
+          ref = source_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (sourceCase_ == 6) {
+            source_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the hash of contract binary (off-chain instance)
+       * </pre>
+       *
+       * <code>string hash = 6 [json_name = "hash"];</code>
+       * @return The bytes for hash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = "";
+        if (sourceCase_ == 6) {
+          ref = source_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (sourceCase_ == 6) {
+            source_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the hash of contract binary (off-chain instance)
+       * </pre>
+       *
+       * <code>string hash = 6 [json_name = "hash"];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceCase_ = 6;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the hash of contract binary (off-chain instance)
+       * </pre>
+       *
+       * <code>string hash = 6 [json_name = "hash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        if (sourceCase_ == 6) {
+          sourceCase_ = 0;
+          source_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the hash of contract binary (off-chain instance)
+       * </pre>
+       *
+       * <code>string hash = 6 [json_name = "hash"];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceCase_ = 6;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object className_ = "";
+      /**
+       * <pre>
+       * name of the class/type of this contract executable
+       * </pre>
+       *
+       * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+       * @return The className.
+       */
+      public java.lang.String getClassName() {
+        java.lang.Object ref = className_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          className_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of the class/type of this contract executable
+       * </pre>
+       *
+       * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+       * @return The bytes for className.
+       */
+      public com.google.protobuf.ByteString
+          getClassNameBytes() {
+        java.lang.Object ref = className_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          className_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of the class/type of this contract executable
+       * </pre>
+       *
+       * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+       * @param value The className to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        className_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the class/type of this contract executable
+       * </pre>
+       *
+       * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassName() {
+        className_ = getDefaultInstance().getClassName();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the class/type of this contract executable
+       * </pre>
+       *
+       * <code>string class_name = 7 [json_name = "className", (.gogoproto.moretags) = "yaml:&#92;"class_name&#92;""];</code>
+       * @param value The bytes for className to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        className_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.ContractSpecification)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.ContractSpecification)
+    private static final com.provenance.metadata.v1.SpecificationProto.ContractSpecification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.SpecificationProto.ContractSpecification();
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.ContractSpecification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContractSpecification>
+        PARSER = new com.google.protobuf.AbstractParser<ContractSpecification>() {
+      @java.lang.Override
+      public ContractSpecification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContractSpecification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContractSpecification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.ContractSpecification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecordSpecificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.RecordSpecification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * unique identifier for this specification on chain
+     * </pre>
+     *
+     * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    com.google.protobuf.ByteString getSpecificationId();
+
+    /**
+     * <pre>
+     * Name of Record that will be created when this specification is used
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of Record that will be created when this specification is used
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.SpecificationProto.InputSpecification> 
+        getInputsList();
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.InputSpecification getInputs(int index);
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    int getInputsCount();
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder> 
+        getInputsOrBuilderList();
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder getInputsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * A type name for data associated with this record (typically a class or proto name)
+     * </pre>
+     *
+     * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The typeName.
+     */
+    java.lang.String getTypeName();
+    /**
+     * <pre>
+     * A type name for data associated with this record (typically a class or proto name)
+     * </pre>
+     *
+     * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The bytes for typeName.
+     */
+    com.google.protobuf.ByteString
+        getTypeNameBytes();
+
+    /**
+     * <pre>
+     * Type of result for this record specification (must be RECORD or RECORD_LIST)
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+     * @return The enum numeric value on the wire for resultType.
+     */
+    int getResultTypeValue();
+    /**
+     * <pre>
+     * Type of result for this record specification (must be RECORD or RECORD_LIST)
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+     * @return The resultType.
+     */
+    com.provenance.metadata.v1.SpecificationProto.DefinitionType getResultType();
+
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @return A list containing the responsibleParties.
+     */
+    java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getResponsiblePartiesList();
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @return The count of responsibleParties.
+     */
+    int getResponsiblePartiesCount();
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The responsibleParties at the given index.
+     */
+    com.provenance.metadata.v1.SpecificationProto.PartyType getResponsibleParties(int index);
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @return A list containing the enum numeric values on the wire for responsibleParties.
+     */
+    java.util.List<java.lang.Integer>
+    getResponsiblePartiesValueList();
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of responsibleParties at the given index.
+     */
+    int getResponsiblePartiesValue(int index);
+  }
+  /**
+   * <pre>
+   * RecordSpecification defines the specification for a Record including allowed/required inputs/outputs
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.RecordSpecification}
+   */
+  public static final class RecordSpecification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.RecordSpecification)
+      RecordSpecificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecordSpecification.newBuilder() to construct.
+    private RecordSpecification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecordSpecification() {
+      specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      name_ = "";
+      inputs_ = java.util.Collections.emptyList();
+      typeName_ = "";
+      resultType_ = 0;
+      responsibleParties_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecordSpecification();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_RecordSpecification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_RecordSpecification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.SpecificationProto.RecordSpecification.class, com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder.class);
+    }
+
+    public static final int SPECIFICATION_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * unique identifier for this specification on chain
+     * </pre>
+     *
+     * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpecificationId() {
+      return specificationId_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name of Record that will be created when this specification is used
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of Record that will be created when this specification is used
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INPUTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.SpecificationProto.InputSpecification> inputs_;
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.SpecificationProto.InputSpecification> getInputsList() {
+      return inputs_;
+    }
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder> 
+        getInputsOrBuilderList() {
+      return inputs_;
+    }
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public int getInputsCount() {
+      return inputs_.size();
+    }
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.InputSpecification getInputs(int index) {
+      return inputs_.get(index);
+    }
+    /**
+     * <pre>
+     * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder getInputsOrBuilder(
+        int index) {
+      return inputs_.get(index);
+    }
+
+    public static final int TYPE_NAME_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object typeName_ = "";
+    /**
+     * <pre>
+     * A type name for data associated with this record (typically a class or proto name)
+     * </pre>
+     *
+     * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The typeName.
+     */
+    @java.lang.Override
+    public java.lang.String getTypeName() {
+      java.lang.Object ref = typeName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        typeName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A type name for data associated with this record (typically a class or proto name)
+     * </pre>
+     *
+     * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The bytes for typeName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeNameBytes() {
+      java.lang.Object ref = typeName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        typeName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESULT_TYPE_FIELD_NUMBER = 5;
+    private int resultType_ = 0;
+    /**
+     * <pre>
+     * Type of result for this record specification (must be RECORD or RECORD_LIST)
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+     * @return The enum numeric value on the wire for resultType.
+     */
+    @java.lang.Override public int getResultTypeValue() {
+      return resultType_;
+    }
+    /**
+     * <pre>
+     * Type of result for this record specification (must be RECORD or RECORD_LIST)
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+     * @return The resultType.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.SpecificationProto.DefinitionType getResultType() {
+      com.provenance.metadata.v1.SpecificationProto.DefinitionType result = com.provenance.metadata.v1.SpecificationProto.DefinitionType.forNumber(resultType_);
+      return result == null ? com.provenance.metadata.v1.SpecificationProto.DefinitionType.UNRECOGNIZED : result;
+    }
+
+    public static final int RESPONSIBLE_PARTIES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> responsibleParties_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType> responsibleParties_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>() {
+              public com.provenance.metadata.v1.SpecificationProto.PartyType convert(java.lang.Integer from) {
+                com.provenance.metadata.v1.SpecificationProto.PartyType result = com.provenance.metadata.v1.SpecificationProto.PartyType.forNumber(from);
+                return result == null ? com.provenance.metadata.v1.SpecificationProto.PartyType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @return A list containing the responsibleParties.
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getResponsiblePartiesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>(responsibleParties_, responsibleParties_converter_);
+    }
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @return The count of responsibleParties.
+     */
+    @java.lang.Override
+    public int getResponsiblePartiesCount() {
+      return responsibleParties_.size();
+    }
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The responsibleParties at the given index.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.PartyType getResponsibleParties(int index) {
+      return responsibleParties_converter_.convert(responsibleParties_.get(index));
+    }
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @return A list containing the enum numeric values on the wire for responsibleParties.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getResponsiblePartiesValueList() {
+      return responsibleParties_;
+    }
+    /**
+     * <pre>
+     * Type of party responsible for this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of responsibleParties at the given index.
+     */
+    @java.lang.Override
+    public int getResponsiblePartiesValue(int index) {
+      return responsibleParties_.get(index);
+    }
+    private int responsiblePartiesMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!specificationId_.isEmpty()) {
+        output.writeBytes(1, specificationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      for (int i = 0; i < inputs_.size(); i++) {
+        output.writeMessage(3, inputs_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, typeName_);
+      }
+      if (resultType_ != com.provenance.metadata.v1.SpecificationProto.DefinitionType.DEFINITION_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, resultType_);
+      }
+      if (getResponsiblePartiesList().size() > 0) {
+        output.writeUInt32NoTag(50);
+        output.writeUInt32NoTag(responsiblePartiesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < responsibleParties_.size(); i++) {
+        output.writeEnumNoTag(responsibleParties_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!specificationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, specificationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      for (int i = 0; i < inputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, inputs_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, typeName_);
+      }
+      if (resultType_ != com.provenance.metadata.v1.SpecificationProto.DefinitionType.DEFINITION_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, resultType_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < responsibleParties_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(responsibleParties_.get(i));
+        }
+        size += dataSize;
+        if (!getResponsiblePartiesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }responsiblePartiesMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.SpecificationProto.RecordSpecification)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.SpecificationProto.RecordSpecification other = (com.provenance.metadata.v1.SpecificationProto.RecordSpecification) obj;
+
+      if (!getSpecificationId()
+          .equals(other.getSpecificationId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (!getTypeName()
+          .equals(other.getTypeName())) return false;
+      if (resultType_ != other.resultType_) return false;
+      if (!responsibleParties_.equals(other.responsibleParties_)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPECIFICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSpecificationId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (getInputsCount() > 0) {
+        hash = (37 * hash) + INPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputsList().hashCode();
+      }
+      hash = (37 * hash) + TYPE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTypeName().hashCode();
+      hash = (37 * hash) + RESULT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + resultType_;
+      if (getResponsiblePartiesCount() > 0) {
+        hash = (37 * hash) + RESPONSIBLE_PARTIES_FIELD_NUMBER;
+        hash = (53 * hash) + responsibleParties_.hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.SpecificationProto.RecordSpecification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RecordSpecification defines the specification for a Record including allowed/required inputs/outputs
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.RecordSpecification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.RecordSpecification)
+        com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_RecordSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_RecordSpecification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.SpecificationProto.RecordSpecification.class, com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.SpecificationProto.RecordSpecification.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        specificationId_ = com.google.protobuf.ByteString.EMPTY;
+        name_ = "";
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+        } else {
+          inputs_ = null;
+          inputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        typeName_ = "";
+        resultType_ = 0;
+        responsibleParties_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_RecordSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.RecordSpecification getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.SpecificationProto.RecordSpecification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.RecordSpecification build() {
+        com.provenance.metadata.v1.SpecificationProto.RecordSpecification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.RecordSpecification buildPartial() {
+        com.provenance.metadata.v1.SpecificationProto.RecordSpecification result = new com.provenance.metadata.v1.SpecificationProto.RecordSpecification(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.SpecificationProto.RecordSpecification result) {
+        if (inputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            inputs_ = java.util.Collections.unmodifiableList(inputs_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.inputs_ = inputs_;
+        } else {
+          result.inputs_ = inputsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          responsibleParties_ = java.util.Collections.unmodifiableList(responsibleParties_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.responsibleParties_ = responsibleParties_;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.SpecificationProto.RecordSpecification result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.specificationId_ = specificationId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.typeName_ = typeName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.resultType_ = resultType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.SpecificationProto.RecordSpecification) {
+          return mergeFrom((com.provenance.metadata.v1.SpecificationProto.RecordSpecification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.SpecificationProto.RecordSpecification other) {
+        if (other == com.provenance.metadata.v1.SpecificationProto.RecordSpecification.getDefaultInstance()) return this;
+        if (other.getSpecificationId() != com.google.protobuf.ByteString.EMPTY) {
+          setSpecificationId(other.getSpecificationId());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (inputsBuilder_ == null) {
+          if (!other.inputs_.isEmpty()) {
+            if (inputs_.isEmpty()) {
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureInputsIsMutable();
+              inputs_.addAll(other.inputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputs_.isEmpty()) {
+            if (inputsBuilder_.isEmpty()) {
+              inputsBuilder_.dispose();
+              inputsBuilder_ = null;
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              inputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputsFieldBuilder() : null;
+            } else {
+              inputsBuilder_.addAllMessages(other.inputs_);
+            }
+          }
+        }
+        if (!other.getTypeName().isEmpty()) {
+          typeName_ = other.typeName_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.resultType_ != 0) {
+          setResultTypeValue(other.getResultTypeValue());
+        }
+        if (!other.responsibleParties_.isEmpty()) {
+          if (responsibleParties_.isEmpty()) {
+            responsibleParties_ = other.responsibleParties_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureResponsiblePartiesIsMutable();
+            responsibleParties_.addAll(other.responsibleParties_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                specificationId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.provenance.metadata.v1.SpecificationProto.InputSpecification m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.SpecificationProto.InputSpecification.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                typeName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                resultType_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                int tmpRaw = input.readEnum();
+                ensureResponsiblePartiesIsMutable();
+                responsibleParties_.add(tmpRaw);
+                break;
+              } // case 48
+              case 50: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureResponsiblePartiesIsMutable();
+                  responsibleParties_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return The specificationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpecificationId() {
+        return specificationId_;
+      }
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @param value The specificationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpecificationId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        specificationId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique identifier for this specification on chain
+       * </pre>
+       *
+       * <code>bytes specification_id = 1 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpecificationId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        specificationId_ = getDefaultInstance().getSpecificationId();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of Record that will be created when this specification is used
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of Record that will be created when this specification is used
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of Record that will be created when this specification is used
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of Record that will be created when this specification is used
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of Record that will be created when this specification is used
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.SpecificationProto.InputSpecification> inputs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          inputs_ = new java.util.ArrayList<com.provenance.metadata.v1.SpecificationProto.InputSpecification>(inputs_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.InputSpecification, com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder> inputsBuilder_;
+
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.InputSpecification> getInputsList() {
+        if (inputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputs_);
+        } else {
+          return inputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public int getInputsCount() {
+        if (inputsBuilder_ == null) {
+          return inputs_.size();
+        } else {
+          return inputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.InputSpecification getInputs(int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);
+        } else {
+          return inputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.provenance.metadata.v1.SpecificationProto.InputSpecification value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.set(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(com.provenance.metadata.v1.SpecificationProto.InputSpecification value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.provenance.metadata.v1.SpecificationProto.InputSpecification value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder addAllInputs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.SpecificationProto.InputSpecification> values) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputs_);
+          onChanged();
+        } else {
+          inputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder clearInputs() {
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          inputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public Builder removeInputs(int index) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.remove(index);
+          onChanged();
+        } else {
+          inputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder getInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder getInputsOrBuilder(
+          int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);  } else {
+          return inputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder> 
+           getInputsOrBuilderList() {
+        if (inputsBuilder_ != null) {
+          return inputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputs_);
+        }
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder addInputsBuilder() {
+        return getInputsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.SpecificationProto.InputSpecification.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder addInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.SpecificationProto.InputSpecification.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A set of inputs that must be satisified to apply this RecordSpecification and create a Record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.InputSpecification inputs = 3 [json_name = "inputs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder> 
+           getInputsBuilderList() {
+        return getInputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.InputSpecification, com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder> 
+          getInputsFieldBuilder() {
+        if (inputsBuilder_ == null) {
+          inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.SpecificationProto.InputSpecification, com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder>(
+                  inputs_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputs_ = null;
+        }
+        return inputsBuilder_;
+      }
+
+      private java.lang.Object typeName_ = "";
+      /**
+       * <pre>
+       * A type name for data associated with this record (typically a class or proto name)
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return The typeName.
+       */
+      public java.lang.String getTypeName() {
+        java.lang.Object ref = typeName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          typeName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A type name for data associated with this record (typically a class or proto name)
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return The bytes for typeName.
+       */
+      public com.google.protobuf.ByteString
+          getTypeNameBytes() {
+        java.lang.Object ref = typeName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          typeName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A type name for data associated with this record (typically a class or proto name)
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @param value The typeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        typeName_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A type name for data associated with this record (typically a class or proto name)
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTypeName() {
+        typeName_ = getDefaultInstance().getTypeName();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A type name for data associated with this record (typically a class or proto name)
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @param value The bytes for typeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        typeName_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private int resultType_ = 0;
+      /**
+       * <pre>
+       * Type of result for this record specification (must be RECORD or RECORD_LIST)
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+       * @return The enum numeric value on the wire for resultType.
+       */
+      @java.lang.Override public int getResultTypeValue() {
+        return resultType_;
+      }
+      /**
+       * <pre>
+       * Type of result for this record specification (must be RECORD or RECORD_LIST)
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+       * @param value The enum numeric value on the wire for resultType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultTypeValue(int value) {
+        resultType_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of result for this record specification (must be RECORD or RECORD_LIST)
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+       * @return The resultType.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.DefinitionType getResultType() {
+        com.provenance.metadata.v1.SpecificationProto.DefinitionType result = com.provenance.metadata.v1.SpecificationProto.DefinitionType.forNumber(resultType_);
+        return result == null ? com.provenance.metadata.v1.SpecificationProto.DefinitionType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of result for this record specification (must be RECORD or RECORD_LIST)
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+       * @param value The resultType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultType(com.provenance.metadata.v1.SpecificationProto.DefinitionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        resultType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of result for this record specification (must be RECORD or RECORD_LIST)
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.DefinitionType result_type = 5 [json_name = "resultType", (.gogoproto.moretags) = "yaml:&#92;"result_type&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResultType() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        resultType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> responsibleParties_ =
+        java.util.Collections.emptyList();
+      private void ensureResponsiblePartiesIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          responsibleParties_ = new java.util.ArrayList<java.lang.Integer>(responsibleParties_);
+          bitField0_ |= 0x00000020;
+        }
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @return A list containing the responsibleParties.
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.PartyType> getResponsiblePartiesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.provenance.metadata.v1.SpecificationProto.PartyType>(responsibleParties_, responsibleParties_converter_);
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @return The count of responsibleParties.
+       */
+      public int getResponsiblePartiesCount() {
+        return responsibleParties_.size();
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The responsibleParties at the given index.
+       */
+      public com.provenance.metadata.v1.SpecificationProto.PartyType getResponsibleParties(int index) {
+        return responsibleParties_converter_.convert(responsibleParties_.get(index));
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The responsibleParties to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponsibleParties(
+          int index, com.provenance.metadata.v1.SpecificationProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResponsiblePartiesIsMutable();
+        responsibleParties_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @param value The responsibleParties to add.
+       * @return This builder for chaining.
+       */
+      public Builder addResponsibleParties(com.provenance.metadata.v1.SpecificationProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResponsiblePartiesIsMutable();
+        responsibleParties_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @param values The responsibleParties to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllResponsibleParties(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.SpecificationProto.PartyType> values) {
+        ensureResponsiblePartiesIsMutable();
+        for (com.provenance.metadata.v1.SpecificationProto.PartyType value : values) {
+          responsibleParties_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponsibleParties() {
+        responsibleParties_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @return A list containing the enum numeric values on the wire for responsibleParties.
+       */
+      public java.util.List<java.lang.Integer>
+      getResponsiblePartiesValueList() {
+        return java.util.Collections.unmodifiableList(responsibleParties_);
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of responsibleParties at the given index.
+       */
+      public int getResponsiblePartiesValue(int index) {
+        return responsibleParties_.get(index);
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for responsibleParties to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponsiblePartiesValue(
+          int index, int value) {
+        ensureResponsiblePartiesIsMutable();
+        responsibleParties_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @param value The enum numeric value on the wire for responsibleParties to add.
+       * @return This builder for chaining.
+       */
+      public Builder addResponsiblePartiesValue(int value) {
+        ensureResponsiblePartiesIsMutable();
+        responsibleParties_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of party responsible for this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.PartyType responsible_parties = 6 [json_name = "responsibleParties", (.gogoproto.moretags) = "yaml:&#92;"responsible_parties&#92;""];</code>
+       * @param values The enum numeric values on the wire for responsibleParties to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllResponsiblePartiesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureResponsiblePartiesIsMutable();
+        for (int value : values) {
+          responsibleParties_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.RecordSpecification)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.RecordSpecification)
+    private static final com.provenance.metadata.v1.SpecificationProto.RecordSpecification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.SpecificationProto.RecordSpecification();
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.RecordSpecification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecordSpecification>
+        PARSER = new com.google.protobuf.AbstractParser<RecordSpecification>() {
+      @java.lang.Override
+      public RecordSpecification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecordSpecification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecordSpecification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.RecordSpecification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InputSpecificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.InputSpecification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * name for this input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name for this input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * a type_name (typically a proto name or class_name)
+     * </pre>
+     *
+     * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The typeName.
+     */
+    java.lang.String getTypeName();
+    /**
+     * <pre>
+     * a type_name (typically a proto name or class_name)
+     * </pre>
+     *
+     * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The bytes for typeName.
+     */
+    com.google.protobuf.ByteString
+        getTypeNameBytes();
+
+    /**
+     * <pre>
+     * the address of a record on chain (For Established Records)
+     * </pre>
+     *
+     * <code>bytes record_id = 3 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return Whether the recordId field is set.
+     */
+    boolean hasRecordId();
+    /**
+     * <pre>
+     * the address of a record on chain (For Established Records)
+     * </pre>
+     *
+     * <code>bytes record_id = 3 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return The recordId.
+     */
+    com.google.protobuf.ByteString getRecordId();
+
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 4 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    boolean hasHash();
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 4 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 4 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    com.provenance.metadata.v1.SpecificationProto.InputSpecification.SourceCase getSourceCase();
+  }
+  /**
+   * <pre>
+   * InputSpecification defines a name, type_name, and source reference (either on or off chain) to define an input
+   * parameter
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.InputSpecification}
+   */
+  public static final class InputSpecification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.InputSpecification)
+      InputSpecificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InputSpecification.newBuilder() to construct.
+    private InputSpecification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InputSpecification() {
+      name_ = "";
+      typeName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InputSpecification();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_InputSpecification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_InputSpecification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.SpecificationProto.InputSpecification.class, com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder.class);
+    }
+
+    private int sourceCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object source_;
+    public enum SourceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      RECORD_ID(3),
+      HASH(4),
+      SOURCE_NOT_SET(0);
+      private final int value;
+      private SourceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SourceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SourceCase forNumber(int value) {
+        switch (value) {
+          case 3: return RECORD_ID;
+          case 4: return HASH;
+          case 0: return SOURCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SourceCase
+    getSourceCase() {
+      return SourceCase.forNumber(
+          sourceCase_);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name for this input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name for this input
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object typeName_ = "";
+    /**
+     * <pre>
+     * a type_name (typically a proto name or class_name)
+     * </pre>
+     *
+     * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The typeName.
+     */
+    @java.lang.Override
+    public java.lang.String getTypeName() {
+      java.lang.Object ref = typeName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        typeName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * a type_name (typically a proto name or class_name)
+     * </pre>
+     *
+     * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The bytes for typeName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeNameBytes() {
+      java.lang.Object ref = typeName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        typeName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_ID_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * the address of a record on chain (For Established Records)
+     * </pre>
+     *
+     * <code>bytes record_id = 3 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return Whether the recordId field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecordId() {
+      return sourceCase_ == 3;
+    }
+    /**
+     * <pre>
+     * the address of a record on chain (For Established Records)
+     * </pre>
+     *
+     * <code>bytes record_id = 3 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return The recordId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordId() {
+      if (sourceCase_ == 3) {
+        return (com.google.protobuf.ByteString) source_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int HASH_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 4 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    public boolean hasHash() {
+      return sourceCase_ == 4;
+    }
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 4 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    public java.lang.String getHash() {
+      java.lang.Object ref = "";
+      if (sourceCase_ == 4) {
+        ref = source_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (sourceCase_ == 4) {
+          source_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 4 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = "";
+      if (sourceCase_ == 4) {
+        ref = source_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (sourceCase_ == 4) {
+          source_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, typeName_);
+      }
+      if (sourceCase_ == 3) {
+        output.writeBytes(
+            3, (com.google.protobuf.ByteString) source_);
+      }
+      if (sourceCase_ == 4) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, source_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, typeName_);
+      }
+      if (sourceCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              3, (com.google.protobuf.ByteString) source_);
+      }
+      if (sourceCase_ == 4) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, source_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.SpecificationProto.InputSpecification)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.SpecificationProto.InputSpecification other = (com.provenance.metadata.v1.SpecificationProto.InputSpecification) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getTypeName()
+          .equals(other.getTypeName())) return false;
+      if (!getSourceCase().equals(other.getSourceCase())) return false;
+      switch (sourceCase_) {
+        case 3:
+          if (!getRecordId()
+              .equals(other.getRecordId())) return false;
+          break;
+        case 4:
+          if (!getHash()
+              .equals(other.getHash())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTypeName().hashCode();
+      switch (sourceCase_) {
+        case 3:
+          hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getRecordId().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + HASH_FIELD_NUMBER;
+          hash = (53 * hash) + getHash().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.SpecificationProto.InputSpecification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * InputSpecification defines a name, type_name, and source reference (either on or off chain) to define an input
+     * parameter
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.InputSpecification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.InputSpecification)
+        com.provenance.metadata.v1.SpecificationProto.InputSpecificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_InputSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_InputSpecification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.SpecificationProto.InputSpecification.class, com.provenance.metadata.v1.SpecificationProto.InputSpecification.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.SpecificationProto.InputSpecification.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        typeName_ = "";
+        sourceCase_ = 0;
+        source_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_InputSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.InputSpecification getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.SpecificationProto.InputSpecification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.InputSpecification build() {
+        com.provenance.metadata.v1.SpecificationProto.InputSpecification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.InputSpecification buildPartial() {
+        com.provenance.metadata.v1.SpecificationProto.InputSpecification result = new com.provenance.metadata.v1.SpecificationProto.InputSpecification(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.SpecificationProto.InputSpecification result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.typeName_ = typeName_;
+        }
+      }
+
+      private void buildPartialOneofs(com.provenance.metadata.v1.SpecificationProto.InputSpecification result) {
+        result.sourceCase_ = sourceCase_;
+        result.source_ = this.source_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.SpecificationProto.InputSpecification) {
+          return mergeFrom((com.provenance.metadata.v1.SpecificationProto.InputSpecification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.SpecificationProto.InputSpecification other) {
+        if (other == com.provenance.metadata.v1.SpecificationProto.InputSpecification.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTypeName().isEmpty()) {
+          typeName_ = other.typeName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        switch (other.getSourceCase()) {
+          case RECORD_ID: {
+            setRecordId(other.getRecordId());
+            break;
+          }
+          case HASH: {
+            sourceCase_ = 4;
+            source_ = other.source_;
+            onChanged();
+            break;
+          }
+          case SOURCE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                typeName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                source_ = input.readBytes();
+                sourceCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                sourceCase_ = 4;
+                source_ = s;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int sourceCase_ = 0;
+      private java.lang.Object source_;
+      public SourceCase
+          getSourceCase() {
+        return SourceCase.forNumber(
+            sourceCase_);
+      }
+
+      public Builder clearSource() {
+        sourceCase_ = 0;
+        source_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name for this input
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name for this input
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name for this input
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name for this input
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name for this input
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object typeName_ = "";
+      /**
+       * <pre>
+       * a type_name (typically a proto name or class_name)
+       * </pre>
+       *
+       * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return The typeName.
+       */
+      public java.lang.String getTypeName() {
+        java.lang.Object ref = typeName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          typeName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a type_name (typically a proto name or class_name)
+       * </pre>
+       *
+       * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return The bytes for typeName.
+       */
+      public com.google.protobuf.ByteString
+          getTypeNameBytes() {
+        java.lang.Object ref = typeName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          typeName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a type_name (typically a proto name or class_name)
+       * </pre>
+       *
+       * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @param value The typeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        typeName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a type_name (typically a proto name or class_name)
+       * </pre>
+       *
+       * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTypeName() {
+        typeName_ = getDefaultInstance().getTypeName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a type_name (typically a proto name or class_name)
+       * </pre>
+       *
+       * <code>string type_name = 2 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @param value The bytes for typeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        typeName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the address of a record on chain (For Established Records)
+       * </pre>
+       *
+       * <code>bytes record_id = 3 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @return Whether the recordId field is set.
+       */
+      public boolean hasRecordId() {
+        return sourceCase_ == 3;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain (For Established Records)
+       * </pre>
+       *
+       * <code>bytes record_id = 3 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @return The recordId.
+       */
+      public com.google.protobuf.ByteString getRecordId() {
+        if (sourceCase_ == 3) {
+          return (com.google.protobuf.ByteString) source_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain (For Established Records)
+       * </pre>
+       *
+       * <code>bytes record_id = 3 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @param value The recordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceCase_ = 3;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain (For Established Records)
+       * </pre>
+       *
+       * <code>bytes record_id = 3 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordId() {
+        if (sourceCase_ == 3) {
+          sourceCase_ = 0;
+          source_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 4 [json_name = "hash"];</code>
+       * @return Whether the hash field is set.
+       */
+      @java.lang.Override
+      public boolean hasHash() {
+        return sourceCase_ == 4;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 4 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      @java.lang.Override
+      public java.lang.String getHash() {
+        java.lang.Object ref = "";
+        if (sourceCase_ == 4) {
+          ref = source_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (sourceCase_ == 4) {
+            source_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 4 [json_name = "hash"];</code>
+       * @return The bytes for hash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = "";
+        if (sourceCase_ == 4) {
+          ref = source_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (sourceCase_ == 4) {
+            source_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 4 [json_name = "hash"];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceCase_ = 4;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 4 [json_name = "hash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        if (sourceCase_ == 4) {
+          sourceCase_ = 0;
+          source_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 4 [json_name = "hash"];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceCase_ = 4;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.InputSpecification)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.InputSpecification)
+    private static final com.provenance.metadata.v1.SpecificationProto.InputSpecification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.SpecificationProto.InputSpecification();
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.InputSpecification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InputSpecification>
+        PARSER = new com.google.protobuf.AbstractParser<InputSpecification>() {
+      @java.lang.Override
+      public InputSpecification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InputSpecification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InputSpecification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.InputSpecification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DescriptionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.Description)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A Name for this thing.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * A Name for this thing.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * A description of this thing.
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * A description of this thing.
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * URL to find even more info.
+     * </pre>
+     *
+     * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+     * @return The websiteUrl.
+     */
+    java.lang.String getWebsiteUrl();
+    /**
+     * <pre>
+     * URL to find even more info.
+     * </pre>
+     *
+     * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+     * @return The bytes for websiteUrl.
+     */
+    com.google.protobuf.ByteString
+        getWebsiteUrlBytes();
+
+    /**
+     * <pre>
+     * URL of an icon.
+     * </pre>
+     *
+     * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+     * @return The iconUrl.
+     */
+    java.lang.String getIconUrl();
+    /**
+     * <pre>
+     * URL of an icon.
+     * </pre>
+     *
+     * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+     * @return The bytes for iconUrl.
+     */
+    com.google.protobuf.ByteString
+        getIconUrlBytes();
+  }
+  /**
+   * <pre>
+   * Description holds general information that is handy to associate with a structure.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.Description}
+   */
+  public static final class Description extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.Description)
+      DescriptionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Description.newBuilder() to construct.
+    private Description(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Description() {
+      name_ = "";
+      description_ = "";
+      websiteUrl_ = "";
+      iconUrl_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Description();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_Description_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_Description_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.SpecificationProto.Description.class, com.provenance.metadata.v1.SpecificationProto.Description.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * A Name for this thing.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A Name for this thing.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * A description of this thing.
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A description of this thing.
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEBSITE_URL_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object websiteUrl_ = "";
+    /**
+     * <pre>
+     * URL to find even more info.
+     * </pre>
+     *
+     * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+     * @return The websiteUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getWebsiteUrl() {
+      java.lang.Object ref = websiteUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        websiteUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * URL to find even more info.
+     * </pre>
+     *
+     * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+     * @return The bytes for websiteUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebsiteUrlBytes() {
+      java.lang.Object ref = websiteUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        websiteUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ICON_URL_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iconUrl_ = "";
+    /**
+     * <pre>
+     * URL of an icon.
+     * </pre>
+     *
+     * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+     * @return The iconUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getIconUrl() {
+      java.lang.Object ref = iconUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iconUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * URL of an icon.
+     * </pre>
+     *
+     * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+     * @return The bytes for iconUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIconUrlBytes() {
+      java.lang.Object ref = iconUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iconUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(websiteUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, websiteUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iconUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, iconUrl_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(websiteUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, websiteUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iconUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, iconUrl_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.SpecificationProto.Description)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.SpecificationProto.Description other = (com.provenance.metadata.v1.SpecificationProto.Description) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getWebsiteUrl()
+          .equals(other.getWebsiteUrl())) return false;
+      if (!getIconUrl()
+          .equals(other.getIconUrl())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + WEBSITE_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getWebsiteUrl().hashCode();
+      hash = (37 * hash) + ICON_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getIconUrl().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.SpecificationProto.Description parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.SpecificationProto.Description prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Description holds general information that is handy to associate with a structure.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.Description}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.Description)
+        com.provenance.metadata.v1.SpecificationProto.DescriptionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_Description_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_Description_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.SpecificationProto.Description.class, com.provenance.metadata.v1.SpecificationProto.Description.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.SpecificationProto.Description.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        description_ = "";
+        websiteUrl_ = "";
+        iconUrl_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.SpecificationProto.internal_static_provenance_metadata_v1_Description_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.Description getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.Description build() {
+        com.provenance.metadata.v1.SpecificationProto.Description result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.Description buildPartial() {
+        com.provenance.metadata.v1.SpecificationProto.Description result = new com.provenance.metadata.v1.SpecificationProto.Description(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.SpecificationProto.Description result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.websiteUrl_ = websiteUrl_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.iconUrl_ = iconUrl_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.SpecificationProto.Description) {
+          return mergeFrom((com.provenance.metadata.v1.SpecificationProto.Description)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.SpecificationProto.Description other) {
+        if (other == com.provenance.metadata.v1.SpecificationProto.Description.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getWebsiteUrl().isEmpty()) {
+          websiteUrl_ = other.websiteUrl_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getIconUrl().isEmpty()) {
+          iconUrl_ = other.iconUrl_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              case 34: {
+                websiteUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              case 42: {
+                iconUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * A Name for this thing.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A Name for this thing.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A Name for this thing.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A Name for this thing.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A Name for this thing.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * A description of this thing.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A description of this thing.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A description of this thing.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A description of this thing.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A description of this thing.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object websiteUrl_ = "";
+      /**
+       * <pre>
+       * URL to find even more info.
+       * </pre>
+       *
+       * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+       * @return The websiteUrl.
+       */
+      public java.lang.String getWebsiteUrl() {
+        java.lang.Object ref = websiteUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          websiteUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * URL to find even more info.
+       * </pre>
+       *
+       * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+       * @return The bytes for websiteUrl.
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteUrlBytes() {
+        java.lang.Object ref = websiteUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          websiteUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * URL to find even more info.
+       * </pre>
+       *
+       * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+       * @param value The websiteUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        websiteUrl_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URL to find even more info.
+       * </pre>
+       *
+       * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebsiteUrl() {
+        websiteUrl_ = getDefaultInstance().getWebsiteUrl();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URL to find even more info.
+       * </pre>
+       *
+       * <code>string website_url = 4 [json_name = "websiteUrl", (.gogoproto.moretags) = "yaml:&#92;"website_url&#92;""];</code>
+       * @param value The bytes for websiteUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        websiteUrl_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object iconUrl_ = "";
+      /**
+       * <pre>
+       * URL of an icon.
+       * </pre>
+       *
+       * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+       * @return The iconUrl.
+       */
+      public java.lang.String getIconUrl() {
+        java.lang.Object ref = iconUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iconUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * URL of an icon.
+       * </pre>
+       *
+       * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+       * @return The bytes for iconUrl.
+       */
+      public com.google.protobuf.ByteString
+          getIconUrlBytes() {
+        java.lang.Object ref = iconUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iconUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * URL of an icon.
+       * </pre>
+       *
+       * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+       * @param value The iconUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIconUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iconUrl_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URL of an icon.
+       * </pre>
+       *
+       * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIconUrl() {
+        iconUrl_ = getDefaultInstance().getIconUrl();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URL of an icon.
+       * </pre>
+       *
+       * <code>string icon_url = 5 [json_name = "iconUrl", (.gogoproto.moretags) = "yaml:&#92;"icon_url&#92;""];</code>
+       * @param value The bytes for iconUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIconUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iconUrl_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.Description)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.Description)
+    private static final com.provenance.metadata.v1.SpecificationProto.Description DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.SpecificationProto.Description();
+    }
+
+    public static com.provenance.metadata.v1.SpecificationProto.Description getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Description>
+        PARSER = new com.google.protobuf.AbstractParser<Description>() {
+      @java.lang.Override
+      public Description parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Description> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Description> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.Description getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_ScopeSpecification_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_ScopeSpecification_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_ContractSpecification_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_ContractSpecification_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_RecordSpecification_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_RecordSpecification_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_InputSpecification_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_InputSpecification_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_Description_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_Description_fieldAccessorTable;
 
@@ -109,7 +8508,7 @@ public final class SpecificationProto {
       "\n\025PARTY_TYPE_PROVENANCE\020\010\022\031\n\025PARTY_TYPE_" +
       "CONTROLLER\020\n\022\030\n\024PARTY_TYPE_VALIDATOR\020\013B\340" +
       "\001\n\032com.provenance.metadata.v1B\022Specifica" +
-      "tionProtoP\001Z4github.com/provenance-io/pr" +
+      "tionProtoP\000Z4github.com/provenance-io/pr" +
       "ovenance/x/metadata/types\242\002\003PMX\252\002\026Proven" +
       "ance.Metadata.V1\312\002\026Provenance\\Metadata\\V" +
       "1\342\002\"Provenance\\Metadata\\V1\\GPBMetadata\352\002" +

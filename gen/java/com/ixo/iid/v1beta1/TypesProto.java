@@ -14,44 +14,9462 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ContextOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.Context)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>string val = 2 [json_name = "val"];</code>
+     * @return The val.
+     */
+    java.lang.String getVal();
+    /**
+     * <code>string val = 2 [json_name = "val"];</code>
+     * @return The bytes for val.
+     */
+    com.google.protobuf.ByteString
+        getValBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.Context}
+   */
+  public static final class Context extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.Context)
+      ContextOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Context.newBuilder() to construct.
+    private Context(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Context() {
+      key_ = "";
+      val_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Context();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Context_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Context_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.TypesProto.Context.class, com.ixo.iid.v1beta1.TypesProto.Context.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object val_ = "";
+    /**
+     * <code>string val = 2 [json_name = "val"];</code>
+     * @return The val.
+     */
+    @java.lang.Override
+    public java.lang.String getVal() {
+      java.lang.Object ref = val_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        val_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string val = 2 [json_name = "val"];</code>
+     * @return The bytes for val.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValBytes() {
+      java.lang.Object ref = val_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        val_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(val_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, val_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(val_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, val_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.TypesProto.Context)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.TypesProto.Context other = (com.ixo.iid.v1beta1.TypesProto.Context) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getVal()
+          .equals(other.getVal())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VAL_FIELD_NUMBER;
+      hash = (53 * hash) + getVal().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Context parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.TypesProto.Context prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.Context}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.Context)
+        com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Context_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Context_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.TypesProto.Context.class, com.ixo.iid.v1beta1.TypesProto.Context.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.TypesProto.Context.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = "";
+        val_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Context_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.Context getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.TypesProto.Context.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.Context build() {
+        com.ixo.iid.v1beta1.TypesProto.Context result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.Context buildPartial() {
+        com.ixo.iid.v1beta1.TypesProto.Context result = new com.ixo.iid.v1beta1.TypesProto.Context(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.TypesProto.Context result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.val_ = val_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.TypesProto.Context) {
+          return mergeFrom((com.ixo.iid.v1beta1.TypesProto.Context)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.TypesProto.Context other) {
+        if (other == com.ixo.iid.v1beta1.TypesProto.Context.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getVal().isEmpty()) {
+          val_ = other.val_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                val_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object val_ = "";
+      /**
+       * <code>string val = 2 [json_name = "val"];</code>
+       * @return The val.
+       */
+      public java.lang.String getVal() {
+        java.lang.Object ref = val_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          val_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string val = 2 [json_name = "val"];</code>
+       * @return The bytes for val.
+       */
+      public com.google.protobuf.ByteString
+          getValBytes() {
+        java.lang.Object ref = val_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          val_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string val = 2 [json_name = "val"];</code>
+       * @param value The val to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        val_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string val = 2 [json_name = "val"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVal() {
+        val_ = getDefaultInstance().getVal();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string val = 2 [json_name = "val"];</code>
+       * @param value The bytes for val to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        val_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.Context)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.Context)
+    private static final com.ixo.iid.v1beta1.TypesProto.Context DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.TypesProto.Context();
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.Context getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Context>
+        PARSER = new com.google.protobuf.AbstractParser<Context>() {
+      @java.lang.Override
+      public Context parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Context> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Context> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.Context getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccordedRightOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.AccordedRight)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+     * @return The mechanism.
+     */
+    java.lang.String getMechanism();
+    /**
+     * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+     * @return The bytes for mechanism.
+     */
+    com.google.protobuf.ByteString
+        getMechanismBytes();
+
+    /**
+     * <code>string message = 4 [json_name = "message"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 4 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <code>string service = 5 [json_name = "service"];</code>
+     * @return The service.
+     */
+    java.lang.String getService();
+    /**
+     * <code>string service = 5 [json_name = "service"];</code>
+     * @return The bytes for service.
+     */
+    com.google.protobuf.ByteString
+        getServiceBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.AccordedRight}
+   */
+  public static final class AccordedRight extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.AccordedRight)
+      AccordedRightOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccordedRight.newBuilder() to construct.
+    private AccordedRight(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccordedRight() {
+      type_ = "";
+      id_ = "";
+      mechanism_ = "";
+      message_ = "";
+      service_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccordedRight();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_AccordedRight_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_AccordedRight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.TypesProto.AccordedRight.class, com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MECHANISM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mechanism_ = "";
+    /**
+     * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+     * @return The mechanism.
+     */
+    @java.lang.Override
+    public java.lang.String getMechanism() {
+      java.lang.Object ref = mechanism_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mechanism_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+     * @return The bytes for mechanism.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMechanismBytes() {
+      java.lang.Object ref = mechanism_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mechanism_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object message_ = "";
+    /**
+     * <code>string message = 4 [json_name = "message"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 4 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object service_ = "";
+    /**
+     * <code>string service = 5 [json_name = "service"];</code>
+     * @return The service.
+     */
+    @java.lang.Override
+    public java.lang.String getService() {
+      java.lang.Object ref = service_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        service_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service = 5 [json_name = "service"];</code>
+     * @return The bytes for service.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceBytes() {
+      java.lang.Object ref = service_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        service_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mechanism_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mechanism_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, message_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(service_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, service_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mechanism_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mechanism_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, message_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(service_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, service_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.TypesProto.AccordedRight)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.TypesProto.AccordedRight other = (com.ixo.iid.v1beta1.TypesProto.AccordedRight) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getMechanism()
+          .equals(other.getMechanism())) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!getService()
+          .equals(other.getService())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + MECHANISM_FIELD_NUMBER;
+      hash = (53 * hash) + getMechanism().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + SERVICE_FIELD_NUMBER;
+      hash = (53 * hash) + getService().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.TypesProto.AccordedRight prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.AccordedRight}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.AccordedRight)
+        com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_AccordedRight_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_AccordedRight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.TypesProto.AccordedRight.class, com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.TypesProto.AccordedRight.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        id_ = "";
+        mechanism_ = "";
+        message_ = "";
+        service_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_AccordedRight_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.AccordedRight getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.TypesProto.AccordedRight.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.AccordedRight build() {
+        com.ixo.iid.v1beta1.TypesProto.AccordedRight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.AccordedRight buildPartial() {
+        com.ixo.iid.v1beta1.TypesProto.AccordedRight result = new com.ixo.iid.v1beta1.TypesProto.AccordedRight(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.TypesProto.AccordedRight result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.mechanism_ = mechanism_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.message_ = message_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.service_ = service_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.TypesProto.AccordedRight) {
+          return mergeFrom((com.ixo.iid.v1beta1.TypesProto.AccordedRight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.TypesProto.AccordedRight other) {
+        if (other == com.ixo.iid.v1beta1.TypesProto.AccordedRight.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMechanism().isEmpty()) {
+          mechanism_ = other.mechanism_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getService().isEmpty()) {
+          service_ = other.service_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                mechanism_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                message_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                service_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mechanism_ = "";
+      /**
+       * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+       * @return The mechanism.
+       */
+      public java.lang.String getMechanism() {
+        java.lang.Object ref = mechanism_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mechanism_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+       * @return The bytes for mechanism.
+       */
+      public com.google.protobuf.ByteString
+          getMechanismBytes() {
+        java.lang.Object ref = mechanism_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mechanism_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+       * @param value The mechanism to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMechanism(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mechanism_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMechanism() {
+        mechanism_ = getDefaultInstance().getMechanism();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mechanism = 3 [json_name = "mechanism"];</code>
+       * @param value The bytes for mechanism to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMechanismBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mechanism_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 4 [json_name = "message"];</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 4 [json_name = "message"];</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 4 [json_name = "message"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        message_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 4 [json_name = "message"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        message_ = getDefaultInstance().getMessage();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 4 [json_name = "message"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        message_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object service_ = "";
+      /**
+       * <code>string service = 5 [json_name = "service"];</code>
+       * @return The service.
+       */
+      public java.lang.String getService() {
+        java.lang.Object ref = service_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          service_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service = 5 [json_name = "service"];</code>
+       * @return The bytes for service.
+       */
+      public com.google.protobuf.ByteString
+          getServiceBytes() {
+        java.lang.Object ref = service_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          service_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service = 5 [json_name = "service"];</code>
+       * @param value The service to set.
+       * @return This builder for chaining.
+       */
+      public Builder setService(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        service_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service = 5 [json_name = "service"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearService() {
+        service_ = getDefaultInstance().getService();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service = 5 [json_name = "service"];</code>
+       * @param value The bytes for service to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        service_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.AccordedRight)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.AccordedRight)
+    private static final com.ixo.iid.v1beta1.TypesProto.AccordedRight DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.TypesProto.AccordedRight();
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.AccordedRight getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccordedRight>
+        PARSER = new com.google.protobuf.AbstractParser<AccordedRight>() {
+      @java.lang.Override
+      public AccordedRight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccordedRight> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccordedRight> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.AccordedRight getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LinkedResourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.LinkedResource)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+     * @return The mediaType.
+     */
+    java.lang.String getMediaType();
+    /**
+     * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+     * @return The bytes for mediaType.
+     */
+    com.google.protobuf.ByteString
+        getMediaTypeBytes();
+
+    /**
+     * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+     * @return The serviceEndpoint.
+     */
+    java.lang.String getServiceEndpoint();
+    /**
+     * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+     * @return The bytes for serviceEndpoint.
+     */
+    com.google.protobuf.ByteString
+        getServiceEndpointBytes();
+
+    /**
+     * <code>string proof = 6 [json_name = "proof"];</code>
+     * @return The proof.
+     */
+    java.lang.String getProof();
+    /**
+     * <code>string proof = 6 [json_name = "proof"];</code>
+     * @return The bytes for proof.
+     */
+    com.google.protobuf.ByteString
+        getProofBytes();
+
+    /**
+     * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+     * @return The encrypted.
+     */
+    java.lang.String getEncrypted();
+    /**
+     * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+     * @return The bytes for encrypted.
+     */
+    com.google.protobuf.ByteString
+        getEncryptedBytes();
+
+    /**
+     * <code>string right = 8 [json_name = "right"];</code>
+     * @return The right.
+     */
+    java.lang.String getRight();
+    /**
+     * <code>string right = 8 [json_name = "right"];</code>
+     * @return The bytes for right.
+     */
+    com.google.protobuf.ByteString
+        getRightBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.LinkedResource}
+   */
+  public static final class LinkedResource extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.LinkedResource)
+      LinkedResourceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LinkedResource.newBuilder() to construct.
+    private LinkedResource(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LinkedResource() {
+      type_ = "";
+      id_ = "";
+      description_ = "";
+      mediaType_ = "";
+      serviceEndpoint_ = "";
+      proof_ = "";
+      encrypted_ = "";
+      right_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LinkedResource();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedResource_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedResource_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.TypesProto.LinkedResource.class, com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MEDIATYPE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mediaType_ = "";
+    /**
+     * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+     * @return The mediaType.
+     */
+    @java.lang.Override
+    public java.lang.String getMediaType() {
+      java.lang.Object ref = mediaType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mediaType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+     * @return The bytes for mediaType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMediaTypeBytes() {
+      java.lang.Object ref = mediaType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mediaType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICEENDPOINT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceEndpoint_ = "";
+    /**
+     * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+     * @return The serviceEndpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceEndpoint() {
+      java.lang.Object ref = serviceEndpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceEndpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+     * @return The bytes for serviceEndpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceEndpointBytes() {
+      java.lang.Object ref = serviceEndpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROOF_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proof_ = "";
+    /**
+     * <code>string proof = 6 [json_name = "proof"];</code>
+     * @return The proof.
+     */
+    @java.lang.Override
+    public java.lang.String getProof() {
+      java.lang.Object ref = proof_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proof_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proof = 6 [json_name = "proof"];</code>
+     * @return The bytes for proof.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProofBytes() {
+      java.lang.Object ref = proof_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proof_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENCRYPTED_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object encrypted_ = "";
+    /**
+     * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+     * @return The encrypted.
+     */
+    @java.lang.Override
+    public java.lang.String getEncrypted() {
+      java.lang.Object ref = encrypted_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        encrypted_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+     * @return The bytes for encrypted.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEncryptedBytes() {
+      java.lang.Object ref = encrypted_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        encrypted_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RIGHT_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object right_ = "";
+    /**
+     * <code>string right = 8 [json_name = "right"];</code>
+     * @return The right.
+     */
+    @java.lang.Override
+    public java.lang.String getRight() {
+      java.lang.Object ref = right_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        right_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string right = 8 [json_name = "right"];</code>
+     * @return The bytes for right.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRightBytes() {
+      java.lang.Object ref = right_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        right_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mediaType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, mediaType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceEndpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, serviceEndpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proof_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, proof_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encrypted_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, encrypted_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(right_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, right_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mediaType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, mediaType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceEndpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, serviceEndpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proof_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, proof_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encrypted_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, encrypted_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(right_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, right_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.TypesProto.LinkedResource)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.TypesProto.LinkedResource other = (com.ixo.iid.v1beta1.TypesProto.LinkedResource) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getMediaType()
+          .equals(other.getMediaType())) return false;
+      if (!getServiceEndpoint()
+          .equals(other.getServiceEndpoint())) return false;
+      if (!getProof()
+          .equals(other.getProof())) return false;
+      if (!getEncrypted()
+          .equals(other.getEncrypted())) return false;
+      if (!getRight()
+          .equals(other.getRight())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + MEDIATYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getMediaType().hashCode();
+      hash = (37 * hash) + SERVICEENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceEndpoint().hashCode();
+      hash = (37 * hash) + PROOF_FIELD_NUMBER;
+      hash = (53 * hash) + getProof().hashCode();
+      hash = (37 * hash) + ENCRYPTED_FIELD_NUMBER;
+      hash = (53 * hash) + getEncrypted().hashCode();
+      hash = (37 * hash) + RIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getRight().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.TypesProto.LinkedResource prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.LinkedResource}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.LinkedResource)
+        com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedResource_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedResource_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.TypesProto.LinkedResource.class, com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.TypesProto.LinkedResource.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        id_ = "";
+        description_ = "";
+        mediaType_ = "";
+        serviceEndpoint_ = "";
+        proof_ = "";
+        encrypted_ = "";
+        right_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedResource_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedResource getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.TypesProto.LinkedResource.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedResource build() {
+        com.ixo.iid.v1beta1.TypesProto.LinkedResource result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedResource buildPartial() {
+        com.ixo.iid.v1beta1.TypesProto.LinkedResource result = new com.ixo.iid.v1beta1.TypesProto.LinkedResource(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.TypesProto.LinkedResource result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.mediaType_ = mediaType_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.serviceEndpoint_ = serviceEndpoint_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.proof_ = proof_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.encrypted_ = encrypted_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.right_ = right_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.TypesProto.LinkedResource) {
+          return mergeFrom((com.ixo.iid.v1beta1.TypesProto.LinkedResource)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.TypesProto.LinkedResource other) {
+        if (other == com.ixo.iid.v1beta1.TypesProto.LinkedResource.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMediaType().isEmpty()) {
+          mediaType_ = other.mediaType_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getServiceEndpoint().isEmpty()) {
+          serviceEndpoint_ = other.serviceEndpoint_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getProof().isEmpty()) {
+          proof_ = other.proof_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getEncrypted().isEmpty()) {
+          encrypted_ = other.encrypted_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getRight().isEmpty()) {
+          right_ = other.right_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                mediaType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                serviceEndpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                proof_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                encrypted_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                right_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mediaType_ = "";
+      /**
+       * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+       * @return The mediaType.
+       */
+      public java.lang.String getMediaType() {
+        java.lang.Object ref = mediaType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mediaType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+       * @return The bytes for mediaType.
+       */
+      public com.google.protobuf.ByteString
+          getMediaTypeBytes() {
+        java.lang.Object ref = mediaType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mediaType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+       * @param value The mediaType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMediaType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mediaType_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMediaType() {
+        mediaType_ = getDefaultInstance().getMediaType();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mediaType = 4 [json_name = "mediaType"];</code>
+       * @param value The bytes for mediaType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMediaTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mediaType_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceEndpoint_ = "";
+      /**
+       * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+       * @return The serviceEndpoint.
+       */
+      public java.lang.String getServiceEndpoint() {
+        java.lang.Object ref = serviceEndpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceEndpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+       * @return The bytes for serviceEndpoint.
+       */
+      public com.google.protobuf.ByteString
+          getServiceEndpointBytes() {
+        java.lang.Object ref = serviceEndpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceEndpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+       * @param value The serviceEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceEndpoint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceEndpoint_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceEndpoint() {
+        serviceEndpoint_ = getDefaultInstance().getServiceEndpoint();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string serviceEndpoint = 5 [json_name = "serviceEndpoint"];</code>
+       * @param value The bytes for serviceEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceEndpoint_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proof_ = "";
+      /**
+       * <code>string proof = 6 [json_name = "proof"];</code>
+       * @return The proof.
+       */
+      public java.lang.String getProof() {
+        java.lang.Object ref = proof_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proof_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proof = 6 [json_name = "proof"];</code>
+       * @return The bytes for proof.
+       */
+      public com.google.protobuf.ByteString
+          getProofBytes() {
+        java.lang.Object ref = proof_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proof_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proof = 6 [json_name = "proof"];</code>
+       * @param value The proof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProof(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proof_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof = 6 [json_name = "proof"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProof() {
+        proof_ = getDefaultInstance().getProof();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof = 6 [json_name = "proof"];</code>
+       * @param value The bytes for proof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proof_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object encrypted_ = "";
+      /**
+       * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+       * @return The encrypted.
+       */
+      public java.lang.String getEncrypted() {
+        java.lang.Object ref = encrypted_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          encrypted_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+       * @return The bytes for encrypted.
+       */
+      public com.google.protobuf.ByteString
+          getEncryptedBytes() {
+        java.lang.Object ref = encrypted_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          encrypted_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+       * @param value The encrypted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncrypted(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        encrypted_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncrypted() {
+        encrypted_ = getDefaultInstance().getEncrypted();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string encrypted = 7 [json_name = "encrypted"];</code>
+       * @param value The bytes for encrypted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncryptedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        encrypted_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object right_ = "";
+      /**
+       * <code>string right = 8 [json_name = "right"];</code>
+       * @return The right.
+       */
+      public java.lang.String getRight() {
+        java.lang.Object ref = right_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          right_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string right = 8 [json_name = "right"];</code>
+       * @return The bytes for right.
+       */
+      public com.google.protobuf.ByteString
+          getRightBytes() {
+        java.lang.Object ref = right_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          right_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string right = 8 [json_name = "right"];</code>
+       * @param value The right to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        right_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string right = 8 [json_name = "right"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRight() {
+        right_ = getDefaultInstance().getRight();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string right = 8 [json_name = "right"];</code>
+       * @param value The bytes for right to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        right_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.LinkedResource)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.LinkedResource)
+    private static final com.ixo.iid.v1beta1.TypesProto.LinkedResource DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.TypesProto.LinkedResource();
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedResource getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LinkedResource>
+        PARSER = new com.google.protobuf.AbstractParser<LinkedResource>() {
+      @java.lang.Override
+      public LinkedResource parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LinkedResource> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LinkedResource> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedResource getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LinkedClaimOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.LinkedClaim)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+     * @return The serviceEndpoint.
+     */
+    java.lang.String getServiceEndpoint();
+    /**
+     * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+     * @return The bytes for serviceEndpoint.
+     */
+    com.google.protobuf.ByteString
+        getServiceEndpointBytes();
+
+    /**
+     * <code>string proof = 5 [json_name = "proof"];</code>
+     * @return The proof.
+     */
+    java.lang.String getProof();
+    /**
+     * <code>string proof = 5 [json_name = "proof"];</code>
+     * @return The bytes for proof.
+     */
+    com.google.protobuf.ByteString
+        getProofBytes();
+
+    /**
+     * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+     * @return The encrypted.
+     */
+    java.lang.String getEncrypted();
+    /**
+     * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+     * @return The bytes for encrypted.
+     */
+    com.google.protobuf.ByteString
+        getEncryptedBytes();
+
+    /**
+     * <code>string right = 7 [json_name = "right"];</code>
+     * @return The right.
+     */
+    java.lang.String getRight();
+    /**
+     * <code>string right = 7 [json_name = "right"];</code>
+     * @return The bytes for right.
+     */
+    com.google.protobuf.ByteString
+        getRightBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.LinkedClaim}
+   */
+  public static final class LinkedClaim extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.LinkedClaim)
+      LinkedClaimOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LinkedClaim.newBuilder() to construct.
+    private LinkedClaim(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LinkedClaim() {
+      type_ = "";
+      id_ = "";
+      description_ = "";
+      serviceEndpoint_ = "";
+      proof_ = "";
+      encrypted_ = "";
+      right_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LinkedClaim();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedClaim_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedClaim_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.TypesProto.LinkedClaim.class, com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICEENDPOINT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceEndpoint_ = "";
+    /**
+     * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+     * @return The serviceEndpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceEndpoint() {
+      java.lang.Object ref = serviceEndpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceEndpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+     * @return The bytes for serviceEndpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceEndpointBytes() {
+      java.lang.Object ref = serviceEndpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROOF_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proof_ = "";
+    /**
+     * <code>string proof = 5 [json_name = "proof"];</code>
+     * @return The proof.
+     */
+    @java.lang.Override
+    public java.lang.String getProof() {
+      java.lang.Object ref = proof_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proof_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proof = 5 [json_name = "proof"];</code>
+     * @return The bytes for proof.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProofBytes() {
+      java.lang.Object ref = proof_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proof_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENCRYPTED_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object encrypted_ = "";
+    /**
+     * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+     * @return The encrypted.
+     */
+    @java.lang.Override
+    public java.lang.String getEncrypted() {
+      java.lang.Object ref = encrypted_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        encrypted_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+     * @return The bytes for encrypted.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEncryptedBytes() {
+      java.lang.Object ref = encrypted_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        encrypted_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RIGHT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object right_ = "";
+    /**
+     * <code>string right = 7 [json_name = "right"];</code>
+     * @return The right.
+     */
+    @java.lang.Override
+    public java.lang.String getRight() {
+      java.lang.Object ref = right_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        right_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string right = 7 [json_name = "right"];</code>
+     * @return The bytes for right.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRightBytes() {
+      java.lang.Object ref = right_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        right_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceEndpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serviceEndpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proof_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, proof_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encrypted_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, encrypted_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(right_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, right_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceEndpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serviceEndpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proof_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, proof_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encrypted_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, encrypted_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(right_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, right_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.TypesProto.LinkedClaim)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.TypesProto.LinkedClaim other = (com.ixo.iid.v1beta1.TypesProto.LinkedClaim) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getServiceEndpoint()
+          .equals(other.getServiceEndpoint())) return false;
+      if (!getProof()
+          .equals(other.getProof())) return false;
+      if (!getEncrypted()
+          .equals(other.getEncrypted())) return false;
+      if (!getRight()
+          .equals(other.getRight())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SERVICEENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceEndpoint().hashCode();
+      hash = (37 * hash) + PROOF_FIELD_NUMBER;
+      hash = (53 * hash) + getProof().hashCode();
+      hash = (37 * hash) + ENCRYPTED_FIELD_NUMBER;
+      hash = (53 * hash) + getEncrypted().hashCode();
+      hash = (37 * hash) + RIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getRight().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.TypesProto.LinkedClaim prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.LinkedClaim}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.LinkedClaim)
+        com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedClaim_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedClaim_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.TypesProto.LinkedClaim.class, com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.TypesProto.LinkedClaim.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        id_ = "";
+        description_ = "";
+        serviceEndpoint_ = "";
+        proof_ = "";
+        encrypted_ = "";
+        right_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedClaim_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedClaim getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.TypesProto.LinkedClaim.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedClaim build() {
+        com.ixo.iid.v1beta1.TypesProto.LinkedClaim result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedClaim buildPartial() {
+        com.ixo.iid.v1beta1.TypesProto.LinkedClaim result = new com.ixo.iid.v1beta1.TypesProto.LinkedClaim(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.TypesProto.LinkedClaim result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.serviceEndpoint_ = serviceEndpoint_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.proof_ = proof_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.encrypted_ = encrypted_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.right_ = right_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.TypesProto.LinkedClaim) {
+          return mergeFrom((com.ixo.iid.v1beta1.TypesProto.LinkedClaim)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.TypesProto.LinkedClaim other) {
+        if (other == com.ixo.iid.v1beta1.TypesProto.LinkedClaim.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getServiceEndpoint().isEmpty()) {
+          serviceEndpoint_ = other.serviceEndpoint_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getProof().isEmpty()) {
+          proof_ = other.proof_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getEncrypted().isEmpty()) {
+          encrypted_ = other.encrypted_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getRight().isEmpty()) {
+          right_ = other.right_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                serviceEndpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                proof_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                encrypted_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                right_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceEndpoint_ = "";
+      /**
+       * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+       * @return The serviceEndpoint.
+       */
+      public java.lang.String getServiceEndpoint() {
+        java.lang.Object ref = serviceEndpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceEndpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+       * @return The bytes for serviceEndpoint.
+       */
+      public com.google.protobuf.ByteString
+          getServiceEndpointBytes() {
+        java.lang.Object ref = serviceEndpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceEndpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+       * @param value The serviceEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceEndpoint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceEndpoint_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceEndpoint() {
+        serviceEndpoint_ = getDefaultInstance().getServiceEndpoint();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string serviceEndpoint = 4 [json_name = "serviceEndpoint"];</code>
+       * @param value The bytes for serviceEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceEndpoint_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proof_ = "";
+      /**
+       * <code>string proof = 5 [json_name = "proof"];</code>
+       * @return The proof.
+       */
+      public java.lang.String getProof() {
+        java.lang.Object ref = proof_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proof_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proof = 5 [json_name = "proof"];</code>
+       * @return The bytes for proof.
+       */
+      public com.google.protobuf.ByteString
+          getProofBytes() {
+        java.lang.Object ref = proof_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proof_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proof = 5 [json_name = "proof"];</code>
+       * @param value The proof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProof(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proof_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof = 5 [json_name = "proof"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProof() {
+        proof_ = getDefaultInstance().getProof();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof = 5 [json_name = "proof"];</code>
+       * @param value The bytes for proof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proof_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object encrypted_ = "";
+      /**
+       * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+       * @return The encrypted.
+       */
+      public java.lang.String getEncrypted() {
+        java.lang.Object ref = encrypted_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          encrypted_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+       * @return The bytes for encrypted.
+       */
+      public com.google.protobuf.ByteString
+          getEncryptedBytes() {
+        java.lang.Object ref = encrypted_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          encrypted_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+       * @param value The encrypted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncrypted(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        encrypted_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncrypted() {
+        encrypted_ = getDefaultInstance().getEncrypted();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string encrypted = 6 [json_name = "encrypted"];</code>
+       * @param value The bytes for encrypted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncryptedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        encrypted_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object right_ = "";
+      /**
+       * <code>string right = 7 [json_name = "right"];</code>
+       * @return The right.
+       */
+      public java.lang.String getRight() {
+        java.lang.Object ref = right_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          right_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string right = 7 [json_name = "right"];</code>
+       * @return The bytes for right.
+       */
+      public com.google.protobuf.ByteString
+          getRightBytes() {
+        java.lang.Object ref = right_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          right_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string right = 7 [json_name = "right"];</code>
+       * @param value The right to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        right_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string right = 7 [json_name = "right"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRight() {
+        right_ = getDefaultInstance().getRight();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string right = 7 [json_name = "right"];</code>
+       * @param value The bytes for right to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        right_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.LinkedClaim)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.LinkedClaim)
+    private static final com.ixo.iid.v1beta1.TypesProto.LinkedClaim DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.TypesProto.LinkedClaim();
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedClaim getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LinkedClaim>
+        PARSER = new com.google.protobuf.AbstractParser<LinkedClaim>() {
+      @java.lang.Override
+      public LinkedClaim parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LinkedClaim> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LinkedClaim> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedClaim getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LinkedEntityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.LinkedEntity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string relationship = 3 [json_name = "relationship"];</code>
+     * @return The relationship.
+     */
+    java.lang.String getRelationship();
+    /**
+     * <code>string relationship = 3 [json_name = "relationship"];</code>
+     * @return The bytes for relationship.
+     */
+    com.google.protobuf.ByteString
+        getRelationshipBytes();
+
+    /**
+     * <code>string service = 4 [json_name = "service"];</code>
+     * @return The service.
+     */
+    java.lang.String getService();
+    /**
+     * <code>string service = 4 [json_name = "service"];</code>
+     * @return The bytes for service.
+     */
+    com.google.protobuf.ByteString
+        getServiceBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.LinkedEntity}
+   */
+  public static final class LinkedEntity extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.LinkedEntity)
+      LinkedEntityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LinkedEntity.newBuilder() to construct.
+    private LinkedEntity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LinkedEntity() {
+      type_ = "";
+      id_ = "";
+      relationship_ = "";
+      service_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LinkedEntity();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedEntity_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedEntity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.TypesProto.LinkedEntity.class, com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RELATIONSHIP_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object relationship_ = "";
+    /**
+     * <code>string relationship = 3 [json_name = "relationship"];</code>
+     * @return The relationship.
+     */
+    @java.lang.Override
+    public java.lang.String getRelationship() {
+      java.lang.Object ref = relationship_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        relationship_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string relationship = 3 [json_name = "relationship"];</code>
+     * @return The bytes for relationship.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRelationshipBytes() {
+      java.lang.Object ref = relationship_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        relationship_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object service_ = "";
+    /**
+     * <code>string service = 4 [json_name = "service"];</code>
+     * @return The service.
+     */
+    @java.lang.Override
+    public java.lang.String getService() {
+      java.lang.Object ref = service_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        service_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service = 4 [json_name = "service"];</code>
+     * @return The bytes for service.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceBytes() {
+      java.lang.Object ref = service_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        service_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relationship_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, relationship_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(service_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, service_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relationship_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, relationship_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(service_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, service_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.TypesProto.LinkedEntity)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.TypesProto.LinkedEntity other = (com.ixo.iid.v1beta1.TypesProto.LinkedEntity) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getRelationship()
+          .equals(other.getRelationship())) return false;
+      if (!getService()
+          .equals(other.getService())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + RELATIONSHIP_FIELD_NUMBER;
+      hash = (53 * hash) + getRelationship().hashCode();
+      hash = (37 * hash) + SERVICE_FIELD_NUMBER;
+      hash = (53 * hash) + getService().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.TypesProto.LinkedEntity prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.LinkedEntity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.LinkedEntity)
+        com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedEntity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedEntity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.TypesProto.LinkedEntity.class, com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.TypesProto.LinkedEntity.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        id_ = "";
+        relationship_ = "";
+        service_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_LinkedEntity_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedEntity getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.TypesProto.LinkedEntity.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedEntity build() {
+        com.ixo.iid.v1beta1.TypesProto.LinkedEntity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.LinkedEntity buildPartial() {
+        com.ixo.iid.v1beta1.TypesProto.LinkedEntity result = new com.ixo.iid.v1beta1.TypesProto.LinkedEntity(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.TypesProto.LinkedEntity result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.relationship_ = relationship_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.service_ = service_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.TypesProto.LinkedEntity) {
+          return mergeFrom((com.ixo.iid.v1beta1.TypesProto.LinkedEntity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.TypesProto.LinkedEntity other) {
+        if (other == com.ixo.iid.v1beta1.TypesProto.LinkedEntity.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getRelationship().isEmpty()) {
+          relationship_ = other.relationship_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getService().isEmpty()) {
+          service_ = other.service_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                relationship_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                service_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object relationship_ = "";
+      /**
+       * <code>string relationship = 3 [json_name = "relationship"];</code>
+       * @return The relationship.
+       */
+      public java.lang.String getRelationship() {
+        java.lang.Object ref = relationship_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          relationship_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string relationship = 3 [json_name = "relationship"];</code>
+       * @return The bytes for relationship.
+       */
+      public com.google.protobuf.ByteString
+          getRelationshipBytes() {
+        java.lang.Object ref = relationship_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          relationship_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string relationship = 3 [json_name = "relationship"];</code>
+       * @param value The relationship to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelationship(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        relationship_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string relationship = 3 [json_name = "relationship"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelationship() {
+        relationship_ = getDefaultInstance().getRelationship();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string relationship = 3 [json_name = "relationship"];</code>
+       * @param value The bytes for relationship to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelationshipBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        relationship_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object service_ = "";
+      /**
+       * <code>string service = 4 [json_name = "service"];</code>
+       * @return The service.
+       */
+      public java.lang.String getService() {
+        java.lang.Object ref = service_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          service_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service = 4 [json_name = "service"];</code>
+       * @return The bytes for service.
+       */
+      public com.google.protobuf.ByteString
+          getServiceBytes() {
+        java.lang.Object ref = service_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          service_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service = 4 [json_name = "service"];</code>
+       * @param value The service to set.
+       * @return This builder for chaining.
+       */
+      public Builder setService(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        service_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service = 4 [json_name = "service"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearService() {
+        service_ = getDefaultInstance().getService();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service = 4 [json_name = "service"];</code>
+       * @param value The bytes for service to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        service_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.LinkedEntity)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.LinkedEntity)
+    private static final com.ixo.iid.v1beta1.TypesProto.LinkedEntity DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.TypesProto.LinkedEntity();
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.LinkedEntity getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LinkedEntity>
+        PARSER = new com.google.protobuf.AbstractParser<LinkedEntity>() {
+      @java.lang.Override
+      public LinkedEntity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LinkedEntity> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LinkedEntity> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedEntity getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VerificationMethodOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.VerificationMethod)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string controller = 3 [json_name = "controller"];</code>
+     * @return The controller.
+     */
+    java.lang.String getController();
+    /**
+     * <code>string controller = 3 [json_name = "controller"];</code>
+     * @return The bytes for controller.
+     */
+    com.google.protobuf.ByteString
+        getControllerBytes();
+
+    /**
+     * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+     * @return Whether the blockchainAccountID field is set.
+     */
+    boolean hasBlockchainAccountID();
+    /**
+     * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+     * @return The blockchainAccountID.
+     */
+    java.lang.String getBlockchainAccountID();
+    /**
+     * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+     * @return The bytes for blockchainAccountID.
+     */
+    com.google.protobuf.ByteString
+        getBlockchainAccountIDBytes();
+
+    /**
+     * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+     * @return Whether the publicKeyHex field is set.
+     */
+    boolean hasPublicKeyHex();
+    /**
+     * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+     * @return The publicKeyHex.
+     */
+    java.lang.String getPublicKeyHex();
+    /**
+     * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+     * @return The bytes for publicKeyHex.
+     */
+    com.google.protobuf.ByteString
+        getPublicKeyHexBytes();
+
+    /**
+     * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+     * @return Whether the publicKeyMultibase field is set.
+     */
+    boolean hasPublicKeyMultibase();
+    /**
+     * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+     * @return The publicKeyMultibase.
+     */
+    java.lang.String getPublicKeyMultibase();
+    /**
+     * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+     * @return The bytes for publicKeyMultibase.
+     */
+    com.google.protobuf.ByteString
+        getPublicKeyMultibaseBytes();
+
+    /**
+     * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+     * @return Whether the publicKeyBase58 field is set.
+     */
+    boolean hasPublicKeyBase58();
+    /**
+     * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+     * @return The publicKeyBase58.
+     */
+    java.lang.String getPublicKeyBase58();
+    /**
+     * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+     * @return The bytes for publicKeyBase58.
+     */
+    com.google.protobuf.ByteString
+        getPublicKeyBase58Bytes();
+
+    com.ixo.iid.v1beta1.TypesProto.VerificationMethod.VerificationMaterialCase getVerificationMaterialCase();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.VerificationMethod}
+   */
+  public static final class VerificationMethod extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.VerificationMethod)
+      VerificationMethodOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VerificationMethod.newBuilder() to construct.
+    private VerificationMethod(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VerificationMethod() {
+      id_ = "";
+      type_ = "";
+      controller_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VerificationMethod();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_VerificationMethod_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_VerificationMethod_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.TypesProto.VerificationMethod.class, com.ixo.iid.v1beta1.TypesProto.VerificationMethod.Builder.class);
+    }
+
+    private int verificationMaterialCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object verificationMaterial_;
+    public enum VerificationMaterialCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      BLOCKCHAINACCOUNTID(4),
+      PUBLICKEYHEX(5),
+      PUBLICKEYMULTIBASE(6),
+      PUBLICKEYBASE58(7),
+      VERIFICATIONMATERIAL_NOT_SET(0);
+      private final int value;
+      private VerificationMaterialCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static VerificationMaterialCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static VerificationMaterialCase forNumber(int value) {
+        switch (value) {
+          case 4: return BLOCKCHAINACCOUNTID;
+          case 5: return PUBLICKEYHEX;
+          case 6: return PUBLICKEYMULTIBASE;
+          case 7: return PUBLICKEYBASE58;
+          case 0: return VERIFICATIONMATERIAL_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public VerificationMaterialCase
+    getVerificationMaterialCase() {
+      return VerificationMaterialCase.forNumber(
+          verificationMaterialCase_);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTROLLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object controller_ = "";
+    /**
+     * <code>string controller = 3 [json_name = "controller"];</code>
+     * @return The controller.
+     */
+    @java.lang.Override
+    public java.lang.String getController() {
+      java.lang.Object ref = controller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        controller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string controller = 3 [json_name = "controller"];</code>
+     * @return The bytes for controller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControllerBytes() {
+      java.lang.Object ref = controller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BLOCKCHAINACCOUNTID_FIELD_NUMBER = 4;
+    /**
+     * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+     * @return Whether the blockchainAccountID field is set.
+     */
+    public boolean hasBlockchainAccountID() {
+      return verificationMaterialCase_ == 4;
+    }
+    /**
+     * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+     * @return The blockchainAccountID.
+     */
+    public java.lang.String getBlockchainAccountID() {
+      java.lang.Object ref = "";
+      if (verificationMaterialCase_ == 4) {
+        ref = verificationMaterial_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (verificationMaterialCase_ == 4) {
+          verificationMaterial_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+     * @return The bytes for blockchainAccountID.
+     */
+    public com.google.protobuf.ByteString
+        getBlockchainAccountIDBytes() {
+      java.lang.Object ref = "";
+      if (verificationMaterialCase_ == 4) {
+        ref = verificationMaterial_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (verificationMaterialCase_ == 4) {
+          verificationMaterial_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLICKEYHEX_FIELD_NUMBER = 5;
+    /**
+     * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+     * @return Whether the publicKeyHex field is set.
+     */
+    public boolean hasPublicKeyHex() {
+      return verificationMaterialCase_ == 5;
+    }
+    /**
+     * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+     * @return The publicKeyHex.
+     */
+    public java.lang.String getPublicKeyHex() {
+      java.lang.Object ref = "";
+      if (verificationMaterialCase_ == 5) {
+        ref = verificationMaterial_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (verificationMaterialCase_ == 5) {
+          verificationMaterial_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+     * @return The bytes for publicKeyHex.
+     */
+    public com.google.protobuf.ByteString
+        getPublicKeyHexBytes() {
+      java.lang.Object ref = "";
+      if (verificationMaterialCase_ == 5) {
+        ref = verificationMaterial_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (verificationMaterialCase_ == 5) {
+          verificationMaterial_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLICKEYMULTIBASE_FIELD_NUMBER = 6;
+    /**
+     * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+     * @return Whether the publicKeyMultibase field is set.
+     */
+    public boolean hasPublicKeyMultibase() {
+      return verificationMaterialCase_ == 6;
+    }
+    /**
+     * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+     * @return The publicKeyMultibase.
+     */
+    public java.lang.String getPublicKeyMultibase() {
+      java.lang.Object ref = "";
+      if (verificationMaterialCase_ == 6) {
+        ref = verificationMaterial_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (verificationMaterialCase_ == 6) {
+          verificationMaterial_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+     * @return The bytes for publicKeyMultibase.
+     */
+    public com.google.protobuf.ByteString
+        getPublicKeyMultibaseBytes() {
+      java.lang.Object ref = "";
+      if (verificationMaterialCase_ == 6) {
+        ref = verificationMaterial_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (verificationMaterialCase_ == 6) {
+          verificationMaterial_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLICKEYBASE58_FIELD_NUMBER = 7;
+    /**
+     * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+     * @return Whether the publicKeyBase58 field is set.
+     */
+    public boolean hasPublicKeyBase58() {
+      return verificationMaterialCase_ == 7;
+    }
+    /**
+     * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+     * @return The publicKeyBase58.
+     */
+    public java.lang.String getPublicKeyBase58() {
+      java.lang.Object ref = "";
+      if (verificationMaterialCase_ == 7) {
+        ref = verificationMaterial_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (verificationMaterialCase_ == 7) {
+          verificationMaterial_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+     * @return The bytes for publicKeyBase58.
+     */
+    public com.google.protobuf.ByteString
+        getPublicKeyBase58Bytes() {
+      java.lang.Object ref = "";
+      if (verificationMaterialCase_ == 7) {
+        ref = verificationMaterial_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (verificationMaterialCase_ == 7) {
+          verificationMaterial_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, controller_);
+      }
+      if (verificationMaterialCase_ == 4) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, verificationMaterial_);
+      }
+      if (verificationMaterialCase_ == 5) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, verificationMaterial_);
+      }
+      if (verificationMaterialCase_ == 6) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, verificationMaterial_);
+      }
+      if (verificationMaterialCase_ == 7) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, verificationMaterial_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, controller_);
+      }
+      if (verificationMaterialCase_ == 4) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, verificationMaterial_);
+      }
+      if (verificationMaterialCase_ == 5) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, verificationMaterial_);
+      }
+      if (verificationMaterialCase_ == 6) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, verificationMaterial_);
+      }
+      if (verificationMaterialCase_ == 7) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, verificationMaterial_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.TypesProto.VerificationMethod)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.TypesProto.VerificationMethod other = (com.ixo.iid.v1beta1.TypesProto.VerificationMethod) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getController()
+          .equals(other.getController())) return false;
+      if (!getVerificationMaterialCase().equals(other.getVerificationMaterialCase())) return false;
+      switch (verificationMaterialCase_) {
+        case 4:
+          if (!getBlockchainAccountID()
+              .equals(other.getBlockchainAccountID())) return false;
+          break;
+        case 5:
+          if (!getPublicKeyHex()
+              .equals(other.getPublicKeyHex())) return false;
+          break;
+        case 6:
+          if (!getPublicKeyMultibase()
+              .equals(other.getPublicKeyMultibase())) return false;
+          break;
+        case 7:
+          if (!getPublicKeyBase58()
+              .equals(other.getPublicKeyBase58())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
+      hash = (53 * hash) + getController().hashCode();
+      switch (verificationMaterialCase_) {
+        case 4:
+          hash = (37 * hash) + BLOCKCHAINACCOUNTID_FIELD_NUMBER;
+          hash = (53 * hash) + getBlockchainAccountID().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + PUBLICKEYHEX_FIELD_NUMBER;
+          hash = (53 * hash) + getPublicKeyHex().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + PUBLICKEYMULTIBASE_FIELD_NUMBER;
+          hash = (53 * hash) + getPublicKeyMultibase().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + PUBLICKEYBASE58_FIELD_NUMBER;
+          hash = (53 * hash) + getPublicKeyBase58().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.TypesProto.VerificationMethod prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.VerificationMethod}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.VerificationMethod)
+        com.ixo.iid.v1beta1.TypesProto.VerificationMethodOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_VerificationMethod_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_VerificationMethod_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.TypesProto.VerificationMethod.class, com.ixo.iid.v1beta1.TypesProto.VerificationMethod.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.TypesProto.VerificationMethod.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        type_ = "";
+        controller_ = "";
+        verificationMaterialCase_ = 0;
+        verificationMaterial_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_VerificationMethod_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.VerificationMethod getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.TypesProto.VerificationMethod.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.VerificationMethod build() {
+        com.ixo.iid.v1beta1.TypesProto.VerificationMethod result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.VerificationMethod buildPartial() {
+        com.ixo.iid.v1beta1.TypesProto.VerificationMethod result = new com.ixo.iid.v1beta1.TypesProto.VerificationMethod(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.TypesProto.VerificationMethod result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.controller_ = controller_;
+        }
+      }
+
+      private void buildPartialOneofs(com.ixo.iid.v1beta1.TypesProto.VerificationMethod result) {
+        result.verificationMaterialCase_ = verificationMaterialCase_;
+        result.verificationMaterial_ = this.verificationMaterial_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.TypesProto.VerificationMethod) {
+          return mergeFrom((com.ixo.iid.v1beta1.TypesProto.VerificationMethod)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.TypesProto.VerificationMethod other) {
+        if (other == com.ixo.iid.v1beta1.TypesProto.VerificationMethod.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getController().isEmpty()) {
+          controller_ = other.controller_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        switch (other.getVerificationMaterialCase()) {
+          case BLOCKCHAINACCOUNTID: {
+            verificationMaterialCase_ = 4;
+            verificationMaterial_ = other.verificationMaterial_;
+            onChanged();
+            break;
+          }
+          case PUBLICKEYHEX: {
+            verificationMaterialCase_ = 5;
+            verificationMaterial_ = other.verificationMaterial_;
+            onChanged();
+            break;
+          }
+          case PUBLICKEYMULTIBASE: {
+            verificationMaterialCase_ = 6;
+            verificationMaterial_ = other.verificationMaterial_;
+            onChanged();
+            break;
+          }
+          case PUBLICKEYBASE58: {
+            verificationMaterialCase_ = 7;
+            verificationMaterial_ = other.verificationMaterial_;
+            onChanged();
+            break;
+          }
+          case VERIFICATIONMATERIAL_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                controller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                verificationMaterialCase_ = 4;
+                verificationMaterial_ = s;
+                break;
+              } // case 34
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                verificationMaterialCase_ = 5;
+                verificationMaterial_ = s;
+                break;
+              } // case 42
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                verificationMaterialCase_ = 6;
+                verificationMaterial_ = s;
+                break;
+              } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                verificationMaterialCase_ = 7;
+                verificationMaterial_ = s;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int verificationMaterialCase_ = 0;
+      private java.lang.Object verificationMaterial_;
+      public VerificationMaterialCase
+          getVerificationMaterialCase() {
+        return VerificationMaterialCase.forNumber(
+            verificationMaterialCase_);
+      }
+
+      public Builder clearVerificationMaterial() {
+        verificationMaterialCase_ = 0;
+        verificationMaterial_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controller_ = "";
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @return The controller.
+       */
+      public java.lang.String getController() {
+        java.lang.Object ref = controller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          controller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @return The bytes for controller.
+       */
+      public com.google.protobuf.ByteString
+          getControllerBytes() {
+        java.lang.Object ref = controller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @param value The controller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setController(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        controller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearController() {
+        controller_ = getDefaultInstance().getController();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @param value The bytes for controller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        controller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+       * @return Whether the blockchainAccountID field is set.
+       */
+      @java.lang.Override
+      public boolean hasBlockchainAccountID() {
+        return verificationMaterialCase_ == 4;
+      }
+      /**
+       * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+       * @return The blockchainAccountID.
+       */
+      @java.lang.Override
+      public java.lang.String getBlockchainAccountID() {
+        java.lang.Object ref = "";
+        if (verificationMaterialCase_ == 4) {
+          ref = verificationMaterial_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (verificationMaterialCase_ == 4) {
+            verificationMaterial_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+       * @return The bytes for blockchainAccountID.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBlockchainAccountIDBytes() {
+        java.lang.Object ref = "";
+        if (verificationMaterialCase_ == 4) {
+          ref = verificationMaterial_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (verificationMaterialCase_ == 4) {
+            verificationMaterial_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+       * @param value The blockchainAccountID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockchainAccountID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        verificationMaterialCase_ = 4;
+        verificationMaterial_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockchainAccountID() {
+        if (verificationMaterialCase_ == 4) {
+          verificationMaterialCase_ = 0;
+          verificationMaterial_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string blockchainAccountID = 4 [json_name = "blockchainAccountID"];</code>
+       * @param value The bytes for blockchainAccountID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockchainAccountIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        verificationMaterialCase_ = 4;
+        verificationMaterial_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+       * @return Whether the publicKeyHex field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublicKeyHex() {
+        return verificationMaterialCase_ == 5;
+      }
+      /**
+       * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+       * @return The publicKeyHex.
+       */
+      @java.lang.Override
+      public java.lang.String getPublicKeyHex() {
+        java.lang.Object ref = "";
+        if (verificationMaterialCase_ == 5) {
+          ref = verificationMaterial_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (verificationMaterialCase_ == 5) {
+            verificationMaterial_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+       * @return The bytes for publicKeyHex.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPublicKeyHexBytes() {
+        java.lang.Object ref = "";
+        if (verificationMaterialCase_ == 5) {
+          ref = verificationMaterial_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (verificationMaterialCase_ == 5) {
+            verificationMaterial_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+       * @param value The publicKeyHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        verificationMaterialCase_ = 5;
+        verificationMaterial_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKeyHex() {
+        if (verificationMaterialCase_ == 5) {
+          verificationMaterialCase_ = 0;
+          verificationMaterial_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string publicKeyHex = 5 [json_name = "publicKeyHex"];</code>
+       * @param value The bytes for publicKeyHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        verificationMaterialCase_ = 5;
+        verificationMaterial_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+       * @return Whether the publicKeyMultibase field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublicKeyMultibase() {
+        return verificationMaterialCase_ == 6;
+      }
+      /**
+       * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+       * @return The publicKeyMultibase.
+       */
+      @java.lang.Override
+      public java.lang.String getPublicKeyMultibase() {
+        java.lang.Object ref = "";
+        if (verificationMaterialCase_ == 6) {
+          ref = verificationMaterial_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (verificationMaterialCase_ == 6) {
+            verificationMaterial_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+       * @return The bytes for publicKeyMultibase.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPublicKeyMultibaseBytes() {
+        java.lang.Object ref = "";
+        if (verificationMaterialCase_ == 6) {
+          ref = verificationMaterial_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (verificationMaterialCase_ == 6) {
+            verificationMaterial_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+       * @param value The publicKeyMultibase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyMultibase(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        verificationMaterialCase_ = 6;
+        verificationMaterial_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKeyMultibase() {
+        if (verificationMaterialCase_ == 6) {
+          verificationMaterialCase_ = 0;
+          verificationMaterial_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string publicKeyMultibase = 6 [json_name = "publicKeyMultibase"];</code>
+       * @param value The bytes for publicKeyMultibase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyMultibaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        verificationMaterialCase_ = 6;
+        verificationMaterial_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+       * @return Whether the publicKeyBase58 field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublicKeyBase58() {
+        return verificationMaterialCase_ == 7;
+      }
+      /**
+       * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+       * @return The publicKeyBase58.
+       */
+      @java.lang.Override
+      public java.lang.String getPublicKeyBase58() {
+        java.lang.Object ref = "";
+        if (verificationMaterialCase_ == 7) {
+          ref = verificationMaterial_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (verificationMaterialCase_ == 7) {
+            verificationMaterial_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+       * @return The bytes for publicKeyBase58.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPublicKeyBase58Bytes() {
+        java.lang.Object ref = "";
+        if (verificationMaterialCase_ == 7) {
+          ref = verificationMaterial_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (verificationMaterialCase_ == 7) {
+            verificationMaterial_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+       * @param value The publicKeyBase58 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyBase58(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        verificationMaterialCase_ = 7;
+        verificationMaterial_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKeyBase58() {
+        if (verificationMaterialCase_ == 7) {
+          verificationMaterialCase_ = 0;
+          verificationMaterial_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string publicKeyBase58 = 7 [json_name = "publicKeyBase58"];</code>
+       * @param value The bytes for publicKeyBase58 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyBase58Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        verificationMaterialCase_ = 7;
+        verificationMaterial_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.VerificationMethod)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.VerificationMethod)
+    private static final com.ixo.iid.v1beta1.TypesProto.VerificationMethod DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.TypesProto.VerificationMethod();
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.VerificationMethod getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VerificationMethod>
+        PARSER = new com.google.protobuf.AbstractParser<VerificationMethod>() {
+      @java.lang.Override
+      public VerificationMethod parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VerificationMethod> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VerificationMethod> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.VerificationMethod getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ServiceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.Service)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+     * @return The serviceEndpoint.
+     */
+    java.lang.String getServiceEndpoint();
+    /**
+     * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+     * @return The bytes for serviceEndpoint.
+     */
+    com.google.protobuf.ByteString
+        getServiceEndpointBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.Service}
+   */
+  public static final class Service extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.Service)
+      ServiceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Service.newBuilder() to construct.
+    private Service(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Service() {
+      id_ = "";
+      type_ = "";
+      serviceEndpoint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Service();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Service_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Service_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.TypesProto.Service.class, com.ixo.iid.v1beta1.TypesProto.Service.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICEENDPOINT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceEndpoint_ = "";
+    /**
+     * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+     * @return The serviceEndpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceEndpoint() {
+      java.lang.Object ref = serviceEndpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceEndpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+     * @return The bytes for serviceEndpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceEndpointBytes() {
+      java.lang.Object ref = serviceEndpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceEndpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceEndpoint_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceEndpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceEndpoint_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.TypesProto.Service)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.TypesProto.Service other = (com.ixo.iid.v1beta1.TypesProto.Service) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getServiceEndpoint()
+          .equals(other.getServiceEndpoint())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + SERVICEENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceEndpoint().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.Service parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.TypesProto.Service prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.Service}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.Service)
+        com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Service_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Service_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.TypesProto.Service.class, com.ixo.iid.v1beta1.TypesProto.Service.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.TypesProto.Service.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        type_ = "";
+        serviceEndpoint_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_Service_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.Service getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.TypesProto.Service.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.Service build() {
+        com.ixo.iid.v1beta1.TypesProto.Service result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.Service buildPartial() {
+        com.ixo.iid.v1beta1.TypesProto.Service result = new com.ixo.iid.v1beta1.TypesProto.Service(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.TypesProto.Service result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.serviceEndpoint_ = serviceEndpoint_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.TypesProto.Service) {
+          return mergeFrom((com.ixo.iid.v1beta1.TypesProto.Service)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.TypesProto.Service other) {
+        if (other == com.ixo.iid.v1beta1.TypesProto.Service.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getServiceEndpoint().isEmpty()) {
+          serviceEndpoint_ = other.serviceEndpoint_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                serviceEndpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceEndpoint_ = "";
+      /**
+       * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @return The serviceEndpoint.
+       */
+      public java.lang.String getServiceEndpoint() {
+        java.lang.Object ref = serviceEndpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceEndpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @return The bytes for serviceEndpoint.
+       */
+      public com.google.protobuf.ByteString
+          getServiceEndpointBytes() {
+        java.lang.Object ref = serviceEndpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceEndpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @param value The serviceEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceEndpoint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceEndpoint_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceEndpoint() {
+        serviceEndpoint_ = getDefaultInstance().getServiceEndpoint();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string serviceEndpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @param value The bytes for serviceEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceEndpoint_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.Service)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.Service)
+    private static final com.ixo.iid.v1beta1.TypesProto.Service DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.TypesProto.Service();
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.Service getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Service>
+        PARSER = new com.google.protobuf.AbstractParser<Service>() {
+      @java.lang.Override
+      public Service parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Service> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Service> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.Service getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IidMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.IidMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string versionId = 1 [json_name = "versionId"];</code>
+     * @return The versionId.
+     */
+    java.lang.String getVersionId();
+    /**
+     * <code>string versionId = 1 [json_name = "versionId"];</code>
+     * @return The bytes for versionId.
+     */
+    com.google.protobuf.ByteString
+        getVersionIdBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the created field is set.
+     */
+    boolean hasCreated();
+    /**
+     * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+     * @return The created.
+     */
+    com.google.protobuf.Timestamp getCreated();
+    /**
+     * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the updated field is set.
+     */
+    boolean hasUpdated();
+    /**
+     * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+     * @return The updated.
+     */
+    com.google.protobuf.Timestamp getUpdated();
+    /**
+     * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder();
+
+    /**
+     * <code>bool deactivated = 4 [json_name = "deactivated"];</code>
+     * @return The deactivated.
+     */
+    boolean getDeactivated();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.IidMetadata}
+   */
+  public static final class IidMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.IidMetadata)
+      IidMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IidMetadata.newBuilder() to construct.
+    private IidMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IidMetadata() {
+      versionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IidMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_IidMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_IidMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.TypesProto.IidMetadata.class, com.ixo.iid.v1beta1.TypesProto.IidMetadata.Builder.class);
+    }
+
+    public static final int VERSIONID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object versionId_ = "";
+    /**
+     * <code>string versionId = 1 [json_name = "versionId"];</code>
+     * @return The versionId.
+     */
+    @java.lang.Override
+    public java.lang.String getVersionId() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        versionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string versionId = 1 [json_name = "versionId"];</code>
+     * @return The bytes for versionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionIdBytes() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        versionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp created_;
+    /**
+     * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the created field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreated() {
+      return created_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+     * @return The created.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreated() {
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+    }
+
+    public static final int UPDATED_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp updated_;
+    /**
+     * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the updated field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdated() {
+      return updated_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+     * @return The updated.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdated() {
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
+    }
+
+    public static final int DEACTIVATED_FIELD_NUMBER = 4;
+    private boolean deactivated_ = false;
+    /**
+     * <code>bool deactivated = 4 [json_name = "deactivated"];</code>
+     * @return The deactivated.
+     */
+    @java.lang.Override
+    public boolean getDeactivated() {
+      return deactivated_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, versionId_);
+      }
+      if (created_ != null) {
+        output.writeMessage(2, getCreated());
+      }
+      if (updated_ != null) {
+        output.writeMessage(3, getUpdated());
+      }
+      if (deactivated_ != false) {
+        output.writeBool(4, deactivated_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, versionId_);
+      }
+      if (created_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCreated());
+      }
+      if (updated_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUpdated());
+      }
+      if (deactivated_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, deactivated_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.TypesProto.IidMetadata)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.TypesProto.IidMetadata other = (com.ixo.iid.v1beta1.TypesProto.IidMetadata) obj;
+
+      if (!getVersionId()
+          .equals(other.getVersionId())) return false;
+      if (hasCreated() != other.hasCreated()) return false;
+      if (hasCreated()) {
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
+      }
+      if (hasUpdated() != other.hasUpdated()) return false;
+      if (hasUpdated()) {
+        if (!getUpdated()
+            .equals(other.getUpdated())) return false;
+      }
+      if (getDeactivated()
+          != other.getDeactivated()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VERSIONID_FIELD_NUMBER;
+      hash = (53 * hash) + getVersionId().hashCode();
+      if (hasCreated()) {
+        hash = (37 * hash) + CREATED_FIELD_NUMBER;
+        hash = (53 * hash) + getCreated().hashCode();
+      }
+      if (hasUpdated()) {
+        hash = (37 * hash) + UPDATED_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdated().hashCode();
+      }
+      hash = (37 * hash) + DEACTIVATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeactivated());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.TypesProto.IidMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.IidMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.IidMetadata)
+        com.ixo.iid.v1beta1.TypesProto.IidMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_IidMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_IidMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.TypesProto.IidMetadata.class, com.ixo.iid.v1beta1.TypesProto.IidMetadata.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.TypesProto.IidMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        versionId_ = "";
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
+          createdBuilder_ = null;
+        }
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
+          updatedBuilder_ = null;
+        }
+        deactivated_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.TypesProto.internal_static_ixo_iid_v1beta1_IidMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.IidMetadata getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.TypesProto.IidMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.IidMetadata build() {
+        com.ixo.iid.v1beta1.TypesProto.IidMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.TypesProto.IidMetadata buildPartial() {
+        com.ixo.iid.v1beta1.TypesProto.IidMetadata result = new com.ixo.iid.v1beta1.TypesProto.IidMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.TypesProto.IidMetadata result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.versionId_ = versionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deactivated_ = deactivated_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.TypesProto.IidMetadata) {
+          return mergeFrom((com.ixo.iid.v1beta1.TypesProto.IidMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.TypesProto.IidMetadata other) {
+        if (other == com.ixo.iid.v1beta1.TypesProto.IidMetadata.getDefaultInstance()) return this;
+        if (!other.getVersionId().isEmpty()) {
+          versionId_ = other.versionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasCreated()) {
+          mergeCreated(other.getCreated());
+        }
+        if (other.hasUpdated()) {
+          mergeUpdated(other.getUpdated());
+        }
+        if (other.getDeactivated() != false) {
+          setDeactivated(other.getDeactivated());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                versionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getUpdatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                deactivated_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object versionId_ = "";
+      /**
+       * <code>string versionId = 1 [json_name = "versionId"];</code>
+       * @return The versionId.
+       */
+      public java.lang.String getVersionId() {
+        java.lang.Object ref = versionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          versionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string versionId = 1 [json_name = "versionId"];</code>
+       * @return The bytes for versionId.
+       */
+      public com.google.protobuf.ByteString
+          getVersionIdBytes() {
+        java.lang.Object ref = versionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          versionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string versionId = 1 [json_name = "versionId"];</code>
+       * @param value The versionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        versionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string versionId = 1 [json_name = "versionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersionId() {
+        versionId_ = getDefaultInstance().getVersionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string versionId = 1 [json_name = "versionId"];</code>
+       * @param value The bytes for versionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        versionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp created_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the created field is set.
+       */
+      public boolean hasCreated() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       * @return The created.
+       */
+      public com.google.protobuf.Timestamp getCreated() {
+        if (createdBuilder_ == null) {
+          return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+        } else {
+          return createdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreated(com.google.protobuf.Timestamp value) {
+        if (createdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          created_ = value;
+        } else {
+          createdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdBuilder_ == null) {
+          created_ = builderForValue.build();
+        } else {
+          createdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCreated(com.google.protobuf.Timestamp value) {
+        if (createdBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
+          } else {
+            created_ = value;
+          }
+        } else {
+          createdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCreated() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
+          createdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCreatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
+        if (createdBuilder_ != null) {
+          return createdBuilder_.getMessageOrBuilder();
+        } else {
+          return created_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedFieldBuilder() {
+        if (createdBuilder_ == null) {
+          createdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreated(),
+                  getParentForChildren(),
+                  isClean());
+          created_ = null;
+        }
+        return createdBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp updated_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the updated field is set.
+       */
+      public boolean hasUpdated() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       * @return The updated.
+       */
+      public com.google.protobuf.Timestamp getUpdated() {
+        if (updatedBuilder_ == null) {
+          return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
+        } else {
+          return updatedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setUpdated(com.google.protobuf.Timestamp value) {
+        if (updatedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updated_ = value;
+        } else {
+          updatedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setUpdated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updatedBuilder_ == null) {
+          updated_ = builderForValue.build();
+        } else {
+          updatedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
+        if (updatedBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
+          } else {
+            updated_ = value;
+          }
+        } else {
+          updatedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearUpdated() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
+          updatedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getUpdatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
+        if (updatedBuilder_ != null) {
+          return updatedBuilder_.getMessageOrBuilder();
+        } else {
+          return updated_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getUpdatedFieldBuilder() {
+        if (updatedBuilder_ == null) {
+          updatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdated(),
+                  getParentForChildren(),
+                  isClean());
+          updated_ = null;
+        }
+        return updatedBuilder_;
+      }
+
+      private boolean deactivated_ ;
+      /**
+       * <code>bool deactivated = 4 [json_name = "deactivated"];</code>
+       * @return The deactivated.
+       */
+      @java.lang.Override
+      public boolean getDeactivated() {
+        return deactivated_;
+      }
+      /**
+       * <code>bool deactivated = 4 [json_name = "deactivated"];</code>
+       * @param value The deactivated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeactivated(boolean value) {
+
+        deactivated_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool deactivated = 4 [json_name = "deactivated"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeactivated() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        deactivated_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.IidMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.IidMetadata)
+    private static final com.ixo.iid.v1beta1.TypesProto.IidMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.TypesProto.IidMetadata();
+    }
+
+    public static com.ixo.iid.v1beta1.TypesProto.IidMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IidMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<IidMetadata>() {
+      @java.lang.Override
+      public IidMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IidMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IidMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.IidMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_Context_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_Context_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_AccordedRight_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_AccordedRight_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_LinkedResource_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_LinkedResource_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_LinkedClaim_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_LinkedClaim_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_LinkedEntity_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_LinkedEntity_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_VerificationMethod_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_VerificationMethod_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_Service_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_Service_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_IidMetadata_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_IidMetadata_fieldAccessorTable;
 
@@ -100,12 +9518,12 @@ public final class TypesProto {
       "oogle.protobuf.TimestampB\004\220\337\037\001R\007created\022" +
       ":\n\007updated\030\003 \001(\0132\032.google.protobuf.Times" +
       "tampB\004\220\337\037\001R\007updated\022 \n\013deactivated\030\004 \001(\010" +
-      "R\013deactivated:\010\210\240\037\000\350\240\037\001B\264\001\n\023com.ixo.iid." +
-      "v1beta1B\nTypesProtoP\001Z3github.com/ixofou" +
-      "ndation/ixo-blockchain/x/iid/types\242\002\003IIX" +
-      "\252\002\017Ixo.Iid.V1beta1\312\002\017Ixo\\Iid\\V1beta1\342\002\033I" +
-      "xo\\Iid\\V1beta1\\GPBMetadata\352\002\021Ixo::Iid::V" +
-      "1beta1b\006proto3"
+      "R\013deactivated:\010\210\240\037\000\350\240\037\001B\262\001\n\023com.ixo.iid." +
+      "v1beta1B\nTypesProtoZ3github.com/ixofound" +
+      "ation/ixo-blockchain/x/iid/types\242\002\003IIX\252\002" +
+      "\017Ixo.Iid.V1beta1\312\002\017Ixo\\Iid\\V1beta1\342\002\033Ixo" +
+      "\\Iid\\V1beta1\\GPBMetadata\352\002\021Ixo::Iid::V1b" +
+      "eta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

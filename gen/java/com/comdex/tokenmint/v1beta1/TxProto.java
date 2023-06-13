@@ -14,14 +14,1117 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgMintNewTokensRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.MsgMintNewTokensRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 asset_id = 3 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+  }
+  /**
+   * <pre>
+   *Will become governance proposal- will trigger token minting &amp; sending
+   * </pre>
+   *
+   * Protobuf type {@code comdex.tokenmint.v1beta1.MsgMintNewTokensRequest}
+   */
+  public static final class MsgMintNewTokensRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.MsgMintNewTokensRequest)
+      MsgMintNewTokensRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgMintNewTokensRequest.newBuilder() to construct.
+    private MsgMintNewTokensRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgMintNewTokensRequest() {
+      from_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgMintNewTokensRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest.class, com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 3;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 3 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (assetId_ != 0L) {
+        output.writeUInt64(3, assetId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, assetId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest other = (com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *Will become governance proposal- will trigger token minting &amp; sending
+     * </pre>
+     *
+     * Protobuf type {@code comdex.tokenmint.v1beta1.MsgMintNewTokensRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.MsgMintNewTokensRequest)
+        com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest.class, com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        assetId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest build() {
+        com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest buildPartial() {
+        com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest result = new com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.assetId_ = assetId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest other) {
+        if (other == com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 3 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 3 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 3 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.MsgMintNewTokensRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.MsgMintNewTokensRequest)
+    private static final com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgMintNewTokensRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgMintNewTokensRequest>() {
+      @java.lang.Override
+      public MsgMintNewTokensRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgMintNewTokensRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgMintNewTokensRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgMintNewTokensResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.MsgMintNewTokensResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code comdex.tokenmint.v1beta1.MsgMintNewTokensResponse}
+   */
+  public static final class MsgMintNewTokensResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.MsgMintNewTokensResponse)
+      MsgMintNewTokensResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgMintNewTokensResponse.newBuilder() to construct.
+    private MsgMintNewTokensResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgMintNewTokensResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgMintNewTokensResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse.class, com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse other = (com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.tokenmint.v1beta1.MsgMintNewTokensResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.MsgMintNewTokensResponse)
+        com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse.class, com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.TxProto.internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse build() {
+        com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse buildPartial() {
+        com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse result = new com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse other) {
+        if (other == com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.MsgMintNewTokensResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.MsgMintNewTokensResponse)
+    private static final com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgMintNewTokensResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgMintNewTokensResponse>() {
+      @java.lang.Override
+      public MsgMintNewTokensResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgMintNewTokensResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgMintNewTokensResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.TxProto.MsgMintNewTokensResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_MsgMintNewTokensResponse_fieldAccessorTable;
 
@@ -43,13 +1146,13 @@ public final class TxProto {
       "Msg\022y\n\020MsgMintNewTokens\0221.comdex.tokenmi" +
       "nt.v1beta1.MsgMintNewTokensRequest\0322.com" +
       "dex.tokenmint.v1beta1.MsgMintNewTokensRe" +
-      "sponseB\346\001\n\034com.comdex.tokenmint.v1beta1B" +
-      "\007TxProtoP\001Z3github.com/comdex-official/c" +
-      "omdex/x/tokenmint/types\242\002\003CTX\252\002\030Comdex.T" +
-      "okenmint.V1beta1\312\002\030Comdex\\Tokenmint\\V1be" +
-      "ta1\342\002$Comdex\\Tokenmint\\V1beta1\\GPBMetada" +
-      "ta\352\002\032Comdex::Tokenmint::V1beta1\310\341\036\000\250\342\036\000b" +
-      "\006proto3"
+      "sponseB\344\001\n\034com.comdex.tokenmint.v1beta1B" +
+      "\007TxProtoZ3github.com/comdex-official/com" +
+      "dex/x/tokenmint/types\242\002\003CTX\252\002\030Comdex.Tok" +
+      "enmint.V1beta1\312\002\030Comdex\\Tokenmint\\V1beta" +
+      "1\342\002$Comdex\\Tokenmint\\V1beta1\\GPBMetadata" +
+      "\352\002\032Comdex::Tokenmint::V1beta1\310\341\036\000\250\342\036\000b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,9 +14,1098 @@ public final class GuardianProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * AccountType defines the super account type
+   * </pre>
+   *
+   * Protobuf enum {@code irishub.guardian.AccountType}
+   */
+  public enum AccountType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * GENESIS defines a genesis account type
+     * </pre>
+     *
+     * <code>GENESIS = 0 [(.gogoproto.enumvalue_customname) = "Genesis"];</code>
+     */
+    GENESIS(0),
+    /**
+     * <pre>
+     * ORDINARY defines a ordinary account type
+     * </pre>
+     *
+     * <code>ORDINARY = 1 [(.gogoproto.enumvalue_customname) = "Ordinary"];</code>
+     */
+    ORDINARY(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * GENESIS defines a genesis account type
+     * </pre>
+     *
+     * <code>GENESIS = 0 [(.gogoproto.enumvalue_customname) = "Genesis"];</code>
+     */
+    public static final int GENESIS_VALUE = 0;
+    /**
+     * <pre>
+     * ORDINARY defines a ordinary account type
+     * </pre>
+     *
+     * <code>ORDINARY = 1 [(.gogoproto.enumvalue_customname) = "Ordinary"];</code>
+     */
+    public static final int ORDINARY_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AccountType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AccountType forNumber(int value) {
+      switch (value) {
+        case 0: return GENESIS;
+        case 1: return ORDINARY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AccountType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AccountType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AccountType>() {
+            public AccountType findValueByNumber(int number) {
+              return AccountType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.irishub.guardian.GuardianProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final AccountType[] VALUES = values();
+
+    public static AccountType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AccountType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:irishub.guardian.AccountType)
+  }
+
+  public interface SuperOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irishub.guardian.Super)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+     * @return The enum numeric value on the wire for accountType.
+     */
+    int getAccountTypeValue();
+    /**
+     * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+     * @return The accountType.
+     */
+    com.irishub.guardian.GuardianProto.AccountType getAccountType();
+
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string added_by = 4 [json_name = "addedBy"];</code>
+     * @return The addedBy.
+     */
+    java.lang.String getAddedBy();
+    /**
+     * <code>string added_by = 4 [json_name = "addedBy"];</code>
+     * @return The bytes for addedBy.
+     */
+    com.google.protobuf.ByteString
+        getAddedByBytes();
+  }
+  /**
+   * <pre>
+   * Super defines the super standard
+   * </pre>
+   *
+   * Protobuf type {@code irishub.guardian.Super}
+   */
+  public static final class Super extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irishub.guardian.Super)
+      SuperOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Super.newBuilder() to construct.
+    private Super(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Super() {
+      description_ = "";
+      accountType_ = 0;
+      address_ = "";
+      addedBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Super();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irishub.guardian.GuardianProto.internal_static_irishub_guardian_Super_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irishub.guardian.GuardianProto.internal_static_irishub_guardian_Super_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irishub.guardian.GuardianProto.Super.class, com.irishub.guardian.GuardianProto.Super.Builder.class);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_TYPE_FIELD_NUMBER = 2;
+    private int accountType_ = 0;
+    /**
+     * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+     * @return The enum numeric value on the wire for accountType.
+     */
+    @java.lang.Override public int getAccountTypeValue() {
+      return accountType_;
+    }
+    /**
+     * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+     * @return The accountType.
+     */
+    @java.lang.Override public com.irishub.guardian.GuardianProto.AccountType getAccountType() {
+      com.irishub.guardian.GuardianProto.AccountType result = com.irishub.guardian.GuardianProto.AccountType.forNumber(accountType_);
+      return result == null ? com.irishub.guardian.GuardianProto.AccountType.UNRECOGNIZED : result;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDED_BY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addedBy_ = "";
+    /**
+     * <code>string added_by = 4 [json_name = "addedBy"];</code>
+     * @return The addedBy.
+     */
+    @java.lang.Override
+    public java.lang.String getAddedBy() {
+      java.lang.Object ref = addedBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addedBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string added_by = 4 [json_name = "addedBy"];</code>
+     * @return The bytes for addedBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddedByBytes() {
+      java.lang.Object ref = addedBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
+      }
+      if (accountType_ != com.irishub.guardian.GuardianProto.AccountType.GENESIS.getNumber()) {
+        output.writeEnum(2, accountType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addedBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, addedBy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
+      }
+      if (accountType_ != com.irishub.guardian.GuardianProto.AccountType.GENESIS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, accountType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addedBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, addedBy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irishub.guardian.GuardianProto.Super)) {
+        return super.equals(obj);
+      }
+      com.irishub.guardian.GuardianProto.Super other = (com.irishub.guardian.GuardianProto.Super) obj;
+
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (accountType_ != other.accountType_) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getAddedBy()
+          .equals(other.getAddedBy())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + ACCOUNT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + accountType_;
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + ADDED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getAddedBy().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irishub.guardian.GuardianProto.Super parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irishub.guardian.GuardianProto.Super parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.guardian.GuardianProto.Super parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irishub.guardian.GuardianProto.Super prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Super defines the super standard
+     * </pre>
+     *
+     * Protobuf type {@code irishub.guardian.Super}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irishub.guardian.Super)
+        com.irishub.guardian.GuardianProto.SuperOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irishub.guardian.GuardianProto.internal_static_irishub_guardian_Super_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irishub.guardian.GuardianProto.internal_static_irishub_guardian_Super_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irishub.guardian.GuardianProto.Super.class, com.irishub.guardian.GuardianProto.Super.Builder.class);
+      }
+
+      // Construct using com.irishub.guardian.GuardianProto.Super.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        description_ = "";
+        accountType_ = 0;
+        address_ = "";
+        addedBy_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irishub.guardian.GuardianProto.internal_static_irishub_guardian_Super_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.GuardianProto.Super getDefaultInstanceForType() {
+        return com.irishub.guardian.GuardianProto.Super.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.GuardianProto.Super build() {
+        com.irishub.guardian.GuardianProto.Super result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.GuardianProto.Super buildPartial() {
+        com.irishub.guardian.GuardianProto.Super result = new com.irishub.guardian.GuardianProto.Super(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irishub.guardian.GuardianProto.Super result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.accountType_ = accountType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.addedBy_ = addedBy_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irishub.guardian.GuardianProto.Super) {
+          return mergeFrom((com.irishub.guardian.GuardianProto.Super)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irishub.guardian.GuardianProto.Super other) {
+        if (other == com.irishub.guardian.GuardianProto.Super.getDefaultInstance()) return this;
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.accountType_ != 0) {
+          setAccountTypeValue(other.getAccountTypeValue());
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getAddedBy().isEmpty()) {
+          addedBy_ = other.addedBy_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                accountType_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                addedBy_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 1 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int accountType_ = 0;
+      /**
+       * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+       * @return The enum numeric value on the wire for accountType.
+       */
+      @java.lang.Override public int getAccountTypeValue() {
+        return accountType_;
+      }
+      /**
+       * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+       * @param value The enum numeric value on the wire for accountType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountTypeValue(int value) {
+        accountType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+       * @return The accountType.
+       */
+      @java.lang.Override
+      public com.irishub.guardian.GuardianProto.AccountType getAccountType() {
+        com.irishub.guardian.GuardianProto.AccountType result = com.irishub.guardian.GuardianProto.AccountType.forNumber(accountType_);
+        return result == null ? com.irishub.guardian.GuardianProto.AccountType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+       * @param value The accountType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountType(com.irishub.guardian.GuardianProto.AccountType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        accountType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irishub.guardian.AccountType account_type = 2 [json_name = "accountType", (.gogoproto.moretags) = "yaml:&#92;"account_type&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        accountType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addedBy_ = "";
+      /**
+       * <code>string added_by = 4 [json_name = "addedBy"];</code>
+       * @return The addedBy.
+       */
+      public java.lang.String getAddedBy() {
+        java.lang.Object ref = addedBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addedBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string added_by = 4 [json_name = "addedBy"];</code>
+       * @return The bytes for addedBy.
+       */
+      public com.google.protobuf.ByteString
+          getAddedByBytes() {
+        java.lang.Object ref = addedBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addedBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string added_by = 4 [json_name = "addedBy"];</code>
+       * @param value The addedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddedBy(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        addedBy_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string added_by = 4 [json_name = "addedBy"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddedBy() {
+        addedBy_ = getDefaultInstance().getAddedBy();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string added_by = 4 [json_name = "addedBy"];</code>
+       * @param value The bytes for addedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        addedBy_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irishub.guardian.Super)
+    }
+
+    // @@protoc_insertion_point(class_scope:irishub.guardian.Super)
+    private static final com.irishub.guardian.GuardianProto.Super DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irishub.guardian.GuardianProto.Super();
+    }
+
+    public static com.irishub.guardian.GuardianProto.Super getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Super>
+        PARSER = new com.google.protobuf.AbstractParser<Super>() {
+      @java.lang.Override
+      public Super parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Super> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Super> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irishub.guardian.GuardianProto.Super getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irishub_guardian_Super_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irishub_guardian_Super_fieldAccessorTable;
 
@@ -36,12 +1125,12 @@ public final class GuardianProto {
       "ountType\022\030\n\007address\030\003 \001(\tR\007address\022\031\n\010ad" +
       "ded_by\030\004 \001(\tR\007addedBy*I\n\013AccountType\022\030\n\007" +
       "GENESIS\020\000\032\013\212\235 \007Genesis\022\032\n\010ORDINARY\020\001\032\014\212\235" +
-      " \010Ordinary\032\004\210\243\036\000B\271\001\n\024com.irishub.guardia" +
-      "nB\rGuardianProtoP\001Z1github.com/irisnet/i" +
-      "rishub/modules/guardian/types\242\002\003IGX\252\002\020Ir" +
-      "ishub.Guardian\312\002\020Irishub\\Guardian\342\002\034Iris" +
-      "hub\\Guardian\\GPBMetadata\352\002\021Irishub::Guar" +
-      "dianb\006proto3"
+      " \010Ordinary\032\004\210\243\036\000B\267\001\n\024com.irishub.guardia" +
+      "nB\rGuardianProtoZ1github.com/irisnet/iri" +
+      "shub/modules/guardian/types\242\002\003IGX\252\002\020Iris" +
+      "hub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irishu" +
+      "b\\Guardian\\GPBMetadata\352\002\021Irishub::Guardi" +
+      "anb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

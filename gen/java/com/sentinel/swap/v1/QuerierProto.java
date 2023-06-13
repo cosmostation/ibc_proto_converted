@@ -14,34 +14,3686 @@ public final class QuerierProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QuerySwapsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.swap.v1.QuerySwapsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.swap.v1.QuerySwapsRequest}
+   */
+  public static final class QuerySwapsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.swap.v1.QuerySwapsRequest)
+      QuerySwapsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySwapsRequest.newBuilder() to construct.
+    private QuerySwapsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySwapsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySwapsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest.class, com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest other = (com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.swap.v1.QuerySwapsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.swap.v1.QuerySwapsRequest)
+        com.sentinel.swap.v1.QuerierProto.QuerySwapsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest.class, com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest getDefaultInstanceForType() {
+        return com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest build() {
+        com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest buildPartial() {
+        com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest result = new com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest) {
+          return mergeFrom((com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest other) {
+        if (other == com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.swap.v1.QuerySwapsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.swap.v1.QuerySwapsRequest)
+    private static final com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest();
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySwapsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySwapsRequest>() {
+      @java.lang.Override
+      public QuerySwapsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySwapsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySwapsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.swap.v1.QuerierProto.QuerySwapsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySwapRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.swap.v1.QuerySwapRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The txHash.
+     */
+    com.google.protobuf.ByteString getTxHash();
+  }
+  /**
+   * Protobuf type {@code sentinel.swap.v1.QuerySwapRequest}
+   */
+  public static final class QuerySwapRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.swap.v1.QuerySwapRequest)
+      QuerySwapRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySwapRequest.newBuilder() to construct.
+    private QuerySwapRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySwapRequest() {
+      txHash_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySwapRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.swap.v1.QuerierProto.QuerySwapRequest.class, com.sentinel.swap.v1.QuerierProto.QuerySwapRequest.Builder.class);
+    }
+
+    public static final int TX_HASH_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString txHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The txHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getTxHash() {
+      return txHash_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!txHash_.isEmpty()) {
+        output.writeBytes(1, txHash_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!txHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, txHash_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.swap.v1.QuerierProto.QuerySwapRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.swap.v1.QuerierProto.QuerySwapRequest other = (com.sentinel.swap.v1.QuerierProto.QuerySwapRequest) obj;
+
+      if (!getTxHash()
+          .equals(other.getTxHash())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getTxHash().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.swap.v1.QuerierProto.QuerySwapRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.swap.v1.QuerySwapRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.swap.v1.QuerySwapRequest)
+        com.sentinel.swap.v1.QuerierProto.QuerySwapRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.swap.v1.QuerierProto.QuerySwapRequest.class, com.sentinel.swap.v1.QuerierProto.QuerySwapRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.swap.v1.QuerierProto.QuerySwapRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        txHash_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapRequest getDefaultInstanceForType() {
+        return com.sentinel.swap.v1.QuerierProto.QuerySwapRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapRequest build() {
+        com.sentinel.swap.v1.QuerierProto.QuerySwapRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapRequest buildPartial() {
+        com.sentinel.swap.v1.QuerierProto.QuerySwapRequest result = new com.sentinel.swap.v1.QuerierProto.QuerySwapRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.swap.v1.QuerierProto.QuerySwapRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.txHash_ = txHash_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.swap.v1.QuerierProto.QuerySwapRequest) {
+          return mergeFrom((com.sentinel.swap.v1.QuerierProto.QuerySwapRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.swap.v1.QuerierProto.QuerySwapRequest other) {
+        if (other == com.sentinel.swap.v1.QuerierProto.QuerySwapRequest.getDefaultInstance()) return this;
+        if (other.getTxHash() != com.google.protobuf.ByteString.EMPTY) {
+          setTxHash(other.getTxHash());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                txHash_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString txHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes tx_hash = 1 [json_name = "txHash"];</code>
+       * @return The txHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getTxHash() {
+        return txHash_;
+      }
+      /**
+       * <code>bytes tx_hash = 1 [json_name = "txHash"];</code>
+       * @param value The txHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        txHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes tx_hash = 1 [json_name = "txHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxHash() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        txHash_ = getDefaultInstance().getTxHash();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.swap.v1.QuerySwapRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.swap.v1.QuerySwapRequest)
+    private static final com.sentinel.swap.v1.QuerierProto.QuerySwapRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.swap.v1.QuerierProto.QuerySwapRequest();
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySwapRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySwapRequest>() {
+      @java.lang.Override
+      public QuerySwapRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySwapRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySwapRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.swap.v1.QuerierProto.QuerySwapRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.swap.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code sentinel.swap.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.swap.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.swap.v1.QuerierProto.QueryParamsRequest.class, com.sentinel.swap.v1.QuerierProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.swap.v1.QuerierProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.swap.v1.QuerierProto.QueryParamsRequest other = (com.sentinel.swap.v1.QuerierProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.swap.v1.QuerierProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.swap.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.swap.v1.QueryParamsRequest)
+        com.sentinel.swap.v1.QuerierProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.swap.v1.QuerierProto.QueryParamsRequest.class, com.sentinel.swap.v1.QuerierProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.swap.v1.QuerierProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.sentinel.swap.v1.QuerierProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QueryParamsRequest build() {
+        com.sentinel.swap.v1.QuerierProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QueryParamsRequest buildPartial() {
+        com.sentinel.swap.v1.QuerierProto.QueryParamsRequest result = new com.sentinel.swap.v1.QuerierProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.swap.v1.QuerierProto.QueryParamsRequest) {
+          return mergeFrom((com.sentinel.swap.v1.QuerierProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.swap.v1.QuerierProto.QueryParamsRequest other) {
+        if (other == com.sentinel.swap.v1.QuerierProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.swap.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.swap.v1.QueryParamsRequest)
+    private static final com.sentinel.swap.v1.QuerierProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.swap.v1.QuerierProto.QueryParamsRequest();
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.swap.v1.QuerierProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySwapsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.swap.v1.QuerySwapsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.swap.v1.SwapProto.Swap> 
+        getSwapsList();
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.swap.v1.SwapProto.Swap getSwaps(int index);
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    int getSwapsCount();
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.swap.v1.SwapProto.SwapOrBuilder> 
+        getSwapsOrBuilderList();
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.swap.v1.SwapProto.SwapOrBuilder getSwapsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.swap.v1.QuerySwapsResponse}
+   */
+  public static final class QuerySwapsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.swap.v1.QuerySwapsResponse)
+      QuerySwapsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySwapsResponse.newBuilder() to construct.
+    private QuerySwapsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySwapsResponse() {
+      swaps_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySwapsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse.class, com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse.Builder.class);
+    }
+
+    public static final int SWAPS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.swap.v1.SwapProto.Swap> swaps_;
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.swap.v1.SwapProto.Swap> getSwapsList() {
+      return swaps_;
+    }
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.swap.v1.SwapProto.SwapOrBuilder> 
+        getSwapsOrBuilderList() {
+      return swaps_;
+    }
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSwapsCount() {
+      return swaps_.size();
+    }
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.swap.v1.SwapProto.Swap getSwaps(int index) {
+      return swaps_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.swap.v1.SwapProto.SwapOrBuilder getSwapsOrBuilder(
+        int index) {
+      return swaps_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < swaps_.size(); i++) {
+        output.writeMessage(1, swaps_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < swaps_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, swaps_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse other = (com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse) obj;
+
+      if (!getSwapsList()
+          .equals(other.getSwapsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSwapsCount() > 0) {
+        hash = (37 * hash) + SWAPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSwapsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.swap.v1.QuerySwapsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.swap.v1.QuerySwapsResponse)
+        com.sentinel.swap.v1.QuerierProto.QuerySwapsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse.class, com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (swapsBuilder_ == null) {
+          swaps_ = java.util.Collections.emptyList();
+        } else {
+          swaps_ = null;
+          swapsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse getDefaultInstanceForType() {
+        return com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse build() {
+        com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse buildPartial() {
+        com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse result = new com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse result) {
+        if (swapsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            swaps_ = java.util.Collections.unmodifiableList(swaps_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.swaps_ = swaps_;
+        } else {
+          result.swaps_ = swapsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse) {
+          return mergeFrom((com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse other) {
+        if (other == com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse.getDefaultInstance()) return this;
+        if (swapsBuilder_ == null) {
+          if (!other.swaps_.isEmpty()) {
+            if (swaps_.isEmpty()) {
+              swaps_ = other.swaps_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSwapsIsMutable();
+              swaps_.addAll(other.swaps_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.swaps_.isEmpty()) {
+            if (swapsBuilder_.isEmpty()) {
+              swapsBuilder_.dispose();
+              swapsBuilder_ = null;
+              swaps_ = other.swaps_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              swapsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSwapsFieldBuilder() : null;
+            } else {
+              swapsBuilder_.addAllMessages(other.swaps_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.swap.v1.SwapProto.Swap m =
+                    input.readMessage(
+                        com.sentinel.swap.v1.SwapProto.Swap.parser(),
+                        extensionRegistry);
+                if (swapsBuilder_ == null) {
+                  ensureSwapsIsMutable();
+                  swaps_.add(m);
+                } else {
+                  swapsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.swap.v1.SwapProto.Swap> swaps_ =
+        java.util.Collections.emptyList();
+      private void ensureSwapsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          swaps_ = new java.util.ArrayList<com.sentinel.swap.v1.SwapProto.Swap>(swaps_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.swap.v1.SwapProto.Swap, com.sentinel.swap.v1.SwapProto.Swap.Builder, com.sentinel.swap.v1.SwapProto.SwapOrBuilder> swapsBuilder_;
+
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.swap.v1.SwapProto.Swap> getSwapsList() {
+        if (swapsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(swaps_);
+        } else {
+          return swapsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSwapsCount() {
+        if (swapsBuilder_ == null) {
+          return swaps_.size();
+        } else {
+          return swapsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.SwapProto.Swap getSwaps(int index) {
+        if (swapsBuilder_ == null) {
+          return swaps_.get(index);
+        } else {
+          return swapsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSwaps(
+          int index, com.sentinel.swap.v1.SwapProto.Swap value) {
+        if (swapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSwapsIsMutable();
+          swaps_.set(index, value);
+          onChanged();
+        } else {
+          swapsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSwaps(
+          int index, com.sentinel.swap.v1.SwapProto.Swap.Builder builderForValue) {
+        if (swapsBuilder_ == null) {
+          ensureSwapsIsMutable();
+          swaps_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          swapsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSwaps(com.sentinel.swap.v1.SwapProto.Swap value) {
+        if (swapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSwapsIsMutable();
+          swaps_.add(value);
+          onChanged();
+        } else {
+          swapsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSwaps(
+          int index, com.sentinel.swap.v1.SwapProto.Swap value) {
+        if (swapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSwapsIsMutable();
+          swaps_.add(index, value);
+          onChanged();
+        } else {
+          swapsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSwaps(
+          com.sentinel.swap.v1.SwapProto.Swap.Builder builderForValue) {
+        if (swapsBuilder_ == null) {
+          ensureSwapsIsMutable();
+          swaps_.add(builderForValue.build());
+          onChanged();
+        } else {
+          swapsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSwaps(
+          int index, com.sentinel.swap.v1.SwapProto.Swap.Builder builderForValue) {
+        if (swapsBuilder_ == null) {
+          ensureSwapsIsMutable();
+          swaps_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          swapsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSwaps(
+          java.lang.Iterable<? extends com.sentinel.swap.v1.SwapProto.Swap> values) {
+        if (swapsBuilder_ == null) {
+          ensureSwapsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, swaps_);
+          onChanged();
+        } else {
+          swapsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSwaps() {
+        if (swapsBuilder_ == null) {
+          swaps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          swapsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSwaps(int index) {
+        if (swapsBuilder_ == null) {
+          ensureSwapsIsMutable();
+          swaps_.remove(index);
+          onChanged();
+        } else {
+          swapsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.SwapProto.Swap.Builder getSwapsBuilder(
+          int index) {
+        return getSwapsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.SwapProto.SwapOrBuilder getSwapsOrBuilder(
+          int index) {
+        if (swapsBuilder_ == null) {
+          return swaps_.get(index);  } else {
+          return swapsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.swap.v1.SwapProto.SwapOrBuilder> 
+           getSwapsOrBuilderList() {
+        if (swapsBuilder_ != null) {
+          return swapsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(swaps_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.SwapProto.Swap.Builder addSwapsBuilder() {
+        return getSwapsFieldBuilder().addBuilder(
+            com.sentinel.swap.v1.SwapProto.Swap.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.SwapProto.Swap.Builder addSwapsBuilder(
+          int index) {
+        return getSwapsFieldBuilder().addBuilder(
+            index, com.sentinel.swap.v1.SwapProto.Swap.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.swap.v1.Swap swaps = 1 [json_name = "swaps", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.swap.v1.SwapProto.Swap.Builder> 
+           getSwapsBuilderList() {
+        return getSwapsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.swap.v1.SwapProto.Swap, com.sentinel.swap.v1.SwapProto.Swap.Builder, com.sentinel.swap.v1.SwapProto.SwapOrBuilder> 
+          getSwapsFieldBuilder() {
+        if (swapsBuilder_ == null) {
+          swapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.swap.v1.SwapProto.Swap, com.sentinel.swap.v1.SwapProto.Swap.Builder, com.sentinel.swap.v1.SwapProto.SwapOrBuilder>(
+                  swaps_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          swaps_ = null;
+        }
+        return swapsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.swap.v1.QuerySwapsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.swap.v1.QuerySwapsResponse)
+    private static final com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse();
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySwapsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySwapsResponse>() {
+      @java.lang.Override
+      public QuerySwapsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySwapsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySwapsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.swap.v1.QuerierProto.QuerySwapsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySwapResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.swap.v1.QuerySwapResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+     * @return Whether the swap field is set.
+     */
+    boolean hasSwap();
+    /**
+     * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+     * @return The swap.
+     */
+    com.sentinel.swap.v1.SwapProto.Swap getSwap();
+    /**
+     * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.swap.v1.SwapProto.SwapOrBuilder getSwapOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.swap.v1.QuerySwapResponse}
+   */
+  public static final class QuerySwapResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.swap.v1.QuerySwapResponse)
+      QuerySwapResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySwapResponse.newBuilder() to construct.
+    private QuerySwapResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySwapResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySwapResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.swap.v1.QuerierProto.QuerySwapResponse.class, com.sentinel.swap.v1.QuerierProto.QuerySwapResponse.Builder.class);
+    }
+
+    public static final int SWAP_FIELD_NUMBER = 1;
+    private com.sentinel.swap.v1.SwapProto.Swap swap_;
+    /**
+     * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+     * @return Whether the swap field is set.
+     */
+    @java.lang.Override
+    public boolean hasSwap() {
+      return swap_ != null;
+    }
+    /**
+     * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+     * @return The swap.
+     */
+    @java.lang.Override
+    public com.sentinel.swap.v1.SwapProto.Swap getSwap() {
+      return swap_ == null ? com.sentinel.swap.v1.SwapProto.Swap.getDefaultInstance() : swap_;
+    }
+    /**
+     * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.swap.v1.SwapProto.SwapOrBuilder getSwapOrBuilder() {
+      return swap_ == null ? com.sentinel.swap.v1.SwapProto.Swap.getDefaultInstance() : swap_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (swap_ != null) {
+        output.writeMessage(1, getSwap());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (swap_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSwap());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.swap.v1.QuerierProto.QuerySwapResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.swap.v1.QuerierProto.QuerySwapResponse other = (com.sentinel.swap.v1.QuerierProto.QuerySwapResponse) obj;
+
+      if (hasSwap() != other.hasSwap()) return false;
+      if (hasSwap()) {
+        if (!getSwap()
+            .equals(other.getSwap())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSwap()) {
+        hash = (37 * hash) + SWAP_FIELD_NUMBER;
+        hash = (53 * hash) + getSwap().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.swap.v1.QuerierProto.QuerySwapResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.swap.v1.QuerySwapResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.swap.v1.QuerySwapResponse)
+        com.sentinel.swap.v1.QuerierProto.QuerySwapResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.swap.v1.QuerierProto.QuerySwapResponse.class, com.sentinel.swap.v1.QuerierProto.QuerySwapResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.swap.v1.QuerierProto.QuerySwapResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        swap_ = null;
+        if (swapBuilder_ != null) {
+          swapBuilder_.dispose();
+          swapBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QuerySwapResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapResponse getDefaultInstanceForType() {
+        return com.sentinel.swap.v1.QuerierProto.QuerySwapResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapResponse build() {
+        com.sentinel.swap.v1.QuerierProto.QuerySwapResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QuerySwapResponse buildPartial() {
+        com.sentinel.swap.v1.QuerierProto.QuerySwapResponse result = new com.sentinel.swap.v1.QuerierProto.QuerySwapResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.swap.v1.QuerierProto.QuerySwapResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.swap_ = swapBuilder_ == null
+              ? swap_
+              : swapBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.swap.v1.QuerierProto.QuerySwapResponse) {
+          return mergeFrom((com.sentinel.swap.v1.QuerierProto.QuerySwapResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.swap.v1.QuerierProto.QuerySwapResponse other) {
+        if (other == com.sentinel.swap.v1.QuerierProto.QuerySwapResponse.getDefaultInstance()) return this;
+        if (other.hasSwap()) {
+          mergeSwap(other.getSwap());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSwapFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.sentinel.swap.v1.SwapProto.Swap swap_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.swap.v1.SwapProto.Swap, com.sentinel.swap.v1.SwapProto.Swap.Builder, com.sentinel.swap.v1.SwapProto.SwapOrBuilder> swapBuilder_;
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       * @return Whether the swap field is set.
+       */
+      public boolean hasSwap() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       * @return The swap.
+       */
+      public com.sentinel.swap.v1.SwapProto.Swap getSwap() {
+        if (swapBuilder_ == null) {
+          return swap_ == null ? com.sentinel.swap.v1.SwapProto.Swap.getDefaultInstance() : swap_;
+        } else {
+          return swapBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSwap(com.sentinel.swap.v1.SwapProto.Swap value) {
+        if (swapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          swap_ = value;
+        } else {
+          swapBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSwap(
+          com.sentinel.swap.v1.SwapProto.Swap.Builder builderForValue) {
+        if (swapBuilder_ == null) {
+          swap_ = builderForValue.build();
+        } else {
+          swapBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSwap(com.sentinel.swap.v1.SwapProto.Swap value) {
+        if (swapBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            swap_ != null &&
+            swap_ != com.sentinel.swap.v1.SwapProto.Swap.getDefaultInstance()) {
+            getSwapBuilder().mergeFrom(value);
+          } else {
+            swap_ = value;
+          }
+        } else {
+          swapBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSwap() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        swap_ = null;
+        if (swapBuilder_ != null) {
+          swapBuilder_.dispose();
+          swapBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.SwapProto.Swap.Builder getSwapBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSwapFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.SwapProto.SwapOrBuilder getSwapOrBuilder() {
+        if (swapBuilder_ != null) {
+          return swapBuilder_.getMessageOrBuilder();
+        } else {
+          return swap_ == null ?
+              com.sentinel.swap.v1.SwapProto.Swap.getDefaultInstance() : swap_;
+        }
+      }
+      /**
+       * <code>.sentinel.swap.v1.Swap swap = 1 [json_name = "swap", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.swap.v1.SwapProto.Swap, com.sentinel.swap.v1.SwapProto.Swap.Builder, com.sentinel.swap.v1.SwapProto.SwapOrBuilder> 
+          getSwapFieldBuilder() {
+        if (swapBuilder_ == null) {
+          swapBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.swap.v1.SwapProto.Swap, com.sentinel.swap.v1.SwapProto.Swap.Builder, com.sentinel.swap.v1.SwapProto.SwapOrBuilder>(
+                  getSwap(),
+                  getParentForChildren(),
+                  isClean());
+          swap_ = null;
+        }
+        return swapBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.swap.v1.QuerySwapResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.swap.v1.QuerySwapResponse)
+    private static final com.sentinel.swap.v1.QuerierProto.QuerySwapResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.swap.v1.QuerierProto.QuerySwapResponse();
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QuerySwapResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySwapResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySwapResponse>() {
+      @java.lang.Override
+      public QuerySwapResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySwapResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySwapResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.swap.v1.QuerierProto.QuerySwapResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.swap.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.sentinel.swap.v1.ParamsProto.Params getParams();
+    /**
+     * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.swap.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.swap.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.swap.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.swap.v1.QuerierProto.QueryParamsResponse.class, com.sentinel.swap.v1.QuerierProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.sentinel.swap.v1.ParamsProto.Params params_;
+    /**
+     * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.sentinel.swap.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.sentinel.swap.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.swap.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.sentinel.swap.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.swap.v1.QuerierProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.swap.v1.QuerierProto.QueryParamsResponse other = (com.sentinel.swap.v1.QuerierProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.swap.v1.QuerierProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.swap.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.swap.v1.QueryParamsResponse)
+        com.sentinel.swap.v1.QuerierProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.swap.v1.QuerierProto.QueryParamsResponse.class, com.sentinel.swap.v1.QuerierProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.swap.v1.QuerierProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.swap.v1.QuerierProto.internal_static_sentinel_swap_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.sentinel.swap.v1.QuerierProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QueryParamsResponse build() {
+        com.sentinel.swap.v1.QuerierProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.QuerierProto.QueryParamsResponse buildPartial() {
+        com.sentinel.swap.v1.QuerierProto.QueryParamsResponse result = new com.sentinel.swap.v1.QuerierProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.swap.v1.QuerierProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.swap.v1.QuerierProto.QueryParamsResponse) {
+          return mergeFrom((com.sentinel.swap.v1.QuerierProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.swap.v1.QuerierProto.QueryParamsResponse other) {
+        if (other == com.sentinel.swap.v1.QuerierProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.sentinel.swap.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.swap.v1.ParamsProto.Params, com.sentinel.swap.v1.ParamsProto.Params.Builder, com.sentinel.swap.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.sentinel.swap.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.sentinel.swap.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.sentinel.swap.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.sentinel.swap.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.sentinel.swap.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.sentinel.swap.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.swap.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.sentinel.swap.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.sentinel.swap.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.swap.v1.ParamsProto.Params, com.sentinel.swap.v1.ParamsProto.Params.Builder, com.sentinel.swap.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.swap.v1.ParamsProto.Params, com.sentinel.swap.v1.ParamsProto.Params.Builder, com.sentinel.swap.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.swap.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.swap.v1.QueryParamsResponse)
+    private static final com.sentinel.swap.v1.QuerierProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.swap.v1.QuerierProto.QueryParamsResponse();
+    }
+
+    public static com.sentinel.swap.v1.QuerierProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.swap.v1.QuerierProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_swap_v1_QuerySwapsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_swap_v1_QuerySwapsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_swap_v1_QuerySwapRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_swap_v1_QuerySwapRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_swap_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_swap_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_swap_v1_QuerySwapsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_swap_v1_QuerySwapsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_swap_v1_QuerySwapResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_swap_v1_QuerySwapResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_swap_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_swap_v1_QueryParamsResponse_fieldAccessorTable;
 
@@ -79,12 +3731,12 @@ public final class QuerierProto {
       "\013QueryParams\022$.sentinel.swap.v1.QueryPar" +
       "amsRequest\032%.sentinel.swap.v1.QueryParam" +
       "sResponse\"%\202\323\344\223\002\037\022\035/sentinel/modules/swa" +
-      "p/paramsB\275\001\n\024com.sentinel.swap.v1B\014Queri" +
-      "erProtoP\001Z-github.com/sentinel-official/" +
-      "hub/x/swap/types\242\002\003SSX\252\002\020Sentinel.Swap.V" +
-      "1\312\002\020Sentinel\\Swap\\V1\342\002\034Sentinel\\Swap\\V1\\" +
-      "GPBMetadata\352\002\022Sentinel::Swap::V1\310\341\036\000\250\342\036\000" +
-      "b\006proto3"
+      "p/paramsB\273\001\n\024com.sentinel.swap.v1B\014Queri" +
+      "erProtoZ-github.com/sentinel-official/hu" +
+      "b/x/swap/types\242\002\003SSX\252\002\020Sentinel.Swap.V1\312" +
+      "\002\020Sentinel\\Swap\\V1\342\002\034Sentinel\\Swap\\V1\\GP" +
+      "BMetadata\352\002\022Sentinel::Swap::V1\310\341\036\000\250\342\036\000b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

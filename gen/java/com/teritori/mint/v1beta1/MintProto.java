@@ -14,29 +14,5839 @@ public final class MintProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MinterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.mint.v1beta1.Minter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * current block provisions
+     * </pre>
+     *
+     * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The blockProvisions.
+     */
+    java.lang.String getBlockProvisions();
+    /**
+     * <pre>
+     * current block provisions
+     * </pre>
+     *
+     * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for blockProvisions.
+     */
+    com.google.protobuf.ByteString
+        getBlockProvisionsBytes();
+  }
+  /**
+   * <pre>
+   * Minter represents the minting state.
+   * </pre>
+   *
+   * Protobuf type {@code teritori.mint.v1beta1.Minter}
+   */
+  public static final class Minter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.mint.v1beta1.Minter)
+      MinterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Minter.newBuilder() to construct.
+    private Minter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Minter() {
+      blockProvisions_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Minter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Minter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Minter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.mint.v1beta1.MintProto.Minter.class, com.teritori.mint.v1beta1.MintProto.Minter.Builder.class);
+    }
+
+    public static final int BLOCK_PROVISIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object blockProvisions_ = "";
+    /**
+     * <pre>
+     * current block provisions
+     * </pre>
+     *
+     * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The blockProvisions.
+     */
+    @java.lang.Override
+    public java.lang.String getBlockProvisions() {
+      java.lang.Object ref = blockProvisions_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        blockProvisions_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * current block provisions
+     * </pre>
+     *
+     * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for blockProvisions.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBlockProvisionsBytes() {
+      java.lang.Object ref = blockProvisions_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        blockProvisions_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(blockProvisions_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, blockProvisions_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(blockProvisions_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, blockProvisions_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.mint.v1beta1.MintProto.Minter)) {
+        return super.equals(obj);
+      }
+      com.teritori.mint.v1beta1.MintProto.Minter other = (com.teritori.mint.v1beta1.MintProto.Minter) obj;
+
+      if (!getBlockProvisions()
+          .equals(other.getBlockProvisions())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_PROVISIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getBlockProvisions().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Minter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.mint.v1beta1.MintProto.Minter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Minter represents the minting state.
+     * </pre>
+     *
+     * Protobuf type {@code teritori.mint.v1beta1.Minter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.mint.v1beta1.Minter)
+        com.teritori.mint.v1beta1.MintProto.MinterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Minter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Minter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.mint.v1beta1.MintProto.Minter.class, com.teritori.mint.v1beta1.MintProto.Minter.Builder.class);
+      }
+
+      // Construct using com.teritori.mint.v1beta1.MintProto.Minter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockProvisions_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Minter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.Minter getDefaultInstanceForType() {
+        return com.teritori.mint.v1beta1.MintProto.Minter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.Minter build() {
+        com.teritori.mint.v1beta1.MintProto.Minter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.Minter buildPartial() {
+        com.teritori.mint.v1beta1.MintProto.Minter result = new com.teritori.mint.v1beta1.MintProto.Minter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.mint.v1beta1.MintProto.Minter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockProvisions_ = blockProvisions_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.mint.v1beta1.MintProto.Minter) {
+          return mergeFrom((com.teritori.mint.v1beta1.MintProto.Minter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.mint.v1beta1.MintProto.Minter other) {
+        if (other == com.teritori.mint.v1beta1.MintProto.Minter.getDefaultInstance()) return this;
+        if (!other.getBlockProvisions().isEmpty()) {
+          blockProvisions_ = other.blockProvisions_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                blockProvisions_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object blockProvisions_ = "";
+      /**
+       * <pre>
+       * current block provisions
+       * </pre>
+       *
+       * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The blockProvisions.
+       */
+      public java.lang.String getBlockProvisions() {
+        java.lang.Object ref = blockProvisions_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          blockProvisions_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * current block provisions
+       * </pre>
+       *
+       * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for blockProvisions.
+       */
+      public com.google.protobuf.ByteString
+          getBlockProvisionsBytes() {
+        java.lang.Object ref = blockProvisions_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          blockProvisions_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * current block provisions
+       * </pre>
+       *
+       * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The blockProvisions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockProvisions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        blockProvisions_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current block provisions
+       * </pre>
+       *
+       * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockProvisions() {
+        blockProvisions_ = getDefaultInstance().getBlockProvisions();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current block provisions
+       * </pre>
+       *
+       * <code>string block_provisions = 1 [json_name = "blockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for blockProvisions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockProvisionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        blockProvisions_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.mint.v1beta1.Minter)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.mint.v1beta1.Minter)
+    private static final com.teritori.mint.v1beta1.MintProto.Minter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.mint.v1beta1.MintProto.Minter();
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.Minter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Minter>
+        PARSER = new com.google.protobuf.AbstractParser<Minter>() {
+      @java.lang.Override
+      public Minter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Minter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Minter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.Minter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TeamVestingMonthInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.mint.v1beta1.TeamVestingMonthInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 months_since_genesis = 1 [json_name = "monthsSinceGenesis"];</code>
+     * @return The monthsSinceGenesis.
+     */
+    long getMonthsSinceGenesis();
+
+    /**
+     * <code>int64 month_started_block = 2 [json_name = "monthStartedBlock"];</code>
+     * @return The monthStartedBlock.
+     */
+    long getMonthStartedBlock();
+
+    /**
+     * <code>int64 one_month_period_in_blocks = 3 [json_name = "oneMonthPeriodInBlocks"];</code>
+     * @return The oneMonthPeriodInBlocks.
+     */
+    long getOneMonthPeriodInBlocks();
+  }
+  /**
+   * <pre>
+   * required values for team rewards
+   * </pre>
+   *
+   * Protobuf type {@code teritori.mint.v1beta1.TeamVestingMonthInfo}
+   */
+  public static final class TeamVestingMonthInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.mint.v1beta1.TeamVestingMonthInfo)
+      TeamVestingMonthInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TeamVestingMonthInfo.newBuilder() to construct.
+    private TeamVestingMonthInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TeamVestingMonthInfo() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TeamVestingMonthInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_TeamVestingMonthInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_TeamVestingMonthInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.class, com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.Builder.class);
+    }
+
+    public static final int MONTHS_SINCE_GENESIS_FIELD_NUMBER = 1;
+    private long monthsSinceGenesis_ = 0L;
+    /**
+     * <code>int64 months_since_genesis = 1 [json_name = "monthsSinceGenesis"];</code>
+     * @return The monthsSinceGenesis.
+     */
+    @java.lang.Override
+    public long getMonthsSinceGenesis() {
+      return monthsSinceGenesis_;
+    }
+
+    public static final int MONTH_STARTED_BLOCK_FIELD_NUMBER = 2;
+    private long monthStartedBlock_ = 0L;
+    /**
+     * <code>int64 month_started_block = 2 [json_name = "monthStartedBlock"];</code>
+     * @return The monthStartedBlock.
+     */
+    @java.lang.Override
+    public long getMonthStartedBlock() {
+      return monthStartedBlock_;
+    }
+
+    public static final int ONE_MONTH_PERIOD_IN_BLOCKS_FIELD_NUMBER = 3;
+    private long oneMonthPeriodInBlocks_ = 0L;
+    /**
+     * <code>int64 one_month_period_in_blocks = 3 [json_name = "oneMonthPeriodInBlocks"];</code>
+     * @return The oneMonthPeriodInBlocks.
+     */
+    @java.lang.Override
+    public long getOneMonthPeriodInBlocks() {
+      return oneMonthPeriodInBlocks_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (monthsSinceGenesis_ != 0L) {
+        output.writeInt64(1, monthsSinceGenesis_);
+      }
+      if (monthStartedBlock_ != 0L) {
+        output.writeInt64(2, monthStartedBlock_);
+      }
+      if (oneMonthPeriodInBlocks_ != 0L) {
+        output.writeInt64(3, oneMonthPeriodInBlocks_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (monthsSinceGenesis_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, monthsSinceGenesis_);
+      }
+      if (monthStartedBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, monthStartedBlock_);
+      }
+      if (oneMonthPeriodInBlocks_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, oneMonthPeriodInBlocks_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo)) {
+        return super.equals(obj);
+      }
+      com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo other = (com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo) obj;
+
+      if (getMonthsSinceGenesis()
+          != other.getMonthsSinceGenesis()) return false;
+      if (getMonthStartedBlock()
+          != other.getMonthStartedBlock()) return false;
+      if (getOneMonthPeriodInBlocks()
+          != other.getOneMonthPeriodInBlocks()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MONTHS_SINCE_GENESIS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMonthsSinceGenesis());
+      hash = (37 * hash) + MONTH_STARTED_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMonthStartedBlock());
+      hash = (37 * hash) + ONE_MONTH_PERIOD_IN_BLOCKS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOneMonthPeriodInBlocks());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * required values for team rewards
+     * </pre>
+     *
+     * Protobuf type {@code teritori.mint.v1beta1.TeamVestingMonthInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.mint.v1beta1.TeamVestingMonthInfo)
+        com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_TeamVestingMonthInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_TeamVestingMonthInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.class, com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.Builder.class);
+      }
+
+      // Construct using com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        monthsSinceGenesis_ = 0L;
+        monthStartedBlock_ = 0L;
+        oneMonthPeriodInBlocks_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_TeamVestingMonthInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo getDefaultInstanceForType() {
+        return com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo build() {
+        com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo buildPartial() {
+        com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo result = new com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.monthsSinceGenesis_ = monthsSinceGenesis_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.monthStartedBlock_ = monthStartedBlock_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.oneMonthPeriodInBlocks_ = oneMonthPeriodInBlocks_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo) {
+          return mergeFrom((com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo other) {
+        if (other == com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.getDefaultInstance()) return this;
+        if (other.getMonthsSinceGenesis() != 0L) {
+          setMonthsSinceGenesis(other.getMonthsSinceGenesis());
+        }
+        if (other.getMonthStartedBlock() != 0L) {
+          setMonthStartedBlock(other.getMonthStartedBlock());
+        }
+        if (other.getOneMonthPeriodInBlocks() != 0L) {
+          setOneMonthPeriodInBlocks(other.getOneMonthPeriodInBlocks());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                monthsSinceGenesis_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                monthStartedBlock_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                oneMonthPeriodInBlocks_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long monthsSinceGenesis_ ;
+      /**
+       * <code>int64 months_since_genesis = 1 [json_name = "monthsSinceGenesis"];</code>
+       * @return The monthsSinceGenesis.
+       */
+      @java.lang.Override
+      public long getMonthsSinceGenesis() {
+        return monthsSinceGenesis_;
+      }
+      /**
+       * <code>int64 months_since_genesis = 1 [json_name = "monthsSinceGenesis"];</code>
+       * @param value The monthsSinceGenesis to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonthsSinceGenesis(long value) {
+
+        monthsSinceGenesis_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 months_since_genesis = 1 [json_name = "monthsSinceGenesis"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMonthsSinceGenesis() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        monthsSinceGenesis_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long monthStartedBlock_ ;
+      /**
+       * <code>int64 month_started_block = 2 [json_name = "monthStartedBlock"];</code>
+       * @return The monthStartedBlock.
+       */
+      @java.lang.Override
+      public long getMonthStartedBlock() {
+        return monthStartedBlock_;
+      }
+      /**
+       * <code>int64 month_started_block = 2 [json_name = "monthStartedBlock"];</code>
+       * @param value The monthStartedBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonthStartedBlock(long value) {
+
+        monthStartedBlock_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 month_started_block = 2 [json_name = "monthStartedBlock"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMonthStartedBlock() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        monthStartedBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long oneMonthPeriodInBlocks_ ;
+      /**
+       * <code>int64 one_month_period_in_blocks = 3 [json_name = "oneMonthPeriodInBlocks"];</code>
+       * @return The oneMonthPeriodInBlocks.
+       */
+      @java.lang.Override
+      public long getOneMonthPeriodInBlocks() {
+        return oneMonthPeriodInBlocks_;
+      }
+      /**
+       * <code>int64 one_month_period_in_blocks = 3 [json_name = "oneMonthPeriodInBlocks"];</code>
+       * @param value The oneMonthPeriodInBlocks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOneMonthPeriodInBlocks(long value) {
+
+        oneMonthPeriodInBlocks_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 one_month_period_in_blocks = 3 [json_name = "oneMonthPeriodInBlocks"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOneMonthPeriodInBlocks() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        oneMonthPeriodInBlocks_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.mint.v1beta1.TeamVestingMonthInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.mint.v1beta1.TeamVestingMonthInfo)
+    private static final com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo();
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TeamVestingMonthInfo>
+        PARSER = new com.google.protobuf.AbstractParser<TeamVestingMonthInfo>() {
+      @java.lang.Override
+      public TeamVestingMonthInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TeamVestingMonthInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TeamVestingMonthInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MonthlyVestingAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.mint.v1beta1.MonthlyVestingAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+     * @return A list containing the monthlyAmounts.
+     */
+    java.util.List<java.lang.String>
+        getMonthlyAmountsList();
+    /**
+     * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+     * @return The count of monthlyAmounts.
+     */
+    int getMonthlyAmountsCount();
+    /**
+     * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The monthlyAmounts at the given index.
+     */
+    java.lang.String getMonthlyAmounts(int index);
+    /**
+     * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the monthlyAmounts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMonthlyAmountsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code teritori.mint.v1beta1.MonthlyVestingAddress}
+   */
+  public static final class MonthlyVestingAddress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.mint.v1beta1.MonthlyVestingAddress)
+      MonthlyVestingAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MonthlyVestingAddress.newBuilder() to construct.
+    private MonthlyVestingAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MonthlyVestingAddress() {
+      address_ = "";
+      monthlyAmounts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MonthlyVestingAddress();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_MonthlyVestingAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_MonthlyVestingAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.class, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONTHLY_AMOUNTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList monthlyAmounts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+     * @return A list containing the monthlyAmounts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMonthlyAmountsList() {
+      return monthlyAmounts_;
+    }
+    /**
+     * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+     * @return The count of monthlyAmounts.
+     */
+    public int getMonthlyAmountsCount() {
+      return monthlyAmounts_.size();
+    }
+    /**
+     * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The monthlyAmounts at the given index.
+     */
+    public java.lang.String getMonthlyAmounts(int index) {
+      return monthlyAmounts_.get(index);
+    }
+    /**
+     * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the monthlyAmounts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMonthlyAmountsBytes(int index) {
+      return monthlyAmounts_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      for (int i = 0; i < monthlyAmounts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, monthlyAmounts_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < monthlyAmounts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(monthlyAmounts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMonthlyAmountsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress)) {
+        return super.equals(obj);
+      }
+      com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress other = (com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getMonthlyAmountsList()
+          .equals(other.getMonthlyAmountsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (getMonthlyAmountsCount() > 0) {
+        hash = (37 * hash) + MONTHLY_AMOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getMonthlyAmountsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code teritori.mint.v1beta1.MonthlyVestingAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.mint.v1beta1.MonthlyVestingAddress)
+        com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_MonthlyVestingAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_MonthlyVestingAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.class, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder.class);
+      }
+
+      // Construct using com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        monthlyAmounts_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_MonthlyVestingAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress getDefaultInstanceForType() {
+        return com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress build() {
+        com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress buildPartial() {
+        com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress result = new com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          monthlyAmounts_.makeImmutable();
+          result.monthlyAmounts_ = monthlyAmounts_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress) {
+          return mergeFrom((com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress other) {
+        if (other == com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.monthlyAmounts_.isEmpty()) {
+          if (monthlyAmounts_.isEmpty()) {
+            monthlyAmounts_ = other.monthlyAmounts_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureMonthlyAmountsIsMutable();
+            monthlyAmounts_.addAll(other.monthlyAmounts_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMonthlyAmountsIsMutable();
+                monthlyAmounts_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList monthlyAmounts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMonthlyAmountsIsMutable() {
+        if (!monthlyAmounts_.isModifiable()) {
+          monthlyAmounts_ = new com.google.protobuf.LazyStringArrayList(monthlyAmounts_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @return A list containing the monthlyAmounts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMonthlyAmountsList() {
+        monthlyAmounts_.makeImmutable();
+        return monthlyAmounts_;
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @return The count of monthlyAmounts.
+       */
+      public int getMonthlyAmountsCount() {
+        return monthlyAmounts_.size();
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The monthlyAmounts at the given index.
+       */
+      public java.lang.String getMonthlyAmounts(int index) {
+        return monthlyAmounts_.get(index);
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the monthlyAmounts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMonthlyAmountsBytes(int index) {
+        return monthlyAmounts_.getByteString(index);
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The monthlyAmounts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonthlyAmounts(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMonthlyAmountsIsMutable();
+        monthlyAmounts_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @param value The monthlyAmounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMonthlyAmounts(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMonthlyAmountsIsMutable();
+        monthlyAmounts_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @param values The monthlyAmounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMonthlyAmounts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMonthlyAmountsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, monthlyAmounts_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMonthlyAmounts() {
+        monthlyAmounts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string monthly_amounts = 2 [json_name = "monthlyAmounts", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"monthly_amounts&#92;""];</code>
+       * @param value The bytes of the monthlyAmounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMonthlyAmountsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMonthlyAmountsIsMutable();
+        monthlyAmounts_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.mint.v1beta1.MonthlyVestingAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.mint.v1beta1.MonthlyVestingAddress)
+    private static final com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress();
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MonthlyVestingAddress>
+        PARSER = new com.google.protobuf.AbstractParser<MonthlyVestingAddress>() {
+      @java.lang.Override
+      public MonthlyVestingAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MonthlyVestingAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MonthlyVestingAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DistributionProportionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.mint.v1beta1.DistributionProportions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * grants_program defines the proportion of the minted minted_denom that is
+     * to be allocated as grants.
+     * </pre>
+     *
+     * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The grantsProgram.
+     */
+    java.lang.String getGrantsProgram();
+    /**
+     * <pre>
+     * grants_program defines the proportion of the minted minted_denom that is
+     * to be allocated as grants.
+     * </pre>
+     *
+     * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for grantsProgram.
+     */
+    com.google.protobuf.ByteString
+        getGrantsProgramBytes();
+
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted minted_denom that is
+     * to be allocated to the community pool.
+     * </pre>
+     *
+     * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The communityPool.
+     */
+    java.lang.String getCommunityPool();
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted minted_denom that is
+     * to be allocated to the community pool.
+     * </pre>
+     *
+     * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The bytes for communityPool.
+     */
+    com.google.protobuf.ByteString
+        getCommunityPoolBytes();
+
+    /**
+     * <pre>
+     * usage_incentive defines the proportion of the minted minted_denom that is
+     * to be allocated as usage incentive.
+     * </pre>
+     *
+     * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The usageIncentive.
+     */
+    java.lang.String getUsageIncentive();
+    /**
+     * <pre>
+     * usage_incentive defines the proportion of the minted minted_denom that is
+     * to be allocated as usage incentive.
+     * </pre>
+     *
+     * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for usageIncentive.
+     */
+    com.google.protobuf.ByteString
+        getUsageIncentiveBytes();
+
+    /**
+     * <pre>
+     * staking defines the proportion of the minted minted_denom that is to be
+     * allocated as staking rewards.
+     * </pre>
+     *
+     * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The staking.
+     */
+    java.lang.String getStaking();
+    /**
+     * <pre>
+     * staking defines the proportion of the minted minted_denom that is to be
+     * allocated as staking rewards.
+     * </pre>
+     *
+     * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for staking.
+     */
+    com.google.protobuf.ByteString
+        getStakingBytes();
+
+    /**
+     * <pre>
+     * developer_rewards defines the proportion of the minted minted_denom that is
+     * to be allocated to developer rewards address.
+     * </pre>
+     *
+     * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The developerRewards.
+     */
+    java.lang.String getDeveloperRewards();
+    /**
+     * <pre>
+     * developer_rewards defines the proportion of the minted minted_denom that is
+     * to be allocated to developer rewards address.
+     * </pre>
+     *
+     * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for developerRewards.
+     */
+    com.google.protobuf.ByteString
+        getDeveloperRewardsBytes();
+  }
+  /**
+   * Protobuf type {@code teritori.mint.v1beta1.DistributionProportions}
+   */
+  public static final class DistributionProportions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.mint.v1beta1.DistributionProportions)
+      DistributionProportionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DistributionProportions.newBuilder() to construct.
+    private DistributionProportions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DistributionProportions() {
+      grantsProgram_ = "";
+      communityPool_ = "";
+      usageIncentive_ = "";
+      staking_ = "";
+      developerRewards_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DistributionProportions();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_DistributionProportions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_DistributionProportions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.mint.v1beta1.MintProto.DistributionProportions.class, com.teritori.mint.v1beta1.MintProto.DistributionProportions.Builder.class);
+    }
+
+    public static final int GRANTS_PROGRAM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object grantsProgram_ = "";
+    /**
+     * <pre>
+     * grants_program defines the proportion of the minted minted_denom that is
+     * to be allocated as grants.
+     * </pre>
+     *
+     * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The grantsProgram.
+     */
+    @java.lang.Override
+    public java.lang.String getGrantsProgram() {
+      java.lang.Object ref = grantsProgram_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        grantsProgram_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * grants_program defines the proportion of the minted minted_denom that is
+     * to be allocated as grants.
+     * </pre>
+     *
+     * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for grantsProgram.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGrantsProgramBytes() {
+      java.lang.Object ref = grantsProgram_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        grantsProgram_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITY_POOL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object communityPool_ = "";
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted minted_denom that is
+     * to be allocated to the community pool.
+     * </pre>
+     *
+     * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The communityPool.
+     */
+    @java.lang.Override
+    public java.lang.String getCommunityPool() {
+      java.lang.Object ref = communityPool_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityPool_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted minted_denom that is
+     * to be allocated to the community pool.
+     * </pre>
+     *
+     * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The bytes for communityPool.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommunityPoolBytes() {
+      java.lang.Object ref = communityPool_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityPool_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USAGE_INCENTIVE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object usageIncentive_ = "";
+    /**
+     * <pre>
+     * usage_incentive defines the proportion of the minted minted_denom that is
+     * to be allocated as usage incentive.
+     * </pre>
+     *
+     * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The usageIncentive.
+     */
+    @java.lang.Override
+    public java.lang.String getUsageIncentive() {
+      java.lang.Object ref = usageIncentive_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        usageIncentive_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * usage_incentive defines the proportion of the minted minted_denom that is
+     * to be allocated as usage incentive.
+     * </pre>
+     *
+     * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for usageIncentive.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsageIncentiveBytes() {
+      java.lang.Object ref = usageIncentive_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        usageIncentive_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staking_ = "";
+    /**
+     * <pre>
+     * staking defines the proportion of the minted minted_denom that is to be
+     * allocated as staking rewards.
+     * </pre>
+     *
+     * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The staking.
+     */
+    @java.lang.Override
+    public java.lang.String getStaking() {
+      java.lang.Object ref = staking_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staking_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking defines the proportion of the minted minted_denom that is to be
+     * allocated as staking rewards.
+     * </pre>
+     *
+     * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for staking.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingBytes() {
+      java.lang.Object ref = staking_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staking_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVELOPER_REWARDS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object developerRewards_ = "";
+    /**
+     * <pre>
+     * developer_rewards defines the proportion of the minted minted_denom that is
+     * to be allocated to developer rewards address.
+     * </pre>
+     *
+     * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The developerRewards.
+     */
+    @java.lang.Override
+    public java.lang.String getDeveloperRewards() {
+      java.lang.Object ref = developerRewards_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        developerRewards_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * developer_rewards defines the proportion of the minted minted_denom that is
+     * to be allocated to developer rewards address.
+     * </pre>
+     *
+     * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for developerRewards.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeveloperRewardsBytes() {
+      java.lang.Object ref = developerRewards_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        developerRewards_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantsProgram_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, grantsProgram_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPool_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, communityPool_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageIncentive_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, usageIncentive_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staking_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, staking_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerRewards_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, developerRewards_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantsProgram_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, grantsProgram_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPool_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, communityPool_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageIncentive_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, usageIncentive_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staking_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, staking_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerRewards_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, developerRewards_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.mint.v1beta1.MintProto.DistributionProportions)) {
+        return super.equals(obj);
+      }
+      com.teritori.mint.v1beta1.MintProto.DistributionProportions other = (com.teritori.mint.v1beta1.MintProto.DistributionProportions) obj;
+
+      if (!getGrantsProgram()
+          .equals(other.getGrantsProgram())) return false;
+      if (!getCommunityPool()
+          .equals(other.getCommunityPool())) return false;
+      if (!getUsageIncentive()
+          .equals(other.getUsageIncentive())) return false;
+      if (!getStaking()
+          .equals(other.getStaking())) return false;
+      if (!getDeveloperRewards()
+          .equals(other.getDeveloperRewards())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GRANTS_PROGRAM_FIELD_NUMBER;
+      hash = (53 * hash) + getGrantsProgram().hashCode();
+      hash = (37 * hash) + COMMUNITY_POOL_FIELD_NUMBER;
+      hash = (53 * hash) + getCommunityPool().hashCode();
+      hash = (37 * hash) + USAGE_INCENTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + getUsageIncentive().hashCode();
+      hash = (37 * hash) + STAKING_FIELD_NUMBER;
+      hash = (53 * hash) + getStaking().hashCode();
+      hash = (37 * hash) + DEVELOPER_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeveloperRewards().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.mint.v1beta1.MintProto.DistributionProportions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code teritori.mint.v1beta1.DistributionProportions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.mint.v1beta1.DistributionProportions)
+        com.teritori.mint.v1beta1.MintProto.DistributionProportionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_DistributionProportions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_DistributionProportions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.mint.v1beta1.MintProto.DistributionProportions.class, com.teritori.mint.v1beta1.MintProto.DistributionProportions.Builder.class);
+      }
+
+      // Construct using com.teritori.mint.v1beta1.MintProto.DistributionProportions.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        grantsProgram_ = "";
+        communityPool_ = "";
+        usageIncentive_ = "";
+        staking_ = "";
+        developerRewards_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_DistributionProportions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.DistributionProportions getDefaultInstanceForType() {
+        return com.teritori.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.DistributionProportions build() {
+        com.teritori.mint.v1beta1.MintProto.DistributionProportions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.DistributionProportions buildPartial() {
+        com.teritori.mint.v1beta1.MintProto.DistributionProportions result = new com.teritori.mint.v1beta1.MintProto.DistributionProportions(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.mint.v1beta1.MintProto.DistributionProportions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.grantsProgram_ = grantsProgram_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.communityPool_ = communityPool_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.usageIncentive_ = usageIncentive_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.staking_ = staking_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.developerRewards_ = developerRewards_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.mint.v1beta1.MintProto.DistributionProportions) {
+          return mergeFrom((com.teritori.mint.v1beta1.MintProto.DistributionProportions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.mint.v1beta1.MintProto.DistributionProportions other) {
+        if (other == com.teritori.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance()) return this;
+        if (!other.getGrantsProgram().isEmpty()) {
+          grantsProgram_ = other.grantsProgram_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCommunityPool().isEmpty()) {
+          communityPool_ = other.communityPool_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getUsageIncentive().isEmpty()) {
+          usageIncentive_ = other.usageIncentive_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getStaking().isEmpty()) {
+          staking_ = other.staking_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDeveloperRewards().isEmpty()) {
+          developerRewards_ = other.developerRewards_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                grantsProgram_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                communityPool_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                usageIncentive_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                staking_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                developerRewards_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object grantsProgram_ = "";
+      /**
+       * <pre>
+       * grants_program defines the proportion of the minted minted_denom that is
+       * to be allocated as grants.
+       * </pre>
+       *
+       * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The grantsProgram.
+       */
+      public java.lang.String getGrantsProgram() {
+        java.lang.Object ref = grantsProgram_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          grantsProgram_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * grants_program defines the proportion of the minted minted_denom that is
+       * to be allocated as grants.
+       * </pre>
+       *
+       * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for grantsProgram.
+       */
+      public com.google.protobuf.ByteString
+          getGrantsProgramBytes() {
+        java.lang.Object ref = grantsProgram_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          grantsProgram_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * grants_program defines the proportion of the minted minted_denom that is
+       * to be allocated as grants.
+       * </pre>
+       *
+       * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The grantsProgram to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGrantsProgram(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        grantsProgram_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * grants_program defines the proportion of the minted minted_denom that is
+       * to be allocated as grants.
+       * </pre>
+       *
+       * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGrantsProgram() {
+        grantsProgram_ = getDefaultInstance().getGrantsProgram();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * grants_program defines the proportion of the minted minted_denom that is
+       * to be allocated as grants.
+       * </pre>
+       *
+       * <code>string grants_program = 1 [json_name = "grantsProgram", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for grantsProgram to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGrantsProgramBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        grantsProgram_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityPool_ = "";
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return The communityPool.
+       */
+      public java.lang.String getCommunityPool() {
+        java.lang.Object ref = communityPool_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityPool_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return The bytes for communityPool.
+       */
+      public com.google.protobuf.ByteString
+          getCommunityPoolBytes() {
+        java.lang.Object ref = communityPool_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityPool_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @param value The communityPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPool(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        communityPool_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommunityPool() {
+        communityPool_ = getDefaultInstance().getCommunityPool();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @param value The bytes for communityPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPoolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        communityPool_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object usageIncentive_ = "";
+      /**
+       * <pre>
+       * usage_incentive defines the proportion of the minted minted_denom that is
+       * to be allocated as usage incentive.
+       * </pre>
+       *
+       * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The usageIncentive.
+       */
+      public java.lang.String getUsageIncentive() {
+        java.lang.Object ref = usageIncentive_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          usageIncentive_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * usage_incentive defines the proportion of the minted minted_denom that is
+       * to be allocated as usage incentive.
+       * </pre>
+       *
+       * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for usageIncentive.
+       */
+      public com.google.protobuf.ByteString
+          getUsageIncentiveBytes() {
+        java.lang.Object ref = usageIncentive_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          usageIncentive_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * usage_incentive defines the proportion of the minted minted_denom that is
+       * to be allocated as usage incentive.
+       * </pre>
+       *
+       * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The usageIncentive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsageIncentive(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        usageIncentive_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * usage_incentive defines the proportion of the minted minted_denom that is
+       * to be allocated as usage incentive.
+       * </pre>
+       *
+       * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsageIncentive() {
+        usageIncentive_ = getDefaultInstance().getUsageIncentive();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * usage_incentive defines the proportion of the minted minted_denom that is
+       * to be allocated as usage incentive.
+       * </pre>
+       *
+       * <code>string usage_incentive = 3 [json_name = "usageIncentive", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for usageIncentive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsageIncentiveBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        usageIncentive_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object staking_ = "";
+      /**
+       * <pre>
+       * staking defines the proportion of the minted minted_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The staking.
+       */
+      public java.lang.String getStaking() {
+        java.lang.Object ref = staking_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staking_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking defines the proportion of the minted minted_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for staking.
+       */
+      public com.google.protobuf.ByteString
+          getStakingBytes() {
+        java.lang.Object ref = staking_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staking_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking defines the proportion of the minted minted_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The staking to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaking(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staking_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking defines the proportion of the minted minted_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaking() {
+        staking_ = getDefaultInstance().getStaking();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking defines the proportion of the minted minted_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 4 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for staking to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staking_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object developerRewards_ = "";
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The developerRewards.
+       */
+      public java.lang.String getDeveloperRewards() {
+        java.lang.Object ref = developerRewards_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          developerRewards_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for developerRewards.
+       */
+      public com.google.protobuf.ByteString
+          getDeveloperRewardsBytes() {
+        java.lang.Object ref = developerRewards_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          developerRewards_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The developerRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperRewards(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        developerRewards_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeveloperRewards() {
+        developerRewards_ = getDefaultInstance().getDeveloperRewards();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 5 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for developerRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperRewardsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        developerRewards_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.mint.v1beta1.DistributionProportions)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.mint.v1beta1.DistributionProportions)
+    private static final com.teritori.mint.v1beta1.MintProto.DistributionProportions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.mint.v1beta1.MintProto.DistributionProportions();
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.DistributionProportions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DistributionProportions>
+        PARSER = new com.google.protobuf.AbstractParser<DistributionProportions>() {
+      @java.lang.Override
+      public DistributionProportions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DistributionProportions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DistributionProportions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.DistributionProportions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.mint.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    java.lang.String getMintDenom();
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    com.google.protobuf.ByteString
+        getMintDenomBytes();
+
+    /**
+     * <pre>
+     * block provisions from the first block
+     * </pre>
+     *
+     * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The genesisBlockProvisions.
+     */
+    java.lang.String getGenesisBlockProvisions();
+    /**
+     * <pre>
+     * block provisions from the first block
+     * </pre>
+     *
+     * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for genesisBlockProvisions.
+     */
+    com.google.protobuf.ByteString
+        getGenesisBlockProvisionsBytes();
+
+    /**
+     * <pre>
+     * number of blocks take to reduce rewards
+     * </pre>
+     *
+     * <code>int64 reduction_period_in_blocks = 3 [json_name = "reductionPeriodInBlocks"];</code>
+     * @return The reductionPeriodInBlocks.
+     */
+    long getReductionPeriodInBlocks();
+
+    /**
+     * <pre>
+     * reduction multiplier to execute on each period
+     * </pre>
+     *
+     * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The reductionFactor.
+     */
+    java.lang.String getReductionFactor();
+    /**
+     * <pre>
+     * reduction multiplier to execute on each period
+     * </pre>
+     *
+     * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for reductionFactor.
+     */
+    com.google.protobuf.ByteString
+        getReductionFactorBytes();
+
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    boolean hasDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    com.teritori.mint.v1beta1.MintProto.DistributionProportions getDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.mint.v1beta1.MintProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder();
+
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress> 
+        getWeightedDeveloperRewardsReceiversList();
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress getWeightedDeveloperRewardsReceivers(int index);
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    int getWeightedDeveloperRewardsReceiversCount();
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder> 
+        getWeightedDeveloperRewardsReceiversOrBuilderList();
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * usage incentive address
+     * </pre>
+     *
+     * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+     * @return The usageIncentiveAddress.
+     */
+    java.lang.String getUsageIncentiveAddress();
+    /**
+     * <pre>
+     * usage incentive address
+     * </pre>
+     *
+     * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+     * @return The bytes for usageIncentiveAddress.
+     */
+    com.google.protobuf.ByteString
+        getUsageIncentiveAddressBytes();
+
+    /**
+     * <pre>
+     * grants program address
+     * </pre>
+     *
+     * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+     * @return The grantsProgramAddress.
+     */
+    java.lang.String getGrantsProgramAddress();
+    /**
+     * <pre>
+     * grants program address
+     * </pre>
+     *
+     * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+     * @return The bytes for grantsProgramAddress.
+     */
+    com.google.protobuf.ByteString
+        getGrantsProgramAddressBytes();
+
+    /**
+     * <pre>
+     * team reserve funds address
+     * </pre>
+     *
+     * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+     * @return The teamReserveAddress.
+     */
+    java.lang.String getTeamReserveAddress();
+    /**
+     * <pre>
+     * team reserve funds address
+     * </pre>
+     *
+     * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+     * @return The bytes for teamReserveAddress.
+     */
+    com.google.protobuf.ByteString
+        getTeamReserveAddressBytes();
+
+    /**
+     * <pre>
+     * start block to distribute minting rewards
+     * </pre>
+     *
+     * <code>int64 minting_rewards_distribution_start_block = 10 [json_name = "mintingRewardsDistributionStartBlock"];</code>
+     * @return The mintingRewardsDistributionStartBlock.
+     */
+    long getMintingRewardsDistributionStartBlock();
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the mint module.
+   * </pre>
+   *
+   * Protobuf type {@code teritori.mint.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.mint.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      mintDenom_ = "";
+      genesisBlockProvisions_ = "";
+      reductionFactor_ = "";
+      weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+      usageIncentiveAddress_ = "";
+      grantsProgramAddress_ = "";
+      teamReserveAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.mint.v1beta1.MintProto.Params.class, com.teritori.mint.v1beta1.MintProto.Params.Builder.class);
+    }
+
+    public static final int MINT_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintDenom_ = "";
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getMintDenom() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintDenomBytes() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GENESIS_BLOCK_PROVISIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object genesisBlockProvisions_ = "";
+    /**
+     * <pre>
+     * block provisions from the first block
+     * </pre>
+     *
+     * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The genesisBlockProvisions.
+     */
+    @java.lang.Override
+    public java.lang.String getGenesisBlockProvisions() {
+      java.lang.Object ref = genesisBlockProvisions_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        genesisBlockProvisions_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * block provisions from the first block
+     * </pre>
+     *
+     * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for genesisBlockProvisions.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGenesisBlockProvisionsBytes() {
+      java.lang.Object ref = genesisBlockProvisions_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        genesisBlockProvisions_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REDUCTION_PERIOD_IN_BLOCKS_FIELD_NUMBER = 3;
+    private long reductionPeriodInBlocks_ = 0L;
+    /**
+     * <pre>
+     * number of blocks take to reduce rewards
+     * </pre>
+     *
+     * <code>int64 reduction_period_in_blocks = 3 [json_name = "reductionPeriodInBlocks"];</code>
+     * @return The reductionPeriodInBlocks.
+     */
+    @java.lang.Override
+    public long getReductionPeriodInBlocks() {
+      return reductionPeriodInBlocks_;
+    }
+
+    public static final int REDUCTION_FACTOR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reductionFactor_ = "";
+    /**
+     * <pre>
+     * reduction multiplier to execute on each period
+     * </pre>
+     *
+     * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The reductionFactor.
+     */
+    @java.lang.Override
+    public java.lang.String getReductionFactor() {
+      java.lang.Object ref = reductionFactor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reductionFactor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reduction multiplier to execute on each period
+     * </pre>
+     *
+     * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for reductionFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReductionFactorBytes() {
+      java.lang.Object ref = reductionFactor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reductionFactor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISTRIBUTION_PROPORTIONS_FIELD_NUMBER = 5;
+    private com.teritori.mint.v1beta1.MintProto.DistributionProportions distributionProportions_;
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistributionProportions() {
+      return distributionProportions_ != null;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.DistributionProportions getDistributionProportions() {
+      return distributionProportions_ == null ? com.teritori.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+      return distributionProportions_ == null ? com.teritori.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+
+    public static final int WEIGHTED_DEVELOPER_REWARDS_RECEIVERS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress> weightedDeveloperRewardsReceivers_;
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress> getWeightedDeveloperRewardsReceiversList() {
+      return weightedDeveloperRewardsReceivers_;
+    }
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder> 
+        getWeightedDeveloperRewardsReceiversOrBuilderList() {
+      return weightedDeveloperRewardsReceivers_;
+    }
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getWeightedDeveloperRewardsReceiversCount() {
+      return weightedDeveloperRewardsReceivers_.size();
+    }
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress getWeightedDeveloperRewardsReceivers(int index) {
+      return weightedDeveloperRewardsReceivers_.get(index);
+    }
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+        int index) {
+      return weightedDeveloperRewardsReceivers_.get(index);
+    }
+
+    public static final int USAGE_INCENTIVE_ADDRESS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object usageIncentiveAddress_ = "";
+    /**
+     * <pre>
+     * usage incentive address
+     * </pre>
+     *
+     * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+     * @return The usageIncentiveAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getUsageIncentiveAddress() {
+      java.lang.Object ref = usageIncentiveAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        usageIncentiveAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * usage incentive address
+     * </pre>
+     *
+     * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+     * @return The bytes for usageIncentiveAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsageIncentiveAddressBytes() {
+      java.lang.Object ref = usageIncentiveAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        usageIncentiveAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GRANTS_PROGRAM_ADDRESS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object grantsProgramAddress_ = "";
+    /**
+     * <pre>
+     * grants program address
+     * </pre>
+     *
+     * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+     * @return The grantsProgramAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getGrantsProgramAddress() {
+      java.lang.Object ref = grantsProgramAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        grantsProgramAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * grants program address
+     * </pre>
+     *
+     * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+     * @return The bytes for grantsProgramAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGrantsProgramAddressBytes() {
+      java.lang.Object ref = grantsProgramAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        grantsProgramAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEAM_RESERVE_ADDRESS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object teamReserveAddress_ = "";
+    /**
+     * <pre>
+     * team reserve funds address
+     * </pre>
+     *
+     * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+     * @return The teamReserveAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getTeamReserveAddress() {
+      java.lang.Object ref = teamReserveAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        teamReserveAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * team reserve funds address
+     * </pre>
+     *
+     * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+     * @return The bytes for teamReserveAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTeamReserveAddressBytes() {
+      java.lang.Object ref = teamReserveAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        teamReserveAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINTING_REWARDS_DISTRIBUTION_START_BLOCK_FIELD_NUMBER = 10;
+    private long mintingRewardsDistributionStartBlock_ = 0L;
+    /**
+     * <pre>
+     * start block to distribute minting rewards
+     * </pre>
+     *
+     * <code>int64 minting_rewards_distribution_start_block = 10 [json_name = "mintingRewardsDistributionStartBlock"];</code>
+     * @return The mintingRewardsDistributionStartBlock.
+     */
+    @java.lang.Override
+    public long getMintingRewardsDistributionStartBlock() {
+      return mintingRewardsDistributionStartBlock_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mintDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisBlockProvisions_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, genesisBlockProvisions_);
+      }
+      if (reductionPeriodInBlocks_ != 0L) {
+        output.writeInt64(3, reductionPeriodInBlocks_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reductionFactor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reductionFactor_);
+      }
+      if (distributionProportions_ != null) {
+        output.writeMessage(5, getDistributionProportions());
+      }
+      for (int i = 0; i < weightedDeveloperRewardsReceivers_.size(); i++) {
+        output.writeMessage(6, weightedDeveloperRewardsReceivers_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageIncentiveAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, usageIncentiveAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantsProgramAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, grantsProgramAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamReserveAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, teamReserveAddress_);
+      }
+      if (mintingRewardsDistributionStartBlock_ != 0L) {
+        output.writeInt64(10, mintingRewardsDistributionStartBlock_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mintDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisBlockProvisions_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, genesisBlockProvisions_);
+      }
+      if (reductionPeriodInBlocks_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, reductionPeriodInBlocks_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reductionFactor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reductionFactor_);
+      }
+      if (distributionProportions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getDistributionProportions());
+      }
+      for (int i = 0; i < weightedDeveloperRewardsReceivers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, weightedDeveloperRewardsReceivers_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageIncentiveAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, usageIncentiveAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantsProgramAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, grantsProgramAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamReserveAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, teamReserveAddress_);
+      }
+      if (mintingRewardsDistributionStartBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(10, mintingRewardsDistributionStartBlock_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.mint.v1beta1.MintProto.Params)) {
+        return super.equals(obj);
+      }
+      com.teritori.mint.v1beta1.MintProto.Params other = (com.teritori.mint.v1beta1.MintProto.Params) obj;
+
+      if (!getMintDenom()
+          .equals(other.getMintDenom())) return false;
+      if (!getGenesisBlockProvisions()
+          .equals(other.getGenesisBlockProvisions())) return false;
+      if (getReductionPeriodInBlocks()
+          != other.getReductionPeriodInBlocks()) return false;
+      if (!getReductionFactor()
+          .equals(other.getReductionFactor())) return false;
+      if (hasDistributionProportions() != other.hasDistributionProportions()) return false;
+      if (hasDistributionProportions()) {
+        if (!getDistributionProportions()
+            .equals(other.getDistributionProportions())) return false;
+      }
+      if (!getWeightedDeveloperRewardsReceiversList()
+          .equals(other.getWeightedDeveloperRewardsReceiversList())) return false;
+      if (!getUsageIncentiveAddress()
+          .equals(other.getUsageIncentiveAddress())) return false;
+      if (!getGrantsProgramAddress()
+          .equals(other.getGrantsProgramAddress())) return false;
+      if (!getTeamReserveAddress()
+          .equals(other.getTeamReserveAddress())) return false;
+      if (getMintingRewardsDistributionStartBlock()
+          != other.getMintingRewardsDistributionStartBlock()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINT_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getMintDenom().hashCode();
+      hash = (37 * hash) + GENESIS_BLOCK_PROVISIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getGenesisBlockProvisions().hashCode();
+      hash = (37 * hash) + REDUCTION_PERIOD_IN_BLOCKS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getReductionPeriodInBlocks());
+      hash = (37 * hash) + REDUCTION_FACTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getReductionFactor().hashCode();
+      if (hasDistributionProportions()) {
+        hash = (37 * hash) + DISTRIBUTION_PROPORTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDistributionProportions().hashCode();
+      }
+      if (getWeightedDeveloperRewardsReceiversCount() > 0) {
+        hash = (37 * hash) + WEIGHTED_DEVELOPER_REWARDS_RECEIVERS_FIELD_NUMBER;
+        hash = (53 * hash) + getWeightedDeveloperRewardsReceiversList().hashCode();
+      }
+      hash = (37 * hash) + USAGE_INCENTIVE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getUsageIncentiveAddress().hashCode();
+      hash = (37 * hash) + GRANTS_PROGRAM_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getGrantsProgramAddress().hashCode();
+      hash = (37 * hash) + TEAM_RESERVE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getTeamReserveAddress().hashCode();
+      hash = (37 * hash) + MINTING_REWARDS_DISTRIBUTION_START_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMintingRewardsDistributionStartBlock());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.mint.v1beta1.MintProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the mint module.
+     * </pre>
+     *
+     * Protobuf type {@code teritori.mint.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.mint.v1beta1.Params)
+        com.teritori.mint.v1beta1.MintProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.mint.v1beta1.MintProto.Params.class, com.teritori.mint.v1beta1.MintProto.Params.Builder.class);
+      }
+
+      // Construct using com.teritori.mint.v1beta1.MintProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintDenom_ = "";
+        genesisBlockProvisions_ = "";
+        reductionPeriodInBlocks_ = 0L;
+        reductionFactor_ = "";
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+        } else {
+          weightedDeveloperRewardsReceivers_ = null;
+          weightedDeveloperRewardsReceiversBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        usageIncentiveAddress_ = "";
+        grantsProgramAddress_ = "";
+        teamReserveAddress_ = "";
+        mintingRewardsDistributionStartBlock_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.mint.v1beta1.MintProto.internal_static_teritori_mint_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.Params getDefaultInstanceForType() {
+        return com.teritori.mint.v1beta1.MintProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.Params build() {
+        com.teritori.mint.v1beta1.MintProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.MintProto.Params buildPartial() {
+        com.teritori.mint.v1beta1.MintProto.Params result = new com.teritori.mint.v1beta1.MintProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.teritori.mint.v1beta1.MintProto.Params result) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            weightedDeveloperRewardsReceivers_ = java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.weightedDeveloperRewardsReceivers_ = weightedDeveloperRewardsReceivers_;
+        } else {
+          result.weightedDeveloperRewardsReceivers_ = weightedDeveloperRewardsReceiversBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.teritori.mint.v1beta1.MintProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintDenom_ = mintDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.genesisBlockProvisions_ = genesisBlockProvisions_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.reductionPeriodInBlocks_ = reductionPeriodInBlocks_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.reductionFactor_ = reductionFactor_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.distributionProportions_ = distributionProportionsBuilder_ == null
+              ? distributionProportions_
+              : distributionProportionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.usageIncentiveAddress_ = usageIncentiveAddress_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.grantsProgramAddress_ = grantsProgramAddress_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.teamReserveAddress_ = teamReserveAddress_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.mintingRewardsDistributionStartBlock_ = mintingRewardsDistributionStartBlock_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.mint.v1beta1.MintProto.Params) {
+          return mergeFrom((com.teritori.mint.v1beta1.MintProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.mint.v1beta1.MintProto.Params other) {
+        if (other == com.teritori.mint.v1beta1.MintProto.Params.getDefaultInstance()) return this;
+        if (!other.getMintDenom().isEmpty()) {
+          mintDenom_ = other.mintDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getGenesisBlockProvisions().isEmpty()) {
+          genesisBlockProvisions_ = other.genesisBlockProvisions_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getReductionPeriodInBlocks() != 0L) {
+          setReductionPeriodInBlocks(other.getReductionPeriodInBlocks());
+        }
+        if (!other.getReductionFactor().isEmpty()) {
+          reductionFactor_ = other.reductionFactor_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasDistributionProportions()) {
+          mergeDistributionProportions(other.getDistributionProportions());
+        }
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (!other.weightedDeveloperRewardsReceivers_.isEmpty()) {
+            if (weightedDeveloperRewardsReceivers_.isEmpty()) {
+              weightedDeveloperRewardsReceivers_ = other.weightedDeveloperRewardsReceivers_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureWeightedDeveloperRewardsReceiversIsMutable();
+              weightedDeveloperRewardsReceivers_.addAll(other.weightedDeveloperRewardsReceivers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.weightedDeveloperRewardsReceivers_.isEmpty()) {
+            if (weightedDeveloperRewardsReceiversBuilder_.isEmpty()) {
+              weightedDeveloperRewardsReceiversBuilder_.dispose();
+              weightedDeveloperRewardsReceiversBuilder_ = null;
+              weightedDeveloperRewardsReceivers_ = other.weightedDeveloperRewardsReceivers_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              weightedDeveloperRewardsReceiversBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWeightedDeveloperRewardsReceiversFieldBuilder() : null;
+            } else {
+              weightedDeveloperRewardsReceiversBuilder_.addAllMessages(other.weightedDeveloperRewardsReceivers_);
+            }
+          }
+        }
+        if (!other.getUsageIncentiveAddress().isEmpty()) {
+          usageIncentiveAddress_ = other.usageIncentiveAddress_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getGrantsProgramAddress().isEmpty()) {
+          grantsProgramAddress_ = other.grantsProgramAddress_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getTeamReserveAddress().isEmpty()) {
+          teamReserveAddress_ = other.teamReserveAddress_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (other.getMintingRewardsDistributionStartBlock() != 0L) {
+          setMintingRewardsDistributionStartBlock(other.getMintingRewardsDistributionStartBlock());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mintDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                genesisBlockProvisions_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                reductionPeriodInBlocks_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                reductionFactor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDistributionProportionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress m =
+                    input.readMessage(
+                        com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.parser(),
+                        extensionRegistry);
+                if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+                  ensureWeightedDeveloperRewardsReceiversIsMutable();
+                  weightedDeveloperRewardsReceivers_.add(m);
+                } else {
+                  weightedDeveloperRewardsReceiversBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                usageIncentiveAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                grantsProgramAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                teamReserveAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 80: {
+                mintingRewardsDistributionStartBlock_ = input.readInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mintDenom_ = "";
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The mintDenom.
+       */
+      public java.lang.String getMintDenom() {
+        java.lang.Object ref = mintDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The bytes for mintDenom.
+       */
+      public com.google.protobuf.ByteString
+          getMintDenomBytes() {
+        java.lang.Object ref = mintDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintDenom() {
+        mintDenom_ = getDefaultInstance().getMintDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The bytes for mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object genesisBlockProvisions_ = "";
+      /**
+       * <pre>
+       * block provisions from the first block
+       * </pre>
+       *
+       * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The genesisBlockProvisions.
+       */
+      public java.lang.String getGenesisBlockProvisions() {
+        java.lang.Object ref = genesisBlockProvisions_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          genesisBlockProvisions_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * block provisions from the first block
+       * </pre>
+       *
+       * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for genesisBlockProvisions.
+       */
+      public com.google.protobuf.ByteString
+          getGenesisBlockProvisionsBytes() {
+        java.lang.Object ref = genesisBlockProvisions_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          genesisBlockProvisions_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * block provisions from the first block
+       * </pre>
+       *
+       * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The genesisBlockProvisions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenesisBlockProvisions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        genesisBlockProvisions_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block provisions from the first block
+       * </pre>
+       *
+       * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGenesisBlockProvisions() {
+        genesisBlockProvisions_ = getDefaultInstance().getGenesisBlockProvisions();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block provisions from the first block
+       * </pre>
+       *
+       * <code>string genesis_block_provisions = 2 [json_name = "genesisBlockProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for genesisBlockProvisions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenesisBlockProvisionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        genesisBlockProvisions_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long reductionPeriodInBlocks_ ;
+      /**
+       * <pre>
+       * number of blocks take to reduce rewards
+       * </pre>
+       *
+       * <code>int64 reduction_period_in_blocks = 3 [json_name = "reductionPeriodInBlocks"];</code>
+       * @return The reductionPeriodInBlocks.
+       */
+      @java.lang.Override
+      public long getReductionPeriodInBlocks() {
+        return reductionPeriodInBlocks_;
+      }
+      /**
+       * <pre>
+       * number of blocks take to reduce rewards
+       * </pre>
+       *
+       * <code>int64 reduction_period_in_blocks = 3 [json_name = "reductionPeriodInBlocks"];</code>
+       * @param value The reductionPeriodInBlocks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReductionPeriodInBlocks(long value) {
+
+        reductionPeriodInBlocks_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number of blocks take to reduce rewards
+       * </pre>
+       *
+       * <code>int64 reduction_period_in_blocks = 3 [json_name = "reductionPeriodInBlocks"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReductionPeriodInBlocks() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        reductionPeriodInBlocks_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reductionFactor_ = "";
+      /**
+       * <pre>
+       * reduction multiplier to execute on each period
+       * </pre>
+       *
+       * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The reductionFactor.
+       */
+      public java.lang.String getReductionFactor() {
+        java.lang.Object ref = reductionFactor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reductionFactor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reduction multiplier to execute on each period
+       * </pre>
+       *
+       * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for reductionFactor.
+       */
+      public com.google.protobuf.ByteString
+          getReductionFactorBytes() {
+        java.lang.Object ref = reductionFactor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reductionFactor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reduction multiplier to execute on each period
+       * </pre>
+       *
+       * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The reductionFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReductionFactor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reductionFactor_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduction multiplier to execute on each period
+       * </pre>
+       *
+       * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReductionFactor() {
+        reductionFactor_ = getDefaultInstance().getReductionFactor();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduction multiplier to execute on each period
+       * </pre>
+       *
+       * <code>string reduction_factor = 4 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for reductionFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReductionFactorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reductionFactor_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.teritori.mint.v1beta1.MintProto.DistributionProportions distributionProportions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.DistributionProportions, com.teritori.mint.v1beta1.MintProto.DistributionProportions.Builder, com.teritori.mint.v1beta1.MintProto.DistributionProportionsOrBuilder> distributionProportionsBuilder_;
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return Whether the distributionProportions field is set.
+       */
+      public boolean hasDistributionProportions() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return The distributionProportions.
+       */
+      public com.teritori.mint.v1beta1.MintProto.DistributionProportions getDistributionProportions() {
+        if (distributionProportionsBuilder_ == null) {
+          return distributionProportions_ == null ? com.teritori.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        } else {
+          return distributionProportionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(com.teritori.mint.v1beta1.MintProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          distributionProportions_ = value;
+        } else {
+          distributionProportionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(
+          com.teritori.mint.v1beta1.MintProto.DistributionProportions.Builder builderForValue) {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportions_ = builderForValue.build();
+        } else {
+          distributionProportionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDistributionProportions(com.teritori.mint.v1beta1.MintProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            distributionProportions_ != null &&
+            distributionProportions_ != com.teritori.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance()) {
+            getDistributionProportionsBuilder().mergeFrom(value);
+          } else {
+            distributionProportions_ = value;
+          }
+        } else {
+          distributionProportionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDistributionProportions() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.DistributionProportions.Builder getDistributionProportionsBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getDistributionProportionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+        if (distributionProportionsBuilder_ != null) {
+          return distributionProportionsBuilder_.getMessageOrBuilder();
+        } else {
+          return distributionProportions_ == null ?
+              com.teritori.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.DistributionProportions distribution_proportions = 5 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.DistributionProportions, com.teritori.mint.v1beta1.MintProto.DistributionProportions.Builder, com.teritori.mint.v1beta1.MintProto.DistributionProportionsOrBuilder> 
+          getDistributionProportionsFieldBuilder() {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teritori.mint.v1beta1.MintProto.DistributionProportions, com.teritori.mint.v1beta1.MintProto.DistributionProportions.Builder, com.teritori.mint.v1beta1.MintProto.DistributionProportionsOrBuilder>(
+                  getDistributionProportions(),
+                  getParentForChildren(),
+                  isClean());
+          distributionProportions_ = null;
+        }
+        return distributionProportionsBuilder_;
+      }
+
+      private java.util.List<com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress> weightedDeveloperRewardsReceivers_ =
+        java.util.Collections.emptyList();
+      private void ensureWeightedDeveloperRewardsReceiversIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          weightedDeveloperRewardsReceivers_ = new java.util.ArrayList<com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress>(weightedDeveloperRewardsReceivers_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder> weightedDeveloperRewardsReceiversBuilder_;
+
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress> getWeightedDeveloperRewardsReceiversList() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public int getWeightedDeveloperRewardsReceiversCount() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.size();
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress getWeightedDeveloperRewardsReceivers(int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.get(index);
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setWeightedDeveloperRewardsReceivers(
+          int index, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.set(index, value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setWeightedDeveloperRewardsReceivers(
+          int index, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          int index, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(index, value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          int index, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllWeightedDeveloperRewardsReceivers(
+          java.lang.Iterable<? extends com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress> values) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, weightedDeveloperRewardsReceivers_);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearWeightedDeveloperRewardsReceivers() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeWeightedDeveloperRewardsReceivers(int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.remove(index);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder getWeightedDeveloperRewardsReceiversBuilder(
+          int index) {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+          int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.get(index);  } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder> 
+           getWeightedDeveloperRewardsReceiversOrBuilderList() {
+        if (weightedDeveloperRewardsReceiversBuilder_ != null) {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder addWeightedDeveloperRewardsReceiversBuilder() {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().addBuilder(
+            com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder addWeightedDeveloperRewardsReceiversBuilder(
+          int index) {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().addBuilder(
+            index, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .teritori.mint.v1beta1.MonthlyVestingAddress weighted_developer_rewards_receivers = 6 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder> 
+           getWeightedDeveloperRewardsReceiversBuilderList() {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder> 
+          getWeightedDeveloperRewardsReceiversFieldBuilder() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceiversBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddress.Builder, com.teritori.mint.v1beta1.MintProto.MonthlyVestingAddressOrBuilder>(
+                  weightedDeveloperRewardsReceivers_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          weightedDeveloperRewardsReceivers_ = null;
+        }
+        return weightedDeveloperRewardsReceiversBuilder_;
+      }
+
+      private java.lang.Object usageIncentiveAddress_ = "";
+      /**
+       * <pre>
+       * usage incentive address
+       * </pre>
+       *
+       * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+       * @return The usageIncentiveAddress.
+       */
+      public java.lang.String getUsageIncentiveAddress() {
+        java.lang.Object ref = usageIncentiveAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          usageIncentiveAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * usage incentive address
+       * </pre>
+       *
+       * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+       * @return The bytes for usageIncentiveAddress.
+       */
+      public com.google.protobuf.ByteString
+          getUsageIncentiveAddressBytes() {
+        java.lang.Object ref = usageIncentiveAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          usageIncentiveAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * usage incentive address
+       * </pre>
+       *
+       * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+       * @param value The usageIncentiveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsageIncentiveAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        usageIncentiveAddress_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * usage incentive address
+       * </pre>
+       *
+       * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsageIncentiveAddress() {
+        usageIncentiveAddress_ = getDefaultInstance().getUsageIncentiveAddress();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * usage incentive address
+       * </pre>
+       *
+       * <code>string usage_incentive_address = 7 [json_name = "usageIncentiveAddress"];</code>
+       * @param value The bytes for usageIncentiveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsageIncentiveAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        usageIncentiveAddress_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object grantsProgramAddress_ = "";
+      /**
+       * <pre>
+       * grants program address
+       * </pre>
+       *
+       * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+       * @return The grantsProgramAddress.
+       */
+      public java.lang.String getGrantsProgramAddress() {
+        java.lang.Object ref = grantsProgramAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          grantsProgramAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * grants program address
+       * </pre>
+       *
+       * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+       * @return The bytes for grantsProgramAddress.
+       */
+      public com.google.protobuf.ByteString
+          getGrantsProgramAddressBytes() {
+        java.lang.Object ref = grantsProgramAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          grantsProgramAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * grants program address
+       * </pre>
+       *
+       * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+       * @param value The grantsProgramAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGrantsProgramAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        grantsProgramAddress_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * grants program address
+       * </pre>
+       *
+       * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGrantsProgramAddress() {
+        grantsProgramAddress_ = getDefaultInstance().getGrantsProgramAddress();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * grants program address
+       * </pre>
+       *
+       * <code>string grants_program_address = 8 [json_name = "grantsProgramAddress"];</code>
+       * @param value The bytes for grantsProgramAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGrantsProgramAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        grantsProgramAddress_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object teamReserveAddress_ = "";
+      /**
+       * <pre>
+       * team reserve funds address
+       * </pre>
+       *
+       * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+       * @return The teamReserveAddress.
+       */
+      public java.lang.String getTeamReserveAddress() {
+        java.lang.Object ref = teamReserveAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          teamReserveAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * team reserve funds address
+       * </pre>
+       *
+       * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+       * @return The bytes for teamReserveAddress.
+       */
+      public com.google.protobuf.ByteString
+          getTeamReserveAddressBytes() {
+        java.lang.Object ref = teamReserveAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          teamReserveAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * team reserve funds address
+       * </pre>
+       *
+       * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+       * @param value The teamReserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTeamReserveAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        teamReserveAddress_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * team reserve funds address
+       * </pre>
+       *
+       * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTeamReserveAddress() {
+        teamReserveAddress_ = getDefaultInstance().getTeamReserveAddress();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * team reserve funds address
+       * </pre>
+       *
+       * <code>string team_reserve_address = 9 [json_name = "teamReserveAddress"];</code>
+       * @param value The bytes for teamReserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTeamReserveAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        teamReserveAddress_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private long mintingRewardsDistributionStartBlock_ ;
+      /**
+       * <pre>
+       * start block to distribute minting rewards
+       * </pre>
+       *
+       * <code>int64 minting_rewards_distribution_start_block = 10 [json_name = "mintingRewardsDistributionStartBlock"];</code>
+       * @return The mintingRewardsDistributionStartBlock.
+       */
+      @java.lang.Override
+      public long getMintingRewardsDistributionStartBlock() {
+        return mintingRewardsDistributionStartBlock_;
+      }
+      /**
+       * <pre>
+       * start block to distribute minting rewards
+       * </pre>
+       *
+       * <code>int64 minting_rewards_distribution_start_block = 10 [json_name = "mintingRewardsDistributionStartBlock"];</code>
+       * @param value The mintingRewardsDistributionStartBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintingRewardsDistributionStartBlock(long value) {
+
+        mintingRewardsDistributionStartBlock_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start block to distribute minting rewards
+       * </pre>
+       *
+       * <code>int64 minting_rewards_distribution_start_block = 10 [json_name = "mintingRewardsDistributionStartBlock"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintingRewardsDistributionStartBlock() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        mintingRewardsDistributionStartBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.mint.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.mint.v1beta1.Params)
+    private static final com.teritori.mint.v1beta1.MintProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.mint.v1beta1.MintProto.Params();
+    }
+
+    public static com.teritori.mint.v1beta1.MintProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_mint_v1beta1_Minter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_mint_v1beta1_Minter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_mint_v1beta1_TeamVestingMonthInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_mint_v1beta1_TeamVestingMonthInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_mint_v1beta1_MonthlyVestingAddress_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_mint_v1beta1_MonthlyVestingAddress_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_mint_v1beta1_DistributionProportions_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_mint_v1beta1_DistributionProportions_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_mint_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_mint_v1beta1_Params_fieldAccessorTable;
 
@@ -96,12 +5906,12 @@ public final class MintProto {
       "ddress\030\t \001(\tR\022teamReserveAddress\022V\n(mint" +
       "ing_rewards_distribution_start_block\030\n \001" +
       "(\003R$mintingRewardsDistributionStartBlock" +
-      ":\004\230\240\037\000B\315\001\n\031com.teritori.mint.v1beta1B\tMi" +
-      "ntProtoP\001Z/github.com/TERITORI/teritori-" +
-      "chain/x/mint/types\242\002\003TMX\252\002\025Teritori.Mint" +
-      ".V1beta1\312\002\025Teritori\\Mint\\V1beta1\342\002!Terit" +
-      "ori\\Mint\\V1beta1\\GPBMetadata\352\002\027Teritori:" +
-      ":Mint::V1beta1b\006proto3"
+      ":\004\230\240\037\000B\313\001\n\031com.teritori.mint.v1beta1B\tMi" +
+      "ntProtoZ/github.com/TERITORI/teritori-ch" +
+      "ain/x/mint/types\242\002\003TMX\252\002\025Teritori.Mint.V" +
+      "1beta1\312\002\025Teritori\\Mint\\V1beta1\342\002!Teritor" +
+      "i\\Mint\\V1beta1\\GPBMetadata\352\002\027Teritori::M" +
+      "int::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

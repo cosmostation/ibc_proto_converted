@@ -14,34 +14,5018 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventCreateVaultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.EventCreateVault)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    java.lang.String getCollateralType();
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    com.google.protobuf.ByteString
+        getCollateralTypeBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.EventCreateVault}
+   */
+  public static final class EventCreateVault extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.EventCreateVault)
+      EventCreateVaultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateVault.newBuilder() to construct.
+    private EventCreateVault(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateVault() {
+      sender_ = "";
+      collateralType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateVault();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCreateVault_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCreateVault_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.EventsProto.EventCreateVault.class, com.comdex.vault.v1beta1.EventsProto.EventCreateVault.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collateralType_ = "";
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    @java.lang.Override
+    public java.lang.String getCollateralType() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collateralType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollateralTypeBytes() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collateralType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.EventsProto.EventCreateVault)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.EventsProto.EventCreateVault other = (com.comdex.vault.v1beta1.EventsProto.EventCreateVault) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getCollateralType()
+          .equals(other.getCollateralType())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + COLLATERAL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCollateralType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.EventsProto.EventCreateVault prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.EventCreateVault}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.EventCreateVault)
+        com.comdex.vault.v1beta1.EventsProto.EventCreateVaultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCreateVault_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCreateVault_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.EventsProto.EventCreateVault.class, com.comdex.vault.v1beta1.EventsProto.EventCreateVault.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.EventsProto.EventCreateVault.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        collateralType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCreateVault_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventCreateVault getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.EventsProto.EventCreateVault.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventCreateVault build() {
+        com.comdex.vault.v1beta1.EventsProto.EventCreateVault result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventCreateVault buildPartial() {
+        com.comdex.vault.v1beta1.EventsProto.EventCreateVault result = new com.comdex.vault.v1beta1.EventsProto.EventCreateVault(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.EventsProto.EventCreateVault result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.collateralType_ = collateralType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.EventsProto.EventCreateVault) {
+          return mergeFrom((com.comdex.vault.v1beta1.EventsProto.EventCreateVault)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.EventsProto.EventCreateVault other) {
+        if (other == com.comdex.vault.v1beta1.EventsProto.EventCreateVault.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCollateralType().isEmpty()) {
+          collateralType_ = other.collateralType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                collateralType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collateralType_ = "";
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The collateralType.
+       */
+      public java.lang.String getCollateralType() {
+        java.lang.Object ref = collateralType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collateralType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The bytes for collateralType.
+       */
+      public com.google.protobuf.ByteString
+          getCollateralTypeBytes() {
+        java.lang.Object ref = collateralType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collateralType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollateralType() {
+        collateralType_ = getDefaultInstance().getCollateralType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The bytes for collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.EventCreateVault)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.EventCreateVault)
+    private static final com.comdex.vault.v1beta1.EventsProto.EventCreateVault DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.EventsProto.EventCreateVault();
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventCreateVault getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateVault>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateVault>() {
+      @java.lang.Override
+      public EventCreateVault parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateVault> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateVault> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.EventsProto.EventCreateVault getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventDepositCollateralOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.EventDepositCollateral)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    java.lang.String getCollateralType();
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    com.google.protobuf.ByteString
+        getCollateralTypeBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return Whether the collateral field is set.
+     */
+    boolean hasCollateral();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return The collateral.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCollateral();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCollateralOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.EventDepositCollateral}
+   */
+  public static final class EventDepositCollateral extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.EventDepositCollateral)
+      EventDepositCollateralOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventDepositCollateral.newBuilder() to construct.
+    private EventDepositCollateral(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventDepositCollateral() {
+      owner_ = "";
+      collateralType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventDepositCollateral();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDepositCollateral_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDepositCollateral_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.class, com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collateralType_ = "";
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    @java.lang.Override
+    public java.lang.String getCollateralType() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collateralType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollateralTypeBytes() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collateralType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin collateral_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return Whether the collateral field is set.
+     */
+    @java.lang.Override
+    public boolean hasCollateral() {
+      return collateral_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return The collateral.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCollateral() {
+      return collateral_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : collateral_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCollateralOrBuilder() {
+      return collateral_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : collateral_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
+      }
+      if (collateral_ != null) {
+        output.writeMessage(3, getCollateral());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
+      }
+      if (collateral_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCollateral());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral other = (com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getCollateralType()
+          .equals(other.getCollateralType())) return false;
+      if (hasCollateral() != other.hasCollateral()) return false;
+      if (hasCollateral()) {
+        if (!getCollateral()
+            .equals(other.getCollateral())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + COLLATERAL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCollateralType().hashCode();
+      if (hasCollateral()) {
+        hash = (37 * hash) + COLLATERAL_FIELD_NUMBER;
+        hash = (53 * hash) + getCollateral().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.EventDepositCollateral}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.EventDepositCollateral)
+        com.comdex.vault.v1beta1.EventsProto.EventDepositCollateralOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDepositCollateral_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDepositCollateral_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.class, com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        collateralType_ = "";
+        collateral_ = null;
+        if (collateralBuilder_ != null) {
+          collateralBuilder_.dispose();
+          collateralBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDepositCollateral_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral build() {
+        com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral buildPartial() {
+        com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral result = new com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.collateralType_ = collateralType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.collateral_ = collateralBuilder_ == null
+              ? collateral_
+              : collateralBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral) {
+          return mergeFrom((com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral other) {
+        if (other == com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCollateralType().isEmpty()) {
+          collateralType_ = other.collateralType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCollateral()) {
+          mergeCollateral(other.getCollateral());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                collateralType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCollateralFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collateralType_ = "";
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The collateralType.
+       */
+      public java.lang.String getCollateralType() {
+        java.lang.Object ref = collateralType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collateralType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The bytes for collateralType.
+       */
+      public com.google.protobuf.ByteString
+          getCollateralTypeBytes() {
+        java.lang.Object ref = collateralType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collateralType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollateralType() {
+        collateralType_ = getDefaultInstance().getCollateralType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The bytes for collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin collateral_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> collateralBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       * @return Whether the collateral field is set.
+       */
+      public boolean hasCollateral() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       * @return The collateral.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCollateral() {
+        if (collateralBuilder_ == null) {
+          return collateral_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : collateral_;
+        } else {
+          return collateralBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder setCollateral(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (collateralBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          collateral_ = value;
+        } else {
+          collateralBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder setCollateral(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (collateralBuilder_ == null) {
+          collateral_ = builderForValue.build();
+        } else {
+          collateralBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder mergeCollateral(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (collateralBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            collateral_ != null &&
+            collateral_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCollateralBuilder().mergeFrom(value);
+          } else {
+            collateral_ = value;
+          }
+        } else {
+          collateralBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder clearCollateral() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        collateral_ = null;
+        if (collateralBuilder_ != null) {
+          collateralBuilder_.dispose();
+          collateralBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCollateralBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCollateralFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCollateralOrBuilder() {
+        if (collateralBuilder_ != null) {
+          return collateralBuilder_.getMessageOrBuilder();
+        } else {
+          return collateral_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : collateral_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCollateralFieldBuilder() {
+        if (collateralBuilder_ == null) {
+          collateralBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCollateral(),
+                  getParentForChildren(),
+                  isClean());
+          collateral_ = null;
+        }
+        return collateralBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.EventDepositCollateral)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.EventDepositCollateral)
+    private static final com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral();
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventDepositCollateral>
+        PARSER = new com.google.protobuf.AbstractParser<EventDepositCollateral>() {
+      @java.lang.Override
+      public EventDepositCollateral parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventDepositCollateral> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventDepositCollateral> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventWithdrawCollateralOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.EventWithdrawCollateral)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    java.lang.String getCollateralType();
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    com.google.protobuf.ByteString
+        getCollateralTypeBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return Whether the collateral field is set.
+     */
+    boolean hasCollateral();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return The collateral.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCollateral();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCollateralOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.EventWithdrawCollateral}
+   */
+  public static final class EventWithdrawCollateral extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.EventWithdrawCollateral)
+      EventWithdrawCollateralOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventWithdrawCollateral.newBuilder() to construct.
+    private EventWithdrawCollateral(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventWithdrawCollateral() {
+      owner_ = "";
+      collateralType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventWithdrawCollateral();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventWithdrawCollateral_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventWithdrawCollateral_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.class, com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collateralType_ = "";
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    @java.lang.Override
+    public java.lang.String getCollateralType() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collateralType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollateralTypeBytes() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collateralType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin collateral_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return Whether the collateral field is set.
+     */
+    @java.lang.Override
+    public boolean hasCollateral() {
+      return collateral_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return The collateral.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCollateral() {
+      return collateral_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : collateral_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCollateralOrBuilder() {
+      return collateral_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : collateral_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
+      }
+      if (collateral_ != null) {
+        output.writeMessage(3, getCollateral());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
+      }
+      if (collateral_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCollateral());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral other = (com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getCollateralType()
+          .equals(other.getCollateralType())) return false;
+      if (hasCollateral() != other.hasCollateral()) return false;
+      if (hasCollateral()) {
+        if (!getCollateral()
+            .equals(other.getCollateral())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + COLLATERAL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCollateralType().hashCode();
+      if (hasCollateral()) {
+        hash = (37 * hash) + COLLATERAL_FIELD_NUMBER;
+        hash = (53 * hash) + getCollateral().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.EventWithdrawCollateral}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.EventWithdrawCollateral)
+        com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateralOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventWithdrawCollateral_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventWithdrawCollateral_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.class, com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        collateralType_ = "";
+        collateral_ = null;
+        if (collateralBuilder_ != null) {
+          collateralBuilder_.dispose();
+          collateralBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventWithdrawCollateral_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral build() {
+        com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral buildPartial() {
+        com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral result = new com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.collateralType_ = collateralType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.collateral_ = collateralBuilder_ == null
+              ? collateral_
+              : collateralBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral) {
+          return mergeFrom((com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral other) {
+        if (other == com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCollateralType().isEmpty()) {
+          collateralType_ = other.collateralType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCollateral()) {
+          mergeCollateral(other.getCollateral());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                collateralType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCollateralFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collateralType_ = "";
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The collateralType.
+       */
+      public java.lang.String getCollateralType() {
+        java.lang.Object ref = collateralType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collateralType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The bytes for collateralType.
+       */
+      public com.google.protobuf.ByteString
+          getCollateralTypeBytes() {
+        java.lang.Object ref = collateralType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collateralType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollateralType() {
+        collateralType_ = getDefaultInstance().getCollateralType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The bytes for collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin collateral_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> collateralBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       * @return Whether the collateral field is set.
+       */
+      public boolean hasCollateral() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       * @return The collateral.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCollateral() {
+        if (collateralBuilder_ == null) {
+          return collateral_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : collateral_;
+        } else {
+          return collateralBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder setCollateral(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (collateralBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          collateral_ = value;
+        } else {
+          collateralBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder setCollateral(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (collateralBuilder_ == null) {
+          collateral_ = builderForValue.build();
+        } else {
+          collateralBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder mergeCollateral(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (collateralBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            collateral_ != null &&
+            collateral_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCollateralBuilder().mergeFrom(value);
+          } else {
+            collateral_ = value;
+          }
+        } else {
+          collateralBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder clearCollateral() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        collateral_ = null;
+        if (collateralBuilder_ != null) {
+          collateralBuilder_.dispose();
+          collateralBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCollateralBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCollateralFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCollateralOrBuilder() {
+        if (collateralBuilder_ != null) {
+          return collateralBuilder_.getMessageOrBuilder();
+        } else {
+          return collateral_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : collateral_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCollateralFieldBuilder() {
+        if (collateralBuilder_ == null) {
+          collateralBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCollateral(),
+                  getParentForChildren(),
+                  isClean());
+          collateral_ = null;
+        }
+        return collateralBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.EventWithdrawCollateral)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.EventWithdrawCollateral)
+    private static final com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral();
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventWithdrawCollateral>
+        PARSER = new com.google.protobuf.AbstractParser<EventWithdrawCollateral>() {
+      @java.lang.Override
+      public EventWithdrawCollateral parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventWithdrawCollateral> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventWithdrawCollateral> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventDrawDebtOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.EventDrawDebt)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    java.lang.String getCollateralType();
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    com.google.protobuf.ByteString
+        getCollateralTypeBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return Whether the debt field is set.
+     */
+    boolean hasDebt();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return The debt.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDebt();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDebtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.EventDrawDebt}
+   */
+  public static final class EventDrawDebt extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.EventDrawDebt)
+      EventDrawDebtOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventDrawDebt.newBuilder() to construct.
+    private EventDrawDebt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventDrawDebt() {
+      owner_ = "";
+      collateralType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventDrawDebt();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDrawDebt_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDrawDebt_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.class, com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collateralType_ = "";
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    @java.lang.Override
+    public java.lang.String getCollateralType() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collateralType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollateralTypeBytes() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collateralType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEBT_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin debt_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return Whether the debt field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebt() {
+      return debt_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return The debt.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDebt() {
+      return debt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : debt_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDebtOrBuilder() {
+      return debt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : debt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
+      }
+      if (debt_ != null) {
+        output.writeMessage(3, getDebt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
+      }
+      if (debt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDebt());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.EventsProto.EventDrawDebt)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.EventsProto.EventDrawDebt other = (com.comdex.vault.v1beta1.EventsProto.EventDrawDebt) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getCollateralType()
+          .equals(other.getCollateralType())) return false;
+      if (hasDebt() != other.hasDebt()) return false;
+      if (hasDebt()) {
+        if (!getDebt()
+            .equals(other.getDebt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + COLLATERAL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCollateralType().hashCode();
+      if (hasDebt()) {
+        hash = (37 * hash) + DEBT_FIELD_NUMBER;
+        hash = (53 * hash) + getDebt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.EventsProto.EventDrawDebt prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.EventDrawDebt}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.EventDrawDebt)
+        com.comdex.vault.v1beta1.EventsProto.EventDrawDebtOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDrawDebt_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDrawDebt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.class, com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        collateralType_ = "";
+        debt_ = null;
+        if (debtBuilder_ != null) {
+          debtBuilder_.dispose();
+          debtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventDrawDebt_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventDrawDebt getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventDrawDebt build() {
+        com.comdex.vault.v1beta1.EventsProto.EventDrawDebt result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventDrawDebt buildPartial() {
+        com.comdex.vault.v1beta1.EventsProto.EventDrawDebt result = new com.comdex.vault.v1beta1.EventsProto.EventDrawDebt(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.EventsProto.EventDrawDebt result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.collateralType_ = collateralType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.debt_ = debtBuilder_ == null
+              ? debt_
+              : debtBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.EventsProto.EventDrawDebt) {
+          return mergeFrom((com.comdex.vault.v1beta1.EventsProto.EventDrawDebt)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.EventsProto.EventDrawDebt other) {
+        if (other == com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCollateralType().isEmpty()) {
+          collateralType_ = other.collateralType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasDebt()) {
+          mergeDebt(other.getDebt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                collateralType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDebtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collateralType_ = "";
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The collateralType.
+       */
+      public java.lang.String getCollateralType() {
+        java.lang.Object ref = collateralType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collateralType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The bytes for collateralType.
+       */
+      public com.google.protobuf.ByteString
+          getCollateralTypeBytes() {
+        java.lang.Object ref = collateralType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collateralType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollateralType() {
+        collateralType_ = getDefaultInstance().getCollateralType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The bytes for collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin debt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> debtBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       * @return Whether the debt field is set.
+       */
+      public boolean hasDebt() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       * @return The debt.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDebt() {
+        if (debtBuilder_ == null) {
+          return debt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : debt_;
+        } else {
+          return debtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder setDebt(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (debtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          debt_ = value;
+        } else {
+          debtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder setDebt(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (debtBuilder_ == null) {
+          debt_ = builderForValue.build();
+        } else {
+          debtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder mergeDebt(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (debtBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            debt_ != null &&
+            debt_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDebtBuilder().mergeFrom(value);
+          } else {
+            debt_ = value;
+          }
+        } else {
+          debtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder clearDebt() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        debt_ = null;
+        if (debtBuilder_ != null) {
+          debtBuilder_.dispose();
+          debtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDebtBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDebtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDebtOrBuilder() {
+        if (debtBuilder_ != null) {
+          return debtBuilder_.getMessageOrBuilder();
+        } else {
+          return debt_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : debt_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDebtFieldBuilder() {
+        if (debtBuilder_ == null) {
+          debtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDebt(),
+                  getParentForChildren(),
+                  isClean());
+          debt_ = null;
+        }
+        return debtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.EventDrawDebt)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.EventDrawDebt)
+    private static final com.comdex.vault.v1beta1.EventsProto.EventDrawDebt DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.EventsProto.EventDrawDebt();
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventDrawDebt getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventDrawDebt>
+        PARSER = new com.google.protobuf.AbstractParser<EventDrawDebt>() {
+      @java.lang.Override
+      public EventDrawDebt parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventDrawDebt> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventDrawDebt> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.EventsProto.EventDrawDebt getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRepayDebtOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.EventRepayDebt)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    java.lang.String getCollateralType();
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    com.google.protobuf.ByteString
+        getCollateralTypeBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return Whether the debt field is set.
+     */
+    boolean hasDebt();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return The debt.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDebt();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDebtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.EventRepayDebt}
+   */
+  public static final class EventRepayDebt extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.EventRepayDebt)
+      EventRepayDebtOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRepayDebt.newBuilder() to construct.
+    private EventRepayDebt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRepayDebt() {
+      owner_ = "";
+      collateralType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRepayDebt();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventRepayDebt_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventRepayDebt_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.class, com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collateralType_ = "";
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    @java.lang.Override
+    public java.lang.String getCollateralType() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collateralType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollateralTypeBytes() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collateralType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEBT_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin debt_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return Whether the debt field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebt() {
+      return debt_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     * @return The debt.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDebt() {
+      return debt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : debt_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDebtOrBuilder() {
+      return debt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : debt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
+      }
+      if (debt_ != null) {
+        output.writeMessage(3, getDebt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
+      }
+      if (debt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDebt());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.EventsProto.EventRepayDebt)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.EventsProto.EventRepayDebt other = (com.comdex.vault.v1beta1.EventsProto.EventRepayDebt) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getCollateralType()
+          .equals(other.getCollateralType())) return false;
+      if (hasDebt() != other.hasDebt()) return false;
+      if (hasDebt()) {
+        if (!getDebt()
+            .equals(other.getDebt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + COLLATERAL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCollateralType().hashCode();
+      if (hasDebt()) {
+        hash = (37 * hash) + DEBT_FIELD_NUMBER;
+        hash = (53 * hash) + getDebt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.EventsProto.EventRepayDebt prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.EventRepayDebt}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.EventRepayDebt)
+        com.comdex.vault.v1beta1.EventsProto.EventRepayDebtOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventRepayDebt_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventRepayDebt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.class, com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        collateralType_ = "";
+        debt_ = null;
+        if (debtBuilder_ != null) {
+          debtBuilder_.dispose();
+          debtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventRepayDebt_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventRepayDebt getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventRepayDebt build() {
+        com.comdex.vault.v1beta1.EventsProto.EventRepayDebt result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventRepayDebt buildPartial() {
+        com.comdex.vault.v1beta1.EventsProto.EventRepayDebt result = new com.comdex.vault.v1beta1.EventsProto.EventRepayDebt(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.EventsProto.EventRepayDebt result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.collateralType_ = collateralType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.debt_ = debtBuilder_ == null
+              ? debt_
+              : debtBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.EventsProto.EventRepayDebt) {
+          return mergeFrom((com.comdex.vault.v1beta1.EventsProto.EventRepayDebt)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.EventsProto.EventRepayDebt other) {
+        if (other == com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCollateralType().isEmpty()) {
+          collateralType_ = other.collateralType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasDebt()) {
+          mergeDebt(other.getDebt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                collateralType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDebtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collateralType_ = "";
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The collateralType.
+       */
+      public java.lang.String getCollateralType() {
+        java.lang.Object ref = collateralType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collateralType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The bytes for collateralType.
+       */
+      public com.google.protobuf.ByteString
+          getCollateralTypeBytes() {
+        java.lang.Object ref = collateralType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collateralType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollateralType() {
+        collateralType_ = getDefaultInstance().getCollateralType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The bytes for collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin debt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> debtBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       * @return Whether the debt field is set.
+       */
+      public boolean hasDebt() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       * @return The debt.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDebt() {
+        if (debtBuilder_ == null) {
+          return debt_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : debt_;
+        } else {
+          return debtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder setDebt(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (debtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          debt_ = value;
+        } else {
+          debtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder setDebt(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (debtBuilder_ == null) {
+          debt_ = builderForValue.build();
+        } else {
+          debtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder mergeDebt(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (debtBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            debt_ != null &&
+            debt_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDebtBuilder().mergeFrom(value);
+          } else {
+            debt_ = value;
+          }
+        } else {
+          debtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public Builder clearDebt() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        debt_ = null;
+        if (debtBuilder_ != null) {
+          debtBuilder_.dispose();
+          debtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDebtBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDebtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDebtOrBuilder() {
+        if (debtBuilder_ != null) {
+          return debtBuilder_.getMessageOrBuilder();
+        } else {
+          return debt_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : debt_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDebtFieldBuilder() {
+        if (debtBuilder_ == null) {
+          debtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDebt(),
+                  getParentForChildren(),
+                  isClean());
+          debt_ = null;
+        }
+        return debtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.EventRepayDebt)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.EventRepayDebt)
+    private static final com.comdex.vault.v1beta1.EventsProto.EventRepayDebt DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.EventsProto.EventRepayDebt();
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventRepayDebt getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRepayDebt>
+        PARSER = new com.google.protobuf.AbstractParser<EventRepayDebt>() {
+      @java.lang.Override
+      public EventRepayDebt parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRepayDebt> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRepayDebt> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.EventsProto.EventRepayDebt getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCloseVaultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.vault.v1beta1.EventCloseVault)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    java.lang.String getCollateralType();
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    com.google.protobuf.ByteString
+        getCollateralTypeBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.vault.v1beta1.EventCloseVault}
+   */
+  public static final class EventCloseVault extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.vault.v1beta1.EventCloseVault)
+      EventCloseVaultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCloseVault.newBuilder() to construct.
+    private EventCloseVault(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCloseVault() {
+      owner_ = "";
+      collateralType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCloseVault();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCloseVault_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCloseVault_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.vault.v1beta1.EventsProto.EventCloseVault.class, com.comdex.vault.v1beta1.EventsProto.EventCloseVault.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLATERAL_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collateralType_ = "";
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The collateralType.
+     */
+    @java.lang.Override
+    public java.lang.String getCollateralType() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collateralType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+     * @return The bytes for collateralType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollateralTypeBytes() {
+      java.lang.Object ref = collateralType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collateralType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.vault.v1beta1.EventsProto.EventCloseVault)) {
+        return super.equals(obj);
+      }
+      com.comdex.vault.v1beta1.EventsProto.EventCloseVault other = (com.comdex.vault.v1beta1.EventsProto.EventCloseVault) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getCollateralType()
+          .equals(other.getCollateralType())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + COLLATERAL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCollateralType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.vault.v1beta1.EventsProto.EventCloseVault prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.vault.v1beta1.EventCloseVault}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.vault.v1beta1.EventCloseVault)
+        com.comdex.vault.v1beta1.EventsProto.EventCloseVaultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCloseVault_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCloseVault_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.vault.v1beta1.EventsProto.EventCloseVault.class, com.comdex.vault.v1beta1.EventsProto.EventCloseVault.Builder.class);
+      }
+
+      // Construct using com.comdex.vault.v1beta1.EventsProto.EventCloseVault.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        collateralType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.vault.v1beta1.EventsProto.internal_static_comdex_vault_v1beta1_EventCloseVault_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventCloseVault getDefaultInstanceForType() {
+        return com.comdex.vault.v1beta1.EventsProto.EventCloseVault.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventCloseVault build() {
+        com.comdex.vault.v1beta1.EventsProto.EventCloseVault result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.vault.v1beta1.EventsProto.EventCloseVault buildPartial() {
+        com.comdex.vault.v1beta1.EventsProto.EventCloseVault result = new com.comdex.vault.v1beta1.EventsProto.EventCloseVault(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.vault.v1beta1.EventsProto.EventCloseVault result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.collateralType_ = collateralType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.vault.v1beta1.EventsProto.EventCloseVault) {
+          return mergeFrom((com.comdex.vault.v1beta1.EventsProto.EventCloseVault)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.vault.v1beta1.EventsProto.EventCloseVault other) {
+        if (other == com.comdex.vault.v1beta1.EventsProto.EventCloseVault.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCollateralType().isEmpty()) {
+          collateralType_ = other.collateralType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                collateralType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collateralType_ = "";
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The collateralType.
+       */
+      public java.lang.String getCollateralType() {
+        java.lang.Object ref = collateralType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collateralType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return The bytes for collateralType.
+       */
+      public com.google.protobuf.ByteString
+          getCollateralTypeBytes() {
+        java.lang.Object ref = collateralType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collateralType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollateralType() {
+        collateralType_ = getDefaultInstance().getCollateralType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string collateral_type = 2 [json_name = "collateralType"];</code>
+       * @param value The bytes for collateralType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollateralTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collateralType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.vault.v1beta1.EventCloseVault)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.vault.v1beta1.EventCloseVault)
+    private static final com.comdex.vault.v1beta1.EventsProto.EventCloseVault DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.vault.v1beta1.EventsProto.EventCloseVault();
+    }
+
+    public static com.comdex.vault.v1beta1.EventsProto.EventCloseVault getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCloseVault>
+        PARSER = new com.google.protobuf.AbstractParser<EventCloseVault>() {
+      @java.lang.Override
+      public EventCloseVault parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCloseVault> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCloseVault> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.vault.v1beta1.EventsProto.EventCloseVault getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_EventCreateVault_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_EventCreateVault_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_EventDepositCollateral_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_EventDepositCollateral_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_EventWithdrawCollateral_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_EventWithdrawCollateral_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_EventDrawDebt_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_EventDrawDebt_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_EventRepayDebt_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_EventRepayDebt_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_vault_v1beta1_EventCloseVault_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_vault_v1beta1_EventCloseVault_fieldAccessorTable;
 
@@ -76,12 +5060,12 @@ public final class EventsProto {
       ".base.v1beta1.CoinB\026\310\336\037\000\362\336\037\016yaml:\"paymen" +
       "t\"R\004debt\"P\n\017EventCloseVault\022\024\n\005owner\030\001 \001" +
       "(\tR\005owner\022\'\n\017collateral_type\030\002 \001(\tR\016coll" +
-      "ateralTypeB\312\001\n\030com.comdex.vault.v1beta1B" +
-      "\013EventsProtoP\001Z/github.com/comdex-offici" +
-      "al/comdex/x/vault/types\242\002\003CVX\252\002\024Comdex.V" +
-      "ault.V1beta1\312\002\024Comdex\\Vault\\V1beta1\342\002 Co" +
-      "mdex\\Vault\\V1beta1\\GPBMetadata\352\002\026Comdex:" +
-      ":Vault::V1beta1b\006proto3"
+      "ateralTypeB\310\001\n\030com.comdex.vault.v1beta1B" +
+      "\013EventsProtoZ/github.com/comdex-official" +
+      "/comdex/x/vault/types\242\002\003CVX\252\002\024Comdex.Vau" +
+      "lt.V1beta1\312\002\024Comdex\\Vault\\V1beta1\342\002 Comd" +
+      "ex\\Vault\\V1beta1\\GPBMetadata\352\002\026Comdex::V" +
+      "ault::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,9 +14,1454 @@ public final class ProviderProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ProviderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.provider.v2.Provider)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string identity = 3 [json_name = "identity"];</code>
+     * @return The identity.
+     */
+    java.lang.String getIdentity();
+    /**
+     * <code>string identity = 3 [json_name = "identity"];</code>
+     * @return The bytes for identity.
+     */
+    com.google.protobuf.ByteString
+        getIdentityBytes();
+
+    /**
+     * <code>string website = 4 [json_name = "website"];</code>
+     * @return The website.
+     */
+    java.lang.String getWebsite();
+    /**
+     * <code>string website = 4 [json_name = "website"];</code>
+     * @return The bytes for website.
+     */
+    com.google.protobuf.ByteString
+        getWebsiteBytes();
+
+    /**
+     * <code>string description = 5 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 5 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.sentinel.types.v1.StatusProto.Status getStatus();
+
+    /**
+     * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the statusAt field is set.
+     */
+    boolean hasStatusAt();
+    /**
+     * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The statusAt.
+     */
+    com.google.protobuf.Timestamp getStatusAt();
+    /**
+     * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStatusAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.provider.v2.Provider}
+   */
+  public static final class Provider extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.provider.v2.Provider)
+      ProviderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Provider.newBuilder() to construct.
+    private Provider(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Provider() {
+      address_ = "";
+      name_ = "";
+      identity_ = "";
+      website_ = "";
+      description_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Provider();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.provider.v2.ProviderProto.internal_static_sentinel_provider_v2_Provider_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.provider.v2.ProviderProto.internal_static_sentinel_provider_v2_Provider_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.provider.v2.ProviderProto.Provider.class, com.sentinel.provider.v2.ProviderProto.Provider.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDENTITY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object identity_ = "";
+    /**
+     * <code>string identity = 3 [json_name = "identity"];</code>
+     * @return The identity.
+     */
+    @java.lang.Override
+    public java.lang.String getIdentity() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        identity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string identity = 3 [json_name = "identity"];</code>
+     * @return The bytes for identity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdentityBytes() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEBSITE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object website_ = "";
+    /**
+     * <code>string website = 4 [json_name = "website"];</code>
+     * @return The website.
+     */
+    @java.lang.Override
+    public java.lang.String getWebsite() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        website_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string website = 4 [json_name = "website"];</code>
+     * @return The bytes for website.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebsiteBytes() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        website_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 5 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 5 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 6;
+    private int status_ = 0;
+    /**
+     * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.sentinel.types.v1.StatusProto.Status getStatus() {
+      com.sentinel.types.v1.StatusProto.Status result = com.sentinel.types.v1.StatusProto.Status.forNumber(status_);
+      return result == null ? com.sentinel.types.v1.StatusProto.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int STATUS_AT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp statusAt_;
+    /**
+     * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the statusAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatusAt() {
+      return statusAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The statusAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStatusAt() {
+      return statusAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : statusAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStatusAtOrBuilder() {
+      return statusAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : statusAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, identity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(website_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, website_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
+      }
+      if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, status_);
+      }
+      if (statusAt_ != null) {
+        output.writeMessage(7, getStatusAt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, identity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(website_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, website_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
+      if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, status_);
+      }
+      if (statusAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getStatusAt());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.provider.v2.ProviderProto.Provider)) {
+        return super.equals(obj);
+      }
+      com.sentinel.provider.v2.ProviderProto.Provider other = (com.sentinel.provider.v2.ProviderProto.Provider) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getIdentity()
+          .equals(other.getIdentity())) return false;
+      if (!getWebsite()
+          .equals(other.getWebsite())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (status_ != other.status_) return false;
+      if (hasStatusAt() != other.hasStatusAt()) return false;
+      if (hasStatusAt()) {
+        if (!getStatusAt()
+            .equals(other.getStatusAt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + IDENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getIdentity().hashCode();
+      hash = (37 * hash) + WEBSITE_FIELD_NUMBER;
+      hash = (53 * hash) + getWebsite().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasStatusAt()) {
+        hash = (37 * hash) + STATUS_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getStatusAt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.provider.v2.ProviderProto.Provider parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.provider.v2.ProviderProto.Provider prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.provider.v2.Provider}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.provider.v2.Provider)
+        com.sentinel.provider.v2.ProviderProto.ProviderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.provider.v2.ProviderProto.internal_static_sentinel_provider_v2_Provider_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.provider.v2.ProviderProto.internal_static_sentinel_provider_v2_Provider_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.provider.v2.ProviderProto.Provider.class, com.sentinel.provider.v2.ProviderProto.Provider.Builder.class);
+      }
+
+      // Construct using com.sentinel.provider.v2.ProviderProto.Provider.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        name_ = "";
+        identity_ = "";
+        website_ = "";
+        description_ = "";
+        status_ = 0;
+        statusAt_ = null;
+        if (statusAtBuilder_ != null) {
+          statusAtBuilder_.dispose();
+          statusAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.provider.v2.ProviderProto.internal_static_sentinel_provider_v2_Provider_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.provider.v2.ProviderProto.Provider getDefaultInstanceForType() {
+        return com.sentinel.provider.v2.ProviderProto.Provider.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.provider.v2.ProviderProto.Provider build() {
+        com.sentinel.provider.v2.ProviderProto.Provider result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.provider.v2.ProviderProto.Provider buildPartial() {
+        com.sentinel.provider.v2.ProviderProto.Provider result = new com.sentinel.provider.v2.ProviderProto.Provider(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.provider.v2.ProviderProto.Provider result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.identity_ = identity_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.website_ = website_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.statusAt_ = statusAtBuilder_ == null
+              ? statusAt_
+              : statusAtBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.provider.v2.ProviderProto.Provider) {
+          return mergeFrom((com.sentinel.provider.v2.ProviderProto.Provider)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.provider.v2.ProviderProto.Provider other) {
+        if (other == com.sentinel.provider.v2.ProviderProto.Provider.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getIdentity().isEmpty()) {
+          identity_ = other.identity_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getWebsite().isEmpty()) {
+          website_ = other.website_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasStatusAt()) {
+          mergeStatusAt(other.getStatusAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                identity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                website_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                input.readMessage(
+                    getStatusAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object identity_ = "";
+      /**
+       * <code>string identity = 3 [json_name = "identity"];</code>
+       * @return The identity.
+       */
+      public java.lang.String getIdentity() {
+        java.lang.Object ref = identity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          identity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string identity = 3 [json_name = "identity"];</code>
+       * @return The bytes for identity.
+       */
+      public com.google.protobuf.ByteString
+          getIdentityBytes() {
+        java.lang.Object ref = identity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          identity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string identity = 3 [json_name = "identity"];</code>
+       * @param value The identity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        identity_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string identity = 3 [json_name = "identity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdentity() {
+        identity_ = getDefaultInstance().getIdentity();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string identity = 3 [json_name = "identity"];</code>
+       * @param value The bytes for identity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        identity_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object website_ = "";
+      /**
+       * <code>string website = 4 [json_name = "website"];</code>
+       * @return The website.
+       */
+      public java.lang.String getWebsite() {
+        java.lang.Object ref = website_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          website_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string website = 4 [json_name = "website"];</code>
+       * @return The bytes for website.
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteBytes() {
+        java.lang.Object ref = website_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          website_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string website = 4 [json_name = "website"];</code>
+       * @param value The website to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsite(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        website_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string website = 4 [json_name = "website"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebsite() {
+        website_ = getDefaultInstance().getWebsite();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string website = 4 [json_name = "website"];</code>
+       * @param value The bytes for website to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        website_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.sentinel.types.v1.StatusProto.Status getStatus() {
+        com.sentinel.types.v1.StatusProto.Status result = com.sentinel.types.v1.StatusProto.Status.forNumber(status_);
+        return result == null ? com.sentinel.types.v1.StatusProto.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.sentinel.types.v1.StatusProto.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000020;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 6 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp statusAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> statusAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the statusAt field is set.
+       */
+      public boolean hasStatusAt() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The statusAt.
+       */
+      public com.google.protobuf.Timestamp getStatusAt() {
+        if (statusAtBuilder_ == null) {
+          return statusAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : statusAt_;
+        } else {
+          return statusAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStatusAt(com.google.protobuf.Timestamp value) {
+        if (statusAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statusAt_ = value;
+        } else {
+          statusAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStatusAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (statusAtBuilder_ == null) {
+          statusAt_ = builderForValue.build();
+        } else {
+          statusAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStatusAt(com.google.protobuf.Timestamp value) {
+        if (statusAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            statusAt_ != null &&
+            statusAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStatusAtBuilder().mergeFrom(value);
+          } else {
+            statusAt_ = value;
+          }
+        } else {
+          statusAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStatusAt() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        statusAt_ = null;
+        if (statusAtBuilder_ != null) {
+          statusAtBuilder_.dispose();
+          statusAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStatusAtBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getStatusAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStatusAtOrBuilder() {
+        if (statusAtBuilder_ != null) {
+          return statusAtBuilder_.getMessageOrBuilder();
+        } else {
+          return statusAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : statusAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStatusAtFieldBuilder() {
+        if (statusAtBuilder_ == null) {
+          statusAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStatusAt(),
+                  getParentForChildren(),
+                  isClean());
+          statusAt_ = null;
+        }
+        return statusAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.provider.v2.Provider)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.provider.v2.Provider)
+    private static final com.sentinel.provider.v2.ProviderProto.Provider DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.provider.v2.ProviderProto.Provider();
+    }
+
+    public static com.sentinel.provider.v2.ProviderProto.Provider getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Provider>
+        PARSER = new com.google.protobuf.AbstractParser<Provider>() {
+      @java.lang.Override
+      public Provider parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Provider> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Provider> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.provider.v2.ProviderProto.Provider getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_provider_v2_Provider_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_provider_v2_Provider_fieldAccessorTable;
 
@@ -38,12 +1483,12 @@ public final class ProviderProto {
       "R\013description\0221\n\006status\030\006 \001(\0162\031.sentinel" +
       ".types.v1.StatusR\006status\022A\n\tstatus_at\030\007 " +
       "\001(\0132\032.google.protobuf.TimestampB\010\310\336\037\000\220\337\037" +
-      "\001R\010statusAtB\326\001\n\030com.sentinel.provider.v2" +
-      "B\rProviderProtoP\001Z1github.com/sentinel-o" +
-      "fficial/hub/x/provider/types\242\002\003SPX\252\002\024Sen" +
-      "tinel.Provider.V2\312\002\024Sentinel\\Provider\\V2" +
-      "\342\002 Sentinel\\Provider\\V2\\GPBMetadata\352\002\026Se" +
-      "ntinel::Provider::V2\310\341\036\000\250\342\036\000b\006proto3"
+      "\001R\010statusAtB\324\001\n\030com.sentinel.provider.v2" +
+      "B\rProviderProtoZ1github.com/sentinel-off" +
+      "icial/hub/x/provider/types\242\002\003SPX\252\002\024Senti" +
+      "nel.Provider.V2\312\002\024Sentinel\\Provider\\V2\342\002" +
+      " Sentinel\\Provider\\V2\\GPBMetadata\352\002\026Sent" +
+      "inel::Provider::V2\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

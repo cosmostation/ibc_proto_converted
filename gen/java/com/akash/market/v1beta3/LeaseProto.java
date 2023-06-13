@@ -14,49 +14,6303 @@ public final class LeaseProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface LeaseIDOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.LeaseID)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+     * @return The dseq.
+     */
+    long getDseq();
+
+    /**
+     * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+     * @return The gseq.
+     */
+    int getGseq();
+
+    /**
+     * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+     * @return The oseq.
+     */
+    int getOseq();
+
+    /**
+     * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+     * @return The provider.
+     */
+    java.lang.String getProvider();
+    /**
+     * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+     * @return The bytes for provider.
+     */
+    com.google.protobuf.ByteString
+        getProviderBytes();
+  }
+  /**
+   * <pre>
+   * LeaseID stores bid details of lease
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.LeaseID}
+   */
+  public static final class LeaseID extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.LeaseID)
+      LeaseIDOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LeaseID.newBuilder() to construct.
+    private LeaseID(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LeaseID() {
+      owner_ = "";
+      provider_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LeaseID();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseID_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseID_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.LeaseID.class, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DSEQ_FIELD_NUMBER = 2;
+    private long dseq_ = 0L;
+    /**
+     * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+     * @return The dseq.
+     */
+    @java.lang.Override
+    public long getDseq() {
+      return dseq_;
+    }
+
+    public static final int GSEQ_FIELD_NUMBER = 3;
+    private int gseq_ = 0;
+    /**
+     * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+     * @return The gseq.
+     */
+    @java.lang.Override
+    public int getGseq() {
+      return gseq_;
+    }
+
+    public static final int OSEQ_FIELD_NUMBER = 4;
+    private int oseq_ = 0;
+    /**
+     * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+     * @return The oseq.
+     */
+    @java.lang.Override
+    public int getOseq() {
+      return oseq_;
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object provider_ = "";
+    /**
+     * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public java.lang.String getProvider() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        provider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+     * @return The bytes for provider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderBytes() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        provider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (dseq_ != 0L) {
+        output.writeUInt64(2, dseq_);
+      }
+      if (gseq_ != 0) {
+        output.writeUInt32(3, gseq_);
+      }
+      if (oseq_ != 0) {
+        output.writeUInt32(4, oseq_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, provider_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (dseq_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, dseq_);
+      }
+      if (gseq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, gseq_);
+      }
+      if (oseq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, oseq_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, provider_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.LeaseID)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.LeaseID other = (com.akash.market.v1beta3.LeaseProto.LeaseID) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (getDseq()
+          != other.getDseq()) return false;
+      if (getGseq()
+          != other.getGseq()) return false;
+      if (getOseq()
+          != other.getOseq()) return false;
+      if (!getProvider()
+          .equals(other.getProvider())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + DSEQ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDseq());
+      hash = (37 * hash) + GSEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getGseq();
+      hash = (37 * hash) + OSEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getOseq();
+      hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getProvider().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.LeaseID prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * LeaseID stores bid details of lease
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.LeaseID}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.LeaseID)
+        com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseID_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseID_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.LeaseID.class, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.LeaseID.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        dseq_ = 0L;
+        gseq_ = 0;
+        oseq_ = 0;
+        provider_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseID_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.LeaseID getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.LeaseID build() {
+        com.akash.market.v1beta3.LeaseProto.LeaseID result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.LeaseID buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.LeaseID result = new com.akash.market.v1beta3.LeaseProto.LeaseID(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta3.LeaseProto.LeaseID result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dseq_ = dseq_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gseq_ = gseq_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.oseq_ = oseq_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.provider_ = provider_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.LeaseID) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.LeaseID)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.LeaseID other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getDseq() != 0L) {
+          setDseq(other.getDseq());
+        }
+        if (other.getGseq() != 0) {
+          setGseq(other.getGseq());
+        }
+        if (other.getOseq() != 0) {
+          setOseq(other.getOseq());
+        }
+        if (!other.getProvider().isEmpty()) {
+          provider_ = other.provider_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                dseq_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                gseq_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                oseq_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                provider_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long dseq_ ;
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @return The dseq.
+       */
+      @java.lang.Override
+      public long getDseq() {
+        return dseq_;
+      }
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @param value The dseq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDseq(long value) {
+
+        dseq_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDseq() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dseq_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int gseq_ ;
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @return The gseq.
+       */
+      @java.lang.Override
+      public int getGseq() {
+        return gseq_;
+      }
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @param value The gseq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGseq(int value) {
+
+        gseq_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGseq() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gseq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int oseq_ ;
+      /**
+       * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+       * @return The oseq.
+       */
+      @java.lang.Override
+      public int getOseq() {
+        return oseq_;
+      }
+      /**
+       * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+       * @param value The oseq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOseq(int value) {
+
+        oseq_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOseq() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        oseq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object provider_ = "";
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @return The provider.
+       */
+      public java.lang.String getProvider() {
+        java.lang.Object ref = provider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          provider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @return The bytes for provider.
+       */
+      public com.google.protobuf.ByteString
+          getProviderBytes() {
+        java.lang.Object ref = provider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          provider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @param value The provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProvider(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        provider_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProvider() {
+        provider_ = getDefaultInstance().getProvider();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @param value The bytes for provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        provider_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.LeaseID)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.LeaseID)
+    private static final com.akash.market.v1beta3.LeaseProto.LeaseID DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.LeaseID();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.LeaseID getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LeaseID>
+        PARSER = new com.google.protobuf.AbstractParser<LeaseID>() {
+      @java.lang.Override
+      public LeaseID parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LeaseID> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LeaseID> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.LeaseID getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LeaseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.Lease)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the leaseId field is set.
+     */
+    boolean hasLeaseId();
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The leaseId.
+     */
+    com.akash.market.v1beta3.LeaseProto.LeaseID getLeaseId();
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getLeaseIdOrBuilder();
+
+    /**
+     * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    com.akash.market.v1beta3.LeaseProto.Lease.State getState();
+
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     * @return Whether the price field is set.
+     */
+    boolean hasPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     * @return The price.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPriceOrBuilder();
+
+    /**
+     * <code>int64 created_at = 4 [json_name = "createdAt"];</code>
+     * @return The createdAt.
+     */
+    long getCreatedAt();
+
+    /**
+     * <code>int64 closed_on = 5 [json_name = "closedOn"];</code>
+     * @return The closedOn.
+     */
+    long getClosedOn();
+  }
+  /**
+   * <pre>
+   * Lease stores LeaseID, state of lease and price
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.Lease}
+   */
+  public static final class Lease extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.Lease)
+      LeaseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Lease.newBuilder() to construct.
+    private Lease(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Lease() {
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Lease();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_Lease_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_Lease_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.Lease.class, com.akash.market.v1beta3.LeaseProto.Lease.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * State is an enum which refers to state of lease
+     * </pre>
+     *
+     * Protobuf enum {@code akash.market.v1beta3.Lease.State}
+     */
+    public enum State
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Prefix should start with 0 in enum. So declaring dummy state
+       * </pre>
+       *
+       * <code>invalid = 0 [(.gogoproto.enumvalue_customname) = "LeaseStateInvalid"];</code>
+       */
+      invalid(0),
+      /**
+       * <pre>
+       * LeaseActive denotes state for lease active
+       * </pre>
+       *
+       * <code>active = 1 [(.gogoproto.enumvalue_customname) = "LeaseActive"];</code>
+       */
+      active(1),
+      /**
+       * <pre>
+       * LeaseInsufficientFunds denotes state for lease insufficient_funds
+       * </pre>
+       *
+       * <code>insufficient_funds = 2 [(.gogoproto.enumvalue_customname) = "LeaseInsufficientFunds"];</code>
+       */
+      insufficient_funds(2),
+      /**
+       * <pre>
+       * LeaseClosed denotes state for lease closed
+       * </pre>
+       *
+       * <code>closed = 3 [(.gogoproto.enumvalue_customname) = "LeaseClosed"];</code>
+       */
+      closed(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Prefix should start with 0 in enum. So declaring dummy state
+       * </pre>
+       *
+       * <code>invalid = 0 [(.gogoproto.enumvalue_customname) = "LeaseStateInvalid"];</code>
+       */
+      public static final int invalid_VALUE = 0;
+      /**
+       * <pre>
+       * LeaseActive denotes state for lease active
+       * </pre>
+       *
+       * <code>active = 1 [(.gogoproto.enumvalue_customname) = "LeaseActive"];</code>
+       */
+      public static final int active_VALUE = 1;
+      /**
+       * <pre>
+       * LeaseInsufficientFunds denotes state for lease insufficient_funds
+       * </pre>
+       *
+       * <code>insufficient_funds = 2 [(.gogoproto.enumvalue_customname) = "LeaseInsufficientFunds"];</code>
+       */
+      public static final int insufficient_funds_VALUE = 2;
+      /**
+       * <pre>
+       * LeaseClosed denotes state for lease closed
+       * </pre>
+       *
+       * <code>closed = 3 [(.gogoproto.enumvalue_customname) = "LeaseClosed"];</code>
+       */
+      public static final int closed_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static State valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static State forNumber(int value) {
+        switch (value) {
+          case 0: return invalid;
+          case 1: return active;
+          case 2: return insufficient_funds;
+          case 3: return closed;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          State> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<State>() {
+              public State findValueByNumber(int number) {
+                return State.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.Lease.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final State[] VALUES = values();
+
+      public static State valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private State(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:akash.market.v1beta3.Lease.State)
+    }
+
+    public static final int LEASE_ID_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta3.LeaseProto.LeaseID leaseId_;
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the leaseId field is set.
+     */
+    @java.lang.Override
+    public boolean hasLeaseId() {
+      return leaseId_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The leaseId.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.LeaseID getLeaseId() {
+      return leaseId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : leaseId_;
+    }
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getLeaseIdOrBuilder() {
+      return leaseId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : leaseId_;
+    }
+
+    public static final int STATE_FIELD_NUMBER = 2;
+    private int state_ = 0;
+    /**
+     * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.akash.market.v1beta3.LeaseProto.Lease.State getState() {
+      com.akash.market.v1beta3.LeaseProto.Lease.State result = com.akash.market.v1beta3.LeaseProto.Lease.State.forNumber(state_);
+      return result == null ? com.akash.market.v1beta3.LeaseProto.Lease.State.UNRECOGNIZED : result;
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin price_;
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     * @return Whether the price field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrice() {
+      return price_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getPrice() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : price_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPriceOrBuilder() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : price_;
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 4;
+    private long createdAt_ = 0L;
+    /**
+     * <code>int64 created_at = 4 [json_name = "createdAt"];</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public long getCreatedAt() {
+      return createdAt_;
+    }
+
+    public static final int CLOSED_ON_FIELD_NUMBER = 5;
+    private long closedOn_ = 0L;
+    /**
+     * <code>int64 closed_on = 5 [json_name = "closedOn"];</code>
+     * @return The closedOn.
+     */
+    @java.lang.Override
+    public long getClosedOn() {
+      return closedOn_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (leaseId_ != null) {
+        output.writeMessage(1, getLeaseId());
+      }
+      if (state_ != com.akash.market.v1beta3.LeaseProto.Lease.State.invalid.getNumber()) {
+        output.writeEnum(2, state_);
+      }
+      if (price_ != null) {
+        output.writeMessage(3, getPrice());
+      }
+      if (createdAt_ != 0L) {
+        output.writeInt64(4, createdAt_);
+      }
+      if (closedOn_ != 0L) {
+        output.writeInt64(5, closedOn_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (leaseId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLeaseId());
+      }
+      if (state_ != com.akash.market.v1beta3.LeaseProto.Lease.State.invalid.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, state_);
+      }
+      if (price_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPrice());
+      }
+      if (createdAt_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, createdAt_);
+      }
+      if (closedOn_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, closedOn_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.Lease)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.Lease other = (com.akash.market.v1beta3.LeaseProto.Lease) obj;
+
+      if (hasLeaseId() != other.hasLeaseId()) return false;
+      if (hasLeaseId()) {
+        if (!getLeaseId()
+            .equals(other.getLeaseId())) return false;
+      }
+      if (state_ != other.state_) return false;
+      if (hasPrice() != other.hasPrice()) return false;
+      if (hasPrice()) {
+        if (!getPrice()
+            .equals(other.getPrice())) return false;
+      }
+      if (getCreatedAt()
+          != other.getCreatedAt()) return false;
+      if (getClosedOn()
+          != other.getClosedOn()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLeaseId()) {
+        hash = (37 * hash) + LEASE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getLeaseId().hashCode();
+      }
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      if (hasPrice()) {
+        hash = (37 * hash) + PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getPrice().hashCode();
+      }
+      hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCreatedAt());
+      hash = (37 * hash) + CLOSED_ON_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClosedOn());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.Lease parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.Lease prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Lease stores LeaseID, state of lease and price
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.Lease}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.Lease)
+        com.akash.market.v1beta3.LeaseProto.LeaseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_Lease_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_Lease_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.Lease.class, com.akash.market.v1beta3.LeaseProto.Lease.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.Lease.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        leaseId_ = null;
+        if (leaseIdBuilder_ != null) {
+          leaseIdBuilder_.dispose();
+          leaseIdBuilder_ = null;
+        }
+        state_ = 0;
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        createdAt_ = 0L;
+        closedOn_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_Lease_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.Lease getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.Lease.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.Lease build() {
+        com.akash.market.v1beta3.LeaseProto.Lease result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.Lease buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.Lease result = new com.akash.market.v1beta3.LeaseProto.Lease(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta3.LeaseProto.Lease result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.leaseId_ = leaseIdBuilder_ == null
+              ? leaseId_
+              : leaseIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.state_ = state_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.price_ = priceBuilder_ == null
+              ? price_
+              : priceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.createdAt_ = createdAt_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.closedOn_ = closedOn_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.Lease) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.Lease)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.Lease other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.Lease.getDefaultInstance()) return this;
+        if (other.hasLeaseId()) {
+          mergeLeaseId(other.getLeaseId());
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (other.hasPrice()) {
+          mergePrice(other.getPrice());
+        }
+        if (other.getCreatedAt() != 0L) {
+          setCreatedAt(other.getCreatedAt());
+        }
+        if (other.getClosedOn() != 0L) {
+          setClosedOn(other.getClosedOn());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLeaseIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                createdAt_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                closedOn_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta3.LeaseProto.LeaseID leaseId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder> leaseIdBuilder_;
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return Whether the leaseId field is set.
+       */
+      public boolean hasLeaseId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The leaseId.
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseID getLeaseId() {
+        if (leaseIdBuilder_ == null) {
+          return leaseId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : leaseId_;
+        } else {
+          return leaseIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setLeaseId(com.akash.market.v1beta3.LeaseProto.LeaseID value) {
+        if (leaseIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          leaseId_ = value;
+        } else {
+          leaseIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setLeaseId(
+          com.akash.market.v1beta3.LeaseProto.LeaseID.Builder builderForValue) {
+        if (leaseIdBuilder_ == null) {
+          leaseId_ = builderForValue.build();
+        } else {
+          leaseIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder mergeLeaseId(com.akash.market.v1beta3.LeaseProto.LeaseID value) {
+        if (leaseIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            leaseId_ != null &&
+            leaseId_ != com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance()) {
+            getLeaseIdBuilder().mergeFrom(value);
+          } else {
+            leaseId_ = value;
+          }
+        } else {
+          leaseIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder clearLeaseId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        leaseId_ = null;
+        if (leaseIdBuilder_ != null) {
+          leaseIdBuilder_.dispose();
+          leaseIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseID.Builder getLeaseIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLeaseIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getLeaseIdOrBuilder() {
+        if (leaseIdBuilder_ != null) {
+          return leaseIdBuilder_.getMessageOrBuilder();
+        } else {
+          return leaseId_ == null ?
+              com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : leaseId_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder> 
+          getLeaseIdFieldBuilder() {
+        if (leaseIdBuilder_ == null) {
+          leaseIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder>(
+                  getLeaseId(),
+                  getParentForChildren(),
+                  isClean());
+          leaseId_ = null;
+        }
+        return leaseIdBuilder_;
+      }
+
+      private int state_ = 0;
+      /**
+       * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.Lease.State getState() {
+        com.akash.market.v1beta3.LeaseProto.Lease.State result = com.akash.market.v1beta3.LeaseProto.Lease.State.forNumber(state_);
+        return result == null ? com.akash.market.v1beta3.LeaseProto.Lease.State.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.akash.market.v1beta3.LeaseProto.Lease.State value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.Lease.State state = 2 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin price_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> priceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       * @return Whether the price field is set.
+       */
+      public boolean hasPrice() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       * @return The price.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getPrice() {
+        if (priceBuilder_ == null) {
+          return price_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : price_;
+        } else {
+          return priceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       */
+      public Builder setPrice(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (priceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          price_ = value;
+        } else {
+          priceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       */
+      public Builder setPrice(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (priceBuilder_ == null) {
+          price_ = builderForValue.build();
+        } else {
+          priceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       */
+      public Builder mergePrice(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (priceBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            price_ != null &&
+            price_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getPriceBuilder().mergeFrom(value);
+          } else {
+            price_ = value;
+          }
+        } else {
+          priceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       */
+      public Builder clearPrice() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getPriceBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPriceOrBuilder() {
+        if (priceBuilder_ != null) {
+          return priceBuilder_.getMessageOrBuilder();
+        } else {
+          return price_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : price_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getPriceFieldBuilder() {
+        if (priceBuilder_ == null) {
+          priceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getPrice(),
+                  getParentForChildren(),
+                  isClean());
+          price_ = null;
+        }
+        return priceBuilder_;
+      }
+
+      private long createdAt_ ;
+      /**
+       * <code>int64 created_at = 4 [json_name = "createdAt"];</code>
+       * @return The createdAt.
+       */
+      @java.lang.Override
+      public long getCreatedAt() {
+        return createdAt_;
+      }
+      /**
+       * <code>int64 created_at = 4 [json_name = "createdAt"];</code>
+       * @param value The createdAt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedAt(long value) {
+
+        createdAt_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 created_at = 4 [json_name = "createdAt"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedAt() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        createdAt_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long closedOn_ ;
+      /**
+       * <code>int64 closed_on = 5 [json_name = "closedOn"];</code>
+       * @return The closedOn.
+       */
+      @java.lang.Override
+      public long getClosedOn() {
+        return closedOn_;
+      }
+      /**
+       * <code>int64 closed_on = 5 [json_name = "closedOn"];</code>
+       * @param value The closedOn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClosedOn(long value) {
+
+        closedOn_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 closed_on = 5 [json_name = "closedOn"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClosedOn() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        closedOn_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.Lease)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.Lease)
+    private static final com.akash.market.v1beta3.LeaseProto.Lease DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.Lease();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.Lease getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Lease>
+        PARSER = new com.google.protobuf.AbstractParser<Lease>() {
+      @java.lang.Override
+      public Lease parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Lease> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Lease> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.Lease getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LeaseFiltersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.LeaseFilters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+     * @return The dseq.
+     */
+    long getDseq();
+
+    /**
+     * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+     * @return The gseq.
+     */
+    int getGseq();
+
+    /**
+     * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+     * @return The oseq.
+     */
+    int getOseq();
+
+    /**
+     * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+     * @return The provider.
+     */
+    java.lang.String getProvider();
+    /**
+     * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+     * @return The bytes for provider.
+     */
+    com.google.protobuf.ByteString
+        getProviderBytes();
+
+    /**
+     * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    java.lang.String getState();
+    /**
+     * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The bytes for state.
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
+  }
+  /**
+   * <pre>
+   * LeaseFilters defines flags for lease list filter
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.LeaseFilters}
+   */
+  public static final class LeaseFilters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.LeaseFilters)
+      LeaseFiltersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LeaseFilters.newBuilder() to construct.
+    private LeaseFilters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LeaseFilters() {
+      owner_ = "";
+      provider_ = "";
+      state_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LeaseFilters();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseFilters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseFilters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.LeaseFilters.class, com.akash.market.v1beta3.LeaseProto.LeaseFilters.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DSEQ_FIELD_NUMBER = 2;
+    private long dseq_ = 0L;
+    /**
+     * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+     * @return The dseq.
+     */
+    @java.lang.Override
+    public long getDseq() {
+      return dseq_;
+    }
+
+    public static final int GSEQ_FIELD_NUMBER = 3;
+    private int gseq_ = 0;
+    /**
+     * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+     * @return The gseq.
+     */
+    @java.lang.Override
+    public int getGseq() {
+      return gseq_;
+    }
+
+    public static final int OSEQ_FIELD_NUMBER = 4;
+    private int oseq_ = 0;
+    /**
+     * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+     * @return The oseq.
+     */
+    @java.lang.Override
+    public int getOseq() {
+      return oseq_;
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object provider_ = "";
+    /**
+     * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public java.lang.String getProvider() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        provider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+     * @return The bytes for provider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderBytes() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        provider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object state_ = "";
+    /**
+     * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The bytes for state.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (dseq_ != 0L) {
+        output.writeUInt64(2, dseq_);
+      }
+      if (gseq_ != 0) {
+        output.writeUInt32(3, gseq_);
+      }
+      if (oseq_ != 0) {
+        output.writeUInt32(4, oseq_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, provider_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, state_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (dseq_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, dseq_);
+      }
+      if (gseq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, gseq_);
+      }
+      if (oseq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, oseq_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, provider_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, state_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.LeaseFilters)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.LeaseFilters other = (com.akash.market.v1beta3.LeaseProto.LeaseFilters) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (getDseq()
+          != other.getDseq()) return false;
+      if (getGseq()
+          != other.getGseq()) return false;
+      if (getOseq()
+          != other.getOseq()) return false;
+      if (!getProvider()
+          .equals(other.getProvider())) return false;
+      if (!getState()
+          .equals(other.getState())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + DSEQ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDseq());
+      hash = (37 * hash) + GSEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getGseq();
+      hash = (37 * hash) + OSEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getOseq();
+      hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getProvider().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.LeaseFilters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * LeaseFilters defines flags for lease list filter
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.LeaseFilters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.LeaseFilters)
+        com.akash.market.v1beta3.LeaseProto.LeaseFiltersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseFilters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseFilters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.LeaseFilters.class, com.akash.market.v1beta3.LeaseProto.LeaseFilters.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.LeaseFilters.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        dseq_ = 0L;
+        gseq_ = 0;
+        oseq_ = 0;
+        provider_ = "";
+        state_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_LeaseFilters_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.LeaseFilters getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.LeaseFilters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.LeaseFilters build() {
+        com.akash.market.v1beta3.LeaseProto.LeaseFilters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.LeaseFilters buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.LeaseFilters result = new com.akash.market.v1beta3.LeaseProto.LeaseFilters(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta3.LeaseProto.LeaseFilters result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dseq_ = dseq_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gseq_ = gseq_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.oseq_ = oseq_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.provider_ = provider_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.state_ = state_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.LeaseFilters) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.LeaseFilters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.LeaseFilters other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.LeaseFilters.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getDseq() != 0L) {
+          setDseq(other.getDseq());
+        }
+        if (other.getGseq() != 0) {
+          setGseq(other.getGseq());
+        }
+        if (other.getOseq() != 0) {
+          setOseq(other.getOseq());
+        }
+        if (!other.getProvider().isEmpty()) {
+          provider_ = other.provider_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                dseq_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                gseq_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                oseq_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                provider_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                state_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long dseq_ ;
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @return The dseq.
+       */
+      @java.lang.Override
+      public long getDseq() {
+        return dseq_;
+      }
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @param value The dseq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDseq(long value) {
+
+        dseq_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDseq() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dseq_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int gseq_ ;
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @return The gseq.
+       */
+      @java.lang.Override
+      public int getGseq() {
+        return gseq_;
+      }
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @param value The gseq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGseq(int value) {
+
+        gseq_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGseq() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gseq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int oseq_ ;
+      /**
+       * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+       * @return The oseq.
+       */
+      @java.lang.Override
+      public int getOseq() {
+        return oseq_;
+      }
+      /**
+       * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+       * @param value The oseq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOseq(int value) {
+
+        oseq_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 oseq = 4 [json_name = "oseq", (.gogoproto.customname) = "OSeq", (.gogoproto.jsontag) = "oseq", (.gogoproto.moretags) = "yaml:&#92;"oseq&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOseq() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        oseq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object provider_ = "";
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @return The provider.
+       */
+      public java.lang.String getProvider() {
+        java.lang.Object ref = provider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          provider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @return The bytes for provider.
+       */
+      public com.google.protobuf.ByteString
+          getProviderBytes() {
+        java.lang.Object ref = provider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          provider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @param value The provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProvider(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        provider_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProvider() {
+        provider_ = getDefaultInstance().getProvider();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 5 [json_name = "provider", (.gogoproto.jsontag) = "provider", (.gogoproto.moretags) = "yaml:&#92;"provider&#92;""];</code>
+       * @param value The bytes for provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        provider_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object state_ = "";
+      /**
+       * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The state.
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The bytes for state.
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        state_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        state_ = getDefaultInstance().getState();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 6 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @param value The bytes for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        state_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.LeaseFilters)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.LeaseFilters)
+    private static final com.akash.market.v1beta3.LeaseProto.LeaseFilters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.LeaseFilters();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.LeaseFilters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LeaseFilters>
+        PARSER = new com.google.protobuf.AbstractParser<LeaseFilters>() {
+      @java.lang.Override
+      public LeaseFilters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LeaseFilters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LeaseFilters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.LeaseFilters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateLeaseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.MsgCreateLease)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the bidId field is set.
+     */
+    boolean hasBidId();
+    /**
+     * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The bidId.
+     */
+    com.akash.market.v1beta3.BidProto.BidID getBidId();
+    /**
+     * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    com.akash.market.v1beta3.BidProto.BidIDOrBuilder getBidIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgCreateLease is sent to create a lease
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.MsgCreateLease}
+   */
+  public static final class MsgCreateLease extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.MsgCreateLease)
+      MsgCreateLeaseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateLease.newBuilder() to construct.
+    private MsgCreateLease(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateLease() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateLease();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLease_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLease_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.MsgCreateLease.class, com.akash.market.v1beta3.LeaseProto.MsgCreateLease.Builder.class);
+    }
+
+    public static final int BID_ID_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta3.BidProto.BidID bidId_;
+    /**
+     * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the bidId field is set.
+     */
+    @java.lang.Override
+    public boolean hasBidId() {
+      return bidId_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The bidId.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta3.BidProto.BidID getBidId() {
+      return bidId_ == null ? com.akash.market.v1beta3.BidProto.BidID.getDefaultInstance() : bidId_;
+    }
+    /**
+     * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta3.BidProto.BidIDOrBuilder getBidIdOrBuilder() {
+      return bidId_ == null ? com.akash.market.v1beta3.BidProto.BidID.getDefaultInstance() : bidId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (bidId_ != null) {
+        output.writeMessage(1, getBidId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (bidId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBidId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.MsgCreateLease)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.MsgCreateLease other = (com.akash.market.v1beta3.LeaseProto.MsgCreateLease) obj;
+
+      if (hasBidId() != other.hasBidId()) return false;
+      if (hasBidId()) {
+        if (!getBidId()
+            .equals(other.getBidId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBidId()) {
+        hash = (37 * hash) + BID_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getBidId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.MsgCreateLease prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateLease is sent to create a lease
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.MsgCreateLease}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.MsgCreateLease)
+        com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLease_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLease_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.MsgCreateLease.class, com.akash.market.v1beta3.LeaseProto.MsgCreateLease.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.MsgCreateLease.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bidId_ = null;
+        if (bidIdBuilder_ != null) {
+          bidIdBuilder_.dispose();
+          bidIdBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLease_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCreateLease getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.MsgCreateLease.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCreateLease build() {
+        com.akash.market.v1beta3.LeaseProto.MsgCreateLease result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCreateLease buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.MsgCreateLease result = new com.akash.market.v1beta3.LeaseProto.MsgCreateLease(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta3.LeaseProto.MsgCreateLease result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bidId_ = bidIdBuilder_ == null
+              ? bidId_
+              : bidIdBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.MsgCreateLease) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.MsgCreateLease)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.MsgCreateLease other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.MsgCreateLease.getDefaultInstance()) return this;
+        if (other.hasBidId()) {
+          mergeBidId(other.getBidId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBidIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta3.BidProto.BidID bidId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta3.BidProto.BidID, com.akash.market.v1beta3.BidProto.BidID.Builder, com.akash.market.v1beta3.BidProto.BidIDOrBuilder> bidIdBuilder_;
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return Whether the bidId field is set.
+       */
+      public boolean hasBidId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The bidId.
+       */
+      public com.akash.market.v1beta3.BidProto.BidID getBidId() {
+        if (bidIdBuilder_ == null) {
+          return bidId_ == null ? com.akash.market.v1beta3.BidProto.BidID.getDefaultInstance() : bidId_;
+        } else {
+          return bidIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setBidId(com.akash.market.v1beta3.BidProto.BidID value) {
+        if (bidIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bidId_ = value;
+        } else {
+          bidIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setBidId(
+          com.akash.market.v1beta3.BidProto.BidID.Builder builderForValue) {
+        if (bidIdBuilder_ == null) {
+          bidId_ = builderForValue.build();
+        } else {
+          bidIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder mergeBidId(com.akash.market.v1beta3.BidProto.BidID value) {
+        if (bidIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            bidId_ != null &&
+            bidId_ != com.akash.market.v1beta3.BidProto.BidID.getDefaultInstance()) {
+            getBidIdBuilder().mergeFrom(value);
+          } else {
+            bidId_ = value;
+          }
+        } else {
+          bidIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder clearBidId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bidId_ = null;
+        if (bidIdBuilder_ != null) {
+          bidIdBuilder_.dispose();
+          bidIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.market.v1beta3.BidProto.BidID.Builder getBidIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBidIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.market.v1beta3.BidProto.BidIDOrBuilder getBidIdOrBuilder() {
+        if (bidIdBuilder_ != null) {
+          return bidIdBuilder_.getMessageOrBuilder();
+        } else {
+          return bidId_ == null ?
+              com.akash.market.v1beta3.BidProto.BidID.getDefaultInstance() : bidId_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta3.BidProto.BidID, com.akash.market.v1beta3.BidProto.BidID.Builder, com.akash.market.v1beta3.BidProto.BidIDOrBuilder> 
+          getBidIdFieldBuilder() {
+        if (bidIdBuilder_ == null) {
+          bidIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta3.BidProto.BidID, com.akash.market.v1beta3.BidProto.BidID.Builder, com.akash.market.v1beta3.BidProto.BidIDOrBuilder>(
+                  getBidId(),
+                  getParentForChildren(),
+                  isClean());
+          bidId_ = null;
+        }
+        return bidIdBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.MsgCreateLease)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.MsgCreateLease)
+    private static final com.akash.market.v1beta3.LeaseProto.MsgCreateLease DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.MsgCreateLease();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLease getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateLease>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateLease>() {
+      @java.lang.Override
+      public MsgCreateLease parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateLease> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateLease> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.MsgCreateLease getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateLeaseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.MsgCreateLeaseResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateLeaseResponse is the response from creating a lease
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.MsgCreateLeaseResponse}
+   */
+  public static final class MsgCreateLeaseResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.MsgCreateLeaseResponse)
+      MsgCreateLeaseResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateLeaseResponse.newBuilder() to construct.
+    private MsgCreateLeaseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateLeaseResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateLeaseResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLeaseResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLeaseResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse.class, com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse other = (com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateLeaseResponse is the response from creating a lease
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.MsgCreateLeaseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.MsgCreateLeaseResponse)
+        com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLeaseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLeaseResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse.class, com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCreateLeaseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse build() {
+        com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse result = new com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.MsgCreateLeaseResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.MsgCreateLeaseResponse)
+    private static final com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateLeaseResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateLeaseResponse>() {
+      @java.lang.Override
+      public MsgCreateLeaseResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateLeaseResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateLeaseResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.MsgCreateLeaseResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWithdrawLeaseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.MsgWithdrawLease)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the bidId field is set.
+     */
+    boolean hasBidId();
+    /**
+     * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The bidId.
+     */
+    com.akash.market.v1beta3.LeaseProto.LeaseID getBidId();
+    /**
+     * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getBidIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgWithdrawLease defines an SDK message for closing bid
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.MsgWithdrawLease}
+   */
+  public static final class MsgWithdrawLease extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.MsgWithdrawLease)
+      MsgWithdrawLeaseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWithdrawLease.newBuilder() to construct.
+    private MsgWithdrawLease(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWithdrawLease() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWithdrawLease();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLease_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLease_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease.class, com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease.Builder.class);
+    }
+
+    public static final int BID_ID_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta3.LeaseProto.LeaseID bidId_;
+    /**
+     * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the bidId field is set.
+     */
+    @java.lang.Override
+    public boolean hasBidId() {
+      return bidId_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The bidId.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.LeaseID getBidId() {
+      return bidId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : bidId_;
+    }
+    /**
+     * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getBidIdOrBuilder() {
+      return bidId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : bidId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (bidId_ != null) {
+        output.writeMessage(1, getBidId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (bidId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBidId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease other = (com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease) obj;
+
+      if (hasBidId() != other.hasBidId()) return false;
+      if (hasBidId()) {
+        if (!getBidId()
+            .equals(other.getBidId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBidId()) {
+        hash = (37 * hash) + BID_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getBidId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgWithdrawLease defines an SDK message for closing bid
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.MsgWithdrawLease}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.MsgWithdrawLease)
+        com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLease_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLease_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease.class, com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bidId_ = null;
+        if (bidIdBuilder_ != null) {
+          bidIdBuilder_.dispose();
+          bidIdBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLease_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease build() {
+        com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease result = new com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bidId_ = bidIdBuilder_ == null
+              ? bidId_
+              : bidIdBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease.getDefaultInstance()) return this;
+        if (other.hasBidId()) {
+          mergeBidId(other.getBidId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBidIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta3.LeaseProto.LeaseID bidId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder> bidIdBuilder_;
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return Whether the bidId field is set.
+       */
+      public boolean hasBidId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The bidId.
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseID getBidId() {
+        if (bidIdBuilder_ == null) {
+          return bidId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : bidId_;
+        } else {
+          return bidIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setBidId(com.akash.market.v1beta3.LeaseProto.LeaseID value) {
+        if (bidIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bidId_ = value;
+        } else {
+          bidIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setBidId(
+          com.akash.market.v1beta3.LeaseProto.LeaseID.Builder builderForValue) {
+        if (bidIdBuilder_ == null) {
+          bidId_ = builderForValue.build();
+        } else {
+          bidIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder mergeBidId(com.akash.market.v1beta3.LeaseProto.LeaseID value) {
+        if (bidIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            bidId_ != null &&
+            bidId_ != com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance()) {
+            getBidIdBuilder().mergeFrom(value);
+          } else {
+            bidId_ = value;
+          }
+        } else {
+          bidIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder clearBidId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bidId_ = null;
+        if (bidIdBuilder_ != null) {
+          bidIdBuilder_.dispose();
+          bidIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseID.Builder getBidIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBidIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getBidIdOrBuilder() {
+        if (bidIdBuilder_ != null) {
+          return bidIdBuilder_.getMessageOrBuilder();
+        } else {
+          return bidId_ == null ?
+              com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : bidId_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder> 
+          getBidIdFieldBuilder() {
+        if (bidIdBuilder_ == null) {
+          bidIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder>(
+                  getBidId(),
+                  getParentForChildren(),
+                  isClean());
+          bidId_ = null;
+        }
+        return bidIdBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.MsgWithdrawLease)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.MsgWithdrawLease)
+    private static final com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWithdrawLease>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWithdrawLease>() {
+      @java.lang.Override
+      public MsgWithdrawLease parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWithdrawLease> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWithdrawLease> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.MsgWithdrawLease getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWithdrawLeaseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.MsgWithdrawLeaseResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgWithdrawLeaseResponse defines the Msg/WithdrawLease response type.
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.MsgWithdrawLeaseResponse}
+   */
+  public static final class MsgWithdrawLeaseResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.MsgWithdrawLeaseResponse)
+      MsgWithdrawLeaseResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWithdrawLeaseResponse.newBuilder() to construct.
+    private MsgWithdrawLeaseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWithdrawLeaseResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWithdrawLeaseResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLeaseResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLeaseResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse.class, com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse other = (com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgWithdrawLeaseResponse defines the Msg/WithdrawLease response type.
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.MsgWithdrawLeaseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.MsgWithdrawLeaseResponse)
+        com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLeaseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLeaseResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse.class, com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgWithdrawLeaseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse build() {
+        com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse result = new com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.MsgWithdrawLeaseResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.MsgWithdrawLeaseResponse)
+    private static final com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWithdrawLeaseResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWithdrawLeaseResponse>() {
+      @java.lang.Override
+      public MsgWithdrawLeaseResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWithdrawLeaseResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWithdrawLeaseResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.MsgWithdrawLeaseResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCloseLeaseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.MsgCloseLease)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the leaseId field is set.
+     */
+    boolean hasLeaseId();
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The leaseId.
+     */
+    com.akash.market.v1beta3.LeaseProto.LeaseID getLeaseId();
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getLeaseIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgCloseLease defines an SDK message for closing order
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.MsgCloseLease}
+   */
+  public static final class MsgCloseLease extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.MsgCloseLease)
+      MsgCloseLeaseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCloseLease.newBuilder() to construct.
+    private MsgCloseLease(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCloseLease() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCloseLease();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLease_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLease_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.MsgCloseLease.class, com.akash.market.v1beta3.LeaseProto.MsgCloseLease.Builder.class);
+    }
+
+    public static final int LEASE_ID_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta3.LeaseProto.LeaseID leaseId_;
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the leaseId field is set.
+     */
+    @java.lang.Override
+    public boolean hasLeaseId() {
+      return leaseId_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The leaseId.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.LeaseID getLeaseId() {
+      return leaseId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : leaseId_;
+    }
+    /**
+     * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getLeaseIdOrBuilder() {
+      return leaseId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : leaseId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (leaseId_ != null) {
+        output.writeMessage(1, getLeaseId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (leaseId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLeaseId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.MsgCloseLease)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.MsgCloseLease other = (com.akash.market.v1beta3.LeaseProto.MsgCloseLease) obj;
+
+      if (hasLeaseId() != other.hasLeaseId()) return false;
+      if (hasLeaseId()) {
+        if (!getLeaseId()
+            .equals(other.getLeaseId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLeaseId()) {
+        hash = (37 * hash) + LEASE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getLeaseId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.MsgCloseLease prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCloseLease defines an SDK message for closing order
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.MsgCloseLease}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.MsgCloseLease)
+        com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLease_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLease_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.MsgCloseLease.class, com.akash.market.v1beta3.LeaseProto.MsgCloseLease.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.MsgCloseLease.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        leaseId_ = null;
+        if (leaseIdBuilder_ != null) {
+          leaseIdBuilder_.dispose();
+          leaseIdBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLease_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCloseLease getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.MsgCloseLease.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCloseLease build() {
+        com.akash.market.v1beta3.LeaseProto.MsgCloseLease result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCloseLease buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.MsgCloseLease result = new com.akash.market.v1beta3.LeaseProto.MsgCloseLease(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta3.LeaseProto.MsgCloseLease result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.leaseId_ = leaseIdBuilder_ == null
+              ? leaseId_
+              : leaseIdBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.MsgCloseLease) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.MsgCloseLease)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.MsgCloseLease other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.MsgCloseLease.getDefaultInstance()) return this;
+        if (other.hasLeaseId()) {
+          mergeLeaseId(other.getLeaseId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLeaseIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta3.LeaseProto.LeaseID leaseId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder> leaseIdBuilder_;
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return Whether the leaseId field is set.
+       */
+      public boolean hasLeaseId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The leaseId.
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseID getLeaseId() {
+        if (leaseIdBuilder_ == null) {
+          return leaseId_ == null ? com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : leaseId_;
+        } else {
+          return leaseIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setLeaseId(com.akash.market.v1beta3.LeaseProto.LeaseID value) {
+        if (leaseIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          leaseId_ = value;
+        } else {
+          leaseIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setLeaseId(
+          com.akash.market.v1beta3.LeaseProto.LeaseID.Builder builderForValue) {
+        if (leaseIdBuilder_ == null) {
+          leaseId_ = builderForValue.build();
+        } else {
+          leaseIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder mergeLeaseId(com.akash.market.v1beta3.LeaseProto.LeaseID value) {
+        if (leaseIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            leaseId_ != null &&
+            leaseId_ != com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance()) {
+            getLeaseIdBuilder().mergeFrom(value);
+          } else {
+            leaseId_ = value;
+          }
+        } else {
+          leaseIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder clearLeaseId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        leaseId_ = null;
+        if (leaseIdBuilder_ != null) {
+          leaseIdBuilder_.dispose();
+          leaseIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseID.Builder getLeaseIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLeaseIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder getLeaseIdOrBuilder() {
+        if (leaseIdBuilder_ != null) {
+          return leaseIdBuilder_.getMessageOrBuilder();
+        } else {
+          return leaseId_ == null ?
+              com.akash.market.v1beta3.LeaseProto.LeaseID.getDefaultInstance() : leaseId_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta3.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder> 
+          getLeaseIdFieldBuilder() {
+        if (leaseIdBuilder_ == null) {
+          leaseIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta3.LeaseProto.LeaseID, com.akash.market.v1beta3.LeaseProto.LeaseID.Builder, com.akash.market.v1beta3.LeaseProto.LeaseIDOrBuilder>(
+                  getLeaseId(),
+                  getParentForChildren(),
+                  isClean());
+          leaseId_ = null;
+        }
+        return leaseIdBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.MsgCloseLease)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.MsgCloseLease)
+    private static final com.akash.market.v1beta3.LeaseProto.MsgCloseLease DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.MsgCloseLease();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLease getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCloseLease>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCloseLease>() {
+      @java.lang.Override
+      public MsgCloseLease parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCloseLease> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCloseLease> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.MsgCloseLease getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCloseLeaseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta3.MsgCloseLeaseResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCloseLeaseResponse defines the Msg/CloseLease response type.
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta3.MsgCloseLeaseResponse}
+   */
+  public static final class MsgCloseLeaseResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta3.MsgCloseLeaseResponse)
+      MsgCloseLeaseResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCloseLeaseResponse.newBuilder() to construct.
+    private MsgCloseLeaseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCloseLeaseResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCloseLeaseResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLeaseResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLeaseResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse.class, com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse other = (com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCloseLeaseResponse defines the Msg/CloseLease response type.
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta3.MsgCloseLeaseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta3.MsgCloseLeaseResponse)
+        com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLeaseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLeaseResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse.class, com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta3.LeaseProto.internal_static_akash_market_v1beta3_MsgCloseLeaseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse build() {
+        com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse buildPartial() {
+        com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse result = new com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse) {
+          return mergeFrom((com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse other) {
+        if (other == com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta3.MsgCloseLeaseResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta3.MsgCloseLeaseResponse)
+    private static final com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse();
+    }
+
+    public static com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCloseLeaseResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCloseLeaseResponse>() {
+      @java.lang.Override
+      public MsgCloseLeaseResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCloseLeaseResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCloseLeaseResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta3.LeaseProto.MsgCloseLeaseResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_LeaseID_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_LeaseID_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_Lease_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_Lease_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_LeaseFilters_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_LeaseFilters_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_MsgCreateLease_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_MsgCreateLease_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_MsgCreateLeaseResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_MsgCreateLeaseResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_MsgWithdrawLease_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_MsgWithdrawLease_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_MsgWithdrawLeaseResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_MsgWithdrawLeaseResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_MsgCloseLease_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_MsgCloseLease_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta3_MsgCloseLeaseResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta3_MsgCloseLeaseResponse_fieldAccessorTable;
 
@@ -110,13 +6364,12 @@ public final class LeaseProto {
       "\rMsgCloseLease\022\\\n\010lease_id\030\001 \001(\0132\035.akash" +
       ".market.v1beta3.LeaseIDB\"\310\336\037\000\342\336\037\007LeaseID" +
       "\352\336\037\002id\362\336\037\tyaml:\"id\"R\007leaseId:\004\350\240\037\000\"\027\n\025Ms" +
-      "gCloseLeaseResponseB\323\001\n\030com.akash.market" +
-      ".v1beta3B\nLeaseProtoP\001Z9github.com/akash" +
-      "-network/akash-api/go/node/market/v1beta" +
-      "3\242\002\003AMX\252\002\024Akash.Market.V1beta3\312\002\024Akash\\M" +
-      "arket\\V1beta3\342\002 Akash\\Market\\V1beta3\\GPB" +
-      "Metadata\352\002\026Akash::Market::V1beta3b\006proto" +
-      "3"
+      "gCloseLeaseResponseB\321\001\n\030com.akash.market" +
+      ".v1beta3B\nLeaseProtoZ9github.com/akash-n" +
+      "etwork/akash-api/go/node/market/v1beta3\242" +
+      "\002\003AMX\252\002\024Akash.Market.V1beta3\312\002\024Akash\\Mar" +
+      "ket\\V1beta3\342\002 Akash\\Market\\V1beta3\\GPBMe" +
+      "tadata\352\002\026Akash::Market::V1beta3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

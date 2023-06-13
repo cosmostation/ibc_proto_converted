@@ -14,14 +14,2683 @@ public final class MintProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.mint.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * mint_denom defines denomination of coin to be minted
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    java.lang.String getMintDenom();
+    /**
+     * <pre>
+     * mint_denom defines denomination of coin to be minted
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    com.google.protobuf.ByteString
+        getMintDenomBytes();
+
+    /**
+     * <pre>
+     * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+     * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+     * Therefore, it is recommended to specify a separate address depending on usage.
+     * </pre>
+     *
+     * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+     * @return The mintPoolAddress.
+     */
+    java.lang.String getMintPoolAddress();
+    /**
+     * <pre>
+     * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+     * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+     * Therefore, it is recommended to specify a separate address depending on usage.
+     * </pre>
+     *
+     * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+     * @return The bytes for mintPoolAddress.
+     */
+    com.google.protobuf.ByteString
+        getMintPoolAddressBytes();
+
+    /**
+     * <pre>
+     * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+     * it is used for maximum block duration when calculating block inflation
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the blockTimeThreshold field is set.
+     */
+    boolean hasBlockTimeThreshold();
+    /**
+     * <pre>
+     * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+     * it is used for maximum block duration when calculating block inflation
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The blockTimeThreshold.
+     */
+    com.google.protobuf.Duration getBlockTimeThreshold();
+    /**
+     * <pre>
+     * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+     * it is used for maximum block duration when calculating block inflation
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getBlockTimeThresholdOrBuilder();
+
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.mint.v1beta1.MintProto.InflationSchedule> 
+        getInflationSchedulesList();
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.mint.v1beta1.MintProto.InflationSchedule getInflationSchedules(int index);
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    int getInflationSchedulesCount();
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder> 
+        getInflationSchedulesOrBuilderList();
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder getInflationSchedulesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the mint module.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.mint.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.mint.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      mintDenom_ = "";
+      mintPoolAddress_ = "";
+      inflationSchedules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.mint.v1beta1.MintProto.Params.class, com.crescent.mint.v1beta1.MintProto.Params.Builder.class);
+    }
+
+    public static final int MINT_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintDenom_ = "";
+    /**
+     * <pre>
+     * mint_denom defines denomination of coin to be minted
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getMintDenom() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * mint_denom defines denomination of coin to be minted
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintDenomBytes() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINT_POOL_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintPoolAddress_ = "";
+    /**
+     * <pre>
+     * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+     * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+     * Therefore, it is recommended to specify a separate address depending on usage.
+     * </pre>
+     *
+     * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+     * @return The mintPoolAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getMintPoolAddress() {
+      java.lang.Object ref = mintPoolAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintPoolAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+     * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+     * Therefore, it is recommended to specify a separate address depending on usage.
+     * </pre>
+     *
+     * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+     * @return The bytes for mintPoolAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintPoolAddressBytes() {
+      java.lang.Object ref = mintPoolAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintPoolAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BLOCK_TIME_THRESHOLD_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration blockTimeThreshold_;
+    /**
+     * <pre>
+     * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+     * it is used for maximum block duration when calculating block inflation
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the blockTimeThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlockTimeThreshold() {
+      return blockTimeThreshold_ != null;
+    }
+    /**
+     * <pre>
+     * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+     * it is used for maximum block duration when calculating block inflation
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The blockTimeThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getBlockTimeThreshold() {
+      return blockTimeThreshold_ == null ? com.google.protobuf.Duration.getDefaultInstance() : blockTimeThreshold_;
+    }
+    /**
+     * <pre>
+     * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+     * it is used for maximum block duration when calculating block inflation
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getBlockTimeThresholdOrBuilder() {
+      return blockTimeThreshold_ == null ? com.google.protobuf.Duration.getDefaultInstance() : blockTimeThreshold_;
+    }
+
+    public static final int INFLATION_SCHEDULES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.mint.v1beta1.MintProto.InflationSchedule> inflationSchedules_;
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.mint.v1beta1.MintProto.InflationSchedule> getInflationSchedulesList() {
+      return inflationSchedules_;
+    }
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder> 
+        getInflationSchedulesOrBuilderList() {
+      return inflationSchedules_;
+    }
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getInflationSchedulesCount() {
+      return inflationSchedules_.size();
+    }
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.mint.v1beta1.MintProto.InflationSchedule getInflationSchedules(int index) {
+      return inflationSchedules_.get(index);
+    }
+    /**
+     * <pre>
+     * inflation_schedules defines a list of inflation schedules
+     * </pre>
+     *
+     * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder getInflationSchedulesOrBuilder(
+        int index) {
+      return inflationSchedules_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mintDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintPoolAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mintPoolAddress_);
+      }
+      if (blockTimeThreshold_ != null) {
+        output.writeMessage(3, getBlockTimeThreshold());
+      }
+      for (int i = 0; i < inflationSchedules_.size(); i++) {
+        output.writeMessage(4, inflationSchedules_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mintDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintPoolAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mintPoolAddress_);
+      }
+      if (blockTimeThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBlockTimeThreshold());
+      }
+      for (int i = 0; i < inflationSchedules_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, inflationSchedules_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.mint.v1beta1.MintProto.Params)) {
+        return super.equals(obj);
+      }
+      com.crescent.mint.v1beta1.MintProto.Params other = (com.crescent.mint.v1beta1.MintProto.Params) obj;
+
+      if (!getMintDenom()
+          .equals(other.getMintDenom())) return false;
+      if (!getMintPoolAddress()
+          .equals(other.getMintPoolAddress())) return false;
+      if (hasBlockTimeThreshold() != other.hasBlockTimeThreshold()) return false;
+      if (hasBlockTimeThreshold()) {
+        if (!getBlockTimeThreshold()
+            .equals(other.getBlockTimeThreshold())) return false;
+      }
+      if (!getInflationSchedulesList()
+          .equals(other.getInflationSchedulesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINT_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getMintDenom().hashCode();
+      hash = (37 * hash) + MINT_POOL_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getMintPoolAddress().hashCode();
+      if (hasBlockTimeThreshold()) {
+        hash = (37 * hash) + BLOCK_TIME_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getBlockTimeThreshold().hashCode();
+      }
+      if (getInflationSchedulesCount() > 0) {
+        hash = (37 * hash) + INFLATION_SCHEDULES_FIELD_NUMBER;
+        hash = (53 * hash) + getInflationSchedulesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.mint.v1beta1.MintProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.mint.v1beta1.MintProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.mint.v1beta1.MintProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the mint module.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.mint.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.mint.v1beta1.Params)
+        com.crescent.mint.v1beta1.MintProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.mint.v1beta1.MintProto.Params.class, com.crescent.mint.v1beta1.MintProto.Params.Builder.class);
+      }
+
+      // Construct using com.crescent.mint.v1beta1.MintProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintDenom_ = "";
+        mintPoolAddress_ = "";
+        blockTimeThreshold_ = null;
+        if (blockTimeThresholdBuilder_ != null) {
+          blockTimeThresholdBuilder_.dispose();
+          blockTimeThresholdBuilder_ = null;
+        }
+        if (inflationSchedulesBuilder_ == null) {
+          inflationSchedules_ = java.util.Collections.emptyList();
+        } else {
+          inflationSchedules_ = null;
+          inflationSchedulesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.MintProto.Params getDefaultInstanceForType() {
+        return com.crescent.mint.v1beta1.MintProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.MintProto.Params build() {
+        com.crescent.mint.v1beta1.MintProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.MintProto.Params buildPartial() {
+        com.crescent.mint.v1beta1.MintProto.Params result = new com.crescent.mint.v1beta1.MintProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.mint.v1beta1.MintProto.Params result) {
+        if (inflationSchedulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            inflationSchedules_ = java.util.Collections.unmodifiableList(inflationSchedules_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.inflationSchedules_ = inflationSchedules_;
+        } else {
+          result.inflationSchedules_ = inflationSchedulesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.mint.v1beta1.MintProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintDenom_ = mintDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.mintPoolAddress_ = mintPoolAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.blockTimeThreshold_ = blockTimeThresholdBuilder_ == null
+              ? blockTimeThreshold_
+              : blockTimeThresholdBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.mint.v1beta1.MintProto.Params) {
+          return mergeFrom((com.crescent.mint.v1beta1.MintProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.mint.v1beta1.MintProto.Params other) {
+        if (other == com.crescent.mint.v1beta1.MintProto.Params.getDefaultInstance()) return this;
+        if (!other.getMintDenom().isEmpty()) {
+          mintDenom_ = other.mintDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMintPoolAddress().isEmpty()) {
+          mintPoolAddress_ = other.mintPoolAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasBlockTimeThreshold()) {
+          mergeBlockTimeThreshold(other.getBlockTimeThreshold());
+        }
+        if (inflationSchedulesBuilder_ == null) {
+          if (!other.inflationSchedules_.isEmpty()) {
+            if (inflationSchedules_.isEmpty()) {
+              inflationSchedules_ = other.inflationSchedules_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureInflationSchedulesIsMutable();
+              inflationSchedules_.addAll(other.inflationSchedules_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inflationSchedules_.isEmpty()) {
+            if (inflationSchedulesBuilder_.isEmpty()) {
+              inflationSchedulesBuilder_.dispose();
+              inflationSchedulesBuilder_ = null;
+              inflationSchedules_ = other.inflationSchedules_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              inflationSchedulesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInflationSchedulesFieldBuilder() : null;
+            } else {
+              inflationSchedulesBuilder_.addAllMessages(other.inflationSchedules_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mintDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                mintPoolAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getBlockTimeThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.crescent.mint.v1beta1.MintProto.InflationSchedule m =
+                    input.readMessage(
+                        com.crescent.mint.v1beta1.MintProto.InflationSchedule.parser(),
+                        extensionRegistry);
+                if (inflationSchedulesBuilder_ == null) {
+                  ensureInflationSchedulesIsMutable();
+                  inflationSchedules_.add(m);
+                } else {
+                  inflationSchedulesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mintDenom_ = "";
+      /**
+       * <pre>
+       * mint_denom defines denomination of coin to be minted
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The mintDenom.
+       */
+      public java.lang.String getMintDenom() {
+        java.lang.Object ref = mintDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * mint_denom defines denomination of coin to be minted
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The bytes for mintDenom.
+       */
+      public com.google.protobuf.ByteString
+          getMintDenomBytes() {
+        java.lang.Object ref = mintDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * mint_denom defines denomination of coin to be minted
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mint_denom defines denomination of coin to be minted
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintDenom() {
+        mintDenom_ = getDefaultInstance().getMintDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mint_denom defines denomination of coin to be minted
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The bytes for mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mintPoolAddress_ = "";
+      /**
+       * <pre>
+       * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+       * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+       * Therefore, it is recommended to specify a separate address depending on usage.
+       * </pre>
+       *
+       * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+       * @return The mintPoolAddress.
+       */
+      public java.lang.String getMintPoolAddress() {
+        java.lang.Object ref = mintPoolAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintPoolAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+       * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+       * Therefore, it is recommended to specify a separate address depending on usage.
+       * </pre>
+       *
+       * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+       * @return The bytes for mintPoolAddress.
+       */
+      public com.google.protobuf.ByteString
+          getMintPoolAddressBytes() {
+        java.lang.Object ref = mintPoolAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintPoolAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+       * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+       * Therefore, it is recommended to specify a separate address depending on usage.
+       * </pre>
+       *
+       * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+       * @param value The mintPoolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintPoolAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintPoolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+       * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+       * Therefore, it is recommended to specify a separate address depending on usage.
+       * </pre>
+       *
+       * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintPoolAddress() {
+        mintPoolAddress_ = getDefaultInstance().getMintPoolAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mint_pool_address defines the address where inflation will be minted. The default is FeeCollector,
+       * but if it is set to FeeCollector, minted inflation could be mixed together with collected tx fees.
+       * Therefore, it is recommended to specify a separate address depending on usage.
+       * </pre>
+       *
+       * <code>string mint_pool_address = 2 [json_name = "mintPoolAddress"];</code>
+       * @param value The bytes for mintPoolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintPoolAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintPoolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration blockTimeThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> blockTimeThresholdBuilder_;
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the blockTimeThreshold field is set.
+       */
+      public boolean hasBlockTimeThreshold() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The blockTimeThreshold.
+       */
+      public com.google.protobuf.Duration getBlockTimeThreshold() {
+        if (blockTimeThresholdBuilder_ == null) {
+          return blockTimeThreshold_ == null ? com.google.protobuf.Duration.getDefaultInstance() : blockTimeThreshold_;
+        } else {
+          return blockTimeThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setBlockTimeThreshold(com.google.protobuf.Duration value) {
+        if (blockTimeThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blockTimeThreshold_ = value;
+        } else {
+          blockTimeThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setBlockTimeThreshold(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (blockTimeThresholdBuilder_ == null) {
+          blockTimeThreshold_ = builderForValue.build();
+        } else {
+          blockTimeThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeBlockTimeThreshold(com.google.protobuf.Duration value) {
+        if (blockTimeThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            blockTimeThreshold_ != null &&
+            blockTimeThreshold_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getBlockTimeThresholdBuilder().mergeFrom(value);
+          } else {
+            blockTimeThreshold_ = value;
+          }
+        } else {
+          blockTimeThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearBlockTimeThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        blockTimeThreshold_ = null;
+        if (blockTimeThresholdBuilder_ != null) {
+          blockTimeThresholdBuilder_.dispose();
+          blockTimeThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getBlockTimeThresholdBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBlockTimeThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getBlockTimeThresholdOrBuilder() {
+        if (blockTimeThresholdBuilder_ != null) {
+          return blockTimeThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return blockTimeThreshold_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : blockTimeThreshold_;
+        }
+      }
+      /**
+       * <pre>
+       * block_time_threshold defines block time threshold to prevent from any inflationary manipulation attacks
+       * it is used for maximum block duration when calculating block inflation
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration block_time_threshold = 3 [json_name = "blockTimeThreshold", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getBlockTimeThresholdFieldBuilder() {
+        if (blockTimeThresholdBuilder_ == null) {
+          blockTimeThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getBlockTimeThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          blockTimeThreshold_ = null;
+        }
+        return blockTimeThresholdBuilder_;
+      }
+
+      private java.util.List<com.crescent.mint.v1beta1.MintProto.InflationSchedule> inflationSchedules_ =
+        java.util.Collections.emptyList();
+      private void ensureInflationSchedulesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          inflationSchedules_ = new java.util.ArrayList<com.crescent.mint.v1beta1.MintProto.InflationSchedule>(inflationSchedules_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.mint.v1beta1.MintProto.InflationSchedule, com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder, com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder> inflationSchedulesBuilder_;
+
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.mint.v1beta1.MintProto.InflationSchedule> getInflationSchedulesList() {
+        if (inflationSchedulesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inflationSchedules_);
+        } else {
+          return inflationSchedulesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public int getInflationSchedulesCount() {
+        if (inflationSchedulesBuilder_ == null) {
+          return inflationSchedules_.size();
+        } else {
+          return inflationSchedulesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.mint.v1beta1.MintProto.InflationSchedule getInflationSchedules(int index) {
+        if (inflationSchedulesBuilder_ == null) {
+          return inflationSchedules_.get(index);
+        } else {
+          return inflationSchedulesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInflationSchedules(
+          int index, com.crescent.mint.v1beta1.MintProto.InflationSchedule value) {
+        if (inflationSchedulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInflationSchedulesIsMutable();
+          inflationSchedules_.set(index, value);
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInflationSchedules(
+          int index, com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder builderForValue) {
+        if (inflationSchedulesBuilder_ == null) {
+          ensureInflationSchedulesIsMutable();
+          inflationSchedules_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addInflationSchedules(com.crescent.mint.v1beta1.MintProto.InflationSchedule value) {
+        if (inflationSchedulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInflationSchedulesIsMutable();
+          inflationSchedules_.add(value);
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addInflationSchedules(
+          int index, com.crescent.mint.v1beta1.MintProto.InflationSchedule value) {
+        if (inflationSchedulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInflationSchedulesIsMutable();
+          inflationSchedules_.add(index, value);
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addInflationSchedules(
+          com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder builderForValue) {
+        if (inflationSchedulesBuilder_ == null) {
+          ensureInflationSchedulesIsMutable();
+          inflationSchedules_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addInflationSchedules(
+          int index, com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder builderForValue) {
+        if (inflationSchedulesBuilder_ == null) {
+          ensureInflationSchedulesIsMutable();
+          inflationSchedules_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllInflationSchedules(
+          java.lang.Iterable<? extends com.crescent.mint.v1beta1.MintProto.InflationSchedule> values) {
+        if (inflationSchedulesBuilder_ == null) {
+          ensureInflationSchedulesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inflationSchedules_);
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearInflationSchedules() {
+        if (inflationSchedulesBuilder_ == null) {
+          inflationSchedules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeInflationSchedules(int index) {
+        if (inflationSchedulesBuilder_ == null) {
+          ensureInflationSchedulesIsMutable();
+          inflationSchedules_.remove(index);
+          onChanged();
+        } else {
+          inflationSchedulesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder getInflationSchedulesBuilder(
+          int index) {
+        return getInflationSchedulesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder getInflationSchedulesOrBuilder(
+          int index) {
+        if (inflationSchedulesBuilder_ == null) {
+          return inflationSchedules_.get(index);  } else {
+          return inflationSchedulesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder> 
+           getInflationSchedulesOrBuilderList() {
+        if (inflationSchedulesBuilder_ != null) {
+          return inflationSchedulesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inflationSchedules_);
+        }
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder addInflationSchedulesBuilder() {
+        return getInflationSchedulesFieldBuilder().addBuilder(
+            com.crescent.mint.v1beta1.MintProto.InflationSchedule.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder addInflationSchedulesBuilder(
+          int index) {
+        return getInflationSchedulesFieldBuilder().addBuilder(
+            index, com.crescent.mint.v1beta1.MintProto.InflationSchedule.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * inflation_schedules defines a list of inflation schedules
+       * </pre>
+       *
+       * <code>repeated .crescent.mint.v1beta1.InflationSchedule inflation_schedules = 4 [json_name = "inflationSchedules", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder> 
+           getInflationSchedulesBuilderList() {
+        return getInflationSchedulesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.mint.v1beta1.MintProto.InflationSchedule, com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder, com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder> 
+          getInflationSchedulesFieldBuilder() {
+        if (inflationSchedulesBuilder_ == null) {
+          inflationSchedulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.mint.v1beta1.MintProto.InflationSchedule, com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder, com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder>(
+                  inflationSchedules_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inflationSchedules_ = null;
+        }
+        return inflationSchedulesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.mint.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.mint.v1beta1.Params)
+    private static final com.crescent.mint.v1beta1.MintProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.mint.v1beta1.MintProto.Params();
+    }
+
+    public static com.crescent.mint.v1beta1.MintProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.mint.v1beta1.MintProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InflationScheduleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.mint.v1beta1.InflationSchedule)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * start_time defines the start date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time defines the start date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time defines the start date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * end_time defines the end date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * end_time defines the end date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <pre>
+     * end_time defines the end date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <pre>
+     * amount defines the total amount of inflation for the schedule
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <pre>
+     * amount defines the total amount of inflation for the schedule
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * <pre>
+   * InflationSchedule defines the start and end time of the inflation period, and the amount of inflation during that
+   * period.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.mint.v1beta1.InflationSchedule}
+   */
+  public static final class InflationSchedule extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.mint.v1beta1.InflationSchedule)
+      InflationScheduleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InflationSchedule.newBuilder() to construct.
+    private InflationSchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InflationSchedule() {
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InflationSchedule();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_InflationSchedule_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_InflationSchedule_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.mint.v1beta1.MintProto.InflationSchedule.class, com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder.class);
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time defines the start date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time defines the start date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time defines the start date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * end_time defines the end date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <pre>
+     * end_time defines the end date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * end_time defines the end date time for the inflation schedule
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <pre>
+     * amount defines the total amount of inflation for the schedule
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * amount defines the total amount of inflation for the schedule
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startTime_ != null) {
+        output.writeMessage(1, getStartTime());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(2, getEndTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStartTime());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEndTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.mint.v1beta1.MintProto.InflationSchedule)) {
+        return super.equals(obj);
+      }
+      com.crescent.mint.v1beta1.MintProto.InflationSchedule other = (com.crescent.mint.v1beta1.MintProto.InflationSchedule) obj;
+
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.mint.v1beta1.MintProto.InflationSchedule prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * InflationSchedule defines the start and end time of the inflation period, and the amount of inflation during that
+     * period.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.mint.v1beta1.InflationSchedule}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.mint.v1beta1.InflationSchedule)
+        com.crescent.mint.v1beta1.MintProto.InflationScheduleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_InflationSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_InflationSchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.mint.v1beta1.MintProto.InflationSchedule.class, com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder.class);
+      }
+
+      // Construct using com.crescent.mint.v1beta1.MintProto.InflationSchedule.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.mint.v1beta1.MintProto.internal_static_crescent_mint_v1beta1_InflationSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.MintProto.InflationSchedule getDefaultInstanceForType() {
+        return com.crescent.mint.v1beta1.MintProto.InflationSchedule.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.MintProto.InflationSchedule build() {
+        com.crescent.mint.v1beta1.MintProto.InflationSchedule result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.mint.v1beta1.MintProto.InflationSchedule buildPartial() {
+        com.crescent.mint.v1beta1.MintProto.InflationSchedule result = new com.crescent.mint.v1beta1.MintProto.InflationSchedule(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.mint.v1beta1.MintProto.InflationSchedule result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.mint.v1beta1.MintProto.InflationSchedule) {
+          return mergeFrom((com.crescent.mint.v1beta1.MintProto.InflationSchedule)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.mint.v1beta1.MintProto.InflationSchedule other) {
+        if (other == com.crescent.mint.v1beta1.MintProto.InflationSchedule.getDefaultInstance()) return this;
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time defines the start date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <pre>
+       * end_time defines the end date time for the inflation schedule
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <pre>
+       * amount defines the total amount of inflation for the schedule
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount defines the total amount of inflation for the schedule
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount defines the total amount of inflation for the schedule
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount defines the total amount of inflation for the schedule
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount defines the total amount of inflation for the schedule
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.mint.v1beta1.InflationSchedule)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.mint.v1beta1.InflationSchedule)
+    private static final com.crescent.mint.v1beta1.MintProto.InflationSchedule DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.mint.v1beta1.MintProto.InflationSchedule();
+    }
+
+    public static com.crescent.mint.v1beta1.MintProto.InflationSchedule getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InflationSchedule>
+        PARSER = new com.google.protobuf.AbstractParser<InflationSchedule>() {
+      @java.lang.Override
+      public InflationSchedule parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InflationSchedule> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InflationSchedule> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.mint.v1beta1.MintProto.InflationSchedule getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_mint_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_mint_v1beta1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_mint_v1beta1_InflationSchedule_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_mint_v1beta1_InflationSchedule_fieldAccessorTable;
 
@@ -50,12 +2719,12 @@ public final class MintProto {
       "uf.TimestampB\033\310\336\037\000\362\336\037\017yaml:\"end_time\"\220\337\037" +
       "\001R\007endTime\022F\n\006amount\030\003 \001(\tB.\310\336\037\000\332\336\037&gith" +
       "ub.com/cosmos/cosmos-sdk/types.IntR\006amou" +
-      "ntB\322\001\n\031com.crescent.mint.v1beta1B\tMintPr" +
-      "otoP\001Z4github.com/crescent-network/cresc" +
-      "ent/v5/x/mint/types\242\002\003CMX\252\002\025Crescent.Min" +
-      "t.V1beta1\312\002\025Crescent\\Mint\\V1beta1\342\002!Cres" +
-      "cent\\Mint\\V1beta1\\GPBMetadata\352\002\027Crescent" +
-      "::Mint::V1beta1b\006proto3"
+      "ntB\320\001\n\031com.crescent.mint.v1beta1B\tMintPr" +
+      "otoZ4github.com/crescent-network/crescen" +
+      "t/v5/x/mint/types\242\002\003CMX\252\002\025Crescent.Mint." +
+      "V1beta1\312\002\025Crescent\\Mint\\V1beta1\342\002!Cresce" +
+      "nt\\Mint\\V1beta1\\GPBMetadata\352\002\027Crescent::" +
+      "Mint::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,19 +14,1102 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datadeal.v2alpha1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    int getDealsCount();
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    boolean containsDeals(
+        long key);
+    /**
+     * Use {@link #getDealsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>
+    getDeals();
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>
+    getDealsMap();
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    /* nullable */
+com.panacea.datadeal.v2alpha1.DealProto.Deal getDealsOrDefault(
+        long key,
+        /* nullable */
+com.panacea.datadeal.v2alpha1.DealProto.Deal defaultValue);
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha1.DealProto.Deal getDealsOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataCertsCount();
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    boolean containsDataCerts(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataCertsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>
+    getDataCerts();
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>
+    getDataCertsMap();
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    /* nullable */
+com.panacea.datadeal.v2alpha1.TxProto.DataCert getDataCertsOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.panacea.datadeal.v2alpha1.TxProto.DataCert defaultValue);
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha1.TxProto.DataCert getDataCertsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>uint64 next_deal_number = 3 [json_name = "nextDealNumber"];</code>
+     * @return The nextDealNumber.
+     */
+    long getNextDealNumber();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the datadeal module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datadeal.v2alpha1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datadeal.v2alpha1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datadeal.v2alpha1.GenesisProto.internal_static_panacea_datadeal_v2alpha1_GenesisState_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetDeals();
+        case 2:
+          return internalGetDataCerts();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datadeal.v2alpha1.GenesisProto.internal_static_panacea_datadeal_v2alpha1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState.class, com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int DEALS_FIELD_NUMBER = 1;
+    private static final class DealsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>newDefaultInstance(
+                  com.panacea.datadeal.v2alpha1.GenesisProto.internal_static_panacea_datadeal_v2alpha1_GenesisState_DealsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.panacea.datadeal.v2alpha1.DealProto.Deal.getDefaultInstance());
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> deals_;
+    private com.google.protobuf.MapField<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>
+    internalGetDeals() {
+      if (deals_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            DealsDefaultEntryHolder.defaultEntry);
+      }
+      return deals_;
+    }
+    public int getDealsCount() {
+      return internalGetDeals().getMap().size();
+    }
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public boolean containsDeals(
+        long key) {
+
+      return internalGetDeals().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getDealsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> getDeals() {
+      return getDealsMap();
+    }
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> getDealsMap() {
+      return internalGetDeals().getMap();
+    }
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.panacea.datadeal.v2alpha1.DealProto.Deal getDealsOrDefault(
+        long key,
+        /* nullable */
+com.panacea.datadeal.v2alpha1.DealProto.Deal defaultValue) {
+
+      java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> map =
+          internalGetDeals().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha1.DealProto.Deal getDealsOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> map =
+          internalGetDeals().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int DATA_CERTS_FIELD_NUMBER = 2;
+    private static final class DataCertsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>newDefaultInstance(
+                  com.panacea.datadeal.v2alpha1.GenesisProto.internal_static_panacea_datadeal_v2alpha1_GenesisState_DataCertsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.panacea.datadeal.v2alpha1.TxProto.DataCert.getDefaultInstance());
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> dataCerts_;
+    private com.google.protobuf.MapField<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>
+    internalGetDataCerts() {
+      if (dataCerts_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            DataCertsDefaultEntryHolder.defaultEntry);
+      }
+      return dataCerts_;
+    }
+    public int getDataCertsCount() {
+      return internalGetDataCerts().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public boolean containsDataCerts(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetDataCerts().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataCertsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> getDataCerts() {
+      return getDataCertsMap();
+    }
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> getDataCertsMap() {
+      return internalGetDataCerts().getMap();
+    }
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.panacea.datadeal.v2alpha1.TxProto.DataCert getDataCertsOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.panacea.datadeal.v2alpha1.TxProto.DataCert defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> map =
+          internalGetDataCerts().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha1.TxProto.DataCert getDataCertsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> map =
+          internalGetDataCerts().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int NEXT_DEAL_NUMBER_FIELD_NUMBER = 3;
+    private long nextDealNumber_ = 0L;
+    /**
+     * <code>uint64 next_deal_number = 3 [json_name = "nextDealNumber"];</code>
+     * @return The nextDealNumber.
+     */
+    @java.lang.Override
+    public long getNextDealNumber() {
+      return nextDealNumber_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeLongMapTo(
+          output,
+          internalGetDeals(),
+          DealsDefaultEntryHolder.defaultEntry,
+          1);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetDataCerts(),
+          DataCertsDefaultEntryHolder.defaultEntry,
+          2);
+      if (nextDealNumber_ != 0L) {
+        output.writeUInt64(3, nextDealNumber_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> entry
+           : internalGetDeals().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>
+        deals__ = DealsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, deals__);
+      }
+      for (java.util.Map.Entry<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> entry
+           : internalGetDataCerts().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>
+        dataCerts__ = DataCertsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, dataCerts__);
+      }
+      if (nextDealNumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, nextDealNumber_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState other = (com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState) obj;
+
+      if (!internalGetDeals().equals(
+          other.internalGetDeals())) return false;
+      if (!internalGetDataCerts().equals(
+          other.internalGetDataCerts())) return false;
+      if (getNextDealNumber()
+          != other.getNextDealNumber()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetDeals().getMap().isEmpty()) {
+        hash = (37 * hash) + DEALS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetDeals().hashCode();
+      }
+      if (!internalGetDataCerts().getMap().isEmpty()) {
+        hash = (37 * hash) + DATA_CERTS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetDataCerts().hashCode();
+      }
+      hash = (37 * hash) + NEXT_DEAL_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNextDealNumber());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the datadeal module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datadeal.v2alpha1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datadeal.v2alpha1.GenesisState)
+        com.panacea.datadeal.v2alpha1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datadeal.v2alpha1.GenesisProto.internal_static_panacea_datadeal_v2alpha1_GenesisState_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetDeals();
+          case 2:
+            return internalGetDataCerts();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableDeals();
+          case 2:
+            return internalGetMutableDataCerts();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datadeal.v2alpha1.GenesisProto.internal_static_panacea_datadeal_v2alpha1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState.class, com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        internalGetMutableDeals().clear();
+        internalGetMutableDataCerts().clear();
+        nextDealNumber_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datadeal.v2alpha1.GenesisProto.internal_static_panacea_datadeal_v2alpha1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState build() {
+        com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState buildPartial() {
+        com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState result = new com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.deals_ = internalGetDeals();
+          result.deals_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dataCerts_ = internalGetDataCerts();
+          result.dataCerts_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nextDealNumber_ = nextDealNumber_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState) {
+          return mergeFrom((com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState other) {
+        if (other == com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        internalGetMutableDeals().mergeFrom(
+            other.internalGetDeals());
+        bitField0_ |= 0x00000001;
+        internalGetMutableDataCerts().mergeFrom(
+            other.internalGetDataCerts());
+        bitField0_ |= 0x00000002;
+        if (other.getNextDealNumber() != 0L) {
+          setNextDealNumber(other.getNextDealNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>
+                deals__ = input.readMessage(
+                    DealsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableDeals().getMutableMap().put(
+                    deals__.getKey(), deals__.getValue());
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.google.protobuf.MapEntry<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>
+                dataCerts__ = input.readMessage(
+                    DataCertsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableDataCerts().getMutableMap().put(
+                    dataCerts__.getKey(), dataCerts__.getValue());
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                nextDealNumber_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> deals_;
+      private com.google.protobuf.MapField<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>
+          internalGetDeals() {
+        if (deals_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DealsDefaultEntryHolder.defaultEntry);
+        }
+        return deals_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>
+          internalGetMutableDeals() {
+        if (deals_ == null) {
+          deals_ = com.google.protobuf.MapField.newMapField(
+              DealsDefaultEntryHolder.defaultEntry);
+        }
+        if (!deals_.isMutable()) {
+          deals_ = deals_.copy();
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return deals_;
+      }
+      public int getDealsCount() {
+        return internalGetDeals().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public boolean containsDeals(
+          long key) {
+
+        return internalGetDeals().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getDealsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> getDeals() {
+        return getDealsMap();
+      }
+      /**
+       * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> getDealsMap() {
+        return internalGetDeals().getMap();
+      }
+      /**
+       * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.panacea.datadeal.v2alpha1.DealProto.Deal getDealsOrDefault(
+          long key,
+          /* nullable */
+com.panacea.datadeal.v2alpha1.DealProto.Deal defaultValue) {
+
+        java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> map =
+            internalGetDeals().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha1.DealProto.Deal getDealsOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> map =
+            internalGetDeals().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearDeals() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        internalGetMutableDeals().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDeals(
+          long key) {
+
+        internalGetMutableDeals().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal>
+          getMutableDeals() {
+        bitField0_ |= 0x00000001;
+        return internalGetMutableDeals().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putDeals(
+          long key,
+          com.panacea.datadeal.v2alpha1.DealProto.Deal value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableDeals().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>map&lt;uint64, .panacea.datadeal.v2alpha1.Deal&gt; deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putAllDeals(
+          java.util.Map<java.lang.Long, com.panacea.datadeal.v2alpha1.DealProto.Deal> values) {
+        internalGetMutableDeals().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> dataCerts_;
+      private com.google.protobuf.MapField<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>
+          internalGetDataCerts() {
+        if (dataCerts_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DataCertsDefaultEntryHolder.defaultEntry);
+        }
+        return dataCerts_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>
+          internalGetMutableDataCerts() {
+        if (dataCerts_ == null) {
+          dataCerts_ = com.google.protobuf.MapField.newMapField(
+              DataCertsDefaultEntryHolder.defaultEntry);
+        }
+        if (!dataCerts_.isMutable()) {
+          dataCerts_ = dataCerts_.copy();
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return dataCerts_;
+      }
+      public int getDataCertsCount() {
+        return internalGetDataCerts().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public boolean containsDataCerts(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetDataCerts().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getDataCertsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> getDataCerts() {
+        return getDataCertsMap();
+      }
+      /**
+       * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> getDataCertsMap() {
+        return internalGetDataCerts().getMap();
+      }
+      /**
+       * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.panacea.datadeal.v2alpha1.TxProto.DataCert getDataCertsOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.panacea.datadeal.v2alpha1.TxProto.DataCert defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> map =
+            internalGetDataCerts().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha1.TxProto.DataCert getDataCertsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> map =
+            internalGetDataCerts().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearDataCerts() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        internalGetMutableDataCerts().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataCerts(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableDataCerts().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert>
+          getMutableDataCerts() {
+        bitField0_ |= 0x00000002;
+        return internalGetMutableDataCerts().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putDataCerts(
+          java.lang.String key,
+          com.panacea.datadeal.v2alpha1.TxProto.DataCert value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableDataCerts().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .panacea.datadeal.v2alpha1.DataCert&gt; data_certs = 2 [json_name = "dataCerts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putAllDataCerts(
+          java.util.Map<java.lang.String, com.panacea.datadeal.v2alpha1.TxProto.DataCert> values) {
+        internalGetMutableDataCerts().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+
+      private long nextDealNumber_ ;
+      /**
+       * <code>uint64 next_deal_number = 3 [json_name = "nextDealNumber"];</code>
+       * @return The nextDealNumber.
+       */
+      @java.lang.Override
+      public long getNextDealNumber() {
+        return nextDealNumber_;
+      }
+      /**
+       * <code>uint64 next_deal_number = 3 [json_name = "nextDealNumber"];</code>
+       * @param value The nextDealNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextDealNumber(long value) {
+
+        nextDealNumber_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 next_deal_number = 3 [json_name = "nextDealNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextDealNumber() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nextDealNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datadeal.v2alpha1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datadeal.v2alpha1.GenesisState)
+    private static final com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState();
+    }
+
+    public static com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datadeal_v2alpha1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datadeal_v2alpha1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datadeal_v2alpha1_GenesisState_DealsEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datadeal_v2alpha1_GenesisState_DealsEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datadeal_v2alpha1_GenesisState_DataCertsEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datadeal_v2alpha1_GenesisState_DataCertsEntry_fieldAccessorTable;
 
@@ -52,13 +1135,13 @@ public final class GenesisProto {
       "\001(\0132\037.panacea.datadeal.v2alpha1.DealR\005va" +
       "lue:\0028\001\032a\n\016DataCertsEntry\022\020\n\003key\030\001 \001(\tR\003" +
       "key\0229\n\005value\030\002 \001(\0132#.panacea.datadeal.v2" +
-      "alpha1.DataCertR\005value:\0028\001B\351\001\n\035com.panac" +
-      "ea.datadeal.v2alpha1B\014GenesisProtoP\001Z4gi" +
-      "thub.com/medibloc/panacea-core/v2/x/data" +
-      "deal/types\242\002\003PDX\252\002\031Panacea.Datadeal.V2al" +
-      "pha1\312\002\031Panacea\\Datadeal\\V2alpha1\342\002%Panac" +
-      "ea\\Datadeal\\V2alpha1\\GPBMetadata\352\002\033Panac" +
-      "ea::Datadeal::V2alpha1b\006proto3"
+      "alpha1.DataCertR\005value:\0028\001B\347\001\n\035com.panac" +
+      "ea.datadeal.v2alpha1B\014GenesisProtoZ4gith" +
+      "ub.com/medibloc/panacea-core/v2/x/datade" +
+      "al/types\242\002\003PDX\252\002\031Panacea.Datadeal.V2alph" +
+      "a1\312\002\031Panacea\\Datadeal\\V2alpha1\342\002%Panacea" +
+      "\\Datadeal\\V2alpha1\\GPBMetadata\352\002\033Panacea" +
+      "::Datadeal::V2alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

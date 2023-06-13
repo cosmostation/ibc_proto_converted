@@ -14,114 +14,15132 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QuerySupplyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QuerySupplyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>string owner = 2 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 2 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * <pre>
+   * QuerySupplyRequest is the request type for the Query/HTLC RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QuerySupplyRequest}
+   */
+  public static final class QuerySupplyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QuerySupplyRequest)
+      QuerySupplyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySupplyRequest.newBuilder() to construct.
+    private QuerySupplyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySupplyRequest() {
+      denomId_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySupplyRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest.Builder.class);
+    }
+
+    public static final int DENOM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 2 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 2 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest) obj;
+
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySupplyRequest is the request type for the Query/HTLC RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QuerySupplyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QuerySupplyRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomId_ = "";
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest.getDefaultInstance()) return this;
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QuerySupplyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QuerySupplyRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySupplyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySupplyRequest>() {
+      @java.lang.Override
+      public QuerySupplyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySupplyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySupplyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySupplyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QuerySupplyResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * DO NOT TOUCH Please, or zero values for amount will broke when Marshalled!
+     * </pre>
+     *
+     * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.jsontag) = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * <pre>
+   * QuerySupplyResponse is the response type for the Query/Supply RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QuerySupplyResponse}
+   */
+  public static final class QuerySupplyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QuerySupplyResponse)
+      QuerySupplyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySupplyResponse.newBuilder() to construct.
+    private QuerySupplyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySupplyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySupplyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * DO NOT TOUCH Please, or zero values for amount will broke when Marshalled!
+     * </pre>
+     *
+     * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.jsontag) = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (amount_ != 0L) {
+        output.writeUInt64(1, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse) obj;
+
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySupplyResponse is the response type for the Query/Supply RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QuerySupplyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QuerySupplyResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QuerySupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse.getDefaultInstance()) return this;
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * DO NOT TOUCH Please, or zero values for amount will broke when Marshalled!
+       * </pre>
+       *
+       * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.jsontag) = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * DO NOT TOUCH Please, or zero values for amount will broke when Marshalled!
+       * </pre>
+       *
+       * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.jsontag) = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DO NOT TOUCH Please, or zero values for amount will broke when Marshalled!
+       * </pre>
+       *
+       * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.jsontag) = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QuerySupplyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QuerySupplyResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySupplyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySupplyResponse>() {
+      @java.lang.Override
+      public QuerySupplyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySupplyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySupplyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QuerySupplyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOwnerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryOwnerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOwnerRequest is the request type for the Query/Owner RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryOwnerRequest}
+   */
+  public static final class QueryOwnerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryOwnerRequest)
+      QueryOwnerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOwnerRequest.newBuilder() to construct.
+    private QueryOwnerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOwnerRequest() {
+      denomId_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOwnerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.Builder.class);
+    }
+
+    public static final int DENOM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest) obj;
+
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOwnerRequest is the request type for the Query/Owner RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryOwnerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryOwnerRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomId_ = "";
+        owner_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.getDefaultInstance()) return this;
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryOwnerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryOwnerRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOwnerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOwnerRequest>() {
+      @java.lang.Override
+      public QueryOwnerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOwnerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOwnerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOwnerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryOwnerResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+     * @return Whether the owner field is set.
+     */
+    boolean hasOwner();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    com.cudosnode.cudosnode.nft.NftProto.Owner getOwner();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.OwnerOrBuilder getOwnerOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOwnerResponse is the response type for the Query/Owner RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryOwnerResponse}
+   */
+  public static final class QueryOwnerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryOwnerResponse)
+      QueryOwnerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOwnerResponse.newBuilder() to construct.
+    private QueryOwnerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOwnerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOwnerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    private com.cudosnode.cudosnode.nft.NftProto.Owner owner_;
+    /**
+     * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+     * @return Whether the owner field is set.
+     */
+    @java.lang.Override
+    public boolean hasOwner() {
+      return owner_ != null;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.Owner getOwner() {
+      return owner_ == null ? com.cudosnode.cudosnode.nft.NftProto.Owner.getDefaultInstance() : owner_;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.OwnerOrBuilder getOwnerOrBuilder() {
+      return owner_ == null ? com.cudosnode.cudosnode.nft.NftProto.Owner.getDefaultInstance() : owner_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (owner_ != null) {
+        output.writeMessage(1, getOwner());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (owner_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOwner());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse) obj;
+
+      if (hasOwner() != other.hasOwner()) return false;
+      if (hasOwner()) {
+        if (!getOwner()
+            .equals(other.getOwner())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOwner()) {
+        hash = (37 * hash) + OWNER_FIELD_NUMBER;
+        hash = (53 * hash) + getOwner().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOwnerResponse is the response type for the Query/Owner RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryOwnerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryOwnerResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = null;
+        if (ownerBuilder_ != null) {
+          ownerBuilder_.dispose();
+          ownerBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryOwnerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = ownerBuilder_ == null
+              ? owner_
+              : ownerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.getDefaultInstance()) return this;
+        if (other.hasOwner()) {
+          mergeOwner(other.getOwner());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOwnerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cudosnode.cudosnode.nft.NftProto.Owner owner_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Owner, com.cudosnode.cudosnode.nft.NftProto.Owner.Builder, com.cudosnode.cudosnode.nft.NftProto.OwnerOrBuilder> ownerBuilder_;
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       * @return Whether the owner field is set.
+       */
+      public boolean hasOwner() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Owner getOwner() {
+        if (ownerBuilder_ == null) {
+          return owner_ == null ? com.cudosnode.cudosnode.nft.NftProto.Owner.getDefaultInstance() : owner_;
+        } else {
+          return ownerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       */
+      public Builder setOwner(com.cudosnode.cudosnode.nft.NftProto.Owner value) {
+        if (ownerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          owner_ = value;
+        } else {
+          ownerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       */
+      public Builder setOwner(
+          com.cudosnode.cudosnode.nft.NftProto.Owner.Builder builderForValue) {
+        if (ownerBuilder_ == null) {
+          owner_ = builderForValue.build();
+        } else {
+          ownerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       */
+      public Builder mergeOwner(com.cudosnode.cudosnode.nft.NftProto.Owner value) {
+        if (ownerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            owner_ != null &&
+            owner_ != com.cudosnode.cudosnode.nft.NftProto.Owner.getDefaultInstance()) {
+            getOwnerBuilder().mergeFrom(value);
+          } else {
+            owner_ = value;
+          }
+        } else {
+          ownerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       */
+      public Builder clearOwner() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        owner_ = null;
+        if (ownerBuilder_ != null) {
+          ownerBuilder_.dispose();
+          ownerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Owner.Builder getOwnerBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOwnerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.OwnerOrBuilder getOwnerOrBuilder() {
+        if (ownerBuilder_ != null) {
+          return ownerBuilder_.getMessageOrBuilder();
+        } else {
+          return owner_ == null ?
+              com.cudosnode.cudosnode.nft.NftProto.Owner.getDefaultInstance() : owner_;
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Owner, com.cudosnode.cudosnode.nft.NftProto.Owner.Builder, com.cudosnode.cudosnode.nft.NftProto.OwnerOrBuilder> 
+          getOwnerFieldBuilder() {
+        if (ownerBuilder_ == null) {
+          ownerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cudosnode.cudosnode.nft.NftProto.Owner, com.cudosnode.cudosnode.nft.NftProto.Owner.Builder, com.cudosnode.cudosnode.nft.NftProto.OwnerOrBuilder>(
+                  getOwner(),
+                  getParentForChildren(),
+                  isClean());
+          owner_ = null;
+        }
+        return ownerBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryOwnerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryOwnerResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOwnerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOwnerResponse>() {
+      @java.lang.Override
+      public QueryOwnerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOwnerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOwnerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCollectionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryCollectionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryCollectionRequest is the request type for the Query/Collection RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryCollectionRequest}
+   */
+  public static final class QueryCollectionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryCollectionRequest)
+      QueryCollectionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCollectionRequest.newBuilder() to construct.
+    private QueryCollectionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCollectionRequest() {
+      denomId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCollectionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.Builder.class);
+    }
+
+    public static final int DENOM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomId_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomId_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest) obj;
+
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCollectionRequest is the request type for the Query/Collection RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryCollectionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryCollectionRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomId_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.getDefaultInstance()) return this;
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryCollectionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryCollectionRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCollectionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCollectionRequest>() {
+      @java.lang.Override
+      public QueryCollectionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCollectionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCollectionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCollectionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryCollectionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+     * @return Whether the collection field is set.
+     */
+    boolean hasCollection();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+     * @return The collection.
+     */
+    com.cudosnode.cudosnode.nft.NftProto.Collection getCollection();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder getCollectionOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryCollectionResponse is the response type for the Query/Collection RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryCollectionResponse}
+   */
+  public static final class QueryCollectionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryCollectionResponse)
+      QueryCollectionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCollectionResponse.newBuilder() to construct.
+    private QueryCollectionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCollectionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCollectionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.Builder.class);
+    }
+
+    public static final int COLLECTION_FIELD_NUMBER = 1;
+    private com.cudosnode.cudosnode.nft.NftProto.Collection collection_;
+    /**
+     * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+     * @return Whether the collection field is set.
+     */
+    @java.lang.Override
+    public boolean hasCollection() {
+      return collection_ != null;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+     * @return The collection.
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.Collection getCollection() {
+      return collection_ == null ? com.cudosnode.cudosnode.nft.NftProto.Collection.getDefaultInstance() : collection_;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder getCollectionOrBuilder() {
+      return collection_ == null ? com.cudosnode.cudosnode.nft.NftProto.Collection.getDefaultInstance() : collection_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (collection_ != null) {
+        output.writeMessage(1, getCollection());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (collection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCollection());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse) obj;
+
+      if (hasCollection() != other.hasCollection()) return false;
+      if (hasCollection()) {
+        if (!getCollection()
+            .equals(other.getCollection())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCollection()) {
+        hash = (37 * hash) + COLLECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getCollection().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCollectionResponse is the response type for the Query/Collection RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryCollectionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryCollectionResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        collection_ = null;
+        if (collectionBuilder_ != null) {
+          collectionBuilder_.dispose();
+          collectionBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.collection_ = collectionBuilder_ == null
+              ? collection_
+              : collectionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.getDefaultInstance()) return this;
+        if (other.hasCollection()) {
+          mergeCollection(other.getCollection());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCollectionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cudosnode.cudosnode.nft.NftProto.Collection collection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Collection, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder, com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder> collectionBuilder_;
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       * @return Whether the collection field is set.
+       */
+      public boolean hasCollection() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       * @return The collection.
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Collection getCollection() {
+        if (collectionBuilder_ == null) {
+          return collection_ == null ? com.cudosnode.cudosnode.nft.NftProto.Collection.getDefaultInstance() : collection_;
+        } else {
+          return collectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder setCollection(com.cudosnode.cudosnode.nft.NftProto.Collection value) {
+        if (collectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          collection_ = value;
+        } else {
+          collectionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder setCollection(
+          com.cudosnode.cudosnode.nft.NftProto.Collection.Builder builderForValue) {
+        if (collectionBuilder_ == null) {
+          collection_ = builderForValue.build();
+        } else {
+          collectionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder mergeCollection(com.cudosnode.cudosnode.nft.NftProto.Collection value) {
+        if (collectionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            collection_ != null &&
+            collection_ != com.cudosnode.cudosnode.nft.NftProto.Collection.getDefaultInstance()) {
+            getCollectionBuilder().mergeFrom(value);
+          } else {
+            collection_ = value;
+          }
+        } else {
+          collectionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder clearCollection() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        collection_ = null;
+        if (collectionBuilder_ != null) {
+          collectionBuilder_.dispose();
+          collectionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Collection.Builder getCollectionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCollectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder getCollectionOrBuilder() {
+        if (collectionBuilder_ != null) {
+          return collectionBuilder_.getMessageOrBuilder();
+        } else {
+          return collection_ == null ?
+              com.cudosnode.cudosnode.nft.NftProto.Collection.getDefaultInstance() : collection_;
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Collection, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder, com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder> 
+          getCollectionFieldBuilder() {
+        if (collectionBuilder_ == null) {
+          collectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cudosnode.cudosnode.nft.NftProto.Collection, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder, com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder>(
+                  getCollection(),
+                  getParentForChildren(),
+                  isClean());
+          collection_ = null;
+        }
+        return collectionBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryCollectionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryCollectionResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCollectionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCollectionResponse>() {
+      @java.lang.Override
+      public QueryCollectionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCollectionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCollectionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCollectionsByIdsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryCollectionsByIdsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+     * @return A list containing the denomIds.
+     */
+    java.util.List<java.lang.String>
+        getDenomIdsList();
+    /**
+     * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+     * @return The count of denomIds.
+     */
+    int getDenomIdsCount();
+    /**
+     * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The denomIds at the given index.
+     */
+    java.lang.String getDenomIds(int index);
+    /**
+     * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the denomIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdsBytes(int index);
+  }
+  /**
+   * <pre>
+   * QueryCollectionsByIdsRequest is the request type for the Query/CollectionsByIds RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryCollectionsByIdsRequest}
+   */
+  public static final class QueryCollectionsByIdsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryCollectionsByIdsRequest)
+      QueryCollectionsByIdsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCollectionsByIdsRequest.newBuilder() to construct.
+    private QueryCollectionsByIdsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCollectionsByIdsRequest() {
+      denomIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCollectionsByIdsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionsByIdsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionsByIdsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest.Builder.class);
+    }
+
+    public static final int DENOM_IDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList denomIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+     * @return A list containing the denomIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDenomIdsList() {
+      return denomIds_;
+    }
+    /**
+     * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+     * @return The count of denomIds.
+     */
+    public int getDenomIdsCount() {
+      return denomIds_.size();
+    }
+    /**
+     * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The denomIds at the given index.
+     */
+    public java.lang.String getDenomIds(int index) {
+      return denomIds_.get(index);
+    }
+    /**
+     * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the denomIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDenomIdsBytes(int index) {
+      return denomIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < denomIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomIds_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < denomIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(denomIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDenomIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest) obj;
+
+      if (!getDenomIdsList()
+          .equals(other.getDenomIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDenomIdsCount() > 0) {
+        hash = (37 * hash) + DENOM_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getDenomIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCollectionsByIdsRequest is the request type for the Query/CollectionsByIds RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryCollectionsByIdsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryCollectionsByIdsRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionsByIdsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionsByIdsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionsByIdsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          denomIds_.makeImmutable();
+          result.denomIds_ = denomIds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest.getDefaultInstance()) return this;
+        if (!other.denomIds_.isEmpty()) {
+          if (denomIds_.isEmpty()) {
+            denomIds_ = other.denomIds_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureDenomIdsIsMutable();
+            denomIds_.addAll(other.denomIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureDenomIdsIsMutable();
+                denomIds_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList denomIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDenomIdsIsMutable() {
+        if (!denomIds_.isModifiable()) {
+          denomIds_ = new com.google.protobuf.LazyStringArrayList(denomIds_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @return A list containing the denomIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDenomIdsList() {
+        denomIds_.makeImmutable();
+        return denomIds_;
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @return The count of denomIds.
+       */
+      public int getDenomIdsCount() {
+        return denomIds_.size();
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The denomIds at the given index.
+       */
+      public java.lang.String getDenomIds(int index) {
+        return denomIds_.get(index);
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the denomIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdsBytes(int index) {
+        return denomIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The denomIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDenomIdsIsMutable();
+        denomIds_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @param value The denomIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDenomIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDenomIdsIsMutable();
+        denomIds_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @param values The denomIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDenomIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDenomIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, denomIds_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomIds() {
+        denomIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denom_ids = 1 [json_name = "denomIds", (.gogoproto.moretags) = "yaml:&#92;"denom_ids&#92;""];</code>
+       * @param value The bytes of the denomIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDenomIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDenomIdsIsMutable();
+        denomIds_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryCollectionsByIdsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryCollectionsByIdsRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCollectionsByIdsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCollectionsByIdsRequest>() {
+      @java.lang.Override
+      public QueryCollectionsByIdsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCollectionsByIdsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCollectionsByIdsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionsByIdsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCollectionByIdsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryCollectionByIdsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    java.util.List<com.cudosnode.cudosnode.nft.NftProto.Collection> 
+        getCollectionsList();
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.Collection getCollections(int index);
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    int getCollectionsCount();
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    java.util.List<? extends com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder> 
+        getCollectionsOrBuilderList();
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder getCollectionsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryCollectionResponse is the response type for the Query/CollectionsByIds RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryCollectionByIdsResponse}
+   */
+  public static final class QueryCollectionByIdsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryCollectionByIdsResponse)
+      QueryCollectionByIdsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCollectionByIdsResponse.newBuilder() to construct.
+    private QueryCollectionByIdsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCollectionByIdsResponse() {
+      collections_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCollectionByIdsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionByIdsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionByIdsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse.Builder.class);
+    }
+
+    public static final int COLLECTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudosnode.cudosnode.nft.NftProto.Collection> collections_;
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudosnode.cudosnode.nft.NftProto.Collection> getCollectionsList() {
+      return collections_;
+    }
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder> 
+        getCollectionsOrBuilderList() {
+      return collections_;
+    }
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    @java.lang.Override
+    public int getCollectionsCount() {
+      return collections_.size();
+    }
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.Collection getCollections(int index) {
+      return collections_.get(index);
+    }
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder getCollectionsOrBuilder(
+        int index) {
+      return collections_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < collections_.size(); i++) {
+        output.writeMessage(1, collections_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < collections_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, collections_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse) obj;
+
+      if (!getCollectionsList()
+          .equals(other.getCollectionsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCollectionsCount() > 0) {
+        hash = (37 * hash) + COLLECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCollectionsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCollectionResponse is the response type for the Query/CollectionsByIds RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryCollectionByIdsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryCollectionByIdsResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionByIdsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionByIdsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (collectionsBuilder_ == null) {
+          collections_ = java.util.Collections.emptyList();
+        } else {
+          collections_ = null;
+          collectionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryCollectionByIdsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse result) {
+        if (collectionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            collections_ = java.util.Collections.unmodifiableList(collections_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.collections_ = collections_;
+        } else {
+          result.collections_ = collectionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse.getDefaultInstance()) return this;
+        if (collectionsBuilder_ == null) {
+          if (!other.collections_.isEmpty()) {
+            if (collections_.isEmpty()) {
+              collections_ = other.collections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCollectionsIsMutable();
+              collections_.addAll(other.collections_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.collections_.isEmpty()) {
+            if (collectionsBuilder_.isEmpty()) {
+              collectionsBuilder_.dispose();
+              collectionsBuilder_ = null;
+              collections_ = other.collections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              collectionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCollectionsFieldBuilder() : null;
+            } else {
+              collectionsBuilder_.addAllMessages(other.collections_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cudosnode.cudosnode.nft.NftProto.Collection m =
+                    input.readMessage(
+                        com.cudosnode.cudosnode.nft.NftProto.Collection.parser(),
+                        extensionRegistry);
+                if (collectionsBuilder_ == null) {
+                  ensureCollectionsIsMutable();
+                  collections_.add(m);
+                } else {
+                  collectionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cudosnode.cudosnode.nft.NftProto.Collection> collections_ =
+        java.util.Collections.emptyList();
+      private void ensureCollectionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          collections_ = new java.util.ArrayList<com.cudosnode.cudosnode.nft.NftProto.Collection>(collections_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Collection, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder, com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder> collectionsBuilder_;
+
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public java.util.List<com.cudosnode.cudosnode.nft.NftProto.Collection> getCollectionsList() {
+        if (collectionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(collections_);
+        } else {
+          return collectionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public int getCollectionsCount() {
+        if (collectionsBuilder_ == null) {
+          return collections_.size();
+        } else {
+          return collectionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Collection getCollections(int index) {
+        if (collectionsBuilder_ == null) {
+          return collections_.get(index);
+        } else {
+          return collectionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder setCollections(
+          int index, com.cudosnode.cudosnode.nft.NftProto.Collection value) {
+        if (collectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCollectionsIsMutable();
+          collections_.set(index, value);
+          onChanged();
+        } else {
+          collectionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder setCollections(
+          int index, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder builderForValue) {
+        if (collectionsBuilder_ == null) {
+          ensureCollectionsIsMutable();
+          collections_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          collectionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder addCollections(com.cudosnode.cudosnode.nft.NftProto.Collection value) {
+        if (collectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCollectionsIsMutable();
+          collections_.add(value);
+          onChanged();
+        } else {
+          collectionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder addCollections(
+          int index, com.cudosnode.cudosnode.nft.NftProto.Collection value) {
+        if (collectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCollectionsIsMutable();
+          collections_.add(index, value);
+          onChanged();
+        } else {
+          collectionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder addCollections(
+          com.cudosnode.cudosnode.nft.NftProto.Collection.Builder builderForValue) {
+        if (collectionsBuilder_ == null) {
+          ensureCollectionsIsMutable();
+          collections_.add(builderForValue.build());
+          onChanged();
+        } else {
+          collectionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder addCollections(
+          int index, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder builderForValue) {
+        if (collectionsBuilder_ == null) {
+          ensureCollectionsIsMutable();
+          collections_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          collectionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder addAllCollections(
+          java.lang.Iterable<? extends com.cudosnode.cudosnode.nft.NftProto.Collection> values) {
+        if (collectionsBuilder_ == null) {
+          ensureCollectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, collections_);
+          onChanged();
+        } else {
+          collectionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder clearCollections() {
+        if (collectionsBuilder_ == null) {
+          collections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          collectionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public Builder removeCollections(int index) {
+        if (collectionsBuilder_ == null) {
+          ensureCollectionsIsMutable();
+          collections_.remove(index);
+          onChanged();
+        } else {
+          collectionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Collection.Builder getCollectionsBuilder(
+          int index) {
+        return getCollectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder getCollectionsOrBuilder(
+          int index) {
+        if (collectionsBuilder_ == null) {
+          return collections_.get(index);  } else {
+          return collectionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public java.util.List<? extends com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder> 
+           getCollectionsOrBuilderList() {
+        if (collectionsBuilder_ != null) {
+          return collectionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(collections_);
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Collection.Builder addCollectionsBuilder() {
+        return getCollectionsFieldBuilder().addBuilder(
+            com.cudosnode.cudosnode.nft.NftProto.Collection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Collection.Builder addCollectionsBuilder(
+          int index) {
+        return getCollectionsFieldBuilder().addBuilder(
+            index, com.cudosnode.cudosnode.nft.NftProto.Collection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Collection collections = 1 [json_name = "collections"];</code>
+       */
+      public java.util.List<com.cudosnode.cudosnode.nft.NftProto.Collection.Builder> 
+           getCollectionsBuilderList() {
+        return getCollectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Collection, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder, com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder> 
+          getCollectionsFieldBuilder() {
+        if (collectionsBuilder_ == null) {
+          collectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudosnode.cudosnode.nft.NftProto.Collection, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder, com.cudosnode.cudosnode.nft.NftProto.CollectionOrBuilder>(
+                  collections_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          collections_ = null;
+        }
+        return collectionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryCollectionByIdsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryCollectionByIdsResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCollectionByIdsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCollectionByIdsResponse>() {
+      @java.lang.Override
+      public QueryCollectionByIdsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCollectionByIdsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCollectionByIdsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionByIdsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryDenomRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryDenomRequest is the request type for the Query/Denom RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomRequest}
+   */
+  public static final class QueryDenomRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryDenomRequest)
+      QueryDenomRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomRequest.newBuilder() to construct.
+    private QueryDenomRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomRequest() {
+      denomId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest.Builder.class);
+    }
+
+    public static final int DENOM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest) obj;
+
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomRequest is the request type for the Query/Denom RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryDenomRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denomId_ = denomId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest.getDefaultInstance()) return this;
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryDenomRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryDenomRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomRequest>() {
+      @java.lang.Override
+      public QueryDenomRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryDenomResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return Whether the denom field is set.
+     */
+    boolean hasDenom();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    com.cudosnode.cudosnode.nft.NftProto.Denom getDenom();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDenomResponse is the response type for the Query/Denom RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomResponse}
+   */
+  public static final class QueryDenomResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryDenomResponse)
+      QueryDenomResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomResponse.newBuilder() to construct.
+    private QueryDenomResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return Whether the denom field is set.
+     */
+    @java.lang.Override
+    public boolean hasDenom() {
+      return denom_ != null;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.Denom getDenom() {
+      return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder() {
+      return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (denom_ != null) {
+        output.writeMessage(1, getDenom());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (denom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDenom());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse) obj;
+
+      if (hasDenom() != other.hasDenom()) return false;
+      if (hasDenom()) {
+        if (!getDenom()
+            .equals(other.getDenom())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDenom()) {
+        hash = (37 * hash) + DENOM_FIELD_NUMBER;
+        hash = (53 * hash) + getDenom().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomResponse is the response type for the Query/Denom RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryDenomResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = null;
+        if (denomBuilder_ != null) {
+          denomBuilder_.dispose();
+          denomBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denomBuilder_ == null
+              ? denom_
+              : denomBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.getDefaultInstance()) return this;
+        if (other.hasDenom()) {
+          mergeDenom(other.getDenom());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDenomFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> denomBuilder_;
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       * @return Whether the denom field is set.
+       */
+      public boolean hasDenom() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom getDenom() {
+        if (denomBuilder_ == null) {
+          return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+        } else {
+          return denomBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder setDenom(com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          denom_ = value;
+        } else {
+          denomBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder setDenom(
+          com.cudosnode.cudosnode.nft.NftProto.Denom.Builder builderForValue) {
+        if (denomBuilder_ == null) {
+          denom_ = builderForValue.build();
+        } else {
+          denomBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder mergeDenom(com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            denom_ != null &&
+            denom_ != com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance()) {
+            getDenomBuilder().mergeFrom(value);
+          } else {
+            denom_ = value;
+          }
+        } else {
+          denomBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder clearDenom() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        denom_ = null;
+        if (denomBuilder_ != null) {
+          denomBuilder_.dispose();
+          denomBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom.Builder getDenomBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDenomFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder() {
+        if (denomBuilder_ != null) {
+          return denomBuilder_.getMessageOrBuilder();
+        } else {
+          return denom_ == null ?
+              com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> 
+          getDenomFieldBuilder() {
+        if (denomBuilder_ == null) {
+          denomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder>(
+                  getDenom(),
+                  getParentForChildren(),
+                  isClean());
+          denom_ = null;
+        }
+        return denomBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryDenomResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryDenomResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomResponse>() {
+      @java.lang.Override
+      public QueryDenomResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomByNameRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryDenomByNameRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+     * @return The denomName.
+     */
+    java.lang.String getDenomName();
+    /**
+     * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+     * @return The bytes for denomName.
+     */
+    com.google.protobuf.ByteString
+        getDenomNameBytes();
+  }
+  /**
+   * <pre>
+   * QueryDenomByNameRequest is the request type for the Query/DenomByName RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomByNameRequest}
+   */
+  public static final class QueryDenomByNameRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryDenomByNameRequest)
+      QueryDenomByNameRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomByNameRequest.newBuilder() to construct.
+    private QueryDenomByNameRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomByNameRequest() {
+      denomName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomByNameRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest.Builder.class);
+    }
+
+    public static final int DENOM_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomName_ = "";
+    /**
+     * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+     * @return The denomName.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomName() {
+      java.lang.Object ref = denomName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+     * @return The bytes for denomName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomNameBytes() {
+      java.lang.Object ref = denomName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomName_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomName_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest) obj;
+
+      if (!getDenomName()
+          .equals(other.getDenomName())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomName().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomByNameRequest is the request type for the Query/DenomByName RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomByNameRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryDenomByNameRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomName_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denomName_ = denomName_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest.getDefaultInstance()) return this;
+        if (!other.getDenomName().isEmpty()) {
+          denomName_ = other.denomName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denomName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denomName_ = "";
+      /**
+       * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+       * @return The denomName.
+       */
+      public java.lang.String getDenomName() {
+        java.lang.Object ref = denomName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+       * @return The bytes for denomName.
+       */
+      public com.google.protobuf.ByteString
+          getDenomNameBytes() {
+        java.lang.Object ref = denomName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+       * @param value The denomName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomName() {
+        denomName_ = getDefaultInstance().getDenomName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_name = 1 [json_name = "denomName", (.gogoproto.moretags) = "yaml:&#92;"denom_name&#92;""];</code>
+       * @param value The bytes for denomName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryDenomByNameRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryDenomByNameRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomByNameRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomByNameRequest>() {
+      @java.lang.Override
+      public QueryDenomByNameRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomByNameRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomByNameRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomBySymbolRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryDenomBySymbolRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+  }
+  /**
+   * <pre>
+   * QueryDenomBySymbolRequest is the request type for the Query/DenomBySymbol RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomBySymbolRequest}
+   */
+  public static final class QueryDenomBySymbolRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryDenomBySymbolRequest)
+      QueryDenomBySymbolRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomBySymbolRequest.newBuilder() to construct.
+    private QueryDenomBySymbolRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomBySymbolRequest() {
+      symbol_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomBySymbolRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest.Builder.class);
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest) obj;
+
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomBySymbolRequest is the request type for the Query/DenomBySymbol RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomBySymbolRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryDenomBySymbolRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        symbol_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.symbol_ = symbol_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest.getDefaultInstance()) return this;
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryDenomBySymbolRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryDenomBySymbolRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomBySymbolRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomBySymbolRequest>() {
+      @java.lang.Override
+      public QueryDenomBySymbolRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomBySymbolRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomBySymbolRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomByNameResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryDenomByNameResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return Whether the denom field is set.
+     */
+    boolean hasDenom();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    com.cudosnode.cudosnode.nft.NftProto.Denom getDenom();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDenomByNameResponse is the response type for the Query/DenomByName RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomByNameResponse}
+   */
+  public static final class QueryDenomByNameResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryDenomByNameResponse)
+      QueryDenomByNameResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomByNameResponse.newBuilder() to construct.
+    private QueryDenomByNameResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomByNameResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomByNameResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return Whether the denom field is set.
+     */
+    @java.lang.Override
+    public boolean hasDenom() {
+      return denom_ != null;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.Denom getDenom() {
+      return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder() {
+      return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (denom_ != null) {
+        output.writeMessage(1, getDenom());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (denom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDenom());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse) obj;
+
+      if (hasDenom() != other.hasDenom()) return false;
+      if (hasDenom()) {
+        if (!getDenom()
+            .equals(other.getDenom())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDenom()) {
+        hash = (37 * hash) + DENOM_FIELD_NUMBER;
+        hash = (53 * hash) + getDenom().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomByNameResponse is the response type for the Query/DenomByName RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomByNameResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryDenomByNameResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = null;
+        if (denomBuilder_ != null) {
+          denomBuilder_.dispose();
+          denomBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomByNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denomBuilder_ == null
+              ? denom_
+              : denomBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.getDefaultInstance()) return this;
+        if (other.hasDenom()) {
+          mergeDenom(other.getDenom());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDenomFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> denomBuilder_;
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       * @return Whether the denom field is set.
+       */
+      public boolean hasDenom() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom getDenom() {
+        if (denomBuilder_ == null) {
+          return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+        } else {
+          return denomBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder setDenom(com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          denom_ = value;
+        } else {
+          denomBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder setDenom(
+          com.cudosnode.cudosnode.nft.NftProto.Denom.Builder builderForValue) {
+        if (denomBuilder_ == null) {
+          denom_ = builderForValue.build();
+        } else {
+          denomBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder mergeDenom(com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            denom_ != null &&
+            denom_ != com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance()) {
+            getDenomBuilder().mergeFrom(value);
+          } else {
+            denom_ = value;
+          }
+        } else {
+          denomBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder clearDenom() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        denom_ = null;
+        if (denomBuilder_ != null) {
+          denomBuilder_.dispose();
+          denomBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom.Builder getDenomBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDenomFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder() {
+        if (denomBuilder_ != null) {
+          return denomBuilder_.getMessageOrBuilder();
+        } else {
+          return denom_ == null ?
+              com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> 
+          getDenomFieldBuilder() {
+        if (denomBuilder_ == null) {
+          denomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder>(
+                  getDenom(),
+                  getParentForChildren(),
+                  isClean());
+          denom_ = null;
+        }
+        return denomBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryDenomByNameResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryDenomByNameResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomByNameResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomByNameResponse>() {
+      @java.lang.Override
+      public QueryDenomByNameResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomByNameResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomByNameResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomBySymbolResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryDenomBySymbolResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return Whether the denom field is set.
+     */
+    boolean hasDenom();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    com.cudosnode.cudosnode.nft.NftProto.Denom getDenom();
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDenomByNameResponse is the response type for the Query/DenomByName RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomBySymbolResponse}
+   */
+  public static final class QueryDenomBySymbolResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryDenomBySymbolResponse)
+      QueryDenomBySymbolResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomBySymbolResponse.newBuilder() to construct.
+    private QueryDenomBySymbolResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomBySymbolResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomBySymbolResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return Whether the denom field is set.
+     */
+    @java.lang.Override
+    public boolean hasDenom() {
+      return denom_ != null;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.Denom getDenom() {
+      return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder() {
+      return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (denom_ != null) {
+        output.writeMessage(1, getDenom());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (denom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDenom());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse) obj;
+
+      if (hasDenom() != other.hasDenom()) return false;
+      if (hasDenom()) {
+        if (!getDenom()
+            .equals(other.getDenom())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDenom()) {
+        hash = (37 * hash) + DENOM_FIELD_NUMBER;
+        hash = (53 * hash) + getDenom().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomByNameResponse is the response type for the Query/DenomByName RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomBySymbolResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryDenomBySymbolResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = null;
+        if (denomBuilder_ != null) {
+          denomBuilder_.dispose();
+          denomBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denomBuilder_ == null
+              ? denom_
+              : denomBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.getDefaultInstance()) return this;
+        if (other.hasDenom()) {
+          mergeDenom(other.getDenom());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDenomFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> denomBuilder_;
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       * @return Whether the denom field is set.
+       */
+      public boolean hasDenom() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom getDenom() {
+        if (denomBuilder_ == null) {
+          return denom_ == null ? com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+        } else {
+          return denomBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder setDenom(com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          denom_ = value;
+        } else {
+          denomBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder setDenom(
+          com.cudosnode.cudosnode.nft.NftProto.Denom.Builder builderForValue) {
+        if (denomBuilder_ == null) {
+          denom_ = builderForValue.build();
+        } else {
+          denomBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder mergeDenom(com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            denom_ != null &&
+            denom_ != com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance()) {
+            getDenomBuilder().mergeFrom(value);
+          } else {
+            denom_ = value;
+          }
+        } else {
+          denomBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public Builder clearDenom() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        denom_ = null;
+        if (denomBuilder_ != null) {
+          denomBuilder_.dispose();
+          denomBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom.Builder getDenomBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDenomFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomOrBuilder() {
+        if (denomBuilder_ != null) {
+          return denomBuilder_.getMessageOrBuilder();
+        } else {
+          return denom_ == null ?
+              com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance() : denom_;
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> 
+          getDenomFieldBuilder() {
+        if (denomBuilder_ == null) {
+          denomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder>(
+                  getDenom(),
+                  getParentForChildren(),
+                  isClean());
+          denom_ = null;
+        }
+        return denomBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryDenomBySymbolResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryDenomBySymbolResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomBySymbolResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomBySymbolResponse>() {
+      @java.lang.Override
+      public QueryDenomBySymbolResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomBySymbolResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomBySymbolResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryDenomsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDenomsRequest is the request type for the Query/Denoms RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomsRequest}
+   */
+  public static final class QueryDenomsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryDenomsRequest)
+      QueryDenomsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomsRequest.newBuilder() to construct.
+    private QueryDenomsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomsRequest is the request type for the Query/Denoms RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryDenomsRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryDenomsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryDenomsRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomsRequest>() {
+      @java.lang.Override
+      public QueryDenomsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryDenomsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudosnode.cudosnode.nft.NftProto.Denom> 
+        getDenomsList();
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.Denom getDenoms(int index);
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    int getDenomsCount();
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> 
+        getDenomsOrBuilderList();
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDenomsResponse is the response type for the Query/Denoms RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomsResponse}
+   */
+  public static final class QueryDenomsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryDenomsResponse)
+      QueryDenomsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomsResponse.newBuilder() to construct.
+    private QueryDenomsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomsResponse() {
+      denoms_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.Builder.class);
+    }
+
+    public static final int DENOMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudosnode.cudosnode.nft.NftProto.Denom> denoms_;
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudosnode.cudosnode.nft.NftProto.Denom> getDenomsList() {
+      return denoms_;
+    }
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> 
+        getDenomsOrBuilderList() {
+      return denoms_;
+    }
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDenomsCount() {
+      return denoms_.size();
+    }
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.Denom getDenoms(int index) {
+      return denoms_.get(index);
+    }
+    /**
+     * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomsOrBuilder(
+        int index) {
+      return denoms_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < denoms_.size(); i++) {
+        output.writeMessage(1, denoms_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < denoms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, denoms_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse) obj;
+
+      if (!getDenomsList()
+          .equals(other.getDenomsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDenomsCount() > 0) {
+        hash = (37 * hash) + DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getDenomsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomsResponse is the response type for the Query/Denoms RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryDenomsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryDenomsResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (denomsBuilder_ == null) {
+          denoms_ = java.util.Collections.emptyList();
+        } else {
+          denoms_ = null;
+          denomsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryDenomsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse result) {
+        if (denomsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            denoms_ = java.util.Collections.unmodifiableList(denoms_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.denoms_ = denoms_;
+        } else {
+          result.denoms_ = denomsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.getDefaultInstance()) return this;
+        if (denomsBuilder_ == null) {
+          if (!other.denoms_.isEmpty()) {
+            if (denoms_.isEmpty()) {
+              denoms_ = other.denoms_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDenomsIsMutable();
+              denoms_.addAll(other.denoms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.denoms_.isEmpty()) {
+            if (denomsBuilder_.isEmpty()) {
+              denomsBuilder_.dispose();
+              denomsBuilder_ = null;
+              denoms_ = other.denoms_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              denomsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDenomsFieldBuilder() : null;
+            } else {
+              denomsBuilder_.addAllMessages(other.denoms_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cudosnode.cudosnode.nft.NftProto.Denom m =
+                    input.readMessage(
+                        com.cudosnode.cudosnode.nft.NftProto.Denom.parser(),
+                        extensionRegistry);
+                if (denomsBuilder_ == null) {
+                  ensureDenomsIsMutable();
+                  denoms_.add(m);
+                } else {
+                  denomsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cudosnode.cudosnode.nft.NftProto.Denom> denoms_ =
+        java.util.Collections.emptyList();
+      private void ensureDenomsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          denoms_ = new java.util.ArrayList<com.cudosnode.cudosnode.nft.NftProto.Denom>(denoms_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> denomsBuilder_;
+
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudosnode.cudosnode.nft.NftProto.Denom> getDenomsList() {
+        if (denomsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(denoms_);
+        } else {
+          return denomsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDenomsCount() {
+        if (denomsBuilder_ == null) {
+          return denoms_.size();
+        } else {
+          return denomsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom getDenoms(int index) {
+        if (denomsBuilder_ == null) {
+          return denoms_.get(index);
+        } else {
+          return denomsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDenoms(
+          int index, com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomsIsMutable();
+          denoms_.set(index, value);
+          onChanged();
+        } else {
+          denomsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDenoms(
+          int index, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder builderForValue) {
+        if (denomsBuilder_ == null) {
+          ensureDenomsIsMutable();
+          denoms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          denomsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDenoms(com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomsIsMutable();
+          denoms_.add(value);
+          onChanged();
+        } else {
+          denomsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDenoms(
+          int index, com.cudosnode.cudosnode.nft.NftProto.Denom value) {
+        if (denomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomsIsMutable();
+          denoms_.add(index, value);
+          onChanged();
+        } else {
+          denomsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDenoms(
+          com.cudosnode.cudosnode.nft.NftProto.Denom.Builder builderForValue) {
+        if (denomsBuilder_ == null) {
+          ensureDenomsIsMutable();
+          denoms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          denomsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDenoms(
+          int index, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder builderForValue) {
+        if (denomsBuilder_ == null) {
+          ensureDenomsIsMutable();
+          denoms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          denomsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDenoms(
+          java.lang.Iterable<? extends com.cudosnode.cudosnode.nft.NftProto.Denom> values) {
+        if (denomsBuilder_ == null) {
+          ensureDenomsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, denoms_);
+          onChanged();
+        } else {
+          denomsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDenoms() {
+        if (denomsBuilder_ == null) {
+          denoms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          denomsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDenoms(int index) {
+        if (denomsBuilder_ == null) {
+          ensureDenomsIsMutable();
+          denoms_.remove(index);
+          onChanged();
+        } else {
+          denomsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom.Builder getDenomsBuilder(
+          int index) {
+        return getDenomsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder getDenomsOrBuilder(
+          int index) {
+        if (denomsBuilder_ == null) {
+          return denoms_.get(index);  } else {
+          return denomsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> 
+           getDenomsOrBuilderList() {
+        if (denomsBuilder_ != null) {
+          return denomsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(denoms_);
+        }
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom.Builder addDenomsBuilder() {
+        return getDenomsFieldBuilder().addBuilder(
+            com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.Denom.Builder addDenomsBuilder(
+          int index) {
+        return getDenomsFieldBuilder().addBuilder(
+            index, com.cudosnode.cudosnode.nft.NftProto.Denom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudosnode.cudosnode.nft.Denom denoms = 1 [json_name = "denoms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudosnode.cudosnode.nft.NftProto.Denom.Builder> 
+           getDenomsBuilderList() {
+        return getDenomsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder> 
+          getDenomsFieldBuilder() {
+        if (denomsBuilder_ == null) {
+          denomsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudosnode.cudosnode.nft.NftProto.Denom, com.cudosnode.cudosnode.nft.NftProto.Denom.Builder, com.cudosnode.cudosnode.nft.NftProto.DenomOrBuilder>(
+                  denoms_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          denoms_ = null;
+        }
+        return denomsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryDenomsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryDenomsResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomsResponse>() {
+      @java.lang.Override
+      public QueryDenomsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryNFTRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryNFTRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+     * @return The tokenId.
+     */
+    java.lang.String getTokenId();
+    /**
+     * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+     * @return The bytes for tokenId.
+     */
+    com.google.protobuf.ByteString
+        getTokenIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryNFTRequest is the request type for the Query/NFT RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryNFTRequest}
+   */
+  public static final class QueryNFTRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryNFTRequest)
+      QueryNFTRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryNFTRequest.newBuilder() to construct.
+    private QueryNFTRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryNFTRequest() {
+      denomId_ = "";
+      tokenId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryNFTRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest.Builder.class);
+    }
+
+    public static final int DENOM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenId_ = "";
+    /**
+     * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+     * @return The tokenId.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenId() {
+      java.lang.Object ref = tokenId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+     * @return The bytes for tokenId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenIdBytes() {
+      java.lang.Object ref = tokenId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest) obj;
+
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getTokenId()
+          .equals(other.getTokenId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      hash = (37 * hash) + TOKEN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryNFTRequest is the request type for the Query/NFT RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryNFTRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryNFTRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomId_ = "";
+        tokenId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenId_ = tokenId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest.getDefaultInstance()) return this;
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTokenId().isEmpty()) {
+          tokenId_ = other.tokenId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                tokenId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenId_ = "";
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @return The tokenId.
+       */
+      public java.lang.String getTokenId() {
+        java.lang.Object ref = tokenId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @return The bytes for tokenId.
+       */
+      public com.google.protobuf.ByteString
+          getTokenIdBytes() {
+        java.lang.Object ref = tokenId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @param value The tokenId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenId() {
+        tokenId_ = getDefaultInstance().getTokenId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @param value The bytes for tokenId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryNFTRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryNFTRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryNFTRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryNFTRequest>() {
+      @java.lang.Override
+      public QueryNFTRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryNFTRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryNFTRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryNFTRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryNFTResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryNFTResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+     * @return Whether the nft field is set.
+     */
+    boolean hasNft();
+    /**
+     * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+     * @return The nft.
+     */
+    com.cudosnode.cudosnode.nft.NftProto.BaseNFT getNft();
+    /**
+     * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+     */
+    com.cudosnode.cudosnode.nft.NftProto.BaseNFTOrBuilder getNftOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryNFTResponse is the response type for the Query/NFT RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryNFTResponse}
+   */
+  public static final class QueryNFTResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryNFTResponse)
+      QueryNFTResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryNFTResponse.newBuilder() to construct.
+    private QueryNFTResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryNFTResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryNFTResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.Builder.class);
+    }
+
+    public static final int NFT_FIELD_NUMBER = 1;
+    private com.cudosnode.cudosnode.nft.NftProto.BaseNFT nft_;
+    /**
+     * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+     * @return Whether the nft field is set.
+     */
+    @java.lang.Override
+    public boolean hasNft() {
+      return nft_ != null;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+     * @return The nft.
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.BaseNFT getNft() {
+      return nft_ == null ? com.cudosnode.cudosnode.nft.NftProto.BaseNFT.getDefaultInstance() : nft_;
+    }
+    /**
+     * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+     */
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.NftProto.BaseNFTOrBuilder getNftOrBuilder() {
+      return nft_ == null ? com.cudosnode.cudosnode.nft.NftProto.BaseNFT.getDefaultInstance() : nft_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (nft_ != null) {
+        output.writeMessage(1, getNft());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (nft_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getNft());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse) obj;
+
+      if (hasNft() != other.hasNft()) return false;
+      if (hasNft()) {
+        if (!getNft()
+            .equals(other.getNft())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasNft()) {
+        hash = (37 * hash) + NFT_FIELD_NUMBER;
+        hash = (53 * hash) + getNft().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryNFTResponse is the response type for the Query/NFT RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryNFTResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryNFTResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        nft_ = null;
+        if (nftBuilder_ != null) {
+          nftBuilder_.dispose();
+          nftBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryNFTResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.nft_ = nftBuilder_ == null
+              ? nft_
+              : nftBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.getDefaultInstance()) return this;
+        if (other.hasNft()) {
+          mergeNft(other.getNft());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getNftFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cudosnode.cudosnode.nft.NftProto.BaseNFT nft_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.BaseNFT, com.cudosnode.cudosnode.nft.NftProto.BaseNFT.Builder, com.cudosnode.cudosnode.nft.NftProto.BaseNFTOrBuilder> nftBuilder_;
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       * @return Whether the nft field is set.
+       */
+      public boolean hasNft() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       * @return The nft.
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.BaseNFT getNft() {
+        if (nftBuilder_ == null) {
+          return nft_ == null ? com.cudosnode.cudosnode.nft.NftProto.BaseNFT.getDefaultInstance() : nft_;
+        } else {
+          return nftBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       */
+      public Builder setNft(com.cudosnode.cudosnode.nft.NftProto.BaseNFT value) {
+        if (nftBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nft_ = value;
+        } else {
+          nftBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       */
+      public Builder setNft(
+          com.cudosnode.cudosnode.nft.NftProto.BaseNFT.Builder builderForValue) {
+        if (nftBuilder_ == null) {
+          nft_ = builderForValue.build();
+        } else {
+          nftBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       */
+      public Builder mergeNft(com.cudosnode.cudosnode.nft.NftProto.BaseNFT value) {
+        if (nftBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            nft_ != null &&
+            nft_ != com.cudosnode.cudosnode.nft.NftProto.BaseNFT.getDefaultInstance()) {
+            getNftBuilder().mergeFrom(value);
+          } else {
+            nft_ = value;
+          }
+        } else {
+          nftBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       */
+      public Builder clearNft() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nft_ = null;
+        if (nftBuilder_ != null) {
+          nftBuilder_.dispose();
+          nftBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.BaseNFT.Builder getNftBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getNftFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       */
+      public com.cudosnode.cudosnode.nft.NftProto.BaseNFTOrBuilder getNftOrBuilder() {
+        if (nftBuilder_ != null) {
+          return nftBuilder_.getMessageOrBuilder();
+        } else {
+          return nft_ == null ?
+              com.cudosnode.cudosnode.nft.NftProto.BaseNFT.getDefaultInstance() : nft_;
+        }
+      }
+      /**
+       * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudosnode.cudosnode.nft.NftProto.BaseNFT, com.cudosnode.cudosnode.nft.NftProto.BaseNFT.Builder, com.cudosnode.cudosnode.nft.NftProto.BaseNFTOrBuilder> 
+          getNftFieldBuilder() {
+        if (nftBuilder_ == null) {
+          nftBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cudosnode.cudosnode.nft.NftProto.BaseNFT, com.cudosnode.cudosnode.nft.NftProto.BaseNFT.Builder, com.cudosnode.cudosnode.nft.NftProto.BaseNFTOrBuilder>(
+                  getNft(),
+                  getParentForChildren(),
+                  isClean());
+          nft_ = null;
+        }
+        return nftBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryNFTResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryNFTResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryNFTResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryNFTResponse>() {
+      @java.lang.Override
+      public QueryNFTResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryNFTResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryNFTResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryApprovalsNFTRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryApprovalsNFTRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+     * @return The tokenId.
+     */
+    java.lang.String getTokenId();
+    /**
+     * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+     * @return The bytes for tokenId.
+     */
+    com.google.protobuf.ByteString
+        getTokenIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryApprovalsNFTRequest is the request type for the Query/NFT RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryApprovalsNFTRequest}
+   */
+  public static final class QueryApprovalsNFTRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryApprovalsNFTRequest)
+      QueryApprovalsNFTRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryApprovalsNFTRequest.newBuilder() to construct.
+    private QueryApprovalsNFTRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryApprovalsNFTRequest() {
+      denomId_ = "";
+      tokenId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryApprovalsNFTRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest.Builder.class);
+    }
+
+    public static final int DENOM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenId_ = "";
+    /**
+     * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+     * @return The tokenId.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenId() {
+      java.lang.Object ref = tokenId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+     * @return The bytes for tokenId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenIdBytes() {
+      java.lang.Object ref = tokenId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest) obj;
+
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getTokenId()
+          .equals(other.getTokenId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      hash = (37 * hash) + TOKEN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryApprovalsNFTRequest is the request type for the Query/NFT RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryApprovalsNFTRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryApprovalsNFTRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomId_ = "";
+        tokenId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenId_ = tokenId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest.getDefaultInstance()) return this;
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTokenId().isEmpty()) {
+          tokenId_ = other.tokenId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                tokenId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenId_ = "";
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @return The tokenId.
+       */
+      public java.lang.String getTokenId() {
+        java.lang.Object ref = tokenId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @return The bytes for tokenId.
+       */
+      public com.google.protobuf.ByteString
+          getTokenIdBytes() {
+        java.lang.Object ref = tokenId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @param value The tokenId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenId() {
+        tokenId_ = getDefaultInstance().getTokenId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_id = 2 [json_name = "tokenId", (.gogoproto.moretags) = "yaml:&#92;"token_id&#92;""];</code>
+       * @param value The bytes for tokenId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryApprovalsNFTRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryApprovalsNFTRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryApprovalsNFTRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryApprovalsNFTRequest>() {
+      @java.lang.Override
+      public QueryApprovalsNFTRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryApprovalsNFTRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryApprovalsNFTRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryApprovalsNFTResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryApprovalsNFTResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+     * @return A list containing the approvedAddresses.
+     */
+    java.util.List<java.lang.String>
+        getApprovedAddressesList();
+    /**
+     * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+     * @return The count of approvedAddresses.
+     */
+    int getApprovedAddressesCount();
+    /**
+     * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+     * @param index The index of the element to return.
+     * @return The approvedAddresses at the given index.
+     */
+    java.lang.String getApprovedAddresses(int index);
+    /**
+     * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the approvedAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getApprovedAddressesBytes(int index);
+  }
+  /**
+   * <pre>
+   * QueryApprovalsNFTResponse is the response type for the Query/ApprovalsNFTRequest RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryApprovalsNFTResponse}
+   */
+  public static final class QueryApprovalsNFTResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryApprovalsNFTResponse)
+      QueryApprovalsNFTResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryApprovalsNFTResponse.newBuilder() to construct.
+    private QueryApprovalsNFTResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryApprovalsNFTResponse() {
+      approvedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryApprovalsNFTResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse.Builder.class);
+    }
+
+    public static final int APPROVEDADDRESSES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList approvedAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+     * @return A list containing the approvedAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getApprovedAddressesList() {
+      return approvedAddresses_;
+    }
+    /**
+     * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+     * @return The count of approvedAddresses.
+     */
+    public int getApprovedAddressesCount() {
+      return approvedAddresses_.size();
+    }
+    /**
+     * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+     * @param index The index of the element to return.
+     * @return The approvedAddresses at the given index.
+     */
+    public java.lang.String getApprovedAddresses(int index) {
+      return approvedAddresses_.get(index);
+    }
+    /**
+     * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the approvedAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getApprovedAddressesBytes(int index) {
+      return approvedAddresses_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < approvedAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, approvedAddresses_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < approvedAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(approvedAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getApprovedAddressesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse) obj;
+
+      if (!getApprovedAddressesList()
+          .equals(other.getApprovedAddressesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getApprovedAddressesCount() > 0) {
+        hash = (37 * hash) + APPROVEDADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getApprovedAddressesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryApprovalsNFTResponse is the response type for the Query/ApprovalsNFTRequest RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryApprovalsNFTResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryApprovalsNFTResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        approvedAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          approvedAddresses_.makeImmutable();
+          result.approvedAddresses_ = approvedAddresses_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse.getDefaultInstance()) return this;
+        if (!other.approvedAddresses_.isEmpty()) {
+          if (approvedAddresses_.isEmpty()) {
+            approvedAddresses_ = other.approvedAddresses_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureApprovedAddressesIsMutable();
+            approvedAddresses_.addAll(other.approvedAddresses_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureApprovedAddressesIsMutable();
+                approvedAddresses_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList approvedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureApprovedAddressesIsMutable() {
+        if (!approvedAddresses_.isModifiable()) {
+          approvedAddresses_ = new com.google.protobuf.LazyStringArrayList(approvedAddresses_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @return A list containing the approvedAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getApprovedAddressesList() {
+        approvedAddresses_.makeImmutable();
+        return approvedAddresses_;
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @return The count of approvedAddresses.
+       */
+      public int getApprovedAddressesCount() {
+        return approvedAddresses_.size();
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @param index The index of the element to return.
+       * @return The approvedAddresses at the given index.
+       */
+      public java.lang.String getApprovedAddresses(int index) {
+        return approvedAddresses_.get(index);
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the approvedAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getApprovedAddressesBytes(int index) {
+        return approvedAddresses_.getByteString(index);
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @param index The index to set the value at.
+       * @param value The approvedAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApprovedAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureApprovedAddressesIsMutable();
+        approvedAddresses_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @param value The approvedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addApprovedAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureApprovedAddressesIsMutable();
+        approvedAddresses_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @param values The approvedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllApprovedAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureApprovedAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, approvedAddresses_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApprovedAddresses() {
+        approvedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ApprovedAddresses = 1 [json_name = "ApprovedAddresses", (.gogoproto.customname) = "ApprovedAddresses", (.gogoproto.jsontag) = "approved_addresses"];</code>
+       * @param value The bytes of the approvedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addApprovedAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureApprovedAddressesIsMutable();
+        approvedAddresses_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryApprovalsNFTResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryApprovalsNFTResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryApprovalsNFTResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryApprovalsNFTResponse>() {
+      @java.lang.Override
+      public QueryApprovalsNFTResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryApprovalsNFTResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryApprovalsNFTResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsNFTResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryApprovalsIsApprovedForAllRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string operator = 2 [json_name = "operator"];</code>
+     * @return The operator.
+     */
+    java.lang.String getOperator();
+    /**
+     * <code>string operator = 2 [json_name = "operator"];</code>
+     * @return The bytes for operator.
+     */
+    com.google.protobuf.ByteString
+        getOperatorBytes();
+  }
+  /**
+   * <pre>
+   * QueryApprovalsIsApprovedForAllRequest is the request type for the Query/NFT RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllRequest}
+   */
+  public static final class QueryApprovalsIsApprovedForAllRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllRequest)
+      QueryApprovalsIsApprovedForAllRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryApprovalsIsApprovedForAllRequest.newBuilder() to construct.
+    private QueryApprovalsIsApprovedForAllRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryApprovalsIsApprovedForAllRequest() {
+      owner_ = "";
+      operator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryApprovalsIsApprovedForAllRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OPERATOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operator_ = "";
+    /**
+     * <code>string operator = 2 [json_name = "operator"];</code>
+     * @return The operator.
+     */
+    @java.lang.Override
+    public java.lang.String getOperator() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operator = 2 [json_name = "operator"];</code>
+     * @return The bytes for operator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorBytes() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, operator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, operator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest other = (com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getOperator()
+          .equals(other.getOperator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getOperator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryApprovalsIsApprovedForAllRequest is the request type for the Query/NFT RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllRequest)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        operator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest result = new com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.operator_ = operator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOperator().isEmpty()) {
+          operator_ = other.operator_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                operator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object operator_ = "";
+      /**
+       * <code>string operator = 2 [json_name = "operator"];</code>
+       * @return The operator.
+       */
+      public java.lang.String getOperator() {
+        java.lang.Object ref = operator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operator = 2 [json_name = "operator"];</code>
+       * @return The bytes for operator.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorBytes() {
+        java.lang.Object ref = operator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operator = 2 [json_name = "operator"];</code>
+       * @param value The operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator = 2 [json_name = "operator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperator() {
+        operator_ = getDefaultInstance().getOperator();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator = 2 [json_name = "operator"];</code>
+       * @param value The bytes for operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllRequest)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryApprovalsIsApprovedForAllRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryApprovalsIsApprovedForAllRequest>() {
+      @java.lang.Override
+      public QueryApprovalsIsApprovedForAllRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryApprovalsIsApprovedForAllRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryApprovalsIsApprovedForAllRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryApprovalsIsApprovedForAllResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool isApproved = 1 [json_name = "isApproved", (.gogoproto.jsontag) = "is_approved"];</code>
+     * @return The isApproved.
+     */
+    boolean getIsApproved();
+  }
+  /**
+   * <pre>
+   * QueryApprovalsNFTResponse is the response type for the Query/ApprovalsNFTRequest RPC method
+   * </pre>
+   *
+   * Protobuf type {@code cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllResponse}
+   */
+  public static final class QueryApprovalsIsApprovedForAllResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllResponse)
+      QueryApprovalsIsApprovedForAllResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryApprovalsIsApprovedForAllResponse.newBuilder() to construct.
+    private QueryApprovalsIsApprovedForAllResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryApprovalsIsApprovedForAllResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryApprovalsIsApprovedForAllResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse.Builder.class);
+    }
+
+    public static final int ISAPPROVED_FIELD_NUMBER = 1;
+    private boolean isApproved_ = false;
+    /**
+     * <code>bool isApproved = 1 [json_name = "isApproved", (.gogoproto.jsontag) = "is_approved"];</code>
+     * @return The isApproved.
+     */
+    @java.lang.Override
+    public boolean getIsApproved() {
+      return isApproved_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isApproved_ != false) {
+        output.writeBool(1, isApproved_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isApproved_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isApproved_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse)) {
+        return super.equals(obj);
+      }
+      com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse other = (com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse) obj;
+
+      if (getIsApproved()
+          != other.getIsApproved()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISAPPROVED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsApproved());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryApprovalsNFTResponse is the response type for the Query/ApprovalsNFTRequest RPC method
+     * </pre>
+     *
+     * Protobuf type {@code cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllResponse)
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse.Builder.class);
+      }
+
+      // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isApproved_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse getDefaultInstanceForType() {
+        return com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse build() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse buildPartial() {
+        com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse result = new com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isApproved_ = isApproved_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse) {
+          return mergeFrom((com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse other) {
+        if (other == com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse.getDefaultInstance()) return this;
+        if (other.getIsApproved() != false) {
+          setIsApproved(other.getIsApproved());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isApproved_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isApproved_ ;
+      /**
+       * <code>bool isApproved = 1 [json_name = "isApproved", (.gogoproto.jsontag) = "is_approved"];</code>
+       * @return The isApproved.
+       */
+      @java.lang.Override
+      public boolean getIsApproved() {
+        return isApproved_;
+      }
+      /**
+       * <code>bool isApproved = 1 [json_name = "isApproved", (.gogoproto.jsontag) = "is_approved"];</code>
+       * @param value The isApproved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsApproved(boolean value) {
+
+        isApproved_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isApproved = 1 [json_name = "isApproved", (.gogoproto.jsontag) = "is_approved"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsApproved() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isApproved_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudosnode.cudosnode.nft.QueryApprovalsIsApprovedForAllResponse)
+    private static final com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse();
+    }
+
+    public static com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryApprovalsIsApprovedForAllResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryApprovalsIsApprovedForAllResponse>() {
+      @java.lang.Override
+      public QueryApprovalsIsApprovedForAllResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryApprovalsIsApprovedForAllResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryApprovalsIsApprovedForAllResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudosnode.cudosnode.nft.QueryProto.QueryApprovalsIsApprovedForAllResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QuerySupplyRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QuerySupplyRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QuerySupplyResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QuerySupplyResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryOwnerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryOwnerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryOwnerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryOwnerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryCollectionRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryCollectionRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryCollectionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryCollectionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryCollectionsByIdsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryCollectionsByIdsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryCollectionByIdsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryCollectionByIdsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryDenomRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryDenomRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryDenomResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryDenomResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryDenomByNameRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryDenomByNameRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryDenomByNameResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryDenomByNameResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryDenomBySymbolResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryDenomsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryDenomsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryDenomsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryDenomsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryNFTRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryNFTRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryNFTResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryNFTResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryApprovalsNFTResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudosnode_cudosnode_nft_QueryApprovalsIsApprovedForAllResponse_fieldAccessorTable;
 
@@ -239,13 +15257,13 @@ public final class QueryProto {
       "ueryApprovalsIsApprovedForAllRequest\032?.c" +
       "udosnode.cudosnode.nft.QueryApprovalsIsA" +
       "pprovedForAllResponse\"3\202\323\344\223\002-\022+/cudosnod" +
-      "e/nft/approvals/{owner}/{operator}B\327\001\n\033c" +
-      "om.cudosnode.cudosnode.nftB\nQueryProtoP\001" +
-      "Z.github.com/CudoVentures/cudos-node/x/n" +
-      "ft/types\242\002\003CCN\252\002\027Cudosnode.Cudosnode.Nft" +
-      "\312\002\027Cudosnode\\Cudosnode\\Nft\342\002#Cudosnode\\C" +
-      "udosnode\\Nft\\GPBMetadata\352\002\031Cudosnode::Cu" +
-      "dosnode::Nftb\006proto3"
+      "e/nft/approvals/{owner}/{operator}B\325\001\n\033c" +
+      "om.cudosnode.cudosnode.nftB\nQueryProtoZ." +
+      "github.com/CudoVentures/cudos-node/x/nft" +
+      "/types\242\002\003CCN\252\002\027Cudosnode.Cudosnode.Nft\312\002" +
+      "\027Cudosnode\\Cudosnode\\Nft\342\002#Cudosnode\\Cud" +
+      "osnode\\Nft\\GPBMetadata\352\002\031Cudosnode::Cudo" +
+      "snode::Nftb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

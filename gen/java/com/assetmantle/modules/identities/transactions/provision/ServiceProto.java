@@ -35,15 +35,15 @@ public final class ServiceProto {
       ".Message\032J.assetmantle.modules.identitie" +
       "s.transactions.provision.TransactionResp" +
       "onse\"$\202\323\344\223\002\036\"\034/mantle/identities/provisi" +
-      "onB\303\002\n9com.assetmantle.modules.identitie" +
-      "s.transactions.provisionB\014ServiceProtoP\001" +
-      "\242\002\005AMITP\252\0025Assetmantle.Modules.Identitie" +
-      "s.Transactions.Provision\312\0025Assetmantle\\M" +
-      "odules\\Identities\\Transactions\\Provision" +
-      "\342\002AAssetmantle\\Modules\\Identities\\Transa" +
-      "ctions\\Provision\\GPBMetadata\352\0029Assetmant" +
-      "le::Modules::Identities::Transactions::P" +
-      "rovisionb\006proto3"
+      "onB\301\002\n9com.assetmantle.modules.identitie" +
+      "s.transactions.provisionB\014ServiceProto\242\002" +
+      "\005AMITP\252\0025Assetmantle.Modules.Identities." +
+      "Transactions.Provision\312\0025Assetmantle\\Mod" +
+      "ules\\Identities\\Transactions\\Provision\342\002" +
+      "AAssetmantle\\Modules\\Identities\\Transact" +
+      "ions\\Provision\\GPBMetadata\352\0029Assetmantle" +
+      "::Modules::Identities::Transactions::Pro" +
+      "visionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

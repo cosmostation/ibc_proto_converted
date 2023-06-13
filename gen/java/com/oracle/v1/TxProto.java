@@ -14,74 +14,13978 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgRequestDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgRequestData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * OracleScriptID is the identifier of the oracle script to be called.
+     * </pre>
+     *
+     * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+     * @return The oracleScriptId.
+     */
+    long getOracleScriptId();
+
+    /**
+     * <pre>
+     * Calldata is the OBI-encoded call parameters for the oracle script.
+     * </pre>
+     *
+     * <code>bytes calldata = 2 [json_name = "calldata"];</code>
+     * @return The calldata.
+     */
+    com.google.protobuf.ByteString getCalldata();
+
+    /**
+     * <pre>
+     * AskCount is the number of validators to perform the oracle task.
+     * </pre>
+     *
+     * <code>uint64 ask_count = 3 [json_name = "askCount"];</code>
+     * @return The askCount.
+     */
+    long getAskCount();
+
+    /**
+     * <pre>
+     * MinCount is the minimum number of validators sufficient to resolve the
+     * oracle tasks.
+     * </pre>
+     *
+     * <code>uint64 min_count = 4 [json_name = "minCount"];</code>
+     * @return The minCount.
+     */
+    long getMinCount();
+
+    /**
+     * <pre>
+     * ClientID is the client-provided unique identifier to track the request.
+     * </pre>
+     *
+     * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+     * @return The clientId.
+     */
+    java.lang.String getClientId();
+    /**
+     * <pre>
+     * ClientID is the client-provided unique identifier to track the request.
+     * </pre>
+     *
+     * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+     * @return The bytes for clientId.
+     */
+    com.google.protobuf.ByteString
+        getClientIdBytes();
+
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFeeLimitList();
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFeeLimit(int index);
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getFeeLimitCount();
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeeLimitOrBuilderList();
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeLimitOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * PrepareGas is amount of gas to pay to prepare raw requests
+     * </pre>
+     *
+     * <code>uint64 prepare_gas = 7 [json_name = "prepareGas"];</code>
+     * @return The prepareGas.
+     */
+    long getPrepareGas();
+
+    /**
+     * <pre>
+     * ExecuteGas is amount of gas to reserve for executing
+     * </pre>
+     *
+     * <code>uint64 execute_gas = 8 [json_name = "executeGas"];</code>
+     * @return The executeGas.
+     */
+    long getExecuteGas();
+
+    /**
+     * <pre>
+     * Sender is an account address of message sender.
+     * </pre>
+     *
+     * <code>string sender = 9 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * Sender is an account address of message sender.
+     * </pre>
+     *
+     * <code>string sender = 9 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * <pre>
+   * MsgRequestData is a message for sending a data oracle request.
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgRequestData}
+   */
+  public static final class MsgRequestData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgRequestData)
+      MsgRequestDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRequestData.newBuilder() to construct.
+    private MsgRequestData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRequestData() {
+      calldata_ = com.google.protobuf.ByteString.EMPTY;
+      clientId_ = "";
+      feeLimit_ = java.util.Collections.emptyList();
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRequestData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgRequestData.class, com.oracle.v1.TxProto.MsgRequestData.Builder.class);
+    }
+
+    public static final int ORACLE_SCRIPT_ID_FIELD_NUMBER = 1;
+    private long oracleScriptId_ = 0L;
+    /**
+     * <pre>
+     * OracleScriptID is the identifier of the oracle script to be called.
+     * </pre>
+     *
+     * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+     * @return The oracleScriptId.
+     */
+    @java.lang.Override
+    public long getOracleScriptId() {
+      return oracleScriptId_;
+    }
+
+    public static final int CALLDATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString calldata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Calldata is the OBI-encoded call parameters for the oracle script.
+     * </pre>
+     *
+     * <code>bytes calldata = 2 [json_name = "calldata"];</code>
+     * @return The calldata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCalldata() {
+      return calldata_;
+    }
+
+    public static final int ASK_COUNT_FIELD_NUMBER = 3;
+    private long askCount_ = 0L;
+    /**
+     * <pre>
+     * AskCount is the number of validators to perform the oracle task.
+     * </pre>
+     *
+     * <code>uint64 ask_count = 3 [json_name = "askCount"];</code>
+     * @return The askCount.
+     */
+    @java.lang.Override
+    public long getAskCount() {
+      return askCount_;
+    }
+
+    public static final int MIN_COUNT_FIELD_NUMBER = 4;
+    private long minCount_ = 0L;
+    /**
+     * <pre>
+     * MinCount is the minimum number of validators sufficient to resolve the
+     * oracle tasks.
+     * </pre>
+     *
+     * <code>uint64 min_count = 4 [json_name = "minCount"];</code>
+     * @return The minCount.
+     */
+    @java.lang.Override
+    public long getMinCount() {
+      return minCount_;
+    }
+
+    public static final int CLIENT_ID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientId_ = "";
+    /**
+     * <pre>
+     * ClientID is the client-provided unique identifier to track the request.
+     * </pre>
+     *
+     * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+     * @return The clientId.
+     */
+    @java.lang.Override
+    public java.lang.String getClientId() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ClientID is the client-provided unique identifier to track the request.
+     * </pre>
+     *
+     * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+     * @return The bytes for clientId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientIdBytes() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEE_LIMIT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> feeLimit_;
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeeLimitList() {
+      return feeLimit_;
+    }
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeeLimitOrBuilderList() {
+      return feeLimit_;
+    }
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getFeeLimitCount() {
+      return feeLimit_.size();
+    }
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFeeLimit(int index) {
+      return feeLimit_.get(index);
+    }
+    /**
+     * <pre>
+     * FeeLimit is the maximum tokens that will be paid to all data source
+     * providers.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeLimitOrBuilder(
+        int index) {
+      return feeLimit_.get(index);
+    }
+
+    public static final int PREPARE_GAS_FIELD_NUMBER = 7;
+    private long prepareGas_ = 0L;
+    /**
+     * <pre>
+     * PrepareGas is amount of gas to pay to prepare raw requests
+     * </pre>
+     *
+     * <code>uint64 prepare_gas = 7 [json_name = "prepareGas"];</code>
+     * @return The prepareGas.
+     */
+    @java.lang.Override
+    public long getPrepareGas() {
+      return prepareGas_;
+    }
+
+    public static final int EXECUTE_GAS_FIELD_NUMBER = 8;
+    private long executeGas_ = 0L;
+    /**
+     * <pre>
+     * ExecuteGas is amount of gas to reserve for executing
+     * </pre>
+     *
+     * <code>uint64 execute_gas = 8 [json_name = "executeGas"];</code>
+     * @return The executeGas.
+     */
+    @java.lang.Override
+    public long getExecuteGas() {
+      return executeGas_;
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * Sender is an account address of message sender.
+     * </pre>
+     *
+     * <code>string sender = 9 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Sender is an account address of message sender.
+     * </pre>
+     *
+     * <code>string sender = 9 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (oracleScriptId_ != 0L) {
+        output.writeUInt64(1, oracleScriptId_);
+      }
+      if (!calldata_.isEmpty()) {
+        output.writeBytes(2, calldata_);
+      }
+      if (askCount_ != 0L) {
+        output.writeUInt64(3, askCount_);
+      }
+      if (minCount_ != 0L) {
+        output.writeUInt64(4, minCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, clientId_);
+      }
+      for (int i = 0; i < feeLimit_.size(); i++) {
+        output.writeMessage(6, feeLimit_.get(i));
+      }
+      if (prepareGas_ != 0L) {
+        output.writeUInt64(7, prepareGas_);
+      }
+      if (executeGas_ != 0L) {
+        output.writeUInt64(8, executeGas_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (oracleScriptId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, oracleScriptId_);
+      }
+      if (!calldata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, calldata_);
+      }
+      if (askCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, askCount_);
+      }
+      if (minCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, minCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, clientId_);
+      }
+      for (int i = 0; i < feeLimit_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, feeLimit_.get(i));
+      }
+      if (prepareGas_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, prepareGas_);
+      }
+      if (executeGas_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, executeGas_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgRequestData)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgRequestData other = (com.oracle.v1.TxProto.MsgRequestData) obj;
+
+      if (getOracleScriptId()
+          != other.getOracleScriptId()) return false;
+      if (!getCalldata()
+          .equals(other.getCalldata())) return false;
+      if (getAskCount()
+          != other.getAskCount()) return false;
+      if (getMinCount()
+          != other.getMinCount()) return false;
+      if (!getClientId()
+          .equals(other.getClientId())) return false;
+      if (!getFeeLimitList()
+          .equals(other.getFeeLimitList())) return false;
+      if (getPrepareGas()
+          != other.getPrepareGas()) return false;
+      if (getExecuteGas()
+          != other.getExecuteGas()) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORACLE_SCRIPT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOracleScriptId());
+      hash = (37 * hash) + CALLDATA_FIELD_NUMBER;
+      hash = (53 * hash) + getCalldata().hashCode();
+      hash = (37 * hash) + ASK_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAskCount());
+      hash = (37 * hash) + MIN_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinCount());
+      hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientId().hashCode();
+      if (getFeeLimitCount() > 0) {
+        hash = (37 * hash) + FEE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getFeeLimitList().hashCode();
+      }
+      hash = (37 * hash) + PREPARE_GAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPrepareGas());
+      hash = (37 * hash) + EXECUTE_GAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExecuteGas());
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgRequestData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgRequestData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgRequestData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRequestData is a message for sending a data oracle request.
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgRequestData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgRequestData)
+        com.oracle.v1.TxProto.MsgRequestDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgRequestData.class, com.oracle.v1.TxProto.MsgRequestData.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgRequestData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracleScriptId_ = 0L;
+        calldata_ = com.google.protobuf.ByteString.EMPTY;
+        askCount_ = 0L;
+        minCount_ = 0L;
+        clientId_ = "";
+        if (feeLimitBuilder_ == null) {
+          feeLimit_ = java.util.Collections.emptyList();
+        } else {
+          feeLimit_ = null;
+          feeLimitBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        prepareGas_ = 0L;
+        executeGas_ = 0L;
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgRequestData getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgRequestData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgRequestData build() {
+        com.oracle.v1.TxProto.MsgRequestData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgRequestData buildPartial() {
+        com.oracle.v1.TxProto.MsgRequestData result = new com.oracle.v1.TxProto.MsgRequestData(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.oracle.v1.TxProto.MsgRequestData result) {
+        if (feeLimitBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            feeLimit_ = java.util.Collections.unmodifiableList(feeLimit_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.feeLimit_ = feeLimit_;
+        } else {
+          result.feeLimit_ = feeLimitBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.oracle.v1.TxProto.MsgRequestData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracleScriptId_ = oracleScriptId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.calldata_ = calldata_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.askCount_ = askCount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.minCount_ = minCount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.clientId_ = clientId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.prepareGas_ = prepareGas_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.executeGas_ = executeGas_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgRequestData) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgRequestData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgRequestData other) {
+        if (other == com.oracle.v1.TxProto.MsgRequestData.getDefaultInstance()) return this;
+        if (other.getOracleScriptId() != 0L) {
+          setOracleScriptId(other.getOracleScriptId());
+        }
+        if (other.getCalldata() != com.google.protobuf.ByteString.EMPTY) {
+          setCalldata(other.getCalldata());
+        }
+        if (other.getAskCount() != 0L) {
+          setAskCount(other.getAskCount());
+        }
+        if (other.getMinCount() != 0L) {
+          setMinCount(other.getMinCount());
+        }
+        if (!other.getClientId().isEmpty()) {
+          clientId_ = other.clientId_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (feeLimitBuilder_ == null) {
+          if (!other.feeLimit_.isEmpty()) {
+            if (feeLimit_.isEmpty()) {
+              feeLimit_ = other.feeLimit_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureFeeLimitIsMutable();
+              feeLimit_.addAll(other.feeLimit_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.feeLimit_.isEmpty()) {
+            if (feeLimitBuilder_.isEmpty()) {
+              feeLimitBuilder_.dispose();
+              feeLimitBuilder_ = null;
+              feeLimit_ = other.feeLimit_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              feeLimitBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeeLimitFieldBuilder() : null;
+            } else {
+              feeLimitBuilder_.addAllMessages(other.feeLimit_);
+            }
+          }
+        }
+        if (other.getPrepareGas() != 0L) {
+          setPrepareGas(other.getPrepareGas());
+        }
+        if (other.getExecuteGas() != 0L) {
+          setExecuteGas(other.getExecuteGas());
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                oracleScriptId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                calldata_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                askCount_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                minCount_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                clientId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (feeLimitBuilder_ == null) {
+                  ensureFeeLimitIsMutable();
+                  feeLimit_.add(m);
+                } else {
+                  feeLimitBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 56: {
+                prepareGas_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                executeGas_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long oracleScriptId_ ;
+      /**
+       * <pre>
+       * OracleScriptID is the identifier of the oracle script to be called.
+       * </pre>
+       *
+       * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+       * @return The oracleScriptId.
+       */
+      @java.lang.Override
+      public long getOracleScriptId() {
+        return oracleScriptId_;
+      }
+      /**
+       * <pre>
+       * OracleScriptID is the identifier of the oracle script to be called.
+       * </pre>
+       *
+       * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+       * @param value The oracleScriptId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleScriptId(long value) {
+
+        oracleScriptId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OracleScriptID is the identifier of the oracle script to be called.
+       * </pre>
+       *
+       * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracleScriptId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oracleScriptId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString calldata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Calldata is the OBI-encoded call parameters for the oracle script.
+       * </pre>
+       *
+       * <code>bytes calldata = 2 [json_name = "calldata"];</code>
+       * @return The calldata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCalldata() {
+        return calldata_;
+      }
+      /**
+       * <pre>
+       * Calldata is the OBI-encoded call parameters for the oracle script.
+       * </pre>
+       *
+       * <code>bytes calldata = 2 [json_name = "calldata"];</code>
+       * @param value The calldata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCalldata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        calldata_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Calldata is the OBI-encoded call parameters for the oracle script.
+       * </pre>
+       *
+       * <code>bytes calldata = 2 [json_name = "calldata"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCalldata() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        calldata_ = getDefaultInstance().getCalldata();
+        onChanged();
+        return this;
+      }
+
+      private long askCount_ ;
+      /**
+       * <pre>
+       * AskCount is the number of validators to perform the oracle task.
+       * </pre>
+       *
+       * <code>uint64 ask_count = 3 [json_name = "askCount"];</code>
+       * @return The askCount.
+       */
+      @java.lang.Override
+      public long getAskCount() {
+        return askCount_;
+      }
+      /**
+       * <pre>
+       * AskCount is the number of validators to perform the oracle task.
+       * </pre>
+       *
+       * <code>uint64 ask_count = 3 [json_name = "askCount"];</code>
+       * @param value The askCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAskCount(long value) {
+
+        askCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AskCount is the number of validators to perform the oracle task.
+       * </pre>
+       *
+       * <code>uint64 ask_count = 3 [json_name = "askCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAskCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        askCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long minCount_ ;
+      /**
+       * <pre>
+       * MinCount is the minimum number of validators sufficient to resolve the
+       * oracle tasks.
+       * </pre>
+       *
+       * <code>uint64 min_count = 4 [json_name = "minCount"];</code>
+       * @return The minCount.
+       */
+      @java.lang.Override
+      public long getMinCount() {
+        return minCount_;
+      }
+      /**
+       * <pre>
+       * MinCount is the minimum number of validators sufficient to resolve the
+       * oracle tasks.
+       * </pre>
+       *
+       * <code>uint64 min_count = 4 [json_name = "minCount"];</code>
+       * @param value The minCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinCount(long value) {
+
+        minCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MinCount is the minimum number of validators sufficient to resolve the
+       * oracle tasks.
+       * </pre>
+       *
+       * <code>uint64 min_count = 4 [json_name = "minCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        minCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientId_ = "";
+      /**
+       * <pre>
+       * ClientID is the client-provided unique identifier to track the request.
+       * </pre>
+       *
+       * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @return The clientId.
+       */
+      public java.lang.String getClientId() {
+        java.lang.Object ref = clientId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ClientID is the client-provided unique identifier to track the request.
+       * </pre>
+       *
+       * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @return The bytes for clientId.
+       */
+      public com.google.protobuf.ByteString
+          getClientIdBytes() {
+        java.lang.Object ref = clientId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ClientID is the client-provided unique identifier to track the request.
+       * </pre>
+       *
+       * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @param value The clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ClientID is the client-provided unique identifier to track the request.
+       * </pre>
+       *
+       * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientId() {
+        clientId_ = getDefaultInstance().getClientId();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ClientID is the client-provided unique identifier to track the request.
+       * </pre>
+       *
+       * <code>string client_id = 5 [json_name = "clientId", (.gogoproto.customname) = "ClientID"];</code>
+       * @param value The bytes for clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> feeLimit_ =
+        java.util.Collections.emptyList();
+      private void ensureFeeLimitIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          feeLimit_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(feeLimit_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> feeLimitBuilder_;
+
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeeLimitList() {
+        if (feeLimitBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(feeLimit_);
+        } else {
+          return feeLimitBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getFeeLimitCount() {
+        if (feeLimitBuilder_ == null) {
+          return feeLimit_.size();
+        } else {
+          return feeLimitBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFeeLimit(int index) {
+        if (feeLimitBuilder_ == null) {
+          return feeLimit_.get(index);
+        } else {
+          return feeLimitBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFeeLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeLimitIsMutable();
+          feeLimit_.set(index, value);
+          onChanged();
+        } else {
+          feeLimitBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFeeLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          feeLimit_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeLimitBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFeeLimit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeLimitIsMutable();
+          feeLimit_.add(value);
+          onChanged();
+        } else {
+          feeLimitBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFeeLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeLimitIsMutable();
+          feeLimit_.add(index, value);
+          onChanged();
+        } else {
+          feeLimitBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFeeLimit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          feeLimit_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feeLimitBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFeeLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          feeLimit_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeLimitBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllFeeLimit(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, feeLimit_);
+          onChanged();
+        } else {
+          feeLimitBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearFeeLimit() {
+        if (feeLimitBuilder_ == null) {
+          feeLimit_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          feeLimitBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeFeeLimit(int index) {
+        if (feeLimitBuilder_ == null) {
+          ensureFeeLimitIsMutable();
+          feeLimit_.remove(index);
+          onChanged();
+        } else {
+          feeLimitBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFeeLimitBuilder(
+          int index) {
+        return getFeeLimitFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeLimitOrBuilder(
+          int index) {
+        if (feeLimitBuilder_ == null) {
+          return feeLimit_.get(index);  } else {
+          return feeLimitBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFeeLimitOrBuilderList() {
+        if (feeLimitBuilder_ != null) {
+          return feeLimitBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(feeLimit_);
+        }
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeeLimitBuilder() {
+        return getFeeLimitFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeeLimitBuilder(
+          int index) {
+        return getFeeLimitFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * FeeLimit is the maximum tokens that will be paid to all data source
+       * providers.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee_limit = 6 [json_name = "feeLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFeeLimitBuilderList() {
+        return getFeeLimitFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFeeLimitFieldBuilder() {
+        if (feeLimitBuilder_ == null) {
+          feeLimitBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  feeLimit_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          feeLimit_ = null;
+        }
+        return feeLimitBuilder_;
+      }
+
+      private long prepareGas_ ;
+      /**
+       * <pre>
+       * PrepareGas is amount of gas to pay to prepare raw requests
+       * </pre>
+       *
+       * <code>uint64 prepare_gas = 7 [json_name = "prepareGas"];</code>
+       * @return The prepareGas.
+       */
+      @java.lang.Override
+      public long getPrepareGas() {
+        return prepareGas_;
+      }
+      /**
+       * <pre>
+       * PrepareGas is amount of gas to pay to prepare raw requests
+       * </pre>
+       *
+       * <code>uint64 prepare_gas = 7 [json_name = "prepareGas"];</code>
+       * @param value The prepareGas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrepareGas(long value) {
+
+        prepareGas_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PrepareGas is amount of gas to pay to prepare raw requests
+       * </pre>
+       *
+       * <code>uint64 prepare_gas = 7 [json_name = "prepareGas"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrepareGas() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        prepareGas_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long executeGas_ ;
+      /**
+       * <pre>
+       * ExecuteGas is amount of gas to reserve for executing
+       * </pre>
+       *
+       * <code>uint64 execute_gas = 8 [json_name = "executeGas"];</code>
+       * @return The executeGas.
+       */
+      @java.lang.Override
+      public long getExecuteGas() {
+        return executeGas_;
+      }
+      /**
+       * <pre>
+       * ExecuteGas is amount of gas to reserve for executing
+       * </pre>
+       *
+       * <code>uint64 execute_gas = 8 [json_name = "executeGas"];</code>
+       * @param value The executeGas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecuteGas(long value) {
+
+        executeGas_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ExecuteGas is amount of gas to reserve for executing
+       * </pre>
+       *
+       * <code>uint64 execute_gas = 8 [json_name = "executeGas"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecuteGas() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        executeGas_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * Sender is an account address of message sender.
+       * </pre>
+       *
+       * <code>string sender = 9 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is an account address of message sender.
+       * </pre>
+       *
+       * <code>string sender = 9 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is an account address of message sender.
+       * </pre>
+       *
+       * <code>string sender = 9 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is an account address of message sender.
+       * </pre>
+       *
+       * <code>string sender = 9 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is an account address of message sender.
+       * </pre>
+       *
+       * <code>string sender = 9 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgRequestData)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgRequestData)
+    private static final com.oracle.v1.TxProto.MsgRequestData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgRequestData();
+    }
+
+    public static com.oracle.v1.TxProto.MsgRequestData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRequestData>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRequestData>() {
+      @java.lang.Override
+      public MsgRequestData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRequestData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRequestData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgRequestData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRequestDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgRequestDataResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRequestDataResponse is response data for MsgRequestData message
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgRequestDataResponse}
+   */
+  public static final class MsgRequestDataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgRequestDataResponse)
+      MsgRequestDataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRequestDataResponse.newBuilder() to construct.
+    private MsgRequestDataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRequestDataResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRequestDataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestDataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestDataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgRequestDataResponse.class, com.oracle.v1.TxProto.MsgRequestDataResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgRequestDataResponse)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgRequestDataResponse other = (com.oracle.v1.TxProto.MsgRequestDataResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgRequestDataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRequestDataResponse is response data for MsgRequestData message
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgRequestDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgRequestDataResponse)
+        com.oracle.v1.TxProto.MsgRequestDataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestDataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgRequestDataResponse.class, com.oracle.v1.TxProto.MsgRequestDataResponse.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgRequestDataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgRequestDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgRequestDataResponse getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgRequestDataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgRequestDataResponse build() {
+        com.oracle.v1.TxProto.MsgRequestDataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgRequestDataResponse buildPartial() {
+        com.oracle.v1.TxProto.MsgRequestDataResponse result = new com.oracle.v1.TxProto.MsgRequestDataResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgRequestDataResponse) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgRequestDataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgRequestDataResponse other) {
+        if (other == com.oracle.v1.TxProto.MsgRequestDataResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgRequestDataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgRequestDataResponse)
+    private static final com.oracle.v1.TxProto.MsgRequestDataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgRequestDataResponse();
+    }
+
+    public static com.oracle.v1.TxProto.MsgRequestDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRequestDataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRequestDataResponse>() {
+      @java.lang.Override
+      public MsgRequestDataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRequestDataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRequestDataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgRequestDataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgReportDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgReportData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * RequestID is the identifier of the request to be reported to.
+     * </pre>
+     *
+     * <code>uint64 request_id = 1 [json_name = "requestId", (.gogoproto.customname) = "RequestID", (.gogoproto.casttype) = "RequestID"];</code>
+     * @return The requestId.
+     */
+    long getRequestId();
+
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.oracle.v1.OracleProto.RawReport> 
+        getRawReportsList();
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    com.oracle.v1.OracleProto.RawReport getRawReports(int index);
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    int getRawReportsCount();
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.oracle.v1.OracleProto.RawReportOrBuilder> 
+        getRawReportsOrBuilderList();
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    com.oracle.v1.OracleProto.RawReportOrBuilder getRawReportsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Validator is the address of the validator that owns this report.
+     * </pre>
+     *
+     * <code>string validator = 3 [json_name = "validator"];</code>
+     * @return The validator.
+     */
+    java.lang.String getValidator();
+    /**
+     * <pre>
+     * Validator is the address of the validator that owns this report.
+     * </pre>
+     *
+     * <code>string validator = 3 [json_name = "validator"];</code>
+     * @return The bytes for validator.
+     */
+    com.google.protobuf.ByteString
+        getValidatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgReportData is a message for reporting to a data request by a validator.
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgReportData}
+   */
+  public static final class MsgReportData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgReportData)
+      MsgReportDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgReportData.newBuilder() to construct.
+    private MsgReportData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgReportData() {
+      rawReports_ = java.util.Collections.emptyList();
+      validator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgReportData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgReportData.class, com.oracle.v1.TxProto.MsgReportData.Builder.class);
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 1;
+    private long requestId_ = 0L;
+    /**
+     * <pre>
+     * RequestID is the identifier of the request to be reported to.
+     * </pre>
+     *
+     * <code>uint64 request_id = 1 [json_name = "requestId", (.gogoproto.customname) = "RequestID", (.gogoproto.casttype) = "RequestID"];</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public long getRequestId() {
+      return requestId_;
+    }
+
+    public static final int RAW_REPORTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.oracle.v1.OracleProto.RawReport> rawReports_;
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.oracle.v1.OracleProto.RawReport> getRawReportsList() {
+      return rawReports_;
+    }
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.oracle.v1.OracleProto.RawReportOrBuilder> 
+        getRawReportsOrBuilderList() {
+      return rawReports_;
+    }
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRawReportsCount() {
+      return rawReports_.size();
+    }
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.oracle.v1.OracleProto.RawReport getRawReports(int index) {
+      return rawReports_.get(index);
+    }
+    /**
+     * <pre>
+     * RawReports is the list of report information provided by data sources
+     * identified by external ID
+     * </pre>
+     *
+     * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.oracle.v1.OracleProto.RawReportOrBuilder getRawReportsOrBuilder(
+        int index) {
+      return rawReports_.get(index);
+    }
+
+    public static final int VALIDATOR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validator_ = "";
+    /**
+     * <pre>
+     * Validator is the address of the validator that owns this report.
+     * </pre>
+     *
+     * <code>string validator = 3 [json_name = "validator"];</code>
+     * @return The validator.
+     */
+    @java.lang.Override
+    public java.lang.String getValidator() {
+      java.lang.Object ref = validator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Validator is the address of the validator that owns this report.
+     * </pre>
+     *
+     * <code>string validator = 3 [json_name = "validator"];</code>
+     * @return The bytes for validator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorBytes() {
+      java.lang.Object ref = validator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (requestId_ != 0L) {
+        output.writeUInt64(1, requestId_);
+      }
+      for (int i = 0; i < rawReports_.size(); i++) {
+        output.writeMessage(2, rawReports_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, validator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (requestId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, requestId_);
+      }
+      for (int i = 0; i < rawReports_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, rawReports_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, validator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgReportData)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgReportData other = (com.oracle.v1.TxProto.MsgReportData) obj;
+
+      if (getRequestId()
+          != other.getRequestId()) return false;
+      if (!getRawReportsList()
+          .equals(other.getRawReportsList())) return false;
+      if (!getValidator()
+          .equals(other.getValidator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRequestId());
+      if (getRawReportsCount() > 0) {
+        hash = (37 * hash) + RAW_REPORTS_FIELD_NUMBER;
+        hash = (53 * hash) + getRawReportsList().hashCode();
+      }
+      hash = (37 * hash) + VALIDATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgReportData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgReportData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgReportData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgReportData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgReportData is a message for reporting to a data request by a validator.
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgReportData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgReportData)
+        com.oracle.v1.TxProto.MsgReportDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgReportData.class, com.oracle.v1.TxProto.MsgReportData.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgReportData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestId_ = 0L;
+        if (rawReportsBuilder_ == null) {
+          rawReports_ = java.util.Collections.emptyList();
+        } else {
+          rawReports_ = null;
+          rawReportsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        validator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgReportData getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgReportData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgReportData build() {
+        com.oracle.v1.TxProto.MsgReportData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgReportData buildPartial() {
+        com.oracle.v1.TxProto.MsgReportData result = new com.oracle.v1.TxProto.MsgReportData(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.oracle.v1.TxProto.MsgReportData result) {
+        if (rawReportsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            rawReports_ = java.util.Collections.unmodifiableList(rawReports_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.rawReports_ = rawReports_;
+        } else {
+          result.rawReports_ = rawReportsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.oracle.v1.TxProto.MsgReportData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestId_ = requestId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.validator_ = validator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgReportData) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgReportData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgReportData other) {
+        if (other == com.oracle.v1.TxProto.MsgReportData.getDefaultInstance()) return this;
+        if (other.getRequestId() != 0L) {
+          setRequestId(other.getRequestId());
+        }
+        if (rawReportsBuilder_ == null) {
+          if (!other.rawReports_.isEmpty()) {
+            if (rawReports_.isEmpty()) {
+              rawReports_ = other.rawReports_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRawReportsIsMutable();
+              rawReports_.addAll(other.rawReports_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rawReports_.isEmpty()) {
+            if (rawReportsBuilder_.isEmpty()) {
+              rawReportsBuilder_.dispose();
+              rawReportsBuilder_ = null;
+              rawReports_ = other.rawReports_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              rawReportsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRawReportsFieldBuilder() : null;
+            } else {
+              rawReportsBuilder_.addAllMessages(other.rawReports_);
+            }
+          }
+        }
+        if (!other.getValidator().isEmpty()) {
+          validator_ = other.validator_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                requestId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.oracle.v1.OracleProto.RawReport m =
+                    input.readMessage(
+                        com.oracle.v1.OracleProto.RawReport.parser(),
+                        extensionRegistry);
+                if (rawReportsBuilder_ == null) {
+                  ensureRawReportsIsMutable();
+                  rawReports_.add(m);
+                } else {
+                  rawReportsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                validator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long requestId_ ;
+      /**
+       * <pre>
+       * RequestID is the identifier of the request to be reported to.
+       * </pre>
+       *
+       * <code>uint64 request_id = 1 [json_name = "requestId", (.gogoproto.customname) = "RequestID", (.gogoproto.casttype) = "RequestID"];</code>
+       * @return The requestId.
+       */
+      @java.lang.Override
+      public long getRequestId() {
+        return requestId_;
+      }
+      /**
+       * <pre>
+       * RequestID is the identifier of the request to be reported to.
+       * </pre>
+       *
+       * <code>uint64 request_id = 1 [json_name = "requestId", (.gogoproto.customname) = "RequestID", (.gogoproto.casttype) = "RequestID"];</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(long value) {
+
+        requestId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RequestID is the identifier of the request to be reported to.
+       * </pre>
+       *
+       * <code>uint64 request_id = 1 [json_name = "requestId", (.gogoproto.customname) = "RequestID", (.gogoproto.casttype) = "RequestID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        requestId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.oracle.v1.OracleProto.RawReport> rawReports_ =
+        java.util.Collections.emptyList();
+      private void ensureRawReportsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          rawReports_ = new java.util.ArrayList<com.oracle.v1.OracleProto.RawReport>(rawReports_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.oracle.v1.OracleProto.RawReport, com.oracle.v1.OracleProto.RawReport.Builder, com.oracle.v1.OracleProto.RawReportOrBuilder> rawReportsBuilder_;
+
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.oracle.v1.OracleProto.RawReport> getRawReportsList() {
+        if (rawReportsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rawReports_);
+        } else {
+          return rawReportsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRawReportsCount() {
+        if (rawReportsBuilder_ == null) {
+          return rawReports_.size();
+        } else {
+          return rawReportsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public com.oracle.v1.OracleProto.RawReport getRawReports(int index) {
+        if (rawReportsBuilder_ == null) {
+          return rawReports_.get(index);
+        } else {
+          return rawReportsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRawReports(
+          int index, com.oracle.v1.OracleProto.RawReport value) {
+        if (rawReportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRawReportsIsMutable();
+          rawReports_.set(index, value);
+          onChanged();
+        } else {
+          rawReportsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRawReports(
+          int index, com.oracle.v1.OracleProto.RawReport.Builder builderForValue) {
+        if (rawReportsBuilder_ == null) {
+          ensureRawReportsIsMutable();
+          rawReports_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rawReportsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRawReports(com.oracle.v1.OracleProto.RawReport value) {
+        if (rawReportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRawReportsIsMutable();
+          rawReports_.add(value);
+          onChanged();
+        } else {
+          rawReportsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRawReports(
+          int index, com.oracle.v1.OracleProto.RawReport value) {
+        if (rawReportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRawReportsIsMutable();
+          rawReports_.add(index, value);
+          onChanged();
+        } else {
+          rawReportsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRawReports(
+          com.oracle.v1.OracleProto.RawReport.Builder builderForValue) {
+        if (rawReportsBuilder_ == null) {
+          ensureRawReportsIsMutable();
+          rawReports_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rawReportsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRawReports(
+          int index, com.oracle.v1.OracleProto.RawReport.Builder builderForValue) {
+        if (rawReportsBuilder_ == null) {
+          ensureRawReportsIsMutable();
+          rawReports_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rawReportsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRawReports(
+          java.lang.Iterable<? extends com.oracle.v1.OracleProto.RawReport> values) {
+        if (rawReportsBuilder_ == null) {
+          ensureRawReportsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rawReports_);
+          onChanged();
+        } else {
+          rawReportsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRawReports() {
+        if (rawReportsBuilder_ == null) {
+          rawReports_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          rawReportsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRawReports(int index) {
+        if (rawReportsBuilder_ == null) {
+          ensureRawReportsIsMutable();
+          rawReports_.remove(index);
+          onChanged();
+        } else {
+          rawReportsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public com.oracle.v1.OracleProto.RawReport.Builder getRawReportsBuilder(
+          int index) {
+        return getRawReportsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public com.oracle.v1.OracleProto.RawReportOrBuilder getRawReportsOrBuilder(
+          int index) {
+        if (rawReportsBuilder_ == null) {
+          return rawReports_.get(index);  } else {
+          return rawReportsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.oracle.v1.OracleProto.RawReportOrBuilder> 
+           getRawReportsOrBuilderList() {
+        if (rawReportsBuilder_ != null) {
+          return rawReportsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rawReports_);
+        }
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public com.oracle.v1.OracleProto.RawReport.Builder addRawReportsBuilder() {
+        return getRawReportsFieldBuilder().addBuilder(
+            com.oracle.v1.OracleProto.RawReport.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public com.oracle.v1.OracleProto.RawReport.Builder addRawReportsBuilder(
+          int index) {
+        return getRawReportsFieldBuilder().addBuilder(
+            index, com.oracle.v1.OracleProto.RawReport.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * RawReports is the list of report information provided by data sources
+       * identified by external ID
+       * </pre>
+       *
+       * <code>repeated .oracle.v1.RawReport raw_reports = 2 [json_name = "rawReports", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.oracle.v1.OracleProto.RawReport.Builder> 
+           getRawReportsBuilderList() {
+        return getRawReportsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.oracle.v1.OracleProto.RawReport, com.oracle.v1.OracleProto.RawReport.Builder, com.oracle.v1.OracleProto.RawReportOrBuilder> 
+          getRawReportsFieldBuilder() {
+        if (rawReportsBuilder_ == null) {
+          rawReportsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.oracle.v1.OracleProto.RawReport, com.oracle.v1.OracleProto.RawReport.Builder, com.oracle.v1.OracleProto.RawReportOrBuilder>(
+                  rawReports_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rawReports_ = null;
+        }
+        return rawReportsBuilder_;
+      }
+
+      private java.lang.Object validator_ = "";
+      /**
+       * <pre>
+       * Validator is the address of the validator that owns this report.
+       * </pre>
+       *
+       * <code>string validator = 3 [json_name = "validator"];</code>
+       * @return The validator.
+       */
+      public java.lang.String getValidator() {
+        java.lang.Object ref = validator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Validator is the address of the validator that owns this report.
+       * </pre>
+       *
+       * <code>string validator = 3 [json_name = "validator"];</code>
+       * @return The bytes for validator.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorBytes() {
+        java.lang.Object ref = validator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Validator is the address of the validator that owns this report.
+       * </pre>
+       *
+       * <code>string validator = 3 [json_name = "validator"];</code>
+       * @param value The validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validator_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Validator is the address of the validator that owns this report.
+       * </pre>
+       *
+       * <code>string validator = 3 [json_name = "validator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidator() {
+        validator_ = getDefaultInstance().getValidator();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Validator is the address of the validator that owns this report.
+       * </pre>
+       *
+       * <code>string validator = 3 [json_name = "validator"];</code>
+       * @param value The bytes for validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validator_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgReportData)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgReportData)
+    private static final com.oracle.v1.TxProto.MsgReportData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgReportData();
+    }
+
+    public static com.oracle.v1.TxProto.MsgReportData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgReportData>
+        PARSER = new com.google.protobuf.AbstractParser<MsgReportData>() {
+      @java.lang.Override
+      public MsgReportData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgReportData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgReportData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgReportData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgReportDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgReportDataResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgReportDataResponse is response data for MsgReportData message
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgReportDataResponse}
+   */
+  public static final class MsgReportDataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgReportDataResponse)
+      MsgReportDataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgReportDataResponse.newBuilder() to construct.
+    private MsgReportDataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgReportDataResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgReportDataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportDataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportDataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgReportDataResponse.class, com.oracle.v1.TxProto.MsgReportDataResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgReportDataResponse)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgReportDataResponse other = (com.oracle.v1.TxProto.MsgReportDataResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgReportDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgReportDataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgReportDataResponse is response data for MsgReportData message
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgReportDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgReportDataResponse)
+        com.oracle.v1.TxProto.MsgReportDataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportDataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgReportDataResponse.class, com.oracle.v1.TxProto.MsgReportDataResponse.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgReportDataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgReportDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgReportDataResponse getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgReportDataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgReportDataResponse build() {
+        com.oracle.v1.TxProto.MsgReportDataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgReportDataResponse buildPartial() {
+        com.oracle.v1.TxProto.MsgReportDataResponse result = new com.oracle.v1.TxProto.MsgReportDataResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgReportDataResponse) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgReportDataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgReportDataResponse other) {
+        if (other == com.oracle.v1.TxProto.MsgReportDataResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgReportDataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgReportDataResponse)
+    private static final com.oracle.v1.TxProto.MsgReportDataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgReportDataResponse();
+    }
+
+    public static com.oracle.v1.TxProto.MsgReportDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgReportDataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgReportDataResponse>() {
+      @java.lang.Override
+      public MsgReportDataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgReportDataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgReportDataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgReportDataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateDataSourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgCreateDataSource)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name is the name of this data source used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of this data source used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description is the description of this data source used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description is the description of this data source used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Executable is the content of executable script or binary file to be run by
+     * validators upon execution.
+     * </pre>
+     *
+     * <code>bytes executable = 3 [json_name = "executable"];</code>
+     * @return The executable.
+     */
+    com.google.protobuf.ByteString getExecutable();
+
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFeeList();
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFee(int index);
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getFeeCount();
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeeOrBuilderList();
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Treasury is the account address who receive data source fee from requester.
+     * </pre>
+     *
+     * <code>string treasury = 5 [json_name = "treasury"];</code>
+     * @return The treasury.
+     */
+    java.lang.String getTreasury();
+    /**
+     * <pre>
+     * Treasury is the account address who receive data source fee from requester.
+     * </pre>
+     *
+     * <code>string treasury = 5 [json_name = "treasury"];</code>
+     * @return The bytes for treasury.
+     */
+    com.google.protobuf.ByteString
+        getTreasuryBytes();
+
+    /**
+     * <pre>
+     * Owner is the account address who is allowed to make further changes to the
+     * data source.
+     * </pre>
+     *
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the account address who is allowed to make further changes to the
+     * data source.
+     * </pre>
+     *
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Sender is the signer of this message.
+     * </pre>
+     *
+     * <code>string sender = 7 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * Sender is the signer of this message.
+     * </pre>
+     *
+     * <code>string sender = 7 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * <pre>
+   * MsgCreateDataSource is a message for creating a new data source.
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgCreateDataSource}
+   */
+  public static final class MsgCreateDataSource extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgCreateDataSource)
+      MsgCreateDataSourceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateDataSource.newBuilder() to construct.
+    private MsgCreateDataSource(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateDataSource() {
+      name_ = "";
+      description_ = "";
+      executable_ = com.google.protobuf.ByteString.EMPTY;
+      fee_ = java.util.Collections.emptyList();
+      treasury_ = "";
+      owner_ = "";
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateDataSource();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSource_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSource_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgCreateDataSource.class, com.oracle.v1.TxProto.MsgCreateDataSource.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of this data source used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of this data source used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * Description is the description of this data source used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description is the description of this data source used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXECUTABLE_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString executable_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Executable is the content of executable script or binary file to be run by
+     * validators upon execution.
+     * </pre>
+     *
+     * <code>bytes executable = 3 [json_name = "executable"];</code>
+     * @return The executable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getExecutable() {
+      return executable_;
+    }
+
+    public static final int FEE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fee_;
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeeList() {
+      return fee_;
+    }
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeeOrBuilderList() {
+      return fee_;
+    }
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getFeeCount() {
+      return fee_.size();
+    }
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFee(int index) {
+      return fee_.get(index);
+    }
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeOrBuilder(
+        int index) {
+      return fee_.get(index);
+    }
+
+    public static final int TREASURY_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object treasury_ = "";
+    /**
+     * <pre>
+     * Treasury is the account address who receive data source fee from requester.
+     * </pre>
+     *
+     * <code>string treasury = 5 [json_name = "treasury"];</code>
+     * @return The treasury.
+     */
+    @java.lang.Override
+    public java.lang.String getTreasury() {
+      java.lang.Object ref = treasury_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        treasury_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Treasury is the account address who receive data source fee from requester.
+     * </pre>
+     *
+     * <code>string treasury = 5 [json_name = "treasury"];</code>
+     * @return The bytes for treasury.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTreasuryBytes() {
+      java.lang.Object ref = treasury_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        treasury_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the account address who is allowed to make further changes to the
+     * data source.
+     * </pre>
+     *
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the account address who is allowed to make further changes to the
+     * data source.
+     * </pre>
+     *
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * Sender is the signer of this message.
+     * </pre>
+     *
+     * <code>string sender = 7 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Sender is the signer of this message.
+     * </pre>
+     *
+     * <code>string sender = 7 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!executable_.isEmpty()) {
+        output.writeBytes(3, executable_);
+      }
+      for (int i = 0; i < fee_.size(); i++) {
+        output.writeMessage(4, fee_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(treasury_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, treasury_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!executable_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, executable_);
+      }
+      for (int i = 0; i < fee_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, fee_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(treasury_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, treasury_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgCreateDataSource)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgCreateDataSource other = (com.oracle.v1.TxProto.MsgCreateDataSource) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getExecutable()
+          .equals(other.getExecutable())) return false;
+      if (!getFeeList()
+          .equals(other.getFeeList())) return false;
+      if (!getTreasury()
+          .equals(other.getTreasury())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + EXECUTABLE_FIELD_NUMBER;
+      hash = (53 * hash) + getExecutable().hashCode();
+      if (getFeeCount() > 0) {
+        hash = (37 * hash) + FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getFeeList().hashCode();
+      }
+      hash = (37 * hash) + TREASURY_FIELD_NUMBER;
+      hash = (53 * hash) + getTreasury().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSource parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgCreateDataSource prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateDataSource is a message for creating a new data source.
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgCreateDataSource}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgCreateDataSource)
+        com.oracle.v1.TxProto.MsgCreateDataSourceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSource_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSource_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgCreateDataSource.class, com.oracle.v1.TxProto.MsgCreateDataSource.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgCreateDataSource.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        description_ = "";
+        executable_ = com.google.protobuf.ByteString.EMPTY;
+        if (feeBuilder_ == null) {
+          fee_ = java.util.Collections.emptyList();
+        } else {
+          fee_ = null;
+          feeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        treasury_ = "";
+        owner_ = "";
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSource_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateDataSource getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgCreateDataSource.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateDataSource build() {
+        com.oracle.v1.TxProto.MsgCreateDataSource result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateDataSource buildPartial() {
+        com.oracle.v1.TxProto.MsgCreateDataSource result = new com.oracle.v1.TxProto.MsgCreateDataSource(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.oracle.v1.TxProto.MsgCreateDataSource result) {
+        if (feeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            fee_ = java.util.Collections.unmodifiableList(fee_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.fee_ = fee_;
+        } else {
+          result.fee_ = feeBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.oracle.v1.TxProto.MsgCreateDataSource result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.executable_ = executable_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.treasury_ = treasury_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgCreateDataSource) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgCreateDataSource)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgCreateDataSource other) {
+        if (other == com.oracle.v1.TxProto.MsgCreateDataSource.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getExecutable() != com.google.protobuf.ByteString.EMPTY) {
+          setExecutable(other.getExecutable());
+        }
+        if (feeBuilder_ == null) {
+          if (!other.fee_.isEmpty()) {
+            if (fee_.isEmpty()) {
+              fee_ = other.fee_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureFeeIsMutable();
+              fee_.addAll(other.fee_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fee_.isEmpty()) {
+            if (feeBuilder_.isEmpty()) {
+              feeBuilder_.dispose();
+              feeBuilder_ = null;
+              fee_ = other.fee_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              feeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeeFieldBuilder() : null;
+            } else {
+              feeBuilder_.addAllMessages(other.fee_);
+            }
+          }
+        }
+        if (!other.getTreasury().isEmpty()) {
+          treasury_ = other.treasury_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                executable_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (feeBuilder_ == null) {
+                  ensureFeeIsMutable();
+                  fee_.add(m);
+                } else {
+                  feeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                treasury_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString executable_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Executable is the content of executable script or binary file to be run by
+       * validators upon execution.
+       * </pre>
+       *
+       * <code>bytes executable = 3 [json_name = "executable"];</code>
+       * @return The executable.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getExecutable() {
+        return executable_;
+      }
+      /**
+       * <pre>
+       * Executable is the content of executable script or binary file to be run by
+       * validators upon execution.
+       * </pre>
+       *
+       * <code>bytes executable = 3 [json_name = "executable"];</code>
+       * @param value The executable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutable(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        executable_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Executable is the content of executable script or binary file to be run by
+       * validators upon execution.
+       * </pre>
+       *
+       * <code>bytes executable = 3 [json_name = "executable"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutable() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        executable_ = getDefaultInstance().getExecutable();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fee_ =
+        java.util.Collections.emptyList();
+      private void ensureFeeIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          fee_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(fee_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> feeBuilder_;
+
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeeList() {
+        if (feeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fee_);
+        } else {
+          return feeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getFeeCount() {
+        if (feeBuilder_ == null) {
+          return fee_.size();
+        } else {
+          return feeBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFee(int index) {
+        if (feeBuilder_ == null) {
+          return fee_.get(index);
+        } else {
+          return feeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeIsMutable();
+          fee_.set(index, value);
+          onChanged();
+        } else {
+          feeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          fee_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeIsMutable();
+          fee_.add(value);
+          onChanged();
+        } else {
+          feeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeIsMutable();
+          fee_.add(index, value);
+          onChanged();
+        } else {
+          feeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          fee_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          fee_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllFee(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fee_);
+          onChanged();
+        } else {
+          feeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearFee() {
+        if (feeBuilder_ == null) {
+          fee_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          feeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeFee(int index) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          fee_.remove(index);
+          onChanged();
+        } else {
+          feeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFeeBuilder(
+          int index) {
+        return getFeeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeOrBuilder(
+          int index) {
+        if (feeBuilder_ == null) {
+          return fee_.get(index);  } else {
+          return feeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFeeOrBuilderList() {
+        if (feeBuilder_ != null) {
+          return feeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fee_);
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeeBuilder() {
+        return getFeeFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeeBuilder(
+          int index) {
+        return getFeeFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 4 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFeeBuilderList() {
+        return getFeeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFeeFieldBuilder() {
+        if (feeBuilder_ == null) {
+          feeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  fee_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fee_ = null;
+        }
+        return feeBuilder_;
+      }
+
+      private java.lang.Object treasury_ = "";
+      /**
+       * <pre>
+       * Treasury is the account address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 5 [json_name = "treasury"];</code>
+       * @return The treasury.
+       */
+      public java.lang.String getTreasury() {
+        java.lang.Object ref = treasury_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          treasury_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Treasury is the account address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 5 [json_name = "treasury"];</code>
+       * @return The bytes for treasury.
+       */
+      public com.google.protobuf.ByteString
+          getTreasuryBytes() {
+        java.lang.Object ref = treasury_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          treasury_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Treasury is the account address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 5 [json_name = "treasury"];</code>
+       * @param value The treasury to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTreasury(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        treasury_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Treasury is the account address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 5 [json_name = "treasury"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTreasury() {
+        treasury_ = getDefaultInstance().getTreasury();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Treasury is the account address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 5 [json_name = "treasury"];</code>
+       * @param value The bytes for treasury to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTreasuryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        treasury_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the account address who is allowed to make further changes to the
+       * data source.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the account address who is allowed to make further changes to the
+       * data source.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the account address who is allowed to make further changes to the
+       * data source.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the account address who is allowed to make further changes to the
+       * data source.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the account address who is allowed to make further changes to the
+       * data source.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgCreateDataSource)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgCreateDataSource)
+    private static final com.oracle.v1.TxProto.MsgCreateDataSource DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgCreateDataSource();
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateDataSource getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateDataSource>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateDataSource>() {
+      @java.lang.Override
+      public MsgCreateDataSource parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateDataSource> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateDataSource> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgCreateDataSource getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateDataSourceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgCreateDataSourceResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateDataSourceResponse is response data for MsgCreateDataSource message
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgCreateDataSourceResponse}
+   */
+  public static final class MsgCreateDataSourceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgCreateDataSourceResponse)
+      MsgCreateDataSourceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateDataSourceResponse.newBuilder() to construct.
+    private MsgCreateDataSourceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateDataSourceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateDataSourceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSourceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSourceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgCreateDataSourceResponse.class, com.oracle.v1.TxProto.MsgCreateDataSourceResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgCreateDataSourceResponse)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgCreateDataSourceResponse other = (com.oracle.v1.TxProto.MsgCreateDataSourceResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgCreateDataSourceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateDataSourceResponse is response data for MsgCreateDataSource message
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgCreateDataSourceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgCreateDataSourceResponse)
+        com.oracle.v1.TxProto.MsgCreateDataSourceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSourceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSourceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgCreateDataSourceResponse.class, com.oracle.v1.TxProto.MsgCreateDataSourceResponse.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgCreateDataSourceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateDataSourceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateDataSourceResponse getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgCreateDataSourceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateDataSourceResponse build() {
+        com.oracle.v1.TxProto.MsgCreateDataSourceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateDataSourceResponse buildPartial() {
+        com.oracle.v1.TxProto.MsgCreateDataSourceResponse result = new com.oracle.v1.TxProto.MsgCreateDataSourceResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgCreateDataSourceResponse) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgCreateDataSourceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgCreateDataSourceResponse other) {
+        if (other == com.oracle.v1.TxProto.MsgCreateDataSourceResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgCreateDataSourceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgCreateDataSourceResponse)
+    private static final com.oracle.v1.TxProto.MsgCreateDataSourceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgCreateDataSourceResponse();
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateDataSourceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateDataSourceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateDataSourceResponse>() {
+      @java.lang.Override
+      public MsgCreateDataSourceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateDataSourceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateDataSourceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgCreateDataSourceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEditDataSourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgEditDataSource)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * DataSourceID is the unique identifier of the data source to be edited.
+     * </pre>
+     *
+     * <code>uint64 data_source_id = 1 [json_name = "dataSourceId", (.gogoproto.customname) = "DataSourceID", (.gogoproto.casttype) = "DataSourceID"];</code>
+     * @return The dataSourceId.
+     */
+    long getDataSourceId();
+
+    /**
+     * <pre>
+     * Name is the name of this data source used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of this data source used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description is the description of this data source used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description is the description of this data source used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Executable is the executable script or binary to be run by validators upon
+     * execution.
+     * </pre>
+     *
+     * <code>bytes executable = 4 [json_name = "executable"];</code>
+     * @return The executable.
+     */
+    com.google.protobuf.ByteString getExecutable();
+
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFeeList();
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFee(int index);
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getFeeCount();
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeeOrBuilderList();
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Treasury is the address who receive data source fee from requester.
+     * </pre>
+     *
+     * <code>string treasury = 6 [json_name = "treasury"];</code>
+     * @return The treasury.
+     */
+    java.lang.String getTreasury();
+    /**
+     * <pre>
+     * Treasury is the address who receive data source fee from requester.
+     * </pre>
+     *
+     * <code>string treasury = 6 [json_name = "treasury"];</code>
+     * @return The bytes for treasury.
+     */
+    com.google.protobuf.ByteString
+        getTreasuryBytes();
+
+    /**
+     * <pre>
+     * Owner is the address who is allowed to make further changes to the data
+     * source.
+     * </pre>
+     *
+     * <code>string owner = 7 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the address who is allowed to make further changes to the data
+     * source.
+     * </pre>
+     *
+     * <code>string owner = 7 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Sender is the signer of this message. Must be the current data source's
+     * owner.
+     * </pre>
+     *
+     * <code>string sender = 8 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * Sender is the signer of this message. Must be the current data source's
+     * owner.
+     * </pre>
+     *
+     * <code>string sender = 8 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * <pre>
+   * MsgEditDataSource is a message for editing an existing data source.
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgEditDataSource}
+   */
+  public static final class MsgEditDataSource extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgEditDataSource)
+      MsgEditDataSourceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEditDataSource.newBuilder() to construct.
+    private MsgEditDataSource(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEditDataSource() {
+      name_ = "";
+      description_ = "";
+      executable_ = com.google.protobuf.ByteString.EMPTY;
+      fee_ = java.util.Collections.emptyList();
+      treasury_ = "";
+      owner_ = "";
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEditDataSource();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSource_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSource_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgEditDataSource.class, com.oracle.v1.TxProto.MsgEditDataSource.Builder.class);
+    }
+
+    public static final int DATA_SOURCE_ID_FIELD_NUMBER = 1;
+    private long dataSourceId_ = 0L;
+    /**
+     * <pre>
+     * DataSourceID is the unique identifier of the data source to be edited.
+     * </pre>
+     *
+     * <code>uint64 data_source_id = 1 [json_name = "dataSourceId", (.gogoproto.customname) = "DataSourceID", (.gogoproto.casttype) = "DataSourceID"];</code>
+     * @return The dataSourceId.
+     */
+    @java.lang.Override
+    public long getDataSourceId() {
+      return dataSourceId_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of this data source used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of this data source used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * Description is the description of this data source used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description is the description of this data source used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXECUTABLE_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString executable_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Executable is the executable script or binary to be run by validators upon
+     * execution.
+     * </pre>
+     *
+     * <code>bytes executable = 4 [json_name = "executable"];</code>
+     * @return The executable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getExecutable() {
+      return executable_;
+    }
+
+    public static final int FEE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fee_;
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeeList() {
+      return fee_;
+    }
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeeOrBuilderList() {
+      return fee_;
+    }
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getFeeCount() {
+      return fee_.size();
+    }
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFee(int index) {
+      return fee_.get(index);
+    }
+    /**
+     * <pre>
+     * Fee is the data source fee per ask_count that data provider will receive
+     * from requester.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeOrBuilder(
+        int index) {
+      return fee_.get(index);
+    }
+
+    public static final int TREASURY_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object treasury_ = "";
+    /**
+     * <pre>
+     * Treasury is the address who receive data source fee from requester.
+     * </pre>
+     *
+     * <code>string treasury = 6 [json_name = "treasury"];</code>
+     * @return The treasury.
+     */
+    @java.lang.Override
+    public java.lang.String getTreasury() {
+      java.lang.Object ref = treasury_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        treasury_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Treasury is the address who receive data source fee from requester.
+     * </pre>
+     *
+     * <code>string treasury = 6 [json_name = "treasury"];</code>
+     * @return The bytes for treasury.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTreasuryBytes() {
+      java.lang.Object ref = treasury_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        treasury_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the address who is allowed to make further changes to the data
+     * source.
+     * </pre>
+     *
+     * <code>string owner = 7 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the address who is allowed to make further changes to the data
+     * source.
+     * </pre>
+     *
+     * <code>string owner = 7 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * Sender is the signer of this message. Must be the current data source's
+     * owner.
+     * </pre>
+     *
+     * <code>string sender = 8 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Sender is the signer of this message. Must be the current data source's
+     * owner.
+     * </pre>
+     *
+     * <code>string sender = 8 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dataSourceId_ != 0L) {
+        output.writeUInt64(1, dataSourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!executable_.isEmpty()) {
+        output.writeBytes(4, executable_);
+      }
+      for (int i = 0; i < fee_.size(); i++) {
+        output.writeMessage(5, fee_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(treasury_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, treasury_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dataSourceId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, dataSourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!executable_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, executable_);
+      }
+      for (int i = 0; i < fee_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, fee_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(treasury_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, treasury_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgEditDataSource)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgEditDataSource other = (com.oracle.v1.TxProto.MsgEditDataSource) obj;
+
+      if (getDataSourceId()
+          != other.getDataSourceId()) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getExecutable()
+          .equals(other.getExecutable())) return false;
+      if (!getFeeList()
+          .equals(other.getFeeList())) return false;
+      if (!getTreasury()
+          .equals(other.getTreasury())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_SOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDataSourceId());
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + EXECUTABLE_FIELD_NUMBER;
+      hash = (53 * hash) + getExecutable().hashCode();
+      if (getFeeCount() > 0) {
+        hash = (37 * hash) + FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getFeeList().hashCode();
+      }
+      hash = (37 * hash) + TREASURY_FIELD_NUMBER;
+      hash = (53 * hash) + getTreasury().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSource parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgEditDataSource prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEditDataSource is a message for editing an existing data source.
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgEditDataSource}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgEditDataSource)
+        com.oracle.v1.TxProto.MsgEditDataSourceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSource_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSource_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgEditDataSource.class, com.oracle.v1.TxProto.MsgEditDataSource.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgEditDataSource.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dataSourceId_ = 0L;
+        name_ = "";
+        description_ = "";
+        executable_ = com.google.protobuf.ByteString.EMPTY;
+        if (feeBuilder_ == null) {
+          fee_ = java.util.Collections.emptyList();
+        } else {
+          fee_ = null;
+          feeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        treasury_ = "";
+        owner_ = "";
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSource_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditDataSource getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgEditDataSource.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditDataSource build() {
+        com.oracle.v1.TxProto.MsgEditDataSource result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditDataSource buildPartial() {
+        com.oracle.v1.TxProto.MsgEditDataSource result = new com.oracle.v1.TxProto.MsgEditDataSource(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.oracle.v1.TxProto.MsgEditDataSource result) {
+        if (feeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            fee_ = java.util.Collections.unmodifiableList(fee_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.fee_ = fee_;
+        } else {
+          result.fee_ = feeBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.oracle.v1.TxProto.MsgEditDataSource result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataSourceId_ = dataSourceId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.executable_ = executable_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.treasury_ = treasury_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgEditDataSource) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgEditDataSource)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgEditDataSource other) {
+        if (other == com.oracle.v1.TxProto.MsgEditDataSource.getDefaultInstance()) return this;
+        if (other.getDataSourceId() != 0L) {
+          setDataSourceId(other.getDataSourceId());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getExecutable() != com.google.protobuf.ByteString.EMPTY) {
+          setExecutable(other.getExecutable());
+        }
+        if (feeBuilder_ == null) {
+          if (!other.fee_.isEmpty()) {
+            if (fee_.isEmpty()) {
+              fee_ = other.fee_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureFeeIsMutable();
+              fee_.addAll(other.fee_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fee_.isEmpty()) {
+            if (feeBuilder_.isEmpty()) {
+              feeBuilder_.dispose();
+              feeBuilder_ = null;
+              fee_ = other.fee_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              feeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeeFieldBuilder() : null;
+            } else {
+              feeBuilder_.addAllMessages(other.fee_);
+            }
+          }
+        }
+        if (!other.getTreasury().isEmpty()) {
+          treasury_ = other.treasury_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                dataSourceId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                executable_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (feeBuilder_ == null) {
+                  ensureFeeIsMutable();
+                  fee_.add(m);
+                } else {
+                  feeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                treasury_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long dataSourceId_ ;
+      /**
+       * <pre>
+       * DataSourceID is the unique identifier of the data source to be edited.
+       * </pre>
+       *
+       * <code>uint64 data_source_id = 1 [json_name = "dataSourceId", (.gogoproto.customname) = "DataSourceID", (.gogoproto.casttype) = "DataSourceID"];</code>
+       * @return The dataSourceId.
+       */
+      @java.lang.Override
+      public long getDataSourceId() {
+        return dataSourceId_;
+      }
+      /**
+       * <pre>
+       * DataSourceID is the unique identifier of the data source to be edited.
+       * </pre>
+       *
+       * <code>uint64 data_source_id = 1 [json_name = "dataSourceId", (.gogoproto.customname) = "DataSourceID", (.gogoproto.casttype) = "DataSourceID"];</code>
+       * @param value The dataSourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceId(long value) {
+
+        dataSourceId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DataSourceID is the unique identifier of the data source to be edited.
+       * </pre>
+       *
+       * <code>uint64 data_source_id = 1 [json_name = "dataSourceId", (.gogoproto.customname) = "DataSourceID", (.gogoproto.casttype) = "DataSourceID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataSourceId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dataSourceId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of this data source used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description is the description of this data source used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString executable_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Executable is the executable script or binary to be run by validators upon
+       * execution.
+       * </pre>
+       *
+       * <code>bytes executable = 4 [json_name = "executable"];</code>
+       * @return The executable.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getExecutable() {
+        return executable_;
+      }
+      /**
+       * <pre>
+       * Executable is the executable script or binary to be run by validators upon
+       * execution.
+       * </pre>
+       *
+       * <code>bytes executable = 4 [json_name = "executable"];</code>
+       * @param value The executable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutable(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        executable_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Executable is the executable script or binary to be run by validators upon
+       * execution.
+       * </pre>
+       *
+       * <code>bytes executable = 4 [json_name = "executable"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutable() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        executable_ = getDefaultInstance().getExecutable();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fee_ =
+        java.util.Collections.emptyList();
+      private void ensureFeeIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          fee_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(fee_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> feeBuilder_;
+
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeeList() {
+        if (feeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fee_);
+        } else {
+          return feeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getFeeCount() {
+        if (feeBuilder_ == null) {
+          return fee_.size();
+        } else {
+          return feeBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFee(int index) {
+        if (feeBuilder_ == null) {
+          return fee_.get(index);
+        } else {
+          return feeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeIsMutable();
+          fee_.set(index, value);
+          onChanged();
+        } else {
+          feeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          fee_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeIsMutable();
+          fee_.add(value);
+          onChanged();
+        } else {
+          feeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeeIsMutable();
+          fee_.add(index, value);
+          onChanged();
+        } else {
+          feeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          fee_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          fee_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllFee(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fee_);
+          onChanged();
+        } else {
+          feeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearFee() {
+        if (feeBuilder_ == null) {
+          fee_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          feeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeFee(int index) {
+        if (feeBuilder_ == null) {
+          ensureFeeIsMutable();
+          fee_.remove(index);
+          onChanged();
+        } else {
+          feeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFeeBuilder(
+          int index) {
+        return getFeeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeeOrBuilder(
+          int index) {
+        if (feeBuilder_ == null) {
+          return fee_.get(index);  } else {
+          return feeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFeeOrBuilderList() {
+        if (feeBuilder_ != null) {
+          return feeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fee_);
+        }
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeeBuilder() {
+        return getFeeFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeeBuilder(
+          int index) {
+        return getFeeFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Fee is the data source fee per ask_count that data provider will receive
+       * from requester.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin fee = 5 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFeeBuilderList() {
+        return getFeeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFeeFieldBuilder() {
+        if (feeBuilder_ == null) {
+          feeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  fee_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fee_ = null;
+        }
+        return feeBuilder_;
+      }
+
+      private java.lang.Object treasury_ = "";
+      /**
+       * <pre>
+       * Treasury is the address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 6 [json_name = "treasury"];</code>
+       * @return The treasury.
+       */
+      public java.lang.String getTreasury() {
+        java.lang.Object ref = treasury_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          treasury_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Treasury is the address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 6 [json_name = "treasury"];</code>
+       * @return The bytes for treasury.
+       */
+      public com.google.protobuf.ByteString
+          getTreasuryBytes() {
+        java.lang.Object ref = treasury_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          treasury_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Treasury is the address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 6 [json_name = "treasury"];</code>
+       * @param value The treasury to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTreasury(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        treasury_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Treasury is the address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 6 [json_name = "treasury"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTreasury() {
+        treasury_ = getDefaultInstance().getTreasury();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Treasury is the address who receive data source fee from requester.
+       * </pre>
+       *
+       * <code>string treasury = 6 [json_name = "treasury"];</code>
+       * @param value The bytes for treasury to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTreasuryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        treasury_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the data
+       * source.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the data
+       * source.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the data
+       * source.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the data
+       * source.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the data
+       * source.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * Sender is the signer of this message. Must be the current data source's
+       * owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message. Must be the current data source's
+       * owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message. Must be the current data source's
+       * owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message. Must be the current data source's
+       * owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message. Must be the current data source's
+       * owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgEditDataSource)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgEditDataSource)
+    private static final com.oracle.v1.TxProto.MsgEditDataSource DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgEditDataSource();
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditDataSource getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEditDataSource>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEditDataSource>() {
+      @java.lang.Override
+      public MsgEditDataSource parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEditDataSource> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEditDataSource> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgEditDataSource getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEditDataSourceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgEditDataSourceResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgEditDataSourceResponse is response data for MsgEditDataSource message
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgEditDataSourceResponse}
+   */
+  public static final class MsgEditDataSourceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgEditDataSourceResponse)
+      MsgEditDataSourceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEditDataSourceResponse.newBuilder() to construct.
+    private MsgEditDataSourceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEditDataSourceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEditDataSourceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSourceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSourceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgEditDataSourceResponse.class, com.oracle.v1.TxProto.MsgEditDataSourceResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgEditDataSourceResponse)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgEditDataSourceResponse other = (com.oracle.v1.TxProto.MsgEditDataSourceResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgEditDataSourceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEditDataSourceResponse is response data for MsgEditDataSource message
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgEditDataSourceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgEditDataSourceResponse)
+        com.oracle.v1.TxProto.MsgEditDataSourceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSourceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSourceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgEditDataSourceResponse.class, com.oracle.v1.TxProto.MsgEditDataSourceResponse.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgEditDataSourceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditDataSourceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditDataSourceResponse getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgEditDataSourceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditDataSourceResponse build() {
+        com.oracle.v1.TxProto.MsgEditDataSourceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditDataSourceResponse buildPartial() {
+        com.oracle.v1.TxProto.MsgEditDataSourceResponse result = new com.oracle.v1.TxProto.MsgEditDataSourceResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgEditDataSourceResponse) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgEditDataSourceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgEditDataSourceResponse other) {
+        if (other == com.oracle.v1.TxProto.MsgEditDataSourceResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgEditDataSourceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgEditDataSourceResponse)
+    private static final com.oracle.v1.TxProto.MsgEditDataSourceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgEditDataSourceResponse();
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditDataSourceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEditDataSourceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEditDataSourceResponse>() {
+      @java.lang.Override
+      public MsgEditDataSourceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEditDataSourceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEditDataSourceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgEditDataSourceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateOracleScriptOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgCreateOracleScript)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name is the name of this oracle script used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of this oracle script used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description is the description of this oracle script used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description is the description of this oracle script used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Schema is the OBI schema of this oracle script (optional).
+     * </pre>
+     *
+     * <code>string schema = 3 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    java.lang.String getSchema();
+    /**
+     * <pre>
+     * Schema is the OBI schema of this oracle script (optional).
+     * </pre>
+     *
+     * <code>string schema = 3 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    com.google.protobuf.ByteString
+        getSchemaBytes();
+
+    /**
+     * <pre>
+     * SourceCodeURL is the absolute URI to the script's source code (optional).
+     * </pre>
+     *
+     * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+     * @return The sourceCodeUrl.
+     */
+    java.lang.String getSourceCodeUrl();
+    /**
+     * <pre>
+     * SourceCodeURL is the absolute URI to the script's source code (optional).
+     * </pre>
+     *
+     * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+     * @return The bytes for sourceCodeUrl.
+     */
+    com.google.protobuf.ByteString
+        getSourceCodeUrlBytes();
+
+    /**
+     * <pre>
+     * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+     * </pre>
+     *
+     * <code>bytes code = 5 [json_name = "code"];</code>
+     * @return The code.
+     */
+    com.google.protobuf.ByteString getCode();
+
+    /**
+     * <pre>
+     * Owner is the address who is allowed to make further changes to the oracle
+     * script.
+     * </pre>
+     *
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the address who is allowed to make further changes to the oracle
+     * script.
+     * </pre>
+     *
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Sender is the signer of this message.
+     * </pre>
+     *
+     * <code>string sender = 7 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * Sender is the signer of this message.
+     * </pre>
+     *
+     * <code>string sender = 7 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * <pre>
+   * MsgCreateOracleScript is a message for creating an oracle script.
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgCreateOracleScript}
+   */
+  public static final class MsgCreateOracleScript extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgCreateOracleScript)
+      MsgCreateOracleScriptOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateOracleScript.newBuilder() to construct.
+    private MsgCreateOracleScript(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateOracleScript() {
+      name_ = "";
+      description_ = "";
+      schema_ = "";
+      sourceCodeUrl_ = "";
+      code_ = com.google.protobuf.ByteString.EMPTY;
+      owner_ = "";
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateOracleScript();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScript_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScript_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgCreateOracleScript.class, com.oracle.v1.TxProto.MsgCreateOracleScript.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of this oracle script used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of this oracle script used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * Description is the description of this oracle script used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description is the description of this oracle script used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCHEMA_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object schema_ = "";
+    /**
+     * <pre>
+     * Schema is the OBI schema of this oracle script (optional).
+     * </pre>
+     *
+     * <code>string schema = 3 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    @java.lang.Override
+    public java.lang.String getSchema() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schema_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Schema is the OBI schema of this oracle script (optional).
+     * </pre>
+     *
+     * <code>string schema = 3 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaBytes() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schema_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SOURCE_CODE_URL_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceCodeUrl_ = "";
+    /**
+     * <pre>
+     * SourceCodeURL is the absolute URI to the script's source code (optional).
+     * </pre>
+     *
+     * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+     * @return The sourceCodeUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceCodeUrl() {
+      java.lang.Object ref = sourceCodeUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceCodeUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * SourceCodeURL is the absolute URI to the script's source code (optional).
+     * </pre>
+     *
+     * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+     * @return The bytes for sourceCodeUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceCodeUrlBytes() {
+      java.lang.Object ref = sourceCodeUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceCodeUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODE_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+     * </pre>
+     *
+     * <code>bytes code = 5 [json_name = "code"];</code>
+     * @return The code.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCode() {
+      return code_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the address who is allowed to make further changes to the oracle
+     * script.
+     * </pre>
+     *
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the address who is allowed to make further changes to the oracle
+     * script.
+     * </pre>
+     *
+     * <code>string owner = 6 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * Sender is the signer of this message.
+     * </pre>
+     *
+     * <code>string sender = 7 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Sender is the signer of this message.
+     * </pre>
+     *
+     * <code>string sender = 7 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, schema_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceCodeUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sourceCodeUrl_);
+      }
+      if (!code_.isEmpty()) {
+        output.writeBytes(5, code_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, schema_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceCodeUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sourceCodeUrl_);
+      }
+      if (!code_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, code_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgCreateOracleScript)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgCreateOracleScript other = (com.oracle.v1.TxProto.MsgCreateOracleScript) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getSchema()
+          .equals(other.getSchema())) return false;
+      if (!getSourceCodeUrl()
+          .equals(other.getSourceCodeUrl())) return false;
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
+      hash = (53 * hash) + getSchema().hashCode();
+      hash = (37 * hash) + SOURCE_CODE_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceCodeUrl().hashCode();
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgCreateOracleScript prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateOracleScript is a message for creating an oracle script.
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgCreateOracleScript}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgCreateOracleScript)
+        com.oracle.v1.TxProto.MsgCreateOracleScriptOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScript_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScript_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgCreateOracleScript.class, com.oracle.v1.TxProto.MsgCreateOracleScript.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgCreateOracleScript.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        description_ = "";
+        schema_ = "";
+        sourceCodeUrl_ = "";
+        code_ = com.google.protobuf.ByteString.EMPTY;
+        owner_ = "";
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScript_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateOracleScript getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgCreateOracleScript.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateOracleScript build() {
+        com.oracle.v1.TxProto.MsgCreateOracleScript result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateOracleScript buildPartial() {
+        com.oracle.v1.TxProto.MsgCreateOracleScript result = new com.oracle.v1.TxProto.MsgCreateOracleScript(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.oracle.v1.TxProto.MsgCreateOracleScript result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.schema_ = schema_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sourceCodeUrl_ = sourceCodeUrl_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.code_ = code_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgCreateOracleScript) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgCreateOracleScript)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgCreateOracleScript other) {
+        if (other == com.oracle.v1.TxProto.MsgCreateOracleScript.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSchema().isEmpty()) {
+          schema_ = other.schema_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getSourceCodeUrl().isEmpty()) {
+          sourceCodeUrl_ = other.sourceCodeUrl_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getCode() != com.google.protobuf.ByteString.EMPTY) {
+          setCode(other.getCode());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                schema_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                sourceCodeUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                code_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object schema_ = "";
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @return The schema.
+       */
+      public java.lang.String getSchema() {
+        java.lang.Object ref = schema_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schema_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @return The bytes for schema.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaBytes() {
+        java.lang.Object ref = schema_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schema_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @param value The schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchema(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        schema_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchema() {
+        schema_ = getDefaultInstance().getSchema();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @param value The bytes for schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        schema_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceCodeUrl_ = "";
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @return The sourceCodeUrl.
+       */
+      public java.lang.String getSourceCodeUrl() {
+        java.lang.Object ref = sourceCodeUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceCodeUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @return The bytes for sourceCodeUrl.
+       */
+      public com.google.protobuf.ByteString
+          getSourceCodeUrlBytes() {
+        java.lang.Object ref = sourceCodeUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceCodeUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @param value The sourceCodeUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceCodeUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceCodeUrl_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceCodeUrl() {
+        sourceCodeUrl_ = getDefaultInstance().getSourceCodeUrl();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 4 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @param value The bytes for sourceCodeUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceCodeUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceCodeUrl_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+       * </pre>
+       *
+       * <code>bytes code = 5 [json_name = "code"];</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCode() {
+        return code_;
+      }
+      /**
+       * <pre>
+       * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+       * </pre>
+       *
+       * <code>bytes code = 5 [json_name = "code"];</code>
+       * @param value The code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCode(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        code_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+       * </pre>
+       *
+       * <code>bytes code = 5 [json_name = "code"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        code_ = getDefaultInstance().getCode();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the oracle
+       * script.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the oracle
+       * script.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the oracle
+       * script.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the oracle
+       * script.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the address who is allowed to make further changes to the oracle
+       * script.
+       * </pre>
+       *
+       * <code>string owner = 6 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is the signer of this message.
+       * </pre>
+       *
+       * <code>string sender = 7 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgCreateOracleScript)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgCreateOracleScript)
+    private static final com.oracle.v1.TxProto.MsgCreateOracleScript DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgCreateOracleScript();
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateOracleScript getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateOracleScript>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateOracleScript>() {
+      @java.lang.Override
+      public MsgCreateOracleScript parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateOracleScript> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateOracleScript> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgCreateOracleScript getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateOracleScriptResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgCreateOracleScriptResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateOracleScriptResponse is response data for MsgCreateOracleScript
+   * message
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgCreateOracleScriptResponse}
+   */
+  public static final class MsgCreateOracleScriptResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgCreateOracleScriptResponse)
+      MsgCreateOracleScriptResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateOracleScriptResponse.newBuilder() to construct.
+    private MsgCreateOracleScriptResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateOracleScriptResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateOracleScriptResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScriptResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScriptResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgCreateOracleScriptResponse.class, com.oracle.v1.TxProto.MsgCreateOracleScriptResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgCreateOracleScriptResponse)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgCreateOracleScriptResponse other = (com.oracle.v1.TxProto.MsgCreateOracleScriptResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgCreateOracleScriptResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateOracleScriptResponse is response data for MsgCreateOracleScript
+     * message
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgCreateOracleScriptResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgCreateOracleScriptResponse)
+        com.oracle.v1.TxProto.MsgCreateOracleScriptResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScriptResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScriptResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgCreateOracleScriptResponse.class, com.oracle.v1.TxProto.MsgCreateOracleScriptResponse.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgCreateOracleScriptResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgCreateOracleScriptResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateOracleScriptResponse getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgCreateOracleScriptResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateOracleScriptResponse build() {
+        com.oracle.v1.TxProto.MsgCreateOracleScriptResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgCreateOracleScriptResponse buildPartial() {
+        com.oracle.v1.TxProto.MsgCreateOracleScriptResponse result = new com.oracle.v1.TxProto.MsgCreateOracleScriptResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgCreateOracleScriptResponse) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgCreateOracleScriptResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgCreateOracleScriptResponse other) {
+        if (other == com.oracle.v1.TxProto.MsgCreateOracleScriptResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgCreateOracleScriptResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgCreateOracleScriptResponse)
+    private static final com.oracle.v1.TxProto.MsgCreateOracleScriptResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgCreateOracleScriptResponse();
+    }
+
+    public static com.oracle.v1.TxProto.MsgCreateOracleScriptResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateOracleScriptResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateOracleScriptResponse>() {
+      @java.lang.Override
+      public MsgCreateOracleScriptResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateOracleScriptResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateOracleScriptResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgCreateOracleScriptResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEditOracleScriptOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgEditOracleScript)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * OracleScriptID is the unique identifier of the oracle script to be edited.
+     * </pre>
+     *
+     * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+     * @return The oracleScriptId.
+     */
+    long getOracleScriptId();
+
+    /**
+     * <pre>
+     * Name is the name of this oracle script used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of this oracle script used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description is the description of this oracle script used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description is the description of this oracle script used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Schema is the OBI schema of this oracle script (optional).
+     * </pre>
+     *
+     * <code>string schema = 4 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    java.lang.String getSchema();
+    /**
+     * <pre>
+     * Schema is the OBI schema of this oracle script (optional).
+     * </pre>
+     *
+     * <code>string schema = 4 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    com.google.protobuf.ByteString
+        getSchemaBytes();
+
+    /**
+     * <pre>
+     * SourceCodeURL is the absolute URI to the script's source code (optional).
+     * </pre>
+     *
+     * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+     * @return The sourceCodeUrl.
+     */
+    java.lang.String getSourceCodeUrl();
+    /**
+     * <pre>
+     * SourceCodeURL is the absolute URI to the script's source code (optional).
+     * </pre>
+     *
+     * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+     * @return The bytes for sourceCodeUrl.
+     */
+    com.google.protobuf.ByteString
+        getSourceCodeUrlBytes();
+
+    /**
+     * <pre>
+     * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+     * </pre>
+     *
+     * <code>bytes code = 6 [json_name = "code"];</code>
+     * @return The code.
+     */
+    com.google.protobuf.ByteString getCode();
+
+    /**
+     * <pre>
+     * Owner is an account address who is allowed to make further changes to the
+     * oracle script.
+     * </pre>
+     *
+     * <code>string owner = 7 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is an account address who is allowed to make further changes to the
+     * oracle script.
+     * </pre>
+     *
+     * <code>string owner = 7 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Sender is an account address who sign this message. Must be the current
+     * oracle script's owner.
+     * </pre>
+     *
+     * <code>string sender = 8 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * Sender is an account address who sign this message. Must be the current
+     * oracle script's owner.
+     * </pre>
+     *
+     * <code>string sender = 8 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * <pre>
+   * MsgEditOracleScript is a message for editing an existing oracle script.
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgEditOracleScript}
+   */
+  public static final class MsgEditOracleScript extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgEditOracleScript)
+      MsgEditOracleScriptOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEditOracleScript.newBuilder() to construct.
+    private MsgEditOracleScript(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEditOracleScript() {
+      name_ = "";
+      description_ = "";
+      schema_ = "";
+      sourceCodeUrl_ = "";
+      code_ = com.google.protobuf.ByteString.EMPTY;
+      owner_ = "";
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEditOracleScript();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScript_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScript_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgEditOracleScript.class, com.oracle.v1.TxProto.MsgEditOracleScript.Builder.class);
+    }
+
+    public static final int ORACLE_SCRIPT_ID_FIELD_NUMBER = 1;
+    private long oracleScriptId_ = 0L;
+    /**
+     * <pre>
+     * OracleScriptID is the unique identifier of the oracle script to be edited.
+     * </pre>
+     *
+     * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+     * @return The oracleScriptId.
+     */
+    @java.lang.Override
+    public long getOracleScriptId() {
+      return oracleScriptId_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of this oracle script used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of this oracle script used for display (optional).
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * Description is the description of this oracle script used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description is the description of this oracle script used for display
+     * (optional).
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCHEMA_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object schema_ = "";
+    /**
+     * <pre>
+     * Schema is the OBI schema of this oracle script (optional).
+     * </pre>
+     *
+     * <code>string schema = 4 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    @java.lang.Override
+    public java.lang.String getSchema() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schema_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Schema is the OBI schema of this oracle script (optional).
+     * </pre>
+     *
+     * <code>string schema = 4 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaBytes() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schema_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SOURCE_CODE_URL_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceCodeUrl_ = "";
+    /**
+     * <pre>
+     * SourceCodeURL is the absolute URI to the script's source code (optional).
+     * </pre>
+     *
+     * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+     * @return The sourceCodeUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceCodeUrl() {
+      java.lang.Object ref = sourceCodeUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceCodeUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * SourceCodeURL is the absolute URI to the script's source code (optional).
+     * </pre>
+     *
+     * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+     * @return The bytes for sourceCodeUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceCodeUrlBytes() {
+      java.lang.Object ref = sourceCodeUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceCodeUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODE_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+     * </pre>
+     *
+     * <code>bytes code = 6 [json_name = "code"];</code>
+     * @return The code.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCode() {
+      return code_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is an account address who is allowed to make further changes to the
+     * oracle script.
+     * </pre>
+     *
+     * <code>string owner = 7 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is an account address who is allowed to make further changes to the
+     * oracle script.
+     * </pre>
+     *
+     * <code>string owner = 7 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * Sender is an account address who sign this message. Must be the current
+     * oracle script's owner.
+     * </pre>
+     *
+     * <code>string sender = 8 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Sender is an account address who sign this message. Must be the current
+     * oracle script's owner.
+     * </pre>
+     *
+     * <code>string sender = 8 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (oracleScriptId_ != 0L) {
+        output.writeUInt64(1, oracleScriptId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, schema_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceCodeUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sourceCodeUrl_);
+      }
+      if (!code_.isEmpty()) {
+        output.writeBytes(6, code_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (oracleScriptId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, oracleScriptId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, schema_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceCodeUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sourceCodeUrl_);
+      }
+      if (!code_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, code_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgEditOracleScript)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgEditOracleScript other = (com.oracle.v1.TxProto.MsgEditOracleScript) obj;
+
+      if (getOracleScriptId()
+          != other.getOracleScriptId()) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getSchema()
+          .equals(other.getSchema())) return false;
+      if (!getSourceCodeUrl()
+          .equals(other.getSourceCodeUrl())) return false;
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORACLE_SCRIPT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOracleScriptId());
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
+      hash = (53 * hash) + getSchema().hashCode();
+      hash = (37 * hash) + SOURCE_CODE_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceCodeUrl().hashCode();
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScript parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgEditOracleScript prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEditOracleScript is a message for editing an existing oracle script.
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgEditOracleScript}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgEditOracleScript)
+        com.oracle.v1.TxProto.MsgEditOracleScriptOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScript_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScript_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgEditOracleScript.class, com.oracle.v1.TxProto.MsgEditOracleScript.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgEditOracleScript.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracleScriptId_ = 0L;
+        name_ = "";
+        description_ = "";
+        schema_ = "";
+        sourceCodeUrl_ = "";
+        code_ = com.google.protobuf.ByteString.EMPTY;
+        owner_ = "";
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScript_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditOracleScript getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgEditOracleScript.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditOracleScript build() {
+        com.oracle.v1.TxProto.MsgEditOracleScript result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditOracleScript buildPartial() {
+        com.oracle.v1.TxProto.MsgEditOracleScript result = new com.oracle.v1.TxProto.MsgEditOracleScript(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.oracle.v1.TxProto.MsgEditOracleScript result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracleScriptId_ = oracleScriptId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.schema_ = schema_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.sourceCodeUrl_ = sourceCodeUrl_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.code_ = code_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgEditOracleScript) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgEditOracleScript)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgEditOracleScript other) {
+        if (other == com.oracle.v1.TxProto.MsgEditOracleScript.getDefaultInstance()) return this;
+        if (other.getOracleScriptId() != 0L) {
+          setOracleScriptId(other.getOracleScriptId());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getSchema().isEmpty()) {
+          schema_ = other.schema_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSourceCodeUrl().isEmpty()) {
+          sourceCodeUrl_ = other.sourceCodeUrl_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getCode() != com.google.protobuf.ByteString.EMPTY) {
+          setCode(other.getCode());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                oracleScriptId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                schema_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                sourceCodeUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                code_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long oracleScriptId_ ;
+      /**
+       * <pre>
+       * OracleScriptID is the unique identifier of the oracle script to be edited.
+       * </pre>
+       *
+       * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+       * @return The oracleScriptId.
+       */
+      @java.lang.Override
+      public long getOracleScriptId() {
+        return oracleScriptId_;
+      }
+      /**
+       * <pre>
+       * OracleScriptID is the unique identifier of the oracle script to be edited.
+       * </pre>
+       *
+       * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+       * @param value The oracleScriptId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleScriptId(long value) {
+
+        oracleScriptId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OracleScriptID is the unique identifier of the oracle script to be edited.
+       * </pre>
+       *
+       * <code>uint64 oracle_script_id = 1 [json_name = "oracleScriptId", (.gogoproto.customname) = "OracleScriptID", (.gogoproto.casttype) = "OracleScriptID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracleScriptId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oracleScriptId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of this oracle script used for display (optional).
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description is the description of this oracle script used for display
+       * (optional).
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object schema_ = "";
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @return The schema.
+       */
+      public java.lang.String getSchema() {
+        java.lang.Object ref = schema_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schema_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @return The bytes for schema.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaBytes() {
+        java.lang.Object ref = schema_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schema_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @param value The schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchema(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        schema_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchema() {
+        schema_ = getDefaultInstance().getSchema();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Schema is the OBI schema of this oracle script (optional).
+       * </pre>
+       *
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @param value The bytes for schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        schema_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceCodeUrl_ = "";
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @return The sourceCodeUrl.
+       */
+      public java.lang.String getSourceCodeUrl() {
+        java.lang.Object ref = sourceCodeUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceCodeUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @return The bytes for sourceCodeUrl.
+       */
+      public com.google.protobuf.ByteString
+          getSourceCodeUrlBytes() {
+        java.lang.Object ref = sourceCodeUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceCodeUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @param value The sourceCodeUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceCodeUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceCodeUrl_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceCodeUrl() {
+        sourceCodeUrl_ = getDefaultInstance().getSourceCodeUrl();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SourceCodeURL is the absolute URI to the script's source code (optional).
+       * </pre>
+       *
+       * <code>string source_code_url = 5 [json_name = "sourceCodeUrl", (.gogoproto.customname) = "SourceCodeURL"];</code>
+       * @param value The bytes for sourceCodeUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceCodeUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceCodeUrl_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+       * </pre>
+       *
+       * <code>bytes code = 6 [json_name = "code"];</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCode() {
+        return code_;
+      }
+      /**
+       * <pre>
+       * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+       * </pre>
+       *
+       * <code>bytes code = 6 [json_name = "code"];</code>
+       * @param value The code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCode(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        code_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Code is the oracle WebAssembly binary code. Can be raw of gzip compressed.
+       * </pre>
+       *
+       * <code>bytes code = 6 [json_name = "code"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        code_ = getDefaultInstance().getCode();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is an account address who is allowed to make further changes to the
+       * oracle script.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is an account address who is allowed to make further changes to the
+       * oracle script.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is an account address who is allowed to make further changes to the
+       * oracle script.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is an account address who is allowed to make further changes to the
+       * oracle script.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is an account address who is allowed to make further changes to the
+       * oracle script.
+       * </pre>
+       *
+       * <code>string owner = 7 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * Sender is an account address who sign this message. Must be the current
+       * oracle script's owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is an account address who sign this message. Must be the current
+       * oracle script's owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender is an account address who sign this message. Must be the current
+       * oracle script's owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is an account address who sign this message. Must be the current
+       * oracle script's owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sender is an account address who sign this message. Must be the current
+       * oracle script's owner.
+       * </pre>
+       *
+       * <code>string sender = 8 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgEditOracleScript)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgEditOracleScript)
+    private static final com.oracle.v1.TxProto.MsgEditOracleScript DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgEditOracleScript();
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditOracleScript getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEditOracleScript>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEditOracleScript>() {
+      @java.lang.Override
+      public MsgEditOracleScript parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEditOracleScript> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEditOracleScript> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgEditOracleScript getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEditOracleScriptResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgEditOracleScriptResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgEditOracleScriptResponse is response data for MsgEditOracleScript message
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgEditOracleScriptResponse}
+   */
+  public static final class MsgEditOracleScriptResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgEditOracleScriptResponse)
+      MsgEditOracleScriptResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEditOracleScriptResponse.newBuilder() to construct.
+    private MsgEditOracleScriptResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEditOracleScriptResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEditOracleScriptResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScriptResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScriptResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgEditOracleScriptResponse.class, com.oracle.v1.TxProto.MsgEditOracleScriptResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgEditOracleScriptResponse)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgEditOracleScriptResponse other = (com.oracle.v1.TxProto.MsgEditOracleScriptResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgEditOracleScriptResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEditOracleScriptResponse is response data for MsgEditOracleScript message
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgEditOracleScriptResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgEditOracleScriptResponse)
+        com.oracle.v1.TxProto.MsgEditOracleScriptResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScriptResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScriptResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgEditOracleScriptResponse.class, com.oracle.v1.TxProto.MsgEditOracleScriptResponse.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgEditOracleScriptResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgEditOracleScriptResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditOracleScriptResponse getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgEditOracleScriptResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditOracleScriptResponse build() {
+        com.oracle.v1.TxProto.MsgEditOracleScriptResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgEditOracleScriptResponse buildPartial() {
+        com.oracle.v1.TxProto.MsgEditOracleScriptResponse result = new com.oracle.v1.TxProto.MsgEditOracleScriptResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgEditOracleScriptResponse) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgEditOracleScriptResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgEditOracleScriptResponse other) {
+        if (other == com.oracle.v1.TxProto.MsgEditOracleScriptResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgEditOracleScriptResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgEditOracleScriptResponse)
+    private static final com.oracle.v1.TxProto.MsgEditOracleScriptResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgEditOracleScriptResponse();
+    }
+
+    public static com.oracle.v1.TxProto.MsgEditOracleScriptResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEditOracleScriptResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEditOracleScriptResponse>() {
+      @java.lang.Override
+      public MsgEditOracleScriptResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEditOracleScriptResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEditOracleScriptResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgEditOracleScriptResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgActivateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgActivate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Validator is the validator address who sign this message and request to be
+     * activated.
+     * </pre>
+     *
+     * <code>string validator = 1 [json_name = "validator"];</code>
+     * @return The validator.
+     */
+    java.lang.String getValidator();
+    /**
+     * <pre>
+     * Validator is the validator address who sign this message and request to be
+     * activated.
+     * </pre>
+     *
+     * <code>string validator = 1 [json_name = "validator"];</code>
+     * @return The bytes for validator.
+     */
+    com.google.protobuf.ByteString
+        getValidatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgEditOracleScript is a message for activating a validator to become an
+   * oracle provider. However, the activation can be revoked once the validator
+   * is unable to provide data to fulfill requests
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgActivate}
+   */
+  public static final class MsgActivate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgActivate)
+      MsgActivateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgActivate.newBuilder() to construct.
+    private MsgActivate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgActivate() {
+      validator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgActivate();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgActivate.class, com.oracle.v1.TxProto.MsgActivate.Builder.class);
+    }
+
+    public static final int VALIDATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validator_ = "";
+    /**
+     * <pre>
+     * Validator is the validator address who sign this message and request to be
+     * activated.
+     * </pre>
+     *
+     * <code>string validator = 1 [json_name = "validator"];</code>
+     * @return The validator.
+     */
+    @java.lang.Override
+    public java.lang.String getValidator() {
+      java.lang.Object ref = validator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Validator is the validator address who sign this message and request to be
+     * activated.
+     * </pre>
+     *
+     * <code>string validator = 1 [json_name = "validator"];</code>
+     * @return The bytes for validator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorBytes() {
+      java.lang.Object ref = validator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgActivate)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgActivate other = (com.oracle.v1.TxProto.MsgActivate) obj;
+
+      if (!getValidator()
+          .equals(other.getValidator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgActivate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgActivate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgActivate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgActivate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEditOracleScript is a message for activating a validator to become an
+     * oracle provider. However, the activation can be revoked once the validator
+     * is unable to provide data to fulfill requests
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgActivate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgActivate)
+        com.oracle.v1.TxProto.MsgActivateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgActivate.class, com.oracle.v1.TxProto.MsgActivate.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgActivate.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgActivate getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgActivate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgActivate build() {
+        com.oracle.v1.TxProto.MsgActivate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgActivate buildPartial() {
+        com.oracle.v1.TxProto.MsgActivate result = new com.oracle.v1.TxProto.MsgActivate(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.oracle.v1.TxProto.MsgActivate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validator_ = validator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgActivate) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgActivate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgActivate other) {
+        if (other == com.oracle.v1.TxProto.MsgActivate.getDefaultInstance()) return this;
+        if (!other.getValidator().isEmpty()) {
+          validator_ = other.validator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validator_ = "";
+      /**
+       * <pre>
+       * Validator is the validator address who sign this message and request to be
+       * activated.
+       * </pre>
+       *
+       * <code>string validator = 1 [json_name = "validator"];</code>
+       * @return The validator.
+       */
+      public java.lang.String getValidator() {
+        java.lang.Object ref = validator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Validator is the validator address who sign this message and request to be
+       * activated.
+       * </pre>
+       *
+       * <code>string validator = 1 [json_name = "validator"];</code>
+       * @return The bytes for validator.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorBytes() {
+        java.lang.Object ref = validator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Validator is the validator address who sign this message and request to be
+       * activated.
+       * </pre>
+       *
+       * <code>string validator = 1 [json_name = "validator"];</code>
+       * @param value The validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Validator is the validator address who sign this message and request to be
+       * activated.
+       * </pre>
+       *
+       * <code>string validator = 1 [json_name = "validator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidator() {
+        validator_ = getDefaultInstance().getValidator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Validator is the validator address who sign this message and request to be
+       * activated.
+       * </pre>
+       *
+       * <code>string validator = 1 [json_name = "validator"];</code>
+       * @param value The bytes for validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgActivate)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgActivate)
+    private static final com.oracle.v1.TxProto.MsgActivate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgActivate();
+    }
+
+    public static com.oracle.v1.TxProto.MsgActivate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgActivate>
+        PARSER = new com.google.protobuf.AbstractParser<MsgActivate>() {
+      @java.lang.Override
+      public MsgActivate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgActivate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgActivate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgActivate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgActivateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oracle.v1.MsgActivateResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgActivateResponse is response data for MsgActivate message
+   * </pre>
+   *
+   * Protobuf type {@code oracle.v1.MsgActivateResponse}
+   */
+  public static final class MsgActivateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:oracle.v1.MsgActivateResponse)
+      MsgActivateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgActivateResponse.newBuilder() to construct.
+    private MsgActivateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgActivateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgActivateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.oracle.v1.TxProto.MsgActivateResponse.class, com.oracle.v1.TxProto.MsgActivateResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.oracle.v1.TxProto.MsgActivateResponse)) {
+        return super.equals(obj);
+      }
+      com.oracle.v1.TxProto.MsgActivateResponse other = (com.oracle.v1.TxProto.MsgActivateResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.oracle.v1.TxProto.MsgActivateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.oracle.v1.TxProto.MsgActivateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgActivateResponse is response data for MsgActivate message
+     * </pre>
+     *
+     * Protobuf type {@code oracle.v1.MsgActivateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oracle.v1.MsgActivateResponse)
+        com.oracle.v1.TxProto.MsgActivateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.oracle.v1.TxProto.MsgActivateResponse.class, com.oracle.v1.TxProto.MsgActivateResponse.Builder.class);
+      }
+
+      // Construct using com.oracle.v1.TxProto.MsgActivateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.oracle.v1.TxProto.internal_static_oracle_v1_MsgActivateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgActivateResponse getDefaultInstanceForType() {
+        return com.oracle.v1.TxProto.MsgActivateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgActivateResponse build() {
+        com.oracle.v1.TxProto.MsgActivateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.oracle.v1.TxProto.MsgActivateResponse buildPartial() {
+        com.oracle.v1.TxProto.MsgActivateResponse result = new com.oracle.v1.TxProto.MsgActivateResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.oracle.v1.TxProto.MsgActivateResponse) {
+          return mergeFrom((com.oracle.v1.TxProto.MsgActivateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.oracle.v1.TxProto.MsgActivateResponse other) {
+        if (other == com.oracle.v1.TxProto.MsgActivateResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:oracle.v1.MsgActivateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oracle.v1.MsgActivateResponse)
+    private static final com.oracle.v1.TxProto.MsgActivateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.oracle.v1.TxProto.MsgActivateResponse();
+    }
+
+    public static com.oracle.v1.TxProto.MsgActivateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgActivateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgActivateResponse>() {
+      @java.lang.Override
+      public MsgActivateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgActivateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgActivateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.oracle.v1.TxProto.MsgActivateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgRequestData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgRequestData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgRequestDataResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgRequestDataResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgReportData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgReportData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgReportDataResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgReportDataResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgCreateDataSource_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgCreateDataSource_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgCreateDataSourceResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgCreateDataSourceResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgEditDataSource_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgEditDataSource_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgEditDataSourceResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgEditDataSourceResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgCreateOracleScript_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgCreateOracleScript_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgCreateOracleScriptResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgCreateOracleScriptResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgEditOracleScript_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgEditOracleScript_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgEditOracleScriptResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgEditOracleScriptResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgActivate_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgActivate_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oracle_v1_MsgActivateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_oracle_v1_MsgActivateResponse_fieldAccessorTable;
 
@@ -163,11 +14067,11 @@ public final class TxProto {
       "acle.v1.MsgEditOracleScript\032&.oracle.v1." +
       "MsgEditOracleScriptResponse\022B\n\010Activate\022" +
       "\026.oracle.v1.MsgActivate\032\036.oracle.v1.MsgA" +
-      "ctivateResponseB\216\001\n\rcom.oracle.v1B\007TxPro" +
-      "toP\001Z/github.com/bandprotocol/chain/v2/x" +
-      "/oracle/types\242\002\003OXX\252\002\tOracle.V1\312\002\tOracle" +
-      "\\V1\342\002\025Oracle\\V1\\GPBMetadata\352\002\nOracle::V1" +
-      "b\006proto3"
+      "ctivateResponseB\214\001\n\rcom.oracle.v1B\007TxPro" +
+      "toZ/github.com/bandprotocol/chain/v2/x/o" +
+      "racle/types\242\002\003OXX\252\002\tOracle.V1\312\002\tOracle\\V" +
+      "1\342\002\025Oracle\\V1\\GPBMetadata\352\002\nOracle::V1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

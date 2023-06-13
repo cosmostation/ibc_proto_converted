@@ -14,14 +14,1011 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryInflationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.inflation.v1.QueryInflationRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.inflation.v1.QueryInflationRequest}
+   */
+  public static final class QueryInflationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.inflation.v1.QueryInflationRequest)
+      QueryInflationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInflationRequest.newBuilder() to construct.
+    private QueryInflationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInflationRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInflationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.inflation.v1.QueryProto.QueryInflationRequest.class, com.em.inflation.v1.QueryProto.QueryInflationRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.inflation.v1.QueryProto.QueryInflationRequest)) {
+        return super.equals(obj);
+      }
+      com.em.inflation.v1.QueryProto.QueryInflationRequest other = (com.em.inflation.v1.QueryProto.QueryInflationRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.inflation.v1.QueryProto.QueryInflationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.inflation.v1.QueryInflationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.inflation.v1.QueryInflationRequest)
+        com.em.inflation.v1.QueryProto.QueryInflationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.inflation.v1.QueryProto.QueryInflationRequest.class, com.em.inflation.v1.QueryProto.QueryInflationRequest.Builder.class);
+      }
+
+      // Construct using com.em.inflation.v1.QueryProto.QueryInflationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.QueryProto.QueryInflationRequest getDefaultInstanceForType() {
+        return com.em.inflation.v1.QueryProto.QueryInflationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.QueryProto.QueryInflationRequest build() {
+        com.em.inflation.v1.QueryProto.QueryInflationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.QueryProto.QueryInflationRequest buildPartial() {
+        com.em.inflation.v1.QueryProto.QueryInflationRequest result = new com.em.inflation.v1.QueryProto.QueryInflationRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.inflation.v1.QueryProto.QueryInflationRequest) {
+          return mergeFrom((com.em.inflation.v1.QueryProto.QueryInflationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.inflation.v1.QueryProto.QueryInflationRequest other) {
+        if (other == com.em.inflation.v1.QueryProto.QueryInflationRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.inflation.v1.QueryInflationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.inflation.v1.QueryInflationRequest)
+    private static final com.em.inflation.v1.QueryProto.QueryInflationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.inflation.v1.QueryProto.QueryInflationRequest();
+    }
+
+    public static com.em.inflation.v1.QueryProto.QueryInflationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInflationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInflationRequest>() {
+      @java.lang.Override
+      public QueryInflationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInflationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInflationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.inflation.v1.QueryProto.QueryInflationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryInflationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.inflation.v1.QueryInflationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return Whether the state field is set.
+     */
+    boolean hasState();
+    /**
+     * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    com.em.inflation.v1.InflationProto.InflationState getState();
+    /**
+     * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     */
+    com.em.inflation.v1.InflationProto.InflationStateOrBuilder getStateOrBuilder();
+  }
+  /**
+   * Protobuf type {@code em.inflation.v1.QueryInflationResponse}
+   */
+  public static final class QueryInflationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.inflation.v1.QueryInflationResponse)
+      QueryInflationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInflationResponse.newBuilder() to construct.
+    private QueryInflationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInflationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInflationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.inflation.v1.QueryProto.QueryInflationResponse.class, com.em.inflation.v1.QueryProto.QueryInflationResponse.Builder.class);
+    }
+
+    public static final int STATE_FIELD_NUMBER = 1;
+    private com.em.inflation.v1.InflationProto.InflationState state_;
+    /**
+     * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return Whether the state field is set.
+     */
+    @java.lang.Override
+    public boolean hasState() {
+      return state_ != null;
+    }
+    /**
+     * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public com.em.inflation.v1.InflationProto.InflationState getState() {
+      return state_ == null ? com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance() : state_;
+    }
+    /**
+     * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.inflation.v1.InflationProto.InflationStateOrBuilder getStateOrBuilder() {
+      return state_ == null ? com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance() : state_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (state_ != null) {
+        output.writeMessage(1, getState());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (state_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getState());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.inflation.v1.QueryProto.QueryInflationResponse)) {
+        return super.equals(obj);
+      }
+      com.em.inflation.v1.QueryProto.QueryInflationResponse other = (com.em.inflation.v1.QueryProto.QueryInflationResponse) obj;
+
+      if (hasState() != other.hasState()) return false;
+      if (hasState()) {
+        if (!getState()
+            .equals(other.getState())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasState()) {
+        hash = (37 * hash) + STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getState().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.inflation.v1.QueryProto.QueryInflationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.inflation.v1.QueryInflationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.inflation.v1.QueryInflationResponse)
+        com.em.inflation.v1.QueryProto.QueryInflationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.inflation.v1.QueryProto.QueryInflationResponse.class, com.em.inflation.v1.QueryProto.QueryInflationResponse.Builder.class);
+      }
+
+      // Construct using com.em.inflation.v1.QueryProto.QueryInflationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        state_ = null;
+        if (stateBuilder_ != null) {
+          stateBuilder_.dispose();
+          stateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.inflation.v1.QueryProto.internal_static_em_inflation_v1_QueryInflationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.QueryProto.QueryInflationResponse getDefaultInstanceForType() {
+        return com.em.inflation.v1.QueryProto.QueryInflationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.QueryProto.QueryInflationResponse build() {
+        com.em.inflation.v1.QueryProto.QueryInflationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.QueryProto.QueryInflationResponse buildPartial() {
+        com.em.inflation.v1.QueryProto.QueryInflationResponse result = new com.em.inflation.v1.QueryProto.QueryInflationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.inflation.v1.QueryProto.QueryInflationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.state_ = stateBuilder_ == null
+              ? state_
+              : stateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.inflation.v1.QueryProto.QueryInflationResponse) {
+          return mergeFrom((com.em.inflation.v1.QueryProto.QueryInflationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.inflation.v1.QueryProto.QueryInflationResponse other) {
+        if (other == com.em.inflation.v1.QueryProto.QueryInflationResponse.getDefaultInstance()) return this;
+        if (other.hasState()) {
+          mergeState(other.getState());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.em.inflation.v1.InflationProto.InflationState state_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.em.inflation.v1.InflationProto.InflationState, com.em.inflation.v1.InflationProto.InflationState.Builder, com.em.inflation.v1.InflationProto.InflationStateOrBuilder> stateBuilder_;
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return Whether the state field is set.
+       */
+      public boolean hasState() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The state.
+       */
+      public com.em.inflation.v1.InflationProto.InflationState getState() {
+        if (stateBuilder_ == null) {
+          return state_ == null ? com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance() : state_;
+        } else {
+          return stateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       */
+      public Builder setState(com.em.inflation.v1.InflationProto.InflationState value) {
+        if (stateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          state_ = value;
+        } else {
+          stateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       */
+      public Builder setState(
+          com.em.inflation.v1.InflationProto.InflationState.Builder builderForValue) {
+        if (stateBuilder_ == null) {
+          state_ = builderForValue.build();
+        } else {
+          stateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       */
+      public Builder mergeState(com.em.inflation.v1.InflationProto.InflationState value) {
+        if (stateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            state_ != null &&
+            state_ != com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance()) {
+            getStateBuilder().mergeFrom(value);
+          } else {
+            state_ = value;
+          }
+        } else {
+          stateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        state_ = null;
+        if (stateBuilder_ != null) {
+          stateBuilder_.dispose();
+          stateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationState.Builder getStateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationStateOrBuilder getStateOrBuilder() {
+        if (stateBuilder_ != null) {
+          return stateBuilder_.getMessageOrBuilder();
+        } else {
+          return state_ == null ?
+              com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance() : state_;
+        }
+      }
+      /**
+       * <code>.em.inflation.v1.InflationState state = 1 [json_name = "state", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.em.inflation.v1.InflationProto.InflationState, com.em.inflation.v1.InflationProto.InflationState.Builder, com.em.inflation.v1.InflationProto.InflationStateOrBuilder> 
+          getStateFieldBuilder() {
+        if (stateBuilder_ == null) {
+          stateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.em.inflation.v1.InflationProto.InflationState, com.em.inflation.v1.InflationProto.InflationState.Builder, com.em.inflation.v1.InflationProto.InflationStateOrBuilder>(
+                  getState(),
+                  getParentForChildren(),
+                  isClean());
+          state_ = null;
+        }
+        return stateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.inflation.v1.QueryInflationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.inflation.v1.QueryInflationResponse)
+    private static final com.em.inflation.v1.QueryProto.QueryInflationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.inflation.v1.QueryProto.QueryInflationResponse();
+    }
+
+    public static com.em.inflation.v1.QueryProto.QueryInflationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInflationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInflationResponse>() {
+      @java.lang.Override
+      public QueryInflationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInflationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInflationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.inflation.v1.QueryProto.QueryInflationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_inflation_v1_QueryInflationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_inflation_v1_QueryInflationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_inflation_v1_QueryInflationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_inflation_v1_QueryInflationResponse_fieldAccessorTable;
 
@@ -43,12 +1040,12 @@ public final class QueryProto {
       "ate\"R\005state2\213\001\n\005Query\022\201\001\n\tInflation\022&.em" +
       ".inflation.v1.QueryInflationRequest\032\'.em" +
       ".inflation.v1.QueryInflationResponse\"#\202\323" +
-      "\344\223\002\035\022\033/e-money/inflation/v1/stateB\257\001\n\023co" +
-      "m.em.inflation.v1B\nQueryProtoP\001Z.github." +
-      "com/e-money/em-ledger/x/inflation/types\242" +
-      "\002\003EIX\252\002\017Em.Inflation.V1\312\002\017Em\\Inflation\\V" +
-      "1\342\002\033Em\\Inflation\\V1\\GPBMetadata\352\002\021Em::In" +
-      "flation::V1b\006proto3"
+      "\344\223\002\035\022\033/e-money/inflation/v1/stateB\255\001\n\023co" +
+      "m.em.inflation.v1B\nQueryProtoZ.github.co" +
+      "m/e-money/em-ledger/x/inflation/types\242\002\003" +
+      "EIX\252\002\017Em.Inflation.V1\312\002\017Em\\Inflation\\V1\342" +
+      "\002\033Em\\Inflation\\V1\\GPBMetadata\352\002\021Em::Infl" +
+      "ation::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

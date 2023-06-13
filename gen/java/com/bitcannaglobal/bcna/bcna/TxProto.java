@@ -14,64 +14,7986 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateBitcannaidOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgCreateBitcannaid)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+     * @return The bcnaid.
+     */
+    java.lang.String getBcnaid();
+    /**
+     * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+     * @return The bytes for bcnaid.
+     */
+    com.google.protobuf.ByteString
+        getBcnaidBytes();
+
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgCreateBitcannaid}
+   */
+  public static final class MsgCreateBitcannaid extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgCreateBitcannaid)
+      MsgCreateBitcannaidOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateBitcannaid.newBuilder() to construct.
+    private MsgCreateBitcannaid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateBitcannaid() {
+      creator_ = "";
+      bcnaid_ = "";
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateBitcannaid();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaid_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaid_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BCNAID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bcnaid_ = "";
+    /**
+     * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+     * @return The bcnaid.
+     */
+    @java.lang.Override
+    public java.lang.String getBcnaid() {
+      java.lang.Object ref = bcnaid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bcnaid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+     * @return The bytes for bcnaid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBcnaidBytes() {
+      java.lang.Object ref = bcnaid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bcnaid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bcnaid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bcnaid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bcnaid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bcnaid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getBcnaid()
+          .equals(other.getBcnaid())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + BCNAID_FIELD_NUMBER;
+      hash = (53 * hash) + getBcnaid().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgCreateBitcannaid}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgCreateBitcannaid)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        bcnaid_ = "";
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaid_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bcnaid_ = bcnaid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBcnaid().isEmpty()) {
+          bcnaid_ = other.bcnaid_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                bcnaid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bcnaid_ = "";
+      /**
+       * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+       * @return The bcnaid.
+       */
+      public java.lang.String getBcnaid() {
+        java.lang.Object ref = bcnaid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bcnaid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+       * @return The bytes for bcnaid.
+       */
+      public com.google.protobuf.ByteString
+          getBcnaidBytes() {
+        java.lang.Object ref = bcnaid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bcnaid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+       * @param value The bcnaid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBcnaid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bcnaid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBcnaid() {
+        bcnaid_ = getDefaultInstance().getBcnaid();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bcnaid = 2 [json_name = "bcnaid"];</code>
+       * @param value The bytes for bcnaid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBcnaidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bcnaid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgCreateBitcannaid)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgCreateBitcannaid)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateBitcannaid>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateBitcannaid>() {
+      @java.lang.Override
+      public MsgCreateBitcannaid parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateBitcannaid> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateBitcannaid> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaid getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateBitcannaidResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgCreateBitcannaidResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgCreateBitcannaidResponse}
+   */
+  public static final class MsgCreateBitcannaidResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgCreateBitcannaidResponse)
+      MsgCreateBitcannaidResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateBitcannaidResponse.newBuilder() to construct.
+    private MsgCreateBitcannaidResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateBitcannaidResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateBitcannaidResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaidResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaidResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgCreateBitcannaidResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgCreateBitcannaidResponse)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaidResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgCreateBitcannaidResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgCreateBitcannaidResponse)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateBitcannaidResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateBitcannaidResponse>() {
+      @java.lang.Override
+      public MsgCreateBitcannaidResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateBitcannaidResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateBitcannaidResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateBitcannaidResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateBitcannaidOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaid)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+     * @return The bcnaid.
+     */
+    java.lang.String getBcnaid();
+    /**
+     * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+     * @return The bytes for bcnaid.
+     */
+    com.google.protobuf.ByteString
+        getBcnaidBytes();
+
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgUpdateBitcannaid}
+   */
+  public static final class MsgUpdateBitcannaid extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaid)
+      MsgUpdateBitcannaidOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateBitcannaid.newBuilder() to construct.
+    private MsgUpdateBitcannaid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateBitcannaid() {
+      creator_ = "";
+      bcnaid_ = "";
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateBitcannaid();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaid_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaid_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int BCNAID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bcnaid_ = "";
+    /**
+     * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+     * @return The bcnaid.
+     */
+    @java.lang.Override
+    public java.lang.String getBcnaid() {
+      java.lang.Object ref = bcnaid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bcnaid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+     * @return The bytes for bcnaid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBcnaidBytes() {
+      java.lang.Object ref = bcnaid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bcnaid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bcnaid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bcnaid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bcnaid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bcnaid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getBcnaid()
+          .equals(other.getBcnaid())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + BCNAID_FIELD_NUMBER;
+      hash = (53 * hash) + getBcnaid().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgUpdateBitcannaid}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaid)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        bcnaid_ = "";
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaid_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bcnaid_ = bcnaid_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getBcnaid().isEmpty()) {
+          bcnaid_ = other.bcnaid_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                bcnaid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bcnaid_ = "";
+      /**
+       * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+       * @return The bcnaid.
+       */
+      public java.lang.String getBcnaid() {
+        java.lang.Object ref = bcnaid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bcnaid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+       * @return The bytes for bcnaid.
+       */
+      public com.google.protobuf.ByteString
+          getBcnaidBytes() {
+        java.lang.Object ref = bcnaid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bcnaid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+       * @param value The bcnaid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBcnaid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bcnaid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBcnaid() {
+        bcnaid_ = getDefaultInstance().getBcnaid();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bcnaid = 3 [json_name = "bcnaid"];</code>
+       * @param value The bytes for bcnaid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBcnaidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bcnaid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaid)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaid)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateBitcannaid>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateBitcannaid>() {
+      @java.lang.Override
+      public MsgUpdateBitcannaid parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateBitcannaid> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateBitcannaid> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaid getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateBitcannaidResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaidResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgUpdateBitcannaidResponse}
+   */
+  public static final class MsgUpdateBitcannaidResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaidResponse)
+      MsgUpdateBitcannaidResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateBitcannaidResponse.newBuilder() to construct.
+    private MsgUpdateBitcannaidResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateBitcannaidResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateBitcannaidResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaidResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaidResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgUpdateBitcannaidResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaidResponse)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaidResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaidResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgUpdateBitcannaidResponse)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateBitcannaidResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateBitcannaidResponse>() {
+      @java.lang.Override
+      public MsgUpdateBitcannaidResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateBitcannaidResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateBitcannaidResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateBitcannaidResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteBitcannaidOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaid)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgDeleteBitcannaid}
+   */
+  public static final class MsgDeleteBitcannaid extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaid)
+      MsgDeleteBitcannaidOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteBitcannaid.newBuilder() to construct.
+    private MsgDeleteBitcannaid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteBitcannaid() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteBitcannaid();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaid_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaid_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgDeleteBitcannaid}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaid)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaid_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaid)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaid)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteBitcannaid>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteBitcannaid>() {
+      @java.lang.Override
+      public MsgDeleteBitcannaid parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteBitcannaid> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteBitcannaid> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaid getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteBitcannaidResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaidResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgDeleteBitcannaidResponse}
+   */
+  public static final class MsgDeleteBitcannaidResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaidResponse)
+      MsgDeleteBitcannaidResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteBitcannaidResponse.newBuilder() to construct.
+    private MsgDeleteBitcannaidResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteBitcannaidResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteBitcannaidResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaidResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaidResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgDeleteBitcannaidResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaidResponse)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaidResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaidResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgDeleteBitcannaidResponse)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteBitcannaidResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteBitcannaidResponse>() {
+      @java.lang.Override
+      public MsgDeleteBitcannaidResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteBitcannaidResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteBitcannaidResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteBitcannaidResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateSupplychainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgCreateSupplychain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string product = 2 [json_name = "product"];</code>
+     * @return The product.
+     */
+    java.lang.String getProduct();
+    /**
+     * <code>string product = 2 [json_name = "product"];</code>
+     * @return The bytes for product.
+     */
+    com.google.protobuf.ByteString
+        getProductBytes();
+
+    /**
+     * <code>string info = 3 [json_name = "info"];</code>
+     * @return The info.
+     */
+    java.lang.String getInfo();
+    /**
+     * <code>string info = 3 [json_name = "info"];</code>
+     * @return The bytes for info.
+     */
+    com.google.protobuf.ByteString
+        getInfoBytes();
+
+    /**
+     * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+     * @return The supplyinfo.
+     */
+    java.lang.String getSupplyinfo();
+    /**
+     * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+     * @return The bytes for supplyinfo.
+     */
+    com.google.protobuf.ByteString
+        getSupplyinfoBytes();
+
+    /**
+     * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+     * @return The supplyextra.
+     */
+    java.lang.String getSupplyextra();
+    /**
+     * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+     * @return The bytes for supplyextra.
+     */
+    com.google.protobuf.ByteString
+        getSupplyextraBytes();
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgCreateSupplychain}
+   */
+  public static final class MsgCreateSupplychain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgCreateSupplychain)
+      MsgCreateSupplychainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateSupplychain.newBuilder() to construct.
+    private MsgCreateSupplychain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateSupplychain() {
+      creator_ = "";
+      product_ = "";
+      info_ = "";
+      supplyinfo_ = "";
+      supplyextra_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateSupplychain();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRODUCT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object product_ = "";
+    /**
+     * <code>string product = 2 [json_name = "product"];</code>
+     * @return The product.
+     */
+    @java.lang.Override
+    public java.lang.String getProduct() {
+      java.lang.Object ref = product_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        product_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string product = 2 [json_name = "product"];</code>
+     * @return The bytes for product.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProductBytes() {
+      java.lang.Object ref = product_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        product_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INFO_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object info_ = "";
+    /**
+     * <code>string info = 3 [json_name = "info"];</code>
+     * @return The info.
+     */
+    @java.lang.Override
+    public java.lang.String getInfo() {
+      java.lang.Object ref = info_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        info_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string info = 3 [json_name = "info"];</code>
+     * @return The bytes for info.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInfoBytes() {
+      java.lang.Object ref = info_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        info_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUPPLYINFO_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object supplyinfo_ = "";
+    /**
+     * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+     * @return The supplyinfo.
+     */
+    @java.lang.Override
+    public java.lang.String getSupplyinfo() {
+      java.lang.Object ref = supplyinfo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        supplyinfo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+     * @return The bytes for supplyinfo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSupplyinfoBytes() {
+      java.lang.Object ref = supplyinfo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        supplyinfo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUPPLYEXTRA_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object supplyextra_ = "";
+    /**
+     * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+     * @return The supplyextra.
+     */
+    @java.lang.Override
+    public java.lang.String getSupplyextra() {
+      java.lang.Object ref = supplyextra_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        supplyextra_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+     * @return The bytes for supplyextra.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSupplyextraBytes() {
+      java.lang.Object ref = supplyextra_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        supplyextra_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(product_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, product_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(info_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, info_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplyinfo_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, supplyinfo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplyextra_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, supplyextra_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(product_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, product_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(info_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, info_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplyinfo_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, supplyinfo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplyextra_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, supplyextra_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getProduct()
+          .equals(other.getProduct())) return false;
+      if (!getInfo()
+          .equals(other.getInfo())) return false;
+      if (!getSupplyinfo()
+          .equals(other.getSupplyinfo())) return false;
+      if (!getSupplyextra()
+          .equals(other.getSupplyextra())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
+      hash = (53 * hash) + getProduct().hashCode();
+      hash = (37 * hash) + INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getInfo().hashCode();
+      hash = (37 * hash) + SUPPLYINFO_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplyinfo().hashCode();
+      hash = (37 * hash) + SUPPLYEXTRA_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplyextra().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgCreateSupplychain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgCreateSupplychain)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        product_ = "";
+        info_ = "";
+        supplyinfo_ = "";
+        supplyextra_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychain_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.product_ = product_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.info_ = info_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.supplyinfo_ = supplyinfo_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.supplyextra_ = supplyextra_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getProduct().isEmpty()) {
+          product_ = other.product_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getInfo().isEmpty()) {
+          info_ = other.info_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getSupplyinfo().isEmpty()) {
+          supplyinfo_ = other.supplyinfo_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSupplyextra().isEmpty()) {
+          supplyextra_ = other.supplyextra_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                product_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                info_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                supplyinfo_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                supplyextra_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object product_ = "";
+      /**
+       * <code>string product = 2 [json_name = "product"];</code>
+       * @return The product.
+       */
+      public java.lang.String getProduct() {
+        java.lang.Object ref = product_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          product_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string product = 2 [json_name = "product"];</code>
+       * @return The bytes for product.
+       */
+      public com.google.protobuf.ByteString
+          getProductBytes() {
+        java.lang.Object ref = product_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          product_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string product = 2 [json_name = "product"];</code>
+       * @param value The product to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProduct(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        product_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string product = 2 [json_name = "product"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProduct() {
+        product_ = getDefaultInstance().getProduct();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string product = 2 [json_name = "product"];</code>
+       * @param value The bytes for product to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        product_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object info_ = "";
+      /**
+       * <code>string info = 3 [json_name = "info"];</code>
+       * @return The info.
+       */
+      public java.lang.String getInfo() {
+        java.lang.Object ref = info_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          info_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string info = 3 [json_name = "info"];</code>
+       * @return The bytes for info.
+       */
+      public com.google.protobuf.ByteString
+          getInfoBytes() {
+        java.lang.Object ref = info_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          info_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string info = 3 [json_name = "info"];</code>
+       * @param value The info to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInfo(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        info_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string info = 3 [json_name = "info"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInfo() {
+        info_ = getDefaultInstance().getInfo();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string info = 3 [json_name = "info"];</code>
+       * @param value The bytes for info to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        info_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object supplyinfo_ = "";
+      /**
+       * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+       * @return The supplyinfo.
+       */
+      public java.lang.String getSupplyinfo() {
+        java.lang.Object ref = supplyinfo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          supplyinfo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+       * @return The bytes for supplyinfo.
+       */
+      public com.google.protobuf.ByteString
+          getSupplyinfoBytes() {
+        java.lang.Object ref = supplyinfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          supplyinfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+       * @param value The supplyinfo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplyinfo(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        supplyinfo_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupplyinfo() {
+        supplyinfo_ = getDefaultInstance().getSupplyinfo();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string supplyinfo = 4 [json_name = "supplyinfo"];</code>
+       * @param value The bytes for supplyinfo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplyinfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        supplyinfo_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object supplyextra_ = "";
+      /**
+       * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+       * @return The supplyextra.
+       */
+      public java.lang.String getSupplyextra() {
+        java.lang.Object ref = supplyextra_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          supplyextra_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+       * @return The bytes for supplyextra.
+       */
+      public com.google.protobuf.ByteString
+          getSupplyextraBytes() {
+        java.lang.Object ref = supplyextra_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          supplyextra_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+       * @param value The supplyextra to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplyextra(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        supplyextra_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupplyextra() {
+        supplyextra_ = getDefaultInstance().getSupplyextra();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string supplyextra = 5 [json_name = "supplyextra"];</code>
+       * @param value The bytes for supplyextra to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplyextraBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        supplyextra_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgCreateSupplychain)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgCreateSupplychain)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateSupplychain>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateSupplychain>() {
+      @java.lang.Override
+      public MsgCreateSupplychain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateSupplychain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateSupplychain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateSupplychainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgCreateSupplychainResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgCreateSupplychainResponse}
+   */
+  public static final class MsgCreateSupplychainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgCreateSupplychainResponse)
+      MsgCreateSupplychainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateSupplychainResponse.newBuilder() to construct.
+    private MsgCreateSupplychainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateSupplychainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateSupplychainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgCreateSupplychainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgCreateSupplychainResponse)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgCreateSupplychainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgCreateSupplychainResponse)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateSupplychainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateSupplychainResponse>() {
+      @java.lang.Override
+      public MsgCreateSupplychainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateSupplychainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateSupplychainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgCreateSupplychainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateSupplychainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgUpdateSupplychain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string product = 3 [json_name = "product"];</code>
+     * @return The product.
+     */
+    java.lang.String getProduct();
+    /**
+     * <code>string product = 3 [json_name = "product"];</code>
+     * @return The bytes for product.
+     */
+    com.google.protobuf.ByteString
+        getProductBytes();
+
+    /**
+     * <code>string info = 4 [json_name = "info"];</code>
+     * @return The info.
+     */
+    java.lang.String getInfo();
+    /**
+     * <code>string info = 4 [json_name = "info"];</code>
+     * @return The bytes for info.
+     */
+    com.google.protobuf.ByteString
+        getInfoBytes();
+
+    /**
+     * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+     * @return The supplyinfo.
+     */
+    java.lang.String getSupplyinfo();
+    /**
+     * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+     * @return The bytes for supplyinfo.
+     */
+    com.google.protobuf.ByteString
+        getSupplyinfoBytes();
+
+    /**
+     * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+     * @return The supplyextra.
+     */
+    java.lang.String getSupplyextra();
+    /**
+     * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+     * @return The bytes for supplyextra.
+     */
+    com.google.protobuf.ByteString
+        getSupplyextraBytes();
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgUpdateSupplychain}
+   */
+  public static final class MsgUpdateSupplychain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgUpdateSupplychain)
+      MsgUpdateSupplychainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateSupplychain.newBuilder() to construct.
+    private MsgUpdateSupplychain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateSupplychain() {
+      creator_ = "";
+      product_ = "";
+      info_ = "";
+      supplyinfo_ = "";
+      supplyextra_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateSupplychain();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int PRODUCT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object product_ = "";
+    /**
+     * <code>string product = 3 [json_name = "product"];</code>
+     * @return The product.
+     */
+    @java.lang.Override
+    public java.lang.String getProduct() {
+      java.lang.Object ref = product_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        product_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string product = 3 [json_name = "product"];</code>
+     * @return The bytes for product.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProductBytes() {
+      java.lang.Object ref = product_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        product_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INFO_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object info_ = "";
+    /**
+     * <code>string info = 4 [json_name = "info"];</code>
+     * @return The info.
+     */
+    @java.lang.Override
+    public java.lang.String getInfo() {
+      java.lang.Object ref = info_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        info_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string info = 4 [json_name = "info"];</code>
+     * @return The bytes for info.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInfoBytes() {
+      java.lang.Object ref = info_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        info_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUPPLYINFO_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object supplyinfo_ = "";
+    /**
+     * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+     * @return The supplyinfo.
+     */
+    @java.lang.Override
+    public java.lang.String getSupplyinfo() {
+      java.lang.Object ref = supplyinfo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        supplyinfo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+     * @return The bytes for supplyinfo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSupplyinfoBytes() {
+      java.lang.Object ref = supplyinfo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        supplyinfo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUPPLYEXTRA_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object supplyextra_ = "";
+    /**
+     * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+     * @return The supplyextra.
+     */
+    @java.lang.Override
+    public java.lang.String getSupplyextra() {
+      java.lang.Object ref = supplyextra_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        supplyextra_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+     * @return The bytes for supplyextra.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSupplyextraBytes() {
+      java.lang.Object ref = supplyextra_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        supplyextra_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(product_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, product_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(info_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, info_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplyinfo_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, supplyinfo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplyextra_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, supplyextra_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(product_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, product_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(info_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, info_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplyinfo_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, supplyinfo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplyextra_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, supplyextra_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getProduct()
+          .equals(other.getProduct())) return false;
+      if (!getInfo()
+          .equals(other.getInfo())) return false;
+      if (!getSupplyinfo()
+          .equals(other.getSupplyinfo())) return false;
+      if (!getSupplyextra()
+          .equals(other.getSupplyextra())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
+      hash = (53 * hash) + getProduct().hashCode();
+      hash = (37 * hash) + INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getInfo().hashCode();
+      hash = (37 * hash) + SUPPLYINFO_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplyinfo().hashCode();
+      hash = (37 * hash) + SUPPLYEXTRA_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplyextra().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgUpdateSupplychain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgUpdateSupplychain)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        product_ = "";
+        info_ = "";
+        supplyinfo_ = "";
+        supplyextra_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychain_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.product_ = product_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.info_ = info_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.supplyinfo_ = supplyinfo_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.supplyextra_ = supplyextra_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getProduct().isEmpty()) {
+          product_ = other.product_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getInfo().isEmpty()) {
+          info_ = other.info_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSupplyinfo().isEmpty()) {
+          supplyinfo_ = other.supplyinfo_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getSupplyextra().isEmpty()) {
+          supplyextra_ = other.supplyextra_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                product_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                info_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                supplyinfo_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                supplyextra_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object product_ = "";
+      /**
+       * <code>string product = 3 [json_name = "product"];</code>
+       * @return The product.
+       */
+      public java.lang.String getProduct() {
+        java.lang.Object ref = product_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          product_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string product = 3 [json_name = "product"];</code>
+       * @return The bytes for product.
+       */
+      public com.google.protobuf.ByteString
+          getProductBytes() {
+        java.lang.Object ref = product_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          product_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string product = 3 [json_name = "product"];</code>
+       * @param value The product to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProduct(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        product_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string product = 3 [json_name = "product"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProduct() {
+        product_ = getDefaultInstance().getProduct();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string product = 3 [json_name = "product"];</code>
+       * @param value The bytes for product to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        product_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object info_ = "";
+      /**
+       * <code>string info = 4 [json_name = "info"];</code>
+       * @return The info.
+       */
+      public java.lang.String getInfo() {
+        java.lang.Object ref = info_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          info_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string info = 4 [json_name = "info"];</code>
+       * @return The bytes for info.
+       */
+      public com.google.protobuf.ByteString
+          getInfoBytes() {
+        java.lang.Object ref = info_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          info_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string info = 4 [json_name = "info"];</code>
+       * @param value The info to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInfo(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        info_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string info = 4 [json_name = "info"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInfo() {
+        info_ = getDefaultInstance().getInfo();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string info = 4 [json_name = "info"];</code>
+       * @param value The bytes for info to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        info_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object supplyinfo_ = "";
+      /**
+       * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+       * @return The supplyinfo.
+       */
+      public java.lang.String getSupplyinfo() {
+        java.lang.Object ref = supplyinfo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          supplyinfo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+       * @return The bytes for supplyinfo.
+       */
+      public com.google.protobuf.ByteString
+          getSupplyinfoBytes() {
+        java.lang.Object ref = supplyinfo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          supplyinfo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+       * @param value The supplyinfo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplyinfo(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        supplyinfo_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupplyinfo() {
+        supplyinfo_ = getDefaultInstance().getSupplyinfo();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string supplyinfo = 5 [json_name = "supplyinfo"];</code>
+       * @param value The bytes for supplyinfo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplyinfoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        supplyinfo_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object supplyextra_ = "";
+      /**
+       * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+       * @return The supplyextra.
+       */
+      public java.lang.String getSupplyextra() {
+        java.lang.Object ref = supplyextra_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          supplyextra_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+       * @return The bytes for supplyextra.
+       */
+      public com.google.protobuf.ByteString
+          getSupplyextraBytes() {
+        java.lang.Object ref = supplyextra_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          supplyextra_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+       * @param value The supplyextra to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplyextra(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        supplyextra_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupplyextra() {
+        supplyextra_ = getDefaultInstance().getSupplyextra();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string supplyextra = 6 [json_name = "supplyextra"];</code>
+       * @param value The bytes for supplyextra to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplyextraBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        supplyextra_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgUpdateSupplychain)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgUpdateSupplychain)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateSupplychain>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateSupplychain>() {
+      @java.lang.Override
+      public MsgUpdateSupplychain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateSupplychain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateSupplychain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateSupplychainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgUpdateSupplychainResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgUpdateSupplychainResponse}
+   */
+  public static final class MsgUpdateSupplychainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgUpdateSupplychainResponse)
+      MsgUpdateSupplychainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateSupplychainResponse.newBuilder() to construct.
+    private MsgUpdateSupplychainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateSupplychainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateSupplychainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgUpdateSupplychainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgUpdateSupplychainResponse)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgUpdateSupplychainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgUpdateSupplychainResponse)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateSupplychainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateSupplychainResponse>() {
+      @java.lang.Override
+      public MsgUpdateSupplychainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateSupplychainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateSupplychainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgUpdateSupplychainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteSupplychainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgDeleteSupplychain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgDeleteSupplychain}
+   */
+  public static final class MsgDeleteSupplychain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgDeleteSupplychain)
+      MsgDeleteSupplychainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteSupplychain.newBuilder() to construct.
+    private MsgDeleteSupplychain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteSupplychain() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteSupplychain();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgDeleteSupplychain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgDeleteSupplychain)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychain_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgDeleteSupplychain)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgDeleteSupplychain)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteSupplychain>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteSupplychain>() {
+      @java.lang.Override
+      public MsgDeleteSupplychain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteSupplychain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteSupplychain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteSupplychainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.MsgDeleteSupplychainResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgDeleteSupplychainResponse}
+   */
+  public static final class MsgDeleteSupplychainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.MsgDeleteSupplychainResponse)
+      MsgDeleteSupplychainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteSupplychainResponse.newBuilder() to construct.
+    private MsgDeleteSupplychainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteSupplychainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteSupplychainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse other = (com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.MsgDeleteSupplychainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.MsgDeleteSupplychainResponse)
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse.class, com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse build() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse buildPartial() {
+        com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse result = new com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse other) {
+        if (other == com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.MsgDeleteSupplychainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.MsgDeleteSupplychainResponse)
+    private static final com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteSupplychainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteSupplychainResponse>() {
+      @java.lang.Override
+      public MsgDeleteSupplychainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteSupplychainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteSupplychainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.TxProto.MsgDeleteSupplychainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaid_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaid_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaidResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgCreateBitcannaidResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaid_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaid_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaidResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgUpdateBitcannaidResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaid_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaid_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaidResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgDeleteBitcannaidResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychain_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychain_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgCreateSupplychainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychain_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychain_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgUpdateSupplychainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychain_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychain_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_MsgDeleteSupplychainResponse_fieldAccessorTable;
 
@@ -127,12 +8049,12 @@ public final class TxProto {
       "eleteSupplychain\022..bitcannaglobal.bcna.b" +
       "cna.MsgDeleteSupplychain\0326.bitcannagloba" +
       "l.bcna.bcna.MsgDeleteSupplychainResponse" +
-      "B\326\001\n\034com.bitcannaglobal.bcna.bcnaB\007TxPro" +
-      "toP\001Z+github.com/BitCannaGlobal/bcna/x/b" +
-      "cna/types\242\002\003BBB\252\002\030Bitcannaglobal.Bcna.Bc" +
-      "na\312\002\030Bitcannaglobal\\Bcna\\Bcna\342\002$Bitcanna" +
-      "global\\Bcna\\Bcna\\GPBMetadata\352\002\032Bitcannag" +
-      "lobal::Bcna::Bcnab\006proto3"
+      "B\324\001\n\034com.bitcannaglobal.bcna.bcnaB\007TxPro" +
+      "toZ+github.com/BitCannaGlobal/bcna/x/bcn" +
+      "a/types\242\002\003BBB\252\002\030Bitcannaglobal.Bcna.Bcna" +
+      "\312\002\030Bitcannaglobal\\Bcna\\Bcna\342\002$Bitcannagl" +
+      "obal\\Bcna\\Bcna\\GPBMetadata\352\002\032Bitcannaglo" +
+      "bal::Bcna::Bcnab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

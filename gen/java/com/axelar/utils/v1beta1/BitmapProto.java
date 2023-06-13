@@ -14,14 +14,1354 @@ public final class BitmapProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface BitmapOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.utils.v1beta1.Bitmap)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+     * @return Whether the trueCountCache field is set.
+     */
+    boolean hasTrueCountCache();
+    /**
+     * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+     * @return The trueCountCache.
+     */
+    com.axelar.utils.v1beta1.BitmapProto.CircularBuffer getTrueCountCache();
+    /**
+     * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+     */
+    com.axelar.utils.v1beta1.BitmapProto.CircularBufferOrBuilder getTrueCountCacheOrBuilder();
+  }
+  /**
+   * Protobuf type {@code axelar.utils.v1beta1.Bitmap}
+   */
+  public static final class Bitmap extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.utils.v1beta1.Bitmap)
+      BitmapOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Bitmap.newBuilder() to construct.
+    private Bitmap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Bitmap() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Bitmap();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_Bitmap_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_Bitmap_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.utils.v1beta1.BitmapProto.Bitmap.class, com.axelar.utils.v1beta1.BitmapProto.Bitmap.Builder.class);
+    }
+
+    public static final int TRUE_COUNT_CACHE_FIELD_NUMBER = 2;
+    private com.axelar.utils.v1beta1.BitmapProto.CircularBuffer trueCountCache_;
+    /**
+     * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+     * @return Whether the trueCountCache field is set.
+     */
+    @java.lang.Override
+    public boolean hasTrueCountCache() {
+      return trueCountCache_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+     * @return The trueCountCache.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.BitmapProto.CircularBuffer getTrueCountCache() {
+      return trueCountCache_ == null ? com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.getDefaultInstance() : trueCountCache_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.BitmapProto.CircularBufferOrBuilder getTrueCountCacheOrBuilder() {
+      return trueCountCache_ == null ? com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.getDefaultInstance() : trueCountCache_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (trueCountCache_ != null) {
+        output.writeMessage(2, getTrueCountCache());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (trueCountCache_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTrueCountCache());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.utils.v1beta1.BitmapProto.Bitmap)) {
+        return super.equals(obj);
+      }
+      com.axelar.utils.v1beta1.BitmapProto.Bitmap other = (com.axelar.utils.v1beta1.BitmapProto.Bitmap) obj;
+
+      if (hasTrueCountCache() != other.hasTrueCountCache()) return false;
+      if (hasTrueCountCache()) {
+        if (!getTrueCountCache()
+            .equals(other.getTrueCountCache())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTrueCountCache()) {
+        hash = (37 * hash) + TRUE_COUNT_CACHE_FIELD_NUMBER;
+        hash = (53 * hash) + getTrueCountCache().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.utils.v1beta1.BitmapProto.Bitmap prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.utils.v1beta1.Bitmap}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.utils.v1beta1.Bitmap)
+        com.axelar.utils.v1beta1.BitmapProto.BitmapOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_Bitmap_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_Bitmap_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.utils.v1beta1.BitmapProto.Bitmap.class, com.axelar.utils.v1beta1.BitmapProto.Bitmap.Builder.class);
+      }
+
+      // Construct using com.axelar.utils.v1beta1.BitmapProto.Bitmap.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        trueCountCache_ = null;
+        if (trueCountCacheBuilder_ != null) {
+          trueCountCacheBuilder_.dispose();
+          trueCountCacheBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_Bitmap_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.utils.v1beta1.BitmapProto.Bitmap getDefaultInstanceForType() {
+        return com.axelar.utils.v1beta1.BitmapProto.Bitmap.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.utils.v1beta1.BitmapProto.Bitmap build() {
+        com.axelar.utils.v1beta1.BitmapProto.Bitmap result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.utils.v1beta1.BitmapProto.Bitmap buildPartial() {
+        com.axelar.utils.v1beta1.BitmapProto.Bitmap result = new com.axelar.utils.v1beta1.BitmapProto.Bitmap(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.utils.v1beta1.BitmapProto.Bitmap result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.trueCountCache_ = trueCountCacheBuilder_ == null
+              ? trueCountCache_
+              : trueCountCacheBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.utils.v1beta1.BitmapProto.Bitmap) {
+          return mergeFrom((com.axelar.utils.v1beta1.BitmapProto.Bitmap)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.utils.v1beta1.BitmapProto.Bitmap other) {
+        if (other == com.axelar.utils.v1beta1.BitmapProto.Bitmap.getDefaultInstance()) return this;
+        if (other.hasTrueCountCache()) {
+          mergeTrueCountCache(other.getTrueCountCache());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                input.readMessage(
+                    getTrueCountCacheFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.axelar.utils.v1beta1.BitmapProto.CircularBuffer trueCountCache_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.BitmapProto.CircularBuffer, com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.Builder, com.axelar.utils.v1beta1.BitmapProto.CircularBufferOrBuilder> trueCountCacheBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       * @return Whether the trueCountCache field is set.
+       */
+      public boolean hasTrueCountCache() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       * @return The trueCountCache.
+       */
+      public com.axelar.utils.v1beta1.BitmapProto.CircularBuffer getTrueCountCache() {
+        if (trueCountCacheBuilder_ == null) {
+          return trueCountCache_ == null ? com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.getDefaultInstance() : trueCountCache_;
+        } else {
+          return trueCountCacheBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       */
+      public Builder setTrueCountCache(com.axelar.utils.v1beta1.BitmapProto.CircularBuffer value) {
+        if (trueCountCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trueCountCache_ = value;
+        } else {
+          trueCountCacheBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       */
+      public Builder setTrueCountCache(
+          com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.Builder builderForValue) {
+        if (trueCountCacheBuilder_ == null) {
+          trueCountCache_ = builderForValue.build();
+        } else {
+          trueCountCacheBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       */
+      public Builder mergeTrueCountCache(com.axelar.utils.v1beta1.BitmapProto.CircularBuffer value) {
+        if (trueCountCacheBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            trueCountCache_ != null &&
+            trueCountCache_ != com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.getDefaultInstance()) {
+            getTrueCountCacheBuilder().mergeFrom(value);
+          } else {
+            trueCountCache_ = value;
+          }
+        } else {
+          trueCountCacheBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       */
+      public Builder clearTrueCountCache() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        trueCountCache_ = null;
+        if (trueCountCacheBuilder_ != null) {
+          trueCountCacheBuilder_.dispose();
+          trueCountCacheBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       */
+      public com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.Builder getTrueCountCacheBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTrueCountCacheFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       */
+      public com.axelar.utils.v1beta1.BitmapProto.CircularBufferOrBuilder getTrueCountCacheOrBuilder() {
+        if (trueCountCacheBuilder_ != null) {
+          return trueCountCacheBuilder_.getMessageOrBuilder();
+        } else {
+          return trueCountCache_ == null ?
+              com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.getDefaultInstance() : trueCountCache_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.BitmapProto.CircularBuffer, com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.Builder, com.axelar.utils.v1beta1.BitmapProto.CircularBufferOrBuilder> 
+          getTrueCountCacheFieldBuilder() {
+        if (trueCountCacheBuilder_ == null) {
+          trueCountCacheBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.BitmapProto.CircularBuffer, com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.Builder, com.axelar.utils.v1beta1.BitmapProto.CircularBufferOrBuilder>(
+                  getTrueCountCache(),
+                  getParentForChildren(),
+                  isClean());
+          trueCountCache_ = null;
+        }
+        return trueCountCacheBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.utils.v1beta1.Bitmap)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.utils.v1beta1.Bitmap)
+    private static final com.axelar.utils.v1beta1.BitmapProto.Bitmap DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.utils.v1beta1.BitmapProto.Bitmap();
+    }
+
+    public static com.axelar.utils.v1beta1.BitmapProto.Bitmap getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Bitmap>
+        PARSER = new com.google.protobuf.AbstractParser<Bitmap>() {
+      @java.lang.Override
+      public Bitmap parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Bitmap> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Bitmap> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.BitmapProto.Bitmap getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CircularBufferOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.utils.v1beta1.CircularBuffer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+     * @return A list containing the cumulativeValue.
+     */
+    java.util.List<java.lang.Long> getCumulativeValueList();
+    /**
+     * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+     * @return The count of cumulativeValue.
+     */
+    int getCumulativeValueCount();
+    /**
+     * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+     * @param index The index of the element to return.
+     * @return The cumulativeValue at the given index.
+     */
+    long getCumulativeValue(int index);
+
+    /**
+     * <code>int32 index = 2 [json_name = "index"];</code>
+     * @return The index.
+     */
+    int getIndex();
+
+    /**
+     * <code>int32 max_size = 3 [json_name = "maxSize"];</code>
+     * @return The maxSize.
+     */
+    int getMaxSize();
+  }
+  /**
+   * Protobuf type {@code axelar.utils.v1beta1.CircularBuffer}
+   */
+  public static final class CircularBuffer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.utils.v1beta1.CircularBuffer)
+      CircularBufferOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CircularBuffer.newBuilder() to construct.
+    private CircularBuffer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CircularBuffer() {
+      cumulativeValue_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CircularBuffer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_CircularBuffer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_CircularBuffer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.class, com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.Builder.class);
+    }
+
+    public static final int CUMULATIVE_VALUE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList cumulativeValue_;
+    /**
+     * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+     * @return A list containing the cumulativeValue.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getCumulativeValueList() {
+      return cumulativeValue_;
+    }
+    /**
+     * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+     * @return The count of cumulativeValue.
+     */
+    public int getCumulativeValueCount() {
+      return cumulativeValue_.size();
+    }
+    /**
+     * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+     * @param index The index of the element to return.
+     * @return The cumulativeValue at the given index.
+     */
+    public long getCumulativeValue(int index) {
+      return cumulativeValue_.getLong(index);
+    }
+    private int cumulativeValueMemoizedSerializedSize = -1;
+
+    public static final int INDEX_FIELD_NUMBER = 2;
+    private int index_ = 0;
+    /**
+     * <code>int32 index = 2 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public int getIndex() {
+      return index_;
+    }
+
+    public static final int MAX_SIZE_FIELD_NUMBER = 3;
+    private int maxSize_ = 0;
+    /**
+     * <code>int32 max_size = 3 [json_name = "maxSize"];</code>
+     * @return The maxSize.
+     */
+    @java.lang.Override
+    public int getMaxSize() {
+      return maxSize_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getCumulativeValueList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(cumulativeValueMemoizedSerializedSize);
+      }
+      for (int i = 0; i < cumulativeValue_.size(); i++) {
+        output.writeUInt64NoTag(cumulativeValue_.getLong(i));
+      }
+      if (index_ != 0) {
+        output.writeInt32(2, index_);
+      }
+      if (maxSize_ != 0) {
+        output.writeInt32(3, maxSize_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < cumulativeValue_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(cumulativeValue_.getLong(i));
+        }
+        size += dataSize;
+        if (!getCumulativeValueList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        cumulativeValueMemoizedSerializedSize = dataSize;
+      }
+      if (index_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, index_);
+      }
+      if (maxSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, maxSize_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.utils.v1beta1.BitmapProto.CircularBuffer)) {
+        return super.equals(obj);
+      }
+      com.axelar.utils.v1beta1.BitmapProto.CircularBuffer other = (com.axelar.utils.v1beta1.BitmapProto.CircularBuffer) obj;
+
+      if (!getCumulativeValueList()
+          .equals(other.getCumulativeValueList())) return false;
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (getMaxSize()
+          != other.getMaxSize()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCumulativeValueCount() > 0) {
+        hash = (37 * hash) + CUMULATIVE_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getCumulativeValueList().hashCode();
+      }
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex();
+      hash = (37 * hash) + MAX_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxSize();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.utils.v1beta1.BitmapProto.CircularBuffer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.utils.v1beta1.CircularBuffer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.utils.v1beta1.CircularBuffer)
+        com.axelar.utils.v1beta1.BitmapProto.CircularBufferOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_CircularBuffer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_CircularBuffer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.class, com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.Builder.class);
+      }
+
+      // Construct using com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cumulativeValue_ = emptyLongList();
+        index_ = 0;
+        maxSize_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.utils.v1beta1.BitmapProto.internal_static_axelar_utils_v1beta1_CircularBuffer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.utils.v1beta1.BitmapProto.CircularBuffer getDefaultInstanceForType() {
+        return com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.utils.v1beta1.BitmapProto.CircularBuffer build() {
+        com.axelar.utils.v1beta1.BitmapProto.CircularBuffer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.utils.v1beta1.BitmapProto.CircularBuffer buildPartial() {
+        com.axelar.utils.v1beta1.BitmapProto.CircularBuffer result = new com.axelar.utils.v1beta1.BitmapProto.CircularBuffer(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.utils.v1beta1.BitmapProto.CircularBuffer result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          cumulativeValue_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.cumulativeValue_ = cumulativeValue_;
+      }
+
+      private void buildPartial0(com.axelar.utils.v1beta1.BitmapProto.CircularBuffer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.maxSize_ = maxSize_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.utils.v1beta1.BitmapProto.CircularBuffer) {
+          return mergeFrom((com.axelar.utils.v1beta1.BitmapProto.CircularBuffer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.utils.v1beta1.BitmapProto.CircularBuffer other) {
+        if (other == com.axelar.utils.v1beta1.BitmapProto.CircularBuffer.getDefaultInstance()) return this;
+        if (!other.cumulativeValue_.isEmpty()) {
+          if (cumulativeValue_.isEmpty()) {
+            cumulativeValue_ = other.cumulativeValue_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureCumulativeValueIsMutable();
+            cumulativeValue_.addAll(other.cumulativeValue_);
+          }
+          onChanged();
+        }
+        if (other.getIndex() != 0) {
+          setIndex(other.getIndex());
+        }
+        if (other.getMaxSize() != 0) {
+          setMaxSize(other.getMaxSize());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                long v = input.readUInt64();
+                ensureCumulativeValueIsMutable();
+                cumulativeValue_.addLong(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureCumulativeValueIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  cumulativeValue_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              case 16: {
+                index_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                maxSize_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList cumulativeValue_ = emptyLongList();
+      private void ensureCumulativeValueIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          cumulativeValue_ = mutableCopy(cumulativeValue_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+       * @return A list containing the cumulativeValue.
+       */
+      public java.util.List<java.lang.Long>
+          getCumulativeValueList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(cumulativeValue_) : cumulativeValue_;
+      }
+      /**
+       * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+       * @return The count of cumulativeValue.
+       */
+      public int getCumulativeValueCount() {
+        return cumulativeValue_.size();
+      }
+      /**
+       * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+       * @param index The index of the element to return.
+       * @return The cumulativeValue at the given index.
+       */
+      public long getCumulativeValue(int index) {
+        return cumulativeValue_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+       * @param index The index to set the value at.
+       * @param value The cumulativeValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCumulativeValue(
+          int index, long value) {
+
+        ensureCumulativeValueIsMutable();
+        cumulativeValue_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+       * @param value The cumulativeValue to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCumulativeValue(long value) {
+
+        ensureCumulativeValueIsMutable();
+        cumulativeValue_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+       * @param values The cumulativeValue to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCumulativeValue(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureCumulativeValueIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cumulativeValue_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCumulativeValue() {
+        cumulativeValue_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int index_ ;
+      /**
+       * <code>int32 index = 2 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>int32 index = 2 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(int value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 index = 2 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int maxSize_ ;
+      /**
+       * <code>int32 max_size = 3 [json_name = "maxSize"];</code>
+       * @return The maxSize.
+       */
+      @java.lang.Override
+      public int getMaxSize() {
+        return maxSize_;
+      }
+      /**
+       * <code>int32 max_size = 3 [json_name = "maxSize"];</code>
+       * @param value The maxSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSize(int value) {
+
+        maxSize_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 max_size = 3 [json_name = "maxSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxSize() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        maxSize_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.utils.v1beta1.CircularBuffer)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.utils.v1beta1.CircularBuffer)
+    private static final com.axelar.utils.v1beta1.BitmapProto.CircularBuffer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.utils.v1beta1.BitmapProto.CircularBuffer();
+    }
+
+    public static com.axelar.utils.v1beta1.BitmapProto.CircularBuffer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CircularBuffer>
+        PARSER = new com.google.protobuf.AbstractParser<CircularBuffer>() {
+      @java.lang.Override
+      public CircularBuffer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CircularBuffer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CircularBuffer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.BitmapProto.CircularBuffer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_utils_v1beta1_Bitmap_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_utils_v1beta1_Bitmap_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_utils_v1beta1_CircularBuffer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_utils_v1beta1_CircularBuffer_fieldAccessorTable;
 
@@ -40,12 +1380,12 @@ public final class BitmapProto {
       "ountCache\"l\n\016CircularBuffer\022)\n\020cumulativ" +
       "e_value\030\001 \003(\004R\017cumulativeValue\022\024\n\005index\030" +
       "\002 \001(\005R\005index\022\031\n\010max_size\030\003 \001(\005R\007maxSizeB" +
-      "\311\001\n\030com.axelar.utils.v1beta1B\013BitmapProt" +
-      "oP\001Z*github.com/axelarnetwork/axelar-cor" +
-      "e/utils\242\002\003AUX\252\002\024Axelar.Utils.V1beta1\312\002\024A" +
-      "xelar\\Utils\\V1beta1\342\002 Axelar\\Utils\\V1bet" +
-      "a1\\GPBMetadata\352\002\026Axelar::Utils::V1beta1\310" +
-      "\341\036\000b\006proto3"
+      "\307\001\n\030com.axelar.utils.v1beta1B\013BitmapProt" +
+      "oZ*github.com/axelarnetwork/axelar-core/" +
+      "utils\242\002\003AUX\252\002\024Axelar.Utils.V1beta1\312\002\024Axe" +
+      "lar\\Utils\\V1beta1\342\002 Axelar\\Utils\\V1beta1" +
+      "\\GPBMetadata\352\002\026Axelar::Utils::V1beta1\310\341\036" +
+      "\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

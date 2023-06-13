@@ -14,24 +14,4530 @@ public final class DaoProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface FundTreasuryProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onomyprotocol.dao.v1.FundTreasuryProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getAmountList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getAmountCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * FundTreasuryProposal details a dao fund treasury proposal.
+   * </pre>
+   *
+   * Protobuf type {@code onomyprotocol.dao.v1.FundTreasuryProposal}
+   */
+  public static final class FundTreasuryProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onomyprotocol.dao.v1.FundTreasuryProposal)
+      FundTreasuryProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FundTreasuryProposal.newBuilder() to construct.
+    private FundTreasuryProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FundTreasuryProposal() {
+      sender_ = "";
+      title_ = "";
+      description_ = "";
+      amount_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FundTreasuryProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundTreasuryProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundTreasuryProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal.class, com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+      return amount_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList() {
+      return amount_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getAmountCount() {
+      return amount_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+      return amount_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index) {
+      return amount_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        output.writeMessage(4, amount_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, amount_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal)) {
+        return super.equals(obj);
+      }
+      com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal other = (com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getAmountList()
+          .equals(other.getAmountList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getAmountCount() > 0) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * FundTreasuryProposal details a dao fund treasury proposal.
+     * </pre>
+     *
+     * Protobuf type {@code onomyprotocol.dao.v1.FundTreasuryProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onomyprotocol.dao.v1.FundTreasuryProposal)
+        com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundTreasuryProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundTreasuryProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal.class, com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal.Builder.class);
+      }
+
+      // Construct using com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        title_ = "";
+        description_ = "";
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+        } else {
+          amount_ = null;
+          amountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundTreasuryProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal getDefaultInstanceForType() {
+        return com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal build() {
+        com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal buildPartial() {
+        com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal result = new com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal result) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            amount_ = java.util.Collections.unmodifiableList(amount_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.amount_ = amount_;
+        } else {
+          result.amount_ = amountBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal) {
+          return mergeFrom((com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal other) {
+        if (other == com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (amountBuilder_ == null) {
+          if (!other.amount_.isEmpty()) {
+            if (amount_.isEmpty()) {
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAmountIsMutable();
+              amount_.addAll(other.amount_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.amount_.isEmpty()) {
+            if (amountBuilder_.isEmpty()) {
+              amountBuilder_.dispose();
+              amountBuilder_ = null;
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              amountBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAmountFieldBuilder() : null;
+            } else {
+              amountBuilder_.addAllMessages(other.amount_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (amountBuilder_ == null) {
+                  ensureAmountIsMutable();
+                  amount_.add(m);
+                } else {
+                  amountBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_ =
+        java.util.Collections.emptyList();
+      private void ensureAmountIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          amount_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(amount_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+        if (amountBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(amount_);
+        } else {
+          return amountBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getAmountCount() {
+        if (amountBuilder_ == null) {
+          return amount_.size();
+        } else {
+          return amountBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);
+        } else {
+          return amountBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.set(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllAmount(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, amount_);
+          onChanged();
+        } else {
+          amountBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearAmount() {
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          amountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeAmount(int index) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.remove(index);
+          onChanged();
+        } else {
+          amountBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+          int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);  } else {
+          return amountBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getAmountOrBuilderList() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(amount_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder() {
+        return getAmountFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getAmountBuilderList() {
+        return getAmountFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  amount_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onomyprotocol.dao.v1.FundTreasuryProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:onomyprotocol.dao.v1.FundTreasuryProposal)
+    private static final com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal();
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FundTreasuryProposal>
+        PARSER = new com.google.protobuf.AbstractParser<FundTreasuryProposal>() {
+      @java.lang.Override
+      public FundTreasuryProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FundTreasuryProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FundTreasuryProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.DaoProto.FundTreasuryProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExchangeWithTreasuryProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onomyprotocol.dao.v1.ExchangeWithTreasuryProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    java.util.List<com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair> 
+        getCoinsPairsList();
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair getCoinsPairs(int index);
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    int getCoinsPairsCount();
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    java.util.List<? extends com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder> 
+        getCoinsPairsOrBuilderList();
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder getCoinsPairsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * ExchangeWithTreasuryProposal details a dao exchange with treasury proposal.
+   * </pre>
+   *
+   * Protobuf type {@code onomyprotocol.dao.v1.ExchangeWithTreasuryProposal}
+   */
+  public static final class ExchangeWithTreasuryProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onomyprotocol.dao.v1.ExchangeWithTreasuryProposal)
+      ExchangeWithTreasuryProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ExchangeWithTreasuryProposal.newBuilder() to construct.
+    private ExchangeWithTreasuryProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ExchangeWithTreasuryProposal() {
+      sender_ = "";
+      title_ = "";
+      description_ = "";
+      coinsPairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExchangeWithTreasuryProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_ExchangeWithTreasuryProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_ExchangeWithTreasuryProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal.class, com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COINS_PAIRS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair> coinsPairs_;
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair> getCoinsPairsList() {
+      return coinsPairs_;
+    }
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder> 
+        getCoinsPairsOrBuilderList() {
+      return coinsPairs_;
+    }
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getCoinsPairsCount() {
+      return coinsPairs_.size();
+    }
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair getCoinsPairs(int index) {
+      return coinsPairs_.get(index);
+    }
+    /**
+     * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder getCoinsPairsOrBuilder(
+        int index) {
+      return coinsPairs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      for (int i = 0; i < coinsPairs_.size(); i++) {
+        output.writeMessage(4, coinsPairs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (int i = 0; i < coinsPairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, coinsPairs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal)) {
+        return super.equals(obj);
+      }
+      com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal other = (com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getCoinsPairsList()
+          .equals(other.getCoinsPairsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getCoinsPairsCount() > 0) {
+        hash = (37 * hash) + COINS_PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsPairsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ExchangeWithTreasuryProposal details a dao exchange with treasury proposal.
+     * </pre>
+     *
+     * Protobuf type {@code onomyprotocol.dao.v1.ExchangeWithTreasuryProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onomyprotocol.dao.v1.ExchangeWithTreasuryProposal)
+        com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_ExchangeWithTreasuryProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_ExchangeWithTreasuryProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal.class, com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal.Builder.class);
+      }
+
+      // Construct using com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        title_ = "";
+        description_ = "";
+        if (coinsPairsBuilder_ == null) {
+          coinsPairs_ = java.util.Collections.emptyList();
+        } else {
+          coinsPairs_ = null;
+          coinsPairsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_ExchangeWithTreasuryProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal getDefaultInstanceForType() {
+        return com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal build() {
+        com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal buildPartial() {
+        com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal result = new com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal result) {
+        if (coinsPairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            coinsPairs_ = java.util.Collections.unmodifiableList(coinsPairs_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.coinsPairs_ = coinsPairs_;
+        } else {
+          result.coinsPairs_ = coinsPairsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal) {
+          return mergeFrom((com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal other) {
+        if (other == com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (coinsPairsBuilder_ == null) {
+          if (!other.coinsPairs_.isEmpty()) {
+            if (coinsPairs_.isEmpty()) {
+              coinsPairs_ = other.coinsPairs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureCoinsPairsIsMutable();
+              coinsPairs_.addAll(other.coinsPairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coinsPairs_.isEmpty()) {
+            if (coinsPairsBuilder_.isEmpty()) {
+              coinsPairsBuilder_.dispose();
+              coinsPairsBuilder_ = null;
+              coinsPairs_ = other.coinsPairs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              coinsPairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsPairsFieldBuilder() : null;
+            } else {
+              coinsPairsBuilder_.addAllMessages(other.coinsPairs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair m =
+                    input.readMessage(
+                        com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.parser(),
+                        extensionRegistry);
+                if (coinsPairsBuilder_ == null) {
+                  ensureCoinsPairsIsMutable();
+                  coinsPairs_.add(m);
+                } else {
+                  coinsPairsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair> coinsPairs_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsPairsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          coinsPairs_ = new java.util.ArrayList<com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair>(coinsPairs_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder> coinsPairsBuilder_;
+
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public java.util.List<com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair> getCoinsPairsList() {
+        if (coinsPairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coinsPairs_);
+        } else {
+          return coinsPairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public int getCoinsPairsCount() {
+        if (coinsPairsBuilder_ == null) {
+          return coinsPairs_.size();
+        } else {
+          return coinsPairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair getCoinsPairs(int index) {
+        if (coinsPairsBuilder_ == null) {
+          return coinsPairs_.get(index);
+        } else {
+          return coinsPairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder setCoinsPairs(
+          int index, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair value) {
+        if (coinsPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsPairsIsMutable();
+          coinsPairs_.set(index, value);
+          onChanged();
+        } else {
+          coinsPairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder setCoinsPairs(
+          int index, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder builderForValue) {
+        if (coinsPairsBuilder_ == null) {
+          ensureCoinsPairsIsMutable();
+          coinsPairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsPairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder addCoinsPairs(com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair value) {
+        if (coinsPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsPairsIsMutable();
+          coinsPairs_.add(value);
+          onChanged();
+        } else {
+          coinsPairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder addCoinsPairs(
+          int index, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair value) {
+        if (coinsPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsPairsIsMutable();
+          coinsPairs_.add(index, value);
+          onChanged();
+        } else {
+          coinsPairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder addCoinsPairs(
+          com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder builderForValue) {
+        if (coinsPairsBuilder_ == null) {
+          ensureCoinsPairsIsMutable();
+          coinsPairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsPairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder addCoinsPairs(
+          int index, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder builderForValue) {
+        if (coinsPairsBuilder_ == null) {
+          ensureCoinsPairsIsMutable();
+          coinsPairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsPairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder addAllCoinsPairs(
+          java.lang.Iterable<? extends com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair> values) {
+        if (coinsPairsBuilder_ == null) {
+          ensureCoinsPairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coinsPairs_);
+          onChanged();
+        } else {
+          coinsPairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder clearCoinsPairs() {
+        if (coinsPairsBuilder_ == null) {
+          coinsPairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          coinsPairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public Builder removeCoinsPairs(int index) {
+        if (coinsPairsBuilder_ == null) {
+          ensureCoinsPairsIsMutable();
+          coinsPairs_.remove(index);
+          onChanged();
+        } else {
+          coinsPairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder getCoinsPairsBuilder(
+          int index) {
+        return getCoinsPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder getCoinsPairsOrBuilder(
+          int index) {
+        if (coinsPairsBuilder_ == null) {
+          return coinsPairs_.get(index);  } else {
+          return coinsPairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public java.util.List<? extends com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder> 
+           getCoinsPairsOrBuilderList() {
+        if (coinsPairsBuilder_ != null) {
+          return coinsPairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coinsPairs_);
+        }
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder addCoinsPairsBuilder() {
+        return getCoinsPairsFieldBuilder().addBuilder(
+            com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder addCoinsPairsBuilder(
+          int index) {
+        return getCoinsPairsFieldBuilder().addBuilder(
+            index, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .onomyprotocol.dao.v1.CoinsExchangePair coins_pairs = 4 [json_name = "coinsPairs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins_pairs&#92;""];</code>
+       */
+      public java.util.List<com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder> 
+           getCoinsPairsBuilderList() {
+        return getCoinsPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder> 
+          getCoinsPairsFieldBuilder() {
+        if (coinsPairsBuilder_ == null) {
+          coinsPairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder>(
+                  coinsPairs_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coinsPairs_ = null;
+        }
+        return coinsPairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onomyprotocol.dao.v1.ExchangeWithTreasuryProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:onomyprotocol.dao.v1.ExchangeWithTreasuryProposal)
+    private static final com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal();
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExchangeWithTreasuryProposal>
+        PARSER = new com.google.protobuf.AbstractParser<ExchangeWithTreasuryProposal>() {
+      @java.lang.Override
+      public ExchangeWithTreasuryProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExchangeWithTreasuryProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExchangeWithTreasuryProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.DaoProto.ExchangeWithTreasuryProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CoinsExchangePairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onomyprotocol.dao.v1.CoinsExchangePair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the coinAsk field is set.
+     */
+    boolean hasCoinAsk();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The coinAsk.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoinAsk();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinAskOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the coinBid field is set.
+     */
+    boolean hasCoinBid();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The coinBid.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoinBid();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinBidOrBuilder();
+  }
+  /**
+   * <pre>
+   * CoinsExchangePair is an ask/bid coins pair to exchange.
+   * </pre>
+   *
+   * Protobuf type {@code onomyprotocol.dao.v1.CoinsExchangePair}
+   */
+  public static final class CoinsExchangePair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onomyprotocol.dao.v1.CoinsExchangePair)
+      CoinsExchangePairOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CoinsExchangePair.newBuilder() to construct.
+    private CoinsExchangePair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CoinsExchangePair() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CoinsExchangePair();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_CoinsExchangePair_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_CoinsExchangePair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.class, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder.class);
+    }
+
+    public static final int COIN_ASK_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coinAsk_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the coinAsk field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoinAsk() {
+      return coinAsk_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The coinAsk.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoinAsk() {
+      return coinAsk_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coinAsk_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinAskOrBuilder() {
+      return coinAsk_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coinAsk_;
+    }
+
+    public static final int COIN_BID_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coinBid_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the coinBid field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoinBid() {
+      return coinBid_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The coinBid.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoinBid() {
+      return coinBid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coinBid_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinBidOrBuilder() {
+      return coinBid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coinBid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (coinAsk_ != null) {
+        output.writeMessage(1, getCoinAsk());
+      }
+      if (coinBid_ != null) {
+        output.writeMessage(2, getCoinBid());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (coinAsk_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCoinAsk());
+      }
+      if (coinBid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCoinBid());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair)) {
+        return super.equals(obj);
+      }
+      com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair other = (com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair) obj;
+
+      if (hasCoinAsk() != other.hasCoinAsk()) return false;
+      if (hasCoinAsk()) {
+        if (!getCoinAsk()
+            .equals(other.getCoinAsk())) return false;
+      }
+      if (hasCoinBid() != other.hasCoinBid()) return false;
+      if (hasCoinBid()) {
+        if (!getCoinBid()
+            .equals(other.getCoinBid())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCoinAsk()) {
+        hash = (37 * hash) + COIN_ASK_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinAsk().hashCode();
+      }
+      if (hasCoinBid()) {
+        hash = (37 * hash) + COIN_BID_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinBid().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CoinsExchangePair is an ask/bid coins pair to exchange.
+     * </pre>
+     *
+     * Protobuf type {@code onomyprotocol.dao.v1.CoinsExchangePair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onomyprotocol.dao.v1.CoinsExchangePair)
+        com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_CoinsExchangePair_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_CoinsExchangePair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.class, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder.class);
+      }
+
+      // Construct using com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        coinAsk_ = null;
+        if (coinAskBuilder_ != null) {
+          coinAskBuilder_.dispose();
+          coinAskBuilder_ = null;
+        }
+        coinBid_ = null;
+        if (coinBidBuilder_ != null) {
+          coinBidBuilder_.dispose();
+          coinBidBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_CoinsExchangePair_descriptor;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair getDefaultInstanceForType() {
+        return com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair build() {
+        com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair buildPartial() {
+        com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair result = new com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.coinAsk_ = coinAskBuilder_ == null
+              ? coinAsk_
+              : coinAskBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.coinBid_ = coinBidBuilder_ == null
+              ? coinBid_
+              : coinBidBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair) {
+          return mergeFrom((com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair other) {
+        if (other == com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.getDefaultInstance()) return this;
+        if (other.hasCoinAsk()) {
+          mergeCoinAsk(other.getCoinAsk());
+        }
+        if (other.hasCoinBid()) {
+          mergeCoinBid(other.getCoinBid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCoinAskFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCoinBidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coinAsk_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinAskBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the coinAsk field is set.
+       */
+      public boolean hasCoinAsk() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The coinAsk.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoinAsk() {
+        if (coinAskBuilder_ == null) {
+          return coinAsk_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coinAsk_;
+        } else {
+          return coinAskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCoinAsk(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinAskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coinAsk_ = value;
+        } else {
+          coinAskBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCoinAsk(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinAskBuilder_ == null) {
+          coinAsk_ = builderForValue.build();
+        } else {
+          coinAskBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeCoinAsk(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinAskBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            coinAsk_ != null &&
+            coinAsk_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinAskBuilder().mergeFrom(value);
+          } else {
+            coinAsk_ = value;
+          }
+        } else {
+          coinAskBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearCoinAsk() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        coinAsk_ = null;
+        if (coinAskBuilder_ != null) {
+          coinAskBuilder_.dispose();
+          coinAskBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinAskBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCoinAskFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinAskOrBuilder() {
+        if (coinAskBuilder_ != null) {
+          return coinAskBuilder_.getMessageOrBuilder();
+        } else {
+          return coinAsk_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coinAsk_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinAskFieldBuilder() {
+        if (coinAskBuilder_ == null) {
+          coinAskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoinAsk(),
+                  getParentForChildren(),
+                  isClean());
+          coinAsk_ = null;
+        }
+        return coinAskBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coinBid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBidBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the coinBid field is set.
+       */
+      public boolean hasCoinBid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The coinBid.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoinBid() {
+        if (coinBidBuilder_ == null) {
+          return coinBid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coinBid_;
+        } else {
+          return coinBidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCoinBid(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coinBid_ = value;
+        } else {
+          coinBidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCoinBid(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBidBuilder_ == null) {
+          coinBid_ = builderForValue.build();
+        } else {
+          coinBidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeCoinBid(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBidBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            coinBid_ != null &&
+            coinBid_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBidBuilder().mergeFrom(value);
+          } else {
+            coinBid_ = value;
+          }
+        } else {
+          coinBidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearCoinBid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        coinBid_ = null;
+        if (coinBidBuilder_ != null) {
+          coinBidBuilder_.dispose();
+          coinBidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBidBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCoinBidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinBidOrBuilder() {
+        if (coinBidBuilder_ != null) {
+          return coinBidBuilder_.getMessageOrBuilder();
+        } else {
+          return coinBid_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coinBid_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinBidFieldBuilder() {
+        if (coinBidBuilder_ == null) {
+          coinBidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoinBid(),
+                  getParentForChildren(),
+                  isClean());
+          coinBid_ = null;
+        }
+        return coinBidBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onomyprotocol.dao.v1.CoinsExchangePair)
+    }
+
+    // @@protoc_insertion_point(class_scope:onomyprotocol.dao.v1.CoinsExchangePair)
+    private static final com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair();
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CoinsExchangePair>
+        PARSER = new com.google.protobuf.AbstractParser<CoinsExchangePair>() {
+      @java.lang.Override
+      public CoinsExchangePair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CoinsExchangePair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CoinsExchangePair> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FundAccountProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onomyprotocol.dao.v1.FundAccountProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string recipient = 1 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <code>string recipient = 1 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getAmountList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getAmountCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * FundAccountProposal details a dao fund account proposal.
+   * </pre>
+   *
+   * Protobuf type {@code onomyprotocol.dao.v1.FundAccountProposal}
+   */
+  public static final class FundAccountProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onomyprotocol.dao.v1.FundAccountProposal)
+      FundAccountProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FundAccountProposal.newBuilder() to construct.
+    private FundAccountProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FundAccountProposal() {
+      recipient_ = "";
+      title_ = "";
+      description_ = "";
+      amount_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FundAccountProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundAccountProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundAccountProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal.class, com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal.Builder.class);
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <code>string recipient = 1 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string recipient = 1 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+      return amount_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList() {
+      return amount_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getAmountCount() {
+      return amount_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+      return amount_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index) {
+      return amount_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recipient_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        output.writeMessage(4, amount_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recipient_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, amount_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal)) {
+        return super.equals(obj);
+      }
+      com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal other = (com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal) obj;
+
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getAmountList()
+          .equals(other.getAmountList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getAmountCount() > 0) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * FundAccountProposal details a dao fund account proposal.
+     * </pre>
+     *
+     * Protobuf type {@code onomyprotocol.dao.v1.FundAccountProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onomyprotocol.dao.v1.FundAccountProposal)
+        com.onomyprotocol.dao.v1.DaoProto.FundAccountProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundAccountProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundAccountProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal.class, com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal.Builder.class);
+      }
+
+      // Construct using com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recipient_ = "";
+        title_ = "";
+        description_ = "";
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+        } else {
+          amount_ = null;
+          amountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.onomyprotocol.dao.v1.DaoProto.internal_static_onomyprotocol_dao_v1_FundAccountProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal getDefaultInstanceForType() {
+        return com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal build() {
+        com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal buildPartial() {
+        com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal result = new com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal result) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            amount_ = java.util.Collections.unmodifiableList(amount_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.amount_ = amount_;
+        } else {
+          result.amount_ = amountBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recipient_ = recipient_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal) {
+          return mergeFrom((com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal other) {
+        if (other == com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal.getDefaultInstance()) return this;
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (amountBuilder_ == null) {
+          if (!other.amount_.isEmpty()) {
+            if (amount_.isEmpty()) {
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAmountIsMutable();
+              amount_.addAll(other.amount_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.amount_.isEmpty()) {
+            if (amountBuilder_.isEmpty()) {
+              amountBuilder_.dispose();
+              amountBuilder_ = null;
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              amountBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAmountFieldBuilder() : null;
+            } else {
+              amountBuilder_.addAllMessages(other.amount_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (amountBuilder_ == null) {
+                  ensureAmountIsMutable();
+                  amount_.add(m);
+                } else {
+                  amountBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <code>string recipient = 1 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 1 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 1 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 1 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 1 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_ =
+        java.util.Collections.emptyList();
+      private void ensureAmountIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          amount_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(amount_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+        if (amountBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(amount_);
+        } else {
+          return amountBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getAmountCount() {
+        if (amountBuilder_ == null) {
+          return amount_.size();
+        } else {
+          return amountBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);
+        } else {
+          return amountBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.set(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllAmount(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, amount_);
+          onChanged();
+        } else {
+          amountBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearAmount() {
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          amountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeAmount(int index) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.remove(index);
+          onChanged();
+        } else {
+          amountBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+          int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);  } else {
+          return amountBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getAmountOrBuilderList() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(amount_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder() {
+        return getAmountFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getAmountBuilderList() {
+        return getAmountFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  amount_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onomyprotocol.dao.v1.FundAccountProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:onomyprotocol.dao.v1.FundAccountProposal)
+    private static final com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal();
+    }
+
+    public static com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FundAccountProposal>
+        PARSER = new com.google.protobuf.AbstractParser<FundAccountProposal>() {
+      @java.lang.Override
+      public FundAccountProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FundAccountProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FundAccountProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.DaoProto.FundAccountProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_onomyprotocol_dao_v1_FundTreasuryProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_onomyprotocol_dao_v1_FundTreasuryProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_onomyprotocol_dao_v1_ExchangeWithTreasuryProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_onomyprotocol_dao_v1_ExchangeWithTreasuryProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_onomyprotocol_dao_v1_CoinsExchangePair_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_onomyprotocol_dao_v1_CoinsExchangePair_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_onomyprotocol_dao_v1_FundAccountProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_onomyprotocol_dao_v1_FundAccountProposal_fieldAccessorTable;
 
@@ -70,12 +4576,12 @@ public final class DaoProto {
       "\030\004 \003(\0132\031.cosmos.base.v1beta1.CoinBA\310\336\037\000\362" +
       "\336\037\ryaml:\"amount\"\252\337\037(github.com/cosmos/co" +
       "smos-sdk/types.CoinsR\006amount:\014\210\240\037\000\230\240\037\000\350\240" +
-      "\037\000B\306\001\n\030com.onomyprotocol.dao.v1B\010DaoProt" +
-      "oP\001Z*github.com/onomyprotocol/onomy/x/da" +
-      "o/types\242\002\003ODX\252\002\024Onomyprotocol.Dao.V1\312\002\024O" +
-      "nomyprotocol\\Dao\\V1\342\002 Onomyprotocol\\Dao\\" +
-      "V1\\GPBMetadata\352\002\026Onomyprotocol::Dao::V1\250" +
-      "\342\036\001b\006proto3"
+      "\037\000B\304\001\n\030com.onomyprotocol.dao.v1B\010DaoProt" +
+      "oZ*github.com/onomyprotocol/onomy/x/dao/" +
+      "types\242\002\003ODX\252\002\024Onomyprotocol.Dao.V1\312\002\024Ono" +
+      "myprotocol\\Dao\\V1\342\002 Onomyprotocol\\Dao\\V1" +
+      "\\GPBMetadata\352\002\026Onomyprotocol::Dao::V1\250\342\036" +
+      "\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

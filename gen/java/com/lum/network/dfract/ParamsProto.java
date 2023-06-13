@@ -14,9 +14,699 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+     * @return A list containing the depositDenoms.
+     */
+    java.util.List<java.lang.String>
+        getDepositDenomsList();
+    /**
+     * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+     * @return The count of depositDenoms.
+     */
+    int getDepositDenomsCount();
+    /**
+     * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+     * @param index The index of the element to return.
+     * @return The depositDenoms at the given index.
+     */
+    java.lang.String getDepositDenoms(int index);
+    /**
+     * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the depositDenoms at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDepositDenomsBytes(int index);
+
+    /**
+     * <code>uint32 min_deposit_amount = 2 [json_name = "minDepositAmount"];</code>
+     * @return The minDepositAmount.
+     */
+    int getMinDepositAmount();
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      depositDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.ParamsProto.internal_static_lum_network_dfract_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.ParamsProto.internal_static_lum_network_dfract_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.ParamsProto.Params.class, com.lum.network.dfract.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int DEPOSIT_DENOMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList depositDenoms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+     * @return A list containing the depositDenoms.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDepositDenomsList() {
+      return depositDenoms_;
+    }
+    /**
+     * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+     * @return The count of depositDenoms.
+     */
+    public int getDepositDenomsCount() {
+      return depositDenoms_.size();
+    }
+    /**
+     * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+     * @param index The index of the element to return.
+     * @return The depositDenoms at the given index.
+     */
+    public java.lang.String getDepositDenoms(int index) {
+      return depositDenoms_.get(index);
+    }
+    /**
+     * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the depositDenoms at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDepositDenomsBytes(int index) {
+      return depositDenoms_.getByteString(index);
+    }
+
+    public static final int MIN_DEPOSIT_AMOUNT_FIELD_NUMBER = 2;
+    private int minDepositAmount_ = 0;
+    /**
+     * <code>uint32 min_deposit_amount = 2 [json_name = "minDepositAmount"];</code>
+     * @return The minDepositAmount.
+     */
+    @java.lang.Override
+    public int getMinDepositAmount() {
+      return minDepositAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < depositDenoms_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, depositDenoms_.getRaw(i));
+      }
+      if (minDepositAmount_ != 0) {
+        output.writeUInt32(2, minDepositAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < depositDenoms_.size(); i++) {
+          dataSize += computeStringSizeNoTag(depositDenoms_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDepositDenomsList().size();
+      }
+      if (minDepositAmount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, minDepositAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.ParamsProto.Params other = (com.lum.network.dfract.ParamsProto.Params) obj;
+
+      if (!getDepositDenomsList()
+          .equals(other.getDepositDenomsList())) return false;
+      if (getMinDepositAmount()
+          != other.getMinDepositAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDepositDenomsCount() > 0) {
+        hash = (37 * hash) + DEPOSIT_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositDenomsList().hashCode();
+      }
+      hash = (37 * hash) + MIN_DEPOSIT_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinDepositAmount();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.Params)
+        com.lum.network.dfract.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.ParamsProto.internal_static_lum_network_dfract_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.ParamsProto.internal_static_lum_network_dfract_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.ParamsProto.Params.class, com.lum.network.dfract.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        depositDenoms_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        minDepositAmount_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.ParamsProto.internal_static_lum_network_dfract_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.ParamsProto.Params getDefaultInstanceForType() {
+        return com.lum.network.dfract.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.ParamsProto.Params build() {
+        com.lum.network.dfract.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.ParamsProto.Params buildPartial() {
+        com.lum.network.dfract.ParamsProto.Params result = new com.lum.network.dfract.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.dfract.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          depositDenoms_.makeImmutable();
+          result.depositDenoms_ = depositDenoms_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minDepositAmount_ = minDepositAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.ParamsProto.Params) {
+          return mergeFrom((com.lum.network.dfract.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.ParamsProto.Params other) {
+        if (other == com.lum.network.dfract.ParamsProto.Params.getDefaultInstance()) return this;
+        if (!other.depositDenoms_.isEmpty()) {
+          if (depositDenoms_.isEmpty()) {
+            depositDenoms_ = other.depositDenoms_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureDepositDenomsIsMutable();
+            depositDenoms_.addAll(other.depositDenoms_);
+          }
+          onChanged();
+        }
+        if (other.getMinDepositAmount() != 0) {
+          setMinDepositAmount(other.getMinDepositAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureDepositDenomsIsMutable();
+                depositDenoms_.add(s);
+                break;
+              } // case 10
+              case 16: {
+                minDepositAmount_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList depositDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDepositDenomsIsMutable() {
+        if (!depositDenoms_.isModifiable()) {
+          depositDenoms_ = new com.google.protobuf.LazyStringArrayList(depositDenoms_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @return A list containing the depositDenoms.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDepositDenomsList() {
+        depositDenoms_.makeImmutable();
+        return depositDenoms_;
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @return The count of depositDenoms.
+       */
+      public int getDepositDenomsCount() {
+        return depositDenoms_.size();
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @param index The index of the element to return.
+       * @return The depositDenoms at the given index.
+       */
+      public java.lang.String getDepositDenoms(int index) {
+        return depositDenoms_.get(index);
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the depositDenoms at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDepositDenomsBytes(int index) {
+        return depositDenoms_.getByteString(index);
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @param index The index to set the value at.
+       * @param value The depositDenoms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositDenoms(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDepositDenomsIsMutable();
+        depositDenoms_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @param value The depositDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDepositDenoms(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDepositDenomsIsMutable();
+        depositDenoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @param values The depositDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDepositDenoms(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDepositDenomsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, depositDenoms_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepositDenoms() {
+        depositDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string deposit_denoms = 1 [json_name = "depositDenoms"];</code>
+       * @param value The bytes of the depositDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDepositDenomsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDepositDenomsIsMutable();
+        depositDenoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int minDepositAmount_ ;
+      /**
+       * <code>uint32 min_deposit_amount = 2 [json_name = "minDepositAmount"];</code>
+       * @return The minDepositAmount.
+       */
+      @java.lang.Override
+      public int getMinDepositAmount() {
+        return minDepositAmount_;
+      }
+      /**
+       * <code>uint32 min_deposit_amount = 2 [json_name = "minDepositAmount"];</code>
+       * @param value The minDepositAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinDepositAmount(int value) {
+
+        minDepositAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 min_deposit_amount = 2 [json_name = "minDepositAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinDepositAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        minDepositAmount_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.Params)
+    private static final com.lum.network.dfract.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.ParamsProto.Params();
+    }
+
+    public static com.lum.network.dfract.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_Params_fieldAccessorTable;
 
@@ -31,12 +721,12 @@ public final class ParamsProto {
       "\n\037lum-network/dfract/params.proto\022\022lum.n" +
       "etwork.dfract\"]\n\006Params\022%\n\016deposit_denom" +
       "s\030\001 \003(\tR\rdepositDenoms\022,\n\022min_deposit_am" +
-      "ount\030\002 \001(\rR\020minDepositAmountB\274\001\n\026com.lum" +
-      ".network.dfractB\013ParamsProtoP\001Z+github.c" +
-      "om/lum-network/chain/x/dfract/types\242\002\003LN" +
-      "D\252\002\022Lum.Network.Dfract\312\002\022Lum\\Network\\Dfr" +
-      "act\342\002\036Lum\\Network\\Dfract\\GPBMetadata\352\002\024L" +
-      "um::Network::Dfractb\006proto3"
+      "ount\030\002 \001(\rR\020minDepositAmountB\272\001\n\026com.lum" +
+      ".network.dfractB\013ParamsProtoZ+github.com" +
+      "/lum-network/chain/x/dfract/types\242\002\003LND\252" +
+      "\002\022Lum.Network.Dfract\312\002\022Lum\\Network\\Dfrac" +
+      "t\342\002\036Lum\\Network\\Dfract\\GPBMetadata\352\002\024Lum" +
+      "::Network::Dfractb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

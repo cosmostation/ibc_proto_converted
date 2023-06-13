@@ -14,19 +14,4798 @@ public final class LiquidfarmingProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * AuctionStatus enumerates the valid status of an auction.
+   * </pre>
+   *
+   * Protobuf enum {@code crescent.liquidfarming.v1beta1.AuctionStatus}
+   */
+  public enum AuctionStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * AUCTION_STATUS_UNSPECIFIED defines the default auction status
+     * </pre>
+     *
+     * <code>AUCTION_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "AuctionStatusNil"];</code>
+     */
+    AUCTION_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * AUCTION_STATUS_STARTED defines the started auction status
+     * </pre>
+     *
+     * <code>AUCTION_STATUS_STARTED = 1 [(.gogoproto.enumvalue_customname) = "AuctionStatusStarted"];</code>
+     */
+    AUCTION_STATUS_STARTED(1),
+    /**
+     * <pre>
+     * AUCTION_STATUS_FINISHED defines the finished auction status
+     * </pre>
+     *
+     * <code>AUCTION_STATUS_FINISHED = 2 [(.gogoproto.enumvalue_customname) = "AuctionStatusFinished"];</code>
+     */
+    AUCTION_STATUS_FINISHED(2),
+    /**
+     * <pre>
+     * AUCTION_STATUS_SKIPPED defines the skipped auction status
+     * </pre>
+     *
+     * <code>AUCTION_STATUS_SKIPPED = 3 [(.gogoproto.enumvalue_customname) = "AuctionStatusSkipped"];</code>
+     */
+    AUCTION_STATUS_SKIPPED(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * AUCTION_STATUS_UNSPECIFIED defines the default auction status
+     * </pre>
+     *
+     * <code>AUCTION_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "AuctionStatusNil"];</code>
+     */
+    public static final int AUCTION_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * AUCTION_STATUS_STARTED defines the started auction status
+     * </pre>
+     *
+     * <code>AUCTION_STATUS_STARTED = 1 [(.gogoproto.enumvalue_customname) = "AuctionStatusStarted"];</code>
+     */
+    public static final int AUCTION_STATUS_STARTED_VALUE = 1;
+    /**
+     * <pre>
+     * AUCTION_STATUS_FINISHED defines the finished auction status
+     * </pre>
+     *
+     * <code>AUCTION_STATUS_FINISHED = 2 [(.gogoproto.enumvalue_customname) = "AuctionStatusFinished"];</code>
+     */
+    public static final int AUCTION_STATUS_FINISHED_VALUE = 2;
+    /**
+     * <pre>
+     * AUCTION_STATUS_SKIPPED defines the skipped auction status
+     * </pre>
+     *
+     * <code>AUCTION_STATUS_SKIPPED = 3 [(.gogoproto.enumvalue_customname) = "AuctionStatusSkipped"];</code>
+     */
+    public static final int AUCTION_STATUS_SKIPPED_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AuctionStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AuctionStatus forNumber(int value) {
+      switch (value) {
+        case 0: return AUCTION_STATUS_UNSPECIFIED;
+        case 1: return AUCTION_STATUS_STARTED;
+        case 2: return AUCTION_STATUS_FINISHED;
+        case 3: return AUCTION_STATUS_SKIPPED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AuctionStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AuctionStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AuctionStatus>() {
+            public AuctionStatus findValueByNumber(int number) {
+              return AuctionStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final AuctionStatus[] VALUES = values();
+
+    public static AuctionStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AuctionStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:crescent.liquidfarming.v1beta1.AuctionStatus)
+  }
+
+  public interface RewardsAuctionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.RewardsAuction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id specifies the unique auction id
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * pool_id specifies the liquidity pool id
+     * </pre>
+     *
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * bidding_coin_denom specifies the bidding coin denomination
+     * </pre>
+     *
+     * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+     * @return The biddingCoinDenom.
+     */
+    java.lang.String getBiddingCoinDenom();
+    /**
+     * <pre>
+     * bidding_coin_denom specifies the bidding coin denomination
+     * </pre>
+     *
+     * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+     * @return The bytes for biddingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getBiddingCoinDenomBytes();
+
+    /**
+     * <pre>
+     * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+     * </pre>
+     *
+     * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+     * @return The payingReserveAddress.
+     */
+    java.lang.String getPayingReserveAddress();
+    /**
+     * <pre>
+     * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+     * </pre>
+     *
+     * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+     * @return The bytes for payingReserveAddress.
+     */
+    com.google.protobuf.ByteString
+        getPayingReserveAddressBytes();
+
+    /**
+     * <pre>
+     * start_time specifies the start time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time specifies the start time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time specifies the start time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * end_time specifies the end time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * end_time specifies the end time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <pre>
+     * end_time specifies the end time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <pre>
+     * status specifies the status of an auction
+     * </pre>
+     *
+     * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * status specifies the status of an auction
+     * </pre>
+     *
+     * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus getStatus();
+
+    /**
+     * <pre>
+     * winner specifies the bidder who won the auction
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>string winner = 8 [json_name = "winner"];</code>
+     * @return The winner.
+     */
+    java.lang.String getWinner();
+    /**
+     * <pre>
+     * winner specifies the bidder who won the auction
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>string winner = 8 [json_name = "winner"];</code>
+     * @return The bytes for winner.
+     */
+    com.google.protobuf.ByteString
+        getWinnerBytes();
+
+    /**
+     * <pre>
+     * winning_amount specifies the winning amount for the uaction
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the winningAmount field is set.
+     */
+    boolean hasWinningAmount();
+    /**
+     * <pre>
+     * winning_amount specifies the winning amount for the uaction
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The winningAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getWinningAmount();
+    /**
+     * <pre>
+     * winning_amount specifies the winning amount for the uaction
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWinningAmountOrBuilder();
+
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getRewardsList();
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index);
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFeesList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getFeesCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+        int index);
+
+    /**
+     * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The feeRate.
+     */
+    java.lang.String getFeeRate();
+    /**
+     * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for feeRate.
+     */
+    com.google.protobuf.ByteString
+        getFeeRateBytes();
+  }
+  /**
+   * <pre>
+   * RewardsAuction defines rewards auction that is created by the module
+   * for every rewards_auction_duration in params.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.RewardsAuction}
+   */
+  public static final class RewardsAuction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.RewardsAuction)
+      RewardsAuctionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardsAuction.newBuilder() to construct.
+    private RewardsAuction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardsAuction() {
+      biddingCoinDenom_ = "";
+      payingReserveAddress_ = "";
+      status_ = 0;
+      winner_ = "";
+      rewards_ = java.util.Collections.emptyList();
+      fees_ = java.util.Collections.emptyList();
+      feeRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardsAuction();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_RewardsAuction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_RewardsAuction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.class, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id specifies the unique auction id
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id specifies the liquidity pool id
+     * </pre>
+     *
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int BIDDING_COIN_DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object biddingCoinDenom_ = "";
+    /**
+     * <pre>
+     * bidding_coin_denom specifies the bidding coin denomination
+     * </pre>
+     *
+     * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+     * @return The biddingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBiddingCoinDenom() {
+      java.lang.Object ref = biddingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        biddingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * bidding_coin_denom specifies the bidding coin denomination
+     * </pre>
+     *
+     * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+     * @return The bytes for biddingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBiddingCoinDenomBytes() {
+      java.lang.Object ref = biddingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        biddingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYING_RESERVE_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payingReserveAddress_ = "";
+    /**
+     * <pre>
+     * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+     * </pre>
+     *
+     * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+     * @return The payingReserveAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getPayingReserveAddress() {
+      java.lang.Object ref = payingReserveAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payingReserveAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+     * </pre>
+     *
+     * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+     * @return The bytes for payingReserveAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayingReserveAddressBytes() {
+      java.lang.Object ref = payingReserveAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payingReserveAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time specifies the start time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time specifies the start time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time specifies the start time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * end_time specifies the end time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <pre>
+     * end_time specifies the end time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * end_time specifies the end time of an auction
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 7;
+    private int status_ = 0;
+    /**
+     * <pre>
+     * status specifies the status of an auction
+     * </pre>
+     *
+     * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * status specifies the status of an auction
+     * </pre>
+     *
+     * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus getStatus() {
+      com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus result = com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus.forNumber(status_);
+      return result == null ? com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int WINNER_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object winner_ = "";
+    /**
+     * <pre>
+     * winner specifies the bidder who won the auction
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>string winner = 8 [json_name = "winner"];</code>
+     * @return The winner.
+     */
+    @java.lang.Override
+    public java.lang.String getWinner() {
+      java.lang.Object ref = winner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        winner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * winner specifies the bidder who won the auction
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>string winner = 8 [json_name = "winner"];</code>
+     * @return The bytes for winner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWinnerBytes() {
+      java.lang.Object ref = winner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        winner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WINNING_AMOUNT_FIELD_NUMBER = 9;
+    private com.cosmos.base.v1beta1.CoinProto.Coin winningAmount_;
+    /**
+     * <pre>
+     * winning_amount specifies the winning amount for the uaction
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the winningAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasWinningAmount() {
+      return winningAmount_ != null;
+    }
+    /**
+     * <pre>
+     * winning_amount specifies the winning amount for the uaction
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The winningAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getWinningAmount() {
+      return winningAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : winningAmount_;
+    }
+    /**
+     * <pre>
+     * winning_amount specifies the winning amount for the uaction
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWinningAmountOrBuilder() {
+      return winningAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : winningAmount_;
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_;
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <pre>
+     * rewards specifies the farming rewards for are accumulated in the farm module
+     * the value is determined when an auction is finished
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    public static final int FEES_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fees_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeesList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeesOrBuilderList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getFeesCount() {
+      return fees_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index) {
+      return fees_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+        int index) {
+      return fees_.get(index);
+    }
+
+    public static final int FEE_RATE_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feeRate_ = "";
+    /**
+     * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The feeRate.
+     */
+    @java.lang.Override
+    public java.lang.String getFeeRate() {
+      java.lang.Object ref = feeRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feeRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for feeRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeeRateBytes() {
+      java.lang.Object ref = feeRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feeRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(biddingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, biddingCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payingReserveAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payingReserveAddress_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(5, getStartTime());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(6, getEndTime());
+      }
+      if (status_ != com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus.AUCTION_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(winner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, winner_);
+      }
+      if (winningAmount_ != null) {
+        output.writeMessage(9, getWinningAmount());
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(10, rewards_.get(i));
+      }
+      for (int i = 0; i < fees_.size(); i++) {
+        output.writeMessage(11, fees_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, feeRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(biddingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, biddingCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payingReserveAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payingReserveAddress_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getStartTime());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getEndTime());
+      }
+      if (status_ != com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus.AUCTION_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(winner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, winner_);
+      }
+      if (winningAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getWinningAmount());
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, rewards_.get(i));
+      }
+      for (int i = 0; i < fees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, fees_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, feeRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction other = (com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getBiddingCoinDenom()
+          .equals(other.getBiddingCoinDenom())) return false;
+      if (!getPayingReserveAddress()
+          .equals(other.getPayingReserveAddress())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (!getWinner()
+          .equals(other.getWinner())) return false;
+      if (hasWinningAmount() != other.hasWinningAmount()) return false;
+      if (hasWinningAmount()) {
+        if (!getWinningAmount()
+            .equals(other.getWinningAmount())) return false;
+      }
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (!getFeesList()
+          .equals(other.getFeesList())) return false;
+      if (!getFeeRate()
+          .equals(other.getFeeRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + BIDDING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBiddingCoinDenom().hashCode();
+      hash = (37 * hash) + PAYING_RESERVE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getPayingReserveAddress().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + WINNER_FIELD_NUMBER;
+      hash = (53 * hash) + getWinner().hashCode();
+      if (hasWinningAmount()) {
+        hash = (37 * hash) + WINNING_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getWinningAmount().hashCode();
+      }
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      if (getFeesCount() > 0) {
+        hash = (37 * hash) + FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getFeesList().hashCode();
+      }
+      hash = (37 * hash) + FEE_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getFeeRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RewardsAuction defines rewards auction that is created by the module
+     * for every rewards_auction_duration in params.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.RewardsAuction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.RewardsAuction)
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_RewardsAuction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_RewardsAuction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.class, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        poolId_ = 0L;
+        biddingCoinDenom_ = "";
+        payingReserveAddress_ = "";
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        status_ = 0;
+        winner_ = "";
+        winningAmount_ = null;
+        if (winningAmountBuilder_ != null) {
+          winningAmountBuilder_.dispose();
+          winningAmountBuilder_ = null;
+        }
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+        } else {
+          fees_ = null;
+          feesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        feeRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_RewardsAuction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction build() {
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction buildPartial() {
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction result = new com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+        if (feesBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            fees_ = java.util.Collections.unmodifiableList(fees_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.fees_ = fees_;
+        } else {
+          result.fees_ = feesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.biddingCoinDenom_ = biddingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payingReserveAddress_ = payingReserveAddress_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.winner_ = winner_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.winningAmount_ = winningAmountBuilder_ == null
+              ? winningAmount_
+              : winningAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.feeRate_ = feeRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction other) {
+        if (other == com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getBiddingCoinDenom().isEmpty()) {
+          biddingCoinDenom_ = other.biddingCoinDenom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayingReserveAddress().isEmpty()) {
+          payingReserveAddress_ = other.payingReserveAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (!other.getWinner().isEmpty()) {
+          winner_ = other.winner_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (other.hasWinningAmount()) {
+          mergeWinningAmount(other.getWinningAmount());
+        }
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        if (feesBuilder_ == null) {
+          if (!other.fees_.isEmpty()) {
+            if (fees_.isEmpty()) {
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureFeesIsMutable();
+              fees_.addAll(other.fees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fees_.isEmpty()) {
+            if (feesBuilder_.isEmpty()) {
+              feesBuilder_.dispose();
+              feesBuilder_ = null;
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              feesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeesFieldBuilder() : null;
+            } else {
+              feesBuilder_.addAllMessages(other.fees_);
+            }
+          }
+        }
+        if (!other.getFeeRate().isEmpty()) {
+          feeRate_ = other.feeRate_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                biddingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payingReserveAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                winner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getWinningAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (feesBuilder_ == null) {
+                  ensureFeesIsMutable();
+                  fees_.add(m);
+                } else {
+                  feesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              case 98: {
+                feeRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id specifies the unique auction id
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id specifies the unique auction id
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id specifies the unique auction id
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id specifies the liquidity pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id specifies the liquidity pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id specifies the liquidity pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object biddingCoinDenom_ = "";
+      /**
+       * <pre>
+       * bidding_coin_denom specifies the bidding coin denomination
+       * </pre>
+       *
+       * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+       * @return The biddingCoinDenom.
+       */
+      public java.lang.String getBiddingCoinDenom() {
+        java.lang.Object ref = biddingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          biddingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bidding_coin_denom specifies the bidding coin denomination
+       * </pre>
+       *
+       * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+       * @return The bytes for biddingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBiddingCoinDenomBytes() {
+        java.lang.Object ref = biddingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          biddingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bidding_coin_denom specifies the bidding coin denomination
+       * </pre>
+       *
+       * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+       * @param value The biddingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBiddingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        biddingCoinDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bidding_coin_denom specifies the bidding coin denomination
+       * </pre>
+       *
+       * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBiddingCoinDenom() {
+        biddingCoinDenom_ = getDefaultInstance().getBiddingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bidding_coin_denom specifies the bidding coin denomination
+       * </pre>
+       *
+       * <code>string bidding_coin_denom = 3 [json_name = "biddingCoinDenom"];</code>
+       * @param value The bytes for biddingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBiddingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        biddingCoinDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payingReserveAddress_ = "";
+      /**
+       * <pre>
+       * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+       * </pre>
+       *
+       * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+       * @return The payingReserveAddress.
+       */
+      public java.lang.String getPayingReserveAddress() {
+        java.lang.Object ref = payingReserveAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payingReserveAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+       * </pre>
+       *
+       * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+       * @return The bytes for payingReserveAddress.
+       */
+      public com.google.protobuf.ByteString
+          getPayingReserveAddressBytes() {
+        java.lang.Object ref = payingReserveAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payingReserveAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+       * </pre>
+       *
+       * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+       * @param value The payingReserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayingReserveAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payingReserveAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+       * </pre>
+       *
+       * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayingReserveAddress() {
+        payingReserveAddress_ = getDefaultInstance().getPayingReserveAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * paying_reserve_address specfies the account that reserves bidding amounts placed by bidders
+       * </pre>
+       *
+       * <code>string paying_reserve_address = 4 [json_name = "payingReserveAddress"];</code>
+       * @param value The bytes for payingReserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayingReserveAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payingReserveAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of an auction
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * status specifies the status of an auction
+       * </pre>
+       *
+       * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * status specifies the status of an auction
+       * </pre>
+       *
+       * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status specifies the status of an auction
+       * </pre>
+       *
+       * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus getStatus() {
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus result = com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus.forNumber(status_);
+        return result == null ? com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * status specifies the status of an auction
+       * </pre>
+       *
+       * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status specifies the status of an auction
+       * </pre>
+       *
+       * <code>.crescent.liquidfarming.v1beta1.AuctionStatus status = 7 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object winner_ = "";
+      /**
+       * <pre>
+       * winner specifies the bidder who won the auction
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>string winner = 8 [json_name = "winner"];</code>
+       * @return The winner.
+       */
+      public java.lang.String getWinner() {
+        java.lang.Object ref = winner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          winner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * winner specifies the bidder who won the auction
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>string winner = 8 [json_name = "winner"];</code>
+       * @return The bytes for winner.
+       */
+      public com.google.protobuf.ByteString
+          getWinnerBytes() {
+        java.lang.Object ref = winner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          winner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * winner specifies the bidder who won the auction
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>string winner = 8 [json_name = "winner"];</code>
+       * @param value The winner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWinner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        winner_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * winner specifies the bidder who won the auction
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>string winner = 8 [json_name = "winner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWinner() {
+        winner_ = getDefaultInstance().getWinner();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * winner specifies the bidder who won the auction
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>string winner = 8 [json_name = "winner"];</code>
+       * @param value The bytes for winner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWinnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        winner_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin winningAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> winningAmountBuilder_;
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the winningAmount field is set.
+       */
+      public boolean hasWinningAmount() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The winningAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getWinningAmount() {
+        if (winningAmountBuilder_ == null) {
+          return winningAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : winningAmount_;
+        } else {
+          return winningAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setWinningAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (winningAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          winningAmount_ = value;
+        } else {
+          winningAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setWinningAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (winningAmountBuilder_ == null) {
+          winningAmount_ = builderForValue.build();
+        } else {
+          winningAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeWinningAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (winningAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            winningAmount_ != null &&
+            winningAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getWinningAmountBuilder().mergeFrom(value);
+          } else {
+            winningAmount_ = value;
+          }
+        } else {
+          winningAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearWinningAmount() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        winningAmount_ = null;
+        if (winningAmountBuilder_ != null) {
+          winningAmountBuilder_.dispose();
+          winningAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getWinningAmountBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getWinningAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWinningAmountOrBuilder() {
+        if (winningAmountBuilder_ != null) {
+          return winningAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return winningAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : winningAmount_;
+        }
+      }
+      /**
+       * <pre>
+       * winning_amount specifies the winning amount for the uaction
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin winning_amount = 9 [json_name = "winningAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getWinningAmountFieldBuilder() {
+        if (winningAmountBuilder_ == null) {
+          winningAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getWinningAmount(),
+                  getParentForChildren(),
+                  isClean());
+          winningAmount_ = null;
+        }
+        return winningAmountBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          rewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(rewards_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> rewardsBuilder_;
+
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * rewards specifies the farming rewards for are accumulated in the farm module
+       * the value is determined when an auction is finished
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 10 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fees_ =
+        java.util.Collections.emptyList();
+      private void ensureFeesIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          fees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(fees_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> feesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeesList() {
+        if (feesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fees_);
+        } else {
+          return feesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getFeesCount() {
+        if (feesBuilder_ == null) {
+          return fees_.size();
+        } else {
+          return feesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);
+        } else {
+          return feesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.set(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fees_);
+          onChanged();
+        } else {
+          feesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearFees() {
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          feesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeFees(int index) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.remove(index);
+          onChanged();
+        } else {
+          feesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+          int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);  } else {
+          return feesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFeesOrBuilderList() {
+        if (feesBuilder_ != null) {
+          return feesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fees_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeesBuilder() {
+        return getFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 11 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFeesBuilderList() {
+        return getFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFeesFieldBuilder() {
+        if (feesBuilder_ == null) {
+          feesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  fees_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fees_ = null;
+        }
+        return feesBuilder_;
+      }
+
+      private java.lang.Object feeRate_ = "";
+      /**
+       * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The feeRate.
+       */
+      public java.lang.String getFeeRate() {
+        java.lang.Object ref = feeRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feeRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for feeRate.
+       */
+      public com.google.protobuf.ByteString
+          getFeeRateBytes() {
+        java.lang.Object ref = feeRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feeRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The feeRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feeRate_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeeRate() {
+        feeRate_ = getDefaultInstance().getFeeRate();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fee_rate = 12 [json_name = "feeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for feeRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feeRate_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.RewardsAuction)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.RewardsAuction)
+    private static final com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardsAuction>
+        PARSER = new com.google.protobuf.AbstractParser<RewardsAuction>() {
+      @java.lang.Override
+      public RewardsAuction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardsAuction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardsAuction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CompoundingRewardsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.CompoundingRewards)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * <pre>
+   * CompoundingRewards records the amount of pool coin that is used for a bidder to place a bid
+   * for an auction. It is used internally to calculate unfarm amount.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.CompoundingRewards}
+   */
+  public static final class CompoundingRewards extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.CompoundingRewards)
+      CompoundingRewardsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CompoundingRewards.newBuilder() to construct.
+    private CompoundingRewards(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CompoundingRewards() {
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CompoundingRewards();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_CompoundingRewards_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_CompoundingRewards_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards.class, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards other = (com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards) obj;
+
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CompoundingRewards records the amount of pool coin that is used for a bidder to place a bid
+     * for an auction. It is used internally to calculate unfarm amount.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.CompoundingRewards}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.CompoundingRewards)
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewardsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_CompoundingRewards_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_CompoundingRewards_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards.class, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_CompoundingRewards_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards build() {
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards buildPartial() {
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards result = new com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards other) {
+        if (other == com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards.getDefaultInstance()) return this;
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.CompoundingRewards)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.CompoundingRewards)
+    private static final com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CompoundingRewards>
+        PARSER = new com.google.protobuf.AbstractParser<CompoundingRewards>() {
+      @java.lang.Override
+      public CompoundingRewards parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CompoundingRewards> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CompoundingRewards> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.CompoundingRewards getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BidOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.Bid)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id specifies the pool id
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * bidder specifies the bech32-encoded address that places a bid for the auction
+     * </pre>
+     *
+     * <code>string bidder = 2 [json_name = "bidder"];</code>
+     * @return The bidder.
+     */
+    java.lang.String getBidder();
+    /**
+     * <pre>
+     * bidder specifies the bech32-encoded address that places a bid for the auction
+     * </pre>
+     *
+     * <code>string bidder = 2 [json_name = "bidder"];</code>
+     * @return The bytes for bidder.
+     */
+    com.google.protobuf.ByteString
+        getBidderBytes();
+
+    /**
+     * <pre>
+     * amount specifies the amount to place a bid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <pre>
+     * amount specifies the amount to place a bid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The amount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount();
+    /**
+     * <pre>
+     * amount specifies the amount to place a bid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
+  }
+  /**
+   * <pre>
+   * Bid defines standard bid for a rewards auction.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.Bid}
+   */
+  public static final class Bid extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.Bid)
+      BidOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Bid.newBuilder() to construct.
+    private Bid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Bid() {
+      bidder_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Bid();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_Bid_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_Bid_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.class, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id specifies the pool id
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int BIDDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bidder_ = "";
+    /**
+     * <pre>
+     * bidder specifies the bech32-encoded address that places a bid for the auction
+     * </pre>
+     *
+     * <code>string bidder = 2 [json_name = "bidder"];</code>
+     * @return The bidder.
+     */
+    @java.lang.Override
+    public java.lang.String getBidder() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bidder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * bidder specifies the bech32-encoded address that places a bid for the auction
+     * </pre>
+     *
+     * <code>string bidder = 2 [json_name = "bidder"];</code>
+     * @return The bytes for bidder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBidderBytes() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bidder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+    /**
+     * <pre>
+     * amount specifies the amount to place a bid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return amount_ != null;
+    }
+    /**
+     * <pre>
+     * amount specifies the amount to place a bid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+    /**
+     * <pre>
+     * amount specifies the amount to place a bid
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bidder_);
+      }
+      if (amount_ != null) {
+        output.writeMessage(3, getAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bidder_);
+      }
+      if (amount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid other = (com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getBidder()
+          .equals(other.getBidder())) return false;
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (!getAmount()
+            .equals(other.getAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + BIDDER_FIELD_NUMBER;
+      hash = (53 * hash) + getBidder().hashCode();
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Bid defines standard bid for a rewards auction.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.Bid}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.Bid)
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_Bid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_Bid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.class, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        bidder_ = "";
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.internal_static_crescent_liquidfarming_v1beta1_Bid_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid build() {
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid buildPartial() {
+        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid result = new com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bidder_ = bidder_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amountBuilder_ == null
+              ? amount_
+              : amountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid other) {
+        if (other == com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getBidder().isEmpty()) {
+          bidder_ = other.bidder_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasAmount()) {
+          mergeAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                bidder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bidder_ = "";
+      /**
+       * <pre>
+       * bidder specifies the bech32-encoded address that places a bid for the auction
+       * </pre>
+       *
+       * <code>string bidder = 2 [json_name = "bidder"];</code>
+       * @return The bidder.
+       */
+      public java.lang.String getBidder() {
+        java.lang.Object ref = bidder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bidder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bidder specifies the bech32-encoded address that places a bid for the auction
+       * </pre>
+       *
+       * <code>string bidder = 2 [json_name = "bidder"];</code>
+       * @return The bytes for bidder.
+       */
+      public com.google.protobuf.ByteString
+          getBidderBytes() {
+        java.lang.Object ref = bidder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bidder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bidder specifies the bech32-encoded address that places a bid for the auction
+       * </pre>
+       *
+       * <code>string bidder = 2 [json_name = "bidder"];</code>
+       * @param value The bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bidder_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bidder specifies the bech32-encoded address that places a bid for the auction
+       * </pre>
+       *
+       * <code>string bidder = 2 [json_name = "bidder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidder() {
+        bidder_ = getDefaultInstance().getBidder();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bidder specifies the bech32-encoded address that places a bid for the auction
+       * </pre>
+       *
+       * <code>string bidder = 2 [json_name = "bidder"];</code>
+       * @param value The bytes for bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bidder_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the amount field is set.
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The amount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+        if (amountBuilder_ == null) {
+          return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        } else {
+          return amountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amount_ = value;
+        } else {
+          amountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          amount_ = builderForValue.build();
+        } else {
+          amountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            amount_ != null &&
+            amount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAmountBuilder().mergeFrom(value);
+          } else {
+            amount_ = value;
+          }
+        } else {
+          amountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilder();
+        } else {
+          return amount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        }
+      }
+      /**
+       * <pre>
+       * amount specifies the amount to place a bid
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAmount(),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.Bid)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.Bid)
+    private static final com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Bid>
+        PARSER = new com.google.protobuf.AbstractParser<Bid>() {
+      @java.lang.Override
+      public Bid parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Bid> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Bid> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_RewardsAuction_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_RewardsAuction_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_CompoundingRewards_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_CompoundingRewards_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_Bid_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_Bid_fieldAccessorTable;
 
@@ -75,14 +4854,14 @@ public final class LiquidfarmingProto {
       "tarted\0226\n\027AUCTION_STATUS_FINISHED\020\002\032\031\212\235 " +
       "\025AuctionStatusFinished\0224\n\026AUCTION_STATUS" +
       "_SKIPPED\020\003\032\030\212\235 \024AuctionStatusSkipped\032\004\210\243" +
-      "\036\000B\225\002\n\"com.crescent.liquidfarming.v1beta" +
-      "1B\022LiquidfarmingProtoP\001Z=github.com/cres" +
-      "cent-network/crescent/v5/x/liquidfarming" +
-      "/types\242\002\003CLX\252\002\036Crescent.Liquidfarming.V1" +
-      "beta1\312\002\036Crescent\\Liquidfarming\\V1beta1\342\002" +
-      "*Crescent\\Liquidfarming\\V1beta1\\GPBMetad" +
-      "ata\352\002 Crescent::Liquidfarming::V1beta1\310\341" +
-      "\036\000b\006proto3"
+      "\036\000B\223\002\n\"com.crescent.liquidfarming.v1beta" +
+      "1B\022LiquidfarmingProtoZ=github.com/cresce" +
+      "nt-network/crescent/v5/x/liquidfarming/t" +
+      "ypes\242\002\003CLX\252\002\036Crescent.Liquidfarming.V1be" +
+      "ta1\312\002\036Crescent\\Liquidfarming\\V1beta1\342\002*C" +
+      "rescent\\Liquidfarming\\V1beta1\\GPBMetadat" +
+      "a\352\002 Crescent::Liquidfarming::V1beta1\310\341\036\000" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,44 +14,6072 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreatePoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.MsgCreatePool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * 'panacea1' address
+     * </pre>
+     *
+     * <code>string curator = 1 [json_name = "curator"];</code>
+     * @return The curator.
+     */
+    java.lang.String getCurator();
+    /**
+     * <pre>
+     * 'panacea1' address
+     * </pre>
+     *
+     * <code>string curator = 1 [json_name = "curator"];</code>
+     * @return The bytes for curator.
+     */
+    com.google.protobuf.ByteString
+        getCuratorBytes();
+
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     * @return Whether the deposit field is set.
+     */
+    boolean hasDeposit();
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     * @return The deposit.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDeposit();
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositOrBuilder();
+
+    /**
+     * <pre>
+     * pool parameters
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+     * @return Whether the poolParams field is set.
+     */
+    boolean hasPoolParams();
+    /**
+     * <pre>
+     * pool parameters
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+     * @return The poolParams.
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.PoolParams getPoolParams();
+    /**
+     * <pre>
+     * pool parameters
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder getPoolParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgCreatePool defines the Msg/CreatePool request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.MsgCreatePool}
+   */
+  public static final class MsgCreatePool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.MsgCreatePool)
+      MsgCreatePoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreatePool.newBuilder() to construct.
+    private MsgCreatePool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreatePool() {
+      curator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreatePool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.class, com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.Builder.class);
+    }
+
+    public static final int CURATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object curator_ = "";
+    /**
+     * <pre>
+     * 'panacea1' address
+     * </pre>
+     *
+     * <code>string curator = 1 [json_name = "curator"];</code>
+     * @return The curator.
+     */
+    @java.lang.Override
+    public java.lang.String getCurator() {
+      java.lang.Object ref = curator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        curator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 'panacea1' address
+     * </pre>
+     *
+     * <code>string curator = 1 [json_name = "curator"];</code>
+     * @return The bytes for curator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCuratorBytes() {
+      java.lang.Object ref = curator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        curator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin deposit_;
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     * @return Whether the deposit field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeposit() {
+      return deposit_ != null;
+    }
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDeposit() {
+      return deposit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposit_;
+    }
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositOrBuilder() {
+      return deposit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposit_;
+    }
+
+    public static final int POOL_PARAMS_FIELD_NUMBER = 3;
+    private com.panacea.datapool.v2alpha1.PoolProto.PoolParams poolParams_;
+    /**
+     * <pre>
+     * pool parameters
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+     * @return Whether the poolParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolParams() {
+      return poolParams_ != null;
+    }
+    /**
+     * <pre>
+     * pool parameters
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+     * @return The poolParams.
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.PoolParams getPoolParams() {
+      return poolParams_ == null ? com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance() : poolParams_;
+    }
+    /**
+     * <pre>
+     * pool parameters
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder getPoolParamsOrBuilder() {
+      return poolParams_ == null ? com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance() : poolParams_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, curator_);
+      }
+      if (deposit_ != null) {
+        output.writeMessage(2, getDeposit());
+      }
+      if (poolParams_ != null) {
+        output.writeMessage(3, getPoolParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, curator_);
+      }
+      if (deposit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDeposit());
+      }
+      if (poolParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPoolParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool other = (com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool) obj;
+
+      if (!getCurator()
+          .equals(other.getCurator())) return false;
+      if (hasDeposit() != other.hasDeposit()) return false;
+      if (hasDeposit()) {
+        if (!getDeposit()
+            .equals(other.getDeposit())) return false;
+      }
+      if (hasPoolParams() != other.hasPoolParams()) return false;
+      if (hasPoolParams()) {
+        if (!getPoolParams()
+            .equals(other.getPoolParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCurator().hashCode();
+      if (hasDeposit()) {
+        hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeposit().hashCode();
+      }
+      if (hasPoolParams()) {
+        hash = (37 * hash) + POOL_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreatePool defines the Msg/CreatePool request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.MsgCreatePool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.MsgCreatePool)
+        com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.class, com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        curator_ = "";
+        deposit_ = null;
+        if (depositBuilder_ != null) {
+          depositBuilder_.dispose();
+          depositBuilder_ = null;
+        }
+        poolParams_ = null;
+        if (poolParamsBuilder_ != null) {
+          poolParamsBuilder_.dispose();
+          poolParamsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool build() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool buildPartial() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool result = new com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.curator_ = curator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deposit_ = depositBuilder_ == null
+              ? deposit_
+              : depositBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.poolParams_ = poolParamsBuilder_ == null
+              ? poolParams_
+              : poolParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool other) {
+        if (other == com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.getDefaultInstance()) return this;
+        if (!other.getCurator().isEmpty()) {
+          curator_ = other.curator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasDeposit()) {
+          mergeDeposit(other.getDeposit());
+        }
+        if (other.hasPoolParams()) {
+          mergePoolParams(other.getPoolParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                curator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getDepositFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPoolParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object curator_ = "";
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string curator = 1 [json_name = "curator"];</code>
+       * @return The curator.
+       */
+      public java.lang.String getCurator() {
+        java.lang.Object ref = curator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          curator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string curator = 1 [json_name = "curator"];</code>
+       * @return The bytes for curator.
+       */
+      public com.google.protobuf.ByteString
+          getCuratorBytes() {
+        java.lang.Object ref = curator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          curator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string curator = 1 [json_name = "curator"];</code>
+       * @param value The curator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        curator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string curator = 1 [json_name = "curator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurator() {
+        curator_ = getDefaultInstance().getCurator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string curator = 1 [json_name = "curator"];</code>
+       * @param value The bytes for curator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCuratorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        curator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin deposit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> depositBuilder_;
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       * @return Whether the deposit field is set.
+       */
+      public boolean hasDeposit() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       * @return The deposit.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDeposit() {
+        if (depositBuilder_ == null) {
+          return deposit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposit_;
+        } else {
+          return depositBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deposit_ = value;
+        } else {
+          depositBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (depositBuilder_ == null) {
+          deposit_ = builderForValue.build();
+        } else {
+          depositBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDeposit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            deposit_ != null &&
+            deposit_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDepositBuilder().mergeFrom(value);
+          } else {
+            deposit_ = value;
+          }
+        } else {
+          depositBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDeposit() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        deposit_ = null;
+        if (depositBuilder_ != null) {
+          depositBuilder_.dispose();
+          depositBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDepositBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDepositFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositOrBuilder() {
+        if (depositBuilder_ != null) {
+          return depositBuilder_.getMessageOrBuilder();
+        } else {
+          return deposit_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposit_;
+        }
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 2 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDepositFieldBuilder() {
+        if (depositBuilder_ == null) {
+          depositBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDeposit(),
+                  getParentForChildren(),
+                  isClean());
+          deposit_ = null;
+        }
+        return depositBuilder_;
+      }
+
+      private com.panacea.datapool.v2alpha1.PoolProto.PoolParams poolParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.PoolParams, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder> poolParamsBuilder_;
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       * @return Whether the poolParams field is set.
+       */
+      public boolean hasPoolParams() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       * @return The poolParams.
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParams getPoolParams() {
+        if (poolParamsBuilder_ == null) {
+          return poolParams_ == null ? com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance() : poolParams_;
+        } else {
+          return poolParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       */
+      public Builder setPoolParams(com.panacea.datapool.v2alpha1.PoolProto.PoolParams value) {
+        if (poolParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolParams_ = value;
+        } else {
+          poolParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       */
+      public Builder setPoolParams(
+          com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder builderForValue) {
+        if (poolParamsBuilder_ == null) {
+          poolParams_ = builderForValue.build();
+        } else {
+          poolParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       */
+      public Builder mergePoolParams(com.panacea.datapool.v2alpha1.PoolProto.PoolParams value) {
+        if (poolParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            poolParams_ != null &&
+            poolParams_ != com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance()) {
+            getPoolParamsBuilder().mergeFrom(value);
+          } else {
+            poolParams_ = value;
+          }
+        } else {
+          poolParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       */
+      public Builder clearPoolParams() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        poolParams_ = null;
+        if (poolParamsBuilder_ != null) {
+          poolParamsBuilder_.dispose();
+          poolParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder getPoolParamsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPoolParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder getPoolParamsOrBuilder() {
+        if (poolParamsBuilder_ != null) {
+          return poolParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return poolParams_ == null ?
+              com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance() : poolParams_;
+        }
+      }
+      /**
+       * <pre>
+       * pool parameters
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 3 [json_name = "poolParams"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.PoolParams, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder> 
+          getPoolParamsFieldBuilder() {
+        if (poolParamsBuilder_ == null) {
+          poolParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.PoolParams, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder>(
+                  getPoolParams(),
+                  getParentForChildren(),
+                  isClean());
+          poolParams_ = null;
+        }
+        return poolParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.MsgCreatePool)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.MsgCreatePool)
+    private static final com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool();
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreatePool>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreatePool>() {
+      @java.lang.Override
+      public MsgCreatePool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreatePool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreatePool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreatePoolResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.MsgCreatePoolResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * Always 1 for v0
+     * </pre>
+     *
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <pre>
+     * A NFT that presents the right to curate this pool continuously
+     * </pre>
+     *
+     * <code>uint64 curation_nft_id = 3 [json_name = "curationNftId"];</code>
+     * @return The curationNftId.
+     */
+    long getCurationNftId();
+  }
+  /**
+   * <pre>
+   * MsgCreatePoolResponse defines the Msg/CreatePool response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.MsgCreatePoolResponse}
+   */
+  public static final class MsgCreatePoolResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.MsgCreatePoolResponse)
+      MsgCreatePoolResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreatePoolResponse.newBuilder() to construct.
+    private MsgCreatePoolResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreatePoolResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreatePoolResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePoolResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePoolResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 2;
+    private long round_ = 0L;
+    /**
+     * <pre>
+     * Always 1 for v0
+     * </pre>
+     *
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int CURATION_NFT_ID_FIELD_NUMBER = 3;
+    private long curationNftId_ = 0L;
+    /**
+     * <pre>
+     * A NFT that presents the right to curate this pool continuously
+     * </pre>
+     *
+     * <code>uint64 curation_nft_id = 3 [json_name = "curationNftId"];</code>
+     * @return The curationNftId.
+     */
+    @java.lang.Override
+    public long getCurationNftId() {
+      return curationNftId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (round_ != 0L) {
+        output.writeUInt64(2, round_);
+      }
+      if (curationNftId_ != 0L) {
+        output.writeUInt64(3, curationNftId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, round_);
+      }
+      if (curationNftId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, curationNftId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse other = (com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getRound()
+          != other.getRound()) return false;
+      if (getCurationNftId()
+          != other.getCurationNftId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      hash = (37 * hash) + CURATION_NFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurationNftId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreatePoolResponse defines the Msg/CreatePool response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.MsgCreatePoolResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.MsgCreatePoolResponse)
+        com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePoolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePoolResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        round_ = 0L;
+        curationNftId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgCreatePoolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse build() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse buildPartial() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse result = new com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.curationNftId_ = curationNftId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse other) {
+        if (other == com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (other.getCurationNftId() != 0L) {
+          setCurationNftId(other.getCurationNftId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                curationNftId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long round_ ;
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long curationNftId_ ;
+      /**
+       * <pre>
+       * A NFT that presents the right to curate this pool continuously
+       * </pre>
+       *
+       * <code>uint64 curation_nft_id = 3 [json_name = "curationNftId"];</code>
+       * @return The curationNftId.
+       */
+      @java.lang.Override
+      public long getCurationNftId() {
+        return curationNftId_;
+      }
+      /**
+       * <pre>
+       * A NFT that presents the right to curate this pool continuously
+       * </pre>
+       *
+       * <code>uint64 curation_nft_id = 3 [json_name = "curationNftId"];</code>
+       * @param value The curationNftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurationNftId(long value) {
+
+        curationNftId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A NFT that presents the right to curate this pool continuously
+       * </pre>
+       *
+       * <code>uint64 curation_nft_id = 3 [json_name = "curationNftId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurationNftId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        curationNftId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.MsgCreatePoolResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.MsgCreatePoolResponse)
+    private static final com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse();
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreatePoolResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreatePoolResponse>() {
+      @java.lang.Override
+      public MsgCreatePoolResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreatePoolResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreatePoolResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.TxProto.MsgCreatePoolResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSellDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.MsgSellData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * certificate for data validation
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+     * @return Whether the cert field is set.
+     */
+    boolean hasCert();
+    /**
+     * <pre>
+     * certificate for data validation
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+     * @return The cert.
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataCert getCert();
+    /**
+     * <pre>
+     * certificate for data validation
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataCertOrBuilder getCertOrBuilder();
+
+    /**
+     * <pre>
+     * 'panacea1' address of seller
+     * </pre>
+     *
+     * <code>string seller = 2 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    java.lang.String getSeller();
+    /**
+     * <pre>
+     * 'panacea1' address of seller
+     * </pre>
+     *
+     * <code>string seller = 2 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    com.google.protobuf.ByteString
+        getSellerBytes();
+  }
+  /**
+   * <pre>
+   * MsgSellData defines the Msg/SellData request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.MsgSellData}
+   */
+  public static final class MsgSellData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.MsgSellData)
+      MsgSellDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSellData.newBuilder() to construct.
+    private MsgSellData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSellData() {
+      seller_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSellData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.TxProto.MsgSellData.class, com.panacea.datapool.v2alpha1.TxProto.MsgSellData.Builder.class);
+    }
+
+    public static final int CERT_FIELD_NUMBER = 1;
+    private com.panacea.datapool.v2alpha1.PoolProto.DataCert cert_;
+    /**
+     * <pre>
+     * certificate for data validation
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+     * @return Whether the cert field is set.
+     */
+    @java.lang.Override
+    public boolean hasCert() {
+      return cert_ != null;
+    }
+    /**
+     * <pre>
+     * certificate for data validation
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+     * @return The cert.
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataCert getCert() {
+      return cert_ == null ? com.panacea.datapool.v2alpha1.PoolProto.DataCert.getDefaultInstance() : cert_;
+    }
+    /**
+     * <pre>
+     * certificate for data validation
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataCertOrBuilder getCertOrBuilder() {
+      return cert_ == null ? com.panacea.datapool.v2alpha1.PoolProto.DataCert.getDefaultInstance() : cert_;
+    }
+
+    public static final int SELLER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seller_ = "";
+    /**
+     * <pre>
+     * 'panacea1' address of seller
+     * </pre>
+     *
+     * <code>string seller = 2 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    @java.lang.Override
+    public java.lang.String getSeller() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 'panacea1' address of seller
+     * </pre>
+     *
+     * <code>string seller = 2 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerBytes() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (cert_ != null) {
+        output.writeMessage(1, getCert());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, seller_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (cert_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCert());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, seller_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.TxProto.MsgSellData)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.TxProto.MsgSellData other = (com.panacea.datapool.v2alpha1.TxProto.MsgSellData) obj;
+
+      if (hasCert() != other.hasCert()) return false;
+      if (hasCert()) {
+        if (!getCert()
+            .equals(other.getCert())) return false;
+      }
+      if (!getSeller()
+          .equals(other.getSeller())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCert()) {
+        hash = (37 * hash) + CERT_FIELD_NUMBER;
+        hash = (53 * hash) + getCert().hashCode();
+      }
+      hash = (37 * hash) + SELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getSeller().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.TxProto.MsgSellData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSellData defines the Msg/SellData request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.MsgSellData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.MsgSellData)
+        com.panacea.datapool.v2alpha1.TxProto.MsgSellDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.TxProto.MsgSellData.class, com.panacea.datapool.v2alpha1.TxProto.MsgSellData.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgSellData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cert_ = null;
+        if (certBuilder_ != null) {
+          certBuilder_.dispose();
+          certBuilder_ = null;
+        }
+        seller_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgSellData getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.MsgSellData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgSellData build() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgSellData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgSellData buildPartial() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgSellData result = new com.panacea.datapool.v2alpha1.TxProto.MsgSellData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgSellData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cert_ = certBuilder_ == null
+              ? cert_
+              : certBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.seller_ = seller_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.TxProto.MsgSellData) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.TxProto.MsgSellData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.TxProto.MsgSellData other) {
+        if (other == com.panacea.datapool.v2alpha1.TxProto.MsgSellData.getDefaultInstance()) return this;
+        if (other.hasCert()) {
+          mergeCert(other.getCert());
+        }
+        if (!other.getSeller().isEmpty()) {
+          seller_ = other.seller_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCertFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                seller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.datapool.v2alpha1.PoolProto.DataCert cert_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataCert, com.panacea.datapool.v2alpha1.PoolProto.DataCert.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataCertOrBuilder> certBuilder_;
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       * @return Whether the cert field is set.
+       */
+      public boolean hasCert() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       * @return The cert.
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataCert getCert() {
+        if (certBuilder_ == null) {
+          return cert_ == null ? com.panacea.datapool.v2alpha1.PoolProto.DataCert.getDefaultInstance() : cert_;
+        } else {
+          return certBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       */
+      public Builder setCert(com.panacea.datapool.v2alpha1.PoolProto.DataCert value) {
+        if (certBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cert_ = value;
+        } else {
+          certBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       */
+      public Builder setCert(
+          com.panacea.datapool.v2alpha1.PoolProto.DataCert.Builder builderForValue) {
+        if (certBuilder_ == null) {
+          cert_ = builderForValue.build();
+        } else {
+          certBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       */
+      public Builder mergeCert(com.panacea.datapool.v2alpha1.PoolProto.DataCert value) {
+        if (certBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            cert_ != null &&
+            cert_ != com.panacea.datapool.v2alpha1.PoolProto.DataCert.getDefaultInstance()) {
+            getCertBuilder().mergeFrom(value);
+          } else {
+            cert_ = value;
+          }
+        } else {
+          certBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       */
+      public Builder clearCert() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cert_ = null;
+        if (certBuilder_ != null) {
+          certBuilder_.dispose();
+          certBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataCert.Builder getCertBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCertFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataCertOrBuilder getCertOrBuilder() {
+        if (certBuilder_ != null) {
+          return certBuilder_.getMessageOrBuilder();
+        } else {
+          return cert_ == null ?
+              com.panacea.datapool.v2alpha1.PoolProto.DataCert.getDefaultInstance() : cert_;
+        }
+      }
+      /**
+       * <pre>
+       * certificate for data validation
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataCert, com.panacea.datapool.v2alpha1.PoolProto.DataCert.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataCertOrBuilder> 
+          getCertFieldBuilder() {
+        if (certBuilder_ == null) {
+          certBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.DataCert, com.panacea.datapool.v2alpha1.PoolProto.DataCert.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataCertOrBuilder>(
+                  getCert(),
+                  getParentForChildren(),
+                  isClean());
+          cert_ = null;
+        }
+        return certBuilder_;
+      }
+
+      private java.lang.Object seller_ = "";
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @return The seller.
+       */
+      public java.lang.String getSeller() {
+        java.lang.Object ref = seller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @return The bytes for seller.
+       */
+      public com.google.protobuf.ByteString
+          getSellerBytes() {
+        java.lang.Object ref = seller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @param value The seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        seller_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeller() {
+        seller_ = getDefaultInstance().getSeller();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @param value The bytes for seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        seller_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.MsgSellData)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.MsgSellData)
+    private static final com.panacea.datapool.v2alpha1.TxProto.MsgSellData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.TxProto.MsgSellData();
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSellData>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSellData>() {
+      @java.lang.Override
+      public MsgSellData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSellData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSellData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.TxProto.MsgSellData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSellDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.MsgSellDataResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSellDataResponse defines the Msg/SellData response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.MsgSellDataResponse}
+   */
+  public static final class MsgSellDataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.MsgSellDataResponse)
+      MsgSellDataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSellDataResponse.newBuilder() to construct.
+    private MsgSellDataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSellDataResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSellDataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellDataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellDataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse other = (com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSellDataResponse defines the Msg/SellData response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.MsgSellDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.MsgSellDataResponse)
+        com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellDataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgSellDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse build() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse buildPartial() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse result = new com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse other) {
+        if (other == com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.MsgSellDataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.MsgSellDataResponse)
+    private static final com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse();
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSellDataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSellDataResponse>() {
+      @java.lang.Override
+      public MsgSellDataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSellDataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSellDataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.TxProto.MsgSellDataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgBuyDataPassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.MsgBuyDataPass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+     * @return Whether the payment field is set.
+     */
+    boolean hasPayment();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+     * @return The payment.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPayment();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPaymentOrBuilder();
+
+    /**
+     * <pre>
+     * 'panacea1' address of buyer
+     * </pre>
+     *
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    java.lang.String getBuyer();
+    /**
+     * <pre>
+     * 'panacea1' address of buyer
+     * </pre>
+     *
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    com.google.protobuf.ByteString
+        getBuyerBytes();
+  }
+  /**
+   * <pre>
+   * MsgBuyDataPass defines the Msg/BuyDataPass request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.MsgBuyDataPass}
+   */
+  public static final class MsgBuyDataPass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.MsgBuyDataPass)
+      MsgBuyDataPassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgBuyDataPass.newBuilder() to construct.
+    private MsgBuyDataPass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgBuyDataPass() {
+      buyer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgBuyDataPass();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPass_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.class, com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 2;
+    private long round_ = 0L;
+    /**
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int PAYMENT_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin payment_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+     * @return Whether the payment field is set.
+     */
+    @java.lang.Override
+    public boolean hasPayment() {
+      return payment_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+     * @return The payment.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPayment() {
+      return payment_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : payment_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPaymentOrBuilder() {
+      return payment_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : payment_;
+    }
+
+    public static final int BUYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buyer_ = "";
+    /**
+     * <pre>
+     * 'panacea1' address of buyer
+     * </pre>
+     *
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The buyer.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyer() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 'panacea1' address of buyer
+     * </pre>
+     *
+     * <code>string buyer = 4 [json_name = "buyer"];</code>
+     * @return The bytes for buyer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerBytes() {
+      java.lang.Object ref = buyer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (round_ != 0L) {
+        output.writeUInt64(2, round_);
+      }
+      if (payment_ != null) {
+        output.writeMessage(3, getPayment());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, buyer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, round_);
+      }
+      if (payment_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPayment());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, buyer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass other = (com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getRound()
+          != other.getRound()) return false;
+      if (hasPayment() != other.hasPayment()) return false;
+      if (hasPayment()) {
+        if (!getPayment()
+            .equals(other.getPayment())) return false;
+      }
+      if (!getBuyer()
+          .equals(other.getBuyer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      if (hasPayment()) {
+        hash = (37 * hash) + PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPayment().hashCode();
+      }
+      hash = (37 * hash) + BUYER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgBuyDataPass defines the Msg/BuyDataPass request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.MsgBuyDataPass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.MsgBuyDataPass)
+        com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPass_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.class, com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        round_ = 0L;
+        payment_ = null;
+        if (paymentBuilder_ != null) {
+          paymentBuilder_.dispose();
+          paymentBuilder_ = null;
+        }
+        buyer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPass_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass build() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass buildPartial() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass result = new com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.payment_ = paymentBuilder_ == null
+              ? payment_
+              : paymentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.buyer_ = buyer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass other) {
+        if (other == com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (other.hasPayment()) {
+          mergePayment(other.getPayment());
+        }
+        if (!other.getBuyer().isEmpty()) {
+          buyer_ = other.buyer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getPaymentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                buyer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long round_ ;
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin payment_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> paymentBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       * @return Whether the payment field is set.
+       */
+      public boolean hasPayment() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       * @return The payment.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPayment() {
+        if (paymentBuilder_ == null) {
+          return payment_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : payment_;
+        } else {
+          return paymentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       */
+      public Builder setPayment(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (paymentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payment_ = value;
+        } else {
+          paymentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       */
+      public Builder setPayment(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (paymentBuilder_ == null) {
+          payment_ = builderForValue.build();
+        } else {
+          paymentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       */
+      public Builder mergePayment(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (paymentBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            payment_ != null &&
+            payment_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getPaymentBuilder().mergeFrom(value);
+          } else {
+            payment_ = value;
+          }
+        } else {
+          paymentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       */
+      public Builder clearPayment() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        payment_ = null;
+        if (paymentBuilder_ != null) {
+          paymentBuilder_.dispose();
+          paymentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPaymentBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaymentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPaymentOrBuilder() {
+        if (paymentBuilder_ != null) {
+          return paymentBuilder_.getMessageOrBuilder();
+        } else {
+          return payment_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : payment_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPaymentFieldBuilder() {
+        if (paymentBuilder_ == null) {
+          paymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getPayment(),
+                  getParentForChildren(),
+                  isClean());
+          payment_ = null;
+        }
+        return paymentBuilder_;
+      }
+
+      private java.lang.Object buyer_ = "";
+      /**
+       * <pre>
+       * 'panacea1' address of buyer
+       * </pre>
+       *
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return The buyer.
+       */
+      public java.lang.String getBuyer() {
+        java.lang.Object ref = buyer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of buyer
+       * </pre>
+       *
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return The bytes for buyer.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerBytes() {
+        java.lang.Object ref = buyer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of buyer
+       * </pre>
+       *
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @param value The buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        buyer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of buyer
+       * </pre>
+       *
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyer() {
+        buyer_ = getDefaultInstance().getBuyer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of buyer
+       * </pre>
+       *
+       * <code>string buyer = 4 [json_name = "buyer"];</code>
+       * @param value The bytes for buyer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        buyer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.MsgBuyDataPass)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.MsgBuyDataPass)
+    private static final com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass();
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgBuyDataPass>
+        PARSER = new com.google.protobuf.AbstractParser<MsgBuyDataPass>() {
+      @java.lang.Override
+      public MsgBuyDataPass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgBuyDataPass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgBuyDataPass> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgBuyDataPassResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.MsgBuyDataPassResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+     * @return The dataPassId.
+     */
+    long getDataPassId();
+  }
+  /**
+   * <pre>
+   * MsgBuyDataPassResponse defines the Msg/BuyDataPass response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.MsgBuyDataPassResponse}
+   */
+  public static final class MsgBuyDataPassResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.MsgBuyDataPassResponse)
+      MsgBuyDataPassResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgBuyDataPassResponse.newBuilder() to construct.
+    private MsgBuyDataPassResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgBuyDataPassResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgBuyDataPassResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPassResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPassResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 2;
+    private long round_ = 0L;
+    /**
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int DATA_PASS_ID_FIELD_NUMBER = 3;
+    private long dataPassId_ = 0L;
+    /**
+     * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+     * @return The dataPassId.
+     */
+    @java.lang.Override
+    public long getDataPassId() {
+      return dataPassId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (round_ != 0L) {
+        output.writeUInt64(2, round_);
+      }
+      if (dataPassId_ != 0L) {
+        output.writeUInt64(3, dataPassId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, round_);
+      }
+      if (dataPassId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, dataPassId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse other = (com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getRound()
+          != other.getRound()) return false;
+      if (getDataPassId()
+          != other.getDataPassId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      hash = (37 * hash) + DATA_PASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDataPassId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgBuyDataPassResponse defines the Msg/BuyDataPass response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.MsgBuyDataPassResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.MsgBuyDataPassResponse)
+        com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPassResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPassResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        round_ = 0L;
+        dataPassId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgBuyDataPassResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse build() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse buildPartial() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse result = new com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.dataPassId_ = dataPassId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse other) {
+        if (other == com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (other.getDataPassId() != 0L) {
+          setDataPassId(other.getDataPassId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                dataPassId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long round_ ;
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long dataPassId_ ;
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @return The dataPassId.
+       */
+      @java.lang.Override
+      public long getDataPassId() {
+        return dataPassId_;
+      }
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @param value The dataPassId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataPassId(long value) {
+
+        dataPassId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataPassId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dataPassId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.MsgBuyDataPassResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.MsgBuyDataPassResponse)
+    private static final com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse();
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgBuyDataPassResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgBuyDataPassResponse>() {
+      @java.lang.Override
+      public MsgBuyDataPassResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgBuyDataPassResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgBuyDataPassResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPassResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRedeemDataPassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.MsgRedeemDataPass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+     * @return The dataPassId.
+     */
+    long getDataPassId();
+
+    /**
+     * <pre>
+     * 'panacea1' address
+     * </pre>
+     *
+     * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+     * @return The redeemer.
+     */
+    java.lang.String getRedeemer();
+    /**
+     * <pre>
+     * 'panacea1' address
+     * </pre>
+     *
+     * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+     * @return The bytes for redeemer.
+     */
+    com.google.protobuf.ByteString
+        getRedeemerBytes();
+  }
+  /**
+   * <pre>
+   * MsgRedeemDataPass defines the Msg/RedeemDataPass request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.MsgRedeemDataPass}
+   */
+  public static final class MsgRedeemDataPass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.MsgRedeemDataPass)
+      MsgRedeemDataPassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRedeemDataPass.newBuilder() to construct.
+    private MsgRedeemDataPass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRedeemDataPass() {
+      redeemer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRedeemDataPass();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPass_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass.class, com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 2;
+    private long round_ = 0L;
+    /**
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int DATA_PASS_ID_FIELD_NUMBER = 3;
+    private long dataPassId_ = 0L;
+    /**
+     * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+     * @return The dataPassId.
+     */
+    @java.lang.Override
+    public long getDataPassId() {
+      return dataPassId_;
+    }
+
+    public static final int REDEEMER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redeemer_ = "";
+    /**
+     * <pre>
+     * 'panacea1' address
+     * </pre>
+     *
+     * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+     * @return The redeemer.
+     */
+    @java.lang.Override
+    public java.lang.String getRedeemer() {
+      java.lang.Object ref = redeemer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        redeemer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 'panacea1' address
+     * </pre>
+     *
+     * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+     * @return The bytes for redeemer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRedeemerBytes() {
+      java.lang.Object ref = redeemer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        redeemer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (round_ != 0L) {
+        output.writeUInt64(2, round_);
+      }
+      if (dataPassId_ != 0L) {
+        output.writeUInt64(3, dataPassId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, redeemer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, round_);
+      }
+      if (dataPassId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, dataPassId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, redeemer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass other = (com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getRound()
+          != other.getRound()) return false;
+      if (getDataPassId()
+          != other.getDataPassId()) return false;
+      if (!getRedeemer()
+          .equals(other.getRedeemer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      hash = (37 * hash) + DATA_PASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDataPassId());
+      hash = (37 * hash) + REDEEMER_FIELD_NUMBER;
+      hash = (53 * hash) + getRedeemer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRedeemDataPass defines the Msg/RedeemDataPass request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.MsgRedeemDataPass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.MsgRedeemDataPass)
+        com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPass_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass.class, com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        round_ = 0L;
+        dataPassId_ = 0L;
+        redeemer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPass_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass build() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass buildPartial() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass result = new com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.dataPassId_ = dataPassId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.redeemer_ = redeemer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass other) {
+        if (other == com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (other.getDataPassId() != 0L) {
+          setDataPassId(other.getDataPassId());
+        }
+        if (!other.getRedeemer().isEmpty()) {
+          redeemer_ = other.redeemer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                dataPassId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                redeemer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long round_ ;
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long dataPassId_ ;
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @return The dataPassId.
+       */
+      @java.lang.Override
+      public long getDataPassId() {
+        return dataPassId_;
+      }
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @param value The dataPassId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataPassId(long value) {
+
+        dataPassId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataPassId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dataPassId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object redeemer_ = "";
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @return The redeemer.
+       */
+      public java.lang.String getRedeemer() {
+        java.lang.Object ref = redeemer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          redeemer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @return The bytes for redeemer.
+       */
+      public com.google.protobuf.ByteString
+          getRedeemerBytes() {
+        java.lang.Object ref = redeemer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          redeemer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @param value The redeemer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedeemer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        redeemer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRedeemer() {
+        redeemer_ = getDefaultInstance().getRedeemer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @param value The bytes for redeemer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedeemerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        redeemer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.MsgRedeemDataPass)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.MsgRedeemDataPass)
+    private static final com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass();
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRedeemDataPass>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRedeemDataPass>() {
+      @java.lang.Override
+      public MsgRedeemDataPass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRedeemDataPass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRedeemDataPass> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRedeemDataPassResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.MsgRedeemDataPassResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+     * @return Whether the receipt field is set.
+     */
+    boolean hasReceipt();
+    /**
+     * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+     * @return The receipt.
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getReceipt();
+    /**
+     * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getReceiptOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgRedeemDataPassResponse defines the Msg/RedeemDataPass response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.MsgRedeemDataPassResponse}
+   */
+  public static final class MsgRedeemDataPassResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.MsgRedeemDataPassResponse)
+      MsgRedeemDataPassResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRedeemDataPassResponse.newBuilder() to construct.
+    private MsgRedeemDataPassResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRedeemDataPassResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRedeemDataPassResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPassResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPassResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.Builder.class);
+    }
+
+    public static final int RECEIPT_FIELD_NUMBER = 1;
+    private com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt receipt_;
+    /**
+     * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+     * @return Whether the receipt field is set.
+     */
+    @java.lang.Override
+    public boolean hasReceipt() {
+      return receipt_ != null;
+    }
+    /**
+     * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+     * @return The receipt.
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getReceipt() {
+      return receipt_ == null ? com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance() : receipt_;
+    }
+    /**
+     * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getReceiptOrBuilder() {
+      return receipt_ == null ? com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance() : receipt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (receipt_ != null) {
+        output.writeMessage(1, getReceipt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (receipt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getReceipt());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse other = (com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse) obj;
+
+      if (hasReceipt() != other.hasReceipt()) return false;
+      if (hasReceipt()) {
+        if (!getReceipt()
+            .equals(other.getReceipt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasReceipt()) {
+        hash = (37 * hash) + RECEIPT_FIELD_NUMBER;
+        hash = (53 * hash) + getReceipt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRedeemDataPassResponse defines the Msg/RedeemDataPass response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.MsgRedeemDataPassResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.MsgRedeemDataPassResponse)
+        com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPassResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPassResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        receipt_ = null;
+        if (receiptBuilder_ != null) {
+          receiptBuilder_.dispose();
+          receiptBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPassResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse build() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse buildPartial() {
+        com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse result = new com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.receipt_ = receiptBuilder_ == null
+              ? receipt_
+              : receiptBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse other) {
+        if (other == com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.getDefaultInstance()) return this;
+        if (other.hasReceipt()) {
+          mergeReceipt(other.getReceipt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getReceiptFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt receipt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> receiptBuilder_;
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       * @return Whether the receipt field is set.
+       */
+      public boolean hasReceipt() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       * @return The receipt.
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getReceipt() {
+        if (receiptBuilder_ == null) {
+          return receipt_ == null ? com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance() : receipt_;
+        } else {
+          return receiptBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       */
+      public Builder setReceipt(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt value) {
+        if (receiptBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          receipt_ = value;
+        } else {
+          receiptBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       */
+      public Builder setReceipt(
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder builderForValue) {
+        if (receiptBuilder_ == null) {
+          receipt_ = builderForValue.build();
+        } else {
+          receiptBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       */
+      public Builder mergeReceipt(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt value) {
+        if (receiptBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            receipt_ != null &&
+            receipt_ != com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance()) {
+            getReceiptBuilder().mergeFrom(value);
+          } else {
+            receipt_ = value;
+          }
+        } else {
+          receiptBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       */
+      public Builder clearReceipt() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        receipt_ = null;
+        if (receiptBuilder_ != null) {
+          receiptBuilder_.dispose();
+          receiptBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder getReceiptBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getReceiptFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getReceiptOrBuilder() {
+        if (receiptBuilder_ != null) {
+          return receiptBuilder_.getMessageOrBuilder();
+        } else {
+          return receipt_ == null ?
+              com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance() : receipt_;
+        }
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+          getReceiptFieldBuilder() {
+        if (receiptBuilder_ == null) {
+          receiptBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder>(
+                  getReceipt(),
+                  getParentForChildren(),
+                  isClean());
+          receipt_ = null;
+        }
+        return receiptBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.MsgRedeemDataPassResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.MsgRedeemDataPassResponse)
+    private static final com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse();
+    }
+
+    public static com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRedeemDataPassResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRedeemDataPassResponse>() {
+      @java.lang.Override
+      public MsgRedeemDataPassResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRedeemDataPassResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRedeemDataPassResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_MsgCreatePool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_MsgCreatePool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_MsgCreatePoolResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_MsgCreatePoolResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_MsgSellData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_MsgSellData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_MsgSellDataResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_MsgSellDataResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_MsgBuyDataPass_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_MsgBuyDataPass_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_MsgBuyDataPassResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_MsgBuyDataPassResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPass_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPass_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPassResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_MsgRedeemDataPassResponse_fieldAccessorTable;
 
@@ -100,13 +6128,13 @@ public final class TxProto {
       "datapool.v2alpha1.MsgBuyDataPassResponse" +
       "\022t\n\016RedeemDataPass\022,.panacea.datapool.v2" +
       "alpha1.MsgRedeemDataPass\0324.panacea.datap" +
-      "ool.v2alpha1.MsgRedeemDataPassResponseB\344" +
+      "ool.v2alpha1.MsgRedeemDataPassResponseB\342" +
       "\001\n\035com.panacea.datapool.v2alpha1B\007TxProt" +
-      "oP\001Z4github.com/medibloc/panacea-core/v2" +
-      "/x/datapool/types\242\002\003PDX\252\002\031Panacea.Datapo" +
-      "ol.V2alpha1\312\002\031Panacea\\Datapool\\V2alpha1\342" +
-      "\002%Panacea\\Datapool\\V2alpha1\\GPBMetadata\352" +
-      "\002\033Panacea::Datapool::V2alpha1b\006proto3"
+      "oZ4github.com/medibloc/panacea-core/v2/x" +
+      "/datapool/types\242\002\003PDX\252\002\031Panacea.Datapool" +
+      ".V2alpha1\312\002\031Panacea\\Datapool\\V2alpha1\342\002%" +
+      "Panacea\\Datapool\\V2alpha1\\GPBMetadata\352\002\033" +
+      "Panacea::Datapool::V2alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

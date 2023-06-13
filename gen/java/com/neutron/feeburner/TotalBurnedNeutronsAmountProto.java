@@ -14,9 +14,617 @@ public final class TotalBurnedNeutronsAmountProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TotalBurnedNeutronsAmountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.feeburner.TotalBurnedNeutronsAmount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+  }
+  /**
+   * <pre>
+   * TotalBurnedNeutronsAmount defines total amount of burned neutron fees
+   * </pre>
+   *
+   * Protobuf type {@code neutron.feeburner.TotalBurnedNeutronsAmount}
+   */
+  public static final class TotalBurnedNeutronsAmount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.feeburner.TotalBurnedNeutronsAmount)
+      TotalBurnedNeutronsAmountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TotalBurnedNeutronsAmount.newBuilder() to construct.
+    private TotalBurnedNeutronsAmount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotalBurnedNeutronsAmount() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TotalBurnedNeutronsAmount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.feeburner.TotalBurnedNeutronsAmountProto.internal_static_neutron_feeburner_TotalBurnedNeutronsAmount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.feeburner.TotalBurnedNeutronsAmountProto.internal_static_neutron_feeburner_TotalBurnedNeutronsAmount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.class, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.Builder.class);
+    }
+
+    public static final int COIN_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (coin_ != null) {
+        output.writeMessage(1, getCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount)) {
+        return super.equals(obj);
+      }
+      com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount other = (com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount) obj;
+
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TotalBurnedNeutronsAmount defines total amount of burned neutron fees
+     * </pre>
+     *
+     * Protobuf type {@code neutron.feeburner.TotalBurnedNeutronsAmount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.feeburner.TotalBurnedNeutronsAmount)
+        com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.feeburner.TotalBurnedNeutronsAmountProto.internal_static_neutron_feeburner_TotalBurnedNeutronsAmount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.feeburner.TotalBurnedNeutronsAmountProto.internal_static_neutron_feeburner_TotalBurnedNeutronsAmount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.class, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.Builder.class);
+      }
+
+      // Construct using com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.feeburner.TotalBurnedNeutronsAmountProto.internal_static_neutron_feeburner_TotalBurnedNeutronsAmount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount getDefaultInstanceForType() {
+        return com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount build() {
+        com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount buildPartial() {
+        com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount result = new com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount) {
+          return mergeFrom((com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount other) {
+        if (other == com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.getDefaultInstance()) return this;
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.feeburner.TotalBurnedNeutronsAmount)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.feeburner.TotalBurnedNeutronsAmount)
+    private static final com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount();
+    }
+
+    public static com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TotalBurnedNeutronsAmount>
+        PARSER = new com.google.protobuf.AbstractParser<TotalBurnedNeutronsAmount>() {
+      @java.lang.Override
+      public TotalBurnedNeutronsAmount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotalBurnedNeutronsAmount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotalBurnedNeutronsAmount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_feeburner_TotalBurnedNeutronsAmount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_feeburner_TotalBurnedNeutronsAmount_fieldAccessorTable;
 
@@ -33,13 +641,12 @@ public final class TotalBurnedNeutronsAmountProto {
       "s/base/v1beta1/coin.proto\032\024gogoproto/gog" +
       "o.proto\"_\n\031TotalBurnedNeutronsAmount\022B\n\004" +
       "coin\030\001 \001(\0132\031.cosmos.base.v1beta1.CoinB\023\310" +
-      "\336\037\000\362\336\037\013yaml:\"coin\"R\004coinB\316\001\n\025com.neutron" +
+      "\336\037\000\362\336\037\013yaml:\"coin\"R\004coinB\314\001\n\025com.neutron" +
       ".feeburnerB\036TotalBurnedNeutronsAmountPro" +
-      "toP\001Z0github.com/neutron-org/neutron/x/f" +
-      "eeburner/types\242\002\003NFX\252\002\021Neutron.Feeburner" +
-      "\312\002\021Neutron\\Feeburner\342\002\035Neutron\\Feeburner" +
-      "\\GPBMetadata\352\002\022Neutron::Feeburnerb\006proto" +
-      "3"
+      "toZ0github.com/neutron-org/neutron/x/fee" +
+      "burner/types\242\002\003NFX\252\002\021Neutron.Feeburner\312\002" +
+      "\021Neutron\\Feeburner\342\002\035Neutron\\Feeburner\\G" +
+      "PBMetadata\352\002\022Neutron::Feeburnerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,14 +14,1646 @@ public final class MintProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MinterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irishub.mint.Minter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * time which the last update was made to the minter
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastUpdate field is set.
+     */
+    boolean hasLastUpdate();
+    /**
+     * <pre>
+     * time which the last update was made to the minter
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastUpdate.
+     */
+    com.google.protobuf.Timestamp getLastUpdate();
+    /**
+     * <pre>
+     * time which the last update was made to the minter
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastUpdateOrBuilder();
+
+    /**
+     * <pre>
+     * base inflation
+     * </pre>
+     *
+     * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+     * @return The inflationBase.
+     */
+    java.lang.String getInflationBase();
+    /**
+     * <pre>
+     * base inflation
+     * </pre>
+     *
+     * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+     * @return The bytes for inflationBase.
+     */
+    com.google.protobuf.ByteString
+        getInflationBaseBytes();
+  }
+  /**
+   * <pre>
+   * Minter represents the minting state
+   * </pre>
+   *
+   * Protobuf type {@code irishub.mint.Minter}
+   */
+  public static final class Minter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irishub.mint.Minter)
+      MinterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Minter.newBuilder() to construct.
+    private Minter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Minter() {
+      inflationBase_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Minter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irishub.mint.MintProto.internal_static_irishub_mint_Minter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irishub.mint.MintProto.internal_static_irishub_mint_Minter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irishub.mint.MintProto.Minter.class, com.irishub.mint.MintProto.Minter.Builder.class);
+    }
+
+    public static final int LAST_UPDATE_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp lastUpdate_;
+    /**
+     * <pre>
+     * time which the last update was made to the minter
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastUpdate field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastUpdate() {
+      return lastUpdate_ != null;
+    }
+    /**
+     * <pre>
+     * time which the last update was made to the minter
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastUpdate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastUpdate() {
+      return lastUpdate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdate_;
+    }
+    /**
+     * <pre>
+     * time which the last update was made to the minter
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastUpdateOrBuilder() {
+      return lastUpdate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdate_;
+    }
+
+    public static final int INFLATION_BASE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object inflationBase_ = "";
+    /**
+     * <pre>
+     * base inflation
+     * </pre>
+     *
+     * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+     * @return The inflationBase.
+     */
+    @java.lang.Override
+    public java.lang.String getInflationBase() {
+      java.lang.Object ref = inflationBase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inflationBase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * base inflation
+     * </pre>
+     *
+     * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+     * @return The bytes for inflationBase.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInflationBaseBytes() {
+      java.lang.Object ref = inflationBase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inflationBase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lastUpdate_ != null) {
+        output.writeMessage(1, getLastUpdate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflationBase_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, inflationBase_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lastUpdate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLastUpdate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflationBase_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, inflationBase_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irishub.mint.MintProto.Minter)) {
+        return super.equals(obj);
+      }
+      com.irishub.mint.MintProto.Minter other = (com.irishub.mint.MintProto.Minter) obj;
+
+      if (hasLastUpdate() != other.hasLastUpdate()) return false;
+      if (hasLastUpdate()) {
+        if (!getLastUpdate()
+            .equals(other.getLastUpdate())) return false;
+      }
+      if (!getInflationBase()
+          .equals(other.getInflationBase())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLastUpdate()) {
+        hash = (37 * hash) + LAST_UPDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getLastUpdate().hashCode();
+      }
+      hash = (37 * hash) + INFLATION_BASE_FIELD_NUMBER;
+      hash = (53 * hash) + getInflationBase().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irishub.mint.MintProto.Minter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irishub.mint.MintProto.Minter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irishub.mint.MintProto.Minter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.mint.MintProto.Minter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irishub.mint.MintProto.Minter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Minter represents the minting state
+     * </pre>
+     *
+     * Protobuf type {@code irishub.mint.Minter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irishub.mint.Minter)
+        com.irishub.mint.MintProto.MinterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irishub.mint.MintProto.internal_static_irishub_mint_Minter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irishub.mint.MintProto.internal_static_irishub_mint_Minter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irishub.mint.MintProto.Minter.class, com.irishub.mint.MintProto.Minter.Builder.class);
+      }
+
+      // Construct using com.irishub.mint.MintProto.Minter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lastUpdate_ = null;
+        if (lastUpdateBuilder_ != null) {
+          lastUpdateBuilder_.dispose();
+          lastUpdateBuilder_ = null;
+        }
+        inflationBase_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irishub.mint.MintProto.internal_static_irishub_mint_Minter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irishub.mint.MintProto.Minter getDefaultInstanceForType() {
+        return com.irishub.mint.MintProto.Minter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irishub.mint.MintProto.Minter build() {
+        com.irishub.mint.MintProto.Minter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irishub.mint.MintProto.Minter buildPartial() {
+        com.irishub.mint.MintProto.Minter result = new com.irishub.mint.MintProto.Minter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irishub.mint.MintProto.Minter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lastUpdate_ = lastUpdateBuilder_ == null
+              ? lastUpdate_
+              : lastUpdateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.inflationBase_ = inflationBase_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irishub.mint.MintProto.Minter) {
+          return mergeFrom((com.irishub.mint.MintProto.Minter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irishub.mint.MintProto.Minter other) {
+        if (other == com.irishub.mint.MintProto.Minter.getDefaultInstance()) return this;
+        if (other.hasLastUpdate()) {
+          mergeLastUpdate(other.getLastUpdate());
+        }
+        if (!other.getInflationBase().isEmpty()) {
+          inflationBase_ = other.inflationBase_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLastUpdateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                inflationBase_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp lastUpdate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastUpdateBuilder_;
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastUpdate field is set.
+       */
+      public boolean hasLastUpdate() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The lastUpdate.
+       */
+      public com.google.protobuf.Timestamp getLastUpdate() {
+        if (lastUpdateBuilder_ == null) {
+          return lastUpdate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdate_;
+        } else {
+          return lastUpdateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastUpdate(com.google.protobuf.Timestamp value) {
+        if (lastUpdateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastUpdate_ = value;
+        } else {
+          lastUpdateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastUpdate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastUpdateBuilder_ == null) {
+          lastUpdate_ = builderForValue.build();
+        } else {
+          lastUpdateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeLastUpdate(com.google.protobuf.Timestamp value) {
+        if (lastUpdateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            lastUpdate_ != null &&
+            lastUpdate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastUpdateBuilder().mergeFrom(value);
+          } else {
+            lastUpdate_ = value;
+          }
+        } else {
+          lastUpdateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearLastUpdate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lastUpdate_ = null;
+        if (lastUpdateBuilder_ != null) {
+          lastUpdateBuilder_.dispose();
+          lastUpdateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastUpdateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLastUpdateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastUpdateOrBuilder() {
+        if (lastUpdateBuilder_ != null) {
+          return lastUpdateBuilder_.getMessageOrBuilder();
+        } else {
+          return lastUpdate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdate_;
+        }
+      }
+      /**
+       * <pre>
+       * time which the last update was made to the minter
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_update = 1 [json_name = "lastUpdate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_update&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastUpdateFieldBuilder() {
+        if (lastUpdateBuilder_ == null) {
+          lastUpdateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastUpdate(),
+                  getParentForChildren(),
+                  isClean());
+          lastUpdate_ = null;
+        }
+        return lastUpdateBuilder_;
+      }
+
+      private java.lang.Object inflationBase_ = "";
+      /**
+       * <pre>
+       * base inflation
+       * </pre>
+       *
+       * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+       * @return The inflationBase.
+       */
+      public java.lang.String getInflationBase() {
+        java.lang.Object ref = inflationBase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inflationBase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * base inflation
+       * </pre>
+       *
+       * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+       * @return The bytes for inflationBase.
+       */
+      public com.google.protobuf.ByteString
+          getInflationBaseBytes() {
+        java.lang.Object ref = inflationBase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inflationBase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * base inflation
+       * </pre>
+       *
+       * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+       * @param value The inflationBase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflationBase(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        inflationBase_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * base inflation
+       * </pre>
+       *
+       * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInflationBase() {
+        inflationBase_ = getDefaultInstance().getInflationBase();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * base inflation
+       * </pre>
+       *
+       * <code>string inflation_base = 2 [json_name = "inflationBase", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"inflation_base&#92;""];</code>
+       * @param value The bytes for inflationBase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflationBaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        inflationBase_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irishub.mint.Minter)
+    }
+
+    // @@protoc_insertion_point(class_scope:irishub.mint.Minter)
+    private static final com.irishub.mint.MintProto.Minter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irishub.mint.MintProto.Minter();
+    }
+
+    public static com.irishub.mint.MintProto.Minter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Minter>
+        PARSER = new com.google.protobuf.AbstractParser<Minter>() {
+      @java.lang.Override
+      public Minter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Minter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Minter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irishub.mint.MintProto.Minter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irishub.mint.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    java.lang.String getMintDenom();
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    com.google.protobuf.ByteString
+        getMintDenomBytes();
+
+    /**
+     * <pre>
+     * inflation rate
+     * </pre>
+     *
+     * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The inflation.
+     */
+    java.lang.String getInflation();
+    /**
+     * <pre>
+     * inflation rate
+     * </pre>
+     *
+     * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for inflation.
+     */
+    com.google.protobuf.ByteString
+        getInflationBytes();
+  }
+  /**
+   * <pre>
+   * Params defines mint module's parameters
+   * </pre>
+   *
+   * Protobuf type {@code irishub.mint.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irishub.mint.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      mintDenom_ = "";
+      inflation_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irishub.mint.MintProto.internal_static_irishub_mint_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irishub.mint.MintProto.internal_static_irishub_mint_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irishub.mint.MintProto.Params.class, com.irishub.mint.MintProto.Params.Builder.class);
+    }
+
+    public static final int MINT_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintDenom_ = "";
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getMintDenom() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintDenomBytes() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INFLATION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object inflation_ = "";
+    /**
+     * <pre>
+     * inflation rate
+     * </pre>
+     *
+     * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The inflation.
+     */
+    @java.lang.Override
+    public java.lang.String getInflation() {
+      java.lang.Object ref = inflation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inflation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * inflation rate
+     * </pre>
+     *
+     * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for inflation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInflationBytes() {
+      java.lang.Object ref = inflation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inflation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mintDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, inflation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mintDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, inflation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irishub.mint.MintProto.Params)) {
+        return super.equals(obj);
+      }
+      com.irishub.mint.MintProto.Params other = (com.irishub.mint.MintProto.Params) obj;
+
+      if (!getMintDenom()
+          .equals(other.getMintDenom())) return false;
+      if (!getInflation()
+          .equals(other.getInflation())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINT_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getMintDenom().hashCode();
+      hash = (37 * hash) + INFLATION_FIELD_NUMBER;
+      hash = (53 * hash) + getInflation().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irishub.mint.MintProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irishub.mint.MintProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irishub.mint.MintProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.mint.MintProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irishub.mint.MintProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines mint module's parameters
+     * </pre>
+     *
+     * Protobuf type {@code irishub.mint.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irishub.mint.Params)
+        com.irishub.mint.MintProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irishub.mint.MintProto.internal_static_irishub_mint_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irishub.mint.MintProto.internal_static_irishub_mint_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irishub.mint.MintProto.Params.class, com.irishub.mint.MintProto.Params.Builder.class);
+      }
+
+      // Construct using com.irishub.mint.MintProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintDenom_ = "";
+        inflation_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irishub.mint.MintProto.internal_static_irishub_mint_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irishub.mint.MintProto.Params getDefaultInstanceForType() {
+        return com.irishub.mint.MintProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irishub.mint.MintProto.Params build() {
+        com.irishub.mint.MintProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irishub.mint.MintProto.Params buildPartial() {
+        com.irishub.mint.MintProto.Params result = new com.irishub.mint.MintProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irishub.mint.MintProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintDenom_ = mintDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.inflation_ = inflation_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irishub.mint.MintProto.Params) {
+          return mergeFrom((com.irishub.mint.MintProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irishub.mint.MintProto.Params other) {
+        if (other == com.irishub.mint.MintProto.Params.getDefaultInstance()) return this;
+        if (!other.getMintDenom().isEmpty()) {
+          mintDenom_ = other.mintDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getInflation().isEmpty()) {
+          inflation_ = other.inflation_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mintDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                inflation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mintDenom_ = "";
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The mintDenom.
+       */
+      public java.lang.String getMintDenom() {
+        java.lang.Object ref = mintDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The bytes for mintDenom.
+       */
+      public com.google.protobuf.ByteString
+          getMintDenomBytes() {
+        java.lang.Object ref = mintDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintDenom() {
+        mintDenom_ = getDefaultInstance().getMintDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The bytes for mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object inflation_ = "";
+      /**
+       * <pre>
+       * inflation rate
+       * </pre>
+       *
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The inflation.
+       */
+      public java.lang.String getInflation() {
+        java.lang.Object ref = inflation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inflation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * inflation rate
+       * </pre>
+       *
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for inflation.
+       */
+      public com.google.protobuf.ByteString
+          getInflationBytes() {
+        java.lang.Object ref = inflation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inflation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * inflation rate
+       * </pre>
+       *
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The inflation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        inflation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation rate
+       * </pre>
+       *
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInflation() {
+        inflation_ = getDefaultInstance().getInflation();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation rate
+       * </pre>
+       *
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for inflation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        inflation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irishub.mint.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:irishub.mint.Params)
+    private static final com.irishub.mint.MintProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irishub.mint.MintProto.Params();
+    }
+
+    public static com.irishub.mint.MintProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irishub.mint.MintProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irishub_mint_Minter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irishub_mint_Minter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irishub_mint_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irishub_mint_Params_fieldAccessorTable;
 
@@ -43,12 +1675,12 @@ public final class MintProto {
       "inflation_base\"R\rinflationBase\"{\n\006Params" +
       "\022\035\n\nmint_denom\030\001 \001(\tR\tmintDenom\022L\n\tinfla" +
       "tion\030\002 \001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/co" +
-      "smos-sdk/types.DecR\tinflation:\004\230\240\037\000B\235\001\n\020" +
-      "com.irishub.mintB\tMintProtoP\001Z-github.co" +
-      "m/irisnet/irishub/modules/mint/types\242\002\003I" +
-      "MX\252\002\014Irishub.Mint\312\002\014Irishub\\Mint\342\002\030Irish" +
-      "ub\\Mint\\GPBMetadata\352\002\rIrishub::Mintb\006pro" +
-      "to3"
+      "smos-sdk/types.DecR\tinflation:\004\230\240\037\000B\233\001\n\020" +
+      "com.irishub.mintB\tMintProtoZ-github.com/" +
+      "irisnet/irishub/modules/mint/types\242\002\003IMX" +
+      "\252\002\014Irishub.Mint\312\002\014Irishub\\Mint\342\002\030Irishub" +
+      "\\Mint\\GPBMetadata\352\002\rIrishub::Mintb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

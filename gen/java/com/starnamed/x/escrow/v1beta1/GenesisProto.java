@@ -14,9 +14,1141 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.escrow.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.starnamed.x.escrow.v1beta1.TypesProto.Escrow> 
+        getEscrowsList();
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    com.starnamed.x.escrow.v1beta1.TypesProto.Escrow getEscrows(int index);
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    int getEscrowsCount();
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder> 
+        getEscrowsOrBuilderList();
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder getEscrowsOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 last_block_time = 2 [json_name = "lastBlockTime"];</code>
+     * @return The lastBlockTime.
+     */
+    long getLastBlockTime();
+
+    /**
+     * <code>uint64 next_escrow_id = 3 [json_name = "nextEscrowId"];</code>
+     * @return The nextEscrowId.
+     */
+    long getNextEscrowId();
+
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.starnamed.x.escrow.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.starnamed.x.escrow.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the Escrow module's genesis state
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.escrow.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.escrow.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      escrows_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.escrow.v1beta1.GenesisProto.internal_static_starnamed_x_escrow_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.escrow.v1beta1.GenesisProto.internal_static_starnamed_x_escrow_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState.class, com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int ESCROWS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.starnamed.x.escrow.v1beta1.TypesProto.Escrow> escrows_;
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.starnamed.x.escrow.v1beta1.TypesProto.Escrow> getEscrowsList() {
+      return escrows_;
+    }
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder> 
+        getEscrowsOrBuilderList() {
+      return escrows_;
+    }
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getEscrowsCount() {
+      return escrows_.size();
+    }
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow getEscrows(int index) {
+      return escrows_.get(index);
+    }
+    /**
+     * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder getEscrowsOrBuilder(
+        int index) {
+      return escrows_.get(index);
+    }
+
+    public static final int LAST_BLOCK_TIME_FIELD_NUMBER = 2;
+    private long lastBlockTime_ = 0L;
+    /**
+     * <code>uint64 last_block_time = 2 [json_name = "lastBlockTime"];</code>
+     * @return The lastBlockTime.
+     */
+    @java.lang.Override
+    public long getLastBlockTime() {
+      return lastBlockTime_;
+    }
+
+    public static final int NEXT_ESCROW_ID_FIELD_NUMBER = 3;
+    private long nextEscrowId_ = 0L;
+    /**
+     * <code>uint64 next_escrow_id = 3 [json_name = "nextEscrowId"];</code>
+     * @return The nextEscrowId.
+     */
+    @java.lang.Override
+    public long getNextEscrowId() {
+      return nextEscrowId_;
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 4;
+    private com.starnamed.x.escrow.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.starnamed.x.escrow.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.starnamed.x.escrow.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.escrow.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.starnamed.x.escrow.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < escrows_.size(); i++) {
+        output.writeMessage(1, escrows_.get(i));
+      }
+      if (lastBlockTime_ != 0L) {
+        output.writeUInt64(2, lastBlockTime_);
+      }
+      if (nextEscrowId_ != 0L) {
+        output.writeUInt64(3, nextEscrowId_);
+      }
+      if (params_ != null) {
+        output.writeMessage(4, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < escrows_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, escrows_.get(i));
+      }
+      if (lastBlockTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, lastBlockTime_);
+      }
+      if (nextEscrowId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, nextEscrowId_);
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState other = (com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getEscrowsList()
+          .equals(other.getEscrowsList())) return false;
+      if (getLastBlockTime()
+          != other.getLastBlockTime()) return false;
+      if (getNextEscrowId()
+          != other.getNextEscrowId()) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEscrowsCount() > 0) {
+        hash = (37 * hash) + ESCROWS_FIELD_NUMBER;
+        hash = (53 * hash) + getEscrowsList().hashCode();
+      }
+      hash = (37 * hash) + LAST_BLOCK_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastBlockTime());
+      hash = (37 * hash) + NEXT_ESCROW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNextEscrowId());
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the Escrow module's genesis state
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.escrow.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.escrow.v1beta1.GenesisState)
+        com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.escrow.v1beta1.GenesisProto.internal_static_starnamed_x_escrow_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.escrow.v1beta1.GenesisProto.internal_static_starnamed_x_escrow_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState.class, com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (escrowsBuilder_ == null) {
+          escrows_ = java.util.Collections.emptyList();
+        } else {
+          escrows_ = null;
+          escrowsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lastBlockTime_ = 0L;
+        nextEscrowId_ = 0L;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.escrow.v1beta1.GenesisProto.internal_static_starnamed_x_escrow_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState build() {
+        com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState result = new com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState result) {
+        if (escrowsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            escrows_ = java.util.Collections.unmodifiableList(escrows_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.escrows_ = escrows_;
+        } else {
+          result.escrows_ = escrowsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lastBlockTime_ = lastBlockTime_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nextEscrowId_ = nextEscrowId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (escrowsBuilder_ == null) {
+          if (!other.escrows_.isEmpty()) {
+            if (escrows_.isEmpty()) {
+              escrows_ = other.escrows_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEscrowsIsMutable();
+              escrows_.addAll(other.escrows_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.escrows_.isEmpty()) {
+            if (escrowsBuilder_.isEmpty()) {
+              escrowsBuilder_.dispose();
+              escrowsBuilder_ = null;
+              escrows_ = other.escrows_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              escrowsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEscrowsFieldBuilder() : null;
+            } else {
+              escrowsBuilder_.addAllMessages(other.escrows_);
+            }
+          }
+        }
+        if (other.getLastBlockTime() != 0L) {
+          setLastBlockTime(other.getLastBlockTime());
+        }
+        if (other.getNextEscrowId() != 0L) {
+          setNextEscrowId(other.getNextEscrowId());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.starnamed.x.escrow.v1beta1.TypesProto.Escrow m =
+                    input.readMessage(
+                        com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.parser(),
+                        extensionRegistry);
+                if (escrowsBuilder_ == null) {
+                  ensureEscrowsIsMutable();
+                  escrows_.add(m);
+                } else {
+                  escrowsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                lastBlockTime_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                nextEscrowId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.starnamed.x.escrow.v1beta1.TypesProto.Escrow> escrows_ =
+        java.util.Collections.emptyList();
+      private void ensureEscrowsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          escrows_ = new java.util.ArrayList<com.starnamed.x.escrow.v1beta1.TypesProto.Escrow>(escrows_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.escrow.v1beta1.TypesProto.Escrow, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder, com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder> escrowsBuilder_;
+
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.starnamed.x.escrow.v1beta1.TypesProto.Escrow> getEscrowsList() {
+        if (escrowsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(escrows_);
+        } else {
+          return escrowsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public int getEscrowsCount() {
+        if (escrowsBuilder_ == null) {
+          return escrows_.size();
+        } else {
+          return escrowsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow getEscrows(int index) {
+        if (escrowsBuilder_ == null) {
+          return escrows_.get(index);
+        } else {
+          return escrowsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrows(
+          int index, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow value) {
+        if (escrowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEscrowsIsMutable();
+          escrows_.set(index, value);
+          onChanged();
+        } else {
+          escrowsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrows(
+          int index, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder builderForValue) {
+        if (escrowsBuilder_ == null) {
+          ensureEscrowsIsMutable();
+          escrows_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          escrowsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEscrows(com.starnamed.x.escrow.v1beta1.TypesProto.Escrow value) {
+        if (escrowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEscrowsIsMutable();
+          escrows_.add(value);
+          onChanged();
+        } else {
+          escrowsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEscrows(
+          int index, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow value) {
+        if (escrowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEscrowsIsMutable();
+          escrows_.add(index, value);
+          onChanged();
+        } else {
+          escrowsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEscrows(
+          com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder builderForValue) {
+        if (escrowsBuilder_ == null) {
+          ensureEscrowsIsMutable();
+          escrows_.add(builderForValue.build());
+          onChanged();
+        } else {
+          escrowsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEscrows(
+          int index, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder builderForValue) {
+        if (escrowsBuilder_ == null) {
+          ensureEscrowsIsMutable();
+          escrows_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          escrowsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllEscrows(
+          java.lang.Iterable<? extends com.starnamed.x.escrow.v1beta1.TypesProto.Escrow> values) {
+        if (escrowsBuilder_ == null) {
+          ensureEscrowsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, escrows_);
+          onChanged();
+        } else {
+          escrowsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEscrows() {
+        if (escrowsBuilder_ == null) {
+          escrows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          escrowsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeEscrows(int index) {
+        if (escrowsBuilder_ == null) {
+          ensureEscrowsIsMutable();
+          escrows_.remove(index);
+          onChanged();
+        } else {
+          escrowsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder getEscrowsBuilder(
+          int index) {
+        return getEscrowsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder getEscrowsOrBuilder(
+          int index) {
+        if (escrowsBuilder_ == null) {
+          return escrows_.get(index);  } else {
+          return escrowsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder> 
+           getEscrowsOrBuilderList() {
+        if (escrowsBuilder_ != null) {
+          return escrowsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(escrows_);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder addEscrowsBuilder() {
+        return getEscrowsFieldBuilder().addBuilder(
+            com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder addEscrowsBuilder(
+          int index) {
+        return getEscrowsFieldBuilder().addBuilder(
+            index, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .starnamed.x.escrow.v1beta1.Escrow escrows = 1 [json_name = "escrows", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder> 
+           getEscrowsBuilderList() {
+        return getEscrowsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.escrow.v1beta1.TypesProto.Escrow, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder, com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder> 
+          getEscrowsFieldBuilder() {
+        if (escrowsBuilder_ == null) {
+          escrowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.starnamed.x.escrow.v1beta1.TypesProto.Escrow, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder, com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder>(
+                  escrows_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          escrows_ = null;
+        }
+        return escrowsBuilder_;
+      }
+
+      private long lastBlockTime_ ;
+      /**
+       * <code>uint64 last_block_time = 2 [json_name = "lastBlockTime"];</code>
+       * @return The lastBlockTime.
+       */
+      @java.lang.Override
+      public long getLastBlockTime() {
+        return lastBlockTime_;
+      }
+      /**
+       * <code>uint64 last_block_time = 2 [json_name = "lastBlockTime"];</code>
+       * @param value The lastBlockTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastBlockTime(long value) {
+
+        lastBlockTime_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_block_time = 2 [json_name = "lastBlockTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastBlockTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lastBlockTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long nextEscrowId_ ;
+      /**
+       * <code>uint64 next_escrow_id = 3 [json_name = "nextEscrowId"];</code>
+       * @return The nextEscrowId.
+       */
+      @java.lang.Override
+      public long getNextEscrowId() {
+        return nextEscrowId_;
+      }
+      /**
+       * <code>uint64 next_escrow_id = 3 [json_name = "nextEscrowId"];</code>
+       * @param value The nextEscrowId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextEscrowId(long value) {
+
+        nextEscrowId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 next_escrow_id = 3 [json_name = "nextEscrowId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextEscrowId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nextEscrowId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.starnamed.x.escrow.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.escrow.v1beta1.ParamsProto.Params, com.starnamed.x.escrow.v1beta1.ParamsProto.Params.Builder, com.starnamed.x.escrow.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.starnamed.x.escrow.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.starnamed.x.escrow.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.starnamed.x.escrow.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.starnamed.x.escrow.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.starnamed.x.escrow.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            params_ != null &&
+            params_ != com.starnamed.x.escrow.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.starnamed.x.escrow.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.starnamed.x.escrow.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.starnamed.x.escrow.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.escrow.v1beta1.ParamsProto.Params, com.starnamed.x.escrow.v1beta1.ParamsProto.Params.Builder, com.starnamed.x.escrow.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.starnamed.x.escrow.v1beta1.ParamsProto.Params, com.starnamed.x.escrow.v1beta1.ParamsProto.Params.Builder, com.starnamed.x.escrow.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.escrow.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.escrow.v1beta1.GenesisState)
+    private static final com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.escrow.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_escrow_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_escrow_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -37,13 +1169,13 @@ public final class GenesisProto {
       "st_block_time\030\002 \001(\004R\rlastBlockTime\022$\n\016ne" +
       "xt_escrow_id\030\003 \001(\004R\014nextEscrowId\022@\n\006para" +
       "ms\030\004 \001(\0132\".starnamed.x.escrow.v1beta1.Pa" +
-      "ramsB\004\310\336\037\000R\006paramsB\346\001\n\036com.starnamed.x.e" +
-      "scrow.v1beta1B\014GenesisProtoP\001Z+github.co" +
-      "m/iov-one/starnamed/x/escrow/types\242\002\003SXE" +
-      "\252\002\032Starnamed.X.Escrow.V1beta1\312\002\032Starname" +
-      "d\\X\\Escrow\\V1beta1\342\002&Starnamed\\X\\Escrow\\" +
-      "V1beta1\\GPBMetadata\352\002\035Starnamed::X::Escr" +
-      "ow::V1beta1b\006proto3"
+      "ramsB\004\310\336\037\000R\006paramsB\344\001\n\036com.starnamed.x.e" +
+      "scrow.v1beta1B\014GenesisProtoZ+github.com/" +
+      "iov-one/starnamed/x/escrow/types\242\002\003SXE\252\002" +
+      "\032Starnamed.X.Escrow.V1beta1\312\002\032Starnamed\\" +
+      "X\\Escrow\\V1beta1\342\002&Starnamed\\X\\Escrow\\V1" +
+      "beta1\\GPBMetadata\352\002\035Starnamed::X::Escrow" +
+      "::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

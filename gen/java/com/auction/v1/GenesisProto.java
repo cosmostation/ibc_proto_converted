@@ -14,14 +14,2656 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:auction.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.auction.v1.GenesisProto.Params getParams();
+    /**
+     * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.auction.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    java.util.List<com.auction.v1.AuctionProto.Auction> 
+        getAuctionsList();
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    com.auction.v1.AuctionProto.Auction getAuctions(int index);
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    int getAuctionsCount();
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    java.util.List<? extends com.auction.v1.AuctionProto.AuctionOrBuilder> 
+        getAuctionsOrBuilderList();
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    com.auction.v1.AuctionProto.AuctionOrBuilder getAuctionsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    java.util.List<com.auction.v1.AuctionProto.Bid> 
+        getBidsList();
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    com.auction.v1.AuctionProto.Bid getBids(int index);
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    int getBidsCount();
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    java.util.List<? extends com.auction.v1.AuctionProto.BidOrBuilder> 
+        getBidsOrBuilderList();
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    com.auction.v1.AuctionProto.BidOrBuilder getBidsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    java.util.List<com.auction.v1.AuctionProto.TokenPrice> 
+        getTokenPricesList();
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    com.auction.v1.AuctionProto.TokenPrice getTokenPrices(int index);
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    int getTokenPricesCount();
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    java.util.List<? extends com.auction.v1.AuctionProto.TokenPriceOrBuilder> 
+        getTokenPricesOrBuilderList();
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    com.auction.v1.AuctionProto.TokenPriceOrBuilder getTokenPricesOrBuilder(
+        int index);
+
+    /**
+     * <code>uint32 last_auction_id = 5 [json_name = "lastAuctionId"];</code>
+     * @return The lastAuctionId.
+     */
+    int getLastAuctionId();
+
+    /**
+     * <code>uint64 last_bid_id = 6 [json_name = "lastBidId"];</code>
+     * @return The lastBidId.
+     */
+    long getLastBidId();
+  }
+  /**
+   * Protobuf type {@code auction.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:auction.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      auctions_ = java.util.Collections.emptyList();
+      bids_ = java.util.Collections.emptyList();
+      tokenPrices_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.auction.v1.GenesisProto.internal_static_auction_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.auction.v1.GenesisProto.internal_static_auction_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.auction.v1.GenesisProto.GenesisState.class, com.auction.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.auction.v1.GenesisProto.Params params_;
+    /**
+     * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.auction.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.auction.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.auction.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int AUCTIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.auction.v1.AuctionProto.Auction> auctions_;
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.auction.v1.AuctionProto.Auction> getAuctionsList() {
+      return auctions_;
+    }
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.auction.v1.AuctionProto.AuctionOrBuilder> 
+        getAuctionsOrBuilderList() {
+      return auctions_;
+    }
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    @java.lang.Override
+    public int getAuctionsCount() {
+      return auctions_.size();
+    }
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.Auction getAuctions(int index) {
+      return auctions_.get(index);
+    }
+    /**
+     * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.AuctionOrBuilder getAuctionsOrBuilder(
+        int index) {
+      return auctions_.get(index);
+    }
+
+    public static final int BIDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.auction.v1.AuctionProto.Bid> bids_;
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.auction.v1.AuctionProto.Bid> getBidsList() {
+      return bids_;
+    }
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.auction.v1.AuctionProto.BidOrBuilder> 
+        getBidsOrBuilderList() {
+      return bids_;
+    }
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    @java.lang.Override
+    public int getBidsCount() {
+      return bids_.size();
+    }
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.Bid getBids(int index) {
+      return bids_.get(index);
+    }
+    /**
+     * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.BidOrBuilder getBidsOrBuilder(
+        int index) {
+      return bids_.get(index);
+    }
+
+    public static final int TOKEN_PRICES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.auction.v1.AuctionProto.TokenPrice> tokenPrices_;
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.auction.v1.AuctionProto.TokenPrice> getTokenPricesList() {
+      return tokenPrices_;
+    }
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.auction.v1.AuctionProto.TokenPriceOrBuilder> 
+        getTokenPricesOrBuilderList() {
+      return tokenPrices_;
+    }
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public int getTokenPricesCount() {
+      return tokenPrices_.size();
+    }
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.TokenPrice getTokenPrices(int index) {
+      return tokenPrices_.get(index);
+    }
+    /**
+     * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.TokenPriceOrBuilder getTokenPricesOrBuilder(
+        int index) {
+      return tokenPrices_.get(index);
+    }
+
+    public static final int LAST_AUCTION_ID_FIELD_NUMBER = 5;
+    private int lastAuctionId_ = 0;
+    /**
+     * <code>uint32 last_auction_id = 5 [json_name = "lastAuctionId"];</code>
+     * @return The lastAuctionId.
+     */
+    @java.lang.Override
+    public int getLastAuctionId() {
+      return lastAuctionId_;
+    }
+
+    public static final int LAST_BID_ID_FIELD_NUMBER = 6;
+    private long lastBidId_ = 0L;
+    /**
+     * <code>uint64 last_bid_id = 6 [json_name = "lastBidId"];</code>
+     * @return The lastBidId.
+     */
+    @java.lang.Override
+    public long getLastBidId() {
+      return lastBidId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < auctions_.size(); i++) {
+        output.writeMessage(2, auctions_.get(i));
+      }
+      for (int i = 0; i < bids_.size(); i++) {
+        output.writeMessage(3, bids_.get(i));
+      }
+      for (int i = 0; i < tokenPrices_.size(); i++) {
+        output.writeMessage(4, tokenPrices_.get(i));
+      }
+      if (lastAuctionId_ != 0) {
+        output.writeUInt32(5, lastAuctionId_);
+      }
+      if (lastBidId_ != 0L) {
+        output.writeUInt64(6, lastBidId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < auctions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, auctions_.get(i));
+      }
+      for (int i = 0; i < bids_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, bids_.get(i));
+      }
+      for (int i = 0; i < tokenPrices_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, tokenPrices_.get(i));
+      }
+      if (lastAuctionId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, lastAuctionId_);
+      }
+      if (lastBidId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, lastBidId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.auction.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.auction.v1.GenesisProto.GenesisState other = (com.auction.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getAuctionsList()
+          .equals(other.getAuctionsList())) return false;
+      if (!getBidsList()
+          .equals(other.getBidsList())) return false;
+      if (!getTokenPricesList()
+          .equals(other.getTokenPricesList())) return false;
+      if (getLastAuctionId()
+          != other.getLastAuctionId()) return false;
+      if (getLastBidId()
+          != other.getLastBidId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getAuctionsCount() > 0) {
+        hash = (37 * hash) + AUCTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getAuctionsList().hashCode();
+      }
+      if (getBidsCount() > 0) {
+        hash = (37 * hash) + BIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBidsList().hashCode();
+      }
+      if (getTokenPricesCount() > 0) {
+        hash = (37 * hash) + TOKEN_PRICES_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenPricesList().hashCode();
+      }
+      hash = (37 * hash) + LAST_AUCTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLastAuctionId();
+      hash = (37 * hash) + LAST_BID_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastBidId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.auction.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.auction.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.auction.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.auction.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code auction.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:auction.v1.GenesisState)
+        com.auction.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.auction.v1.GenesisProto.internal_static_auction_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.auction.v1.GenesisProto.internal_static_auction_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.auction.v1.GenesisProto.GenesisState.class, com.auction.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.auction.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (auctionsBuilder_ == null) {
+          auctions_ = java.util.Collections.emptyList();
+        } else {
+          auctions_ = null;
+          auctionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (bidsBuilder_ == null) {
+          bids_ = java.util.Collections.emptyList();
+        } else {
+          bids_ = null;
+          bidsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (tokenPricesBuilder_ == null) {
+          tokenPrices_ = java.util.Collections.emptyList();
+        } else {
+          tokenPrices_ = null;
+          tokenPricesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lastAuctionId_ = 0;
+        lastBidId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.auction.v1.GenesisProto.internal_static_auction_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.auction.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.auction.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.auction.v1.GenesisProto.GenesisState build() {
+        com.auction.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.auction.v1.GenesisProto.GenesisState buildPartial() {
+        com.auction.v1.GenesisProto.GenesisState result = new com.auction.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.auction.v1.GenesisProto.GenesisState result) {
+        if (auctionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            auctions_ = java.util.Collections.unmodifiableList(auctions_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.auctions_ = auctions_;
+        } else {
+          result.auctions_ = auctionsBuilder_.build();
+        }
+        if (bidsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            bids_ = java.util.Collections.unmodifiableList(bids_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.bids_ = bids_;
+        } else {
+          result.bids_ = bidsBuilder_.build();
+        }
+        if (tokenPricesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            tokenPrices_ = java.util.Collections.unmodifiableList(tokenPrices_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.tokenPrices_ = tokenPrices_;
+        } else {
+          result.tokenPrices_ = tokenPricesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.auction.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.lastAuctionId_ = lastAuctionId_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.lastBidId_ = lastBidId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.auction.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.auction.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.auction.v1.GenesisProto.GenesisState other) {
+        if (other == com.auction.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (auctionsBuilder_ == null) {
+          if (!other.auctions_.isEmpty()) {
+            if (auctions_.isEmpty()) {
+              auctions_ = other.auctions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAuctionsIsMutable();
+              auctions_.addAll(other.auctions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.auctions_.isEmpty()) {
+            if (auctionsBuilder_.isEmpty()) {
+              auctionsBuilder_.dispose();
+              auctionsBuilder_ = null;
+              auctions_ = other.auctions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              auctionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAuctionsFieldBuilder() : null;
+            } else {
+              auctionsBuilder_.addAllMessages(other.auctions_);
+            }
+          }
+        }
+        if (bidsBuilder_ == null) {
+          if (!other.bids_.isEmpty()) {
+            if (bids_.isEmpty()) {
+              bids_ = other.bids_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureBidsIsMutable();
+              bids_.addAll(other.bids_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bids_.isEmpty()) {
+            if (bidsBuilder_.isEmpty()) {
+              bidsBuilder_.dispose();
+              bidsBuilder_ = null;
+              bids_ = other.bids_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              bidsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBidsFieldBuilder() : null;
+            } else {
+              bidsBuilder_.addAllMessages(other.bids_);
+            }
+          }
+        }
+        if (tokenPricesBuilder_ == null) {
+          if (!other.tokenPrices_.isEmpty()) {
+            if (tokenPrices_.isEmpty()) {
+              tokenPrices_ = other.tokenPrices_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureTokenPricesIsMutable();
+              tokenPrices_.addAll(other.tokenPrices_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenPrices_.isEmpty()) {
+            if (tokenPricesBuilder_.isEmpty()) {
+              tokenPricesBuilder_.dispose();
+              tokenPricesBuilder_ = null;
+              tokenPrices_ = other.tokenPrices_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              tokenPricesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenPricesFieldBuilder() : null;
+            } else {
+              tokenPricesBuilder_.addAllMessages(other.tokenPrices_);
+            }
+          }
+        }
+        if (other.getLastAuctionId() != 0) {
+          setLastAuctionId(other.getLastAuctionId());
+        }
+        if (other.getLastBidId() != 0L) {
+          setLastBidId(other.getLastBidId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.auction.v1.AuctionProto.Auction m =
+                    input.readMessage(
+                        com.auction.v1.AuctionProto.Auction.parser(),
+                        extensionRegistry);
+                if (auctionsBuilder_ == null) {
+                  ensureAuctionsIsMutable();
+                  auctions_.add(m);
+                } else {
+                  auctionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.auction.v1.AuctionProto.Bid m =
+                    input.readMessage(
+                        com.auction.v1.AuctionProto.Bid.parser(),
+                        extensionRegistry);
+                if (bidsBuilder_ == null) {
+                  ensureBidsIsMutable();
+                  bids_.add(m);
+                } else {
+                  bidsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.auction.v1.AuctionProto.TokenPrice m =
+                    input.readMessage(
+                        com.auction.v1.AuctionProto.TokenPrice.parser(),
+                        extensionRegistry);
+                if (tokenPricesBuilder_ == null) {
+                  ensureTokenPricesIsMutable();
+                  tokenPrices_.add(m);
+                } else {
+                  tokenPricesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 40: {
+                lastAuctionId_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                lastBidId_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.auction.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.auction.v1.GenesisProto.Params, com.auction.v1.GenesisProto.Params.Builder, com.auction.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.auction.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.auction.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.auction.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.auction.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.auction.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.auction.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.auction.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.auction.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.auction.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.auction.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.auction.v1.GenesisProto.Params, com.auction.v1.GenesisProto.Params.Builder, com.auction.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.auction.v1.GenesisProto.Params, com.auction.v1.GenesisProto.Params.Builder, com.auction.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.auction.v1.AuctionProto.Auction> auctions_ =
+        java.util.Collections.emptyList();
+      private void ensureAuctionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          auctions_ = new java.util.ArrayList<com.auction.v1.AuctionProto.Auction>(auctions_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.Auction, com.auction.v1.AuctionProto.Auction.Builder, com.auction.v1.AuctionProto.AuctionOrBuilder> auctionsBuilder_;
+
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.Auction> getAuctionsList() {
+        if (auctionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(auctions_);
+        } else {
+          return auctionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public int getAuctionsCount() {
+        if (auctionsBuilder_ == null) {
+          return auctions_.size();
+        } else {
+          return auctionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public com.auction.v1.AuctionProto.Auction getAuctions(int index) {
+        if (auctionsBuilder_ == null) {
+          return auctions_.get(index);
+        } else {
+          return auctionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder setAuctions(
+          int index, com.auction.v1.AuctionProto.Auction value) {
+        if (auctionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuctionsIsMutable();
+          auctions_.set(index, value);
+          onChanged();
+        } else {
+          auctionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder setAuctions(
+          int index, com.auction.v1.AuctionProto.Auction.Builder builderForValue) {
+        if (auctionsBuilder_ == null) {
+          ensureAuctionsIsMutable();
+          auctions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          auctionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder addAuctions(com.auction.v1.AuctionProto.Auction value) {
+        if (auctionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuctionsIsMutable();
+          auctions_.add(value);
+          onChanged();
+        } else {
+          auctionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder addAuctions(
+          int index, com.auction.v1.AuctionProto.Auction value) {
+        if (auctionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuctionsIsMutable();
+          auctions_.add(index, value);
+          onChanged();
+        } else {
+          auctionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder addAuctions(
+          com.auction.v1.AuctionProto.Auction.Builder builderForValue) {
+        if (auctionsBuilder_ == null) {
+          ensureAuctionsIsMutable();
+          auctions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          auctionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder addAuctions(
+          int index, com.auction.v1.AuctionProto.Auction.Builder builderForValue) {
+        if (auctionsBuilder_ == null) {
+          ensureAuctionsIsMutable();
+          auctions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          auctionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder addAllAuctions(
+          java.lang.Iterable<? extends com.auction.v1.AuctionProto.Auction> values) {
+        if (auctionsBuilder_ == null) {
+          ensureAuctionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, auctions_);
+          onChanged();
+        } else {
+          auctionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder clearAuctions() {
+        if (auctionsBuilder_ == null) {
+          auctions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          auctionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public Builder removeAuctions(int index) {
+        if (auctionsBuilder_ == null) {
+          ensureAuctionsIsMutable();
+          auctions_.remove(index);
+          onChanged();
+        } else {
+          auctionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public com.auction.v1.AuctionProto.Auction.Builder getAuctionsBuilder(
+          int index) {
+        return getAuctionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public com.auction.v1.AuctionProto.AuctionOrBuilder getAuctionsOrBuilder(
+          int index) {
+        if (auctionsBuilder_ == null) {
+          return auctions_.get(index);  } else {
+          return auctionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public java.util.List<? extends com.auction.v1.AuctionProto.AuctionOrBuilder> 
+           getAuctionsOrBuilderList() {
+        if (auctionsBuilder_ != null) {
+          return auctionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(auctions_);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public com.auction.v1.AuctionProto.Auction.Builder addAuctionsBuilder() {
+        return getAuctionsFieldBuilder().addBuilder(
+            com.auction.v1.AuctionProto.Auction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public com.auction.v1.AuctionProto.Auction.Builder addAuctionsBuilder(
+          int index) {
+        return getAuctionsFieldBuilder().addBuilder(
+            index, com.auction.v1.AuctionProto.Auction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.Auction auctions = 2 [json_name = "auctions"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.Auction.Builder> 
+           getAuctionsBuilderList() {
+        return getAuctionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.Auction, com.auction.v1.AuctionProto.Auction.Builder, com.auction.v1.AuctionProto.AuctionOrBuilder> 
+          getAuctionsFieldBuilder() {
+        if (auctionsBuilder_ == null) {
+          auctionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.auction.v1.AuctionProto.Auction, com.auction.v1.AuctionProto.Auction.Builder, com.auction.v1.AuctionProto.AuctionOrBuilder>(
+                  auctions_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          auctions_ = null;
+        }
+        return auctionsBuilder_;
+      }
+
+      private java.util.List<com.auction.v1.AuctionProto.Bid> bids_ =
+        java.util.Collections.emptyList();
+      private void ensureBidsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          bids_ = new java.util.ArrayList<com.auction.v1.AuctionProto.Bid>(bids_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.Bid, com.auction.v1.AuctionProto.Bid.Builder, com.auction.v1.AuctionProto.BidOrBuilder> bidsBuilder_;
+
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.Bid> getBidsList() {
+        if (bidsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bids_);
+        } else {
+          return bidsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public int getBidsCount() {
+        if (bidsBuilder_ == null) {
+          return bids_.size();
+        } else {
+          return bidsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public com.auction.v1.AuctionProto.Bid getBids(int index) {
+        if (bidsBuilder_ == null) {
+          return bids_.get(index);
+        } else {
+          return bidsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder setBids(
+          int index, com.auction.v1.AuctionProto.Bid value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.set(index, value);
+          onChanged();
+        } else {
+          bidsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder setBids(
+          int index, com.auction.v1.AuctionProto.Bid.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder addBids(com.auction.v1.AuctionProto.Bid value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.add(value);
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder addBids(
+          int index, com.auction.v1.AuctionProto.Bid value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.add(index, value);
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder addBids(
+          com.auction.v1.AuctionProto.Bid.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder addBids(
+          int index, com.auction.v1.AuctionProto.Bid.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder addAllBids(
+          java.lang.Iterable<? extends com.auction.v1.AuctionProto.Bid> values) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bids_);
+          onChanged();
+        } else {
+          bidsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder clearBids() {
+        if (bidsBuilder_ == null) {
+          bids_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          bidsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public Builder removeBids(int index) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.remove(index);
+          onChanged();
+        } else {
+          bidsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public com.auction.v1.AuctionProto.Bid.Builder getBidsBuilder(
+          int index) {
+        return getBidsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public com.auction.v1.AuctionProto.BidOrBuilder getBidsOrBuilder(
+          int index) {
+        if (bidsBuilder_ == null) {
+          return bids_.get(index);  } else {
+          return bidsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public java.util.List<? extends com.auction.v1.AuctionProto.BidOrBuilder> 
+           getBidsOrBuilderList() {
+        if (bidsBuilder_ != null) {
+          return bidsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bids_);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public com.auction.v1.AuctionProto.Bid.Builder addBidsBuilder() {
+        return getBidsFieldBuilder().addBuilder(
+            com.auction.v1.AuctionProto.Bid.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public com.auction.v1.AuctionProto.Bid.Builder addBidsBuilder(
+          int index) {
+        return getBidsFieldBuilder().addBuilder(
+            index, com.auction.v1.AuctionProto.Bid.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.Bid bids = 3 [json_name = "bids"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.Bid.Builder> 
+           getBidsBuilderList() {
+        return getBidsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.Bid, com.auction.v1.AuctionProto.Bid.Builder, com.auction.v1.AuctionProto.BidOrBuilder> 
+          getBidsFieldBuilder() {
+        if (bidsBuilder_ == null) {
+          bidsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.auction.v1.AuctionProto.Bid, com.auction.v1.AuctionProto.Bid.Builder, com.auction.v1.AuctionProto.BidOrBuilder>(
+                  bids_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bids_ = null;
+        }
+        return bidsBuilder_;
+      }
+
+      private java.util.List<com.auction.v1.AuctionProto.TokenPrice> tokenPrices_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenPricesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          tokenPrices_ = new java.util.ArrayList<com.auction.v1.AuctionProto.TokenPrice>(tokenPrices_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.TokenPrice, com.auction.v1.AuctionProto.TokenPrice.Builder, com.auction.v1.AuctionProto.TokenPriceOrBuilder> tokenPricesBuilder_;
+
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.TokenPrice> getTokenPricesList() {
+        if (tokenPricesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenPrices_);
+        } else {
+          return tokenPricesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public int getTokenPricesCount() {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.size();
+        } else {
+          return tokenPricesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.TokenPrice getTokenPrices(int index) {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.get(index);
+        } else {
+          return tokenPricesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder setTokenPrices(
+          int index, com.auction.v1.AuctionProto.TokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.set(index, value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder setTokenPrices(
+          int index, com.auction.v1.AuctionProto.TokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(com.auction.v1.AuctionProto.TokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          int index, com.auction.v1.AuctionProto.TokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(index, value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          com.auction.v1.AuctionProto.TokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          int index, com.auction.v1.AuctionProto.TokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addAllTokenPrices(
+          java.lang.Iterable<? extends com.auction.v1.AuctionProto.TokenPrice> values) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenPrices_);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder clearTokenPrices() {
+        if (tokenPricesBuilder_ == null) {
+          tokenPrices_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public Builder removeTokenPrices(int index) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.remove(index);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.TokenPrice.Builder getTokenPricesBuilder(
+          int index) {
+        return getTokenPricesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.TokenPriceOrBuilder getTokenPricesOrBuilder(
+          int index) {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.get(index);  } else {
+          return tokenPricesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<? extends com.auction.v1.AuctionProto.TokenPriceOrBuilder> 
+           getTokenPricesOrBuilderList() {
+        if (tokenPricesBuilder_ != null) {
+          return tokenPricesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenPrices_);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.TokenPrice.Builder addTokenPricesBuilder() {
+        return getTokenPricesFieldBuilder().addBuilder(
+            com.auction.v1.AuctionProto.TokenPrice.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.TokenPrice.Builder addTokenPricesBuilder(
+          int index) {
+        return getTokenPricesFieldBuilder().addBuilder(
+            index, com.auction.v1.AuctionProto.TokenPrice.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.TokenPrice token_prices = 4 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.TokenPrice.Builder> 
+           getTokenPricesBuilderList() {
+        return getTokenPricesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.TokenPrice, com.auction.v1.AuctionProto.TokenPrice.Builder, com.auction.v1.AuctionProto.TokenPriceOrBuilder> 
+          getTokenPricesFieldBuilder() {
+        if (tokenPricesBuilder_ == null) {
+          tokenPricesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.auction.v1.AuctionProto.TokenPrice, com.auction.v1.AuctionProto.TokenPrice.Builder, com.auction.v1.AuctionProto.TokenPriceOrBuilder>(
+                  tokenPrices_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenPrices_ = null;
+        }
+        return tokenPricesBuilder_;
+      }
+
+      private int lastAuctionId_ ;
+      /**
+       * <code>uint32 last_auction_id = 5 [json_name = "lastAuctionId"];</code>
+       * @return The lastAuctionId.
+       */
+      @java.lang.Override
+      public int getLastAuctionId() {
+        return lastAuctionId_;
+      }
+      /**
+       * <code>uint32 last_auction_id = 5 [json_name = "lastAuctionId"];</code>
+       * @param value The lastAuctionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastAuctionId(int value) {
+
+        lastAuctionId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 last_auction_id = 5 [json_name = "lastAuctionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastAuctionId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        lastAuctionId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long lastBidId_ ;
+      /**
+       * <code>uint64 last_bid_id = 6 [json_name = "lastBidId"];</code>
+       * @return The lastBidId.
+       */
+      @java.lang.Override
+      public long getLastBidId() {
+        return lastBidId_;
+      }
+      /**
+       * <code>uint64 last_bid_id = 6 [json_name = "lastBidId"];</code>
+       * @param value The lastBidId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastBidId(long value) {
+
+        lastBidId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_bid_id = 6 [json_name = "lastBidId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastBidId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        lastBidId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:auction.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:auction.v1.GenesisState)
+    private static final com.auction.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.auction.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.auction.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.auction.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:auction.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 price_max_block_age = 1 [json_name = "priceMaxBlockAge"];</code>
+     * @return The priceMaxBlockAge.
+     */
+    long getPriceMaxBlockAge();
+
+    /**
+     * <code>uint64 minimum_bid_in_usomm = 2 [json_name = "minimumBidInUsomm"];</code>
+     * @return The minimumBidInUsomm.
+     */
+    long getMinimumBidInUsomm();
+
+    /**
+     * <code>uint64 auction_max_block_age = 3 [json_name = "auctionMaxBlockAge"];</code>
+     * @return The auctionMaxBlockAge.
+     */
+    long getAuctionMaxBlockAge();
+
+    /**
+     * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The auctionPriceDecreaseAccelerationRate.
+     */
+    java.lang.String getAuctionPriceDecreaseAccelerationRate();
+    /**
+     * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for auctionPriceDecreaseAccelerationRate.
+     */
+    com.google.protobuf.ByteString
+        getAuctionPriceDecreaseAccelerationRateBytes();
+  }
+  /**
+   * Protobuf type {@code auction.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:auction.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      auctionPriceDecreaseAccelerationRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.auction.v1.GenesisProto.internal_static_auction_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.auction.v1.GenesisProto.internal_static_auction_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.auction.v1.GenesisProto.Params.class, com.auction.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int PRICE_MAX_BLOCK_AGE_FIELD_NUMBER = 1;
+    private long priceMaxBlockAge_ = 0L;
+    /**
+     * <code>uint64 price_max_block_age = 1 [json_name = "priceMaxBlockAge"];</code>
+     * @return The priceMaxBlockAge.
+     */
+    @java.lang.Override
+    public long getPriceMaxBlockAge() {
+      return priceMaxBlockAge_;
+    }
+
+    public static final int MINIMUM_BID_IN_USOMM_FIELD_NUMBER = 2;
+    private long minimumBidInUsomm_ = 0L;
+    /**
+     * <code>uint64 minimum_bid_in_usomm = 2 [json_name = "minimumBidInUsomm"];</code>
+     * @return The minimumBidInUsomm.
+     */
+    @java.lang.Override
+    public long getMinimumBidInUsomm() {
+      return minimumBidInUsomm_;
+    }
+
+    public static final int AUCTION_MAX_BLOCK_AGE_FIELD_NUMBER = 3;
+    private long auctionMaxBlockAge_ = 0L;
+    /**
+     * <code>uint64 auction_max_block_age = 3 [json_name = "auctionMaxBlockAge"];</code>
+     * @return The auctionMaxBlockAge.
+     */
+    @java.lang.Override
+    public long getAuctionMaxBlockAge() {
+      return auctionMaxBlockAge_;
+    }
+
+    public static final int AUCTION_PRICE_DECREASE_ACCELERATION_RATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object auctionPriceDecreaseAccelerationRate_ = "";
+    /**
+     * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The auctionPriceDecreaseAccelerationRate.
+     */
+    @java.lang.Override
+    public java.lang.String getAuctionPriceDecreaseAccelerationRate() {
+      java.lang.Object ref = auctionPriceDecreaseAccelerationRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        auctionPriceDecreaseAccelerationRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for auctionPriceDecreaseAccelerationRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuctionPriceDecreaseAccelerationRateBytes() {
+      java.lang.Object ref = auctionPriceDecreaseAccelerationRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        auctionPriceDecreaseAccelerationRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (priceMaxBlockAge_ != 0L) {
+        output.writeUInt64(1, priceMaxBlockAge_);
+      }
+      if (minimumBidInUsomm_ != 0L) {
+        output.writeUInt64(2, minimumBidInUsomm_);
+      }
+      if (auctionMaxBlockAge_ != 0L) {
+        output.writeUInt64(3, auctionMaxBlockAge_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auctionPriceDecreaseAccelerationRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, auctionPriceDecreaseAccelerationRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (priceMaxBlockAge_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, priceMaxBlockAge_);
+      }
+      if (minimumBidInUsomm_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, minimumBidInUsomm_);
+      }
+      if (auctionMaxBlockAge_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, auctionMaxBlockAge_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auctionPriceDecreaseAccelerationRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, auctionPriceDecreaseAccelerationRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.auction.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.auction.v1.GenesisProto.Params other = (com.auction.v1.GenesisProto.Params) obj;
+
+      if (getPriceMaxBlockAge()
+          != other.getPriceMaxBlockAge()) return false;
+      if (getMinimumBidInUsomm()
+          != other.getMinimumBidInUsomm()) return false;
+      if (getAuctionMaxBlockAge()
+          != other.getAuctionMaxBlockAge()) return false;
+      if (!getAuctionPriceDecreaseAccelerationRate()
+          .equals(other.getAuctionPriceDecreaseAccelerationRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRICE_MAX_BLOCK_AGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPriceMaxBlockAge());
+      hash = (37 * hash) + MINIMUM_BID_IN_USOMM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinimumBidInUsomm());
+      hash = (37 * hash) + AUCTION_MAX_BLOCK_AGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionMaxBlockAge());
+      hash = (37 * hash) + AUCTION_PRICE_DECREASE_ACCELERATION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getAuctionPriceDecreaseAccelerationRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.auction.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.auction.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.auction.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.auction.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.auction.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code auction.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:auction.v1.Params)
+        com.auction.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.auction.v1.GenesisProto.internal_static_auction_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.auction.v1.GenesisProto.internal_static_auction_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.auction.v1.GenesisProto.Params.class, com.auction.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.auction.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        priceMaxBlockAge_ = 0L;
+        minimumBidInUsomm_ = 0L;
+        auctionMaxBlockAge_ = 0L;
+        auctionPriceDecreaseAccelerationRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.auction.v1.GenesisProto.internal_static_auction_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.auction.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.auction.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.auction.v1.GenesisProto.Params build() {
+        com.auction.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.auction.v1.GenesisProto.Params buildPartial() {
+        com.auction.v1.GenesisProto.Params result = new com.auction.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.auction.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.priceMaxBlockAge_ = priceMaxBlockAge_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minimumBidInUsomm_ = minimumBidInUsomm_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.auctionMaxBlockAge_ = auctionMaxBlockAge_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.auctionPriceDecreaseAccelerationRate_ = auctionPriceDecreaseAccelerationRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.auction.v1.GenesisProto.Params) {
+          return mergeFrom((com.auction.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.auction.v1.GenesisProto.Params other) {
+        if (other == com.auction.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (other.getPriceMaxBlockAge() != 0L) {
+          setPriceMaxBlockAge(other.getPriceMaxBlockAge());
+        }
+        if (other.getMinimumBidInUsomm() != 0L) {
+          setMinimumBidInUsomm(other.getMinimumBidInUsomm());
+        }
+        if (other.getAuctionMaxBlockAge() != 0L) {
+          setAuctionMaxBlockAge(other.getAuctionMaxBlockAge());
+        }
+        if (!other.getAuctionPriceDecreaseAccelerationRate().isEmpty()) {
+          auctionPriceDecreaseAccelerationRate_ = other.auctionPriceDecreaseAccelerationRate_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                priceMaxBlockAge_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                minimumBidInUsomm_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                auctionMaxBlockAge_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                auctionPriceDecreaseAccelerationRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long priceMaxBlockAge_ ;
+      /**
+       * <code>uint64 price_max_block_age = 1 [json_name = "priceMaxBlockAge"];</code>
+       * @return The priceMaxBlockAge.
+       */
+      @java.lang.Override
+      public long getPriceMaxBlockAge() {
+        return priceMaxBlockAge_;
+      }
+      /**
+       * <code>uint64 price_max_block_age = 1 [json_name = "priceMaxBlockAge"];</code>
+       * @param value The priceMaxBlockAge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPriceMaxBlockAge(long value) {
+
+        priceMaxBlockAge_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 price_max_block_age = 1 [json_name = "priceMaxBlockAge"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPriceMaxBlockAge() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        priceMaxBlockAge_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long minimumBidInUsomm_ ;
+      /**
+       * <code>uint64 minimum_bid_in_usomm = 2 [json_name = "minimumBidInUsomm"];</code>
+       * @return The minimumBidInUsomm.
+       */
+      @java.lang.Override
+      public long getMinimumBidInUsomm() {
+        return minimumBidInUsomm_;
+      }
+      /**
+       * <code>uint64 minimum_bid_in_usomm = 2 [json_name = "minimumBidInUsomm"];</code>
+       * @param value The minimumBidInUsomm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinimumBidInUsomm(long value) {
+
+        minimumBidInUsomm_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 minimum_bid_in_usomm = 2 [json_name = "minimumBidInUsomm"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinimumBidInUsomm() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        minimumBidInUsomm_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long auctionMaxBlockAge_ ;
+      /**
+       * <code>uint64 auction_max_block_age = 3 [json_name = "auctionMaxBlockAge"];</code>
+       * @return The auctionMaxBlockAge.
+       */
+      @java.lang.Override
+      public long getAuctionMaxBlockAge() {
+        return auctionMaxBlockAge_;
+      }
+      /**
+       * <code>uint64 auction_max_block_age = 3 [json_name = "auctionMaxBlockAge"];</code>
+       * @param value The auctionMaxBlockAge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionMaxBlockAge(long value) {
+
+        auctionMaxBlockAge_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_max_block_age = 3 [json_name = "auctionMaxBlockAge"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionMaxBlockAge() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        auctionMaxBlockAge_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object auctionPriceDecreaseAccelerationRate_ = "";
+      /**
+       * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The auctionPriceDecreaseAccelerationRate.
+       */
+      public java.lang.String getAuctionPriceDecreaseAccelerationRate() {
+        java.lang.Object ref = auctionPriceDecreaseAccelerationRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          auctionPriceDecreaseAccelerationRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for auctionPriceDecreaseAccelerationRate.
+       */
+      public com.google.protobuf.ByteString
+          getAuctionPriceDecreaseAccelerationRateBytes() {
+        java.lang.Object ref = auctionPriceDecreaseAccelerationRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          auctionPriceDecreaseAccelerationRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The auctionPriceDecreaseAccelerationRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionPriceDecreaseAccelerationRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        auctionPriceDecreaseAccelerationRate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionPriceDecreaseAccelerationRate() {
+        auctionPriceDecreaseAccelerationRate_ = getDefaultInstance().getAuctionPriceDecreaseAccelerationRate();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auction_price_decrease_acceleration_rate = 4 [json_name = "auctionPriceDecreaseAccelerationRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for auctionPriceDecreaseAccelerationRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionPriceDecreaseAccelerationRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        auctionPriceDecreaseAccelerationRate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:auction.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:auction.v1.Params)
+    private static final com.auction.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.auction.v1.GenesisProto.Params();
+    }
+
+    public static com.auction.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.auction.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_auction_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_auction_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_auction_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_auction_v1_Params_fieldAccessorTable;
 
@@ -50,11 +2692,11 @@ public final class GenesisProto {
       "\022auctionMaxBlockAge\022\206\001\n(auction_price_de" +
       "crease_acceleration_rate\030\004 \001(\tB.\310\336\037\000\332\336\037&" +
       "github.com/cosmos/cosmos-sdk/types.DecR$" +
-      "auctionPriceDecreaseAccelerationRateB\230\001\n" +
-      "\016com.auction.v1B\014GenesisProtoP\001Z/github." +
-      "com/peggyjv/sommelier/v4/x/auction/types" +
-      "\242\002\003AXX\252\002\nAuction.V1\312\002\nAuction\\V1\342\002\026Aucti" +
-      "on\\V1\\GPBMetadata\352\002\013Auction::V1b\006proto3"
+      "auctionPriceDecreaseAccelerationRateB\226\001\n" +
+      "\016com.auction.v1B\014GenesisProtoZ/github.co" +
+      "m/peggyjv/sommelier/v4/x/auction/types\242\002" +
+      "\003AXX\252\002\nAuction.V1\312\002\nAuction\\V1\342\002\026Auction" +
+      "\\V1\\GPBMetadata\352\002\013Auction::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

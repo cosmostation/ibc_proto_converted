@@ -14,9 +14,961 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.cellarfees.v1.ParamsProto.Params getParams();
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.cellarfees.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the feeAccrualCounters field is set.
+     */
+    boolean hasFeeAccrualCounters();
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     * @return The feeAccrualCounters.
+     */
+    com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getFeeAccrualCounters();
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     */
+    com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder getFeeAccrualCountersOrBuilder();
+
+    /**
+     * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The lastRewardSupplyPeak.
+     */
+    java.lang.String getLastRewardSupplyPeak();
+    /**
+     * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for lastRewardSupplyPeak.
+     */
+    com.google.protobuf.ByteString
+        getLastRewardSupplyPeakBytes();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the cellarfees module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code cellarfees.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      lastRewardSupplyPeak_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.GenesisProto.internal_static_cellarfees_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.GenesisProto.internal_static_cellarfees_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.GenesisProto.GenesisState.class, com.cellarfees.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.cellarfees.v1.ParamsProto.Params params_;
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.cellarfees.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.cellarfees.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int FEE_ACCRUAL_COUNTERS_FIELD_NUMBER = 2;
+    private com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters feeAccrualCounters_;
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the feeAccrualCounters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeeAccrualCounters() {
+      return feeAccrualCounters_ != null;
+    }
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     * @return The feeAccrualCounters.
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getFeeAccrualCounters() {
+      return feeAccrualCounters_ == null ? com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance() : feeAccrualCounters_;
+    }
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder getFeeAccrualCountersOrBuilder() {
+      return feeAccrualCounters_ == null ? com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance() : feeAccrualCounters_;
+    }
+
+    public static final int LAST_REWARD_SUPPLY_PEAK_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lastRewardSupplyPeak_ = "";
+    /**
+     * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The lastRewardSupplyPeak.
+     */
+    @java.lang.Override
+    public java.lang.String getLastRewardSupplyPeak() {
+      java.lang.Object ref = lastRewardSupplyPeak_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastRewardSupplyPeak_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for lastRewardSupplyPeak.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLastRewardSupplyPeakBytes() {
+      java.lang.Object ref = lastRewardSupplyPeak_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastRewardSupplyPeak_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (feeAccrualCounters_ != null) {
+        output.writeMessage(2, getFeeAccrualCounters());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastRewardSupplyPeak_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lastRewardSupplyPeak_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (feeAccrualCounters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFeeAccrualCounters());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastRewardSupplyPeak_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lastRewardSupplyPeak_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.GenesisProto.GenesisState other = (com.cellarfees.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasFeeAccrualCounters() != other.hasFeeAccrualCounters()) return false;
+      if (hasFeeAccrualCounters()) {
+        if (!getFeeAccrualCounters()
+            .equals(other.getFeeAccrualCounters())) return false;
+      }
+      if (!getLastRewardSupplyPeak()
+          .equals(other.getLastRewardSupplyPeak())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasFeeAccrualCounters()) {
+        hash = (37 * hash) + FEE_ACCRUAL_COUNTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeeAccrualCounters().hashCode();
+      }
+      hash = (37 * hash) + LAST_REWARD_SUPPLY_PEAK_FIELD_NUMBER;
+      hash = (53 * hash) + getLastRewardSupplyPeak().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the cellarfees module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code cellarfees.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.GenesisState)
+        com.cellarfees.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.GenesisProto.internal_static_cellarfees_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.GenesisProto.internal_static_cellarfees_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.GenesisProto.GenesisState.class, com.cellarfees.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        feeAccrualCounters_ = null;
+        if (feeAccrualCountersBuilder_ != null) {
+          feeAccrualCountersBuilder_.dispose();
+          feeAccrualCountersBuilder_ = null;
+        }
+        lastRewardSupplyPeak_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.GenesisProto.internal_static_cellarfees_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.cellarfees.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.GenesisProto.GenesisState build() {
+        com.cellarfees.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.GenesisProto.GenesisState buildPartial() {
+        com.cellarfees.v1.GenesisProto.GenesisState result = new com.cellarfees.v1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cellarfees.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feeAccrualCounters_ = feeAccrualCountersBuilder_ == null
+              ? feeAccrualCounters_
+              : feeAccrualCountersBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastRewardSupplyPeak_ = lastRewardSupplyPeak_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.cellarfees.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.GenesisProto.GenesisState other) {
+        if (other == com.cellarfees.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasFeeAccrualCounters()) {
+          mergeFeeAccrualCounters(other.getFeeAccrualCounters());
+        }
+        if (!other.getLastRewardSupplyPeak().isEmpty()) {
+          lastRewardSupplyPeak_ = other.lastRewardSupplyPeak_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getFeeAccrualCountersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                lastRewardSupplyPeak_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cellarfees.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cellarfees.v1.ParamsProto.Params, com.cellarfees.v1.ParamsProto.Params.Builder, com.cellarfees.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.cellarfees.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.cellarfees.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.cellarfees.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.cellarfees.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.cellarfees.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.cellarfees.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.cellarfees.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cellarfees.v1.ParamsProto.Params, com.cellarfees.v1.ParamsProto.Params.Builder, com.cellarfees.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cellarfees.v1.ParamsProto.Params, com.cellarfees.v1.ParamsProto.Params.Builder, com.cellarfees.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters feeAccrualCounters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder> feeAccrualCountersBuilder_;
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       * @return Whether the feeAccrualCounters field is set.
+       */
+      public boolean hasFeeAccrualCounters() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       * @return The feeAccrualCounters.
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getFeeAccrualCounters() {
+        if (feeAccrualCountersBuilder_ == null) {
+          return feeAccrualCounters_ == null ? com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance() : feeAccrualCounters_;
+        } else {
+          return feeAccrualCountersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeeAccrualCounters(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters value) {
+        if (feeAccrualCountersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feeAccrualCounters_ = value;
+        } else {
+          feeAccrualCountersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeeAccrualCounters(
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder builderForValue) {
+        if (feeAccrualCountersBuilder_ == null) {
+          feeAccrualCounters_ = builderForValue.build();
+        } else {
+          feeAccrualCountersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFeeAccrualCounters(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters value) {
+        if (feeAccrualCountersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            feeAccrualCounters_ != null &&
+            feeAccrualCounters_ != com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance()) {
+            getFeeAccrualCountersBuilder().mergeFrom(value);
+          } else {
+            feeAccrualCounters_ = value;
+          }
+        } else {
+          feeAccrualCountersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFeeAccrualCounters() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        feeAccrualCounters_ = null;
+        if (feeAccrualCountersBuilder_ != null) {
+          feeAccrualCountersBuilder_.dispose();
+          feeAccrualCountersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder getFeeAccrualCountersBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getFeeAccrualCountersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder getFeeAccrualCountersOrBuilder() {
+        if (feeAccrualCountersBuilder_ != null) {
+          return feeAccrualCountersBuilder_.getMessageOrBuilder();
+        } else {
+          return feeAccrualCounters_ == null ?
+              com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance() : feeAccrualCounters_;
+        }
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 2 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder> 
+          getFeeAccrualCountersFieldBuilder() {
+        if (feeAccrualCountersBuilder_ == null) {
+          feeAccrualCountersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder>(
+                  getFeeAccrualCounters(),
+                  getParentForChildren(),
+                  isClean());
+          feeAccrualCounters_ = null;
+        }
+        return feeAccrualCountersBuilder_;
+      }
+
+      private java.lang.Object lastRewardSupplyPeak_ = "";
+      /**
+       * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The lastRewardSupplyPeak.
+       */
+      public java.lang.String getLastRewardSupplyPeak() {
+        java.lang.Object ref = lastRewardSupplyPeak_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastRewardSupplyPeak_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for lastRewardSupplyPeak.
+       */
+      public com.google.protobuf.ByteString
+          getLastRewardSupplyPeakBytes() {
+        java.lang.Object ref = lastRewardSupplyPeak_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastRewardSupplyPeak_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The lastRewardSupplyPeak to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastRewardSupplyPeak(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        lastRewardSupplyPeak_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastRewardSupplyPeak() {
+        lastRewardSupplyPeak_ = getDefaultInstance().getLastRewardSupplyPeak();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_reward_supply_peak = 3 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for lastRewardSupplyPeak to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastRewardSupplyPeakBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        lastRewardSupplyPeak_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.GenesisState)
+    private static final com.cellarfees.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.cellarfees.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_GenesisState_fieldAccessorTable;
 
@@ -38,12 +990,11 @@ public final class GenesisProto {
       "ualCountersB\004\310\336\037\000R\022feeAccrualCounters\022e\n" +
       "\027last_reward_supply_peak\030\003 \001(\tB.\310\336\037\000\332\336\037&" +
       "github.com/cosmos/cosmos-sdk/types.IntR\024" +
-      "lastRewardSupplyPeakB\252\001\n\021com.cellarfees." +
-      "v1B\014GenesisProtoP\001Z2github.com/peggyjv/s" +
-      "ommelier/v4/x/cellarfees/types\242\002\003CXX\252\002\rC" +
-      "ellarfees.V1\312\002\rCellarfees\\V1\342\002\031Cellarfee" +
-      "s\\V1\\GPBMetadata\352\002\016Cellarfees::V1b\006proto" +
-      "3"
+      "lastRewardSupplyPeakB\250\001\n\021com.cellarfees." +
+      "v1B\014GenesisProtoZ2github.com/peggyjv/som" +
+      "melier/v4/x/cellarfees/types\242\002\003CXX\252\002\rCel" +
+      "larfees.V1\312\002\rCellarfees\\V1\342\002\031Cellarfees\\" +
+      "V1\\GPBMetadata\352\002\016Cellarfees::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

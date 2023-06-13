@@ -34,16 +34,16 @@ public final class ServiceProto {
       "es.identities.transactions.deputize.Mess" +
       "age\032I.assetmantle.modules.identities.tra" +
       "nsactions.deputize.TransactionResponse\"#" +
-      "\202\323\344\223\002\035\"\033/mantle/identities/deputizeB\276\002\n8" +
+      "\202\323\344\223\002\035\"\033/mantle/identities/deputizeB\274\002\n8" +
       "com.assetmantle.modules.identities.trans" +
-      "actions.deputizeB\014ServiceProtoP\001\242\002\005AMITD" +
-      "\252\0024Assetmantle.Modules.Identities.Transa" +
-      "ctions.Deputize\312\0024Assetmantle\\Modules\\Id" +
-      "entities\\Transactions\\Deputize\342\002@Assetma" +
-      "ntle\\Modules\\Identities\\Transactions\\Dep" +
-      "utize\\GPBMetadata\352\0028Assetmantle::Modules" +
-      "::Identities::Transactions::Deputizeb\006pr" +
-      "oto3"
+      "actions.deputizeB\014ServiceProto\242\002\005AMITD\252\002" +
+      "4Assetmantle.Modules.Identities.Transact" +
+      "ions.Deputize\312\0024Assetmantle\\Modules\\Iden" +
+      "tities\\Transactions\\Deputize\342\002@Assetmant" +
+      "le\\Modules\\Identities\\Transactions\\Deput" +
+      "ize\\GPBMetadata\352\0028Assetmantle::Modules::" +
+      "Identities::Transactions::Deputizeb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

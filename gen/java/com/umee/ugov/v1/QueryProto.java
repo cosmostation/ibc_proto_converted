@@ -14,14 +14,1027 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryMinGasPriceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.ugov.v1.QueryMinGasPrice)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryMinGasPrice is a request type.
+   * </pre>
+   *
+   * Protobuf type {@code umee.ugov.v1.QueryMinGasPrice}
+   */
+  public static final class QueryMinGasPrice extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.ugov.v1.QueryMinGasPrice)
+      QueryMinGasPriceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMinGasPrice.newBuilder() to construct.
+    private QueryMinGasPrice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMinGasPrice() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMinGasPrice();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPrice_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPrice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.ugov.v1.QueryProto.QueryMinGasPrice.class, com.umee.ugov.v1.QueryProto.QueryMinGasPrice.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.ugov.v1.QueryProto.QueryMinGasPrice)) {
+        return super.equals(obj);
+      }
+      com.umee.ugov.v1.QueryProto.QueryMinGasPrice other = (com.umee.ugov.v1.QueryProto.QueryMinGasPrice) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.ugov.v1.QueryProto.QueryMinGasPrice prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMinGasPrice is a request type.
+     * </pre>
+     *
+     * Protobuf type {@code umee.ugov.v1.QueryMinGasPrice}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.ugov.v1.QueryMinGasPrice)
+        com.umee.ugov.v1.QueryProto.QueryMinGasPriceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPrice_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPrice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.ugov.v1.QueryProto.QueryMinGasPrice.class, com.umee.ugov.v1.QueryProto.QueryMinGasPrice.Builder.class);
+      }
+
+      // Construct using com.umee.ugov.v1.QueryProto.QueryMinGasPrice.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPrice_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.QueryProto.QueryMinGasPrice getDefaultInstanceForType() {
+        return com.umee.ugov.v1.QueryProto.QueryMinGasPrice.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.QueryProto.QueryMinGasPrice build() {
+        com.umee.ugov.v1.QueryProto.QueryMinGasPrice result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.QueryProto.QueryMinGasPrice buildPartial() {
+        com.umee.ugov.v1.QueryProto.QueryMinGasPrice result = new com.umee.ugov.v1.QueryProto.QueryMinGasPrice(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.ugov.v1.QueryProto.QueryMinGasPrice) {
+          return mergeFrom((com.umee.ugov.v1.QueryProto.QueryMinGasPrice)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.ugov.v1.QueryProto.QueryMinGasPrice other) {
+        if (other == com.umee.ugov.v1.QueryProto.QueryMinGasPrice.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.ugov.v1.QueryMinGasPrice)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.ugov.v1.QueryMinGasPrice)
+    private static final com.umee.ugov.v1.QueryProto.QueryMinGasPrice DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.ugov.v1.QueryProto.QueryMinGasPrice();
+    }
+
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPrice getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMinGasPrice>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMinGasPrice>() {
+      @java.lang.Override
+      public QueryMinGasPrice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMinGasPrice> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMinGasPrice> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.ugov.v1.QueryProto.QueryMinGasPrice getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMinGasPriceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.ugov.v1.QueryMinGasPriceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minGasPrice field is set.
+     */
+    boolean hasMinGasPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return The minGasPrice.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getMinGasPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinGasPriceOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryMinGasPriceResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code umee.ugov.v1.QueryMinGasPriceResponse}
+   */
+  public static final class QueryMinGasPriceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.ugov.v1.QueryMinGasPriceResponse)
+      QueryMinGasPriceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMinGasPriceResponse.newBuilder() to construct.
+    private QueryMinGasPriceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMinGasPriceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMinGasPriceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPriceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPriceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.class, com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.Builder.class);
+    }
+
+    public static final int MIN_GAS_PRICE_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin minGasPrice_;
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minGasPrice field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinGasPrice() {
+      return minGasPrice_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return The minGasPrice.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinGasPrice() {
+      return minGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : minGasPrice_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinGasPriceOrBuilder() {
+      return minGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : minGasPrice_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minGasPrice_ != null) {
+        output.writeMessage(1, getMinGasPrice());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minGasPrice_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMinGasPrice());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse other = (com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse) obj;
+
+      if (hasMinGasPrice() != other.hasMinGasPrice()) return false;
+      if (hasMinGasPrice()) {
+        if (!getMinGasPrice()
+            .equals(other.getMinGasPrice())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMinGasPrice()) {
+        hash = (37 * hash) + MIN_GAS_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getMinGasPrice().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMinGasPriceResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code umee.ugov.v1.QueryMinGasPriceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.ugov.v1.QueryMinGasPriceResponse)
+        com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPriceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPriceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.class, com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.Builder.class);
+      }
+
+      // Construct using com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minGasPrice_ = null;
+        if (minGasPriceBuilder_ != null) {
+          minGasPriceBuilder_.dispose();
+          minGasPriceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.ugov.v1.QueryProto.internal_static_umee_ugov_v1_QueryMinGasPriceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse getDefaultInstanceForType() {
+        return com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse build() {
+        com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse buildPartial() {
+        com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse result = new com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minGasPrice_ = minGasPriceBuilder_ == null
+              ? minGasPrice_
+              : minGasPriceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse) {
+          return mergeFrom((com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse other) {
+        if (other == com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.getDefaultInstance()) return this;
+        if (other.hasMinGasPrice()) {
+          mergeMinGasPrice(other.getMinGasPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMinGasPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin minGasPrice_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> minGasPriceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       * @return Whether the minGasPrice field is set.
+       */
+      public boolean hasMinGasPrice() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       * @return The minGasPrice.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinGasPrice() {
+        if (minGasPriceBuilder_ == null) {
+          return minGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : minGasPrice_;
+        } else {
+          return minGasPriceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinGasPrice(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minGasPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minGasPrice_ = value;
+        } else {
+          minGasPriceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinGasPrice(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minGasPriceBuilder_ == null) {
+          minGasPrice_ = builderForValue.build();
+        } else {
+          minGasPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMinGasPrice(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minGasPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            minGasPrice_ != null &&
+            minGasPrice_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getMinGasPriceBuilder().mergeFrom(value);
+          } else {
+            minGasPrice_ = value;
+          }
+        } else {
+          minGasPriceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinGasPrice() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        minGasPrice_ = null;
+        if (minGasPriceBuilder_ != null) {
+          minGasPriceBuilder_.dispose();
+          minGasPriceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getMinGasPriceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMinGasPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinGasPriceOrBuilder() {
+        if (minGasPriceBuilder_ != null) {
+          return minGasPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return minGasPrice_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : minGasPrice_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getMinGasPriceFieldBuilder() {
+        if (minGasPriceBuilder_ == null) {
+          minGasPriceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getMinGasPrice(),
+                  getParentForChildren(),
+                  isClean());
+          minGasPrice_ = null;
+        }
+        return minGasPriceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.ugov.v1.QueryMinGasPriceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.ugov.v1.QueryMinGasPriceResponse)
+    private static final com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse();
+    }
+
+    public static com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMinGasPriceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMinGasPriceResponse>() {
+      @java.lang.Override
+      public QueryMinGasPriceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMinGasPriceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMinGasPriceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_ugov_v1_QueryMinGasPrice_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_ugov_v1_QueryMinGasPrice_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_ugov_v1_QueryMinGasPriceResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_ugov_v1_QueryMinGasPriceResponse_fieldAccessorTable;
 
@@ -42,11 +1055,11 @@ public final class QueryProto {
       "rice2\203\001\n\005Query\022z\n\013MinGasPrice\022\036.umee.ugo" +
       "v.v1.QueryMinGasPrice\032&.umee.ugov.v1.Que" +
       "ryMinGasPriceResponse\"#\202\323\344\223\002\035\022\033/umee/ugo" +
-      "v/v1/min-gas-priceB\234\001\n\020com.umee.ugov.v1B" +
-      "\nQueryProtoP\001Z&github.com/umee-network/u" +
-      "mee/v5/x/ugov\242\002\003UUX\252\002\014Umee.Ugov.V1\312\002\014Ume" +
-      "e\\Ugov\\V1\342\002\030Umee\\Ugov\\V1\\GPBMetadata\352\002\016U" +
-      "mee::Ugov::V1\310\341\036\000b\006proto3"
+      "v/v1/min-gas-priceB\232\001\n\020com.umee.ugov.v1B" +
+      "\nQueryProtoZ&github.com/umee-network/ume" +
+      "e/v5/x/ugov\242\002\003UUX\252\002\014Umee.Ugov.V1\312\002\014Umee\\" +
+      "Ugov\\V1\342\002\030Umee\\Ugov\\V1\\GPBMetadata\352\002\016Ume" +
+      "e::Ugov::V1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

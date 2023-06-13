@@ -14,114 +14,15824 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventTxCompletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventTxCompleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * module is the module the TX belongs to.
+     * </pre>
+     *
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <pre>
+     * module is the module the TX belongs to.
+     * </pre>
+     *
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <pre>
+     * endpoint is the rpc endpoint that was just completed.
+     * </pre>
+     *
+     * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+     * @return The endpoint.
+     */
+    java.lang.String getEndpoint();
+    /**
+     * <pre>
+     * endpoint is the rpc endpoint that was just completed.
+     * </pre>
+     *
+     * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+     * @return The bytes for endpoint.
+     */
+    com.google.protobuf.ByteString
+        getEndpointBytes();
+
+    /**
+     * <pre>
+     * signers are the bech32 address strings of the signers of this TX.
+     * </pre>
+     *
+     * <code>repeated string signers = 3 [json_name = "signers"];</code>
+     * @return A list containing the signers.
+     */
+    java.util.List<java.lang.String>
+        getSignersList();
+    /**
+     * <pre>
+     * signers are the bech32 address strings of the signers of this TX.
+     * </pre>
+     *
+     * <code>repeated string signers = 3 [json_name = "signers"];</code>
+     * @return The count of signers.
+     */
+    int getSignersCount();
+    /**
+     * <pre>
+     * signers are the bech32 address strings of the signers of this TX.
+     * </pre>
+     *
+     * <code>repeated string signers = 3 [json_name = "signers"];</code>
+     * @param index The index of the element to return.
+     * @return The signers at the given index.
+     */
+    java.lang.String getSigners(int index);
+    /**
+     * <pre>
+     * signers are the bech32 address strings of the signers of this TX.
+     * </pre>
+     *
+     * <code>repeated string signers = 3 [json_name = "signers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSignersBytes(int index);
+  }
+  /**
+   * <pre>
+   * EventTxCompleted is an event message indicating that a TX has completed.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventTxCompleted}
+   */
+  public static final class EventTxCompleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventTxCompleted)
+      EventTxCompletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventTxCompleted.newBuilder() to construct.
+    private EventTxCompleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventTxCompleted() {
+      module_ = "";
+      endpoint_ = "";
+      signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventTxCompleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventTxCompleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventTxCompleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventTxCompleted.class, com.provenance.metadata.v1.EventsProto.EventTxCompleted.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <pre>
+     * module is the module the TX belongs to.
+     * </pre>
+     *
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * module is the module the TX belongs to.
+     * </pre>
+     *
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENDPOINT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endpoint_ = "";
+    /**
+     * <pre>
+     * endpoint is the rpc endpoint that was just completed.
+     * </pre>
+     *
+     * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+     * @return The endpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpoint() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * endpoint is the rpc endpoint that was just completed.
+     * </pre>
+     *
+     * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+     * @return The bytes for endpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointBytes() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNERS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList signers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * signers are the bech32 address strings of the signers of this TX.
+     * </pre>
+     *
+     * <code>repeated string signers = 3 [json_name = "signers"];</code>
+     * @return A list containing the signers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSignersList() {
+      return signers_;
+    }
+    /**
+     * <pre>
+     * signers are the bech32 address strings of the signers of this TX.
+     * </pre>
+     *
+     * <code>repeated string signers = 3 [json_name = "signers"];</code>
+     * @return The count of signers.
+     */
+    public int getSignersCount() {
+      return signers_.size();
+    }
+    /**
+     * <pre>
+     * signers are the bech32 address strings of the signers of this TX.
+     * </pre>
+     *
+     * <code>repeated string signers = 3 [json_name = "signers"];</code>
+     * @param index The index of the element to return.
+     * @return The signers at the given index.
+     */
+    public java.lang.String getSigners(int index) {
+      return signers_.get(index);
+    }
+    /**
+     * <pre>
+     * signers are the bech32 address strings of the signers of this TX.
+     * </pre>
+     *
+     * <code>repeated string signers = 3 [json_name = "signers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSignersBytes(int index) {
+      return signers_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, endpoint_);
+      }
+      for (int i = 0; i < signers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, signers_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, endpoint_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < signers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(signers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSignersList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventTxCompleted)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventTxCompleted other = (com.provenance.metadata.v1.EventsProto.EventTxCompleted) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (!getEndpoint()
+          .equals(other.getEndpoint())) return false;
+      if (!getSignersList()
+          .equals(other.getSignersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpoint().hashCode();
+      if (getSignersCount() > 0) {
+        hash = (37 * hash) + SIGNERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSignersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventTxCompleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventTxCompleted is an event message indicating that a TX has completed.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventTxCompleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventTxCompleted)
+        com.provenance.metadata.v1.EventsProto.EventTxCompletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventTxCompleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventTxCompleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventTxCompleted.class, com.provenance.metadata.v1.EventsProto.EventTxCompleted.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventTxCompleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        endpoint_ = "";
+        signers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventTxCompleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventTxCompleted getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventTxCompleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventTxCompleted build() {
+        com.provenance.metadata.v1.EventsProto.EventTxCompleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventTxCompleted buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventTxCompleted result = new com.provenance.metadata.v1.EventsProto.EventTxCompleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventTxCompleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.endpoint_ = endpoint_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          signers_.makeImmutable();
+          result.signers_ = signers_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventTxCompleted) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventTxCompleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventTxCompleted other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventTxCompleted.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEndpoint().isEmpty()) {
+          endpoint_ = other.endpoint_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.signers_.isEmpty()) {
+          if (signers_.isEmpty()) {
+            signers_ = other.signers_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureSignersIsMutable();
+            signers_.addAll(other.signers_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                endpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSignersIsMutable();
+                signers_.add(s);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <pre>
+       * module is the module the TX belongs to.
+       * </pre>
+       *
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * module is the module the TX belongs to.
+       * </pre>
+       *
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * module is the module the TX belongs to.
+       * </pre>
+       *
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * module is the module the TX belongs to.
+       * </pre>
+       *
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * module is the module the TX belongs to.
+       * </pre>
+       *
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endpoint_ = "";
+      /**
+       * <pre>
+       * endpoint is the rpc endpoint that was just completed.
+       * </pre>
+       *
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @return The endpoint.
+       */
+      public java.lang.String getEndpoint() {
+        java.lang.Object ref = endpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * endpoint is the rpc endpoint that was just completed.
+       * </pre>
+       *
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @return The bytes for endpoint.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointBytes() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * endpoint is the rpc endpoint that was just completed.
+       * </pre>
+       *
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @param value The endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpoint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endpoint_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * endpoint is the rpc endpoint that was just completed.
+       * </pre>
+       *
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpoint() {
+        endpoint_ = getDefaultInstance().getEndpoint();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * endpoint is the rpc endpoint that was just completed.
+       * </pre>
+       *
+       * <code>string endpoint = 2 [json_name = "endpoint"];</code>
+       * @param value The bytes for endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endpoint_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureSignersIsMutable() {
+        if (!signers_.isModifiable()) {
+          signers_ = new com.google.protobuf.LazyStringArrayList(signers_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @return A list containing the signers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSignersList() {
+        signers_.makeImmutable();
+        return signers_;
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @return The count of signers.
+       */
+      public int getSignersCount() {
+        return signers_.size();
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @param index The index of the element to return.
+       * @return The signers at the given index.
+       */
+      public java.lang.String getSigners(int index) {
+        return signers_.get(index);
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the signers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSignersBytes(int index) {
+        return signers_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @param index The index to set the value at.
+       * @param value The signers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigners(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignersIsMutable();
+        signers_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @param value The signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSigners(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignersIsMutable();
+        signers_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @param values The signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSigners(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSignersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, signers_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigners() {
+        signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the bech32 address strings of the signers of this TX.
+       * </pre>
+       *
+       * <code>repeated string signers = 3 [json_name = "signers"];</code>
+       * @param value The bytes of the signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSignersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureSignersIsMutable();
+        signers_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventTxCompleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventTxCompleted)
+    private static final com.provenance.metadata.v1.EventsProto.EventTxCompleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventTxCompleted();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventTxCompleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventTxCompleted>
+        PARSER = new com.google.protobuf.AbstractParser<EventTxCompleted>() {
+      @java.lang.Override
+      public EventTxCompleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventTxCompleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventTxCompleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventTxCompleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventScopeCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventScopeCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was created.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was created.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventScopeCreated is an event message indicating a scope has been created.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventScopeCreated}
+   */
+  public static final class EventScopeCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventScopeCreated)
+      EventScopeCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventScopeCreated.newBuilder() to construct.
+    private EventScopeCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventScopeCreated() {
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventScopeCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventScopeCreated.class, com.provenance.metadata.v1.EventsProto.EventScopeCreated.Builder.class);
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was created.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was created.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventScopeCreated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventScopeCreated other = (com.provenance.metadata.v1.EventsProto.EventScopeCreated) obj;
+
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventScopeCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventScopeCreated is an event message indicating a scope has been created.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventScopeCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventScopeCreated)
+        com.provenance.metadata.v1.EventsProto.EventScopeCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventScopeCreated.class, com.provenance.metadata.v1.EventsProto.EventScopeCreated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventScopeCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeCreated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventScopeCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeCreated build() {
+        com.provenance.metadata.v1.EventsProto.EventScopeCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeCreated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventScopeCreated result = new com.provenance.metadata.v1.EventsProto.EventScopeCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventScopeCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventScopeCreated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventScopeCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventScopeCreated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventScopeCreated.getDefaultInstance()) return this;
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was created.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was created.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was created.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was created.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was created.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventScopeCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventScopeCreated)
+    private static final com.provenance.metadata.v1.EventsProto.EventScopeCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventScopeCreated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventScopeCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventScopeCreated>() {
+      @java.lang.Override
+      public EventScopeCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventScopeCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventScopeCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventScopeCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventScopeUpdatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventScopeUpdated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was updated.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was updated.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventScopeUpdated is an event message indicating a scope has been updated.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventScopeUpdated}
+   */
+  public static final class EventScopeUpdated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventScopeUpdated)
+      EventScopeUpdatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventScopeUpdated.newBuilder() to construct.
+    private EventScopeUpdated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventScopeUpdated() {
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventScopeUpdated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeUpdated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeUpdated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventScopeUpdated.class, com.provenance.metadata.v1.EventsProto.EventScopeUpdated.Builder.class);
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was updated.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was updated.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventScopeUpdated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventScopeUpdated other = (com.provenance.metadata.v1.EventsProto.EventScopeUpdated) obj;
+
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventScopeUpdated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventScopeUpdated is an event message indicating a scope has been updated.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventScopeUpdated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventScopeUpdated)
+        com.provenance.metadata.v1.EventsProto.EventScopeUpdatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeUpdated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventScopeUpdated.class, com.provenance.metadata.v1.EventsProto.EventScopeUpdated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventScopeUpdated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeUpdated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventScopeUpdated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeUpdated build() {
+        com.provenance.metadata.v1.EventsProto.EventScopeUpdated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeUpdated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventScopeUpdated result = new com.provenance.metadata.v1.EventsProto.EventScopeUpdated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventScopeUpdated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventScopeUpdated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventScopeUpdated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventScopeUpdated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventScopeUpdated.getDefaultInstance()) return this;
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was updated.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was updated.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was updated.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was updated.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was updated.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventScopeUpdated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventScopeUpdated)
+    private static final com.provenance.metadata.v1.EventsProto.EventScopeUpdated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventScopeUpdated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeUpdated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventScopeUpdated>
+        PARSER = new com.google.protobuf.AbstractParser<EventScopeUpdated>() {
+      @java.lang.Override
+      public EventScopeUpdated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventScopeUpdated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventScopeUpdated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventScopeUpdated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventScopeDeletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventScopeDeleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was deleted.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was deleted.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventScopeDeleted is an event message indicating a scope has been deleted.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventScopeDeleted}
+   */
+  public static final class EventScopeDeleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventScopeDeleted)
+      EventScopeDeletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventScopeDeleted.newBuilder() to construct.
+    private EventScopeDeleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventScopeDeleted() {
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventScopeDeleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeDeleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeDeleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventScopeDeleted.class, com.provenance.metadata.v1.EventsProto.EventScopeDeleted.Builder.class);
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was deleted.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id that was deleted.
+     * </pre>
+     *
+     * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventScopeDeleted)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventScopeDeleted other = (com.provenance.metadata.v1.EventsProto.EventScopeDeleted) obj;
+
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventScopeDeleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventScopeDeleted is an event message indicating a scope has been deleted.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventScopeDeleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventScopeDeleted)
+        com.provenance.metadata.v1.EventsProto.EventScopeDeletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeDeleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventScopeDeleted.class, com.provenance.metadata.v1.EventsProto.EventScopeDeleted.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventScopeDeleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeDeleted getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventScopeDeleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeDeleted build() {
+        com.provenance.metadata.v1.EventsProto.EventScopeDeleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeDeleted buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventScopeDeleted result = new com.provenance.metadata.v1.EventsProto.EventScopeDeleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventScopeDeleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventScopeDeleted) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventScopeDeleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventScopeDeleted other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventScopeDeleted.getDefaultInstance()) return this;
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was deleted.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was deleted.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was deleted.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was deleted.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id that was deleted.
+       * </pre>
+       *
+       * <code>string scope_addr = 1 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventScopeDeleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventScopeDeleted)
+    private static final com.provenance.metadata.v1.EventsProto.EventScopeDeleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventScopeDeleted();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeDeleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventScopeDeleted>
+        PARSER = new com.google.protobuf.AbstractParser<EventScopeDeleted>() {
+      @java.lang.Override
+      public EventScopeDeleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventScopeDeleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventScopeDeleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventScopeDeleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventSessionCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventSessionCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was created.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    java.lang.String getSessionAddr();
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was created.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    com.google.protobuf.ByteString
+        getSessionAddrBytes();
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventSessionCreated is an event message indicating a session has been created.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventSessionCreated}
+   */
+  public static final class EventSessionCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventSessionCreated)
+      EventSessionCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventSessionCreated.newBuilder() to construct.
+    private EventSessionCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventSessionCreated() {
+      sessionAddr_ = "";
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventSessionCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventSessionCreated.class, com.provenance.metadata.v1.EventsProto.EventSessionCreated.Builder.class);
+    }
+
+    public static final int SESSION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionAddr_ = "";
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was created.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionAddr() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was created.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionAddrBytes() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventSessionCreated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventSessionCreated other = (com.provenance.metadata.v1.EventsProto.EventSessionCreated) obj;
+
+      if (!getSessionAddr()
+          .equals(other.getSessionAddr())) return false;
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SESSION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionAddr().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventSessionCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventSessionCreated is an event message indicating a session has been created.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventSessionCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventSessionCreated)
+        com.provenance.metadata.v1.EventsProto.EventSessionCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventSessionCreated.class, com.provenance.metadata.v1.EventsProto.EventSessionCreated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventSessionCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sessionAddr_ = "";
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionCreated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventSessionCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionCreated build() {
+        com.provenance.metadata.v1.EventsProto.EventSessionCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionCreated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventSessionCreated result = new com.provenance.metadata.v1.EventsProto.EventSessionCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventSessionCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sessionAddr_ = sessionAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventSessionCreated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventSessionCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventSessionCreated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventSessionCreated.getDefaultInstance()) return this;
+        if (!other.getSessionAddr().isEmpty()) {
+          sessionAddr_ = other.sessionAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sessionAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sessionAddr_ = "";
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was created.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return The sessionAddr.
+       */
+      public java.lang.String getSessionAddr() {
+        java.lang.Object ref = sessionAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was created.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return The bytes for sessionAddr.
+       */
+      public com.google.protobuf.ByteString
+          getSessionAddrBytes() {
+        java.lang.Object ref = sessionAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was created.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @param value The sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was created.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionAddr() {
+        sessionAddr_ = getDefaultInstance().getSessionAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was created.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @param value The bytes for sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventSessionCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventSessionCreated)
+    private static final com.provenance.metadata.v1.EventsProto.EventSessionCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventSessionCreated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventSessionCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventSessionCreated>() {
+      @java.lang.Override
+      public EventSessionCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventSessionCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventSessionCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventSessionCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventSessionUpdatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventSessionUpdated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was updated.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    java.lang.String getSessionAddr();
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was updated.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    com.google.protobuf.ByteString
+        getSessionAddrBytes();
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventSessionUpdated is an event message indicating a session has been updated.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventSessionUpdated}
+   */
+  public static final class EventSessionUpdated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventSessionUpdated)
+      EventSessionUpdatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventSessionUpdated.newBuilder() to construct.
+    private EventSessionUpdated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventSessionUpdated() {
+      sessionAddr_ = "";
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventSessionUpdated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionUpdated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionUpdated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventSessionUpdated.class, com.provenance.metadata.v1.EventsProto.EventSessionUpdated.Builder.class);
+    }
+
+    public static final int SESSION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionAddr_ = "";
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was updated.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionAddr() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was updated.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionAddrBytes() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventSessionUpdated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventSessionUpdated other = (com.provenance.metadata.v1.EventsProto.EventSessionUpdated) obj;
+
+      if (!getSessionAddr()
+          .equals(other.getSessionAddr())) return false;
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SESSION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionAddr().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventSessionUpdated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventSessionUpdated is an event message indicating a session has been updated.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventSessionUpdated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventSessionUpdated)
+        com.provenance.metadata.v1.EventsProto.EventSessionUpdatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionUpdated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventSessionUpdated.class, com.provenance.metadata.v1.EventsProto.EventSessionUpdated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventSessionUpdated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sessionAddr_ = "";
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionUpdated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventSessionUpdated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionUpdated build() {
+        com.provenance.metadata.v1.EventsProto.EventSessionUpdated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionUpdated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventSessionUpdated result = new com.provenance.metadata.v1.EventsProto.EventSessionUpdated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventSessionUpdated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sessionAddr_ = sessionAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventSessionUpdated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventSessionUpdated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventSessionUpdated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventSessionUpdated.getDefaultInstance()) return this;
+        if (!other.getSessionAddr().isEmpty()) {
+          sessionAddr_ = other.sessionAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sessionAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sessionAddr_ = "";
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was updated.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return The sessionAddr.
+       */
+      public java.lang.String getSessionAddr() {
+        java.lang.Object ref = sessionAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was updated.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return The bytes for sessionAddr.
+       */
+      public com.google.protobuf.ByteString
+          getSessionAddrBytes() {
+        java.lang.Object ref = sessionAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was updated.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @param value The sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was updated.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionAddr() {
+        sessionAddr_ = getDefaultInstance().getSessionAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was updated.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @param value The bytes for sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventSessionUpdated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventSessionUpdated)
+    private static final com.provenance.metadata.v1.EventsProto.EventSessionUpdated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventSessionUpdated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionUpdated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventSessionUpdated>
+        PARSER = new com.google.protobuf.AbstractParser<EventSessionUpdated>() {
+      @java.lang.Override
+      public EventSessionUpdated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventSessionUpdated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventSessionUpdated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventSessionUpdated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventSessionDeletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventSessionDeleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was deleted.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    java.lang.String getSessionAddr();
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was deleted.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    com.google.protobuf.ByteString
+        getSessionAddrBytes();
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventSessionDeleted is an event message indicating a session has been deleted.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventSessionDeleted}
+   */
+  public static final class EventSessionDeleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventSessionDeleted)
+      EventSessionDeletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventSessionDeleted.newBuilder() to construct.
+    private EventSessionDeleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventSessionDeleted() {
+      sessionAddr_ = "";
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventSessionDeleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionDeleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionDeleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventSessionDeleted.class, com.provenance.metadata.v1.EventsProto.EventSessionDeleted.Builder.class);
+    }
+
+    public static final int SESSION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionAddr_ = "";
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was deleted.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionAddr() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id that was deleted.
+     * </pre>
+     *
+     * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionAddrBytes() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this session belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventSessionDeleted)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventSessionDeleted other = (com.provenance.metadata.v1.EventsProto.EventSessionDeleted) obj;
+
+      if (!getSessionAddr()
+          .equals(other.getSessionAddr())) return false;
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SESSION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionAddr().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventSessionDeleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventSessionDeleted is an event message indicating a session has been deleted.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventSessionDeleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventSessionDeleted)
+        com.provenance.metadata.v1.EventsProto.EventSessionDeletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionDeleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventSessionDeleted.class, com.provenance.metadata.v1.EventsProto.EventSessionDeleted.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventSessionDeleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sessionAddr_ = "";
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventSessionDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionDeleted getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventSessionDeleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionDeleted build() {
+        com.provenance.metadata.v1.EventsProto.EventSessionDeleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventSessionDeleted buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventSessionDeleted result = new com.provenance.metadata.v1.EventsProto.EventSessionDeleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventSessionDeleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sessionAddr_ = sessionAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventSessionDeleted) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventSessionDeleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventSessionDeleted other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventSessionDeleted.getDefaultInstance()) return this;
+        if (!other.getSessionAddr().isEmpty()) {
+          sessionAddr_ = other.sessionAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sessionAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sessionAddr_ = "";
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was deleted.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return The sessionAddr.
+       */
+      public java.lang.String getSessionAddr() {
+        java.lang.Object ref = sessionAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was deleted.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return The bytes for sessionAddr.
+       */
+      public com.google.protobuf.ByteString
+          getSessionAddrBytes() {
+        java.lang.Object ref = sessionAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was deleted.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @param value The sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was deleted.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionAddr() {
+        sessionAddr_ = getDefaultInstance().getSessionAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id that was deleted.
+       * </pre>
+       *
+       * <code>string session_addr = 1 [json_name = "sessionAddr"];</code>
+       * @param value The bytes for sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this session belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 2 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventSessionDeleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventSessionDeleted)
+    private static final com.provenance.metadata.v1.EventsProto.EventSessionDeleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventSessionDeleted();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventSessionDeleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventSessionDeleted>
+        PARSER = new com.google.protobuf.AbstractParser<EventSessionDeleted>() {
+      @java.lang.Override
+      public EventSessionDeleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventSessionDeleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventSessionDeleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventSessionDeleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRecordCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventRecordCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * record_addr is the bech32 address string of the record id that was created.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The recordAddr.
+     */
+    java.lang.String getRecordAddr();
+    /**
+     * <pre>
+     * record_addr is the bech32 address string of the record id that was created.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The bytes for recordAddr.
+     */
+    com.google.protobuf.ByteString
+        getRecordAddrBytes();
+
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id this record belongs to.
+     * </pre>
+     *
+     * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    java.lang.String getSessionAddr();
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id this record belongs to.
+     * </pre>
+     *
+     * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    com.google.protobuf.ByteString
+        getSessionAddrBytes();
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventRecordCreated is an event message indicating a record has been created.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventRecordCreated}
+   */
+  public static final class EventRecordCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventRecordCreated)
+      EventRecordCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRecordCreated.newBuilder() to construct.
+    private EventRecordCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRecordCreated() {
+      recordAddr_ = "";
+      sessionAddr_ = "";
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRecordCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventRecordCreated.class, com.provenance.metadata.v1.EventsProto.EventRecordCreated.Builder.class);
+    }
+
+    public static final int RECORD_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordAddr_ = "";
+    /**
+     * <pre>
+     * record_addr is the bech32 address string of the record id that was created.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The recordAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordAddr() {
+      java.lang.Object ref = recordAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * record_addr is the bech32 address string of the record id that was created.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The bytes for recordAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordAddrBytes() {
+      java.lang.Object ref = recordAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SESSION_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionAddr_ = "";
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id this record belongs to.
+     * </pre>
+     *
+     * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionAddr() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id this record belongs to.
+     * </pre>
+     *
+     * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionAddrBytes() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventRecordCreated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventRecordCreated other = (com.provenance.metadata.v1.EventsProto.EventRecordCreated) obj;
+
+      if (!getRecordAddr()
+          .equals(other.getRecordAddr())) return false;
+      if (!getSessionAddr()
+          .equals(other.getSessionAddr())) return false;
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordAddr().hashCode();
+      hash = (37 * hash) + SESSION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionAddr().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventRecordCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRecordCreated is an event message indicating a record has been created.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventRecordCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventRecordCreated)
+        com.provenance.metadata.v1.EventsProto.EventRecordCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventRecordCreated.class, com.provenance.metadata.v1.EventsProto.EventRecordCreated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventRecordCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordAddr_ = "";
+        sessionAddr_ = "";
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordCreated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventRecordCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordCreated build() {
+        com.provenance.metadata.v1.EventsProto.EventRecordCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordCreated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventRecordCreated result = new com.provenance.metadata.v1.EventsProto.EventRecordCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventRecordCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordAddr_ = recordAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sessionAddr_ = sessionAddr_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventRecordCreated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventRecordCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventRecordCreated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventRecordCreated.getDefaultInstance()) return this;
+        if (!other.getRecordAddr().isEmpty()) {
+          recordAddr_ = other.recordAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSessionAddr().isEmpty()) {
+          sessionAddr_ = other.sessionAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                sessionAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recordAddr_ = "";
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was created.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return The recordAddr.
+       */
+      public java.lang.String getRecordAddr() {
+        java.lang.Object ref = recordAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was created.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return The bytes for recordAddr.
+       */
+      public com.google.protobuf.ByteString
+          getRecordAddrBytes() {
+        java.lang.Object ref = recordAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was created.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @param value The recordAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was created.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordAddr() {
+        recordAddr_ = getDefaultInstance().getRecordAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was created.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @param value The bytes for recordAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sessionAddr_ = "";
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @return The sessionAddr.
+       */
+      public java.lang.String getSessionAddr() {
+        java.lang.Object ref = sessionAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @return The bytes for sessionAddr.
+       */
+      public com.google.protobuf.ByteString
+          getSessionAddrBytes() {
+        java.lang.Object ref = sessionAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @param value The sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionAddr() {
+        sessionAddr_ = getDefaultInstance().getSessionAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @param value The bytes for sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventRecordCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventRecordCreated)
+    private static final com.provenance.metadata.v1.EventsProto.EventRecordCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventRecordCreated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRecordCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventRecordCreated>() {
+      @java.lang.Override
+      public EventRecordCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRecordCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRecordCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventRecordCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRecordUpdatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventRecordUpdated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * record_addr is the bech32 address string of the record id that was updated.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The recordAddr.
+     */
+    java.lang.String getRecordAddr();
+    /**
+     * <pre>
+     * record_addr is the bech32 address string of the record id that was updated.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The bytes for recordAddr.
+     */
+    com.google.protobuf.ByteString
+        getRecordAddrBytes();
+
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id this record belongs to.
+     * </pre>
+     *
+     * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    java.lang.String getSessionAddr();
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id this record belongs to.
+     * </pre>
+     *
+     * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    com.google.protobuf.ByteString
+        getSessionAddrBytes();
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventRecordUpdated is an event message indicating a record has been updated.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventRecordUpdated}
+   */
+  public static final class EventRecordUpdated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventRecordUpdated)
+      EventRecordUpdatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRecordUpdated.newBuilder() to construct.
+    private EventRecordUpdated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRecordUpdated() {
+      recordAddr_ = "";
+      sessionAddr_ = "";
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRecordUpdated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordUpdated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordUpdated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventRecordUpdated.class, com.provenance.metadata.v1.EventsProto.EventRecordUpdated.Builder.class);
+    }
+
+    public static final int RECORD_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordAddr_ = "";
+    /**
+     * <pre>
+     * record_addr is the bech32 address string of the record id that was updated.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The recordAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordAddr() {
+      java.lang.Object ref = recordAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * record_addr is the bech32 address string of the record id that was updated.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The bytes for recordAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordAddrBytes() {
+      java.lang.Object ref = recordAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SESSION_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionAddr_ = "";
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id this record belongs to.
+     * </pre>
+     *
+     * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+     * @return The sessionAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionAddr() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * session_addr is the bech32 address string of the session id this record belongs to.
+     * </pre>
+     *
+     * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+     * @return The bytes for sessionAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionAddrBytes() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belongs to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventRecordUpdated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventRecordUpdated other = (com.provenance.metadata.v1.EventsProto.EventRecordUpdated) obj;
+
+      if (!getRecordAddr()
+          .equals(other.getRecordAddr())) return false;
+      if (!getSessionAddr()
+          .equals(other.getSessionAddr())) return false;
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordAddr().hashCode();
+      hash = (37 * hash) + SESSION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionAddr().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventRecordUpdated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRecordUpdated is an event message indicating a record has been updated.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventRecordUpdated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventRecordUpdated)
+        com.provenance.metadata.v1.EventsProto.EventRecordUpdatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordUpdated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventRecordUpdated.class, com.provenance.metadata.v1.EventsProto.EventRecordUpdated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventRecordUpdated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordAddr_ = "";
+        sessionAddr_ = "";
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordUpdated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventRecordUpdated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordUpdated build() {
+        com.provenance.metadata.v1.EventsProto.EventRecordUpdated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordUpdated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventRecordUpdated result = new com.provenance.metadata.v1.EventsProto.EventRecordUpdated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventRecordUpdated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordAddr_ = recordAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sessionAddr_ = sessionAddr_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventRecordUpdated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventRecordUpdated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventRecordUpdated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventRecordUpdated.getDefaultInstance()) return this;
+        if (!other.getRecordAddr().isEmpty()) {
+          recordAddr_ = other.recordAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSessionAddr().isEmpty()) {
+          sessionAddr_ = other.sessionAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                sessionAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recordAddr_ = "";
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was updated.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return The recordAddr.
+       */
+      public java.lang.String getRecordAddr() {
+        java.lang.Object ref = recordAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was updated.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return The bytes for recordAddr.
+       */
+      public com.google.protobuf.ByteString
+          getRecordAddrBytes() {
+        java.lang.Object ref = recordAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was updated.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @param value The recordAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was updated.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordAddr() {
+        recordAddr_ = getDefaultInstance().getRecordAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 address string of the record id that was updated.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @param value The bytes for recordAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sessionAddr_ = "";
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @return The sessionAddr.
+       */
+      public java.lang.String getSessionAddr() {
+        java.lang.Object ref = sessionAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @return The bytes for sessionAddr.
+       */
+      public com.google.protobuf.ByteString
+          getSessionAddrBytes() {
+        java.lang.Object ref = sessionAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @param value The sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionAddr() {
+        sessionAddr_ = getDefaultInstance().getSessionAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 address string of the session id this record belongs to.
+       * </pre>
+       *
+       * <code>string session_addr = 2 [json_name = "sessionAddr"];</code>
+       * @param value The bytes for sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belongs to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventRecordUpdated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventRecordUpdated)
+    private static final com.provenance.metadata.v1.EventsProto.EventRecordUpdated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventRecordUpdated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordUpdated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRecordUpdated>
+        PARSER = new com.google.protobuf.AbstractParser<EventRecordUpdated>() {
+      @java.lang.Override
+      public EventRecordUpdated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRecordUpdated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRecordUpdated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventRecordUpdated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRecordDeletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventRecordDeleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * record is the bech32 address string of the record id that was deleted.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The recordAddr.
+     */
+    java.lang.String getRecordAddr();
+    /**
+     * <pre>
+     * record is the bech32 address string of the record id that was deleted.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The bytes for recordAddr.
+     */
+    com.google.protobuf.ByteString
+        getRecordAddrBytes();
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belonged to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belonged to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventRecordDeleted is an event message indicating a record has been deleted.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventRecordDeleted}
+   */
+  public static final class EventRecordDeleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventRecordDeleted)
+      EventRecordDeletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRecordDeleted.newBuilder() to construct.
+    private EventRecordDeleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRecordDeleted() {
+      recordAddr_ = "";
+      scopeAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRecordDeleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordDeleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordDeleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventRecordDeleted.class, com.provenance.metadata.v1.EventsProto.EventRecordDeleted.Builder.class);
+    }
+
+    public static final int RECORD_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordAddr_ = "";
+    /**
+     * <pre>
+     * record is the bech32 address string of the record id that was deleted.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The recordAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordAddr() {
+      java.lang.Object ref = recordAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * record is the bech32 address string of the record id that was deleted.
+     * </pre>
+     *
+     * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+     * @return The bytes for recordAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordAddrBytes() {
+      java.lang.Object ref = recordAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belonged to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 address string of the scope id this record belonged to.
+     * </pre>
+     *
+     * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, scopeAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, scopeAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventRecordDeleted)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventRecordDeleted other = (com.provenance.metadata.v1.EventsProto.EventRecordDeleted) obj;
+
+      if (!getRecordAddr()
+          .equals(other.getRecordAddr())) return false;
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordAddr().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventRecordDeleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRecordDeleted is an event message indicating a record has been deleted.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventRecordDeleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventRecordDeleted)
+        com.provenance.metadata.v1.EventsProto.EventRecordDeletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordDeleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventRecordDeleted.class, com.provenance.metadata.v1.EventsProto.EventRecordDeleted.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventRecordDeleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordAddr_ = "";
+        scopeAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordDeleted getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventRecordDeleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordDeleted build() {
+        com.provenance.metadata.v1.EventsProto.EventRecordDeleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordDeleted buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventRecordDeleted result = new com.provenance.metadata.v1.EventsProto.EventRecordDeleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventRecordDeleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordAddr_ = recordAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventRecordDeleted) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventRecordDeleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventRecordDeleted other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventRecordDeleted.getDefaultInstance()) return this;
+        if (!other.getRecordAddr().isEmpty()) {
+          recordAddr_ = other.recordAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 26: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recordAddr_ = "";
+      /**
+       * <pre>
+       * record is the bech32 address string of the record id that was deleted.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return The recordAddr.
+       */
+      public java.lang.String getRecordAddr() {
+        java.lang.Object ref = recordAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record is the bech32 address string of the record id that was deleted.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return The bytes for recordAddr.
+       */
+      public com.google.protobuf.ByteString
+          getRecordAddrBytes() {
+        java.lang.Object ref = recordAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record is the bech32 address string of the record id that was deleted.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @param value The recordAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record is the bech32 address string of the record id that was deleted.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordAddr() {
+        recordAddr_ = getDefaultInstance().getRecordAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record is the bech32 address string of the record id that was deleted.
+       * </pre>
+       *
+       * <code>string record_addr = 1 [json_name = "recordAddr"];</code>
+       * @param value The bytes for recordAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belonged to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belonged to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belonged to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belonged to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 address string of the scope id this record belonged to.
+       * </pre>
+       *
+       * <code>string scope_addr = 3 [json_name = "scopeAddr"];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventRecordDeleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventRecordDeleted)
+    private static final com.provenance.metadata.v1.EventsProto.EventRecordDeleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventRecordDeleted();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordDeleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRecordDeleted>
+        PARSER = new com.google.protobuf.AbstractParser<EventRecordDeleted>() {
+      @java.lang.Override
+      public EventRecordDeleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRecordDeleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRecordDeleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventRecordDeleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventScopeSpecificationCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventScopeSpecificationCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * created.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The scopeSpecificationAddr.
+     */
+    java.lang.String getScopeSpecificationAddr();
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * created.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The bytes for scopeSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventScopeSpecificationCreated is an event message indicating a scope specification has been created.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventScopeSpecificationCreated}
+   */
+  public static final class EventScopeSpecificationCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventScopeSpecificationCreated)
+      EventScopeSpecificationCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventScopeSpecificationCreated.newBuilder() to construct.
+    private EventScopeSpecificationCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventScopeSpecificationCreated() {
+      scopeSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventScopeSpecificationCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated.class, com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated.Builder.class);
+    }
+
+    public static final int SCOPE_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * created.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The scopeSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeSpecificationAddr() {
+      java.lang.Object ref = scopeSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * created.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The bytes for scopeSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeSpecificationAddrBytes() {
+      java.lang.Object ref = scopeSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopeSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scopeSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated other = (com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated) obj;
+
+      if (!getScopeSpecificationAddr()
+          .equals(other.getScopeSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventScopeSpecificationCreated is an event message indicating a scope specification has been created.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventScopeSpecificationCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventScopeSpecificationCreated)
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated.class, com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated build() {
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated result = new com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeSpecificationAddr_ = scopeSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated.getDefaultInstance()) return this;
+        if (!other.getScopeSpecificationAddr().isEmpty()) {
+          scopeSpecificationAddr_ = other.scopeSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object scopeSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return The scopeSpecificationAddr.
+       */
+      public java.lang.String getScopeSpecificationAddr() {
+        java.lang.Object ref = scopeSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return The bytes for scopeSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeSpecificationAddrBytes() {
+        java.lang.Object ref = scopeSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @param value The scopeSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeSpecificationAddr() {
+        scopeSpecificationAddr_ = getDefaultInstance().getScopeSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @param value The bytes for scopeSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventScopeSpecificationCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventScopeSpecificationCreated)
+    private static final com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventScopeSpecificationCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventScopeSpecificationCreated>() {
+      @java.lang.Override
+      public EventScopeSpecificationCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventScopeSpecificationCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventScopeSpecificationCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventScopeSpecificationUpdatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventScopeSpecificationUpdated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * updated.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The scopeSpecificationAddr.
+     */
+    java.lang.String getScopeSpecificationAddr();
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * updated.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The bytes for scopeSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventScopeSpecificationUpdated is an event message indicating a scope specification has been updated.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventScopeSpecificationUpdated}
+   */
+  public static final class EventScopeSpecificationUpdated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventScopeSpecificationUpdated)
+      EventScopeSpecificationUpdatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventScopeSpecificationUpdated.newBuilder() to construct.
+    private EventScopeSpecificationUpdated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventScopeSpecificationUpdated() {
+      scopeSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventScopeSpecificationUpdated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationUpdated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationUpdated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated.class, com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated.Builder.class);
+    }
+
+    public static final int SCOPE_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * updated.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The scopeSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeSpecificationAddr() {
+      java.lang.Object ref = scopeSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * updated.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The bytes for scopeSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeSpecificationAddrBytes() {
+      java.lang.Object ref = scopeSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopeSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scopeSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated other = (com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated) obj;
+
+      if (!getScopeSpecificationAddr()
+          .equals(other.getScopeSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventScopeSpecificationUpdated is an event message indicating a scope specification has been updated.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventScopeSpecificationUpdated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventScopeSpecificationUpdated)
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationUpdated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated.class, com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated build() {
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated result = new com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeSpecificationAddr_ = scopeSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated.getDefaultInstance()) return this;
+        if (!other.getScopeSpecificationAddr().isEmpty()) {
+          scopeSpecificationAddr_ = other.scopeSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object scopeSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return The scopeSpecificationAddr.
+       */
+      public java.lang.String getScopeSpecificationAddr() {
+        java.lang.Object ref = scopeSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return The bytes for scopeSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeSpecificationAddrBytes() {
+        java.lang.Object ref = scopeSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @param value The scopeSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeSpecificationAddr() {
+        scopeSpecificationAddr_ = getDefaultInstance().getScopeSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @param value The bytes for scopeSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventScopeSpecificationUpdated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventScopeSpecificationUpdated)
+    private static final com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventScopeSpecificationUpdated>
+        PARSER = new com.google.protobuf.AbstractParser<EventScopeSpecificationUpdated>() {
+      @java.lang.Override
+      public EventScopeSpecificationUpdated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventScopeSpecificationUpdated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventScopeSpecificationUpdated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationUpdated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventScopeSpecificationDeletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventScopeSpecificationDeleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * deleted.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The scopeSpecificationAddr.
+     */
+    java.lang.String getScopeSpecificationAddr();
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * deleted.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The bytes for scopeSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventScopeSpecificationDeleted is an event message indicating a scope specification has been deleted.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventScopeSpecificationDeleted}
+   */
+  public static final class EventScopeSpecificationDeleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventScopeSpecificationDeleted)
+      EventScopeSpecificationDeletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventScopeSpecificationDeleted.newBuilder() to construct.
+    private EventScopeSpecificationDeleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventScopeSpecificationDeleted() {
+      scopeSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventScopeSpecificationDeleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationDeleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationDeleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted.class, com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted.Builder.class);
+    }
+
+    public static final int SCOPE_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * deleted.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The scopeSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeSpecificationAddr() {
+      java.lang.Object ref = scopeSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+     * deleted.
+     * </pre>
+     *
+     * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+     * @return The bytes for scopeSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeSpecificationAddrBytes() {
+      java.lang.Object ref = scopeSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopeSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scopeSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted other = (com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted) obj;
+
+      if (!getScopeSpecificationAddr()
+          .equals(other.getScopeSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventScopeSpecificationDeleted is an event message indicating a scope specification has been deleted.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventScopeSpecificationDeleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventScopeSpecificationDeleted)
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationDeleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted.class, com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventScopeSpecificationDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted build() {
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted result = new com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeSpecificationAddr_ = scopeSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted.getDefaultInstance()) return this;
+        if (!other.getScopeSpecificationAddr().isEmpty()) {
+          scopeSpecificationAddr_ = other.scopeSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object scopeSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return The scopeSpecificationAddr.
+       */
+      public java.lang.String getScopeSpecificationAddr() {
+        java.lang.Object ref = scopeSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return The bytes for scopeSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeSpecificationAddrBytes() {
+        java.lang.Object ref = scopeSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @param value The scopeSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeSpecificationAddr() {
+        scopeSpecificationAddr_ = getDefaultInstance().getScopeSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_specification_addr is the bech32 address string of the specification id of the scope specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string scope_specification_addr = 1 [json_name = "scopeSpecificationAddr"];</code>
+       * @param value The bytes for scopeSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventScopeSpecificationDeleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventScopeSpecificationDeleted)
+    private static final com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventScopeSpecificationDeleted>
+        PARSER = new com.google.protobuf.AbstractParser<EventScopeSpecificationDeleted>() {
+      @java.lang.Override
+      public EventScopeSpecificationDeleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventScopeSpecificationDeleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventScopeSpecificationDeleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventScopeSpecificationDeleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventContractSpecificationCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventContractSpecificationCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was created.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    java.lang.String getContractSpecificationAddr();
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was created.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventContractSpecificationCreated is an event message indicating a contract specification has been created.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventContractSpecificationCreated}
+   */
+  public static final class EventContractSpecificationCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventContractSpecificationCreated)
+      EventContractSpecificationCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventContractSpecificationCreated.newBuilder() to construct.
+    private EventContractSpecificationCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventContractSpecificationCreated() {
+      contractSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventContractSpecificationCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated.class, com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated.Builder.class);
+    }
+
+    public static final int CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was created.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSpecificationAddr() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was created.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated other = (com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated) obj;
+
+      if (!getContractSpecificationAddr()
+          .equals(other.getContractSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventContractSpecificationCreated is an event message indicating a contract specification has been created.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventContractSpecificationCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventContractSpecificationCreated)
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated.class, com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated build() {
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated result = new com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractSpecificationAddr_ = contractSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated.getDefaultInstance()) return this;
+        if (!other.getContractSpecificationAddr().isEmpty()) {
+          contractSpecificationAddr_ = other.contractSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was created.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return The contractSpecificationAddr.
+       */
+      public java.lang.String getContractSpecificationAddr() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was created.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return The bytes for contractSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getContractSpecificationAddrBytes() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was created.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was created.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecificationAddr() {
+        contractSpecificationAddr_ = getDefaultInstance().getContractSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was created.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The bytes for contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventContractSpecificationCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventContractSpecificationCreated)
+    private static final com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventContractSpecificationCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventContractSpecificationCreated>() {
+      @java.lang.Override
+      public EventContractSpecificationCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventContractSpecificationCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventContractSpecificationCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventContractSpecificationCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventContractSpecificationUpdatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventContractSpecificationUpdated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was updated.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    java.lang.String getContractSpecificationAddr();
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was updated.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventContractSpecificationUpdated is an event message indicating a contract specification has been updated.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventContractSpecificationUpdated}
+   */
+  public static final class EventContractSpecificationUpdated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventContractSpecificationUpdated)
+      EventContractSpecificationUpdatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventContractSpecificationUpdated.newBuilder() to construct.
+    private EventContractSpecificationUpdated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventContractSpecificationUpdated() {
+      contractSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventContractSpecificationUpdated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationUpdated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationUpdated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated.class, com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated.Builder.class);
+    }
+
+    public static final int CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was updated.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSpecificationAddr() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was updated.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated other = (com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated) obj;
+
+      if (!getContractSpecificationAddr()
+          .equals(other.getContractSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventContractSpecificationUpdated is an event message indicating a contract specification has been updated.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventContractSpecificationUpdated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventContractSpecificationUpdated)
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationUpdated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated.class, com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated build() {
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated result = new com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractSpecificationAddr_ = contractSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated.getDefaultInstance()) return this;
+        if (!other.getContractSpecificationAddr().isEmpty()) {
+          contractSpecificationAddr_ = other.contractSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was updated.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return The contractSpecificationAddr.
+       */
+      public java.lang.String getContractSpecificationAddr() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was updated.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return The bytes for contractSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getContractSpecificationAddrBytes() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was updated.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was updated.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecificationAddr() {
+        contractSpecificationAddr_ = getDefaultInstance().getContractSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was updated.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The bytes for contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventContractSpecificationUpdated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventContractSpecificationUpdated)
+    private static final com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventContractSpecificationUpdated>
+        PARSER = new com.google.protobuf.AbstractParser<EventContractSpecificationUpdated>() {
+      @java.lang.Override
+      public EventContractSpecificationUpdated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventContractSpecificationUpdated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventContractSpecificationUpdated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventContractSpecificationUpdated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventContractSpecificationDeletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventContractSpecificationDeleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was deleted.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    java.lang.String getContractSpecificationAddr();
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was deleted.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventContractSpecificationDeleted is an event message indicating a contract specification has been deleted.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventContractSpecificationDeleted}
+   */
+  public static final class EventContractSpecificationDeleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventContractSpecificationDeleted)
+      EventContractSpecificationDeletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventContractSpecificationDeleted.newBuilder() to construct.
+    private EventContractSpecificationDeleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventContractSpecificationDeleted() {
+      contractSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventContractSpecificationDeleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationDeleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationDeleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted.class, com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted.Builder.class);
+    }
+
+    public static final int CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was deleted.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSpecificationAddr() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+     * was deleted.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted other = (com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted) obj;
+
+      if (!getContractSpecificationAddr()
+          .equals(other.getContractSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventContractSpecificationDeleted is an event message indicating a contract specification has been deleted.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventContractSpecificationDeleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventContractSpecificationDeleted)
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationDeleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted.class, com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventContractSpecificationDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted build() {
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted result = new com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractSpecificationAddr_ = contractSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted.getDefaultInstance()) return this;
+        if (!other.getContractSpecificationAddr().isEmpty()) {
+          contractSpecificationAddr_ = other.contractSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was deleted.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return The contractSpecificationAddr.
+       */
+      public java.lang.String getContractSpecificationAddr() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was deleted.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return The bytes for contractSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getContractSpecificationAddrBytes() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was deleted.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was deleted.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecificationAddr() {
+        contractSpecificationAddr_ = getDefaultInstance().getContractSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the specification id of the contract specification that
+       * was deleted.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 1 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The bytes for contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventContractSpecificationDeleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventContractSpecificationDeleted)
+    private static final com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventContractSpecificationDeleted>
+        PARSER = new com.google.protobuf.AbstractParser<EventContractSpecificationDeleted>() {
+      @java.lang.Override
+      public EventContractSpecificationDeleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventContractSpecificationDeleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventContractSpecificationDeleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventContractSpecificationDeleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRecordSpecificationCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventRecordSpecificationCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * created.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The recordSpecificationAddr.
+     */
+    java.lang.String getRecordSpecificationAddr();
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * created.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The bytes for recordSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getRecordSpecificationAddrBytes();
+
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    java.lang.String getContractSpecificationAddr();
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventRecordSpecificationCreated is an event message indicating a record specification has been created.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventRecordSpecificationCreated}
+   */
+  public static final class EventRecordSpecificationCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventRecordSpecificationCreated)
+      EventRecordSpecificationCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRecordSpecificationCreated.newBuilder() to construct.
+    private EventRecordSpecificationCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRecordSpecificationCreated() {
+      recordSpecificationAddr_ = "";
+      contractSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRecordSpecificationCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated.class, com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated.Builder.class);
+    }
+
+    public static final int RECORD_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * created.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The recordSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordSpecificationAddr() {
+      java.lang.Object ref = recordSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * created.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The bytes for recordSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordSpecificationAddrBytes() {
+      java.lang.Object ref = recordSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSpecificationAddr() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordSpecificationAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordSpecificationAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated other = (com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated) obj;
+
+      if (!getRecordSpecificationAddr()
+          .equals(other.getRecordSpecificationAddr())) return false;
+      if (!getContractSpecificationAddr()
+          .equals(other.getContractSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordSpecificationAddr().hashCode();
+      hash = (37 * hash) + CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRecordSpecificationCreated is an event message indicating a record specification has been created.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventRecordSpecificationCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventRecordSpecificationCreated)
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated.class, com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordSpecificationAddr_ = "";
+        contractSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated build() {
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated result = new com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordSpecificationAddr_ = recordSpecificationAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractSpecificationAddr_ = contractSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated.getDefaultInstance()) return this;
+        if (!other.getRecordSpecificationAddr().isEmpty()) {
+          recordSpecificationAddr_ = other.recordSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContractSpecificationAddr().isEmpty()) {
+          contractSpecificationAddr_ = other.contractSpecificationAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recordSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return The recordSpecificationAddr.
+       */
+      public java.lang.String getRecordSpecificationAddr() {
+        java.lang.Object ref = recordSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return The bytes for recordSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getRecordSpecificationAddrBytes() {
+        java.lang.Object ref = recordSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @param value The recordSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordSpecificationAddr() {
+        recordSpecificationAddr_ = getDefaultInstance().getRecordSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * created.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @param value The bytes for recordSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return The contractSpecificationAddr.
+       */
+      public java.lang.String getContractSpecificationAddr() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return The bytes for contractSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getContractSpecificationAddrBytes() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecificationAddr() {
+        contractSpecificationAddr_ = getDefaultInstance().getContractSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The bytes for contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventRecordSpecificationCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventRecordSpecificationCreated)
+    private static final com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRecordSpecificationCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventRecordSpecificationCreated>() {
+      @java.lang.Override
+      public EventRecordSpecificationCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRecordSpecificationCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRecordSpecificationCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRecordSpecificationUpdatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventRecordSpecificationUpdated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * updated.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The recordSpecificationAddr.
+     */
+    java.lang.String getRecordSpecificationAddr();
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * updated.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The bytes for recordSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getRecordSpecificationAddrBytes();
+
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    java.lang.String getContractSpecificationAddr();
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventRecordSpecificationUpdated is an event message indicating a record specification has been updated.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventRecordSpecificationUpdated}
+   */
+  public static final class EventRecordSpecificationUpdated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventRecordSpecificationUpdated)
+      EventRecordSpecificationUpdatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRecordSpecificationUpdated.newBuilder() to construct.
+    private EventRecordSpecificationUpdated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRecordSpecificationUpdated() {
+      recordSpecificationAddr_ = "";
+      contractSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRecordSpecificationUpdated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationUpdated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationUpdated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated.class, com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated.Builder.class);
+    }
+
+    public static final int RECORD_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * updated.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The recordSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordSpecificationAddr() {
+      java.lang.Object ref = recordSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * updated.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The bytes for recordSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordSpecificationAddrBytes() {
+      java.lang.Object ref = recordSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSpecificationAddr() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordSpecificationAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordSpecificationAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated other = (com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated) obj;
+
+      if (!getRecordSpecificationAddr()
+          .equals(other.getRecordSpecificationAddr())) return false;
+      if (!getContractSpecificationAddr()
+          .equals(other.getContractSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordSpecificationAddr().hashCode();
+      hash = (37 * hash) + CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRecordSpecificationUpdated is an event message indicating a record specification has been updated.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventRecordSpecificationUpdated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventRecordSpecificationUpdated)
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationUpdated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated.class, com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordSpecificationAddr_ = "";
+        contractSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated build() {
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated result = new com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordSpecificationAddr_ = recordSpecificationAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractSpecificationAddr_ = contractSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated.getDefaultInstance()) return this;
+        if (!other.getRecordSpecificationAddr().isEmpty()) {
+          recordSpecificationAddr_ = other.recordSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContractSpecificationAddr().isEmpty()) {
+          contractSpecificationAddr_ = other.contractSpecificationAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recordSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return The recordSpecificationAddr.
+       */
+      public java.lang.String getRecordSpecificationAddr() {
+        java.lang.Object ref = recordSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return The bytes for recordSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getRecordSpecificationAddrBytes() {
+        java.lang.Object ref = recordSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @param value The recordSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordSpecificationAddr() {
+        recordSpecificationAddr_ = getDefaultInstance().getRecordSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * updated.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @param value The bytes for recordSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return The contractSpecificationAddr.
+       */
+      public java.lang.String getContractSpecificationAddr() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return The bytes for contractSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getContractSpecificationAddrBytes() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecificationAddr() {
+        contractSpecificationAddr_ = getDefaultInstance().getContractSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The bytes for contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventRecordSpecificationUpdated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventRecordSpecificationUpdated)
+    private static final com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRecordSpecificationUpdated>
+        PARSER = new com.google.protobuf.AbstractParser<EventRecordSpecificationUpdated>() {
+      @java.lang.Override
+      public EventRecordSpecificationUpdated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRecordSpecificationUpdated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRecordSpecificationUpdated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationUpdated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRecordSpecificationDeletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventRecordSpecificationDeleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * deleted.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The recordSpecificationAddr.
+     */
+    java.lang.String getRecordSpecificationAddr();
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * deleted.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The bytes for recordSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getRecordSpecificationAddrBytes();
+
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    java.lang.String getContractSpecificationAddr();
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes();
+  }
+  /**
+   * <pre>
+   * EventRecordSpecificationDeleted is an event message indicating a record specification has been deleted.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventRecordSpecificationDeleted}
+   */
+  public static final class EventRecordSpecificationDeleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventRecordSpecificationDeleted)
+      EventRecordSpecificationDeletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRecordSpecificationDeleted.newBuilder() to construct.
+    private EventRecordSpecificationDeleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRecordSpecificationDeleted() {
+      recordSpecificationAddr_ = "";
+      contractSpecificationAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRecordSpecificationDeleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationDeleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationDeleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted.class, com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted.Builder.class);
+    }
+
+    public static final int RECORD_SPECIFICATION_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * deleted.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The recordSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordSpecificationAddr() {
+      java.lang.Object ref = recordSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+     * deleted.
+     * </pre>
+     *
+     * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+     * @return The bytes for recordSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordSpecificationAddrBytes() {
+      java.lang.Object ref = recordSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSpecificationAddr_ = "";
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSpecificationAddr() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSpecificationAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+     * belongs to.
+     * </pre>
+     *
+     * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+     * @return The bytes for contractSpecificationAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSpecificationAddrBytes() {
+      java.lang.Object ref = contractSpecificationAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSpecificationAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordSpecificationAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractSpecificationAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordSpecificationAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractSpecificationAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted other = (com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted) obj;
+
+      if (!getRecordSpecificationAddr()
+          .equals(other.getRecordSpecificationAddr())) return false;
+      if (!getContractSpecificationAddr()
+          .equals(other.getContractSpecificationAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordSpecificationAddr().hashCode();
+      hash = (37 * hash) + CONTRACT_SPECIFICATION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecificationAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRecordSpecificationDeleted is an event message indicating a record specification has been deleted.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventRecordSpecificationDeleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventRecordSpecificationDeleted)
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationDeleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted.class, com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordSpecificationAddr_ = "";
+        contractSpecificationAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventRecordSpecificationDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted build() {
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted result = new com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordSpecificationAddr_ = recordSpecificationAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractSpecificationAddr_ = contractSpecificationAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted.getDefaultInstance()) return this;
+        if (!other.getRecordSpecificationAddr().isEmpty()) {
+          recordSpecificationAddr_ = other.recordSpecificationAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContractSpecificationAddr().isEmpty()) {
+          contractSpecificationAddr_ = other.contractSpecificationAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractSpecificationAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recordSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return The recordSpecificationAddr.
+       */
+      public java.lang.String getRecordSpecificationAddr() {
+        java.lang.Object ref = recordSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return The bytes for recordSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getRecordSpecificationAddrBytes() {
+        java.lang.Object ref = recordSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @param value The recordSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordSpecificationAddr() {
+        recordSpecificationAddr_ = getDefaultInstance().getRecordSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_specification_addr is the bech32 address string of the specification id of the record specification that was
+       * deleted.
+       * </pre>
+       *
+       * <code>string record_specification_addr = 1 [json_name = "recordSpecificationAddr"];</code>
+       * @param value The bytes for recordSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordSpecificationAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractSpecificationAddr_ = "";
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return The contractSpecificationAddr.
+       */
+      public java.lang.String getContractSpecificationAddr() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSpecificationAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return The bytes for contractSpecificationAddr.
+       */
+      public com.google.protobuf.ByteString
+          getContractSpecificationAddrBytes() {
+        java.lang.Object ref = contractSpecificationAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSpecificationAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecificationAddr() {
+        contractSpecificationAddr_ = getDefaultInstance().getContractSpecificationAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_specification_addr is the bech32 address string of the contract specification id this record specification
+       * belongs to.
+       * </pre>
+       *
+       * <code>string contract_specification_addr = 2 [json_name = "contractSpecificationAddr"];</code>
+       * @param value The bytes for contractSpecificationAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecificationAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSpecificationAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventRecordSpecificationDeleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventRecordSpecificationDeleted)
+    private static final com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRecordSpecificationDeleted>
+        PARSER = new com.google.protobuf.AbstractParser<EventRecordSpecificationDeleted>() {
+      @java.lang.Override
+      public EventRecordSpecificationDeleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRecordSpecificationDeleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRecordSpecificationDeleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventRecordSpecificationDeleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventOSLocatorCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventOSLocatorCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was created.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was created.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * <pre>
+   * EventOSLocatorCreated is an event message indicating an object store locator has been created.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventOSLocatorCreated}
+   */
+  public static final class EventOSLocatorCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventOSLocatorCreated)
+      EventOSLocatorCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventOSLocatorCreated.newBuilder() to construct.
+    private EventOSLocatorCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventOSLocatorCreated() {
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventOSLocatorCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated.class, com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was created.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was created.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated other = (com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventOSLocatorCreated is an event message indicating an object store locator has been created.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventOSLocatorCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventOSLocatorCreated)
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated.class, com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated build() {
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated result = new com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was created.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was created.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was created.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was created.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was created.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventOSLocatorCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventOSLocatorCreated)
+    private static final com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventOSLocatorCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventOSLocatorCreated>() {
+      @java.lang.Override
+      public EventOSLocatorCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventOSLocatorCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventOSLocatorCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventOSLocatorCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventOSLocatorUpdatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventOSLocatorUpdated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was updated.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was updated.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * <pre>
+   * EventOSLocatorUpdated is an event message indicating an object store locator has been updated.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventOSLocatorUpdated}
+   */
+  public static final class EventOSLocatorUpdated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventOSLocatorUpdated)
+      EventOSLocatorUpdatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventOSLocatorUpdated.newBuilder() to construct.
+    private EventOSLocatorUpdated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventOSLocatorUpdated() {
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventOSLocatorUpdated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorUpdated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorUpdated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated.class, com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was updated.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was updated.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated other = (com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventOSLocatorUpdated is an event message indicating an object store locator has been updated.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventOSLocatorUpdated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventOSLocatorUpdated)
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorUpdated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated.class, com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorUpdated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated build() {
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated result = new com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was updated.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was updated.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was updated.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was updated.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was updated.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventOSLocatorUpdated)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventOSLocatorUpdated)
+    private static final com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventOSLocatorUpdated>
+        PARSER = new com.google.protobuf.AbstractParser<EventOSLocatorUpdated>() {
+      @java.lang.Override
+      public EventOSLocatorUpdated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventOSLocatorUpdated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventOSLocatorUpdated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventOSLocatorUpdated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventOSLocatorDeletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.EventOSLocatorDeleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was deleted.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was deleted.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * <pre>
+   * EventOSLocatorDeleted is an event message indicating an object store locator has been deleted.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.EventOSLocatorDeleted}
+   */
+  public static final class EventOSLocatorDeleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.EventOSLocatorDeleted)
+      EventOSLocatorDeletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventOSLocatorDeleted.newBuilder() to construct.
+    private EventOSLocatorDeleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventOSLocatorDeleted() {
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventOSLocatorDeleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorDeleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorDeleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted.class, com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was deleted.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner is the owner in the object store locator that was deleted.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted other = (com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventOSLocatorDeleted is an event message indicating an object store locator has been deleted.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.EventOSLocatorDeleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.EventOSLocatorDeleted)
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorDeletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorDeleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted.class, com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.EventsProto.internal_static_provenance_metadata_v1_EventOSLocatorDeleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted build() {
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted buildPartial() {
+        com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted result = new com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted) {
+          return mergeFrom((com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted other) {
+        if (other == com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was deleted.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was deleted.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was deleted.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was deleted.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the owner in the object store locator that was deleted.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.EventOSLocatorDeleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.EventOSLocatorDeleted)
+    private static final com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted();
+    }
+
+    public static com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventOSLocatorDeleted>
+        PARSER = new com.google.protobuf.AbstractParser<EventOSLocatorDeleted>() {
+      @java.lang.Override
+      public EventOSLocatorDeleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventOSLocatorDeleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventOSLocatorDeleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.EventsProto.EventOSLocatorDeleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventTxCompleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventTxCompleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventScopeCreated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventScopeCreated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventScopeUpdated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventScopeUpdated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventScopeDeleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventScopeDeleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventSessionCreated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventSessionCreated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventSessionUpdated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventSessionUpdated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventSessionDeleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventSessionDeleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventRecordCreated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventRecordCreated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventRecordUpdated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventRecordUpdated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventRecordDeleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventRecordDeleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventScopeSpecificationCreated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventScopeSpecificationCreated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventScopeSpecificationUpdated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventScopeSpecificationUpdated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventScopeSpecificationDeleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventScopeSpecificationDeleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventContractSpecificationCreated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventContractSpecificationCreated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventContractSpecificationUpdated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventContractSpecificationUpdated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventContractSpecificationDeleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventContractSpecificationDeleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventRecordSpecificationCreated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventRecordSpecificationCreated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventRecordSpecificationUpdated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventRecordSpecificationUpdated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventRecordSpecificationDeleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventRecordSpecificationDeleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventOSLocatorCreated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventOSLocatorCreated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventOSLocatorUpdated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventOSLocatorUpdated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_EventOSLocatorDeleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_EventOSLocatorDeleted_fieldAccessorTable;
 
@@ -186,7 +15896,7 @@ public final class EventsProto {
       "ner\030\001 \001(\tR\005owner\"-\n\025EventOSLocatorUpdate" +
       "d\022\024\n\005owner\030\001 \001(\tR\005owner\"-\n\025EventOSLocato" +
       "rDeleted\022\024\n\005owner\030\001 \001(\tR\005ownerB\331\001\n\032com.p" +
-      "rovenance.metadata.v1B\013EventsProtoP\001Z4gi" +
+      "rovenance.metadata.v1B\013EventsProtoP\000Z4gi" +
       "thub.com/provenance-io/provenance/x/meta" +
       "data/types\242\002\003PMX\252\002\026Provenance.Metadata.V" +
       "1\312\002\026Provenance\\Metadata\\V1\342\002\"Provenance\\" +

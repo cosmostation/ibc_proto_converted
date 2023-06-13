@@ -14,14 +14,2486 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryBalancesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.QueryBalancesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of the clawback vesting account
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address of the clawback vesting account
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryBalancesRequest is the request type for the Query/Balances RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.QueryBalancesRequest}
+   */
+  public static final class QueryBalancesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.QueryBalancesRequest)
+      QueryBalancesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBalancesRequest.newBuilder() to construct.
+    private QueryBalancesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBalancesRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBalancesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.QueryProto.QueryBalancesRequest.class, com.evmos.vesting.v1.QueryProto.QueryBalancesRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address of the clawback vesting account
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of the clawback vesting account
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.QueryProto.QueryBalancesRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.QueryProto.QueryBalancesRequest other = (com.evmos.vesting.v1.QueryProto.QueryBalancesRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.QueryProto.QueryBalancesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBalancesRequest is the request type for the Query/Balances RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.QueryBalancesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.QueryBalancesRequest)
+        com.evmos.vesting.v1.QueryProto.QueryBalancesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.QueryProto.QueryBalancesRequest.class, com.evmos.vesting.v1.QueryProto.QueryBalancesRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.QueryProto.QueryBalancesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.QueryProto.QueryBalancesRequest getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.QueryProto.QueryBalancesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.QueryProto.QueryBalancesRequest build() {
+        com.evmos.vesting.v1.QueryProto.QueryBalancesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.QueryProto.QueryBalancesRequest buildPartial() {
+        com.evmos.vesting.v1.QueryProto.QueryBalancesRequest result = new com.evmos.vesting.v1.QueryProto.QueryBalancesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.QueryProto.QueryBalancesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.QueryProto.QueryBalancesRequest) {
+          return mergeFrom((com.evmos.vesting.v1.QueryProto.QueryBalancesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.QueryProto.QueryBalancesRequest other) {
+        if (other == com.evmos.vesting.v1.QueryProto.QueryBalancesRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address of the clawback vesting account
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of the clawback vesting account
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of the clawback vesting account
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of the clawback vesting account
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of the clawback vesting account
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.QueryBalancesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.QueryBalancesRequest)
+    private static final com.evmos.vesting.v1.QueryProto.QueryBalancesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.QueryProto.QueryBalancesRequest();
+    }
+
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBalancesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBalancesRequest>() {
+      @java.lang.Override
+      public QueryBalancesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBalancesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBalancesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.QueryProto.QueryBalancesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBalancesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.QueryBalancesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getLockedList();
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getLocked(int index);
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getLockedCount();
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getLockedOrBuilderList();
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLockedOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getUnvestedList();
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUnvested(int index);
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getUnvestedCount();
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getUnvestedOrBuilderList();
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnvestedOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getVestedList();
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getVested(int index);
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getVestedCount();
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getVestedOrBuilderList();
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestedOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryBalancesResponse is the response type for the Query/Balances RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.QueryBalancesResponse}
+   */
+  public static final class QueryBalancesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.QueryBalancesResponse)
+      QueryBalancesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBalancesResponse.newBuilder() to construct.
+    private QueryBalancesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBalancesResponse() {
+      locked_ = java.util.Collections.emptyList();
+      unvested_ = java.util.Collections.emptyList();
+      vested_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBalancesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.QueryProto.QueryBalancesResponse.class, com.evmos.vesting.v1.QueryProto.QueryBalancesResponse.Builder.class);
+    }
+
+    public static final int LOCKED_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> locked_;
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getLockedList() {
+      return locked_;
+    }
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getLockedOrBuilderList() {
+      return locked_;
+    }
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getLockedCount() {
+      return locked_.size();
+    }
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getLocked(int index) {
+      return locked_.get(index);
+    }
+    /**
+     * <pre>
+     * locked defines the current amount of locked tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLockedOrBuilder(
+        int index) {
+      return locked_.get(index);
+    }
+
+    public static final int UNVESTED_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> unvested_;
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getUnvestedList() {
+      return unvested_;
+    }
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getUnvestedOrBuilderList() {
+      return unvested_;
+    }
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getUnvestedCount() {
+      return unvested_.size();
+    }
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUnvested(int index) {
+      return unvested_.get(index);
+    }
+    /**
+     * <pre>
+     * unvested defines the current amount of unvested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnvestedOrBuilder(
+        int index) {
+      return unvested_.get(index);
+    }
+
+    public static final int VESTED_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> vested_;
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getVestedList() {
+      return vested_;
+    }
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getVestedOrBuilderList() {
+      return vested_;
+    }
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getVestedCount() {
+      return vested_.size();
+    }
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getVested(int index) {
+      return vested_.get(index);
+    }
+    /**
+     * <pre>
+     * vested defines the current amount of vested tokens
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestedOrBuilder(
+        int index) {
+      return vested_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < locked_.size(); i++) {
+        output.writeMessage(1, locked_.get(i));
+      }
+      for (int i = 0; i < unvested_.size(); i++) {
+        output.writeMessage(2, unvested_.get(i));
+      }
+      for (int i = 0; i < vested_.size(); i++) {
+        output.writeMessage(3, vested_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < locked_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, locked_.get(i));
+      }
+      for (int i = 0; i < unvested_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, unvested_.get(i));
+      }
+      for (int i = 0; i < vested_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, vested_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.QueryProto.QueryBalancesResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.QueryProto.QueryBalancesResponse other = (com.evmos.vesting.v1.QueryProto.QueryBalancesResponse) obj;
+
+      if (!getLockedList()
+          .equals(other.getLockedList())) return false;
+      if (!getUnvestedList()
+          .equals(other.getUnvestedList())) return false;
+      if (!getVestedList()
+          .equals(other.getVestedList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLockedCount() > 0) {
+        hash = (37 * hash) + LOCKED_FIELD_NUMBER;
+        hash = (53 * hash) + getLockedList().hashCode();
+      }
+      if (getUnvestedCount() > 0) {
+        hash = (37 * hash) + UNVESTED_FIELD_NUMBER;
+        hash = (53 * hash) + getUnvestedList().hashCode();
+      }
+      if (getVestedCount() > 0) {
+        hash = (37 * hash) + VESTED_FIELD_NUMBER;
+        hash = (53 * hash) + getVestedList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.QueryProto.QueryBalancesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBalancesResponse is the response type for the Query/Balances RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.QueryBalancesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.QueryBalancesResponse)
+        com.evmos.vesting.v1.QueryProto.QueryBalancesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.QueryProto.QueryBalancesResponse.class, com.evmos.vesting.v1.QueryProto.QueryBalancesResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.QueryProto.QueryBalancesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (lockedBuilder_ == null) {
+          locked_ = java.util.Collections.emptyList();
+        } else {
+          locked_ = null;
+          lockedBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (unvestedBuilder_ == null) {
+          unvested_ = java.util.Collections.emptyList();
+        } else {
+          unvested_ = null;
+          unvestedBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (vestedBuilder_ == null) {
+          vested_ = java.util.Collections.emptyList();
+        } else {
+          vested_ = null;
+          vestedBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.QueryProto.internal_static_evmos_vesting_v1_QueryBalancesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.QueryProto.QueryBalancesResponse getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.QueryProto.QueryBalancesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.QueryProto.QueryBalancesResponse build() {
+        com.evmos.vesting.v1.QueryProto.QueryBalancesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.QueryProto.QueryBalancesResponse buildPartial() {
+        com.evmos.vesting.v1.QueryProto.QueryBalancesResponse result = new com.evmos.vesting.v1.QueryProto.QueryBalancesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.vesting.v1.QueryProto.QueryBalancesResponse result) {
+        if (lockedBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            locked_ = java.util.Collections.unmodifiableList(locked_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.locked_ = locked_;
+        } else {
+          result.locked_ = lockedBuilder_.build();
+        }
+        if (unvestedBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            unvested_ = java.util.Collections.unmodifiableList(unvested_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.unvested_ = unvested_;
+        } else {
+          result.unvested_ = unvestedBuilder_.build();
+        }
+        if (vestedBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            vested_ = java.util.Collections.unmodifiableList(vested_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.vested_ = vested_;
+        } else {
+          result.vested_ = vestedBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.QueryProto.QueryBalancesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.QueryProto.QueryBalancesResponse) {
+          return mergeFrom((com.evmos.vesting.v1.QueryProto.QueryBalancesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.QueryProto.QueryBalancesResponse other) {
+        if (other == com.evmos.vesting.v1.QueryProto.QueryBalancesResponse.getDefaultInstance()) return this;
+        if (lockedBuilder_ == null) {
+          if (!other.locked_.isEmpty()) {
+            if (locked_.isEmpty()) {
+              locked_ = other.locked_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLockedIsMutable();
+              locked_.addAll(other.locked_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.locked_.isEmpty()) {
+            if (lockedBuilder_.isEmpty()) {
+              lockedBuilder_.dispose();
+              lockedBuilder_ = null;
+              locked_ = other.locked_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              lockedBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLockedFieldBuilder() : null;
+            } else {
+              lockedBuilder_.addAllMessages(other.locked_);
+            }
+          }
+        }
+        if (unvestedBuilder_ == null) {
+          if (!other.unvested_.isEmpty()) {
+            if (unvested_.isEmpty()) {
+              unvested_ = other.unvested_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureUnvestedIsMutable();
+              unvested_.addAll(other.unvested_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unvested_.isEmpty()) {
+            if (unvestedBuilder_.isEmpty()) {
+              unvestedBuilder_.dispose();
+              unvestedBuilder_ = null;
+              unvested_ = other.unvested_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              unvestedBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnvestedFieldBuilder() : null;
+            } else {
+              unvestedBuilder_.addAllMessages(other.unvested_);
+            }
+          }
+        }
+        if (vestedBuilder_ == null) {
+          if (!other.vested_.isEmpty()) {
+            if (vested_.isEmpty()) {
+              vested_ = other.vested_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureVestedIsMutable();
+              vested_.addAll(other.vested_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vested_.isEmpty()) {
+            if (vestedBuilder_.isEmpty()) {
+              vestedBuilder_.dispose();
+              vestedBuilder_ = null;
+              vested_ = other.vested_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              vestedBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVestedFieldBuilder() : null;
+            } else {
+              vestedBuilder_.addAllMessages(other.vested_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (lockedBuilder_ == null) {
+                  ensureLockedIsMutable();
+                  locked_.add(m);
+                } else {
+                  lockedBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (unvestedBuilder_ == null) {
+                  ensureUnvestedIsMutable();
+                  unvested_.add(m);
+                } else {
+                  unvestedBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (vestedBuilder_ == null) {
+                  ensureVestedIsMutable();
+                  vested_.add(m);
+                } else {
+                  vestedBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> locked_ =
+        java.util.Collections.emptyList();
+      private void ensureLockedIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          locked_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(locked_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> lockedBuilder_;
+
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getLockedList() {
+        if (lockedBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(locked_);
+        } else {
+          return lockedBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getLockedCount() {
+        if (lockedBuilder_ == null) {
+          return locked_.size();
+        } else {
+          return lockedBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getLocked(int index) {
+        if (lockedBuilder_ == null) {
+          return locked_.get(index);
+        } else {
+          return lockedBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setLocked(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (lockedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockedIsMutable();
+          locked_.set(index, value);
+          onChanged();
+        } else {
+          lockedBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setLocked(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (lockedBuilder_ == null) {
+          ensureLockedIsMutable();
+          locked_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockedBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addLocked(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (lockedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockedIsMutable();
+          locked_.add(value);
+          onChanged();
+        } else {
+          lockedBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addLocked(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (lockedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockedIsMutable();
+          locked_.add(index, value);
+          onChanged();
+        } else {
+          lockedBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addLocked(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (lockedBuilder_ == null) {
+          ensureLockedIsMutable();
+          locked_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lockedBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addLocked(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (lockedBuilder_ == null) {
+          ensureLockedIsMutable();
+          locked_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockedBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllLocked(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (lockedBuilder_ == null) {
+          ensureLockedIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, locked_);
+          onChanged();
+        } else {
+          lockedBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearLocked() {
+        if (lockedBuilder_ == null) {
+          locked_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          lockedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeLocked(int index) {
+        if (lockedBuilder_ == null) {
+          ensureLockedIsMutable();
+          locked_.remove(index);
+          onChanged();
+        } else {
+          lockedBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getLockedBuilder(
+          int index) {
+        return getLockedFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLockedOrBuilder(
+          int index) {
+        if (lockedBuilder_ == null) {
+          return locked_.get(index);  } else {
+          return lockedBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getLockedOrBuilderList() {
+        if (lockedBuilder_ != null) {
+          return lockedBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(locked_);
+        }
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addLockedBuilder() {
+        return getLockedFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addLockedBuilder(
+          int index) {
+        return getLockedFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * locked defines the current amount of locked tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin locked = 1 [json_name = "locked", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getLockedBuilderList() {
+        return getLockedFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getLockedFieldBuilder() {
+        if (lockedBuilder_ == null) {
+          lockedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  locked_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          locked_ = null;
+        }
+        return lockedBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> unvested_ =
+        java.util.Collections.emptyList();
+      private void ensureUnvestedIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          unvested_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(unvested_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> unvestedBuilder_;
+
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getUnvestedList() {
+        if (unvestedBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unvested_);
+        } else {
+          return unvestedBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getUnvestedCount() {
+        if (unvestedBuilder_ == null) {
+          return unvested_.size();
+        } else {
+          return unvestedBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUnvested(int index) {
+        if (unvestedBuilder_ == null) {
+          return unvested_.get(index);
+        } else {
+          return unvestedBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setUnvested(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unvestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnvestedIsMutable();
+          unvested_.set(index, value);
+          onChanged();
+        } else {
+          unvestedBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setUnvested(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (unvestedBuilder_ == null) {
+          ensureUnvestedIsMutable();
+          unvested_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unvestedBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addUnvested(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unvestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnvestedIsMutable();
+          unvested_.add(value);
+          onChanged();
+        } else {
+          unvestedBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addUnvested(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unvestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnvestedIsMutable();
+          unvested_.add(index, value);
+          onChanged();
+        } else {
+          unvestedBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addUnvested(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (unvestedBuilder_ == null) {
+          ensureUnvestedIsMutable();
+          unvested_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unvestedBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addUnvested(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (unvestedBuilder_ == null) {
+          ensureUnvestedIsMutable();
+          unvested_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unvestedBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllUnvested(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (unvestedBuilder_ == null) {
+          ensureUnvestedIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unvested_);
+          onChanged();
+        } else {
+          unvestedBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearUnvested() {
+        if (unvestedBuilder_ == null) {
+          unvested_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          unvestedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeUnvested(int index) {
+        if (unvestedBuilder_ == null) {
+          ensureUnvestedIsMutable();
+          unvested_.remove(index);
+          onChanged();
+        } else {
+          unvestedBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUnvestedBuilder(
+          int index) {
+        return getUnvestedFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnvestedOrBuilder(
+          int index) {
+        if (unvestedBuilder_ == null) {
+          return unvested_.get(index);  } else {
+          return unvestedBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getUnvestedOrBuilderList() {
+        if (unvestedBuilder_ != null) {
+          return unvestedBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unvested_);
+        }
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addUnvestedBuilder() {
+        return getUnvestedFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addUnvestedBuilder(
+          int index) {
+        return getUnvestedFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * unvested defines the current amount of unvested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unvested = 2 [json_name = "unvested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getUnvestedBuilderList() {
+        return getUnvestedFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUnvestedFieldBuilder() {
+        if (unvestedBuilder_ == null) {
+          unvestedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  unvested_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unvested_ = null;
+        }
+        return unvestedBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> vested_ =
+        java.util.Collections.emptyList();
+      private void ensureVestedIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          vested_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(vested_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> vestedBuilder_;
+
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getVestedList() {
+        if (vestedBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vested_);
+        } else {
+          return vestedBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getVestedCount() {
+        if (vestedBuilder_ == null) {
+          return vested_.size();
+        } else {
+          return vestedBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getVested(int index) {
+        if (vestedBuilder_ == null) {
+          return vested_.get(index);
+        } else {
+          return vestedBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setVested(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (vestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVestedIsMutable();
+          vested_.set(index, value);
+          onChanged();
+        } else {
+          vestedBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setVested(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (vestedBuilder_ == null) {
+          ensureVestedIsMutable();
+          vested_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vestedBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addVested(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (vestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVestedIsMutable();
+          vested_.add(value);
+          onChanged();
+        } else {
+          vestedBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addVested(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (vestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVestedIsMutable();
+          vested_.add(index, value);
+          onChanged();
+        } else {
+          vestedBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addVested(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (vestedBuilder_ == null) {
+          ensureVestedIsMutable();
+          vested_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vestedBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addVested(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (vestedBuilder_ == null) {
+          ensureVestedIsMutable();
+          vested_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vestedBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllVested(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (vestedBuilder_ == null) {
+          ensureVestedIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vested_);
+          onChanged();
+        } else {
+          vestedBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearVested() {
+        if (vestedBuilder_ == null) {
+          vested_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          vestedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeVested(int index) {
+        if (vestedBuilder_ == null) {
+          ensureVestedIsMutable();
+          vested_.remove(index);
+          onChanged();
+        } else {
+          vestedBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getVestedBuilder(
+          int index) {
+        return getVestedFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestedOrBuilder(
+          int index) {
+        if (vestedBuilder_ == null) {
+          return vested_.get(index);  } else {
+          return vestedBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getVestedOrBuilderList() {
+        if (vestedBuilder_ != null) {
+          return vestedBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vested_);
+        }
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addVestedBuilder() {
+        return getVestedFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addVestedBuilder(
+          int index) {
+        return getVestedFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * vested defines the current amount of vested tokens
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin vested = 3 [json_name = "vested", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getVestedBuilderList() {
+        return getVestedFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getVestedFieldBuilder() {
+        if (vestedBuilder_ == null) {
+          vestedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  vested_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vested_ = null;
+        }
+        return vestedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.QueryBalancesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.QueryBalancesResponse)
+    private static final com.evmos.vesting.v1.QueryProto.QueryBalancesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.QueryProto.QueryBalancesResponse();
+    }
+
+    public static com.evmos.vesting.v1.QueryProto.QueryBalancesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBalancesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBalancesResponse>() {
+      @java.lang.Override
+      public QueryBalancesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBalancesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBalancesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.QueryProto.QueryBalancesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_QueryBalancesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_QueryBalancesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_QueryBalancesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_QueryBalancesResponse_fieldAccessorTable;
 
@@ -49,12 +2521,12 @@ public final class QueryProto {
       "Query\022\211\001\n\010Balances\022&.evmos.vesting.v1.Qu" +
       "eryBalancesRequest\032\'.evmos.vesting.v1.Qu" +
       "eryBalancesResponse\",\202\323\344\223\002&\022$/evmos/vest" +
-      "ing/v1/balances/{address}B\260\001\n\024com.evmos." +
-      "vesting.v1B\nQueryProtoP\001Z*github.com/evm" +
-      "os/evmos/v13/x/vesting/types\242\002\003EVX\252\002\020Evm" +
-      "os.Vesting.V1\312\002\020Evmos\\Vesting\\V1\342\002\034Evmos" +
-      "\\Vesting\\V1\\GPBMetadata\352\002\022Evmos::Vesting" +
-      "::V1b\006proto3"
+      "ing/v1/balances/{address}B\256\001\n\024com.evmos." +
+      "vesting.v1B\nQueryProtoZ*github.com/evmos" +
+      "/evmos/v13/x/vesting/types\242\002\003EVX\252\002\020Evmos" +
+      ".Vesting.V1\312\002\020Evmos\\Vesting\\V1\342\002\034Evmos\\V" +
+      "esting\\V1\\GPBMetadata\352\002\022Evmos::Vesting::" +
+      "V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,29 +14,5308 @@ public final class EventProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventClassIssuedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.EventClassIssued)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    java.lang.String getIssuer();
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
+
+    /**
+     * <code>string symbol = 3 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <code>string symbol = 3 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string description = 5 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 5 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The uri.
+     */
+    java.lang.String getUri();
+    /**
+     * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The bytes for uri.
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+
+    /**
+     * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+     * @return The uriHash.
+     */
+    java.lang.String getUriHash();
+    /**
+     * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+     * @return The bytes for uriHash.
+     */
+    com.google.protobuf.ByteString
+        getUriHashBytes();
+
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @return A list containing the features.
+     */
+    java.util.List<com.coreum.asset.nft.v1.NftProto.ClassFeature> getFeaturesList();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @return The count of features.
+     */
+    int getFeaturesCount();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @param index The index of the element to return.
+     * @return The features at the given index.
+     */
+    com.coreum.asset.nft.v1.NftProto.ClassFeature getFeatures(int index);
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @return A list containing the enum numeric values on the wire for features.
+     */
+    java.util.List<java.lang.Integer>
+    getFeaturesValueList();
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of features at the given index.
+     */
+    int getFeaturesValue(int index);
+
+    /**
+     * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The royaltyRate.
+     */
+    java.lang.String getRoyaltyRate();
+    /**
+     * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for royaltyRate.
+     */
+    com.google.protobuf.ByteString
+        getRoyaltyRateBytes();
+  }
+  /**
+   * <pre>
+   * EventClassIssued is emitted on MsgIssueClass.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.asset.nft.v1.EventClassIssued}
+   */
+  public static final class EventClassIssued extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.EventClassIssued)
+      EventClassIssuedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventClassIssued.newBuilder() to construct.
+    private EventClassIssued(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventClassIssued() {
+      id_ = "";
+      issuer_ = "";
+      symbol_ = "";
+      name_ = "";
+      description_ = "";
+      uri_ = "";
+      uriHash_ = "";
+      features_ = java.util.Collections.emptyList();
+      royaltyRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventClassIssued();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventClassIssued_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventClassIssued_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.EventProto.EventClassIssued.class, com.coreum.asset.nft.v1.EventProto.EventClassIssued.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <code>string symbol = 3 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol = 3 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 5 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 5 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URI_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uri_ = "";
+    /**
+     * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The uri.
+     */
+    @java.lang.Override
+    public java.lang.String getUri() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The bytes for uri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URI_HASH_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uriHash_ = "";
+    /**
+     * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+     * @return The uriHash.
+     */
+    @java.lang.Override
+    public java.lang.String getUriHash() {
+      java.lang.Object ref = uriHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uriHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+     * @return The bytes for uriHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUriHashBytes() {
+      java.lang.Object ref = uriHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uriHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEATURES_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> features_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.coreum.asset.nft.v1.NftProto.ClassFeature> features_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.coreum.asset.nft.v1.NftProto.ClassFeature>() {
+              public com.coreum.asset.nft.v1.NftProto.ClassFeature convert(java.lang.Integer from) {
+                com.coreum.asset.nft.v1.NftProto.ClassFeature result = com.coreum.asset.nft.v1.NftProto.ClassFeature.forNumber(from);
+                return result == null ? com.coreum.asset.nft.v1.NftProto.ClassFeature.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @return A list containing the features.
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.nft.v1.NftProto.ClassFeature> getFeaturesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.coreum.asset.nft.v1.NftProto.ClassFeature>(features_, features_converter_);
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @return The count of features.
+     */
+    @java.lang.Override
+    public int getFeaturesCount() {
+      return features_.size();
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @param index The index of the element to return.
+     * @return The features at the given index.
+     */
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.NftProto.ClassFeature getFeatures(int index) {
+      return features_converter_.convert(features_.get(index));
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @return A list containing the enum numeric values on the wire for features.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getFeaturesValueList() {
+      return features_;
+    }
+    /**
+     * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of features at the given index.
+     */
+    @java.lang.Override
+    public int getFeaturesValue(int index) {
+      return features_.get(index);
+    }
+    private int featuresMemoizedSerializedSize;
+
+    public static final int ROYALTY_RATE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object royaltyRate_ = "";
+    /**
+     * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The royaltyRate.
+     */
+    @java.lang.Override
+    public java.lang.String getRoyaltyRate() {
+      java.lang.Object ref = royaltyRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        royaltyRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for royaltyRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoyaltyRateBytes() {
+      java.lang.Object ref = royaltyRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        royaltyRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, uri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, uriHash_);
+      }
+      if (getFeaturesList().size() > 0) {
+        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(featuresMemoizedSerializedSize);
+      }
+      for (int i = 0; i < features_.size(); i++) {
+        output.writeEnumNoTag(features_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(royaltyRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, royaltyRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, uri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, uriHash_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < features_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(features_.get(i));
+        }
+        size += dataSize;
+        if (!getFeaturesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }featuresMemoizedSerializedSize = dataSize;
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(royaltyRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, royaltyRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.EventProto.EventClassIssued)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.EventProto.EventClassIssued other = (com.coreum.asset.nft.v1.EventProto.EventClassIssued) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!getUriHash()
+          .equals(other.getUriHash())) return false;
+      if (!features_.equals(other.features_)) return false;
+      if (!getRoyaltyRate()
+          .equals(other.getRoyaltyRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ISSUER_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuer().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + URI_FIELD_NUMBER;
+      hash = (53 * hash) + getUri().hashCode();
+      hash = (37 * hash) + URI_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getUriHash().hashCode();
+      if (getFeaturesCount() > 0) {
+        hash = (37 * hash) + FEATURES_FIELD_NUMBER;
+        hash = (53 * hash) + features_.hashCode();
+      }
+      hash = (37 * hash) + ROYALTY_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getRoyaltyRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.EventProto.EventClassIssued prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventClassIssued is emitted on MsgIssueClass.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.asset.nft.v1.EventClassIssued}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.EventClassIssued)
+        com.coreum.asset.nft.v1.EventProto.EventClassIssuedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventClassIssued_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventClassIssued_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.EventProto.EventClassIssued.class, com.coreum.asset.nft.v1.EventProto.EventClassIssued.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.EventProto.EventClassIssued.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        issuer_ = "";
+        symbol_ = "";
+        name_ = "";
+        description_ = "";
+        uri_ = "";
+        uriHash_ = "";
+        features_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        royaltyRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventClassIssued_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventClassIssued getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.EventProto.EventClassIssued.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventClassIssued build() {
+        com.coreum.asset.nft.v1.EventProto.EventClassIssued result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventClassIssued buildPartial() {
+        com.coreum.asset.nft.v1.EventProto.EventClassIssued result = new com.coreum.asset.nft.v1.EventProto.EventClassIssued(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.coreum.asset.nft.v1.EventProto.EventClassIssued result) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          features_ = java.util.Collections.unmodifiableList(features_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.features_ = features_;
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.EventProto.EventClassIssued result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.issuer_ = issuer_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.symbol_ = symbol_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.uri_ = uri_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.uriHash_ = uriHash_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.royaltyRate_ = royaltyRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.EventProto.EventClassIssued) {
+          return mergeFrom((com.coreum.asset.nft.v1.EventProto.EventClassIssued)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.EventProto.EventClassIssued other) {
+        if (other == com.coreum.asset.nft.v1.EventProto.EventClassIssued.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getUri().isEmpty()) {
+          uri_ = other.uri_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getUriHash().isEmpty()) {
+          uriHash_ = other.uriHash_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.features_.isEmpty()) {
+          if (features_.isEmpty()) {
+            features_ = other.features_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureFeaturesIsMutable();
+            features_.addAll(other.features_);
+          }
+          onChanged();
+        }
+        if (!other.getRoyaltyRate().isEmpty()) {
+          royaltyRate_ = other.royaltyRate_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                issuer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                uri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                uriHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                int tmpRaw = input.readEnum();
+                ensureFeaturesIsMutable();
+                features_.add(tmpRaw);
+                break;
+              } // case 64
+              case 66: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureFeaturesIsMutable();
+                  features_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 66
+              case 74: {
+                royaltyRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issuer_ = "";
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return The issuer.
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 5 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uri_ = "";
+      /**
+       * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return The uri.
+       */
+      public java.lang.String getUri() {
+        java.lang.Object ref = uri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return The bytes for uri.
+       */
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        java.lang.Object ref = uri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uri_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUri() {
+        uri_ = getDefaultInstance().getUri();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uri = 6 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uri_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uriHash_ = "";
+      /**
+       * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+       * @return The uriHash.
+       */
+      public java.lang.String getUriHash() {
+        java.lang.Object ref = uriHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uriHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+       * @return The bytes for uriHash.
+       */
+      public com.google.protobuf.ByteString
+          getUriHashBytes() {
+        java.lang.Object ref = uriHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uriHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+       * @param value The uriHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uriHash_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUriHash() {
+        uriHash_ = getDefaultInstance().getUriHash();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uri_hash = 7 [json_name = "uriHash", (.gogoproto.customname) = "URIHash"];</code>
+       * @param value The bytes for uriHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uriHash_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> features_ =
+        java.util.Collections.emptyList();
+      private void ensureFeaturesIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          features_ = new java.util.ArrayList<java.lang.Integer>(features_);
+          bitField0_ |= 0x00000080;
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @return A list containing the features.
+       */
+      public java.util.List<com.coreum.asset.nft.v1.NftProto.ClassFeature> getFeaturesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.coreum.asset.nft.v1.NftProto.ClassFeature>(features_, features_converter_);
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @return The count of features.
+       */
+      public int getFeaturesCount() {
+        return features_.size();
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @param index The index of the element to return.
+       * @return The features at the given index.
+       */
+      public com.coreum.asset.nft.v1.NftProto.ClassFeature getFeatures(int index) {
+        return features_converter_.convert(features_.get(index));
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @param index The index to set the value at.
+       * @param value The features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeatures(
+          int index, com.coreum.asset.nft.v1.NftProto.ClassFeature value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeaturesIsMutable();
+        features_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @param value The features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeatures(com.coreum.asset.nft.v1.NftProto.ClassFeature value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeaturesIsMutable();
+        features_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @param values The features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeatures(
+          java.lang.Iterable<? extends com.coreum.asset.nft.v1.NftProto.ClassFeature> values) {
+        ensureFeaturesIsMutable();
+        for (com.coreum.asset.nft.v1.NftProto.ClassFeature value : values) {
+          features_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeatures() {
+        features_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @return A list containing the enum numeric values on the wire for features.
+       */
+      public java.util.List<java.lang.Integer>
+      getFeaturesValueList() {
+        return java.util.Collections.unmodifiableList(features_);
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of features at the given index.
+       */
+      public int getFeaturesValue(int index) {
+        return features_.get(index);
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeaturesValue(
+          int index, int value) {
+        ensureFeaturesIsMutable();
+        features_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @param value The enum numeric value on the wire for features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeaturesValue(int value) {
+        ensureFeaturesIsMutable();
+        features_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.nft.v1.ClassFeature features = 8 [json_name = "features"];</code>
+       * @param values The enum numeric values on the wire for features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeaturesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureFeaturesIsMutable();
+        for (int value : values) {
+          features_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object royaltyRate_ = "";
+      /**
+       * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The royaltyRate.
+       */
+      public java.lang.String getRoyaltyRate() {
+        java.lang.Object ref = royaltyRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          royaltyRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for royaltyRate.
+       */
+      public com.google.protobuf.ByteString
+          getRoyaltyRateBytes() {
+        java.lang.Object ref = royaltyRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          royaltyRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The royaltyRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoyaltyRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        royaltyRate_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoyaltyRate() {
+        royaltyRate_ = getDefaultInstance().getRoyaltyRate();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string royalty_rate = 9 [json_name = "royaltyRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for royaltyRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoyaltyRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        royaltyRate_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.EventClassIssued)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.EventClassIssued)
+    private static final com.coreum.asset.nft.v1.EventProto.EventClassIssued DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.EventProto.EventClassIssued();
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventClassIssued getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventClassIssued>
+        PARSER = new com.google.protobuf.AbstractParser<EventClassIssued>() {
+      @java.lang.Override
+      public EventClassIssued parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventClassIssued> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventClassIssued> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.EventProto.EventClassIssued getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventFrozenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.EventFrozen)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.nft.v1.EventFrozen}
+   */
+  public static final class EventFrozen extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.EventFrozen)
+      EventFrozenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventFrozen.newBuilder() to construct.
+    private EventFrozen(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventFrozen() {
+      classId_ = "";
+      id_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventFrozen();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventFrozen_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventFrozen_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.EventProto.EventFrozen.class, com.coreum.asset.nft.v1.EventProto.EventFrozen.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.EventProto.EventFrozen)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.EventProto.EventFrozen other = (com.coreum.asset.nft.v1.EventProto.EventFrozen) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.EventProto.EventFrozen prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.nft.v1.EventFrozen}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.EventFrozen)
+        com.coreum.asset.nft.v1.EventProto.EventFrozenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventFrozen_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventFrozen_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.EventProto.EventFrozen.class, com.coreum.asset.nft.v1.EventProto.EventFrozen.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.EventProto.EventFrozen.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        id_ = "";
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventFrozen_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventFrozen getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.EventProto.EventFrozen.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventFrozen build() {
+        com.coreum.asset.nft.v1.EventProto.EventFrozen result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventFrozen buildPartial() {
+        com.coreum.asset.nft.v1.EventProto.EventFrozen result = new com.coreum.asset.nft.v1.EventProto.EventFrozen(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.EventProto.EventFrozen result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.EventProto.EventFrozen) {
+          return mergeFrom((com.coreum.asset.nft.v1.EventProto.EventFrozen)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.EventProto.EventFrozen other) {
+        if (other == com.coreum.asset.nft.v1.EventProto.EventFrozen.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.EventFrozen)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.EventFrozen)
+    private static final com.coreum.asset.nft.v1.EventProto.EventFrozen DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.EventProto.EventFrozen();
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventFrozen getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventFrozen>
+        PARSER = new com.google.protobuf.AbstractParser<EventFrozen>() {
+      @java.lang.Override
+      public EventFrozen parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventFrozen> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventFrozen> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.EventProto.EventFrozen getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUnfrozenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.EventUnfrozen)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.nft.v1.EventUnfrozen}
+   */
+  public static final class EventUnfrozen extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.EventUnfrozen)
+      EventUnfrozenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUnfrozen.newBuilder() to construct.
+    private EventUnfrozen(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUnfrozen() {
+      classId_ = "";
+      id_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUnfrozen();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventUnfrozen_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventUnfrozen_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.EventProto.EventUnfrozen.class, com.coreum.asset.nft.v1.EventProto.EventUnfrozen.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.EventProto.EventUnfrozen)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.EventProto.EventUnfrozen other = (com.coreum.asset.nft.v1.EventProto.EventUnfrozen) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.EventProto.EventUnfrozen prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.nft.v1.EventUnfrozen}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.EventUnfrozen)
+        com.coreum.asset.nft.v1.EventProto.EventUnfrozenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventUnfrozen_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventUnfrozen_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.EventProto.EventUnfrozen.class, com.coreum.asset.nft.v1.EventProto.EventUnfrozen.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.EventProto.EventUnfrozen.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        id_ = "";
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventUnfrozen_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventUnfrozen getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.EventProto.EventUnfrozen.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventUnfrozen build() {
+        com.coreum.asset.nft.v1.EventProto.EventUnfrozen result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventUnfrozen buildPartial() {
+        com.coreum.asset.nft.v1.EventProto.EventUnfrozen result = new com.coreum.asset.nft.v1.EventProto.EventUnfrozen(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.EventProto.EventUnfrozen result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.EventProto.EventUnfrozen) {
+          return mergeFrom((com.coreum.asset.nft.v1.EventProto.EventUnfrozen)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.EventProto.EventUnfrozen other) {
+        if (other == com.coreum.asset.nft.v1.EventProto.EventUnfrozen.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.EventUnfrozen)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.EventUnfrozen)
+    private static final com.coreum.asset.nft.v1.EventProto.EventUnfrozen DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.EventProto.EventUnfrozen();
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventUnfrozen getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUnfrozen>
+        PARSER = new com.google.protobuf.AbstractParser<EventUnfrozen>() {
+      @java.lang.Override
+      public EventUnfrozen parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUnfrozen> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUnfrozen> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.EventProto.EventUnfrozen getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventAddedToWhitelistOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.EventAddedToWhitelist)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string account = 3 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 3 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.nft.v1.EventAddedToWhitelist}
+   */
+  public static final class EventAddedToWhitelist extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.EventAddedToWhitelist)
+      EventAddedToWhitelistOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventAddedToWhitelist.newBuilder() to construct.
+    private EventAddedToWhitelist(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventAddedToWhitelist() {
+      classId_ = "";
+      id_ = "";
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventAddedToWhitelist();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventAddedToWhitelist_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventAddedToWhitelist_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist.class, com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 3 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 3 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, account_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, account_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist other = (com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.nft.v1.EventAddedToWhitelist}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.EventAddedToWhitelist)
+        com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelistOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventAddedToWhitelist_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventAddedToWhitelist_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist.class, com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        id_ = "";
+        account_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventAddedToWhitelist_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist build() {
+        com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist buildPartial() {
+        com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist result = new com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.account_ = account_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist) {
+          return mergeFrom((com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist other) {
+        if (other == com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.EventAddedToWhitelist)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.EventAddedToWhitelist)
+    private static final com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist();
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventAddedToWhitelist>
+        PARSER = new com.google.protobuf.AbstractParser<EventAddedToWhitelist>() {
+      @java.lang.Override
+      public EventAddedToWhitelist parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventAddedToWhitelist> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventAddedToWhitelist> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.EventProto.EventAddedToWhitelist getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRemovedFromWhitelistOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.nft.v1.EventRemovedFromWhitelist)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string account = 3 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 3 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+  }
+  /**
+   * Protobuf type {@code coreum.asset.nft.v1.EventRemovedFromWhitelist}
+   */
+  public static final class EventRemovedFromWhitelist extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.nft.v1.EventRemovedFromWhitelist)
+      EventRemovedFromWhitelistOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRemovedFromWhitelist.newBuilder() to construct.
+    private EventRemovedFromWhitelist(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRemovedFromWhitelist() {
+      classId_ = "";
+      id_ = "";
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRemovedFromWhitelist();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventRemovedFromWhitelist_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventRemovedFromWhitelist_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist.class, com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 3 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 3 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, account_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, account_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist other = (com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code coreum.asset.nft.v1.EventRemovedFromWhitelist}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.nft.v1.EventRemovedFromWhitelist)
+        com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelistOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventRemovedFromWhitelist_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventRemovedFromWhitelist_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist.class, com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        id_ = "";
+        account_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.nft.v1.EventProto.internal_static_coreum_asset_nft_v1_EventRemovedFromWhitelist_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist getDefaultInstanceForType() {
+        return com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist build() {
+        com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist buildPartial() {
+        com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist result = new com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.account_ = account_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist) {
+          return mergeFrom((com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist other) {
+        if (other == com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 3 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.nft.v1.EventRemovedFromWhitelist)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.nft.v1.EventRemovedFromWhitelist)
+    private static final com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist();
+    }
+
+    public static com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRemovedFromWhitelist>
+        PARSER = new com.google.protobuf.AbstractParser<EventRemovedFromWhitelist>() {
+      @java.lang.Override
+      public EventRemovedFromWhitelist parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRemovedFromWhitelist> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRemovedFromWhitelist> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.nft.v1.EventProto.EventRemovedFromWhitelist getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_EventClassIssued_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_EventClassIssued_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_EventFrozen_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_EventFrozen_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_EventUnfrozen_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_EventUnfrozen_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_EventAddedToWhitelist_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_EventAddedToWhitelist_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_nft_v1_EventRemovedFromWhitelist_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_nft_v1_EventRemovedFromWhitelist_fieldAccessorTable;
 
@@ -68,12 +5347,12 @@ public final class EventProto {
       "d\022\016\n\002id\030\002 \001(\tR\002id\022\030\n\007account\030\003 \001(\tR\007acco" +
       "unt\"`\n\031EventRemovedFromWhitelist\022\031\n\010clas" +
       "s_id\030\001 \001(\tR\007classId\022\016\n\002id\030\002 \001(\tR\002id\022\030\n\007a" +
-      "ccount\030\003 \001(\tR\007accountB\312\001\n\027com.coreum.ass" +
-      "et.nft.v1B\nEventProtoP\001Z4github.com/Core" +
-      "umFoundation/coreum/x/asset/nft/types\242\002\003" +
-      "CAN\252\002\023Coreum.Asset.Nft.V1\312\002\023Coreum\\Asset" +
-      "\\Nft\\V1\342\002\037Coreum\\Asset\\Nft\\V1\\GPBMetadat" +
-      "a\352\002\026Coreum::Asset::Nft::V1b\006proto3"
+      "ccount\030\003 \001(\tR\007accountB\310\001\n\027com.coreum.ass" +
+      "et.nft.v1B\nEventProtoZ4github.com/Coreum" +
+      "Foundation/coreum/x/asset/nft/types\242\002\003CA" +
+      "N\252\002\023Coreum.Asset.Nft.V1\312\002\023Coreum\\Asset\\N" +
+      "ft\\V1\342\002\037Coreum\\Asset\\Nft\\V1\\GPBMetadata\352" +
+      "\002\026Coreum::Asset::Nft::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

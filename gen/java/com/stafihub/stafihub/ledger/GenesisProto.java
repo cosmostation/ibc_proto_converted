@@ -14,59 +14,17705 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate> 
+        getExchangeRateListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate getExchangeRateList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    int getExchangeRateListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder> 
+        getExchangeRateListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder getExchangeRateListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate> 
+        getEraExchangeRateListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate getEraExchangeRateList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    int getEraExchangeRateListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder> 
+        getEraExchangeRateListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder getEraExchangeRateListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee> 
+        getTotalProtocolFeeListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee getTotalProtocolFeeList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    int getTotalProtocolFeeListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder> 
+        getTotalProtocolFeeListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder getTotalProtocolFeeListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch> 
+        getUnbondSwitchListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch getUnbondSwitchList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    int getUnbondSwitchListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder> 
+        getUnbondSwitchListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder getUnbondSwitchListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Pool> 
+        getBondedPoolListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.Pool getBondedPoolList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    int getBondedPoolListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder> 
+        getBondedPoolListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder getBondedPoolListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondPipeline> 
+        getBondPipelineListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.BondPipeline getBondPipelineList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    int getBondPipelineListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder> 
+        getBondPipelineListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder getBondPipelineListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit> 
+        getEraUnbondLimitListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit getEraUnbondLimitList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    int getEraUnbondLimitListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder> 
+        getEraUnbondLimitListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder getEraUnbondLimitListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.PoolDetail> 
+        getPoolDetailListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.PoolDetail getPoolDetailList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    int getPoolDetailListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder> 
+        getPoolDetailListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder getPoolDetailListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot> 
+        getCurrentEraSnapshotListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot getCurrentEraSnapshotList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    int getCurrentEraSnapshotListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder> 
+        getCurrentEraSnapshotListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder getCurrentEraSnapshotListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot> 
+        getSnapshotListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot getSnapshotList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    int getSnapshotListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder> 
+        getSnapshotListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder getSnapshotListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot> 
+        getEraSnapshotListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot getEraSnapshotList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    int getEraSnapshotListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder> 
+        getEraSnapshotListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder getEraSnapshotListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ChainEra> 
+        getChainEraListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.ChainEra getChainEraList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    int getChainEraListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder> 
+        getChainEraListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder getChainEraListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission> 
+        getStakingRewardCommissionListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission getStakingRewardCommissionList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    int getStakingRewardCommissionListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder> 
+        getStakingRewardCommissionListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder getStakingRewardCommissionListOrBuilder(
+        int index);
+
+    /**
+     * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+     * @return The protocolFeeReceiver.
+     */
+    java.lang.String getProtocolFeeReceiver();
+    /**
+     * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+     * @return The bytes for protocolFeeReceiver.
+     */
+    com.google.protobuf.ByteString
+        getProtocolFeeReceiverBytes();
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver> 
+        getRelayFeeReceiverListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver getRelayFeeReceiverList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    int getRelayFeeReceiverListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder> 
+        getRelayFeeReceiverListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder getRelayFeeReceiverListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive> 
+        getTotalExpectedActiveListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive getTotalExpectedActiveList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    int getTotalExpectedActiveListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder> 
+        getTotalExpectedActiveListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder getTotalExpectedActiveListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding> 
+        getPoolUnbondingListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding getPoolUnbondingList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    int getPoolUnbondingListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder> 
+        getPoolUnbondingListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder getPoolUnbondingListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee> 
+        getUnbondRelayFeeListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee getUnbondRelayFeeList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    int getUnbondRelayFeeListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder> 
+        getUnbondRelayFeeListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder getUnbondRelayFeeListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission> 
+        getUnbondCommissionListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission getUnbondCommissionList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    int getUnbondCommissionListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder> 
+        getUnbondCommissionListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder getUnbondCommissionListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondRecord> 
+        getBondRecordListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.BondRecord getBondRecordList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    int getBondRecordListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder> 
+        getBondRecordListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder getBondRecordListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.RParams> 
+        getRparamsListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.RParams getRparamsList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    int getRparamsListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder> 
+        getRparamsListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder getRparamsListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Signature> 
+        getSignatureListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.Signature getSignatureList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    int getSignatureListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder> 
+        getSignatureListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder getSignatureListOrBuilder(
+        int index);
+
+    /**
+     * <code>bool MigrateIsSealed = 23 [json_name = "MigrateIsSealed"];</code>
+     * @return The migrateIsSealed.
+     */
+    boolean getMigrateIsSealed();
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail> 
+        getIcaPoolDetailListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail getIcaPoolDetailList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    int getIcaPoolDetailListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder> 
+        getIcaPoolDetailListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder getIcaPoolDetailListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo> 
+        getInterchainTxProposalInfoListList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo getInterchainTxProposalInfoList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    int getInterchainTxProposalInfoListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder> 
+        getInterchainTxProposalInfoListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder getInterchainTxProposalInfoListOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee> 
+        getTotalExpectedFeeListList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee getTotalExpectedFeeList(int index);
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    int getTotalExpectedFeeListCount();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder> 
+        getTotalExpectedFeeListOrBuilderList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder getTotalExpectedFeeListOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the ledger module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code stafihub.stafihub.ledger.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      exchangeRateList_ = java.util.Collections.emptyList();
+      eraExchangeRateList_ = java.util.Collections.emptyList();
+      totalProtocolFeeList_ = java.util.Collections.emptyList();
+      unbondSwitchList_ = java.util.Collections.emptyList();
+      bondedPoolList_ = java.util.Collections.emptyList();
+      bondPipelineList_ = java.util.Collections.emptyList();
+      eraUnbondLimitList_ = java.util.Collections.emptyList();
+      poolDetailList_ = java.util.Collections.emptyList();
+      currentEraSnapshotList_ = java.util.Collections.emptyList();
+      snapshotList_ = java.util.Collections.emptyList();
+      eraSnapshotList_ = java.util.Collections.emptyList();
+      chainEraList_ = java.util.Collections.emptyList();
+      stakingRewardCommissionList_ = java.util.Collections.emptyList();
+      protocolFeeReceiver_ = "";
+      relayFeeReceiverList_ = java.util.Collections.emptyList();
+      totalExpectedActiveList_ = java.util.Collections.emptyList();
+      poolUnbondingList_ = java.util.Collections.emptyList();
+      unbondRelayFeeList_ = java.util.Collections.emptyList();
+      unbondCommissionList_ = java.util.Collections.emptyList();
+      bondRecordList_ = java.util.Collections.emptyList();
+      rparamsList_ = java.util.Collections.emptyList();
+      signatureList_ = java.util.Collections.emptyList();
+      icaPoolDetailList_ = java.util.Collections.emptyList();
+      interchainTxProposalInfoList_ = java.util.Collections.emptyList();
+      totalExpectedFeeList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisState.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int EXCHANGERATELIST_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate> exchangeRateList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate> getExchangeRateListList() {
+      return exchangeRateList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder> 
+        getExchangeRateListOrBuilderList() {
+      return exchangeRateList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getExchangeRateListCount() {
+      return exchangeRateList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate getExchangeRateList(int index) {
+      return exchangeRateList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder getExchangeRateListOrBuilder(
+        int index) {
+      return exchangeRateList_.get(index);
+    }
+
+    public static final int ERAEXCHANGERATELIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate> eraExchangeRateList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate> getEraExchangeRateListList() {
+      return eraExchangeRateList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder> 
+        getEraExchangeRateListOrBuilderList() {
+      return eraExchangeRateList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    @java.lang.Override
+    public int getEraExchangeRateListCount() {
+      return eraExchangeRateList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate getEraExchangeRateList(int index) {
+      return eraExchangeRateList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder getEraExchangeRateListOrBuilder(
+        int index) {
+      return eraExchangeRateList_.get(index);
+    }
+
+    public static final int TOTALPROTOCOLFEELIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee> totalProtocolFeeList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee> getTotalProtocolFeeListList() {
+      return totalProtocolFeeList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder> 
+        getTotalProtocolFeeListOrBuilderList() {
+      return totalProtocolFeeList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    @java.lang.Override
+    public int getTotalProtocolFeeListCount() {
+      return totalProtocolFeeList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee getTotalProtocolFeeList(int index) {
+      return totalProtocolFeeList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder getTotalProtocolFeeListOrBuilder(
+        int index) {
+      return totalProtocolFeeList_.get(index);
+    }
+
+    public static final int UNBONDSWITCHLIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch> unbondSwitchList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch> getUnbondSwitchListList() {
+      return unbondSwitchList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder> 
+        getUnbondSwitchListOrBuilderList() {
+      return unbondSwitchList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    @java.lang.Override
+    public int getUnbondSwitchListCount() {
+      return unbondSwitchList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch getUnbondSwitchList(int index) {
+      return unbondSwitchList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder getUnbondSwitchListOrBuilder(
+        int index) {
+      return unbondSwitchList_.get(index);
+    }
+
+    public static final int BONDEDPOOLLIST_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Pool> bondedPoolList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Pool> getBondedPoolListList() {
+      return bondedPoolList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder> 
+        getBondedPoolListOrBuilderList() {
+      return bondedPoolList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    @java.lang.Override
+    public int getBondedPoolListCount() {
+      return bondedPoolList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.Pool getBondedPoolList(int index) {
+      return bondedPoolList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder getBondedPoolListOrBuilder(
+        int index) {
+      return bondedPoolList_.get(index);
+    }
+
+    public static final int BONDPIPELINELIST_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondPipeline> bondPipelineList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondPipeline> getBondPipelineListList() {
+      return bondPipelineList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder> 
+        getBondPipelineListOrBuilderList() {
+      return bondPipelineList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    @java.lang.Override
+    public int getBondPipelineListCount() {
+      return bondPipelineList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.BondPipeline getBondPipelineList(int index) {
+      return bondPipelineList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder getBondPipelineListOrBuilder(
+        int index) {
+      return bondPipelineList_.get(index);
+    }
+
+    public static final int ERAUNBONDLIMITLIST_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit> eraUnbondLimitList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit> getEraUnbondLimitListList() {
+      return eraUnbondLimitList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder> 
+        getEraUnbondLimitListOrBuilderList() {
+      return eraUnbondLimitList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    @java.lang.Override
+    public int getEraUnbondLimitListCount() {
+      return eraUnbondLimitList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit getEraUnbondLimitList(int index) {
+      return eraUnbondLimitList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder getEraUnbondLimitListOrBuilder(
+        int index) {
+      return eraUnbondLimitList_.get(index);
+    }
+
+    public static final int POOLDETAILLIST_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.PoolDetail> poolDetailList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.PoolDetail> getPoolDetailListList() {
+      return poolDetailList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder> 
+        getPoolDetailListOrBuilderList() {
+      return poolDetailList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    @java.lang.Override
+    public int getPoolDetailListCount() {
+      return poolDetailList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.PoolDetail getPoolDetailList(int index) {
+      return poolDetailList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder getPoolDetailListOrBuilder(
+        int index) {
+      return poolDetailList_.get(index);
+    }
+
+    public static final int CURRENTERASNAPSHOTLIST_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot> currentEraSnapshotList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot> getCurrentEraSnapshotListList() {
+      return currentEraSnapshotList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder> 
+        getCurrentEraSnapshotListOrBuilderList() {
+      return currentEraSnapshotList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public int getCurrentEraSnapshotListCount() {
+      return currentEraSnapshotList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot getCurrentEraSnapshotList(int index) {
+      return currentEraSnapshotList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder getCurrentEraSnapshotListOrBuilder(
+        int index) {
+      return currentEraSnapshotList_.get(index);
+    }
+
+    public static final int SNAPSHOTLIST_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot> snapshotList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot> getSnapshotListList() {
+      return snapshotList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder> 
+        getSnapshotListOrBuilderList() {
+      return snapshotList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    @java.lang.Override
+    public int getSnapshotListCount() {
+      return snapshotList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot getSnapshotList(int index) {
+      return snapshotList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder getSnapshotListOrBuilder(
+        int index) {
+      return snapshotList_.get(index);
+    }
+
+    public static final int ERASNAPSHOTLIST_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot> eraSnapshotList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot> getEraSnapshotListList() {
+      return eraSnapshotList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder> 
+        getEraSnapshotListOrBuilderList() {
+      return eraSnapshotList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public int getEraSnapshotListCount() {
+      return eraSnapshotList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot getEraSnapshotList(int index) {
+      return eraSnapshotList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder getEraSnapshotListOrBuilder(
+        int index) {
+      return eraSnapshotList_.get(index);
+    }
+
+    public static final int CHAINERALIST_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ChainEra> chainEraList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ChainEra> getChainEraListList() {
+      return chainEraList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder> 
+        getChainEraListOrBuilderList() {
+      return chainEraList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    @java.lang.Override
+    public int getChainEraListCount() {
+      return chainEraList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.ChainEra getChainEraList(int index) {
+      return chainEraList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder getChainEraListOrBuilder(
+        int index) {
+      return chainEraList_.get(index);
+    }
+
+    public static final int STAKINGREWARDCOMMISSIONLIST_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission> stakingRewardCommissionList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission> getStakingRewardCommissionListList() {
+      return stakingRewardCommissionList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder> 
+        getStakingRewardCommissionListOrBuilderList() {
+      return stakingRewardCommissionList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    @java.lang.Override
+    public int getStakingRewardCommissionListCount() {
+      return stakingRewardCommissionList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission getStakingRewardCommissionList(int index) {
+      return stakingRewardCommissionList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder getStakingRewardCommissionListOrBuilder(
+        int index) {
+      return stakingRewardCommissionList_.get(index);
+    }
+
+    public static final int PROTOCOLFEERECEIVER_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object protocolFeeReceiver_ = "";
+    /**
+     * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+     * @return The protocolFeeReceiver.
+     */
+    @java.lang.Override
+    public java.lang.String getProtocolFeeReceiver() {
+      java.lang.Object ref = protocolFeeReceiver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        protocolFeeReceiver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+     * @return The bytes for protocolFeeReceiver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProtocolFeeReceiverBytes() {
+      java.lang.Object ref = protocolFeeReceiver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        protocolFeeReceiver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RELAYFEERECEIVERLIST_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver> relayFeeReceiverList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver> getRelayFeeReceiverListList() {
+      return relayFeeReceiverList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder> 
+        getRelayFeeReceiverListOrBuilderList() {
+      return relayFeeReceiverList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    @java.lang.Override
+    public int getRelayFeeReceiverListCount() {
+      return relayFeeReceiverList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver getRelayFeeReceiverList(int index) {
+      return relayFeeReceiverList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder getRelayFeeReceiverListOrBuilder(
+        int index) {
+      return relayFeeReceiverList_.get(index);
+    }
+
+    public static final int TOTALEXPECTEDACTIVELIST_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive> totalExpectedActiveList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive> getTotalExpectedActiveListList() {
+      return totalExpectedActiveList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder> 
+        getTotalExpectedActiveListOrBuilderList() {
+      return totalExpectedActiveList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    @java.lang.Override
+    public int getTotalExpectedActiveListCount() {
+      return totalExpectedActiveList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive getTotalExpectedActiveList(int index) {
+      return totalExpectedActiveList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder getTotalExpectedActiveListOrBuilder(
+        int index) {
+      return totalExpectedActiveList_.get(index);
+    }
+
+    public static final int POOLUNBONDINGLIST_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding> poolUnbondingList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding> getPoolUnbondingListList() {
+      return poolUnbondingList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder> 
+        getPoolUnbondingListOrBuilderList() {
+      return poolUnbondingList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    @java.lang.Override
+    public int getPoolUnbondingListCount() {
+      return poolUnbondingList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding getPoolUnbondingList(int index) {
+      return poolUnbondingList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder getPoolUnbondingListOrBuilder(
+        int index) {
+      return poolUnbondingList_.get(index);
+    }
+
+    public static final int UNBONDRELAYFEELIST_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee> unbondRelayFeeList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee> getUnbondRelayFeeListList() {
+      return unbondRelayFeeList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder> 
+        getUnbondRelayFeeListOrBuilderList() {
+      return unbondRelayFeeList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    @java.lang.Override
+    public int getUnbondRelayFeeListCount() {
+      return unbondRelayFeeList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee getUnbondRelayFeeList(int index) {
+      return unbondRelayFeeList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder getUnbondRelayFeeListOrBuilder(
+        int index) {
+      return unbondRelayFeeList_.get(index);
+    }
+
+    public static final int UNBONDCOMMISSIONLIST_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission> unbondCommissionList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission> getUnbondCommissionListList() {
+      return unbondCommissionList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder> 
+        getUnbondCommissionListOrBuilderList() {
+      return unbondCommissionList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    @java.lang.Override
+    public int getUnbondCommissionListCount() {
+      return unbondCommissionList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission getUnbondCommissionList(int index) {
+      return unbondCommissionList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder getUnbondCommissionListOrBuilder(
+        int index) {
+      return unbondCommissionList_.get(index);
+    }
+
+    public static final int BONDRECORDLIST_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondRecord> bondRecordList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondRecord> getBondRecordListList() {
+      return bondRecordList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder> 
+        getBondRecordListOrBuilderList() {
+      return bondRecordList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    @java.lang.Override
+    public int getBondRecordListCount() {
+      return bondRecordList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.BondRecord getBondRecordList(int index) {
+      return bondRecordList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder getBondRecordListOrBuilder(
+        int index) {
+      return bondRecordList_.get(index);
+    }
+
+    public static final int RPARAMSLIST_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.RParams> rparamsList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.RParams> getRparamsListList() {
+      return rparamsList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder> 
+        getRparamsListOrBuilderList() {
+      return rparamsList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    @java.lang.Override
+    public int getRparamsListCount() {
+      return rparamsList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.RParams getRparamsList(int index) {
+      return rparamsList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder getRparamsListOrBuilder(
+        int index) {
+      return rparamsList_.get(index);
+    }
+
+    public static final int SIGNATURELIST_FIELD_NUMBER = 22;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Signature> signatureList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Signature> getSignatureListList() {
+      return signatureList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder> 
+        getSignatureListOrBuilderList() {
+      return signatureList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    @java.lang.Override
+    public int getSignatureListCount() {
+      return signatureList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.Signature getSignatureList(int index) {
+      return signatureList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder getSignatureListOrBuilder(
+        int index) {
+      return signatureList_.get(index);
+    }
+
+    public static final int MIGRATEISSEALED_FIELD_NUMBER = 23;
+    private boolean migrateIsSealed_ = false;
+    /**
+     * <code>bool MigrateIsSealed = 23 [json_name = "MigrateIsSealed"];</code>
+     * @return The migrateIsSealed.
+     */
+    @java.lang.Override
+    public boolean getMigrateIsSealed() {
+      return migrateIsSealed_;
+    }
+
+    public static final int ICAPOOLDETAILLIST_FIELD_NUMBER = 24;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail> icaPoolDetailList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail> getIcaPoolDetailListList() {
+      return icaPoolDetailList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder> 
+        getIcaPoolDetailListOrBuilderList() {
+      return icaPoolDetailList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    @java.lang.Override
+    public int getIcaPoolDetailListCount() {
+      return icaPoolDetailList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail getIcaPoolDetailList(int index) {
+      return icaPoolDetailList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder getIcaPoolDetailListOrBuilder(
+        int index) {
+      return icaPoolDetailList_.get(index);
+    }
+
+    public static final int INTERCHAINTXPROPOSALINFOLIST_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo> interchainTxProposalInfoList_;
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo> getInterchainTxProposalInfoListList() {
+      return interchainTxProposalInfoList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder> 
+        getInterchainTxProposalInfoListOrBuilderList() {
+      return interchainTxProposalInfoList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    @java.lang.Override
+    public int getInterchainTxProposalInfoListCount() {
+      return interchainTxProposalInfoList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo getInterchainTxProposalInfoList(int index) {
+      return interchainTxProposalInfoList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder getInterchainTxProposalInfoListOrBuilder(
+        int index) {
+      return interchainTxProposalInfoList_.get(index);
+    }
+
+    public static final int TOTALEXPECTEDFEELIST_FIELD_NUMBER = 26;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee> totalExpectedFeeList_;
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee> getTotalExpectedFeeListList() {
+      return totalExpectedFeeList_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder> 
+        getTotalExpectedFeeListOrBuilderList() {
+      return totalExpectedFeeList_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    @java.lang.Override
+    public int getTotalExpectedFeeListCount() {
+      return totalExpectedFeeList_.size();
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee getTotalExpectedFeeList(int index) {
+      return totalExpectedFeeList_.get(index);
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder getTotalExpectedFeeListOrBuilder(
+        int index) {
+      return totalExpectedFeeList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < exchangeRateList_.size(); i++) {
+        output.writeMessage(1, exchangeRateList_.get(i));
+      }
+      for (int i = 0; i < eraExchangeRateList_.size(); i++) {
+        output.writeMessage(2, eraExchangeRateList_.get(i));
+      }
+      for (int i = 0; i < totalProtocolFeeList_.size(); i++) {
+        output.writeMessage(3, totalProtocolFeeList_.get(i));
+      }
+      for (int i = 0; i < unbondSwitchList_.size(); i++) {
+        output.writeMessage(4, unbondSwitchList_.get(i));
+      }
+      for (int i = 0; i < bondedPoolList_.size(); i++) {
+        output.writeMessage(5, bondedPoolList_.get(i));
+      }
+      for (int i = 0; i < bondPipelineList_.size(); i++) {
+        output.writeMessage(6, bondPipelineList_.get(i));
+      }
+      for (int i = 0; i < eraUnbondLimitList_.size(); i++) {
+        output.writeMessage(7, eraUnbondLimitList_.get(i));
+      }
+      for (int i = 0; i < poolDetailList_.size(); i++) {
+        output.writeMessage(8, poolDetailList_.get(i));
+      }
+      for (int i = 0; i < currentEraSnapshotList_.size(); i++) {
+        output.writeMessage(9, currentEraSnapshotList_.get(i));
+      }
+      for (int i = 0; i < snapshotList_.size(); i++) {
+        output.writeMessage(10, snapshotList_.get(i));
+      }
+      for (int i = 0; i < eraSnapshotList_.size(); i++) {
+        output.writeMessage(11, eraSnapshotList_.get(i));
+      }
+      for (int i = 0; i < chainEraList_.size(); i++) {
+        output.writeMessage(12, chainEraList_.get(i));
+      }
+      for (int i = 0; i < stakingRewardCommissionList_.size(); i++) {
+        output.writeMessage(13, stakingRewardCommissionList_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(protocolFeeReceiver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, protocolFeeReceiver_);
+      }
+      for (int i = 0; i < relayFeeReceiverList_.size(); i++) {
+        output.writeMessage(15, relayFeeReceiverList_.get(i));
+      }
+      for (int i = 0; i < totalExpectedActiveList_.size(); i++) {
+        output.writeMessage(16, totalExpectedActiveList_.get(i));
+      }
+      for (int i = 0; i < poolUnbondingList_.size(); i++) {
+        output.writeMessage(17, poolUnbondingList_.get(i));
+      }
+      for (int i = 0; i < unbondRelayFeeList_.size(); i++) {
+        output.writeMessage(18, unbondRelayFeeList_.get(i));
+      }
+      for (int i = 0; i < unbondCommissionList_.size(); i++) {
+        output.writeMessage(19, unbondCommissionList_.get(i));
+      }
+      for (int i = 0; i < bondRecordList_.size(); i++) {
+        output.writeMessage(20, bondRecordList_.get(i));
+      }
+      for (int i = 0; i < rparamsList_.size(); i++) {
+        output.writeMessage(21, rparamsList_.get(i));
+      }
+      for (int i = 0; i < signatureList_.size(); i++) {
+        output.writeMessage(22, signatureList_.get(i));
+      }
+      if (migrateIsSealed_ != false) {
+        output.writeBool(23, migrateIsSealed_);
+      }
+      for (int i = 0; i < icaPoolDetailList_.size(); i++) {
+        output.writeMessage(24, icaPoolDetailList_.get(i));
+      }
+      for (int i = 0; i < interchainTxProposalInfoList_.size(); i++) {
+        output.writeMessage(25, interchainTxProposalInfoList_.get(i));
+      }
+      for (int i = 0; i < totalExpectedFeeList_.size(); i++) {
+        output.writeMessage(26, totalExpectedFeeList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < exchangeRateList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, exchangeRateList_.get(i));
+      }
+      for (int i = 0; i < eraExchangeRateList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, eraExchangeRateList_.get(i));
+      }
+      for (int i = 0; i < totalProtocolFeeList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, totalProtocolFeeList_.get(i));
+      }
+      for (int i = 0; i < unbondSwitchList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, unbondSwitchList_.get(i));
+      }
+      for (int i = 0; i < bondedPoolList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, bondedPoolList_.get(i));
+      }
+      for (int i = 0; i < bondPipelineList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, bondPipelineList_.get(i));
+      }
+      for (int i = 0; i < eraUnbondLimitList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, eraUnbondLimitList_.get(i));
+      }
+      for (int i = 0; i < poolDetailList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, poolDetailList_.get(i));
+      }
+      for (int i = 0; i < currentEraSnapshotList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, currentEraSnapshotList_.get(i));
+      }
+      for (int i = 0; i < snapshotList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, snapshotList_.get(i));
+      }
+      for (int i = 0; i < eraSnapshotList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, eraSnapshotList_.get(i));
+      }
+      for (int i = 0; i < chainEraList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, chainEraList_.get(i));
+      }
+      for (int i = 0; i < stakingRewardCommissionList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, stakingRewardCommissionList_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(protocolFeeReceiver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, protocolFeeReceiver_);
+      }
+      for (int i = 0; i < relayFeeReceiverList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, relayFeeReceiverList_.get(i));
+      }
+      for (int i = 0; i < totalExpectedActiveList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, totalExpectedActiveList_.get(i));
+      }
+      for (int i = 0; i < poolUnbondingList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, poolUnbondingList_.get(i));
+      }
+      for (int i = 0; i < unbondRelayFeeList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, unbondRelayFeeList_.get(i));
+      }
+      for (int i = 0; i < unbondCommissionList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, unbondCommissionList_.get(i));
+      }
+      for (int i = 0; i < bondRecordList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, bondRecordList_.get(i));
+      }
+      for (int i = 0; i < rparamsList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, rparamsList_.get(i));
+      }
+      for (int i = 0; i < signatureList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, signatureList_.get(i));
+      }
+      if (migrateIsSealed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(23, migrateIsSealed_);
+      }
+      for (int i = 0; i < icaPoolDetailList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, icaPoolDetailList_.get(i));
+      }
+      for (int i = 0; i < interchainTxProposalInfoList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, interchainTxProposalInfoList_.get(i));
+      }
+      for (int i = 0; i < totalExpectedFeeList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, totalExpectedFeeList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.GenesisState other = (com.stafihub.stafihub.ledger.GenesisProto.GenesisState) obj;
+
+      if (!getExchangeRateListList()
+          .equals(other.getExchangeRateListList())) return false;
+      if (!getEraExchangeRateListList()
+          .equals(other.getEraExchangeRateListList())) return false;
+      if (!getTotalProtocolFeeListList()
+          .equals(other.getTotalProtocolFeeListList())) return false;
+      if (!getUnbondSwitchListList()
+          .equals(other.getUnbondSwitchListList())) return false;
+      if (!getBondedPoolListList()
+          .equals(other.getBondedPoolListList())) return false;
+      if (!getBondPipelineListList()
+          .equals(other.getBondPipelineListList())) return false;
+      if (!getEraUnbondLimitListList()
+          .equals(other.getEraUnbondLimitListList())) return false;
+      if (!getPoolDetailListList()
+          .equals(other.getPoolDetailListList())) return false;
+      if (!getCurrentEraSnapshotListList()
+          .equals(other.getCurrentEraSnapshotListList())) return false;
+      if (!getSnapshotListList()
+          .equals(other.getSnapshotListList())) return false;
+      if (!getEraSnapshotListList()
+          .equals(other.getEraSnapshotListList())) return false;
+      if (!getChainEraListList()
+          .equals(other.getChainEraListList())) return false;
+      if (!getStakingRewardCommissionListList()
+          .equals(other.getStakingRewardCommissionListList())) return false;
+      if (!getProtocolFeeReceiver()
+          .equals(other.getProtocolFeeReceiver())) return false;
+      if (!getRelayFeeReceiverListList()
+          .equals(other.getRelayFeeReceiverListList())) return false;
+      if (!getTotalExpectedActiveListList()
+          .equals(other.getTotalExpectedActiveListList())) return false;
+      if (!getPoolUnbondingListList()
+          .equals(other.getPoolUnbondingListList())) return false;
+      if (!getUnbondRelayFeeListList()
+          .equals(other.getUnbondRelayFeeListList())) return false;
+      if (!getUnbondCommissionListList()
+          .equals(other.getUnbondCommissionListList())) return false;
+      if (!getBondRecordListList()
+          .equals(other.getBondRecordListList())) return false;
+      if (!getRparamsListList()
+          .equals(other.getRparamsListList())) return false;
+      if (!getSignatureListList()
+          .equals(other.getSignatureListList())) return false;
+      if (getMigrateIsSealed()
+          != other.getMigrateIsSealed()) return false;
+      if (!getIcaPoolDetailListList()
+          .equals(other.getIcaPoolDetailListList())) return false;
+      if (!getInterchainTxProposalInfoListList()
+          .equals(other.getInterchainTxProposalInfoListList())) return false;
+      if (!getTotalExpectedFeeListList()
+          .equals(other.getTotalExpectedFeeListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getExchangeRateListCount() > 0) {
+        hash = (37 * hash) + EXCHANGERATELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getExchangeRateListList().hashCode();
+      }
+      if (getEraExchangeRateListCount() > 0) {
+        hash = (37 * hash) + ERAEXCHANGERATELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getEraExchangeRateListList().hashCode();
+      }
+      if (getTotalProtocolFeeListCount() > 0) {
+        hash = (37 * hash) + TOTALPROTOCOLFEELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalProtocolFeeListList().hashCode();
+      }
+      if (getUnbondSwitchListCount() > 0) {
+        hash = (37 * hash) + UNBONDSWITCHLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbondSwitchListList().hashCode();
+      }
+      if (getBondedPoolListCount() > 0) {
+        hash = (37 * hash) + BONDEDPOOLLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getBondedPoolListList().hashCode();
+      }
+      if (getBondPipelineListCount() > 0) {
+        hash = (37 * hash) + BONDPIPELINELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getBondPipelineListList().hashCode();
+      }
+      if (getEraUnbondLimitListCount() > 0) {
+        hash = (37 * hash) + ERAUNBONDLIMITLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getEraUnbondLimitListList().hashCode();
+      }
+      if (getPoolDetailListCount() > 0) {
+        hash = (37 * hash) + POOLDETAILLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolDetailListList().hashCode();
+      }
+      if (getCurrentEraSnapshotListCount() > 0) {
+        hash = (37 * hash) + CURRENTERASNAPSHOTLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrentEraSnapshotListList().hashCode();
+      }
+      if (getSnapshotListCount() > 0) {
+        hash = (37 * hash) + SNAPSHOTLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getSnapshotListList().hashCode();
+      }
+      if (getEraSnapshotListCount() > 0) {
+        hash = (37 * hash) + ERASNAPSHOTLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getEraSnapshotListList().hashCode();
+      }
+      if (getChainEraListCount() > 0) {
+        hash = (37 * hash) + CHAINERALIST_FIELD_NUMBER;
+        hash = (53 * hash) + getChainEraListList().hashCode();
+      }
+      if (getStakingRewardCommissionListCount() > 0) {
+        hash = (37 * hash) + STAKINGREWARDCOMMISSIONLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingRewardCommissionListList().hashCode();
+      }
+      hash = (37 * hash) + PROTOCOLFEERECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getProtocolFeeReceiver().hashCode();
+      if (getRelayFeeReceiverListCount() > 0) {
+        hash = (37 * hash) + RELAYFEERECEIVERLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getRelayFeeReceiverListList().hashCode();
+      }
+      if (getTotalExpectedActiveListCount() > 0) {
+        hash = (37 * hash) + TOTALEXPECTEDACTIVELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalExpectedActiveListList().hashCode();
+      }
+      if (getPoolUnbondingListCount() > 0) {
+        hash = (37 * hash) + POOLUNBONDINGLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolUnbondingListList().hashCode();
+      }
+      if (getUnbondRelayFeeListCount() > 0) {
+        hash = (37 * hash) + UNBONDRELAYFEELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbondRelayFeeListList().hashCode();
+      }
+      if (getUnbondCommissionListCount() > 0) {
+        hash = (37 * hash) + UNBONDCOMMISSIONLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbondCommissionListList().hashCode();
+      }
+      if (getBondRecordListCount() > 0) {
+        hash = (37 * hash) + BONDRECORDLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getBondRecordListList().hashCode();
+      }
+      if (getRparamsListCount() > 0) {
+        hash = (37 * hash) + RPARAMSLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getRparamsListList().hashCode();
+      }
+      if (getSignatureListCount() > 0) {
+        hash = (37 * hash) + SIGNATURELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getSignatureListList().hashCode();
+      }
+      hash = (37 * hash) + MIGRATEISSEALED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMigrateIsSealed());
+      if (getIcaPoolDetailListCount() > 0) {
+        hash = (37 * hash) + ICAPOOLDETAILLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getIcaPoolDetailListList().hashCode();
+      }
+      if (getInterchainTxProposalInfoListCount() > 0) {
+        hash = (37 * hash) + INTERCHAINTXPROPOSALINFOLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getInterchainTxProposalInfoListList().hashCode();
+      }
+      if (getTotalExpectedFeeListCount() > 0) {
+        hash = (37 * hash) + TOTALEXPECTEDFEELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalExpectedFeeListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the ledger module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code stafihub.stafihub.ledger.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.GenesisState)
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisState.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (exchangeRateListBuilder_ == null) {
+          exchangeRateList_ = java.util.Collections.emptyList();
+        } else {
+          exchangeRateList_ = null;
+          exchangeRateListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (eraExchangeRateListBuilder_ == null) {
+          eraExchangeRateList_ = java.util.Collections.emptyList();
+        } else {
+          eraExchangeRateList_ = null;
+          eraExchangeRateListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (totalProtocolFeeListBuilder_ == null) {
+          totalProtocolFeeList_ = java.util.Collections.emptyList();
+        } else {
+          totalProtocolFeeList_ = null;
+          totalProtocolFeeListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (unbondSwitchListBuilder_ == null) {
+          unbondSwitchList_ = java.util.Collections.emptyList();
+        } else {
+          unbondSwitchList_ = null;
+          unbondSwitchListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (bondedPoolListBuilder_ == null) {
+          bondedPoolList_ = java.util.Collections.emptyList();
+        } else {
+          bondedPoolList_ = null;
+          bondedPoolListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (bondPipelineListBuilder_ == null) {
+          bondPipelineList_ = java.util.Collections.emptyList();
+        } else {
+          bondPipelineList_ = null;
+          bondPipelineListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (eraUnbondLimitListBuilder_ == null) {
+          eraUnbondLimitList_ = java.util.Collections.emptyList();
+        } else {
+          eraUnbondLimitList_ = null;
+          eraUnbondLimitListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (poolDetailListBuilder_ == null) {
+          poolDetailList_ = java.util.Collections.emptyList();
+        } else {
+          poolDetailList_ = null;
+          poolDetailListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (currentEraSnapshotListBuilder_ == null) {
+          currentEraSnapshotList_ = java.util.Collections.emptyList();
+        } else {
+          currentEraSnapshotList_ = null;
+          currentEraSnapshotListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (snapshotListBuilder_ == null) {
+          snapshotList_ = java.util.Collections.emptyList();
+        } else {
+          snapshotList_ = null;
+          snapshotListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        if (eraSnapshotListBuilder_ == null) {
+          eraSnapshotList_ = java.util.Collections.emptyList();
+        } else {
+          eraSnapshotList_ = null;
+          eraSnapshotListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        if (chainEraListBuilder_ == null) {
+          chainEraList_ = java.util.Collections.emptyList();
+        } else {
+          chainEraList_ = null;
+          chainEraListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        if (stakingRewardCommissionListBuilder_ == null) {
+          stakingRewardCommissionList_ = java.util.Collections.emptyList();
+        } else {
+          stakingRewardCommissionList_ = null;
+          stakingRewardCommissionListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        protocolFeeReceiver_ = "";
+        if (relayFeeReceiverListBuilder_ == null) {
+          relayFeeReceiverList_ = java.util.Collections.emptyList();
+        } else {
+          relayFeeReceiverList_ = null;
+          relayFeeReceiverListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
+        if (totalExpectedActiveListBuilder_ == null) {
+          totalExpectedActiveList_ = java.util.Collections.emptyList();
+        } else {
+          totalExpectedActiveList_ = null;
+          totalExpectedActiveListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00008000);
+        if (poolUnbondingListBuilder_ == null) {
+          poolUnbondingList_ = java.util.Collections.emptyList();
+        } else {
+          poolUnbondingList_ = null;
+          poolUnbondingListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00010000);
+        if (unbondRelayFeeListBuilder_ == null) {
+          unbondRelayFeeList_ = java.util.Collections.emptyList();
+        } else {
+          unbondRelayFeeList_ = null;
+          unbondRelayFeeListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00020000);
+        if (unbondCommissionListBuilder_ == null) {
+          unbondCommissionList_ = java.util.Collections.emptyList();
+        } else {
+          unbondCommissionList_ = null;
+          unbondCommissionListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00040000);
+        if (bondRecordListBuilder_ == null) {
+          bondRecordList_ = java.util.Collections.emptyList();
+        } else {
+          bondRecordList_ = null;
+          bondRecordListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00080000);
+        if (rparamsListBuilder_ == null) {
+          rparamsList_ = java.util.Collections.emptyList();
+        } else {
+          rparamsList_ = null;
+          rparamsListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00100000);
+        if (signatureListBuilder_ == null) {
+          signatureList_ = java.util.Collections.emptyList();
+        } else {
+          signatureList_ = null;
+          signatureListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00200000);
+        migrateIsSealed_ = false;
+        if (icaPoolDetailListBuilder_ == null) {
+          icaPoolDetailList_ = java.util.Collections.emptyList();
+        } else {
+          icaPoolDetailList_ = null;
+          icaPoolDetailListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00800000);
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          interchainTxProposalInfoList_ = java.util.Collections.emptyList();
+        } else {
+          interchainTxProposalInfoList_ = null;
+          interchainTxProposalInfoListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x01000000);
+        if (totalExpectedFeeListBuilder_ == null) {
+          totalExpectedFeeList_ = java.util.Collections.emptyList();
+        } else {
+          totalExpectedFeeList_ = null;
+          totalExpectedFeeListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x02000000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisState build() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisState buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisState result = new com.stafihub.stafihub.ledger.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.ledger.GenesisProto.GenesisState result) {
+        if (exchangeRateListBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            exchangeRateList_ = java.util.Collections.unmodifiableList(exchangeRateList_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.exchangeRateList_ = exchangeRateList_;
+        } else {
+          result.exchangeRateList_ = exchangeRateListBuilder_.build();
+        }
+        if (eraExchangeRateListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            eraExchangeRateList_ = java.util.Collections.unmodifiableList(eraExchangeRateList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.eraExchangeRateList_ = eraExchangeRateList_;
+        } else {
+          result.eraExchangeRateList_ = eraExchangeRateListBuilder_.build();
+        }
+        if (totalProtocolFeeListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            totalProtocolFeeList_ = java.util.Collections.unmodifiableList(totalProtocolFeeList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.totalProtocolFeeList_ = totalProtocolFeeList_;
+        } else {
+          result.totalProtocolFeeList_ = totalProtocolFeeListBuilder_.build();
+        }
+        if (unbondSwitchListBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            unbondSwitchList_ = java.util.Collections.unmodifiableList(unbondSwitchList_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.unbondSwitchList_ = unbondSwitchList_;
+        } else {
+          result.unbondSwitchList_ = unbondSwitchListBuilder_.build();
+        }
+        if (bondedPoolListBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            bondedPoolList_ = java.util.Collections.unmodifiableList(bondedPoolList_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.bondedPoolList_ = bondedPoolList_;
+        } else {
+          result.bondedPoolList_ = bondedPoolListBuilder_.build();
+        }
+        if (bondPipelineListBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            bondPipelineList_ = java.util.Collections.unmodifiableList(bondPipelineList_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.bondPipelineList_ = bondPipelineList_;
+        } else {
+          result.bondPipelineList_ = bondPipelineListBuilder_.build();
+        }
+        if (eraUnbondLimitListBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            eraUnbondLimitList_ = java.util.Collections.unmodifiableList(eraUnbondLimitList_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.eraUnbondLimitList_ = eraUnbondLimitList_;
+        } else {
+          result.eraUnbondLimitList_ = eraUnbondLimitListBuilder_.build();
+        }
+        if (poolDetailListBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            poolDetailList_ = java.util.Collections.unmodifiableList(poolDetailList_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.poolDetailList_ = poolDetailList_;
+        } else {
+          result.poolDetailList_ = poolDetailListBuilder_.build();
+        }
+        if (currentEraSnapshotListBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            currentEraSnapshotList_ = java.util.Collections.unmodifiableList(currentEraSnapshotList_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.currentEraSnapshotList_ = currentEraSnapshotList_;
+        } else {
+          result.currentEraSnapshotList_ = currentEraSnapshotListBuilder_.build();
+        }
+        if (snapshotListBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            snapshotList_ = java.util.Collections.unmodifiableList(snapshotList_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.snapshotList_ = snapshotList_;
+        } else {
+          result.snapshotList_ = snapshotListBuilder_.build();
+        }
+        if (eraSnapshotListBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            eraSnapshotList_ = java.util.Collections.unmodifiableList(eraSnapshotList_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.eraSnapshotList_ = eraSnapshotList_;
+        } else {
+          result.eraSnapshotList_ = eraSnapshotListBuilder_.build();
+        }
+        if (chainEraListBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            chainEraList_ = java.util.Collections.unmodifiableList(chainEraList_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.chainEraList_ = chainEraList_;
+        } else {
+          result.chainEraList_ = chainEraListBuilder_.build();
+        }
+        if (stakingRewardCommissionListBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0)) {
+            stakingRewardCommissionList_ = java.util.Collections.unmodifiableList(stakingRewardCommissionList_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.stakingRewardCommissionList_ = stakingRewardCommissionList_;
+        } else {
+          result.stakingRewardCommissionList_ = stakingRewardCommissionListBuilder_.build();
+        }
+        if (relayFeeReceiverListBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) != 0)) {
+            relayFeeReceiverList_ = java.util.Collections.unmodifiableList(relayFeeReceiverList_);
+            bitField0_ = (bitField0_ & ~0x00004000);
+          }
+          result.relayFeeReceiverList_ = relayFeeReceiverList_;
+        } else {
+          result.relayFeeReceiverList_ = relayFeeReceiverListBuilder_.build();
+        }
+        if (totalExpectedActiveListBuilder_ == null) {
+          if (((bitField0_ & 0x00008000) != 0)) {
+            totalExpectedActiveList_ = java.util.Collections.unmodifiableList(totalExpectedActiveList_);
+            bitField0_ = (bitField0_ & ~0x00008000);
+          }
+          result.totalExpectedActiveList_ = totalExpectedActiveList_;
+        } else {
+          result.totalExpectedActiveList_ = totalExpectedActiveListBuilder_.build();
+        }
+        if (poolUnbondingListBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) != 0)) {
+            poolUnbondingList_ = java.util.Collections.unmodifiableList(poolUnbondingList_);
+            bitField0_ = (bitField0_ & ~0x00010000);
+          }
+          result.poolUnbondingList_ = poolUnbondingList_;
+        } else {
+          result.poolUnbondingList_ = poolUnbondingListBuilder_.build();
+        }
+        if (unbondRelayFeeListBuilder_ == null) {
+          if (((bitField0_ & 0x00020000) != 0)) {
+            unbondRelayFeeList_ = java.util.Collections.unmodifiableList(unbondRelayFeeList_);
+            bitField0_ = (bitField0_ & ~0x00020000);
+          }
+          result.unbondRelayFeeList_ = unbondRelayFeeList_;
+        } else {
+          result.unbondRelayFeeList_ = unbondRelayFeeListBuilder_.build();
+        }
+        if (unbondCommissionListBuilder_ == null) {
+          if (((bitField0_ & 0x00040000) != 0)) {
+            unbondCommissionList_ = java.util.Collections.unmodifiableList(unbondCommissionList_);
+            bitField0_ = (bitField0_ & ~0x00040000);
+          }
+          result.unbondCommissionList_ = unbondCommissionList_;
+        } else {
+          result.unbondCommissionList_ = unbondCommissionListBuilder_.build();
+        }
+        if (bondRecordListBuilder_ == null) {
+          if (((bitField0_ & 0x00080000) != 0)) {
+            bondRecordList_ = java.util.Collections.unmodifiableList(bondRecordList_);
+            bitField0_ = (bitField0_ & ~0x00080000);
+          }
+          result.bondRecordList_ = bondRecordList_;
+        } else {
+          result.bondRecordList_ = bondRecordListBuilder_.build();
+        }
+        if (rparamsListBuilder_ == null) {
+          if (((bitField0_ & 0x00100000) != 0)) {
+            rparamsList_ = java.util.Collections.unmodifiableList(rparamsList_);
+            bitField0_ = (bitField0_ & ~0x00100000);
+          }
+          result.rparamsList_ = rparamsList_;
+        } else {
+          result.rparamsList_ = rparamsListBuilder_.build();
+        }
+        if (signatureListBuilder_ == null) {
+          if (((bitField0_ & 0x00200000) != 0)) {
+            signatureList_ = java.util.Collections.unmodifiableList(signatureList_);
+            bitField0_ = (bitField0_ & ~0x00200000);
+          }
+          result.signatureList_ = signatureList_;
+        } else {
+          result.signatureList_ = signatureListBuilder_.build();
+        }
+        if (icaPoolDetailListBuilder_ == null) {
+          if (((bitField0_ & 0x00800000) != 0)) {
+            icaPoolDetailList_ = java.util.Collections.unmodifiableList(icaPoolDetailList_);
+            bitField0_ = (bitField0_ & ~0x00800000);
+          }
+          result.icaPoolDetailList_ = icaPoolDetailList_;
+        } else {
+          result.icaPoolDetailList_ = icaPoolDetailListBuilder_.build();
+        }
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          if (((bitField0_ & 0x01000000) != 0)) {
+            interchainTxProposalInfoList_ = java.util.Collections.unmodifiableList(interchainTxProposalInfoList_);
+            bitField0_ = (bitField0_ & ~0x01000000);
+          }
+          result.interchainTxProposalInfoList_ = interchainTxProposalInfoList_;
+        } else {
+          result.interchainTxProposalInfoList_ = interchainTxProposalInfoListBuilder_.build();
+        }
+        if (totalExpectedFeeListBuilder_ == null) {
+          if (((bitField0_ & 0x02000000) != 0)) {
+            totalExpectedFeeList_ = java.util.Collections.unmodifiableList(totalExpectedFeeList_);
+            bitField0_ = (bitField0_ & ~0x02000000);
+          }
+          result.totalExpectedFeeList_ = totalExpectedFeeList_;
+        } else {
+          result.totalExpectedFeeList_ = totalExpectedFeeListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.protocolFeeReceiver_ = protocolFeeReceiver_;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.migrateIsSealed_ = migrateIsSealed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisState) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.GenesisState other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (exchangeRateListBuilder_ == null) {
+          if (!other.exchangeRateList_.isEmpty()) {
+            if (exchangeRateList_.isEmpty()) {
+              exchangeRateList_ = other.exchangeRateList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureExchangeRateListIsMutable();
+              exchangeRateList_.addAll(other.exchangeRateList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.exchangeRateList_.isEmpty()) {
+            if (exchangeRateListBuilder_.isEmpty()) {
+              exchangeRateListBuilder_.dispose();
+              exchangeRateListBuilder_ = null;
+              exchangeRateList_ = other.exchangeRateList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              exchangeRateListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getExchangeRateListFieldBuilder() : null;
+            } else {
+              exchangeRateListBuilder_.addAllMessages(other.exchangeRateList_);
+            }
+          }
+        }
+        if (eraExchangeRateListBuilder_ == null) {
+          if (!other.eraExchangeRateList_.isEmpty()) {
+            if (eraExchangeRateList_.isEmpty()) {
+              eraExchangeRateList_ = other.eraExchangeRateList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureEraExchangeRateListIsMutable();
+              eraExchangeRateList_.addAll(other.eraExchangeRateList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.eraExchangeRateList_.isEmpty()) {
+            if (eraExchangeRateListBuilder_.isEmpty()) {
+              eraExchangeRateListBuilder_.dispose();
+              eraExchangeRateListBuilder_ = null;
+              eraExchangeRateList_ = other.eraExchangeRateList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              eraExchangeRateListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEraExchangeRateListFieldBuilder() : null;
+            } else {
+              eraExchangeRateListBuilder_.addAllMessages(other.eraExchangeRateList_);
+            }
+          }
+        }
+        if (totalProtocolFeeListBuilder_ == null) {
+          if (!other.totalProtocolFeeList_.isEmpty()) {
+            if (totalProtocolFeeList_.isEmpty()) {
+              totalProtocolFeeList_ = other.totalProtocolFeeList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTotalProtocolFeeListIsMutable();
+              totalProtocolFeeList_.addAll(other.totalProtocolFeeList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalProtocolFeeList_.isEmpty()) {
+            if (totalProtocolFeeListBuilder_.isEmpty()) {
+              totalProtocolFeeListBuilder_.dispose();
+              totalProtocolFeeListBuilder_ = null;
+              totalProtocolFeeList_ = other.totalProtocolFeeList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              totalProtocolFeeListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalProtocolFeeListFieldBuilder() : null;
+            } else {
+              totalProtocolFeeListBuilder_.addAllMessages(other.totalProtocolFeeList_);
+            }
+          }
+        }
+        if (unbondSwitchListBuilder_ == null) {
+          if (!other.unbondSwitchList_.isEmpty()) {
+            if (unbondSwitchList_.isEmpty()) {
+              unbondSwitchList_ = other.unbondSwitchList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureUnbondSwitchListIsMutable();
+              unbondSwitchList_.addAll(other.unbondSwitchList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unbondSwitchList_.isEmpty()) {
+            if (unbondSwitchListBuilder_.isEmpty()) {
+              unbondSwitchListBuilder_.dispose();
+              unbondSwitchListBuilder_ = null;
+              unbondSwitchList_ = other.unbondSwitchList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              unbondSwitchListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnbondSwitchListFieldBuilder() : null;
+            } else {
+              unbondSwitchListBuilder_.addAllMessages(other.unbondSwitchList_);
+            }
+          }
+        }
+        if (bondedPoolListBuilder_ == null) {
+          if (!other.bondedPoolList_.isEmpty()) {
+            if (bondedPoolList_.isEmpty()) {
+              bondedPoolList_ = other.bondedPoolList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureBondedPoolListIsMutable();
+              bondedPoolList_.addAll(other.bondedPoolList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bondedPoolList_.isEmpty()) {
+            if (bondedPoolListBuilder_.isEmpty()) {
+              bondedPoolListBuilder_.dispose();
+              bondedPoolListBuilder_ = null;
+              bondedPoolList_ = other.bondedPoolList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              bondedPoolListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBondedPoolListFieldBuilder() : null;
+            } else {
+              bondedPoolListBuilder_.addAllMessages(other.bondedPoolList_);
+            }
+          }
+        }
+        if (bondPipelineListBuilder_ == null) {
+          if (!other.bondPipelineList_.isEmpty()) {
+            if (bondPipelineList_.isEmpty()) {
+              bondPipelineList_ = other.bondPipelineList_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureBondPipelineListIsMutable();
+              bondPipelineList_.addAll(other.bondPipelineList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bondPipelineList_.isEmpty()) {
+            if (bondPipelineListBuilder_.isEmpty()) {
+              bondPipelineListBuilder_.dispose();
+              bondPipelineListBuilder_ = null;
+              bondPipelineList_ = other.bondPipelineList_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              bondPipelineListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBondPipelineListFieldBuilder() : null;
+            } else {
+              bondPipelineListBuilder_.addAllMessages(other.bondPipelineList_);
+            }
+          }
+        }
+        if (eraUnbondLimitListBuilder_ == null) {
+          if (!other.eraUnbondLimitList_.isEmpty()) {
+            if (eraUnbondLimitList_.isEmpty()) {
+              eraUnbondLimitList_ = other.eraUnbondLimitList_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureEraUnbondLimitListIsMutable();
+              eraUnbondLimitList_.addAll(other.eraUnbondLimitList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.eraUnbondLimitList_.isEmpty()) {
+            if (eraUnbondLimitListBuilder_.isEmpty()) {
+              eraUnbondLimitListBuilder_.dispose();
+              eraUnbondLimitListBuilder_ = null;
+              eraUnbondLimitList_ = other.eraUnbondLimitList_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              eraUnbondLimitListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEraUnbondLimitListFieldBuilder() : null;
+            } else {
+              eraUnbondLimitListBuilder_.addAllMessages(other.eraUnbondLimitList_);
+            }
+          }
+        }
+        if (poolDetailListBuilder_ == null) {
+          if (!other.poolDetailList_.isEmpty()) {
+            if (poolDetailList_.isEmpty()) {
+              poolDetailList_ = other.poolDetailList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensurePoolDetailListIsMutable();
+              poolDetailList_.addAll(other.poolDetailList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.poolDetailList_.isEmpty()) {
+            if (poolDetailListBuilder_.isEmpty()) {
+              poolDetailListBuilder_.dispose();
+              poolDetailListBuilder_ = null;
+              poolDetailList_ = other.poolDetailList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              poolDetailListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolDetailListFieldBuilder() : null;
+            } else {
+              poolDetailListBuilder_.addAllMessages(other.poolDetailList_);
+            }
+          }
+        }
+        if (currentEraSnapshotListBuilder_ == null) {
+          if (!other.currentEraSnapshotList_.isEmpty()) {
+            if (currentEraSnapshotList_.isEmpty()) {
+              currentEraSnapshotList_ = other.currentEraSnapshotList_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureCurrentEraSnapshotListIsMutable();
+              currentEraSnapshotList_.addAll(other.currentEraSnapshotList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.currentEraSnapshotList_.isEmpty()) {
+            if (currentEraSnapshotListBuilder_.isEmpty()) {
+              currentEraSnapshotListBuilder_.dispose();
+              currentEraSnapshotListBuilder_ = null;
+              currentEraSnapshotList_ = other.currentEraSnapshotList_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              currentEraSnapshotListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCurrentEraSnapshotListFieldBuilder() : null;
+            } else {
+              currentEraSnapshotListBuilder_.addAllMessages(other.currentEraSnapshotList_);
+            }
+          }
+        }
+        if (snapshotListBuilder_ == null) {
+          if (!other.snapshotList_.isEmpty()) {
+            if (snapshotList_.isEmpty()) {
+              snapshotList_ = other.snapshotList_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureSnapshotListIsMutable();
+              snapshotList_.addAll(other.snapshotList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.snapshotList_.isEmpty()) {
+            if (snapshotListBuilder_.isEmpty()) {
+              snapshotListBuilder_.dispose();
+              snapshotListBuilder_ = null;
+              snapshotList_ = other.snapshotList_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              snapshotListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSnapshotListFieldBuilder() : null;
+            } else {
+              snapshotListBuilder_.addAllMessages(other.snapshotList_);
+            }
+          }
+        }
+        if (eraSnapshotListBuilder_ == null) {
+          if (!other.eraSnapshotList_.isEmpty()) {
+            if (eraSnapshotList_.isEmpty()) {
+              eraSnapshotList_ = other.eraSnapshotList_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureEraSnapshotListIsMutable();
+              eraSnapshotList_.addAll(other.eraSnapshotList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.eraSnapshotList_.isEmpty()) {
+            if (eraSnapshotListBuilder_.isEmpty()) {
+              eraSnapshotListBuilder_.dispose();
+              eraSnapshotListBuilder_ = null;
+              eraSnapshotList_ = other.eraSnapshotList_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              eraSnapshotListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEraSnapshotListFieldBuilder() : null;
+            } else {
+              eraSnapshotListBuilder_.addAllMessages(other.eraSnapshotList_);
+            }
+          }
+        }
+        if (chainEraListBuilder_ == null) {
+          if (!other.chainEraList_.isEmpty()) {
+            if (chainEraList_.isEmpty()) {
+              chainEraList_ = other.chainEraList_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureChainEraListIsMutable();
+              chainEraList_.addAll(other.chainEraList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.chainEraList_.isEmpty()) {
+            if (chainEraListBuilder_.isEmpty()) {
+              chainEraListBuilder_.dispose();
+              chainEraListBuilder_ = null;
+              chainEraList_ = other.chainEraList_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              chainEraListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChainEraListFieldBuilder() : null;
+            } else {
+              chainEraListBuilder_.addAllMessages(other.chainEraList_);
+            }
+          }
+        }
+        if (stakingRewardCommissionListBuilder_ == null) {
+          if (!other.stakingRewardCommissionList_.isEmpty()) {
+            if (stakingRewardCommissionList_.isEmpty()) {
+              stakingRewardCommissionList_ = other.stakingRewardCommissionList_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensureStakingRewardCommissionListIsMutable();
+              stakingRewardCommissionList_.addAll(other.stakingRewardCommissionList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakingRewardCommissionList_.isEmpty()) {
+            if (stakingRewardCommissionListBuilder_.isEmpty()) {
+              stakingRewardCommissionListBuilder_.dispose();
+              stakingRewardCommissionListBuilder_ = null;
+              stakingRewardCommissionList_ = other.stakingRewardCommissionList_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              stakingRewardCommissionListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakingRewardCommissionListFieldBuilder() : null;
+            } else {
+              stakingRewardCommissionListBuilder_.addAllMessages(other.stakingRewardCommissionList_);
+            }
+          }
+        }
+        if (!other.getProtocolFeeReceiver().isEmpty()) {
+          protocolFeeReceiver_ = other.protocolFeeReceiver_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        if (relayFeeReceiverListBuilder_ == null) {
+          if (!other.relayFeeReceiverList_.isEmpty()) {
+            if (relayFeeReceiverList_.isEmpty()) {
+              relayFeeReceiverList_ = other.relayFeeReceiverList_;
+              bitField0_ = (bitField0_ & ~0x00004000);
+            } else {
+              ensureRelayFeeReceiverListIsMutable();
+              relayFeeReceiverList_.addAll(other.relayFeeReceiverList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.relayFeeReceiverList_.isEmpty()) {
+            if (relayFeeReceiverListBuilder_.isEmpty()) {
+              relayFeeReceiverListBuilder_.dispose();
+              relayFeeReceiverListBuilder_ = null;
+              relayFeeReceiverList_ = other.relayFeeReceiverList_;
+              bitField0_ = (bitField0_ & ~0x00004000);
+              relayFeeReceiverListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRelayFeeReceiverListFieldBuilder() : null;
+            } else {
+              relayFeeReceiverListBuilder_.addAllMessages(other.relayFeeReceiverList_);
+            }
+          }
+        }
+        if (totalExpectedActiveListBuilder_ == null) {
+          if (!other.totalExpectedActiveList_.isEmpty()) {
+            if (totalExpectedActiveList_.isEmpty()) {
+              totalExpectedActiveList_ = other.totalExpectedActiveList_;
+              bitField0_ = (bitField0_ & ~0x00008000);
+            } else {
+              ensureTotalExpectedActiveListIsMutable();
+              totalExpectedActiveList_.addAll(other.totalExpectedActiveList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalExpectedActiveList_.isEmpty()) {
+            if (totalExpectedActiveListBuilder_.isEmpty()) {
+              totalExpectedActiveListBuilder_.dispose();
+              totalExpectedActiveListBuilder_ = null;
+              totalExpectedActiveList_ = other.totalExpectedActiveList_;
+              bitField0_ = (bitField0_ & ~0x00008000);
+              totalExpectedActiveListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalExpectedActiveListFieldBuilder() : null;
+            } else {
+              totalExpectedActiveListBuilder_.addAllMessages(other.totalExpectedActiveList_);
+            }
+          }
+        }
+        if (poolUnbondingListBuilder_ == null) {
+          if (!other.poolUnbondingList_.isEmpty()) {
+            if (poolUnbondingList_.isEmpty()) {
+              poolUnbondingList_ = other.poolUnbondingList_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+            } else {
+              ensurePoolUnbondingListIsMutable();
+              poolUnbondingList_.addAll(other.poolUnbondingList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.poolUnbondingList_.isEmpty()) {
+            if (poolUnbondingListBuilder_.isEmpty()) {
+              poolUnbondingListBuilder_.dispose();
+              poolUnbondingListBuilder_ = null;
+              poolUnbondingList_ = other.poolUnbondingList_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+              poolUnbondingListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolUnbondingListFieldBuilder() : null;
+            } else {
+              poolUnbondingListBuilder_.addAllMessages(other.poolUnbondingList_);
+            }
+          }
+        }
+        if (unbondRelayFeeListBuilder_ == null) {
+          if (!other.unbondRelayFeeList_.isEmpty()) {
+            if (unbondRelayFeeList_.isEmpty()) {
+              unbondRelayFeeList_ = other.unbondRelayFeeList_;
+              bitField0_ = (bitField0_ & ~0x00020000);
+            } else {
+              ensureUnbondRelayFeeListIsMutable();
+              unbondRelayFeeList_.addAll(other.unbondRelayFeeList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unbondRelayFeeList_.isEmpty()) {
+            if (unbondRelayFeeListBuilder_.isEmpty()) {
+              unbondRelayFeeListBuilder_.dispose();
+              unbondRelayFeeListBuilder_ = null;
+              unbondRelayFeeList_ = other.unbondRelayFeeList_;
+              bitField0_ = (bitField0_ & ~0x00020000);
+              unbondRelayFeeListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnbondRelayFeeListFieldBuilder() : null;
+            } else {
+              unbondRelayFeeListBuilder_.addAllMessages(other.unbondRelayFeeList_);
+            }
+          }
+        }
+        if (unbondCommissionListBuilder_ == null) {
+          if (!other.unbondCommissionList_.isEmpty()) {
+            if (unbondCommissionList_.isEmpty()) {
+              unbondCommissionList_ = other.unbondCommissionList_;
+              bitField0_ = (bitField0_ & ~0x00040000);
+            } else {
+              ensureUnbondCommissionListIsMutable();
+              unbondCommissionList_.addAll(other.unbondCommissionList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unbondCommissionList_.isEmpty()) {
+            if (unbondCommissionListBuilder_.isEmpty()) {
+              unbondCommissionListBuilder_.dispose();
+              unbondCommissionListBuilder_ = null;
+              unbondCommissionList_ = other.unbondCommissionList_;
+              bitField0_ = (bitField0_ & ~0x00040000);
+              unbondCommissionListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnbondCommissionListFieldBuilder() : null;
+            } else {
+              unbondCommissionListBuilder_.addAllMessages(other.unbondCommissionList_);
+            }
+          }
+        }
+        if (bondRecordListBuilder_ == null) {
+          if (!other.bondRecordList_.isEmpty()) {
+            if (bondRecordList_.isEmpty()) {
+              bondRecordList_ = other.bondRecordList_;
+              bitField0_ = (bitField0_ & ~0x00080000);
+            } else {
+              ensureBondRecordListIsMutable();
+              bondRecordList_.addAll(other.bondRecordList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bondRecordList_.isEmpty()) {
+            if (bondRecordListBuilder_.isEmpty()) {
+              bondRecordListBuilder_.dispose();
+              bondRecordListBuilder_ = null;
+              bondRecordList_ = other.bondRecordList_;
+              bitField0_ = (bitField0_ & ~0x00080000);
+              bondRecordListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBondRecordListFieldBuilder() : null;
+            } else {
+              bondRecordListBuilder_.addAllMessages(other.bondRecordList_);
+            }
+          }
+        }
+        if (rparamsListBuilder_ == null) {
+          if (!other.rparamsList_.isEmpty()) {
+            if (rparamsList_.isEmpty()) {
+              rparamsList_ = other.rparamsList_;
+              bitField0_ = (bitField0_ & ~0x00100000);
+            } else {
+              ensureRparamsListIsMutable();
+              rparamsList_.addAll(other.rparamsList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rparamsList_.isEmpty()) {
+            if (rparamsListBuilder_.isEmpty()) {
+              rparamsListBuilder_.dispose();
+              rparamsListBuilder_ = null;
+              rparamsList_ = other.rparamsList_;
+              bitField0_ = (bitField0_ & ~0x00100000);
+              rparamsListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRparamsListFieldBuilder() : null;
+            } else {
+              rparamsListBuilder_.addAllMessages(other.rparamsList_);
+            }
+          }
+        }
+        if (signatureListBuilder_ == null) {
+          if (!other.signatureList_.isEmpty()) {
+            if (signatureList_.isEmpty()) {
+              signatureList_ = other.signatureList_;
+              bitField0_ = (bitField0_ & ~0x00200000);
+            } else {
+              ensureSignatureListIsMutable();
+              signatureList_.addAll(other.signatureList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.signatureList_.isEmpty()) {
+            if (signatureListBuilder_.isEmpty()) {
+              signatureListBuilder_.dispose();
+              signatureListBuilder_ = null;
+              signatureList_ = other.signatureList_;
+              bitField0_ = (bitField0_ & ~0x00200000);
+              signatureListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSignatureListFieldBuilder() : null;
+            } else {
+              signatureListBuilder_.addAllMessages(other.signatureList_);
+            }
+          }
+        }
+        if (other.getMigrateIsSealed() != false) {
+          setMigrateIsSealed(other.getMigrateIsSealed());
+        }
+        if (icaPoolDetailListBuilder_ == null) {
+          if (!other.icaPoolDetailList_.isEmpty()) {
+            if (icaPoolDetailList_.isEmpty()) {
+              icaPoolDetailList_ = other.icaPoolDetailList_;
+              bitField0_ = (bitField0_ & ~0x00800000);
+            } else {
+              ensureIcaPoolDetailListIsMutable();
+              icaPoolDetailList_.addAll(other.icaPoolDetailList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.icaPoolDetailList_.isEmpty()) {
+            if (icaPoolDetailListBuilder_.isEmpty()) {
+              icaPoolDetailListBuilder_.dispose();
+              icaPoolDetailListBuilder_ = null;
+              icaPoolDetailList_ = other.icaPoolDetailList_;
+              bitField0_ = (bitField0_ & ~0x00800000);
+              icaPoolDetailListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIcaPoolDetailListFieldBuilder() : null;
+            } else {
+              icaPoolDetailListBuilder_.addAllMessages(other.icaPoolDetailList_);
+            }
+          }
+        }
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          if (!other.interchainTxProposalInfoList_.isEmpty()) {
+            if (interchainTxProposalInfoList_.isEmpty()) {
+              interchainTxProposalInfoList_ = other.interchainTxProposalInfoList_;
+              bitField0_ = (bitField0_ & ~0x01000000);
+            } else {
+              ensureInterchainTxProposalInfoListIsMutable();
+              interchainTxProposalInfoList_.addAll(other.interchainTxProposalInfoList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.interchainTxProposalInfoList_.isEmpty()) {
+            if (interchainTxProposalInfoListBuilder_.isEmpty()) {
+              interchainTxProposalInfoListBuilder_.dispose();
+              interchainTxProposalInfoListBuilder_ = null;
+              interchainTxProposalInfoList_ = other.interchainTxProposalInfoList_;
+              bitField0_ = (bitField0_ & ~0x01000000);
+              interchainTxProposalInfoListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInterchainTxProposalInfoListFieldBuilder() : null;
+            } else {
+              interchainTxProposalInfoListBuilder_.addAllMessages(other.interchainTxProposalInfoList_);
+            }
+          }
+        }
+        if (totalExpectedFeeListBuilder_ == null) {
+          if (!other.totalExpectedFeeList_.isEmpty()) {
+            if (totalExpectedFeeList_.isEmpty()) {
+              totalExpectedFeeList_ = other.totalExpectedFeeList_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+            } else {
+              ensureTotalExpectedFeeListIsMutable();
+              totalExpectedFeeList_.addAll(other.totalExpectedFeeList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalExpectedFeeList_.isEmpty()) {
+            if (totalExpectedFeeListBuilder_.isEmpty()) {
+              totalExpectedFeeListBuilder_.dispose();
+              totalExpectedFeeListBuilder_ = null;
+              totalExpectedFeeList_ = other.totalExpectedFeeList_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+              totalExpectedFeeListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalExpectedFeeListFieldBuilder() : null;
+            } else {
+              totalExpectedFeeListBuilder_.addAllMessages(other.totalExpectedFeeList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.parser(),
+                        extensionRegistry);
+                if (exchangeRateListBuilder_ == null) {
+                  ensureExchangeRateListIsMutable();
+                  exchangeRateList_.add(m);
+                } else {
+                  exchangeRateListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.parser(),
+                        extensionRegistry);
+                if (eraExchangeRateListBuilder_ == null) {
+                  ensureEraExchangeRateListIsMutable();
+                  eraExchangeRateList_.add(m);
+                } else {
+                  eraExchangeRateListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.parser(),
+                        extensionRegistry);
+                if (totalProtocolFeeListBuilder_ == null) {
+                  ensureTotalProtocolFeeListIsMutable();
+                  totalProtocolFeeList_.add(m);
+                } else {
+                  totalProtocolFeeListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.parser(),
+                        extensionRegistry);
+                if (unbondSwitchListBuilder_ == null) {
+                  ensureUnbondSwitchListIsMutable();
+                  unbondSwitchList_.add(m);
+                } else {
+                  unbondSwitchListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.stafihub.stafihub.ledger.LedgerProto.Pool m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.Pool.parser(),
+                        extensionRegistry);
+                if (bondedPoolListBuilder_ == null) {
+                  ensureBondedPoolListIsMutable();
+                  bondedPoolList_.add(m);
+                } else {
+                  bondedPoolListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.stafihub.stafihub.ledger.LedgerProto.BondPipeline m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.parser(),
+                        extensionRegistry);
+                if (bondPipelineListBuilder_ == null) {
+                  ensureBondPipelineListIsMutable();
+                  bondPipelineList_.add(m);
+                } else {
+                  bondPipelineListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.parser(),
+                        extensionRegistry);
+                if (eraUnbondLimitListBuilder_ == null) {
+                  ensureEraUnbondLimitListIsMutable();
+                  eraUnbondLimitList_.add(m);
+                } else {
+                  eraUnbondLimitListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.stafihub.stafihub.ledger.LedgerProto.PoolDetail m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.parser(),
+                        extensionRegistry);
+                if (poolDetailListBuilder_ == null) {
+                  ensurePoolDetailListIsMutable();
+                  poolDetailList_.add(m);
+                } else {
+                  poolDetailListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.parser(),
+                        extensionRegistry);
+                if (currentEraSnapshotListBuilder_ == null) {
+                  ensureCurrentEraSnapshotListIsMutable();
+                  currentEraSnapshotList_.add(m);
+                } else {
+                  currentEraSnapshotListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.parser(),
+                        extensionRegistry);
+                if (snapshotListBuilder_ == null) {
+                  ensureSnapshotListIsMutable();
+                  snapshotList_.add(m);
+                } else {
+                  snapshotListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.parser(),
+                        extensionRegistry);
+                if (eraSnapshotListBuilder_ == null) {
+                  ensureEraSnapshotListIsMutable();
+                  eraSnapshotList_.add(m);
+                } else {
+                  eraSnapshotListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              case 98: {
+                com.stafihub.stafihub.ledger.LedgerProto.ChainEra m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.ChainEra.parser(),
+                        extensionRegistry);
+                if (chainEraListBuilder_ == null) {
+                  ensureChainEraListIsMutable();
+                  chainEraList_.add(m);
+                } else {
+                  chainEraListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 106: {
+                com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.parser(),
+                        extensionRegistry);
+                if (stakingRewardCommissionListBuilder_ == null) {
+                  ensureStakingRewardCommissionListIsMutable();
+                  stakingRewardCommissionList_.add(m);
+                } else {
+                  stakingRewardCommissionListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
+              case 114: {
+                protocolFeeReceiver_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.parser(),
+                        extensionRegistry);
+                if (relayFeeReceiverListBuilder_ == null) {
+                  ensureRelayFeeReceiverListIsMutable();
+                  relayFeeReceiverList_.add(m);
+                } else {
+                  relayFeeReceiverListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 122
+              case 130: {
+                com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.parser(),
+                        extensionRegistry);
+                if (totalExpectedActiveListBuilder_ == null) {
+                  ensureTotalExpectedActiveListIsMutable();
+                  totalExpectedActiveList_.add(m);
+                } else {
+                  totalExpectedActiveListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 130
+              case 138: {
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.parser(),
+                        extensionRegistry);
+                if (poolUnbondingListBuilder_ == null) {
+                  ensurePoolUnbondingListIsMutable();
+                  poolUnbondingList_.add(m);
+                } else {
+                  poolUnbondingListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 138
+              case 146: {
+                com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.parser(),
+                        extensionRegistry);
+                if (unbondRelayFeeListBuilder_ == null) {
+                  ensureUnbondRelayFeeListIsMutable();
+                  unbondRelayFeeList_.add(m);
+                } else {
+                  unbondRelayFeeListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 146
+              case 154: {
+                com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.parser(),
+                        extensionRegistry);
+                if (unbondCommissionListBuilder_ == null) {
+                  ensureUnbondCommissionListIsMutable();
+                  unbondCommissionList_.add(m);
+                } else {
+                  unbondCommissionListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 154
+              case 162: {
+                com.stafihub.stafihub.ledger.LedgerProto.BondRecord m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.BondRecord.parser(),
+                        extensionRegistry);
+                if (bondRecordListBuilder_ == null) {
+                  ensureBondRecordListIsMutable();
+                  bondRecordList_.add(m);
+                } else {
+                  bondRecordListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 162
+              case 170: {
+                com.stafihub.stafihub.ledger.LedgerProto.RParams m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.RParams.parser(),
+                        extensionRegistry);
+                if (rparamsListBuilder_ == null) {
+                  ensureRparamsListIsMutable();
+                  rparamsList_.add(m);
+                } else {
+                  rparamsListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 170
+              case 178: {
+                com.stafihub.stafihub.ledger.LedgerProto.Signature m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.Signature.parser(),
+                        extensionRegistry);
+                if (signatureListBuilder_ == null) {
+                  ensureSignatureListIsMutable();
+                  signatureList_.add(m);
+                } else {
+                  signatureListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 178
+              case 184: {
+                migrateIsSealed_ = input.readBool();
+                bitField0_ |= 0x00400000;
+                break;
+              } // case 184
+              case 194: {
+                com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.parser(),
+                        extensionRegistry);
+                if (icaPoolDetailListBuilder_ == null) {
+                  ensureIcaPoolDetailListIsMutable();
+                  icaPoolDetailList_.add(m);
+                } else {
+                  icaPoolDetailListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 194
+              case 202: {
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.parser(),
+                        extensionRegistry);
+                if (interchainTxProposalInfoListBuilder_ == null) {
+                  ensureInterchainTxProposalInfoListIsMutable();
+                  interchainTxProposalInfoList_.add(m);
+                } else {
+                  interchainTxProposalInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 202
+              case 210: {
+                com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee m =
+                    input.readMessage(
+                        com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.parser(),
+                        extensionRegistry);
+                if (totalExpectedFeeListBuilder_ == null) {
+                  ensureTotalExpectedFeeListIsMutable();
+                  totalExpectedFeeList_.add(m);
+                } else {
+                  totalExpectedFeeListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 210
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate> exchangeRateList_ =
+        java.util.Collections.emptyList();
+      private void ensureExchangeRateListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          exchangeRateList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate>(exchangeRateList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder> exchangeRateListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate> getExchangeRateListList() {
+        if (exchangeRateListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(exchangeRateList_);
+        } else {
+          return exchangeRateListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public int getExchangeRateListCount() {
+        if (exchangeRateListBuilder_ == null) {
+          return exchangeRateList_.size();
+        } else {
+          return exchangeRateListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate getExchangeRateList(int index) {
+        if (exchangeRateListBuilder_ == null) {
+          return exchangeRateList_.get(index);
+        } else {
+          return exchangeRateListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setExchangeRateList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate value) {
+        if (exchangeRateListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRateListIsMutable();
+          exchangeRateList_.set(index, value);
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setExchangeRateList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder builderForValue) {
+        if (exchangeRateListBuilder_ == null) {
+          ensureExchangeRateListIsMutable();
+          exchangeRateList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addExchangeRateList(com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate value) {
+        if (exchangeRateListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRateListIsMutable();
+          exchangeRateList_.add(value);
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addExchangeRateList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate value) {
+        if (exchangeRateListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRateListIsMutable();
+          exchangeRateList_.add(index, value);
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addExchangeRateList(
+          com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder builderForValue) {
+        if (exchangeRateListBuilder_ == null) {
+          ensureExchangeRateListIsMutable();
+          exchangeRateList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addExchangeRateList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder builderForValue) {
+        if (exchangeRateListBuilder_ == null) {
+          ensureExchangeRateListIsMutable();
+          exchangeRateList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllExchangeRateList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate> values) {
+        if (exchangeRateListBuilder_ == null) {
+          ensureExchangeRateListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, exchangeRateList_);
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearExchangeRateList() {
+        if (exchangeRateListBuilder_ == null) {
+          exchangeRateList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeExchangeRateList(int index) {
+        if (exchangeRateListBuilder_ == null) {
+          ensureExchangeRateListIsMutable();
+          exchangeRateList_.remove(index);
+          onChanged();
+        } else {
+          exchangeRateListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder getExchangeRateListBuilder(
+          int index) {
+        return getExchangeRateListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder getExchangeRateListOrBuilder(
+          int index) {
+        if (exchangeRateListBuilder_ == null) {
+          return exchangeRateList_.get(index);  } else {
+          return exchangeRateListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder> 
+           getExchangeRateListOrBuilderList() {
+        if (exchangeRateListBuilder_ != null) {
+          return exchangeRateListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(exchangeRateList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder addExchangeRateListBuilder() {
+        return getExchangeRateListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder addExchangeRateListBuilder(
+          int index) {
+        return getExchangeRateListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ExchangeRate exchangeRateList = 1 [json_name = "exchangeRateList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder> 
+           getExchangeRateListBuilderList() {
+        return getExchangeRateListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder> 
+          getExchangeRateListFieldBuilder() {
+        if (exchangeRateListBuilder_ == null) {
+          exchangeRateListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate.Builder, com.stafihub.stafihub.ledger.LedgerProto.ExchangeRateOrBuilder>(
+                  exchangeRateList_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          exchangeRateList_ = null;
+        }
+        return exchangeRateListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate> eraExchangeRateList_ =
+        java.util.Collections.emptyList();
+      private void ensureEraExchangeRateListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          eraExchangeRateList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate>(eraExchangeRateList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder> eraExchangeRateListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate> getEraExchangeRateListList() {
+        if (eraExchangeRateListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(eraExchangeRateList_);
+        } else {
+          return eraExchangeRateListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public int getEraExchangeRateListCount() {
+        if (eraExchangeRateListBuilder_ == null) {
+          return eraExchangeRateList_.size();
+        } else {
+          return eraExchangeRateListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate getEraExchangeRateList(int index) {
+        if (eraExchangeRateListBuilder_ == null) {
+          return eraExchangeRateList_.get(index);
+        } else {
+          return eraExchangeRateListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder setEraExchangeRateList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate value) {
+        if (eraExchangeRateListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraExchangeRateListIsMutable();
+          eraExchangeRateList_.set(index, value);
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder setEraExchangeRateList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder builderForValue) {
+        if (eraExchangeRateListBuilder_ == null) {
+          ensureEraExchangeRateListIsMutable();
+          eraExchangeRateList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder addEraExchangeRateList(com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate value) {
+        if (eraExchangeRateListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraExchangeRateListIsMutable();
+          eraExchangeRateList_.add(value);
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder addEraExchangeRateList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate value) {
+        if (eraExchangeRateListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraExchangeRateListIsMutable();
+          eraExchangeRateList_.add(index, value);
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder addEraExchangeRateList(
+          com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder builderForValue) {
+        if (eraExchangeRateListBuilder_ == null) {
+          ensureEraExchangeRateListIsMutable();
+          eraExchangeRateList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder addEraExchangeRateList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder builderForValue) {
+        if (eraExchangeRateListBuilder_ == null) {
+          ensureEraExchangeRateListIsMutable();
+          eraExchangeRateList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder addAllEraExchangeRateList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate> values) {
+        if (eraExchangeRateListBuilder_ == null) {
+          ensureEraExchangeRateListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, eraExchangeRateList_);
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder clearEraExchangeRateList() {
+        if (eraExchangeRateListBuilder_ == null) {
+          eraExchangeRateList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public Builder removeEraExchangeRateList(int index) {
+        if (eraExchangeRateListBuilder_ == null) {
+          ensureEraExchangeRateListIsMutable();
+          eraExchangeRateList_.remove(index);
+          onChanged();
+        } else {
+          eraExchangeRateListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder getEraExchangeRateListBuilder(
+          int index) {
+        return getEraExchangeRateListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder getEraExchangeRateListOrBuilder(
+          int index) {
+        if (eraExchangeRateListBuilder_ == null) {
+          return eraExchangeRateList_.get(index);  } else {
+          return eraExchangeRateListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder> 
+           getEraExchangeRateListOrBuilderList() {
+        if (eraExchangeRateListBuilder_ != null) {
+          return eraExchangeRateListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(eraExchangeRateList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder addEraExchangeRateListBuilder() {
+        return getEraExchangeRateListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder addEraExchangeRateListBuilder(
+          int index) {
+        return getEraExchangeRateListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraExchangeRate eraExchangeRateList = 2 [json_name = "eraExchangeRateList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder> 
+           getEraExchangeRateListBuilderList() {
+        return getEraExchangeRateListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder> 
+          getEraExchangeRateListFieldBuilder() {
+        if (eraExchangeRateListBuilder_ == null) {
+          eraExchangeRateListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRateOrBuilder>(
+                  eraExchangeRateList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          eraExchangeRateList_ = null;
+        }
+        return eraExchangeRateListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee> totalProtocolFeeList_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalProtocolFeeListIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          totalProtocolFeeList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee>(totalProtocolFeeList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder> totalProtocolFeeListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee> getTotalProtocolFeeListList() {
+        if (totalProtocolFeeListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalProtocolFeeList_);
+        } else {
+          return totalProtocolFeeListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public int getTotalProtocolFeeListCount() {
+        if (totalProtocolFeeListBuilder_ == null) {
+          return totalProtocolFeeList_.size();
+        } else {
+          return totalProtocolFeeListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee getTotalProtocolFeeList(int index) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          return totalProtocolFeeList_.get(index);
+        } else {
+          return totalProtocolFeeListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder setTotalProtocolFeeList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee value) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalProtocolFeeListIsMutable();
+          totalProtocolFeeList_.set(index, value);
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder setTotalProtocolFeeList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder builderForValue) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          ensureTotalProtocolFeeListIsMutable();
+          totalProtocolFeeList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder addTotalProtocolFeeList(com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee value) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalProtocolFeeListIsMutable();
+          totalProtocolFeeList_.add(value);
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder addTotalProtocolFeeList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee value) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalProtocolFeeListIsMutable();
+          totalProtocolFeeList_.add(index, value);
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder addTotalProtocolFeeList(
+          com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder builderForValue) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          ensureTotalProtocolFeeListIsMutable();
+          totalProtocolFeeList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder addTotalProtocolFeeList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder builderForValue) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          ensureTotalProtocolFeeListIsMutable();
+          totalProtocolFeeList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder addAllTotalProtocolFeeList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee> values) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          ensureTotalProtocolFeeListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalProtocolFeeList_);
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder clearTotalProtocolFeeList() {
+        if (totalProtocolFeeListBuilder_ == null) {
+          totalProtocolFeeList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public Builder removeTotalProtocolFeeList(int index) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          ensureTotalProtocolFeeListIsMutable();
+          totalProtocolFeeList_.remove(index);
+          onChanged();
+        } else {
+          totalProtocolFeeListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder getTotalProtocolFeeListBuilder(
+          int index) {
+        return getTotalProtocolFeeListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder getTotalProtocolFeeListOrBuilder(
+          int index) {
+        if (totalProtocolFeeListBuilder_ == null) {
+          return totalProtocolFeeList_.get(index);  } else {
+          return totalProtocolFeeListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder> 
+           getTotalProtocolFeeListOrBuilderList() {
+        if (totalProtocolFeeListBuilder_ != null) {
+          return totalProtocolFeeListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalProtocolFeeList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder addTotalProtocolFeeListBuilder() {
+        return getTotalProtocolFeeListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder addTotalProtocolFeeListBuilder(
+          int index) {
+        return getTotalProtocolFeeListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalProtocolFee totalProtocolFeeList = 3 [json_name = "totalProtocolFeeList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder> 
+           getTotalProtocolFeeListBuilderList() {
+        return getTotalProtocolFeeListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder> 
+          getTotalProtocolFeeListFieldBuilder() {
+        if (totalProtocolFeeListBuilder_ == null) {
+          totalProtocolFeeListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFee.Builder, com.stafihub.stafihub.ledger.LedgerProto.TotalProtocolFeeOrBuilder>(
+                  totalProtocolFeeList_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          totalProtocolFeeList_ = null;
+        }
+        return totalProtocolFeeListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch> unbondSwitchList_ =
+        java.util.Collections.emptyList();
+      private void ensureUnbondSwitchListIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          unbondSwitchList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch>(unbondSwitchList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder> unbondSwitchListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch> getUnbondSwitchListList() {
+        if (unbondSwitchListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unbondSwitchList_);
+        } else {
+          return unbondSwitchListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public int getUnbondSwitchListCount() {
+        if (unbondSwitchListBuilder_ == null) {
+          return unbondSwitchList_.size();
+        } else {
+          return unbondSwitchListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch getUnbondSwitchList(int index) {
+        if (unbondSwitchListBuilder_ == null) {
+          return unbondSwitchList_.get(index);
+        } else {
+          return unbondSwitchListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder setUnbondSwitchList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch value) {
+        if (unbondSwitchListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondSwitchListIsMutable();
+          unbondSwitchList_.set(index, value);
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder setUnbondSwitchList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder builderForValue) {
+        if (unbondSwitchListBuilder_ == null) {
+          ensureUnbondSwitchListIsMutable();
+          unbondSwitchList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder addUnbondSwitchList(com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch value) {
+        if (unbondSwitchListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondSwitchListIsMutable();
+          unbondSwitchList_.add(value);
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder addUnbondSwitchList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch value) {
+        if (unbondSwitchListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondSwitchListIsMutable();
+          unbondSwitchList_.add(index, value);
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder addUnbondSwitchList(
+          com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder builderForValue) {
+        if (unbondSwitchListBuilder_ == null) {
+          ensureUnbondSwitchListIsMutable();
+          unbondSwitchList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder addUnbondSwitchList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder builderForValue) {
+        if (unbondSwitchListBuilder_ == null) {
+          ensureUnbondSwitchListIsMutable();
+          unbondSwitchList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder addAllUnbondSwitchList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch> values) {
+        if (unbondSwitchListBuilder_ == null) {
+          ensureUnbondSwitchListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unbondSwitchList_);
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder clearUnbondSwitchList() {
+        if (unbondSwitchListBuilder_ == null) {
+          unbondSwitchList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public Builder removeUnbondSwitchList(int index) {
+        if (unbondSwitchListBuilder_ == null) {
+          ensureUnbondSwitchListIsMutable();
+          unbondSwitchList_.remove(index);
+          onChanged();
+        } else {
+          unbondSwitchListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder getUnbondSwitchListBuilder(
+          int index) {
+        return getUnbondSwitchListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder getUnbondSwitchListOrBuilder(
+          int index) {
+        if (unbondSwitchListBuilder_ == null) {
+          return unbondSwitchList_.get(index);  } else {
+          return unbondSwitchListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder> 
+           getUnbondSwitchListOrBuilderList() {
+        if (unbondSwitchListBuilder_ != null) {
+          return unbondSwitchListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unbondSwitchList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder addUnbondSwitchListBuilder() {
+        return getUnbondSwitchListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder addUnbondSwitchListBuilder(
+          int index) {
+        return getUnbondSwitchListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondSwitch unbondSwitchList = 4 [json_name = "unbondSwitchList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder> 
+           getUnbondSwitchListBuilderList() {
+        return getUnbondSwitchListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder> 
+          getUnbondSwitchListFieldBuilder() {
+        if (unbondSwitchListBuilder_ == null) {
+          unbondSwitchListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder>(
+                  unbondSwitchList_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unbondSwitchList_ = null;
+        }
+        return unbondSwitchListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Pool> bondedPoolList_ =
+        java.util.Collections.emptyList();
+      private void ensureBondedPoolListIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          bondedPoolList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.Pool>(bondedPoolList_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.Pool, com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder, com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder> bondedPoolListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Pool> getBondedPoolListList() {
+        if (bondedPoolListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bondedPoolList_);
+        } else {
+          return bondedPoolListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public int getBondedPoolListCount() {
+        if (bondedPoolListBuilder_ == null) {
+          return bondedPoolList_.size();
+        } else {
+          return bondedPoolListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Pool getBondedPoolList(int index) {
+        if (bondedPoolListBuilder_ == null) {
+          return bondedPoolList_.get(index);
+        } else {
+          return bondedPoolListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder setBondedPoolList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.Pool value) {
+        if (bondedPoolListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondedPoolListIsMutable();
+          bondedPoolList_.set(index, value);
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder setBondedPoolList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder builderForValue) {
+        if (bondedPoolListBuilder_ == null) {
+          ensureBondedPoolListIsMutable();
+          bondedPoolList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder addBondedPoolList(com.stafihub.stafihub.ledger.LedgerProto.Pool value) {
+        if (bondedPoolListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondedPoolListIsMutable();
+          bondedPoolList_.add(value);
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder addBondedPoolList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.Pool value) {
+        if (bondedPoolListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondedPoolListIsMutable();
+          bondedPoolList_.add(index, value);
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder addBondedPoolList(
+          com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder builderForValue) {
+        if (bondedPoolListBuilder_ == null) {
+          ensureBondedPoolListIsMutable();
+          bondedPoolList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder addBondedPoolList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder builderForValue) {
+        if (bondedPoolListBuilder_ == null) {
+          ensureBondedPoolListIsMutable();
+          bondedPoolList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder addAllBondedPoolList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.Pool> values) {
+        if (bondedPoolListBuilder_ == null) {
+          ensureBondedPoolListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bondedPoolList_);
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder clearBondedPoolList() {
+        if (bondedPoolListBuilder_ == null) {
+          bondedPoolList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public Builder removeBondedPoolList(int index) {
+        if (bondedPoolListBuilder_ == null) {
+          ensureBondedPoolListIsMutable();
+          bondedPoolList_.remove(index);
+          onChanged();
+        } else {
+          bondedPoolListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder getBondedPoolListBuilder(
+          int index) {
+        return getBondedPoolListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder getBondedPoolListOrBuilder(
+          int index) {
+        if (bondedPoolListBuilder_ == null) {
+          return bondedPoolList_.get(index);  } else {
+          return bondedPoolListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder> 
+           getBondedPoolListOrBuilderList() {
+        if (bondedPoolListBuilder_ != null) {
+          return bondedPoolListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bondedPoolList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder addBondedPoolListBuilder() {
+        return getBondedPoolListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder addBondedPoolListBuilder(
+          int index) {
+        return getBondedPoolListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Pool bondedPoolList = 5 [json_name = "bondedPoolList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder> 
+           getBondedPoolListBuilderList() {
+        return getBondedPoolListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.Pool, com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder, com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder> 
+          getBondedPoolListFieldBuilder() {
+        if (bondedPoolListBuilder_ == null) {
+          bondedPoolListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.Pool, com.stafihub.stafihub.ledger.LedgerProto.Pool.Builder, com.stafihub.stafihub.ledger.LedgerProto.PoolOrBuilder>(
+                  bondedPoolList_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bondedPoolList_ = null;
+        }
+        return bondedPoolListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondPipeline> bondPipelineList_ =
+        java.util.Collections.emptyList();
+      private void ensureBondPipelineListIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          bondPipelineList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.BondPipeline>(bondPipelineList_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.BondPipeline, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder> bondPipelineListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondPipeline> getBondPipelineListList() {
+        if (bondPipelineListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bondPipelineList_);
+        } else {
+          return bondPipelineListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public int getBondPipelineListCount() {
+        if (bondPipelineListBuilder_ == null) {
+          return bondPipelineList_.size();
+        } else {
+          return bondPipelineListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondPipeline getBondPipelineList(int index) {
+        if (bondPipelineListBuilder_ == null) {
+          return bondPipelineList_.get(index);
+        } else {
+          return bondPipelineListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder setBondPipelineList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline value) {
+        if (bondPipelineListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondPipelineListIsMutable();
+          bondPipelineList_.set(index, value);
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder setBondPipelineList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder builderForValue) {
+        if (bondPipelineListBuilder_ == null) {
+          ensureBondPipelineListIsMutable();
+          bondPipelineList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder addBondPipelineList(com.stafihub.stafihub.ledger.LedgerProto.BondPipeline value) {
+        if (bondPipelineListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondPipelineListIsMutable();
+          bondPipelineList_.add(value);
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder addBondPipelineList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline value) {
+        if (bondPipelineListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondPipelineListIsMutable();
+          bondPipelineList_.add(index, value);
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder addBondPipelineList(
+          com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder builderForValue) {
+        if (bondPipelineListBuilder_ == null) {
+          ensureBondPipelineListIsMutable();
+          bondPipelineList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder addBondPipelineList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder builderForValue) {
+        if (bondPipelineListBuilder_ == null) {
+          ensureBondPipelineListIsMutable();
+          bondPipelineList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder addAllBondPipelineList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.BondPipeline> values) {
+        if (bondPipelineListBuilder_ == null) {
+          ensureBondPipelineListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bondPipelineList_);
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder clearBondPipelineList() {
+        if (bondPipelineListBuilder_ == null) {
+          bondPipelineList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public Builder removeBondPipelineList(int index) {
+        if (bondPipelineListBuilder_ == null) {
+          ensureBondPipelineListIsMutable();
+          bondPipelineList_.remove(index);
+          onChanged();
+        } else {
+          bondPipelineListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder getBondPipelineListBuilder(
+          int index) {
+        return getBondPipelineListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder getBondPipelineListOrBuilder(
+          int index) {
+        if (bondPipelineListBuilder_ == null) {
+          return bondPipelineList_.get(index);  } else {
+          return bondPipelineListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder> 
+           getBondPipelineListOrBuilderList() {
+        if (bondPipelineListBuilder_ != null) {
+          return bondPipelineListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bondPipelineList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder addBondPipelineListBuilder() {
+        return getBondPipelineListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder addBondPipelineListBuilder(
+          int index) {
+        return getBondPipelineListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondPipeline bondPipelineList = 6 [json_name = "bondPipelineList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder> 
+           getBondPipelineListBuilderList() {
+        return getBondPipelineListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.BondPipeline, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder> 
+          getBondPipelineListFieldBuilder() {
+        if (bondPipelineListBuilder_ == null) {
+          bondPipelineListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.BondPipeline, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondPipelineOrBuilder>(
+                  bondPipelineList_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bondPipelineList_ = null;
+        }
+        return bondPipelineListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit> eraUnbondLimitList_ =
+        java.util.Collections.emptyList();
+      private void ensureEraUnbondLimitListIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          eraUnbondLimitList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit>(eraUnbondLimitList_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder> eraUnbondLimitListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit> getEraUnbondLimitListList() {
+        if (eraUnbondLimitListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(eraUnbondLimitList_);
+        } else {
+          return eraUnbondLimitListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public int getEraUnbondLimitListCount() {
+        if (eraUnbondLimitListBuilder_ == null) {
+          return eraUnbondLimitList_.size();
+        } else {
+          return eraUnbondLimitListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit getEraUnbondLimitList(int index) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          return eraUnbondLimitList_.get(index);
+        } else {
+          return eraUnbondLimitListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder setEraUnbondLimitList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit value) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraUnbondLimitListIsMutable();
+          eraUnbondLimitList_.set(index, value);
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder setEraUnbondLimitList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder builderForValue) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          ensureEraUnbondLimitListIsMutable();
+          eraUnbondLimitList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder addEraUnbondLimitList(com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit value) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraUnbondLimitListIsMutable();
+          eraUnbondLimitList_.add(value);
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder addEraUnbondLimitList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit value) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraUnbondLimitListIsMutable();
+          eraUnbondLimitList_.add(index, value);
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder addEraUnbondLimitList(
+          com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder builderForValue) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          ensureEraUnbondLimitListIsMutable();
+          eraUnbondLimitList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder addEraUnbondLimitList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder builderForValue) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          ensureEraUnbondLimitListIsMutable();
+          eraUnbondLimitList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder addAllEraUnbondLimitList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit> values) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          ensureEraUnbondLimitListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, eraUnbondLimitList_);
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder clearEraUnbondLimitList() {
+        if (eraUnbondLimitListBuilder_ == null) {
+          eraUnbondLimitList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public Builder removeEraUnbondLimitList(int index) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          ensureEraUnbondLimitListIsMutable();
+          eraUnbondLimitList_.remove(index);
+          onChanged();
+        } else {
+          eraUnbondLimitListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder getEraUnbondLimitListBuilder(
+          int index) {
+        return getEraUnbondLimitListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder getEraUnbondLimitListOrBuilder(
+          int index) {
+        if (eraUnbondLimitListBuilder_ == null) {
+          return eraUnbondLimitList_.get(index);  } else {
+          return eraUnbondLimitListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder> 
+           getEraUnbondLimitListOrBuilderList() {
+        if (eraUnbondLimitListBuilder_ != null) {
+          return eraUnbondLimitListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(eraUnbondLimitList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder addEraUnbondLimitListBuilder() {
+        return getEraUnbondLimitListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder addEraUnbondLimitListBuilder(
+          int index) {
+        return getEraUnbondLimitListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraUnbondLimit eraUnbondLimitList = 7 [json_name = "eraUnbondLimitList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder> 
+           getEraUnbondLimitListBuilderList() {
+        return getEraUnbondLimitListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder> 
+          getEraUnbondLimitListFieldBuilder() {
+        if (eraUnbondLimitListBuilder_ == null) {
+          eraUnbondLimitListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimit.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraUnbondLimitOrBuilder>(
+                  eraUnbondLimitList_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          eraUnbondLimitList_ = null;
+        }
+        return eraUnbondLimitListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.PoolDetail> poolDetailList_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolDetailListIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          poolDetailList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.PoolDetail>(poolDetailList_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.PoolDetail, com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder, com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder> poolDetailListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.PoolDetail> getPoolDetailListList() {
+        if (poolDetailListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(poolDetailList_);
+        } else {
+          return poolDetailListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public int getPoolDetailListCount() {
+        if (poolDetailListBuilder_ == null) {
+          return poolDetailList_.size();
+        } else {
+          return poolDetailListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.PoolDetail getPoolDetailList(int index) {
+        if (poolDetailListBuilder_ == null) {
+          return poolDetailList_.get(index);
+        } else {
+          return poolDetailListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder setPoolDetailList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.PoolDetail value) {
+        if (poolDetailListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolDetailListIsMutable();
+          poolDetailList_.set(index, value);
+          onChanged();
+        } else {
+          poolDetailListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder setPoolDetailList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder builderForValue) {
+        if (poolDetailListBuilder_ == null) {
+          ensurePoolDetailListIsMutable();
+          poolDetailList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolDetailListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder addPoolDetailList(com.stafihub.stafihub.ledger.LedgerProto.PoolDetail value) {
+        if (poolDetailListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolDetailListIsMutable();
+          poolDetailList_.add(value);
+          onChanged();
+        } else {
+          poolDetailListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder addPoolDetailList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.PoolDetail value) {
+        if (poolDetailListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolDetailListIsMutable();
+          poolDetailList_.add(index, value);
+          onChanged();
+        } else {
+          poolDetailListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder addPoolDetailList(
+          com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder builderForValue) {
+        if (poolDetailListBuilder_ == null) {
+          ensurePoolDetailListIsMutable();
+          poolDetailList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolDetailListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder addPoolDetailList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder builderForValue) {
+        if (poolDetailListBuilder_ == null) {
+          ensurePoolDetailListIsMutable();
+          poolDetailList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolDetailListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder addAllPoolDetailList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.PoolDetail> values) {
+        if (poolDetailListBuilder_ == null) {
+          ensurePoolDetailListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, poolDetailList_);
+          onChanged();
+        } else {
+          poolDetailListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder clearPoolDetailList() {
+        if (poolDetailListBuilder_ == null) {
+          poolDetailList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          poolDetailListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public Builder removePoolDetailList(int index) {
+        if (poolDetailListBuilder_ == null) {
+          ensurePoolDetailListIsMutable();
+          poolDetailList_.remove(index);
+          onChanged();
+        } else {
+          poolDetailListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder getPoolDetailListBuilder(
+          int index) {
+        return getPoolDetailListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder getPoolDetailListOrBuilder(
+          int index) {
+        if (poolDetailListBuilder_ == null) {
+          return poolDetailList_.get(index);  } else {
+          return poolDetailListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder> 
+           getPoolDetailListOrBuilderList() {
+        if (poolDetailListBuilder_ != null) {
+          return poolDetailListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(poolDetailList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder addPoolDetailListBuilder() {
+        return getPoolDetailListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder addPoolDetailListBuilder(
+          int index) {
+        return getPoolDetailListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.PoolDetail poolDetailList = 8 [json_name = "poolDetailList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder> 
+           getPoolDetailListBuilderList() {
+        return getPoolDetailListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.PoolDetail, com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder, com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder> 
+          getPoolDetailListFieldBuilder() {
+        if (poolDetailListBuilder_ == null) {
+          poolDetailListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.PoolDetail, com.stafihub.stafihub.ledger.LedgerProto.PoolDetail.Builder, com.stafihub.stafihub.ledger.LedgerProto.PoolDetailOrBuilder>(
+                  poolDetailList_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          poolDetailList_ = null;
+        }
+        return poolDetailListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot> currentEraSnapshotList_ =
+        java.util.Collections.emptyList();
+      private void ensureCurrentEraSnapshotListIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          currentEraSnapshotList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot>(currentEraSnapshotList_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder> currentEraSnapshotListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot> getCurrentEraSnapshotListList() {
+        if (currentEraSnapshotListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(currentEraSnapshotList_);
+        } else {
+          return currentEraSnapshotListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public int getCurrentEraSnapshotListCount() {
+        if (currentEraSnapshotListBuilder_ == null) {
+          return currentEraSnapshotList_.size();
+        } else {
+          return currentEraSnapshotListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot getCurrentEraSnapshotList(int index) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          return currentEraSnapshotList_.get(index);
+        } else {
+          return currentEraSnapshotListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder setCurrentEraSnapshotList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot value) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrentEraSnapshotListIsMutable();
+          currentEraSnapshotList_.set(index, value);
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder setCurrentEraSnapshotList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder builderForValue) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          ensureCurrentEraSnapshotListIsMutable();
+          currentEraSnapshotList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder addCurrentEraSnapshotList(com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot value) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrentEraSnapshotListIsMutable();
+          currentEraSnapshotList_.add(value);
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder addCurrentEraSnapshotList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot value) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrentEraSnapshotListIsMutable();
+          currentEraSnapshotList_.add(index, value);
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder addCurrentEraSnapshotList(
+          com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder builderForValue) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          ensureCurrentEraSnapshotListIsMutable();
+          currentEraSnapshotList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder addCurrentEraSnapshotList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder builderForValue) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          ensureCurrentEraSnapshotListIsMutable();
+          currentEraSnapshotList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder addAllCurrentEraSnapshotList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot> values) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          ensureCurrentEraSnapshotListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, currentEraSnapshotList_);
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder clearCurrentEraSnapshotList() {
+        if (currentEraSnapshotListBuilder_ == null) {
+          currentEraSnapshotList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public Builder removeCurrentEraSnapshotList(int index) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          ensureCurrentEraSnapshotListIsMutable();
+          currentEraSnapshotList_.remove(index);
+          onChanged();
+        } else {
+          currentEraSnapshotListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder getCurrentEraSnapshotListBuilder(
+          int index) {
+        return getCurrentEraSnapshotListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder getCurrentEraSnapshotListOrBuilder(
+          int index) {
+        if (currentEraSnapshotListBuilder_ == null) {
+          return currentEraSnapshotList_.get(index);  } else {
+          return currentEraSnapshotListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder> 
+           getCurrentEraSnapshotListOrBuilderList() {
+        if (currentEraSnapshotListBuilder_ != null) {
+          return currentEraSnapshotListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(currentEraSnapshotList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder addCurrentEraSnapshotListBuilder() {
+        return getCurrentEraSnapshotListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder addCurrentEraSnapshotListBuilder(
+          int index) {
+        return getCurrentEraSnapshotListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.EraSnapshot currentEraSnapshotList = 9 [json_name = "currentEraSnapshotList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder> 
+           getCurrentEraSnapshotListBuilderList() {
+        return getCurrentEraSnapshotListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder> 
+          getCurrentEraSnapshotListFieldBuilder() {
+        if (currentEraSnapshotListBuilder_ == null) {
+          currentEraSnapshotListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshot.Builder, com.stafihub.stafihub.ledger.LedgerProto.EraSnapshotOrBuilder>(
+                  currentEraSnapshotList_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          currentEraSnapshotList_ = null;
+        }
+        return currentEraSnapshotListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot> snapshotList_ =
+        java.util.Collections.emptyList();
+      private void ensureSnapshotListIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          snapshotList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot>(snapshotList_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder> snapshotListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot> getSnapshotListList() {
+        if (snapshotListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(snapshotList_);
+        } else {
+          return snapshotListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public int getSnapshotListCount() {
+        if (snapshotListBuilder_ == null) {
+          return snapshotList_.size();
+        } else {
+          return snapshotListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot getSnapshotList(int index) {
+        if (snapshotListBuilder_ == null) {
+          return snapshotList_.get(index);
+        } else {
+          return snapshotListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder setSnapshotList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot value) {
+        if (snapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSnapshotListIsMutable();
+          snapshotList_.set(index, value);
+          onChanged();
+        } else {
+          snapshotListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder setSnapshotList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder builderForValue) {
+        if (snapshotListBuilder_ == null) {
+          ensureSnapshotListIsMutable();
+          snapshotList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          snapshotListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder addSnapshotList(com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot value) {
+        if (snapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSnapshotListIsMutable();
+          snapshotList_.add(value);
+          onChanged();
+        } else {
+          snapshotListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder addSnapshotList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot value) {
+        if (snapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSnapshotListIsMutable();
+          snapshotList_.add(index, value);
+          onChanged();
+        } else {
+          snapshotListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder addSnapshotList(
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder builderForValue) {
+        if (snapshotListBuilder_ == null) {
+          ensureSnapshotListIsMutable();
+          snapshotList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          snapshotListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder addSnapshotList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder builderForValue) {
+        if (snapshotListBuilder_ == null) {
+          ensureSnapshotListIsMutable();
+          snapshotList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          snapshotListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder addAllSnapshotList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot> values) {
+        if (snapshotListBuilder_ == null) {
+          ensureSnapshotListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, snapshotList_);
+          onChanged();
+        } else {
+          snapshotListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder clearSnapshotList() {
+        if (snapshotListBuilder_ == null) {
+          snapshotList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          snapshotListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public Builder removeSnapshotList(int index) {
+        if (snapshotListBuilder_ == null) {
+          ensureSnapshotListIsMutable();
+          snapshotList_.remove(index);
+          onChanged();
+        } else {
+          snapshotListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder getSnapshotListBuilder(
+          int index) {
+        return getSnapshotListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder getSnapshotListOrBuilder(
+          int index) {
+        if (snapshotListBuilder_ == null) {
+          return snapshotList_.get(index);  } else {
+          return snapshotListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder> 
+           getSnapshotListOrBuilderList() {
+        if (snapshotListBuilder_ != null) {
+          return snapshotListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(snapshotList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder addSnapshotListBuilder() {
+        return getSnapshotListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder addSnapshotListBuilder(
+          int index) {
+        return getSnapshotListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisSnapshot snapshotList = 10 [json_name = "snapshotList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder> 
+           getSnapshotListBuilderList() {
+        return getSnapshotListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder> 
+          getSnapshotListFieldBuilder() {
+        if (snapshotListBuilder_ == null) {
+          snapshotListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder>(
+                  snapshotList_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          snapshotList_ = null;
+        }
+        return snapshotListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot> eraSnapshotList_ =
+        java.util.Collections.emptyList();
+      private void ensureEraSnapshotListIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          eraSnapshotList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot>(eraSnapshotList_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder> eraSnapshotListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot> getEraSnapshotListList() {
+        if (eraSnapshotListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(eraSnapshotList_);
+        } else {
+          return eraSnapshotListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public int getEraSnapshotListCount() {
+        if (eraSnapshotListBuilder_ == null) {
+          return eraSnapshotList_.size();
+        } else {
+          return eraSnapshotListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot getEraSnapshotList(int index) {
+        if (eraSnapshotListBuilder_ == null) {
+          return eraSnapshotList_.get(index);
+        } else {
+          return eraSnapshotListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder setEraSnapshotList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot value) {
+        if (eraSnapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraSnapshotListIsMutable();
+          eraSnapshotList_.set(index, value);
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder setEraSnapshotList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder builderForValue) {
+        if (eraSnapshotListBuilder_ == null) {
+          ensureEraSnapshotListIsMutable();
+          eraSnapshotList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder addEraSnapshotList(com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot value) {
+        if (eraSnapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraSnapshotListIsMutable();
+          eraSnapshotList_.add(value);
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder addEraSnapshotList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot value) {
+        if (eraSnapshotListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEraSnapshotListIsMutable();
+          eraSnapshotList_.add(index, value);
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder addEraSnapshotList(
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder builderForValue) {
+        if (eraSnapshotListBuilder_ == null) {
+          ensureEraSnapshotListIsMutable();
+          eraSnapshotList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder addEraSnapshotList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder builderForValue) {
+        if (eraSnapshotListBuilder_ == null) {
+          ensureEraSnapshotListIsMutable();
+          eraSnapshotList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder addAllEraSnapshotList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot> values) {
+        if (eraSnapshotListBuilder_ == null) {
+          ensureEraSnapshotListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, eraSnapshotList_);
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder clearEraSnapshotList() {
+        if (eraSnapshotListBuilder_ == null) {
+          eraSnapshotList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public Builder removeEraSnapshotList(int index) {
+        if (eraSnapshotListBuilder_ == null) {
+          ensureEraSnapshotListIsMutable();
+          eraSnapshotList_.remove(index);
+          onChanged();
+        } else {
+          eraSnapshotListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder getEraSnapshotListBuilder(
+          int index) {
+        return getEraSnapshotListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder getEraSnapshotListOrBuilder(
+          int index) {
+        if (eraSnapshotListBuilder_ == null) {
+          return eraSnapshotList_.get(index);  } else {
+          return eraSnapshotListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder> 
+           getEraSnapshotListOrBuilderList() {
+        if (eraSnapshotListBuilder_ != null) {
+          return eraSnapshotListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(eraSnapshotList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder addEraSnapshotListBuilder() {
+        return getEraSnapshotListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder addEraSnapshotListBuilder(
+          int index) {
+        return getEraSnapshotListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisEraSnapshot eraSnapshotList = 11 [json_name = "eraSnapshotList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder> 
+           getEraSnapshotListBuilderList() {
+        return getEraSnapshotListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder> 
+          getEraSnapshotListFieldBuilder() {
+        if (eraSnapshotListBuilder_ == null) {
+          eraSnapshotListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder>(
+                  eraSnapshotList_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          eraSnapshotList_ = null;
+        }
+        return eraSnapshotListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ChainEra> chainEraList_ =
+        java.util.Collections.emptyList();
+      private void ensureChainEraListIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          chainEraList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.ChainEra>(chainEraList_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.ChainEra, com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder, com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder> chainEraListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ChainEra> getChainEraListList() {
+        if (chainEraListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(chainEraList_);
+        } else {
+          return chainEraListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public int getChainEraListCount() {
+        if (chainEraListBuilder_ == null) {
+          return chainEraList_.size();
+        } else {
+          return chainEraListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ChainEra getChainEraList(int index) {
+        if (chainEraListBuilder_ == null) {
+          return chainEraList_.get(index);
+        } else {
+          return chainEraListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder setChainEraList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.ChainEra value) {
+        if (chainEraListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChainEraListIsMutable();
+          chainEraList_.set(index, value);
+          onChanged();
+        } else {
+          chainEraListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder setChainEraList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder builderForValue) {
+        if (chainEraListBuilder_ == null) {
+          ensureChainEraListIsMutable();
+          chainEraList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          chainEraListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder addChainEraList(com.stafihub.stafihub.ledger.LedgerProto.ChainEra value) {
+        if (chainEraListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChainEraListIsMutable();
+          chainEraList_.add(value);
+          onChanged();
+        } else {
+          chainEraListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder addChainEraList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.ChainEra value) {
+        if (chainEraListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChainEraListIsMutable();
+          chainEraList_.add(index, value);
+          onChanged();
+        } else {
+          chainEraListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder addChainEraList(
+          com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder builderForValue) {
+        if (chainEraListBuilder_ == null) {
+          ensureChainEraListIsMutable();
+          chainEraList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          chainEraListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder addChainEraList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder builderForValue) {
+        if (chainEraListBuilder_ == null) {
+          ensureChainEraListIsMutable();
+          chainEraList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          chainEraListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder addAllChainEraList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.ChainEra> values) {
+        if (chainEraListBuilder_ == null) {
+          ensureChainEraListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, chainEraList_);
+          onChanged();
+        } else {
+          chainEraListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder clearChainEraList() {
+        if (chainEraListBuilder_ == null) {
+          chainEraList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          chainEraListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public Builder removeChainEraList(int index) {
+        if (chainEraListBuilder_ == null) {
+          ensureChainEraListIsMutable();
+          chainEraList_.remove(index);
+          onChanged();
+        } else {
+          chainEraListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder getChainEraListBuilder(
+          int index) {
+        return getChainEraListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder getChainEraListOrBuilder(
+          int index) {
+        if (chainEraListBuilder_ == null) {
+          return chainEraList_.get(index);  } else {
+          return chainEraListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder> 
+           getChainEraListOrBuilderList() {
+        if (chainEraListBuilder_ != null) {
+          return chainEraListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(chainEraList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder addChainEraListBuilder() {
+        return getChainEraListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.ChainEra.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder addChainEraListBuilder(
+          int index) {
+        return getChainEraListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.ChainEra.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.ChainEra chainEraList = 12 [json_name = "chainEraList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder> 
+           getChainEraListBuilderList() {
+        return getChainEraListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.ChainEra, com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder, com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder> 
+          getChainEraListFieldBuilder() {
+        if (chainEraListBuilder_ == null) {
+          chainEraListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.ChainEra, com.stafihub.stafihub.ledger.LedgerProto.ChainEra.Builder, com.stafihub.stafihub.ledger.LedgerProto.ChainEraOrBuilder>(
+                  chainEraList_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          chainEraList_ = null;
+        }
+        return chainEraListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission> stakingRewardCommissionList_ =
+        java.util.Collections.emptyList();
+      private void ensureStakingRewardCommissionListIsMutable() {
+        if (!((bitField0_ & 0x00001000) != 0)) {
+          stakingRewardCommissionList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission>(stakingRewardCommissionList_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder> stakingRewardCommissionListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission> getStakingRewardCommissionListList() {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakingRewardCommissionList_);
+        } else {
+          return stakingRewardCommissionListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public int getStakingRewardCommissionListCount() {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          return stakingRewardCommissionList_.size();
+        } else {
+          return stakingRewardCommissionListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission getStakingRewardCommissionList(int index) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          return stakingRewardCommissionList_.get(index);
+        } else {
+          return stakingRewardCommissionListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder setStakingRewardCommissionList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission value) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingRewardCommissionListIsMutable();
+          stakingRewardCommissionList_.set(index, value);
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder setStakingRewardCommissionList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder builderForValue) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          ensureStakingRewardCommissionListIsMutable();
+          stakingRewardCommissionList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder addStakingRewardCommissionList(com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission value) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingRewardCommissionListIsMutable();
+          stakingRewardCommissionList_.add(value);
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder addStakingRewardCommissionList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission value) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingRewardCommissionListIsMutable();
+          stakingRewardCommissionList_.add(index, value);
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder addStakingRewardCommissionList(
+          com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder builderForValue) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          ensureStakingRewardCommissionListIsMutable();
+          stakingRewardCommissionList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder addStakingRewardCommissionList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder builderForValue) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          ensureStakingRewardCommissionListIsMutable();
+          stakingRewardCommissionList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder addAllStakingRewardCommissionList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission> values) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          ensureStakingRewardCommissionListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakingRewardCommissionList_);
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder clearStakingRewardCommissionList() {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          stakingRewardCommissionList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public Builder removeStakingRewardCommissionList(int index) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          ensureStakingRewardCommissionListIsMutable();
+          stakingRewardCommissionList_.remove(index);
+          onChanged();
+        } else {
+          stakingRewardCommissionListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder getStakingRewardCommissionListBuilder(
+          int index) {
+        return getStakingRewardCommissionListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder getStakingRewardCommissionListOrBuilder(
+          int index) {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          return stakingRewardCommissionList_.get(index);  } else {
+          return stakingRewardCommissionListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder> 
+           getStakingRewardCommissionListOrBuilderList() {
+        if (stakingRewardCommissionListBuilder_ != null) {
+          return stakingRewardCommissionListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakingRewardCommissionList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder addStakingRewardCommissionListBuilder() {
+        return getStakingRewardCommissionListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder addStakingRewardCommissionListBuilder(
+          int index) {
+        return getStakingRewardCommissionListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.StakingRewardCommission stakingRewardCommissionList = 13 [json_name = "stakingRewardCommissionList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder> 
+           getStakingRewardCommissionListBuilderList() {
+        return getStakingRewardCommissionListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder> 
+          getStakingRewardCommissionListFieldBuilder() {
+        if (stakingRewardCommissionListBuilder_ == null) {
+          stakingRewardCommissionListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder>(
+                  stakingRewardCommissionList_,
+                  ((bitField0_ & 0x00001000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakingRewardCommissionList_ = null;
+        }
+        return stakingRewardCommissionListBuilder_;
+      }
+
+      private java.lang.Object protocolFeeReceiver_ = "";
+      /**
+       * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+       * @return The protocolFeeReceiver.
+       */
+      public java.lang.String getProtocolFeeReceiver() {
+        java.lang.Object ref = protocolFeeReceiver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          protocolFeeReceiver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+       * @return The bytes for protocolFeeReceiver.
+       */
+      public com.google.protobuf.ByteString
+          getProtocolFeeReceiverBytes() {
+        java.lang.Object ref = protocolFeeReceiver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          protocolFeeReceiver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+       * @param value The protocolFeeReceiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocolFeeReceiver(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        protocolFeeReceiver_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProtocolFeeReceiver() {
+        protocolFeeReceiver_ = getDefaultInstance().getProtocolFeeReceiver();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string protocolFeeReceiver = 14 [json_name = "protocolFeeReceiver"];</code>
+       * @param value The bytes for protocolFeeReceiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocolFeeReceiverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        protocolFeeReceiver_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver> relayFeeReceiverList_ =
+        java.util.Collections.emptyList();
+      private void ensureRelayFeeReceiverListIsMutable() {
+        if (!((bitField0_ & 0x00004000) != 0)) {
+          relayFeeReceiverList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver>(relayFeeReceiverList_);
+          bitField0_ |= 0x00004000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder> relayFeeReceiverListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver> getRelayFeeReceiverListList() {
+        if (relayFeeReceiverListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(relayFeeReceiverList_);
+        } else {
+          return relayFeeReceiverListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public int getRelayFeeReceiverListCount() {
+        if (relayFeeReceiverListBuilder_ == null) {
+          return relayFeeReceiverList_.size();
+        } else {
+          return relayFeeReceiverListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver getRelayFeeReceiverList(int index) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          return relayFeeReceiverList_.get(index);
+        } else {
+          return relayFeeReceiverListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder setRelayFeeReceiverList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver value) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelayFeeReceiverListIsMutable();
+          relayFeeReceiverList_.set(index, value);
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder setRelayFeeReceiverList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder builderForValue) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          ensureRelayFeeReceiverListIsMutable();
+          relayFeeReceiverList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder addRelayFeeReceiverList(com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver value) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelayFeeReceiverListIsMutable();
+          relayFeeReceiverList_.add(value);
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder addRelayFeeReceiverList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver value) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelayFeeReceiverListIsMutable();
+          relayFeeReceiverList_.add(index, value);
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder addRelayFeeReceiverList(
+          com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder builderForValue) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          ensureRelayFeeReceiverListIsMutable();
+          relayFeeReceiverList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder addRelayFeeReceiverList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder builderForValue) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          ensureRelayFeeReceiverListIsMutable();
+          relayFeeReceiverList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder addAllRelayFeeReceiverList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver> values) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          ensureRelayFeeReceiverListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, relayFeeReceiverList_);
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder clearRelayFeeReceiverList() {
+        if (relayFeeReceiverListBuilder_ == null) {
+          relayFeeReceiverList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00004000);
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public Builder removeRelayFeeReceiverList(int index) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          ensureRelayFeeReceiverListIsMutable();
+          relayFeeReceiverList_.remove(index);
+          onChanged();
+        } else {
+          relayFeeReceiverListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder getRelayFeeReceiverListBuilder(
+          int index) {
+        return getRelayFeeReceiverListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder getRelayFeeReceiverListOrBuilder(
+          int index) {
+        if (relayFeeReceiverListBuilder_ == null) {
+          return relayFeeReceiverList_.get(index);  } else {
+          return relayFeeReceiverListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder> 
+           getRelayFeeReceiverListOrBuilderList() {
+        if (relayFeeReceiverListBuilder_ != null) {
+          return relayFeeReceiverListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(relayFeeReceiverList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder addRelayFeeReceiverListBuilder() {
+        return getRelayFeeReceiverListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder addRelayFeeReceiverListBuilder(
+          int index) {
+        return getRelayFeeReceiverListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RelayFeeReceiver relayFeeReceiverList = 15 [json_name = "relayFeeReceiverList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder> 
+           getRelayFeeReceiverListBuilderList() {
+        return getRelayFeeReceiverListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder> 
+          getRelayFeeReceiverListFieldBuilder() {
+        if (relayFeeReceiverListBuilder_ == null) {
+          relayFeeReceiverListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder>(
+                  relayFeeReceiverList_,
+                  ((bitField0_ & 0x00004000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          relayFeeReceiverList_ = null;
+        }
+        return relayFeeReceiverListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive> totalExpectedActiveList_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalExpectedActiveListIsMutable() {
+        if (!((bitField0_ & 0x00008000) != 0)) {
+          totalExpectedActiveList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive>(totalExpectedActiveList_);
+          bitField0_ |= 0x00008000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder> totalExpectedActiveListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive> getTotalExpectedActiveListList() {
+        if (totalExpectedActiveListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalExpectedActiveList_);
+        } else {
+          return totalExpectedActiveListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public int getTotalExpectedActiveListCount() {
+        if (totalExpectedActiveListBuilder_ == null) {
+          return totalExpectedActiveList_.size();
+        } else {
+          return totalExpectedActiveListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive getTotalExpectedActiveList(int index) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          return totalExpectedActiveList_.get(index);
+        } else {
+          return totalExpectedActiveListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder setTotalExpectedActiveList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive value) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExpectedActiveListIsMutable();
+          totalExpectedActiveList_.set(index, value);
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder setTotalExpectedActiveList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder builderForValue) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          ensureTotalExpectedActiveListIsMutable();
+          totalExpectedActiveList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder addTotalExpectedActiveList(com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive value) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExpectedActiveListIsMutable();
+          totalExpectedActiveList_.add(value);
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder addTotalExpectedActiveList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive value) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExpectedActiveListIsMutable();
+          totalExpectedActiveList_.add(index, value);
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder addTotalExpectedActiveList(
+          com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder builderForValue) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          ensureTotalExpectedActiveListIsMutable();
+          totalExpectedActiveList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder addTotalExpectedActiveList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder builderForValue) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          ensureTotalExpectedActiveListIsMutable();
+          totalExpectedActiveList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder addAllTotalExpectedActiveList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive> values) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          ensureTotalExpectedActiveListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalExpectedActiveList_);
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder clearTotalExpectedActiveList() {
+        if (totalExpectedActiveListBuilder_ == null) {
+          totalExpectedActiveList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00008000);
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public Builder removeTotalExpectedActiveList(int index) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          ensureTotalExpectedActiveListIsMutable();
+          totalExpectedActiveList_.remove(index);
+          onChanged();
+        } else {
+          totalExpectedActiveListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder getTotalExpectedActiveListBuilder(
+          int index) {
+        return getTotalExpectedActiveListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder getTotalExpectedActiveListOrBuilder(
+          int index) {
+        if (totalExpectedActiveListBuilder_ == null) {
+          return totalExpectedActiveList_.get(index);  } else {
+          return totalExpectedActiveListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder> 
+           getTotalExpectedActiveListOrBuilderList() {
+        if (totalExpectedActiveListBuilder_ != null) {
+          return totalExpectedActiveListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalExpectedActiveList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder addTotalExpectedActiveListBuilder() {
+        return getTotalExpectedActiveListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder addTotalExpectedActiveListBuilder(
+          int index) {
+        return getTotalExpectedActiveListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedActive totalExpectedActiveList = 16 [json_name = "totalExpectedActiveList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder> 
+           getTotalExpectedActiveListBuilderList() {
+        return getTotalExpectedActiveListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder> 
+          getTotalExpectedActiveListFieldBuilder() {
+        if (totalExpectedActiveListBuilder_ == null) {
+          totalExpectedActiveListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder>(
+                  totalExpectedActiveList_,
+                  ((bitField0_ & 0x00008000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          totalExpectedActiveList_ = null;
+        }
+        return totalExpectedActiveListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding> poolUnbondingList_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolUnbondingListIsMutable() {
+        if (!((bitField0_ & 0x00010000) != 0)) {
+          poolUnbondingList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding>(poolUnbondingList_);
+          bitField0_ |= 0x00010000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder> poolUnbondingListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding> getPoolUnbondingListList() {
+        if (poolUnbondingListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(poolUnbondingList_);
+        } else {
+          return poolUnbondingListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public int getPoolUnbondingListCount() {
+        if (poolUnbondingListBuilder_ == null) {
+          return poolUnbondingList_.size();
+        } else {
+          return poolUnbondingListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding getPoolUnbondingList(int index) {
+        if (poolUnbondingListBuilder_ == null) {
+          return poolUnbondingList_.get(index);
+        } else {
+          return poolUnbondingListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder setPoolUnbondingList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding value) {
+        if (poolUnbondingListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolUnbondingListIsMutable();
+          poolUnbondingList_.set(index, value);
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder setPoolUnbondingList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder builderForValue) {
+        if (poolUnbondingListBuilder_ == null) {
+          ensurePoolUnbondingListIsMutable();
+          poolUnbondingList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder addPoolUnbondingList(com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding value) {
+        if (poolUnbondingListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolUnbondingListIsMutable();
+          poolUnbondingList_.add(value);
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder addPoolUnbondingList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding value) {
+        if (poolUnbondingListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolUnbondingListIsMutable();
+          poolUnbondingList_.add(index, value);
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder addPoolUnbondingList(
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder builderForValue) {
+        if (poolUnbondingListBuilder_ == null) {
+          ensurePoolUnbondingListIsMutable();
+          poolUnbondingList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder addPoolUnbondingList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder builderForValue) {
+        if (poolUnbondingListBuilder_ == null) {
+          ensurePoolUnbondingListIsMutable();
+          poolUnbondingList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder addAllPoolUnbondingList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding> values) {
+        if (poolUnbondingListBuilder_ == null) {
+          ensurePoolUnbondingListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, poolUnbondingList_);
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder clearPoolUnbondingList() {
+        if (poolUnbondingListBuilder_ == null) {
+          poolUnbondingList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00010000);
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public Builder removePoolUnbondingList(int index) {
+        if (poolUnbondingListBuilder_ == null) {
+          ensurePoolUnbondingListIsMutable();
+          poolUnbondingList_.remove(index);
+          onChanged();
+        } else {
+          poolUnbondingListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder getPoolUnbondingListBuilder(
+          int index) {
+        return getPoolUnbondingListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder getPoolUnbondingListOrBuilder(
+          int index) {
+        if (poolUnbondingListBuilder_ == null) {
+          return poolUnbondingList_.get(index);  } else {
+          return poolUnbondingListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder> 
+           getPoolUnbondingListOrBuilderList() {
+        if (poolUnbondingListBuilder_ != null) {
+          return poolUnbondingListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(poolUnbondingList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder addPoolUnbondingListBuilder() {
+        return getPoolUnbondingListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder addPoolUnbondingListBuilder(
+          int index) {
+        return getPoolUnbondingListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisPoolUnbonding poolUnbondingList = 17 [json_name = "poolUnbondingList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder> 
+           getPoolUnbondingListBuilderList() {
+        return getPoolUnbondingListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder> 
+          getPoolUnbondingListFieldBuilder() {
+        if (poolUnbondingListBuilder_ == null) {
+          poolUnbondingListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder>(
+                  poolUnbondingList_,
+                  ((bitField0_ & 0x00010000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          poolUnbondingList_ = null;
+        }
+        return poolUnbondingListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee> unbondRelayFeeList_ =
+        java.util.Collections.emptyList();
+      private void ensureUnbondRelayFeeListIsMutable() {
+        if (!((bitField0_ & 0x00020000) != 0)) {
+          unbondRelayFeeList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee>(unbondRelayFeeList_);
+          bitField0_ |= 0x00020000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder> unbondRelayFeeListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee> getUnbondRelayFeeListList() {
+        if (unbondRelayFeeListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unbondRelayFeeList_);
+        } else {
+          return unbondRelayFeeListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public int getUnbondRelayFeeListCount() {
+        if (unbondRelayFeeListBuilder_ == null) {
+          return unbondRelayFeeList_.size();
+        } else {
+          return unbondRelayFeeListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee getUnbondRelayFeeList(int index) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          return unbondRelayFeeList_.get(index);
+        } else {
+          return unbondRelayFeeListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder setUnbondRelayFeeList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee value) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondRelayFeeListIsMutable();
+          unbondRelayFeeList_.set(index, value);
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder setUnbondRelayFeeList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder builderForValue) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          ensureUnbondRelayFeeListIsMutable();
+          unbondRelayFeeList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder addUnbondRelayFeeList(com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee value) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondRelayFeeListIsMutable();
+          unbondRelayFeeList_.add(value);
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder addUnbondRelayFeeList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee value) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondRelayFeeListIsMutable();
+          unbondRelayFeeList_.add(index, value);
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder addUnbondRelayFeeList(
+          com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder builderForValue) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          ensureUnbondRelayFeeListIsMutable();
+          unbondRelayFeeList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder addUnbondRelayFeeList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder builderForValue) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          ensureUnbondRelayFeeListIsMutable();
+          unbondRelayFeeList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder addAllUnbondRelayFeeList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee> values) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          ensureUnbondRelayFeeListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unbondRelayFeeList_);
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder clearUnbondRelayFeeList() {
+        if (unbondRelayFeeListBuilder_ == null) {
+          unbondRelayFeeList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00020000);
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public Builder removeUnbondRelayFeeList(int index) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          ensureUnbondRelayFeeListIsMutable();
+          unbondRelayFeeList_.remove(index);
+          onChanged();
+        } else {
+          unbondRelayFeeListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder getUnbondRelayFeeListBuilder(
+          int index) {
+        return getUnbondRelayFeeListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder getUnbondRelayFeeListOrBuilder(
+          int index) {
+        if (unbondRelayFeeListBuilder_ == null) {
+          return unbondRelayFeeList_.get(index);  } else {
+          return unbondRelayFeeListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder> 
+           getUnbondRelayFeeListOrBuilderList() {
+        if (unbondRelayFeeListBuilder_ != null) {
+          return unbondRelayFeeListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unbondRelayFeeList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder addUnbondRelayFeeListBuilder() {
+        return getUnbondRelayFeeListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder addUnbondRelayFeeListBuilder(
+          int index) {
+        return getUnbondRelayFeeListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondRelayFee unbondRelayFeeList = 18 [json_name = "unbondRelayFeeList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder> 
+           getUnbondRelayFeeListBuilderList() {
+        return getUnbondRelayFeeListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder> 
+          getUnbondRelayFeeListFieldBuilder() {
+        if (unbondRelayFeeListBuilder_ == null) {
+          unbondRelayFeeListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFeeOrBuilder>(
+                  unbondRelayFeeList_,
+                  ((bitField0_ & 0x00020000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unbondRelayFeeList_ = null;
+        }
+        return unbondRelayFeeListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission> unbondCommissionList_ =
+        java.util.Collections.emptyList();
+      private void ensureUnbondCommissionListIsMutable() {
+        if (!((bitField0_ & 0x00040000) != 0)) {
+          unbondCommissionList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission>(unbondCommissionList_);
+          bitField0_ |= 0x00040000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder> unbondCommissionListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission> getUnbondCommissionListList() {
+        if (unbondCommissionListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unbondCommissionList_);
+        } else {
+          return unbondCommissionListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public int getUnbondCommissionListCount() {
+        if (unbondCommissionListBuilder_ == null) {
+          return unbondCommissionList_.size();
+        } else {
+          return unbondCommissionListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission getUnbondCommissionList(int index) {
+        if (unbondCommissionListBuilder_ == null) {
+          return unbondCommissionList_.get(index);
+        } else {
+          return unbondCommissionListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder setUnbondCommissionList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission value) {
+        if (unbondCommissionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondCommissionListIsMutable();
+          unbondCommissionList_.set(index, value);
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder setUnbondCommissionList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder builderForValue) {
+        if (unbondCommissionListBuilder_ == null) {
+          ensureUnbondCommissionListIsMutable();
+          unbondCommissionList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder addUnbondCommissionList(com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission value) {
+        if (unbondCommissionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondCommissionListIsMutable();
+          unbondCommissionList_.add(value);
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder addUnbondCommissionList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission value) {
+        if (unbondCommissionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondCommissionListIsMutable();
+          unbondCommissionList_.add(index, value);
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder addUnbondCommissionList(
+          com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder builderForValue) {
+        if (unbondCommissionListBuilder_ == null) {
+          ensureUnbondCommissionListIsMutable();
+          unbondCommissionList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder addUnbondCommissionList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder builderForValue) {
+        if (unbondCommissionListBuilder_ == null) {
+          ensureUnbondCommissionListIsMutable();
+          unbondCommissionList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder addAllUnbondCommissionList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission> values) {
+        if (unbondCommissionListBuilder_ == null) {
+          ensureUnbondCommissionListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unbondCommissionList_);
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder clearUnbondCommissionList() {
+        if (unbondCommissionListBuilder_ == null) {
+          unbondCommissionList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00040000);
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public Builder removeUnbondCommissionList(int index) {
+        if (unbondCommissionListBuilder_ == null) {
+          ensureUnbondCommissionListIsMutable();
+          unbondCommissionList_.remove(index);
+          onChanged();
+        } else {
+          unbondCommissionListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder getUnbondCommissionListBuilder(
+          int index) {
+        return getUnbondCommissionListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder getUnbondCommissionListOrBuilder(
+          int index) {
+        if (unbondCommissionListBuilder_ == null) {
+          return unbondCommissionList_.get(index);  } else {
+          return unbondCommissionListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder> 
+           getUnbondCommissionListOrBuilderList() {
+        if (unbondCommissionListBuilder_ != null) {
+          return unbondCommissionListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unbondCommissionList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder addUnbondCommissionListBuilder() {
+        return getUnbondCommissionListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder addUnbondCommissionListBuilder(
+          int index) {
+        return getUnbondCommissionListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.UnbondCommission unbondCommissionList = 19 [json_name = "unbondCommissionList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder> 
+           getUnbondCommissionListBuilderList() {
+        return getUnbondCommissionListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder> 
+          getUnbondCommissionListFieldBuilder() {
+        if (unbondCommissionListBuilder_ == null) {
+          unbondCommissionListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder>(
+                  unbondCommissionList_,
+                  ((bitField0_ & 0x00040000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unbondCommissionList_ = null;
+        }
+        return unbondCommissionListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondRecord> bondRecordList_ =
+        java.util.Collections.emptyList();
+      private void ensureBondRecordListIsMutable() {
+        if (!((bitField0_ & 0x00080000) != 0)) {
+          bondRecordList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.BondRecord>(bondRecordList_);
+          bitField0_ |= 0x00080000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.BondRecord, com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder> bondRecordListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondRecord> getBondRecordListList() {
+        if (bondRecordListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bondRecordList_);
+        } else {
+          return bondRecordListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public int getBondRecordListCount() {
+        if (bondRecordListBuilder_ == null) {
+          return bondRecordList_.size();
+        } else {
+          return bondRecordListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondRecord getBondRecordList(int index) {
+        if (bondRecordListBuilder_ == null) {
+          return bondRecordList_.get(index);
+        } else {
+          return bondRecordListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder setBondRecordList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.BondRecord value) {
+        if (bondRecordListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondRecordListIsMutable();
+          bondRecordList_.set(index, value);
+          onChanged();
+        } else {
+          bondRecordListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder setBondRecordList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder builderForValue) {
+        if (bondRecordListBuilder_ == null) {
+          ensureBondRecordListIsMutable();
+          bondRecordList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondRecordListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder addBondRecordList(com.stafihub.stafihub.ledger.LedgerProto.BondRecord value) {
+        if (bondRecordListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondRecordListIsMutable();
+          bondRecordList_.add(value);
+          onChanged();
+        } else {
+          bondRecordListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder addBondRecordList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.BondRecord value) {
+        if (bondRecordListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondRecordListIsMutable();
+          bondRecordList_.add(index, value);
+          onChanged();
+        } else {
+          bondRecordListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder addBondRecordList(
+          com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder builderForValue) {
+        if (bondRecordListBuilder_ == null) {
+          ensureBondRecordListIsMutable();
+          bondRecordList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bondRecordListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder addBondRecordList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder builderForValue) {
+        if (bondRecordListBuilder_ == null) {
+          ensureBondRecordListIsMutable();
+          bondRecordList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondRecordListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder addAllBondRecordList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.BondRecord> values) {
+        if (bondRecordListBuilder_ == null) {
+          ensureBondRecordListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bondRecordList_);
+          onChanged();
+        } else {
+          bondRecordListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder clearBondRecordList() {
+        if (bondRecordListBuilder_ == null) {
+          bondRecordList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00080000);
+          onChanged();
+        } else {
+          bondRecordListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public Builder removeBondRecordList(int index) {
+        if (bondRecordListBuilder_ == null) {
+          ensureBondRecordListIsMutable();
+          bondRecordList_.remove(index);
+          onChanged();
+        } else {
+          bondRecordListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder getBondRecordListBuilder(
+          int index) {
+        return getBondRecordListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder getBondRecordListOrBuilder(
+          int index) {
+        if (bondRecordListBuilder_ == null) {
+          return bondRecordList_.get(index);  } else {
+          return bondRecordListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder> 
+           getBondRecordListOrBuilderList() {
+        if (bondRecordListBuilder_ != null) {
+          return bondRecordListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bondRecordList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder addBondRecordListBuilder() {
+        return getBondRecordListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.BondRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder addBondRecordListBuilder(
+          int index) {
+        return getBondRecordListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.BondRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.BondRecord bondRecordList = 20 [json_name = "bondRecordList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder> 
+           getBondRecordListBuilderList() {
+        return getBondRecordListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.BondRecord, com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder> 
+          getBondRecordListFieldBuilder() {
+        if (bondRecordListBuilder_ == null) {
+          bondRecordListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.BondRecord, com.stafihub.stafihub.ledger.LedgerProto.BondRecord.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondRecordOrBuilder>(
+                  bondRecordList_,
+                  ((bitField0_ & 0x00080000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bondRecordList_ = null;
+        }
+        return bondRecordListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.RParams> rparamsList_ =
+        java.util.Collections.emptyList();
+      private void ensureRparamsListIsMutable() {
+        if (!((bitField0_ & 0x00100000) != 0)) {
+          rparamsList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.RParams>(rparamsList_);
+          bitField0_ |= 0x00100000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.RParams, com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder, com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder> rparamsListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.RParams> getRparamsListList() {
+        if (rparamsListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rparamsList_);
+        } else {
+          return rparamsListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public int getRparamsListCount() {
+        if (rparamsListBuilder_ == null) {
+          return rparamsList_.size();
+        } else {
+          return rparamsListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.RParams getRparamsList(int index) {
+        if (rparamsListBuilder_ == null) {
+          return rparamsList_.get(index);
+        } else {
+          return rparamsListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder setRparamsList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.RParams value) {
+        if (rparamsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRparamsListIsMutable();
+          rparamsList_.set(index, value);
+          onChanged();
+        } else {
+          rparamsListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder setRparamsList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder builderForValue) {
+        if (rparamsListBuilder_ == null) {
+          ensureRparamsListIsMutable();
+          rparamsList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rparamsListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder addRparamsList(com.stafihub.stafihub.ledger.LedgerProto.RParams value) {
+        if (rparamsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRparamsListIsMutable();
+          rparamsList_.add(value);
+          onChanged();
+        } else {
+          rparamsListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder addRparamsList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.RParams value) {
+        if (rparamsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRparamsListIsMutable();
+          rparamsList_.add(index, value);
+          onChanged();
+        } else {
+          rparamsListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder addRparamsList(
+          com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder builderForValue) {
+        if (rparamsListBuilder_ == null) {
+          ensureRparamsListIsMutable();
+          rparamsList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rparamsListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder addRparamsList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder builderForValue) {
+        if (rparamsListBuilder_ == null) {
+          ensureRparamsListIsMutable();
+          rparamsList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rparamsListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder addAllRparamsList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.RParams> values) {
+        if (rparamsListBuilder_ == null) {
+          ensureRparamsListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rparamsList_);
+          onChanged();
+        } else {
+          rparamsListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder clearRparamsList() {
+        if (rparamsListBuilder_ == null) {
+          rparamsList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00100000);
+          onChanged();
+        } else {
+          rparamsListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public Builder removeRparamsList(int index) {
+        if (rparamsListBuilder_ == null) {
+          ensureRparamsListIsMutable();
+          rparamsList_.remove(index);
+          onChanged();
+        } else {
+          rparamsListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder getRparamsListBuilder(
+          int index) {
+        return getRparamsListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder getRparamsListOrBuilder(
+          int index) {
+        if (rparamsListBuilder_ == null) {
+          return rparamsList_.get(index);  } else {
+          return rparamsListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder> 
+           getRparamsListOrBuilderList() {
+        if (rparamsListBuilder_ != null) {
+          return rparamsListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rparamsList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder addRparamsListBuilder() {
+        return getRparamsListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.RParams.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder addRparamsListBuilder(
+          int index) {
+        return getRparamsListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.RParams.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.RParams rparamsList = 21 [json_name = "rparamsList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder> 
+           getRparamsListBuilderList() {
+        return getRparamsListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.RParams, com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder, com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder> 
+          getRparamsListFieldBuilder() {
+        if (rparamsListBuilder_ == null) {
+          rparamsListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.RParams, com.stafihub.stafihub.ledger.LedgerProto.RParams.Builder, com.stafihub.stafihub.ledger.LedgerProto.RParamsOrBuilder>(
+                  rparamsList_,
+                  ((bitField0_ & 0x00100000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rparamsList_ = null;
+        }
+        return rparamsListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Signature> signatureList_ =
+        java.util.Collections.emptyList();
+      private void ensureSignatureListIsMutable() {
+        if (!((bitField0_ & 0x00200000) != 0)) {
+          signatureList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.Signature>(signatureList_);
+          bitField0_ |= 0x00200000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.Signature, com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder, com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder> signatureListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Signature> getSignatureListList() {
+        if (signatureListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(signatureList_);
+        } else {
+          return signatureListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public int getSignatureListCount() {
+        if (signatureListBuilder_ == null) {
+          return signatureList_.size();
+        } else {
+          return signatureListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Signature getSignatureList(int index) {
+        if (signatureListBuilder_ == null) {
+          return signatureList_.get(index);
+        } else {
+          return signatureListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder setSignatureList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.Signature value) {
+        if (signatureListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignatureListIsMutable();
+          signatureList_.set(index, value);
+          onChanged();
+        } else {
+          signatureListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder setSignatureList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder builderForValue) {
+        if (signatureListBuilder_ == null) {
+          ensureSignatureListIsMutable();
+          signatureList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          signatureListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder addSignatureList(com.stafihub.stafihub.ledger.LedgerProto.Signature value) {
+        if (signatureListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignatureListIsMutable();
+          signatureList_.add(value);
+          onChanged();
+        } else {
+          signatureListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder addSignatureList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.Signature value) {
+        if (signatureListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignatureListIsMutable();
+          signatureList_.add(index, value);
+          onChanged();
+        } else {
+          signatureListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder addSignatureList(
+          com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder builderForValue) {
+        if (signatureListBuilder_ == null) {
+          ensureSignatureListIsMutable();
+          signatureList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          signatureListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder addSignatureList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder builderForValue) {
+        if (signatureListBuilder_ == null) {
+          ensureSignatureListIsMutable();
+          signatureList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          signatureListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder addAllSignatureList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.Signature> values) {
+        if (signatureListBuilder_ == null) {
+          ensureSignatureListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, signatureList_);
+          onChanged();
+        } else {
+          signatureListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder clearSignatureList() {
+        if (signatureListBuilder_ == null) {
+          signatureList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00200000);
+          onChanged();
+        } else {
+          signatureListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public Builder removeSignatureList(int index) {
+        if (signatureListBuilder_ == null) {
+          ensureSignatureListIsMutable();
+          signatureList_.remove(index);
+          onChanged();
+        } else {
+          signatureListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder getSignatureListBuilder(
+          int index) {
+        return getSignatureListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder getSignatureListOrBuilder(
+          int index) {
+        if (signatureListBuilder_ == null) {
+          return signatureList_.get(index);  } else {
+          return signatureListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder> 
+           getSignatureListOrBuilderList() {
+        if (signatureListBuilder_ != null) {
+          return signatureListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(signatureList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder addSignatureListBuilder() {
+        return getSignatureListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.Signature.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder addSignatureListBuilder(
+          int index) {
+        return getSignatureListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.Signature.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.Signature signatureList = 22 [json_name = "signatureList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder> 
+           getSignatureListBuilderList() {
+        return getSignatureListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.Signature, com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder, com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder> 
+          getSignatureListFieldBuilder() {
+        if (signatureListBuilder_ == null) {
+          signatureListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.Signature, com.stafihub.stafihub.ledger.LedgerProto.Signature.Builder, com.stafihub.stafihub.ledger.LedgerProto.SignatureOrBuilder>(
+                  signatureList_,
+                  ((bitField0_ & 0x00200000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          signatureList_ = null;
+        }
+        return signatureListBuilder_;
+      }
+
+      private boolean migrateIsSealed_ ;
+      /**
+       * <code>bool MigrateIsSealed = 23 [json_name = "MigrateIsSealed"];</code>
+       * @return The migrateIsSealed.
+       */
+      @java.lang.Override
+      public boolean getMigrateIsSealed() {
+        return migrateIsSealed_;
+      }
+      /**
+       * <code>bool MigrateIsSealed = 23 [json_name = "MigrateIsSealed"];</code>
+       * @param value The migrateIsSealed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMigrateIsSealed(boolean value) {
+
+        migrateIsSealed_ = value;
+        bitField0_ |= 0x00400000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool MigrateIsSealed = 23 [json_name = "MigrateIsSealed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMigrateIsSealed() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        migrateIsSealed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail> icaPoolDetailList_ =
+        java.util.Collections.emptyList();
+      private void ensureIcaPoolDetailListIsMutable() {
+        if (!((bitField0_ & 0x00800000) != 0)) {
+          icaPoolDetailList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail>(icaPoolDetailList_);
+          bitField0_ |= 0x00800000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder> icaPoolDetailListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail> getIcaPoolDetailListList() {
+        if (icaPoolDetailListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(icaPoolDetailList_);
+        } else {
+          return icaPoolDetailListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public int getIcaPoolDetailListCount() {
+        if (icaPoolDetailListBuilder_ == null) {
+          return icaPoolDetailList_.size();
+        } else {
+          return icaPoolDetailListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail getIcaPoolDetailList(int index) {
+        if (icaPoolDetailListBuilder_ == null) {
+          return icaPoolDetailList_.get(index);
+        } else {
+          return icaPoolDetailListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder setIcaPoolDetailList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail value) {
+        if (icaPoolDetailListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIcaPoolDetailListIsMutable();
+          icaPoolDetailList_.set(index, value);
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder setIcaPoolDetailList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder builderForValue) {
+        if (icaPoolDetailListBuilder_ == null) {
+          ensureIcaPoolDetailListIsMutable();
+          icaPoolDetailList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder addIcaPoolDetailList(com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail value) {
+        if (icaPoolDetailListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIcaPoolDetailListIsMutable();
+          icaPoolDetailList_.add(value);
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder addIcaPoolDetailList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail value) {
+        if (icaPoolDetailListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIcaPoolDetailListIsMutable();
+          icaPoolDetailList_.add(index, value);
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder addIcaPoolDetailList(
+          com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder builderForValue) {
+        if (icaPoolDetailListBuilder_ == null) {
+          ensureIcaPoolDetailListIsMutable();
+          icaPoolDetailList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder addIcaPoolDetailList(
+          int index, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder builderForValue) {
+        if (icaPoolDetailListBuilder_ == null) {
+          ensureIcaPoolDetailListIsMutable();
+          icaPoolDetailList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder addAllIcaPoolDetailList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail> values) {
+        if (icaPoolDetailListBuilder_ == null) {
+          ensureIcaPoolDetailListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, icaPoolDetailList_);
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder clearIcaPoolDetailList() {
+        if (icaPoolDetailListBuilder_ == null) {
+          icaPoolDetailList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00800000);
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public Builder removeIcaPoolDetailList(int index) {
+        if (icaPoolDetailListBuilder_ == null) {
+          ensureIcaPoolDetailListIsMutable();
+          icaPoolDetailList_.remove(index);
+          onChanged();
+        } else {
+          icaPoolDetailListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder getIcaPoolDetailListBuilder(
+          int index) {
+        return getIcaPoolDetailListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder getIcaPoolDetailListOrBuilder(
+          int index) {
+        if (icaPoolDetailListBuilder_ == null) {
+          return icaPoolDetailList_.get(index);  } else {
+          return icaPoolDetailListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder> 
+           getIcaPoolDetailListOrBuilderList() {
+        if (icaPoolDetailListBuilder_ != null) {
+          return icaPoolDetailListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(icaPoolDetailList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder addIcaPoolDetailListBuilder() {
+        return getIcaPoolDetailListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder addIcaPoolDetailListBuilder(
+          int index) {
+        return getIcaPoolDetailListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.IcaPoolDetail icaPoolDetailList = 24 [json_name = "icaPoolDetailList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder> 
+           getIcaPoolDetailListBuilderList() {
+        return getIcaPoolDetailListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder> 
+          getIcaPoolDetailListFieldBuilder() {
+        if (icaPoolDetailListBuilder_ == null) {
+          icaPoolDetailListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetailOrBuilder>(
+                  icaPoolDetailList_,
+                  ((bitField0_ & 0x00800000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          icaPoolDetailList_ = null;
+        }
+        return icaPoolDetailListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo> interchainTxProposalInfoList_ =
+        java.util.Collections.emptyList();
+      private void ensureInterchainTxProposalInfoListIsMutable() {
+        if (!((bitField0_ & 0x01000000) != 0)) {
+          interchainTxProposalInfoList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo>(interchainTxProposalInfoList_);
+          bitField0_ |= 0x01000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder> interchainTxProposalInfoListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo> getInterchainTxProposalInfoListList() {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(interchainTxProposalInfoList_);
+        } else {
+          return interchainTxProposalInfoListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public int getInterchainTxProposalInfoListCount() {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          return interchainTxProposalInfoList_.size();
+        } else {
+          return interchainTxProposalInfoListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo getInterchainTxProposalInfoList(int index) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          return interchainTxProposalInfoList_.get(index);
+        } else {
+          return interchainTxProposalInfoListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder setInterchainTxProposalInfoList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo value) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInterchainTxProposalInfoListIsMutable();
+          interchainTxProposalInfoList_.set(index, value);
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder setInterchainTxProposalInfoList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder builderForValue) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          ensureInterchainTxProposalInfoListIsMutable();
+          interchainTxProposalInfoList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder addInterchainTxProposalInfoList(com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo value) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInterchainTxProposalInfoListIsMutable();
+          interchainTxProposalInfoList_.add(value);
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder addInterchainTxProposalInfoList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo value) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInterchainTxProposalInfoListIsMutable();
+          interchainTxProposalInfoList_.add(index, value);
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder addInterchainTxProposalInfoList(
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder builderForValue) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          ensureInterchainTxProposalInfoListIsMutable();
+          interchainTxProposalInfoList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder addInterchainTxProposalInfoList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder builderForValue) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          ensureInterchainTxProposalInfoListIsMutable();
+          interchainTxProposalInfoList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder addAllInterchainTxProposalInfoList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo> values) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          ensureInterchainTxProposalInfoListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, interchainTxProposalInfoList_);
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder clearInterchainTxProposalInfoList() {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          interchainTxProposalInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x01000000);
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public Builder removeInterchainTxProposalInfoList(int index) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          ensureInterchainTxProposalInfoListIsMutable();
+          interchainTxProposalInfoList_.remove(index);
+          onChanged();
+        } else {
+          interchainTxProposalInfoListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder getInterchainTxProposalInfoListBuilder(
+          int index) {
+        return getInterchainTxProposalInfoListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder getInterchainTxProposalInfoListOrBuilder(
+          int index) {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          return interchainTxProposalInfoList_.get(index);  } else {
+          return interchainTxProposalInfoListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder> 
+           getInterchainTxProposalInfoListOrBuilderList() {
+        if (interchainTxProposalInfoListBuilder_ != null) {
+          return interchainTxProposalInfoListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(interchainTxProposalInfoList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder addInterchainTxProposalInfoListBuilder() {
+        return getInterchainTxProposalInfoListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder addInterchainTxProposalInfoListBuilder(
+          int index) {
+        return getInterchainTxProposalInfoListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo interchainTxProposalInfoList = 25 [json_name = "interchainTxProposalInfoList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder> 
+           getInterchainTxProposalInfoListBuilderList() {
+        return getInterchainTxProposalInfoListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder> 
+          getInterchainTxProposalInfoListFieldBuilder() {
+        if (interchainTxProposalInfoListBuilder_ == null) {
+          interchainTxProposalInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder>(
+                  interchainTxProposalInfoList_,
+                  ((bitField0_ & 0x01000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          interchainTxProposalInfoList_ = null;
+        }
+        return interchainTxProposalInfoListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee> totalExpectedFeeList_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalExpectedFeeListIsMutable() {
+        if (!((bitField0_ & 0x02000000) != 0)) {
+          totalExpectedFeeList_ = new java.util.ArrayList<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee>(totalExpectedFeeList_);
+          bitField0_ |= 0x02000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder> totalExpectedFeeListBuilder_;
+
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee> getTotalExpectedFeeListList() {
+        if (totalExpectedFeeListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalExpectedFeeList_);
+        } else {
+          return totalExpectedFeeListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public int getTotalExpectedFeeListCount() {
+        if (totalExpectedFeeListBuilder_ == null) {
+          return totalExpectedFeeList_.size();
+        } else {
+          return totalExpectedFeeListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee getTotalExpectedFeeList(int index) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          return totalExpectedFeeList_.get(index);
+        } else {
+          return totalExpectedFeeListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder setTotalExpectedFeeList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee value) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExpectedFeeListIsMutable();
+          totalExpectedFeeList_.set(index, value);
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder setTotalExpectedFeeList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder builderForValue) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          ensureTotalExpectedFeeListIsMutable();
+          totalExpectedFeeList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder addTotalExpectedFeeList(com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee value) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExpectedFeeListIsMutable();
+          totalExpectedFeeList_.add(value);
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder addTotalExpectedFeeList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee value) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExpectedFeeListIsMutable();
+          totalExpectedFeeList_.add(index, value);
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder addTotalExpectedFeeList(
+          com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder builderForValue) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          ensureTotalExpectedFeeListIsMutable();
+          totalExpectedFeeList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder addTotalExpectedFeeList(
+          int index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder builderForValue) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          ensureTotalExpectedFeeListIsMutable();
+          totalExpectedFeeList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder addAllTotalExpectedFeeList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee> values) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          ensureTotalExpectedFeeListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalExpectedFeeList_);
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder clearTotalExpectedFeeList() {
+        if (totalExpectedFeeListBuilder_ == null) {
+          totalExpectedFeeList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public Builder removeTotalExpectedFeeList(int index) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          ensureTotalExpectedFeeListIsMutable();
+          totalExpectedFeeList_.remove(index);
+          onChanged();
+        } else {
+          totalExpectedFeeListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder getTotalExpectedFeeListBuilder(
+          int index) {
+        return getTotalExpectedFeeListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder getTotalExpectedFeeListOrBuilder(
+          int index) {
+        if (totalExpectedFeeListBuilder_ == null) {
+          return totalExpectedFeeList_.get(index);  } else {
+          return totalExpectedFeeListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder> 
+           getTotalExpectedFeeListOrBuilderList() {
+        if (totalExpectedFeeListBuilder_ != null) {
+          return totalExpectedFeeListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalExpectedFeeList_);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder addTotalExpectedFeeListBuilder() {
+        return getTotalExpectedFeeListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder addTotalExpectedFeeListBuilder(
+          int index) {
+        return getTotalExpectedFeeListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.ledger.TotalExpectedFee totalExpectedFeeList = 26 [json_name = "totalExpectedFeeList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder> 
+           getTotalExpectedFeeListBuilderList() {
+        return getTotalExpectedFeeListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder> 
+          getTotalExpectedFeeListFieldBuilder() {
+        if (totalExpectedFeeListBuilder_ == null) {
+          totalExpectedFeeListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder>(
+                  totalExpectedFeeList_,
+                  ((bitField0_ & 0x02000000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          totalExpectedFeeList_ = null;
+        }
+        return totalExpectedFeeListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.GenesisState)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.GenesisState();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnbondSwitchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.UnbondSwitch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>bool switch = 2 [json_name = "switch"];</code>
+     * @return The switch.
+     */
+    boolean getSwitch();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.UnbondSwitch}
+   */
+  public static final class UnbondSwitch extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.UnbondSwitch)
+      UnbondSwitchOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnbondSwitch.newBuilder() to construct.
+    private UnbondSwitch(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnbondSwitch() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnbondSwitch();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondSwitch_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondSwitch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.class, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SWITCH_FIELD_NUMBER = 2;
+    private boolean switch_ = false;
+    /**
+     * <code>bool switch = 2 [json_name = "switch"];</code>
+     * @return The switch.
+     */
+    @java.lang.Override
+    public boolean getSwitch() {
+      return switch_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (switch_ != false) {
+        output.writeBool(2, switch_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (switch_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, switch_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch other = (com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getSwitch()
+          != other.getSwitch()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + SWITCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSwitch());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.UnbondSwitch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.UnbondSwitch)
+        com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondSwitch_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondSwitch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.class, com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        switch_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondSwitch_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch build() {
+        com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch result = new com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.switch_ = switch_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSwitch() != false) {
+          setSwitch(other.getSwitch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                switch_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean switch_ ;
+      /**
+       * <code>bool switch = 2 [json_name = "switch"];</code>
+       * @return The switch.
+       */
+      @java.lang.Override
+      public boolean getSwitch() {
+        return switch_;
+      }
+      /**
+       * <code>bool switch = 2 [json_name = "switch"];</code>
+       * @param value The switch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwitch(boolean value) {
+
+        switch_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool switch = 2 [json_name = "switch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSwitch() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        switch_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.UnbondSwitch)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.UnbondSwitch)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnbondSwitch>
+        PARSER = new com.google.protobuf.AbstractParser<UnbondSwitch>() {
+      @java.lang.Override
+      public UnbondSwitch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnbondSwitch> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnbondSwitch> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.UnbondSwitch getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisEraSnapshotOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.GenesisEraSnapshot)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint32 era = 2 [json_name = "era"];</code>
+     * @return The era.
+     */
+    int getEra();
+
+    /**
+     * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+     * @return A list containing the shotIds.
+     */
+    java.util.List<java.lang.String>
+        getShotIdsList();
+    /**
+     * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+     * @return The count of shotIds.
+     */
+    int getShotIdsCount();
+    /**
+     * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+     * @param index The index of the element to return.
+     * @return The shotIds at the given index.
+     */
+    java.lang.String getShotIds(int index);
+    /**
+     * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the shotIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getShotIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.GenesisEraSnapshot}
+   */
+  public static final class GenesisEraSnapshot extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.GenesisEraSnapshot)
+      GenesisEraSnapshotOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisEraSnapshot.newBuilder() to construct.
+    private GenesisEraSnapshot(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisEraSnapshot() {
+      denom_ = "";
+      shotIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisEraSnapshot();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisEraSnapshot_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisEraSnapshot_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ERA_FIELD_NUMBER = 2;
+    private int era_ = 0;
+    /**
+     * <code>uint32 era = 2 [json_name = "era"];</code>
+     * @return The era.
+     */
+    @java.lang.Override
+    public int getEra() {
+      return era_;
+    }
+
+    public static final int SHOTIDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList shotIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+     * @return A list containing the shotIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getShotIdsList() {
+      return shotIds_;
+    }
+    /**
+     * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+     * @return The count of shotIds.
+     */
+    public int getShotIdsCount() {
+      return shotIds_.size();
+    }
+    /**
+     * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+     * @param index The index of the element to return.
+     * @return The shotIds at the given index.
+     */
+    public java.lang.String getShotIds(int index) {
+      return shotIds_.get(index);
+    }
+    /**
+     * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the shotIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getShotIdsBytes(int index) {
+      return shotIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (era_ != 0) {
+        output.writeUInt32(2, era_);
+      }
+      for (int i = 0; i < shotIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, shotIds_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (era_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, era_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < shotIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(shotIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getShotIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot other = (com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getEra()
+          != other.getEra()) return false;
+      if (!getShotIdsList()
+          .equals(other.getShotIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + ERA_FIELD_NUMBER;
+      hash = (53 * hash) + getEra();
+      if (getShotIdsCount() > 0) {
+        hash = (37 * hash) + SHOTIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getShotIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.GenesisEraSnapshot}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.GenesisEraSnapshot)
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshotOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisEraSnapshot_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisEraSnapshot_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        era_ = 0;
+        shotIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisEraSnapshot_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot build() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot result = new com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.era_ = era_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          shotIds_.makeImmutable();
+          result.shotIds_ = shotIds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEra() != 0) {
+          setEra(other.getEra());
+        }
+        if (!other.shotIds_.isEmpty()) {
+          if (shotIds_.isEmpty()) {
+            shotIds_ = other.shotIds_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureShotIdsIsMutable();
+            shotIds_.addAll(other.shotIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                era_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureShotIdsIsMutable();
+                shotIds_.add(s);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int era_ ;
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @return The era.
+       */
+      @java.lang.Override
+      public int getEra() {
+        return era_;
+      }
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @param value The era to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEra(int value) {
+
+        era_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEra() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        era_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList shotIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureShotIdsIsMutable() {
+        if (!shotIds_.isModifiable()) {
+          shotIds_ = new com.google.protobuf.LazyStringArrayList(shotIds_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @return A list containing the shotIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getShotIdsList() {
+        shotIds_.makeImmutable();
+        return shotIds_;
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @return The count of shotIds.
+       */
+      public int getShotIdsCount() {
+        return shotIds_.size();
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @param index The index of the element to return.
+       * @return The shotIds at the given index.
+       */
+      public java.lang.String getShotIds(int index) {
+        return shotIds_.get(index);
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the shotIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getShotIdsBytes(int index) {
+        return shotIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The shotIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShotIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureShotIdsIsMutable();
+        shotIds_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @param value The shotIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addShotIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureShotIdsIsMutable();
+        shotIds_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @param values The shotIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllShotIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureShotIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, shotIds_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShotIds() {
+        shotIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string shotIds = 3 [json_name = "shotIds"];</code>
+       * @param value The bytes of the shotIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addShotIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureShotIdsIsMutable();
+        shotIds_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.GenesisEraSnapshot)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.GenesisEraSnapshot)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisEraSnapshot>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisEraSnapshot>() {
+      @java.lang.Override
+      public GenesisEraSnapshot parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisEraSnapshot> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisEraSnapshot> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisEraSnapshot getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StakingRewardCommissionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.StakingRewardCommission)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.StakingRewardCommission}
+   */
+  public static final class StakingRewardCommission extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.StakingRewardCommission)
+      StakingRewardCommissionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StakingRewardCommission.newBuilder() to construct.
+    private StakingRewardCommission(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StakingRewardCommission() {
+      denom_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StakingRewardCommission();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_StakingRewardCommission_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_StakingRewardCommission_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.class, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission other = (com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.StakingRewardCommission}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.StakingRewardCommission)
+        com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommissionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_StakingRewardCommission_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_StakingRewardCommission_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.class, com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_StakingRewardCommission_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission build() {
+        com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission result = new com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.StakingRewardCommission)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.StakingRewardCommission)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StakingRewardCommission>
+        PARSER = new com.google.protobuf.AbstractParser<StakingRewardCommission>() {
+      @java.lang.Override
+      public StakingRewardCommission parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StakingRewardCommission> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StakingRewardCommission> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.StakingRewardCommission getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnbondCommissionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.UnbondCommission)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.UnbondCommission}
+   */
+  public static final class UnbondCommission extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.UnbondCommission)
+      UnbondCommissionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnbondCommission.newBuilder() to construct.
+    private UnbondCommission(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnbondCommission() {
+      denom_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnbondCommission();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondCommission_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondCommission_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.class, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission other = (com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.UnbondCommission}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.UnbondCommission)
+        com.stafihub.stafihub.ledger.GenesisProto.UnbondCommissionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondCommission_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondCommission_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.class, com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_UnbondCommission_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission build() {
+        com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission result = new com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.UnbondCommission)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.UnbondCommission)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnbondCommission>
+        PARSER = new com.google.protobuf.AbstractParser<UnbondCommission>() {
+      @java.lang.Override
+      public UnbondCommission parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnbondCommission> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnbondCommission> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.UnbondCommission getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RelayFeeReceiverOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.RelayFeeReceiver)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.RelayFeeReceiver}
+   */
+  public static final class RelayFeeReceiver extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.RelayFeeReceiver)
+      RelayFeeReceiverOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RelayFeeReceiver.newBuilder() to construct.
+    private RelayFeeReceiver(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RelayFeeReceiver() {
+      denom_ = "";
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RelayFeeReceiver();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_RelayFeeReceiver_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_RelayFeeReceiver_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.class, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver other = (com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.RelayFeeReceiver}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.RelayFeeReceiver)
+        com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiverOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_RelayFeeReceiver_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_RelayFeeReceiver_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.class, com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_RelayFeeReceiver_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver build() {
+        com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver result = new com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.RelayFeeReceiver)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.RelayFeeReceiver)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RelayFeeReceiver>
+        PARSER = new com.google.protobuf.AbstractParser<RelayFeeReceiver>() {
+      @java.lang.Override
+      public RelayFeeReceiver parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RelayFeeReceiver> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RelayFeeReceiver> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.RelayFeeReceiver getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TotalExpectedActiveOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.TotalExpectedActive)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint32 era = 2 [json_name = "era"];</code>
+     * @return The era.
+     */
+    int getEra();
+
+    /**
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.TotalExpectedActive}
+   */
+  public static final class TotalExpectedActive extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.TotalExpectedActive)
+      TotalExpectedActiveOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TotalExpectedActive.newBuilder() to construct.
+    private TotalExpectedActive(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotalExpectedActive() {
+      denom_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TotalExpectedActive();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedActive_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedActive_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.class, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ERA_FIELD_NUMBER = 2;
+    private int era_ = 0;
+    /**
+     * <code>uint32 era = 2 [json_name = "era"];</code>
+     * @return The era.
+     */
+    @java.lang.Override
+    public int getEra() {
+      return era_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (era_ != 0) {
+        output.writeUInt32(2, era_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (era_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, era_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive other = (com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getEra()
+          != other.getEra()) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + ERA_FIELD_NUMBER;
+      hash = (53 * hash) + getEra();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.TotalExpectedActive}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.TotalExpectedActive)
+        com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActiveOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedActive_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedActive_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.class, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        era_ = 0;
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedActive_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive build() {
+        com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive result = new com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.era_ = era_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEra() != 0) {
+          setEra(other.getEra());
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                era_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int era_ ;
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @return The era.
+       */
+      @java.lang.Override
+      public int getEra() {
+        return era_;
+      }
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @param value The era to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEra(int value) {
+
+        era_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEra() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        era_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.TotalExpectedActive)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.TotalExpectedActive)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TotalExpectedActive>
+        PARSER = new com.google.protobuf.AbstractParser<TotalExpectedActive>() {
+      @java.lang.Override
+      public TotalExpectedActive parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotalExpectedActive> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotalExpectedActive> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedActive getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TotalExpectedFeeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.TotalExpectedFee)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint32 era = 2 [json_name = "era"];</code>
+     * @return The era.
+     */
+    int getEra();
+
+    /**
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.TotalExpectedFee}
+   */
+  public static final class TotalExpectedFee extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.TotalExpectedFee)
+      TotalExpectedFeeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TotalExpectedFee.newBuilder() to construct.
+    private TotalExpectedFee(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotalExpectedFee() {
+      denom_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TotalExpectedFee();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedFee_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedFee_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.class, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ERA_FIELD_NUMBER = 2;
+    private int era_ = 0;
+    /**
+     * <code>uint32 era = 2 [json_name = "era"];</code>
+     * @return The era.
+     */
+    @java.lang.Override
+    public int getEra() {
+      return era_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (era_ != 0) {
+        output.writeUInt32(2, era_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (era_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, era_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee other = (com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getEra()
+          != other.getEra()) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + ERA_FIELD_NUMBER;
+      hash = (53 * hash) + getEra();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.TotalExpectedFee}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.TotalExpectedFee)
+        com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFeeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedFee_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedFee_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.class, com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        era_ = 0;
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_TotalExpectedFee_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee build() {
+        com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee result = new com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.era_ = era_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEra() != 0) {
+          setEra(other.getEra());
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                era_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int era_ ;
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @return The era.
+       */
+      @java.lang.Override
+      public int getEra() {
+        return era_;
+      }
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @param value The era to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEra(int value) {
+
+        era_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEra() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        era_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.TotalExpectedFee)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.TotalExpectedFee)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TotalExpectedFee>
+        PARSER = new com.google.protobuf.AbstractParser<TotalExpectedFee>() {
+      @java.lang.Override
+      public TotalExpectedFee parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotalExpectedFee> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotalExpectedFee> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.TotalExpectedFee getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisPoolUnbondingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.GenesisPoolUnbonding)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint32 era = 2 [json_name = "era"];</code>
+     * @return The era.
+     */
+    int getEra();
+
+    /**
+     * <code>string pool = 3 [json_name = "pool"];</code>
+     * @return The pool.
+     */
+    java.lang.String getPool();
+    /**
+     * <code>string pool = 3 [json_name = "pool"];</code>
+     * @return The bytes for pool.
+     */
+    com.google.protobuf.ByteString
+        getPoolBytes();
+
+    /**
+     * <code>uint32 sequence = 4 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    int getSequence();
+
+    /**
+     * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+     * @return Whether the unbonding field is set.
+     */
+    boolean hasUnbonding();
+    /**
+     * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+     * @return The unbonding.
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.Unbonding getUnbonding();
+    /**
+     * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.UnbondingOrBuilder getUnbondingOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.GenesisPoolUnbonding}
+   */
+  public static final class GenesisPoolUnbonding extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.GenesisPoolUnbonding)
+      GenesisPoolUnbondingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisPoolUnbonding.newBuilder() to construct.
+    private GenesisPoolUnbonding(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisPoolUnbonding() {
+      denom_ = "";
+      pool_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisPoolUnbonding();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisPoolUnbonding_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisPoolUnbonding_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ERA_FIELD_NUMBER = 2;
+    private int era_ = 0;
+    /**
+     * <code>uint32 era = 2 [json_name = "era"];</code>
+     * @return The era.
+     */
+    @java.lang.Override
+    public int getEra() {
+      return era_;
+    }
+
+    public static final int POOL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pool_ = "";
+    /**
+     * <code>string pool = 3 [json_name = "pool"];</code>
+     * @return The pool.
+     */
+    @java.lang.Override
+    public java.lang.String getPool() {
+      java.lang.Object ref = pool_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pool_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pool = 3 [json_name = "pool"];</code>
+     * @return The bytes for pool.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolBytes() {
+      java.lang.Object ref = pool_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pool_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEQUENCE_FIELD_NUMBER = 4;
+    private int sequence_ = 0;
+    /**
+     * <code>uint32 sequence = 4 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    @java.lang.Override
+    public int getSequence() {
+      return sequence_;
+    }
+
+    public static final int UNBONDING_FIELD_NUMBER = 5;
+    private com.stafihub.stafihub.ledger.LedgerProto.Unbonding unbonding_;
+    /**
+     * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+     * @return Whether the unbonding field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnbonding() {
+      return unbonding_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+     * @return The unbonding.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.Unbonding getUnbonding() {
+      return unbonding_ == null ? com.stafihub.stafihub.ledger.LedgerProto.Unbonding.getDefaultInstance() : unbonding_;
+    }
+    /**
+     * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.UnbondingOrBuilder getUnbondingOrBuilder() {
+      return unbonding_ == null ? com.stafihub.stafihub.ledger.LedgerProto.Unbonding.getDefaultInstance() : unbonding_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (era_ != 0) {
+        output.writeUInt32(2, era_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pool_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pool_);
+      }
+      if (sequence_ != 0) {
+        output.writeUInt32(4, sequence_);
+      }
+      if (unbonding_ != null) {
+        output.writeMessage(5, getUnbonding());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (era_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, era_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pool_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pool_);
+      }
+      if (sequence_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, sequence_);
+      }
+      if (unbonding_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getUnbonding());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding other = (com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getEra()
+          != other.getEra()) return false;
+      if (!getPool()
+          .equals(other.getPool())) return false;
+      if (getSequence()
+          != other.getSequence()) return false;
+      if (hasUnbonding() != other.hasUnbonding()) return false;
+      if (hasUnbonding()) {
+        if (!getUnbonding()
+            .equals(other.getUnbonding())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + ERA_FIELD_NUMBER;
+      hash = (53 * hash) + getEra();
+      hash = (37 * hash) + POOL_FIELD_NUMBER;
+      hash = (53 * hash) + getPool().hashCode();
+      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSequence();
+      if (hasUnbonding()) {
+        hash = (37 * hash) + UNBONDING_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbonding().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.GenesisPoolUnbonding}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.GenesisPoolUnbonding)
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbondingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisPoolUnbonding_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisPoolUnbonding_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        era_ = 0;
+        pool_ = "";
+        sequence_ = 0;
+        unbonding_ = null;
+        if (unbondingBuilder_ != null) {
+          unbondingBuilder_.dispose();
+          unbondingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisPoolUnbonding_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding build() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding result = new com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.era_ = era_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pool_ = pool_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sequence_ = sequence_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.unbonding_ = unbondingBuilder_ == null
+              ? unbonding_
+              : unbondingBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEra() != 0) {
+          setEra(other.getEra());
+        }
+        if (!other.getPool().isEmpty()) {
+          pool_ = other.pool_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getSequence() != 0) {
+          setSequence(other.getSequence());
+        }
+        if (other.hasUnbonding()) {
+          mergeUnbonding(other.getUnbonding());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                era_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                pool_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                sequence_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getUnbondingFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int era_ ;
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @return The era.
+       */
+      @java.lang.Override
+      public int getEra() {
+        return era_;
+      }
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @param value The era to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEra(int value) {
+
+        era_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 era = 2 [json_name = "era"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEra() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        era_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pool_ = "";
+      /**
+       * <code>string pool = 3 [json_name = "pool"];</code>
+       * @return The pool.
+       */
+      public java.lang.String getPool() {
+        java.lang.Object ref = pool_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pool_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pool = 3 [json_name = "pool"];</code>
+       * @return The bytes for pool.
+       */
+      public com.google.protobuf.ByteString
+          getPoolBytes() {
+        java.lang.Object ref = pool_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pool_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pool = 3 [json_name = "pool"];</code>
+       * @param value The pool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPool(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pool_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool = 3 [json_name = "pool"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPool() {
+        pool_ = getDefaultInstance().getPool();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool = 3 [json_name = "pool"];</code>
+       * @param value The bytes for pool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pool_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int sequence_ ;
+      /**
+       * <code>uint32 sequence = 4 [json_name = "sequence"];</code>
+       * @return The sequence.
+       */
+      @java.lang.Override
+      public int getSequence() {
+        return sequence_;
+      }
+      /**
+       * <code>uint32 sequence = 4 [json_name = "sequence"];</code>
+       * @param value The sequence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequence(int value) {
+
+        sequence_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 sequence = 4 [json_name = "sequence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequence() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        sequence_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.stafihub.stafihub.ledger.LedgerProto.Unbonding unbonding_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.Unbonding, com.stafihub.stafihub.ledger.LedgerProto.Unbonding.Builder, com.stafihub.stafihub.ledger.LedgerProto.UnbondingOrBuilder> unbondingBuilder_;
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       * @return Whether the unbonding field is set.
+       */
+      public boolean hasUnbonding() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       * @return The unbonding.
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Unbonding getUnbonding() {
+        if (unbondingBuilder_ == null) {
+          return unbonding_ == null ? com.stafihub.stafihub.ledger.LedgerProto.Unbonding.getDefaultInstance() : unbonding_;
+        } else {
+          return unbondingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       */
+      public Builder setUnbonding(com.stafihub.stafihub.ledger.LedgerProto.Unbonding value) {
+        if (unbondingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unbonding_ = value;
+        } else {
+          unbondingBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       */
+      public Builder setUnbonding(
+          com.stafihub.stafihub.ledger.LedgerProto.Unbonding.Builder builderForValue) {
+        if (unbondingBuilder_ == null) {
+          unbonding_ = builderForValue.build();
+        } else {
+          unbondingBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       */
+      public Builder mergeUnbonding(com.stafihub.stafihub.ledger.LedgerProto.Unbonding value) {
+        if (unbondingBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            unbonding_ != null &&
+            unbonding_ != com.stafihub.stafihub.ledger.LedgerProto.Unbonding.getDefaultInstance()) {
+            getUnbondingBuilder().mergeFrom(value);
+          } else {
+            unbonding_ = value;
+          }
+        } else {
+          unbondingBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       */
+      public Builder clearUnbonding() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        unbonding_ = null;
+        if (unbondingBuilder_ != null) {
+          unbondingBuilder_.dispose();
+          unbondingBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.Unbonding.Builder getUnbondingBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getUnbondingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.UnbondingOrBuilder getUnbondingOrBuilder() {
+        if (unbondingBuilder_ != null) {
+          return unbondingBuilder_.getMessageOrBuilder();
+        } else {
+          return unbonding_ == null ?
+              com.stafihub.stafihub.ledger.LedgerProto.Unbonding.getDefaultInstance() : unbonding_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.Unbonding, com.stafihub.stafihub.ledger.LedgerProto.Unbonding.Builder, com.stafihub.stafihub.ledger.LedgerProto.UnbondingOrBuilder> 
+          getUnbondingFieldBuilder() {
+        if (unbondingBuilder_ == null) {
+          unbondingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.Unbonding, com.stafihub.stafihub.ledger.LedgerProto.Unbonding.Builder, com.stafihub.stafihub.ledger.LedgerProto.UnbondingOrBuilder>(
+                  getUnbonding(),
+                  getParentForChildren(),
+                  isClean());
+          unbonding_ = null;
+        }
+        return unbondingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.GenesisPoolUnbonding)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.GenesisPoolUnbonding)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisPoolUnbonding>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisPoolUnbonding>() {
+      @java.lang.Override
+      public GenesisPoolUnbonding parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisPoolUnbonding> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisPoolUnbonding> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisSnapshotOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.GenesisSnapshot)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string shotId = 1 [json_name = "shotId"];</code>
+     * @return The shotId.
+     */
+    java.lang.String getShotId();
+    /**
+     * <code>string shotId = 1 [json_name = "shotId"];</code>
+     * @return The bytes for shotId.
+     */
+    com.google.protobuf.ByteString
+        getShotIdBytes();
+
+    /**
+     * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+     * @return Whether the snapshot field is set.
+     */
+    boolean hasSnapshot();
+    /**
+     * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+     * @return The snapshot.
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot getSnapshot();
+    /**
+     * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.BondSnapshotOrBuilder getSnapshotOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.GenesisSnapshot}
+   */
+  public static final class GenesisSnapshot extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.GenesisSnapshot)
+      GenesisSnapshotOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisSnapshot.newBuilder() to construct.
+    private GenesisSnapshot(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisSnapshot() {
+      shotId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisSnapshot();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisSnapshot_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisSnapshot_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder.class);
+    }
+
+    public static final int SHOTID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object shotId_ = "";
+    /**
+     * <code>string shotId = 1 [json_name = "shotId"];</code>
+     * @return The shotId.
+     */
+    @java.lang.Override
+    public java.lang.String getShotId() {
+      java.lang.Object ref = shotId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shotId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string shotId = 1 [json_name = "shotId"];</code>
+     * @return The bytes for shotId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getShotIdBytes() {
+      java.lang.Object ref = shotId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shotId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SNAPSHOT_FIELD_NUMBER = 2;
+    private com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot snapshot_;
+    /**
+     * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+     * @return Whether the snapshot field is set.
+     */
+    @java.lang.Override
+    public boolean hasSnapshot() {
+      return snapshot_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+     * @return The snapshot.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot getSnapshot() {
+      return snapshot_ == null ? com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.getDefaultInstance() : snapshot_;
+    }
+    /**
+     * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.LedgerProto.BondSnapshotOrBuilder getSnapshotOrBuilder() {
+      return snapshot_ == null ? com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.getDefaultInstance() : snapshot_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shotId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, shotId_);
+      }
+      if (snapshot_ != null) {
+        output.writeMessage(2, getSnapshot());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shotId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, shotId_);
+      }
+      if (snapshot_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSnapshot());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot other = (com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot) obj;
+
+      if (!getShotId()
+          .equals(other.getShotId())) return false;
+      if (hasSnapshot() != other.hasSnapshot()) return false;
+      if (hasSnapshot()) {
+        if (!getSnapshot()
+            .equals(other.getSnapshot())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SHOTID_FIELD_NUMBER;
+      hash = (53 * hash) + getShotId().hashCode();
+      if (hasSnapshot()) {
+        hash = (37 * hash) + SNAPSHOT_FIELD_NUMBER;
+        hash = (53 * hash) + getSnapshot().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.GenesisSnapshot}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.GenesisSnapshot)
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshotOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisSnapshot_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisSnapshot_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        shotId_ = "";
+        snapshot_ = null;
+        if (snapshotBuilder_ != null) {
+          snapshotBuilder_.dispose();
+          snapshotBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisSnapshot_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot build() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot result = new com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.shotId_ = shotId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.snapshot_ = snapshotBuilder_ == null
+              ? snapshot_
+              : snapshotBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.getDefaultInstance()) return this;
+        if (!other.getShotId().isEmpty()) {
+          shotId_ = other.shotId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasSnapshot()) {
+          mergeSnapshot(other.getSnapshot());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                shotId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSnapshotFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object shotId_ = "";
+      /**
+       * <code>string shotId = 1 [json_name = "shotId"];</code>
+       * @return The shotId.
+       */
+      public java.lang.String getShotId() {
+        java.lang.Object ref = shotId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shotId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string shotId = 1 [json_name = "shotId"];</code>
+       * @return The bytes for shotId.
+       */
+      public com.google.protobuf.ByteString
+          getShotIdBytes() {
+        java.lang.Object ref = shotId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shotId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string shotId = 1 [json_name = "shotId"];</code>
+       * @param value The shotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShotId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        shotId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string shotId = 1 [json_name = "shotId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShotId() {
+        shotId_ = getDefaultInstance().getShotId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string shotId = 1 [json_name = "shotId"];</code>
+       * @param value The bytes for shotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShotIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        shotId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot snapshot_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot, com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondSnapshotOrBuilder> snapshotBuilder_;
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       * @return Whether the snapshot field is set.
+       */
+      public boolean hasSnapshot() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       * @return The snapshot.
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot getSnapshot() {
+        if (snapshotBuilder_ == null) {
+          return snapshot_ == null ? com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.getDefaultInstance() : snapshot_;
+        } else {
+          return snapshotBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       */
+      public Builder setSnapshot(com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot value) {
+        if (snapshotBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          snapshot_ = value;
+        } else {
+          snapshotBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       */
+      public Builder setSnapshot(
+          com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.Builder builderForValue) {
+        if (snapshotBuilder_ == null) {
+          snapshot_ = builderForValue.build();
+        } else {
+          snapshotBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       */
+      public Builder mergeSnapshot(com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot value) {
+        if (snapshotBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            snapshot_ != null &&
+            snapshot_ != com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.getDefaultInstance()) {
+            getSnapshotBuilder().mergeFrom(value);
+          } else {
+            snapshot_ = value;
+          }
+        } else {
+          snapshotBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       */
+      public Builder clearSnapshot() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        snapshot_ = null;
+        if (snapshotBuilder_ != null) {
+          snapshotBuilder_.dispose();
+          snapshotBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.Builder getSnapshotBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSnapshotFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       */
+      public com.stafihub.stafihub.ledger.LedgerProto.BondSnapshotOrBuilder getSnapshotOrBuilder() {
+        if (snapshotBuilder_ != null) {
+          return snapshotBuilder_.getMessageOrBuilder();
+        } else {
+          return snapshot_ == null ?
+              com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.getDefaultInstance() : snapshot_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot, com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondSnapshotOrBuilder> 
+          getSnapshotFieldBuilder() {
+        if (snapshotBuilder_ == null) {
+          snapshotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot, com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.Builder, com.stafihub.stafihub.ledger.LedgerProto.BondSnapshotOrBuilder>(
+                  getSnapshot(),
+                  getParentForChildren(),
+                  isClean());
+          snapshot_ = null;
+        }
+        return snapshotBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.GenesisSnapshot)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.GenesisSnapshot)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisSnapshot>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisSnapshot>() {
+      @java.lang.Override
+      public GenesisSnapshot parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisSnapshot> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisSnapshot> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisInterchainTxProposalInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+     * @return The ctrlPortId.
+     */
+    java.lang.String getCtrlPortId();
+    /**
+     * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+     * @return The bytes for ctrlPortId.
+     */
+    com.google.protobuf.ByteString
+        getCtrlPortIdBytes();
+
+    /**
+     * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+     * @return The ctrlChannelId.
+     */
+    java.lang.String getCtrlChannelId();
+    /**
+     * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+     * @return The bytes for ctrlChannelId.
+     */
+    com.google.protobuf.ByteString
+        getCtrlChannelIdBytes();
+
+    /**
+     * <code>uint64 sequence = 3 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    long getSequence();
+
+    /**
+     * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    java.lang.String getProposalId();
+    /**
+     * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+     * @return The bytes for proposalId.
+     */
+    com.google.protobuf.ByteString
+        getProposalIdBytes();
+
+    /**
+     * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus getStatus();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo}
+   */
+  public static final class GenesisInterchainTxProposalInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo)
+      GenesisInterchainTxProposalInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisInterchainTxProposalInfo.newBuilder() to construct.
+    private GenesisInterchainTxProposalInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisInterchainTxProposalInfo() {
+      ctrlPortId_ = "";
+      ctrlChannelId_ = "";
+      proposalId_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisInterchainTxProposalInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisInterchainTxProposalInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisInterchainTxProposalInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder.class);
+    }
+
+    public static final int CTRLPORTID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ctrlPortId_ = "";
+    /**
+     * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+     * @return The ctrlPortId.
+     */
+    @java.lang.Override
+    public java.lang.String getCtrlPortId() {
+      java.lang.Object ref = ctrlPortId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ctrlPortId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+     * @return The bytes for ctrlPortId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCtrlPortIdBytes() {
+      java.lang.Object ref = ctrlPortId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ctrlPortId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CTRLCHANNELID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ctrlChannelId_ = "";
+    /**
+     * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+     * @return The ctrlChannelId.
+     */
+    @java.lang.Override
+    public java.lang.String getCtrlChannelId() {
+      java.lang.Object ref = ctrlChannelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ctrlChannelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+     * @return The bytes for ctrlChannelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCtrlChannelIdBytes() {
+      java.lang.Object ref = ctrlChannelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ctrlChannelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEQUENCE_FIELD_NUMBER = 3;
+    private long sequence_ = 0L;
+    /**
+     * <code>uint64 sequence = 3 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    @java.lang.Override
+    public long getSequence() {
+      return sequence_;
+    }
+
+    public static final int PROPOSALID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proposalId_ = "";
+    /**
+     * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    @java.lang.Override
+    public java.lang.String getProposalId() {
+      java.lang.Object ref = proposalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proposalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+     * @return The bytes for proposalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProposalIdBytes() {
+      java.lang.Object ref = proposalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proposalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 5;
+    private int status_ = 0;
+    /**
+     * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus getStatus() {
+      com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus result = com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus.forNumber(status_);
+      return result == null ? com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ctrlPortId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ctrlPortId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ctrlChannelId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ctrlChannelId_);
+      }
+      if (sequence_ != 0L) {
+        output.writeUInt64(3, sequence_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposalId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, proposalId_);
+      }
+      if (status_ != com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus.INTERCHAIN_TX_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ctrlPortId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ctrlPortId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ctrlChannelId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ctrlChannelId_);
+      }
+      if (sequence_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, sequence_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposalId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, proposalId_);
+      }
+      if (status_ != com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus.INTERCHAIN_TX_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo other = (com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo) obj;
+
+      if (!getCtrlPortId()
+          .equals(other.getCtrlPortId())) return false;
+      if (!getCtrlChannelId()
+          .equals(other.getCtrlChannelId())) return false;
+      if (getSequence()
+          != other.getSequence()) return false;
+      if (!getProposalId()
+          .equals(other.getProposalId())) return false;
+      if (status_ != other.status_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CTRLPORTID_FIELD_NUMBER;
+      hash = (53 * hash) + getCtrlPortId().hashCode();
+      hash = (37 * hash) + CTRLCHANNELID_FIELD_NUMBER;
+      hash = (53 * hash) + getCtrlChannelId().hashCode();
+      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSequence());
+      hash = (37 * hash) + PROPOSALID_FIELD_NUMBER;
+      hash = (53 * hash) + getProposalId().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo)
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisInterchainTxProposalInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisInterchainTxProposalInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ctrlPortId_ = "";
+        ctrlChannelId_ = "";
+        sequence_ = 0L;
+        proposalId_ = "";
+        status_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.internal_static_stafihub_stafihub_ledger_GenesisInterchainTxProposalInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo getDefaultInstanceForType() {
+        return com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo build() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo buildPartial() {
+        com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo result = new com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ctrlPortId_ = ctrlPortId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ctrlChannelId_ = ctrlChannelId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.sequence_ = sequence_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.proposalId_ = proposalId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.status_ = status_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo) {
+          return mergeFrom((com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo other) {
+        if (other == com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo.getDefaultInstance()) return this;
+        if (!other.getCtrlPortId().isEmpty()) {
+          ctrlPortId_ = other.ctrlPortId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCtrlChannelId().isEmpty()) {
+          ctrlChannelId_ = other.ctrlChannelId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getSequence() != 0L) {
+          setSequence(other.getSequence());
+        }
+        if (!other.getProposalId().isEmpty()) {
+          proposalId_ = other.proposalId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ctrlPortId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                ctrlChannelId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                sequence_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                proposalId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ctrlPortId_ = "";
+      /**
+       * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+       * @return The ctrlPortId.
+       */
+      public java.lang.String getCtrlPortId() {
+        java.lang.Object ref = ctrlPortId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ctrlPortId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+       * @return The bytes for ctrlPortId.
+       */
+      public com.google.protobuf.ByteString
+          getCtrlPortIdBytes() {
+        java.lang.Object ref = ctrlPortId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ctrlPortId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+       * @param value The ctrlPortId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCtrlPortId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ctrlPortId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCtrlPortId() {
+        ctrlPortId_ = getDefaultInstance().getCtrlPortId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ctrlPortId = 1 [json_name = "ctrlPortId"];</code>
+       * @param value The bytes for ctrlPortId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCtrlPortIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ctrlPortId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ctrlChannelId_ = "";
+      /**
+       * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+       * @return The ctrlChannelId.
+       */
+      public java.lang.String getCtrlChannelId() {
+        java.lang.Object ref = ctrlChannelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ctrlChannelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+       * @return The bytes for ctrlChannelId.
+       */
+      public com.google.protobuf.ByteString
+          getCtrlChannelIdBytes() {
+        java.lang.Object ref = ctrlChannelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ctrlChannelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+       * @param value The ctrlChannelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCtrlChannelId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ctrlChannelId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCtrlChannelId() {
+        ctrlChannelId_ = getDefaultInstance().getCtrlChannelId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ctrlChannelId = 2 [json_name = "ctrlChannelId"];</code>
+       * @param value The bytes for ctrlChannelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCtrlChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ctrlChannelId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long sequence_ ;
+      /**
+       * <code>uint64 sequence = 3 [json_name = "sequence"];</code>
+       * @return The sequence.
+       */
+      @java.lang.Override
+      public long getSequence() {
+        return sequence_;
+      }
+      /**
+       * <code>uint64 sequence = 3 [json_name = "sequence"];</code>
+       * @param value The sequence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequence(long value) {
+
+        sequence_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sequence = 3 [json_name = "sequence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequence() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sequence_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proposalId_ = "";
+      /**
+       * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+       * @return The proposalId.
+       */
+      public java.lang.String getProposalId() {
+        java.lang.Object ref = proposalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proposalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+       * @return The bytes for proposalId.
+       */
+      public com.google.protobuf.ByteString
+          getProposalIdBytes() {
+        java.lang.Object ref = proposalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proposalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+       * @param value The proposalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proposalId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalId() {
+        proposalId_ = getDefaultInstance().getProposalId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proposalId = 4 [json_name = "proposalId"];</code>
+       * @param value The bytes for proposalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proposalId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus getStatus() {
+        com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus result = com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus.forNumber(status_);
+        return result == null ? com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.stafihub.stafihub.ledger.LedgerProto.InterchainTxStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.ledger.InterchainTxStatus status = 5 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.ledger.GenesisInterchainTxProposalInfo)
+    private static final com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo();
+    }
+
+    public static com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisInterchainTxProposalInfo>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisInterchainTxProposalInfo>() {
+      @java.lang.Override
+      public GenesisInterchainTxProposalInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisInterchainTxProposalInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisInterchainTxProposalInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.ledger.GenesisProto.GenesisInterchainTxProposalInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_UnbondSwitch_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_UnbondSwitch_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_GenesisEraSnapshot_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_GenesisEraSnapshot_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_StakingRewardCommission_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_StakingRewardCommission_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_UnbondCommission_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_UnbondCommission_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_RelayFeeReceiver_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_RelayFeeReceiver_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_TotalExpectedActive_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_TotalExpectedActive_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_TotalExpectedFee_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_TotalExpectedFee_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_GenesisPoolUnbonding_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_GenesisPoolUnbonding_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_GenesisSnapshot_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_GenesisSnapshot_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_ledger_GenesisInterchainTxProposalInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_ledger_GenesisInterchainTxProposalInfo_fieldAccessorTable;
 
@@ -168,12 +17814,12 @@ public final class GenesisProto {
       "\022\032\n\010sequence\030\003 \001(\004R\010sequence\022\036\n\nproposal" +
       "Id\030\004 \001(\tR\nproposalId\022D\n\006status\030\005 \001(\0162,.s" +
       "tafihub.stafihub.ledger.InterchainTxStat" +
-      "usR\006statusB\333\001\n\034com.stafihub.stafihub.led" +
-      "gerB\014GenesisProtoP\001Z+github.com/stafihub" +
-      "/stafihub/x/ledger/types\242\002\003SSL\252\002\030Stafihu" +
-      "b.Stafihub.Ledger\312\002\030Stafihub\\Stafihub\\Le" +
-      "dger\342\002$Stafihub\\Stafihub\\Ledger\\GPBMetad" +
-      "ata\352\002\032Stafihub::Stafihub::Ledgerb\006proto3"
+      "usR\006statusB\331\001\n\034com.stafihub.stafihub.led" +
+      "gerB\014GenesisProtoZ+github.com/stafihub/s" +
+      "tafihub/x/ledger/types\242\002\003SSL\252\002\030Stafihub." +
+      "Stafihub.Ledger\312\002\030Stafihub\\Stafihub\\Ledg" +
+      "er\342\002$Stafihub\\Stafihub\\Ledger\\GPBMetadat" +
+      "a\352\002\032Stafihub::Stafihub::Ledgerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

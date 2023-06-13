@@ -14,34 +14,4776 @@ public final class ModuleQueryMsgProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CalcOutAmtGivenInOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * token_in is the token to be sent to the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenIn field is set.
+     */
+    boolean hasTokenIn();
+    /**
+     * <pre>
+     * token_in is the token to be sent to the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     * @return The tokenIn.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTokenIn();
+    /**
+     * <pre>
+     * token_in is the token to be sent to the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenInOrBuilder();
+
+    /**
+     * <pre>
+     * token_out_denom is the token denom to be received from the pool.
+     * </pre>
+     *
+     * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+     * @return The tokenOutDenom.
+     */
+    java.lang.String getTokenOutDenom();
+    /**
+     * <pre>
+     * token_out_denom is the token denom to be received from the pool.
+     * </pre>
+     *
+     * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+     * @return The bytes for tokenOutDenom.
+     */
+    com.google.protobuf.ByteString
+        getTokenOutDenomBytes();
+
+    /**
+     * <pre>
+     * swap_fee is the swap fee for this swap estimate.
+     * </pre>
+     *
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The swapFee.
+     */
+    java.lang.String getSwapFee();
+    /**
+     * <pre>
+     * swap_fee is the swap fee for this swap estimate.
+     * </pre>
+     *
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for swapFee.
+     */
+    com.google.protobuf.ByteString
+        getSwapFeeBytes();
+  }
+  /**
+   * <pre>
+   * ===================== CalcOutAmtGivenIn
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn}
+   */
+  public static final class CalcOutAmtGivenIn extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn)
+      CalcOutAmtGivenInOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalcOutAmtGivenIn.newBuilder() to construct.
+    private CalcOutAmtGivenIn(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalcOutAmtGivenIn() {
+      tokenOutDenom_ = "";
+      swapFee_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalcOutAmtGivenIn();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenIn_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenIn_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.Builder.class);
+    }
+
+    public static final int TOKEN_IN_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin tokenIn_;
+    /**
+     * <pre>
+     * token_in is the token to be sent to the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenIn field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenIn() {
+      return tokenIn_ != null;
+    }
+    /**
+     * <pre>
+     * token_in is the token to be sent to the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     * @return The tokenIn.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTokenIn() {
+      return tokenIn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenIn_;
+    }
+    /**
+     * <pre>
+     * token_in is the token to be sent to the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenInOrBuilder() {
+      return tokenIn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenIn_;
+    }
+
+    public static final int TOKEN_OUT_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenOutDenom_ = "";
+    /**
+     * <pre>
+     * token_out_denom is the token denom to be received from the pool.
+     * </pre>
+     *
+     * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+     * @return The tokenOutDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenOutDenom() {
+      java.lang.Object ref = tokenOutDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenOutDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token_out_denom is the token denom to be received from the pool.
+     * </pre>
+     *
+     * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+     * @return The bytes for tokenOutDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenOutDenomBytes() {
+      java.lang.Object ref = tokenOutDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenOutDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SWAP_FEE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object swapFee_ = "";
+    /**
+     * <pre>
+     * swap_fee is the swap fee for this swap estimate.
+     * </pre>
+     *
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The swapFee.
+     */
+    @java.lang.Override
+    public java.lang.String getSwapFee() {
+      java.lang.Object ref = swapFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        swapFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * swap_fee is the swap fee for this swap estimate.
+     * </pre>
+     *
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for swapFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSwapFeeBytes() {
+      java.lang.Object ref = swapFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        swapFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tokenIn_ != null) {
+        output.writeMessage(1, getTokenIn());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOutDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenOutDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, swapFee_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tokenIn_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTokenIn());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOutDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenOutDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, swapFee_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn)) {
+        return super.equals(obj);
+      }
+      com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn other = (com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn) obj;
+
+      if (hasTokenIn() != other.hasTokenIn()) return false;
+      if (hasTokenIn()) {
+        if (!getTokenIn()
+            .equals(other.getTokenIn())) return false;
+      }
+      if (!getTokenOutDenom()
+          .equals(other.getTokenOutDenom())) return false;
+      if (!getSwapFee()
+          .equals(other.getSwapFee())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTokenIn()) {
+        hash = (37 * hash) + TOKEN_IN_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenIn().hashCode();
+      }
+      hash = (37 * hash) + TOKEN_OUT_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenOutDenom().hashCode();
+      hash = (37 * hash) + SWAP_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getSwapFee().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ===================== CalcOutAmtGivenIn
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn)
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenIn_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenIn_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.Builder.class);
+      }
+
+      // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tokenIn_ = null;
+        if (tokenInBuilder_ != null) {
+          tokenInBuilder_.dispose();
+          tokenInBuilder_ = null;
+        }
+        tokenOutDenom_ = "";
+        swapFee_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenIn_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn getDefaultInstanceForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn build() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn buildPartial() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn result = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tokenIn_ = tokenInBuilder_ == null
+              ? tokenIn_
+              : tokenInBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenOutDenom_ = tokenOutDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.swapFee_ = swapFee_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn) {
+          return mergeFrom((com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn other) {
+        if (other == com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.getDefaultInstance()) return this;
+        if (other.hasTokenIn()) {
+          mergeTokenIn(other.getTokenIn());
+        }
+        if (!other.getTokenOutDenom().isEmpty()) {
+          tokenOutDenom_ = other.tokenOutDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSwapFee().isEmpty()) {
+          swapFee_ = other.swapFee_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTokenInFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                tokenOutDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                swapFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin tokenIn_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> tokenInBuilder_;
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       * @return Whether the tokenIn field is set.
+       */
+      public boolean hasTokenIn() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       * @return The tokenIn.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTokenIn() {
+        if (tokenInBuilder_ == null) {
+          return tokenIn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenIn_;
+        } else {
+          return tokenInBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenIn(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenInBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tokenIn_ = value;
+        } else {
+          tokenInBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenIn(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (tokenInBuilder_ == null) {
+          tokenIn_ = builderForValue.build();
+        } else {
+          tokenInBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTokenIn(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenInBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tokenIn_ != null &&
+            tokenIn_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTokenInBuilder().mergeFrom(value);
+          } else {
+            tokenIn_ = value;
+          }
+        } else {
+          tokenInBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenIn() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tokenIn_ = null;
+        if (tokenInBuilder_ != null) {
+          tokenInBuilder_.dispose();
+          tokenInBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTokenInBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTokenInFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenInOrBuilder() {
+        if (tokenInBuilder_ != null) {
+          return tokenInBuilder_.getMessageOrBuilder();
+        } else {
+          return tokenIn_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenIn_;
+        }
+      }
+      /**
+       * <pre>
+       * token_in is the token to be sent to the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTokenInFieldBuilder() {
+        if (tokenInBuilder_ == null) {
+          tokenInBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTokenIn(),
+                  getParentForChildren(),
+                  isClean());
+          tokenIn_ = null;
+        }
+        return tokenInBuilder_;
+      }
+
+      private java.lang.Object tokenOutDenom_ = "";
+      /**
+       * <pre>
+       * token_out_denom is the token denom to be received from the pool.
+       * </pre>
+       *
+       * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+       * @return The tokenOutDenom.
+       */
+      public java.lang.String getTokenOutDenom() {
+        java.lang.Object ref = tokenOutDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenOutDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_out_denom is the token denom to be received from the pool.
+       * </pre>
+       *
+       * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+       * @return The bytes for tokenOutDenom.
+       */
+      public com.google.protobuf.ByteString
+          getTokenOutDenomBytes() {
+        java.lang.Object ref = tokenOutDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenOutDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_out_denom is the token denom to be received from the pool.
+       * </pre>
+       *
+       * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+       * @param value The tokenOutDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenOutDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenOutDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out_denom is the token denom to be received from the pool.
+       * </pre>
+       *
+       * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenOutDenom() {
+        tokenOutDenom_ = getDefaultInstance().getTokenOutDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out_denom is the token denom to be received from the pool.
+       * </pre>
+       *
+       * <code>string token_out_denom = 2 [json_name = "tokenOutDenom"];</code>
+       * @param value The bytes for tokenOutDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenOutDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenOutDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object swapFee_ = "";
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The swapFee.
+       */
+      public java.lang.String getSwapFee() {
+        java.lang.Object ref = swapFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          swapFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for swapFee.
+       */
+      public com.google.protobuf.ByteString
+          getSwapFeeBytes() {
+        java.lang.Object ref = swapFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          swapFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The swapFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        swapFee_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSwapFee() {
+        swapFee_ = getDefaultInstance().getSwapFee();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for swapFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        swapFee_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn)
+    private static final com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn();
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalcOutAmtGivenIn>
+        PARSER = new com.google.protobuf.AbstractParser<CalcOutAmtGivenIn>() {
+      @java.lang.Override
+      public CalcOutAmtGivenIn parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalcOutAmtGivenIn> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalcOutAmtGivenIn> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CalcOutAmtGivenInRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * calc_out_amt_given_in is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+     * @return Whether the calcOutAmtGivenIn field is set.
+     */
+    boolean hasCalcOutAmtGivenIn();
+    /**
+     * <pre>
+     * calc_out_amt_given_in is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+     * @return The calcOutAmtGivenIn.
+     */
+    com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn getCalcOutAmtGivenIn();
+    /**
+     * <pre>
+     * calc_out_amt_given_in is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInOrBuilder getCalcOutAmtGivenInOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest}
+   */
+  public static final class CalcOutAmtGivenInRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest)
+      CalcOutAmtGivenInRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalcOutAmtGivenInRequest.newBuilder() to construct.
+    private CalcOutAmtGivenInRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalcOutAmtGivenInRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalcOutAmtGivenInRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.Builder.class);
+    }
+
+    public static final int CALC_OUT_AMT_GIVEN_IN_FIELD_NUMBER = 1;
+    private com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn calcOutAmtGivenIn_;
+    /**
+     * <pre>
+     * calc_out_amt_given_in is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+     * @return Whether the calcOutAmtGivenIn field is set.
+     */
+    @java.lang.Override
+    public boolean hasCalcOutAmtGivenIn() {
+      return calcOutAmtGivenIn_ != null;
+    }
+    /**
+     * <pre>
+     * calc_out_amt_given_in is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+     * @return The calcOutAmtGivenIn.
+     */
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn getCalcOutAmtGivenIn() {
+      return calcOutAmtGivenIn_ == null ? com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.getDefaultInstance() : calcOutAmtGivenIn_;
+    }
+    /**
+     * <pre>
+     * calc_out_amt_given_in is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInOrBuilder getCalcOutAmtGivenInOrBuilder() {
+      return calcOutAmtGivenIn_ == null ? com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.getDefaultInstance() : calcOutAmtGivenIn_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (calcOutAmtGivenIn_ != null) {
+        output.writeMessage(1, getCalcOutAmtGivenIn());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (calcOutAmtGivenIn_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCalcOutAmtGivenIn());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest other = (com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest) obj;
+
+      if (hasCalcOutAmtGivenIn() != other.hasCalcOutAmtGivenIn()) return false;
+      if (hasCalcOutAmtGivenIn()) {
+        if (!getCalcOutAmtGivenIn()
+            .equals(other.getCalcOutAmtGivenIn())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCalcOutAmtGivenIn()) {
+        hash = (37 * hash) + CALC_OUT_AMT_GIVEN_IN_FIELD_NUMBER;
+        hash = (53 * hash) + getCalcOutAmtGivenIn().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest)
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        calcOutAmtGivenIn_ = null;
+        if (calcOutAmtGivenInBuilder_ != null) {
+          calcOutAmtGivenInBuilder_.dispose();
+          calcOutAmtGivenInBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest getDefaultInstanceForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest build() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest buildPartial() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest result = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.calcOutAmtGivenIn_ = calcOutAmtGivenInBuilder_ == null
+              ? calcOutAmtGivenIn_
+              : calcOutAmtGivenInBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest) {
+          return mergeFrom((com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest other) {
+        if (other == com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.getDefaultInstance()) return this;
+        if (other.hasCalcOutAmtGivenIn()) {
+          mergeCalcOutAmtGivenIn(other.getCalcOutAmtGivenIn());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCalcOutAmtGivenInFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn calcOutAmtGivenIn_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.Builder, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInOrBuilder> calcOutAmtGivenInBuilder_;
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       * @return Whether the calcOutAmtGivenIn field is set.
+       */
+      public boolean hasCalcOutAmtGivenIn() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       * @return The calcOutAmtGivenIn.
+       */
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn getCalcOutAmtGivenIn() {
+        if (calcOutAmtGivenInBuilder_ == null) {
+          return calcOutAmtGivenIn_ == null ? com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.getDefaultInstance() : calcOutAmtGivenIn_;
+        } else {
+          return calcOutAmtGivenInBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCalcOutAmtGivenIn(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn value) {
+        if (calcOutAmtGivenInBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          calcOutAmtGivenIn_ = value;
+        } else {
+          calcOutAmtGivenInBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCalcOutAmtGivenIn(
+          com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.Builder builderForValue) {
+        if (calcOutAmtGivenInBuilder_ == null) {
+          calcOutAmtGivenIn_ = builderForValue.build();
+        } else {
+          calcOutAmtGivenInBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCalcOutAmtGivenIn(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn value) {
+        if (calcOutAmtGivenInBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            calcOutAmtGivenIn_ != null &&
+            calcOutAmtGivenIn_ != com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.getDefaultInstance()) {
+            getCalcOutAmtGivenInBuilder().mergeFrom(value);
+          } else {
+            calcOutAmtGivenIn_ = value;
+          }
+        } else {
+          calcOutAmtGivenInBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCalcOutAmtGivenIn() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        calcOutAmtGivenIn_ = null;
+        if (calcOutAmtGivenInBuilder_ != null) {
+          calcOutAmtGivenInBuilder_.dispose();
+          calcOutAmtGivenInBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.Builder getCalcOutAmtGivenInBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCalcOutAmtGivenInFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInOrBuilder getCalcOutAmtGivenInOrBuilder() {
+        if (calcOutAmtGivenInBuilder_ != null) {
+          return calcOutAmtGivenInBuilder_.getMessageOrBuilder();
+        } else {
+          return calcOutAmtGivenIn_ == null ?
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.getDefaultInstance() : calcOutAmtGivenIn_;
+        }
+      }
+      /**
+       * <pre>
+       * calc_out_amt_given_in is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenIn calc_out_amt_given_in = 1 [json_name = "calcOutAmtGivenIn", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.Builder, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInOrBuilder> 
+          getCalcOutAmtGivenInFieldBuilder() {
+        if (calcOutAmtGivenInBuilder_ == null) {
+          calcOutAmtGivenInBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.Builder, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInOrBuilder>(
+                  getCalcOutAmtGivenIn(),
+                  getParentForChildren(),
+                  isClean());
+          calcOutAmtGivenIn_ = null;
+        }
+        return calcOutAmtGivenInBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInRequest)
+    private static final com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest();
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalcOutAmtGivenInRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CalcOutAmtGivenInRequest>() {
+      @java.lang.Override
+      public CalcOutAmtGivenInRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalcOutAmtGivenInRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalcOutAmtGivenInRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CalcOutAmtGivenInResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * token_out is the token out computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenOut field is set.
+     */
+    boolean hasTokenOut();
+    /**
+     * <pre>
+     * token_out is the token out computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     * @return The tokenOut.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTokenOut();
+    /**
+     * <pre>
+     * token_out is the token out computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOutOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse}
+   */
+  public static final class CalcOutAmtGivenInResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse)
+      CalcOutAmtGivenInResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalcOutAmtGivenInResponse.newBuilder() to construct.
+    private CalcOutAmtGivenInResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalcOutAmtGivenInResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalcOutAmtGivenInResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.Builder.class);
+    }
+
+    public static final int TOKEN_OUT_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin tokenOut_;
+    /**
+     * <pre>
+     * token_out is the token out computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenOut field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenOut() {
+      return tokenOut_ != null;
+    }
+    /**
+     * <pre>
+     * token_out is the token out computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     * @return The tokenOut.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTokenOut() {
+      return tokenOut_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenOut_;
+    }
+    /**
+     * <pre>
+     * token_out is the token out computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOutOrBuilder() {
+      return tokenOut_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenOut_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tokenOut_ != null) {
+        output.writeMessage(1, getTokenOut());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tokenOut_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTokenOut());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse other = (com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse) obj;
+
+      if (hasTokenOut() != other.hasTokenOut()) return false;
+      if (hasTokenOut()) {
+        if (!getTokenOut()
+            .equals(other.getTokenOut())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTokenOut()) {
+        hash = (37 * hash) + TOKEN_OUT_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenOut().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse)
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tokenOut_ = null;
+        if (tokenOutBuilder_ != null) {
+          tokenOutBuilder_.dispose();
+          tokenOutBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse getDefaultInstanceForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse build() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse buildPartial() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse result = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tokenOut_ = tokenOutBuilder_ == null
+              ? tokenOut_
+              : tokenOutBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse) {
+          return mergeFrom((com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse other) {
+        if (other == com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.getDefaultInstance()) return this;
+        if (other.hasTokenOut()) {
+          mergeTokenOut(other.getTokenOut());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTokenOutFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin tokenOut_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> tokenOutBuilder_;
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       * @return Whether the tokenOut field is set.
+       */
+      public boolean hasTokenOut() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       * @return The tokenOut.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTokenOut() {
+        if (tokenOutBuilder_ == null) {
+          return tokenOut_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenOut_;
+        } else {
+          return tokenOutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenOut(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenOutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tokenOut_ = value;
+        } else {
+          tokenOutBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenOut(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (tokenOutBuilder_ == null) {
+          tokenOut_ = builderForValue.build();
+        } else {
+          tokenOutBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTokenOut(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenOutBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tokenOut_ != null &&
+            tokenOut_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTokenOutBuilder().mergeFrom(value);
+          } else {
+            tokenOut_ = value;
+          }
+        } else {
+          tokenOutBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenOut() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tokenOut_ = null;
+        if (tokenOutBuilder_ != null) {
+          tokenOutBuilder_.dispose();
+          tokenOutBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTokenOutBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTokenOutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOutOrBuilder() {
+        if (tokenOutBuilder_ != null) {
+          return tokenOutBuilder_.getMessageOrBuilder();
+        } else {
+          return tokenOut_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenOut_;
+        }
+      }
+      /**
+       * <pre>
+       * token_out is the token out computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTokenOutFieldBuilder() {
+        if (tokenOutBuilder_ == null) {
+          tokenOutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTokenOut(),
+                  getParentForChildren(),
+                  isClean());
+          tokenOut_ = null;
+        }
+        return tokenOutBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.cosmwasmpool.v1beta1.CalcOutAmtGivenInResponse)
+    private static final com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse();
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalcOutAmtGivenInResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CalcOutAmtGivenInResponse>() {
+      @java.lang.Override
+      public CalcOutAmtGivenInResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalcOutAmtGivenInResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalcOutAmtGivenInResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CalcInAmtGivenOutOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * token_out is the token out to be receoved from the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenOut field is set.
+     */
+    boolean hasTokenOut();
+    /**
+     * <pre>
+     * token_out is the token out to be receoved from the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     * @return The tokenOut.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTokenOut();
+    /**
+     * <pre>
+     * token_out is the token out to be receoved from the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOutOrBuilder();
+
+    /**
+     * <pre>
+     * token_in_denom is the token denom to be sentt to the pool.
+     * </pre>
+     *
+     * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+     * @return The tokenInDenom.
+     */
+    java.lang.String getTokenInDenom();
+    /**
+     * <pre>
+     * token_in_denom is the token denom to be sentt to the pool.
+     * </pre>
+     *
+     * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+     * @return The bytes for tokenInDenom.
+     */
+    com.google.protobuf.ByteString
+        getTokenInDenomBytes();
+
+    /**
+     * <pre>
+     * swap_fee is the swap fee for this swap estimate.
+     * </pre>
+     *
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The swapFee.
+     */
+    java.lang.String getSwapFee();
+    /**
+     * <pre>
+     * swap_fee is the swap fee for this swap estimate.
+     * </pre>
+     *
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for swapFee.
+     */
+    com.google.protobuf.ByteString
+        getSwapFeeBytes();
+  }
+  /**
+   * <pre>
+   * ===================== CalcInAmtGivenOut
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut}
+   */
+  public static final class CalcInAmtGivenOut extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut)
+      CalcInAmtGivenOutOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalcInAmtGivenOut.newBuilder() to construct.
+    private CalcInAmtGivenOut(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalcInAmtGivenOut() {
+      tokenInDenom_ = "";
+      swapFee_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalcInAmtGivenOut();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOut_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOut_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.Builder.class);
+    }
+
+    public static final int TOKEN_OUT_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin tokenOut_;
+    /**
+     * <pre>
+     * token_out is the token out to be receoved from the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenOut field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenOut() {
+      return tokenOut_ != null;
+    }
+    /**
+     * <pre>
+     * token_out is the token out to be receoved from the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     * @return The tokenOut.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTokenOut() {
+      return tokenOut_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenOut_;
+    }
+    /**
+     * <pre>
+     * token_out is the token out to be receoved from the pool.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOutOrBuilder() {
+      return tokenOut_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenOut_;
+    }
+
+    public static final int TOKEN_IN_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenInDenom_ = "";
+    /**
+     * <pre>
+     * token_in_denom is the token denom to be sentt to the pool.
+     * </pre>
+     *
+     * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+     * @return The tokenInDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenInDenom() {
+      java.lang.Object ref = tokenInDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenInDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token_in_denom is the token denom to be sentt to the pool.
+     * </pre>
+     *
+     * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+     * @return The bytes for tokenInDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenInDenomBytes() {
+      java.lang.Object ref = tokenInDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenInDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SWAP_FEE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object swapFee_ = "";
+    /**
+     * <pre>
+     * swap_fee is the swap fee for this swap estimate.
+     * </pre>
+     *
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The swapFee.
+     */
+    @java.lang.Override
+    public java.lang.String getSwapFee() {
+      java.lang.Object ref = swapFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        swapFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * swap_fee is the swap fee for this swap estimate.
+     * </pre>
+     *
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for swapFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSwapFeeBytes() {
+      java.lang.Object ref = swapFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        swapFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tokenOut_ != null) {
+        output.writeMessage(1, getTokenOut());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenInDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenInDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, swapFee_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tokenOut_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTokenOut());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenInDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenInDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, swapFee_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut)) {
+        return super.equals(obj);
+      }
+      com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut other = (com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut) obj;
+
+      if (hasTokenOut() != other.hasTokenOut()) return false;
+      if (hasTokenOut()) {
+        if (!getTokenOut()
+            .equals(other.getTokenOut())) return false;
+      }
+      if (!getTokenInDenom()
+          .equals(other.getTokenInDenom())) return false;
+      if (!getSwapFee()
+          .equals(other.getSwapFee())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTokenOut()) {
+        hash = (37 * hash) + TOKEN_OUT_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenOut().hashCode();
+      }
+      hash = (37 * hash) + TOKEN_IN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenInDenom().hashCode();
+      hash = (37 * hash) + SWAP_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getSwapFee().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ===================== CalcInAmtGivenOut
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut)
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOut_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOut_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.Builder.class);
+      }
+
+      // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tokenOut_ = null;
+        if (tokenOutBuilder_ != null) {
+          tokenOutBuilder_.dispose();
+          tokenOutBuilder_ = null;
+        }
+        tokenInDenom_ = "";
+        swapFee_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOut_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut getDefaultInstanceForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut build() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut buildPartial() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut result = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tokenOut_ = tokenOutBuilder_ == null
+              ? tokenOut_
+              : tokenOutBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenInDenom_ = tokenInDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.swapFee_ = swapFee_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut) {
+          return mergeFrom((com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut other) {
+        if (other == com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.getDefaultInstance()) return this;
+        if (other.hasTokenOut()) {
+          mergeTokenOut(other.getTokenOut());
+        }
+        if (!other.getTokenInDenom().isEmpty()) {
+          tokenInDenom_ = other.tokenInDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSwapFee().isEmpty()) {
+          swapFee_ = other.swapFee_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTokenOutFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                tokenInDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                swapFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin tokenOut_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> tokenOutBuilder_;
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       * @return Whether the tokenOut field is set.
+       */
+      public boolean hasTokenOut() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       * @return The tokenOut.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTokenOut() {
+        if (tokenOutBuilder_ == null) {
+          return tokenOut_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenOut_;
+        } else {
+          return tokenOutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenOut(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenOutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tokenOut_ = value;
+        } else {
+          tokenOutBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenOut(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (tokenOutBuilder_ == null) {
+          tokenOut_ = builderForValue.build();
+        } else {
+          tokenOutBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTokenOut(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenOutBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tokenOut_ != null &&
+            tokenOut_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTokenOutBuilder().mergeFrom(value);
+          } else {
+            tokenOut_ = value;
+          }
+        } else {
+          tokenOutBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenOut() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tokenOut_ = null;
+        if (tokenOutBuilder_ != null) {
+          tokenOutBuilder_.dispose();
+          tokenOutBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTokenOutBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTokenOutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOutOrBuilder() {
+        if (tokenOutBuilder_ != null) {
+          return tokenOutBuilder_.getMessageOrBuilder();
+        } else {
+          return tokenOut_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenOut_;
+        }
+      }
+      /**
+       * <pre>
+       * token_out is the token out to be receoved from the pool.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_out = 1 [json_name = "tokenOut", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTokenOutFieldBuilder() {
+        if (tokenOutBuilder_ == null) {
+          tokenOutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTokenOut(),
+                  getParentForChildren(),
+                  isClean());
+          tokenOut_ = null;
+        }
+        return tokenOutBuilder_;
+      }
+
+      private java.lang.Object tokenInDenom_ = "";
+      /**
+       * <pre>
+       * token_in_denom is the token denom to be sentt to the pool.
+       * </pre>
+       *
+       * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+       * @return The tokenInDenom.
+       */
+      public java.lang.String getTokenInDenom() {
+        java.lang.Object ref = tokenInDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenInDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_in_denom is the token denom to be sentt to the pool.
+       * </pre>
+       *
+       * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+       * @return The bytes for tokenInDenom.
+       */
+      public com.google.protobuf.ByteString
+          getTokenInDenomBytes() {
+        java.lang.Object ref = tokenInDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenInDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_in_denom is the token denom to be sentt to the pool.
+       * </pre>
+       *
+       * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+       * @param value The tokenInDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenInDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenInDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in_denom is the token denom to be sentt to the pool.
+       * </pre>
+       *
+       * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenInDenom() {
+        tokenInDenom_ = getDefaultInstance().getTokenInDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in_denom is the token denom to be sentt to the pool.
+       * </pre>
+       *
+       * <code>string token_in_denom = 2 [json_name = "tokenInDenom"];</code>
+       * @param value The bytes for tokenInDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenInDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenInDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object swapFee_ = "";
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The swapFee.
+       */
+      public java.lang.String getSwapFee() {
+        java.lang.Object ref = swapFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          swapFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for swapFee.
+       */
+      public com.google.protobuf.ByteString
+          getSwapFeeBytes() {
+        java.lang.Object ref = swapFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          swapFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The swapFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        swapFee_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSwapFee() {
+        swapFee_ = getDefaultInstance().getSwapFee();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * swap_fee is the swap fee for this swap estimate.
+       * </pre>
+       *
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for swapFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        swapFee_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut)
+    private static final com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut();
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalcInAmtGivenOut>
+        PARSER = new com.google.protobuf.AbstractParser<CalcInAmtGivenOut>() {
+      @java.lang.Override
+      public CalcInAmtGivenOut parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalcInAmtGivenOut> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalcInAmtGivenOut> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CalcInAmtGivenOutRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * calc_in_amt_given_out is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+     * @return Whether the calcInAmtGivenOut field is set.
+     */
+    boolean hasCalcInAmtGivenOut();
+    /**
+     * <pre>
+     * calc_in_amt_given_out is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+     * @return The calcInAmtGivenOut.
+     */
+    com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut getCalcInAmtGivenOut();
+    /**
+     * <pre>
+     * calc_in_amt_given_out is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutOrBuilder getCalcInAmtGivenOutOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest}
+   */
+  public static final class CalcInAmtGivenOutRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest)
+      CalcInAmtGivenOutRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalcInAmtGivenOutRequest.newBuilder() to construct.
+    private CalcInAmtGivenOutRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalcInAmtGivenOutRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalcInAmtGivenOutRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.Builder.class);
+    }
+
+    public static final int CALC_IN_AMT_GIVEN_OUT_FIELD_NUMBER = 1;
+    private com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut calcInAmtGivenOut_;
+    /**
+     * <pre>
+     * calc_in_amt_given_out is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+     * @return Whether the calcInAmtGivenOut field is set.
+     */
+    @java.lang.Override
+    public boolean hasCalcInAmtGivenOut() {
+      return calcInAmtGivenOut_ != null;
+    }
+    /**
+     * <pre>
+     * calc_in_amt_given_out is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+     * @return The calcInAmtGivenOut.
+     */
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut getCalcInAmtGivenOut() {
+      return calcInAmtGivenOut_ == null ? com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.getDefaultInstance() : calcInAmtGivenOut_;
+    }
+    /**
+     * <pre>
+     * calc_in_amt_given_out is the structure containing all the request
+     * information for this query.
+     * </pre>
+     *
+     * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutOrBuilder getCalcInAmtGivenOutOrBuilder() {
+      return calcInAmtGivenOut_ == null ? com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.getDefaultInstance() : calcInAmtGivenOut_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (calcInAmtGivenOut_ != null) {
+        output.writeMessage(1, getCalcInAmtGivenOut());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (calcInAmtGivenOut_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCalcInAmtGivenOut());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest other = (com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest) obj;
+
+      if (hasCalcInAmtGivenOut() != other.hasCalcInAmtGivenOut()) return false;
+      if (hasCalcInAmtGivenOut()) {
+        if (!getCalcInAmtGivenOut()
+            .equals(other.getCalcInAmtGivenOut())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCalcInAmtGivenOut()) {
+        hash = (37 * hash) + CALC_IN_AMT_GIVEN_OUT_FIELD_NUMBER;
+        hash = (53 * hash) + getCalcInAmtGivenOut().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest)
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        calcInAmtGivenOut_ = null;
+        if (calcInAmtGivenOutBuilder_ != null) {
+          calcInAmtGivenOutBuilder_.dispose();
+          calcInAmtGivenOutBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest getDefaultInstanceForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest build() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest buildPartial() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest result = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.calcInAmtGivenOut_ = calcInAmtGivenOutBuilder_ == null
+              ? calcInAmtGivenOut_
+              : calcInAmtGivenOutBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest) {
+          return mergeFrom((com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest other) {
+        if (other == com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.getDefaultInstance()) return this;
+        if (other.hasCalcInAmtGivenOut()) {
+          mergeCalcInAmtGivenOut(other.getCalcInAmtGivenOut());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCalcInAmtGivenOutFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut calcInAmtGivenOut_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.Builder, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutOrBuilder> calcInAmtGivenOutBuilder_;
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       * @return Whether the calcInAmtGivenOut field is set.
+       */
+      public boolean hasCalcInAmtGivenOut() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       * @return The calcInAmtGivenOut.
+       */
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut getCalcInAmtGivenOut() {
+        if (calcInAmtGivenOutBuilder_ == null) {
+          return calcInAmtGivenOut_ == null ? com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.getDefaultInstance() : calcInAmtGivenOut_;
+        } else {
+          return calcInAmtGivenOutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCalcInAmtGivenOut(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut value) {
+        if (calcInAmtGivenOutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          calcInAmtGivenOut_ = value;
+        } else {
+          calcInAmtGivenOutBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCalcInAmtGivenOut(
+          com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.Builder builderForValue) {
+        if (calcInAmtGivenOutBuilder_ == null) {
+          calcInAmtGivenOut_ = builderForValue.build();
+        } else {
+          calcInAmtGivenOutBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCalcInAmtGivenOut(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut value) {
+        if (calcInAmtGivenOutBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            calcInAmtGivenOut_ != null &&
+            calcInAmtGivenOut_ != com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.getDefaultInstance()) {
+            getCalcInAmtGivenOutBuilder().mergeFrom(value);
+          } else {
+            calcInAmtGivenOut_ = value;
+          }
+        } else {
+          calcInAmtGivenOutBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCalcInAmtGivenOut() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        calcInAmtGivenOut_ = null;
+        if (calcInAmtGivenOutBuilder_ != null) {
+          calcInAmtGivenOutBuilder_.dispose();
+          calcInAmtGivenOutBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.Builder getCalcInAmtGivenOutBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCalcInAmtGivenOutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutOrBuilder getCalcInAmtGivenOutOrBuilder() {
+        if (calcInAmtGivenOutBuilder_ != null) {
+          return calcInAmtGivenOutBuilder_.getMessageOrBuilder();
+        } else {
+          return calcInAmtGivenOut_ == null ?
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.getDefaultInstance() : calcInAmtGivenOut_;
+        }
+      }
+      /**
+       * <pre>
+       * calc_in_amt_given_out is the structure containing all the request
+       * information for this query.
+       * </pre>
+       *
+       * <code>.osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOut calc_in_amt_given_out = 1 [json_name = "calcInAmtGivenOut", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.Builder, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutOrBuilder> 
+          getCalcInAmtGivenOutFieldBuilder() {
+        if (calcInAmtGivenOutBuilder_ == null) {
+          calcInAmtGivenOutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.Builder, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutOrBuilder>(
+                  getCalcInAmtGivenOut(),
+                  getParentForChildren(),
+                  isClean());
+          calcInAmtGivenOut_ = null;
+        }
+        return calcInAmtGivenOutBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutRequest)
+    private static final com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest();
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalcInAmtGivenOutRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CalcInAmtGivenOutRequest>() {
+      @java.lang.Override
+      public CalcInAmtGivenOutRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalcInAmtGivenOutRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalcInAmtGivenOutRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CalcInAmtGivenOutResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * token_in is the token in computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenIn field is set.
+     */
+    boolean hasTokenIn();
+    /**
+     * <pre>
+     * token_in is the token in computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     * @return The tokenIn.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTokenIn();
+    /**
+     * <pre>
+     * token_in is the token in computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenInOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse}
+   */
+  public static final class CalcInAmtGivenOutResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse)
+      CalcInAmtGivenOutResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalcInAmtGivenOutResponse.newBuilder() to construct.
+    private CalcInAmtGivenOutResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalcInAmtGivenOutResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalcInAmtGivenOutResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.Builder.class);
+    }
+
+    public static final int TOKEN_IN_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin tokenIn_;
+    /**
+     * <pre>
+     * token_in is the token in computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenIn field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenIn() {
+      return tokenIn_ != null;
+    }
+    /**
+     * <pre>
+     * token_in is the token in computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     * @return The tokenIn.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTokenIn() {
+      return tokenIn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenIn_;
+    }
+    /**
+     * <pre>
+     * token_in is the token in computed from this swap estimate call.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenInOrBuilder() {
+      return tokenIn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenIn_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tokenIn_ != null) {
+        output.writeMessage(1, getTokenIn());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tokenIn_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTokenIn());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse other = (com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse) obj;
+
+      if (hasTokenIn() != other.hasTokenIn()) return false;
+      if (hasTokenIn()) {
+        if (!getTokenIn()
+            .equals(other.getTokenIn())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTokenIn()) {
+        hash = (37 * hash) + TOKEN_IN_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenIn().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse)
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tokenIn_ = null;
+        if (tokenInBuilder_ != null) {
+          tokenInBuilder_.dispose();
+          tokenInBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse getDefaultInstanceForType() {
+        return com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse build() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse buildPartial() {
+        com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse result = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tokenIn_ = tokenInBuilder_ == null
+              ? tokenIn_
+              : tokenInBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse) {
+          return mergeFrom((com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse other) {
+        if (other == com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.getDefaultInstance()) return this;
+        if (other.hasTokenIn()) {
+          mergeTokenIn(other.getTokenIn());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTokenInFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin tokenIn_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> tokenInBuilder_;
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       * @return Whether the tokenIn field is set.
+       */
+      public boolean hasTokenIn() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       * @return The tokenIn.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTokenIn() {
+        if (tokenInBuilder_ == null) {
+          return tokenIn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenIn_;
+        } else {
+          return tokenInBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenIn(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenInBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tokenIn_ = value;
+        } else {
+          tokenInBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenIn(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (tokenInBuilder_ == null) {
+          tokenIn_ = builderForValue.build();
+        } else {
+          tokenInBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTokenIn(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenInBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tokenIn_ != null &&
+            tokenIn_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTokenInBuilder().mergeFrom(value);
+          } else {
+            tokenIn_ = value;
+          }
+        } else {
+          tokenInBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenIn() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tokenIn_ = null;
+        if (tokenInBuilder_ != null) {
+          tokenInBuilder_.dispose();
+          tokenInBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTokenInBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTokenInFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenInOrBuilder() {
+        if (tokenInBuilder_ != null) {
+          return tokenInBuilder_.getMessageOrBuilder();
+        } else {
+          return tokenIn_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : tokenIn_;
+        }
+      }
+      /**
+       * <pre>
+       * token_in is the token in computed from this swap estimate call.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token_in = 1 [json_name = "tokenIn", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTokenInFieldBuilder() {
+        if (tokenInBuilder_ == null) {
+          tokenInBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTokenIn(),
+                  getParentForChildren(),
+                  isClean());
+          tokenIn_ = null;
+        }
+        return tokenInBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.cosmwasmpool.v1beta1.CalcInAmtGivenOutResponse)
+    private static final com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse();
+    }
+
+    public static com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalcInAmtGivenOutResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CalcInAmtGivenOutResponse>() {
+      @java.lang.Override
+      public CalcInAmtGivenOutResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalcInAmtGivenOutResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalcInAmtGivenOutResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenIn_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenIn_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_cosmwasmpool_v1beta1_CalcOutAmtGivenInResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOut_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOut_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_cosmwasmpool_v1beta1_CalcInAmtGivenOutResponse_fieldAccessorTable;
 
@@ -77,14 +4819,14 @@ public final class ModuleQueryMsgProto {
       "mpool.v1beta1.CalcInAmtGivenOutB\004\310\336\037\000R\021c" +
       "alcInAmtGivenOut\"W\n\031CalcInAmtGivenOutRes" +
       "ponse\022:\n\010token_in\030\001 \001(\0132\031.cosmos.base.v1" +
-      "beta1.CoinB\004\310\336\037\000R\007tokenInB\212\002\n com.osmosi" +
+      "beta1.CoinB\004\310\336\037\000R\007tokenInB\210\002\n com.osmosi" +
       "s.cosmwasmpool.v1beta1B\023ModuleQueryMsgPr" +
-      "otoP\001Z?github.com/osmosis-labs/osmosis/v" +
-      "15/x/cosmwasmpool/cosmwasm/msg\242\002\003OCX\252\002\034O" +
-      "smosis.Cosmwasmpool.V1beta1\312\002\034Osmosis\\Co" +
-      "smwasmpool\\V1beta1\342\002(Osmosis\\Cosmwasmpoo" +
-      "l\\V1beta1\\GPBMetadata\352\002\036Osmosis::Cosmwas" +
-      "mpool::V1beta1b\006proto3"
+      "otoZ?github.com/osmosis-labs/osmosis/v15" +
+      "/x/cosmwasmpool/cosmwasm/msg\242\002\003OCX\252\002\034Osm" +
+      "osis.Cosmwasmpool.V1beta1\312\002\034Osmosis\\Cosm" +
+      "wasmpool\\V1beta1\342\002(Osmosis\\Cosmwasmpool\\" +
+      "V1beta1\\GPBMetadata\352\002\036Osmosis::Cosmwasmp" +
+      "ool::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

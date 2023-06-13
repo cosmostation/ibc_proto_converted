@@ -24,12 +24,12 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034stride/icacallbacks/tx.proto\022\023stride.i" +
-      "cacallbacks2\005\n\003MsgB\306\001\n\027com.stride.icacal" +
-      "lbacksB\007TxProtoP\001Z5github.com/Stride-Lab" +
-      "s/stride/v9/x/icacallbacks/types\242\002\003SIX\252\002" +
-      "\023Stride.Icacallbacks\312\002\023Stride\\Icacallbac" +
-      "ks\342\002\037Stride\\Icacallbacks\\GPBMetadata\352\002\024S" +
-      "tride::Icacallbacksb\006proto3"
+      "cacallbacks2\005\n\003MsgB\304\001\n\027com.stride.icacal" +
+      "lbacksB\007TxProtoZ5github.com/Stride-Labs/" +
+      "stride/v9/x/icacallbacks/types\242\002\003SIX\252\002\023S" +
+      "tride.Icacallbacks\312\002\023Stride\\Icacallbacks" +
+      "\342\002\037Stride\\Icacallbacks\\GPBMetadata\352\002\024Str" +
+      "ide::Icacallbacksb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

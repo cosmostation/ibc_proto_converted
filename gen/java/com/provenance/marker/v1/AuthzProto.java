@@ -14,9 +14,1212 @@ public final class AuthzProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MarkerTransferAuthorizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.marker.v1.MarkerTransferAuthorization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTransferLimitList();
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTransferLimit(int index);
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getTransferLimitCount();
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTransferLimitOrBuilderList();
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTransferLimitOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+     * granter. If omitted, any recipient is allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+     * @return A list containing the allowList.
+     */
+    java.util.List<java.lang.String>
+        getAllowListList();
+    /**
+     * <pre>
+     * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+     * granter. If omitted, any recipient is allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+     * @return The count of allowList.
+     */
+    int getAllowListCount();
+    /**
+     * <pre>
+     * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+     * granter. If omitted, any recipient is allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+     * @param index The index of the element to return.
+     * @return The allowList at the given index.
+     */
+    java.lang.String getAllowList(int index);
+    /**
+     * <pre>
+     * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+     * granter. If omitted, any recipient is allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowListBytes(int index);
+  }
+  /**
+   * <pre>
+   * MarkerTransferAuthorization gives the grantee permissions to execute
+   * a marker transfer on behalf of the granter's account.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.marker.v1.MarkerTransferAuthorization}
+   */
+  public static final class MarkerTransferAuthorization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.marker.v1.MarkerTransferAuthorization)
+      MarkerTransferAuthorizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MarkerTransferAuthorization.newBuilder() to construct.
+    private MarkerTransferAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MarkerTransferAuthorization() {
+      transferLimit_ = java.util.Collections.emptyList();
+      allowList_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MarkerTransferAuthorization();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.marker.v1.AuthzProto.internal_static_provenance_marker_v1_MarkerTransferAuthorization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.marker.v1.AuthzProto.internal_static_provenance_marker_v1_MarkerTransferAuthorization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization.class, com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization.Builder.class);
+    }
+
+    public static final int TRANSFER_LIMIT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> transferLimit_;
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTransferLimitList() {
+      return transferLimit_;
+    }
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTransferLimitOrBuilderList() {
+      return transferLimit_;
+    }
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getTransferLimitCount() {
+      return transferLimit_.size();
+    }
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTransferLimit(int index) {
+      return transferLimit_.get(index);
+    }
+    /**
+     * <pre>
+     * transfer_limit is the total amount the grantee can transfer
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTransferLimitOrBuilder(
+        int index) {
+      return transferLimit_.get(index);
+    }
+
+    public static final int ALLOW_LIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList allowList_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+     * granter. If omitted, any recipient is allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+     * @return A list containing the allowList.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowListList() {
+      return allowList_;
+    }
+    /**
+     * <pre>
+     * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+     * granter. If omitted, any recipient is allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+     * @return The count of allowList.
+     */
+    public int getAllowListCount() {
+      return allowList_.size();
+    }
+    /**
+     * <pre>
+     * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+     * granter. If omitted, any recipient is allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+     * @param index The index of the element to return.
+     * @return The allowList at the given index.
+     */
+    public java.lang.String getAllowList(int index) {
+      return allowList_.get(index);
+    }
+    /**
+     * <pre>
+     * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+     * granter. If omitted, any recipient is allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowList at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllowListBytes(int index) {
+      return allowList_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < transferLimit_.size(); i++) {
+        output.writeMessage(1, transferLimit_.get(i));
+      }
+      for (int i = 0; i < allowList_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, allowList_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < transferLimit_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, transferLimit_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowList_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowList_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowListList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization)) {
+        return super.equals(obj);
+      }
+      com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization other = (com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization) obj;
+
+      if (!getTransferLimitList()
+          .equals(other.getTransferLimitList())) return false;
+      if (!getAllowListList()
+          .equals(other.getAllowListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTransferLimitCount() > 0) {
+        hash = (37 * hash) + TRANSFER_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getTransferLimitList().hashCode();
+      }
+      if (getAllowListCount() > 0) {
+        hash = (37 * hash) + ALLOW_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MarkerTransferAuthorization gives the grantee permissions to execute
+     * a marker transfer on behalf of the granter's account.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.marker.v1.MarkerTransferAuthorization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.marker.v1.MarkerTransferAuthorization)
+        com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.marker.v1.AuthzProto.internal_static_provenance_marker_v1_MarkerTransferAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.marker.v1.AuthzProto.internal_static_provenance_marker_v1_MarkerTransferAuthorization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization.class, com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization.Builder.class);
+      }
+
+      // Construct using com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (transferLimitBuilder_ == null) {
+          transferLimit_ = java.util.Collections.emptyList();
+        } else {
+          transferLimit_ = null;
+          transferLimitBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        allowList_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.marker.v1.AuthzProto.internal_static_provenance_marker_v1_MarkerTransferAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization getDefaultInstanceForType() {
+        return com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization build() {
+        com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization buildPartial() {
+        com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization result = new com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization result) {
+        if (transferLimitBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            transferLimit_ = java.util.Collections.unmodifiableList(transferLimit_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.transferLimit_ = transferLimit_;
+        } else {
+          result.transferLimit_ = transferLimitBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          allowList_.makeImmutable();
+          result.allowList_ = allowList_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization) {
+          return mergeFrom((com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization other) {
+        if (other == com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization.getDefaultInstance()) return this;
+        if (transferLimitBuilder_ == null) {
+          if (!other.transferLimit_.isEmpty()) {
+            if (transferLimit_.isEmpty()) {
+              transferLimit_ = other.transferLimit_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTransferLimitIsMutable();
+              transferLimit_.addAll(other.transferLimit_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.transferLimit_.isEmpty()) {
+            if (transferLimitBuilder_.isEmpty()) {
+              transferLimitBuilder_.dispose();
+              transferLimitBuilder_ = null;
+              transferLimit_ = other.transferLimit_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              transferLimitBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTransferLimitFieldBuilder() : null;
+            } else {
+              transferLimitBuilder_.addAllMessages(other.transferLimit_);
+            }
+          }
+        }
+        if (!other.allowList_.isEmpty()) {
+          if (allowList_.isEmpty()) {
+            allowList_ = other.allowList_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureAllowListIsMutable();
+            allowList_.addAll(other.allowList_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (transferLimitBuilder_ == null) {
+                  ensureTransferLimitIsMutable();
+                  transferLimit_.add(m);
+                } else {
+                  transferLimitBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAllowListIsMutable();
+                allowList_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> transferLimit_ =
+        java.util.Collections.emptyList();
+      private void ensureTransferLimitIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          transferLimit_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(transferLimit_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> transferLimitBuilder_;
+
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTransferLimitList() {
+        if (transferLimitBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(transferLimit_);
+        } else {
+          return transferLimitBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getTransferLimitCount() {
+        if (transferLimitBuilder_ == null) {
+          return transferLimit_.size();
+        } else {
+          return transferLimitBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTransferLimit(int index) {
+        if (transferLimitBuilder_ == null) {
+          return transferLimit_.get(index);
+        } else {
+          return transferLimitBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTransferLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (transferLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransferLimitIsMutable();
+          transferLimit_.set(index, value);
+          onChanged();
+        } else {
+          transferLimitBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTransferLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (transferLimitBuilder_ == null) {
+          ensureTransferLimitIsMutable();
+          transferLimit_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          transferLimitBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTransferLimit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (transferLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransferLimitIsMutable();
+          transferLimit_.add(value);
+          onChanged();
+        } else {
+          transferLimitBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTransferLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (transferLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransferLimitIsMutable();
+          transferLimit_.add(index, value);
+          onChanged();
+        } else {
+          transferLimitBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTransferLimit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (transferLimitBuilder_ == null) {
+          ensureTransferLimitIsMutable();
+          transferLimit_.add(builderForValue.build());
+          onChanged();
+        } else {
+          transferLimitBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTransferLimit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (transferLimitBuilder_ == null) {
+          ensureTransferLimitIsMutable();
+          transferLimit_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          transferLimitBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllTransferLimit(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (transferLimitBuilder_ == null) {
+          ensureTransferLimitIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, transferLimit_);
+          onChanged();
+        } else {
+          transferLimitBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearTransferLimit() {
+        if (transferLimitBuilder_ == null) {
+          transferLimit_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          transferLimitBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeTransferLimit(int index) {
+        if (transferLimitBuilder_ == null) {
+          ensureTransferLimitIsMutable();
+          transferLimit_.remove(index);
+          onChanged();
+        } else {
+          transferLimitBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTransferLimitBuilder(
+          int index) {
+        return getTransferLimitFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTransferLimitOrBuilder(
+          int index) {
+        if (transferLimitBuilder_ == null) {
+          return transferLimit_.get(index);  } else {
+          return transferLimitBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTransferLimitOrBuilderList() {
+        if (transferLimitBuilder_ != null) {
+          return transferLimitBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(transferLimit_);
+        }
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTransferLimitBuilder() {
+        return getTransferLimitFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTransferLimitBuilder(
+          int index) {
+        return getTransferLimitFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * transfer_limit is the total amount the grantee can transfer
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin transfer_limit = 1 [json_name = "transferLimit", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTransferLimitBuilderList() {
+        return getTransferLimitFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTransferLimitFieldBuilder() {
+        if (transferLimitBuilder_ == null) {
+          transferLimitBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  transferLimit_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          transferLimit_ = null;
+        }
+        return transferLimitBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList allowList_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAllowListIsMutable() {
+        if (!allowList_.isModifiable()) {
+          allowList_ = new com.google.protobuf.LazyStringArrayList(allowList_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @return A list containing the allowList.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowListList() {
+        allowList_.makeImmutable();
+        return allowList_;
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @return The count of allowList.
+       */
+      public int getAllowListCount() {
+        return allowList_.size();
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @param index The index of the element to return.
+       * @return The allowList at the given index.
+       */
+      public java.lang.String getAllowList(int index) {
+        return allowList_.get(index);
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowList at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllowListBytes(int index) {
+        return allowList_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @param index The index to set the value at.
+       * @param value The allowList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowList(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowListIsMutable();
+        allowList_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @param value The allowList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowList(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowListIsMutable();
+        allowList_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @param values The allowList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowList(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowList_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowList() {
+        allowList_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allow_list specifies an optional list of addresses to whom the grantee can send restricted coins on behalf of the
+       * granter. If omitted, any recipient is allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_list = 2 [json_name = "allowList"];</code>
+       * @param value The bytes of the allowList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAllowListIsMutable();
+        allowList_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.marker.v1.MarkerTransferAuthorization)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.marker.v1.MarkerTransferAuthorization)
+    private static final com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization();
+    }
+
+    public static com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MarkerTransferAuthorization>
+        PARSER = new com.google.protobuf.AbstractParser<MarkerTransferAuthorization>() {
+      @java.lang.Override
+      public MarkerTransferAuthorization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MarkerTransferAuthorization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MarkerTransferAuthorization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.marker.v1.AuthzProto.MarkerTransferAuthorization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_marker_v1_MarkerTransferAuthorization_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_marker_v1_MarkerTransferAuthorization_fieldAccessorTable;
 
@@ -37,7 +1240,7 @@ public final class AuthzProto {
       "/cosmos/cosmos-sdk/types.CoinsR\rtransfer" +
       "Limit\022\035\n\nallow_list\030\002 \003(\tR\tallowList:\021\312\264" +
       "-\rAuthorizationB\314\001\n\030com.provenance.marke" +
-      "r.v1B\nAuthzProtoP\001Z2github.com/provenanc" +
+      "r.v1B\nAuthzProtoP\000Z2github.com/provenanc" +
       "e-io/provenance/x/marker/types\242\002\003PMX\252\002\024P" +
       "rovenance.Marker.V1\312\002\024Provenance\\Marker\\" +
       "V1\342\002 Provenance\\Marker\\V1\\GPBMetadata\352\002\026" +

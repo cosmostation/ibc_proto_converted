@@ -14,34 +14,3444 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryTokenswapRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.tokenswap.QueryTokenswapRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * tx_hash defines the tx hash to query for
+     * </pre>
+     *
+     * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The txHash.
+     */
+    java.lang.String getTxHash();
+    /**
+     * <pre>
+     * tx_hash defines the tx hash to query for
+     * </pre>
+     *
+     * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The bytes for txHash.
+     */
+    com.google.protobuf.ByteString
+        getTxHashBytes();
+  }
+  /**
+   * <pre>
+   * QueryTokenswapRequest is request type for the Query/Tokenswap RPC method
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.tokenswap.QueryTokenswapRequest}
+   */
+  public static final class QueryTokenswapRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.tokenswap.QueryTokenswapRequest)
+      QueryTokenswapRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenswapRequest.newBuilder() to construct.
+    private QueryTokenswapRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenswapRequest() {
+      txHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenswapRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest.Builder.class);
+    }
+
+    public static final int TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object txHash_ = "";
+    /**
+     * <pre>
+     * tx_hash defines the tx hash to query for
+     * </pre>
+     *
+     * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The txHash.
+     */
+    @java.lang.Override
+    public java.lang.String getTxHash() {
+      java.lang.Object ref = txHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        txHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * tx_hash defines the tx hash to query for
+     * </pre>
+     *
+     * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The bytes for txHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTxHashBytes() {
+      java.lang.Object ref = txHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        txHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, txHash_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, txHash_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest other = (com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest) obj;
+
+      if (!getTxHash()
+          .equals(other.getTxHash())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getTxHash().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTokenswapRequest is request type for the Query/Tokenswap RPC method
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.tokenswap.QueryTokenswapRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.tokenswap.QueryTokenswapRequest)
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        txHash_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest getDefaultInstanceForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest build() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest buildPartial() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest result = new com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.txHash_ = txHash_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest) {
+          return mergeFrom((com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest other) {
+        if (other == com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest.getDefaultInstance()) return this;
+        if (!other.getTxHash().isEmpty()) {
+          txHash_ = other.txHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                txHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object txHash_ = "";
+      /**
+       * <pre>
+       * tx_hash defines the tx hash to query for
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @return The txHash.
+       */
+      public java.lang.String getTxHash() {
+        java.lang.Object ref = txHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          txHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tx_hash defines the tx hash to query for
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @return The bytes for txHash.
+       */
+      public com.google.protobuf.ByteString
+          getTxHashBytes() {
+        java.lang.Object ref = txHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          txHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tx_hash defines the tx hash to query for
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @param value The txHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        txHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_hash defines the tx hash to query for
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxHash() {
+        txHash_ = getDefaultInstance().getTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_hash defines the tx hash to query for
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @param value The bytes for txHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        txHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.tokenswap.QueryTokenswapRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.tokenswap.QueryTokenswapRequest)
+    private static final com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest();
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenswapRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenswapRequest>() {
+      @java.lang.Override
+      public QueryTokenswapRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenswapRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenswapRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTokenswapResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.tokenswap.QueryTokenswapResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * tokenswap defines the tokenswap info
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+     * @return Whether the tokenswap field is set.
+     */
+    boolean hasTokenswap();
+    /**
+     * <pre>
+     * tokenswap defines the tokenswap info
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+     * @return The tokenswap.
+     */
+    com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap getTokenswap();
+    /**
+     * <pre>
+     * tokenswap defines the tokenswap info
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+     */
+    com.rizonworld.rizon.tokenswap.TokenswapProto.TokenswapOrBuilder getTokenswapOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTokenswapResponse is response type for the Query/Tokenswap RPC method
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.tokenswap.QueryTokenswapResponse}
+   */
+  public static final class QueryTokenswapResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.tokenswap.QueryTokenswapResponse)
+      QueryTokenswapResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenswapResponse.newBuilder() to construct.
+    private QueryTokenswapResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenswapResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenswapResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.Builder.class);
+    }
+
+    public static final int TOKENSWAP_FIELD_NUMBER = 1;
+    private com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap tokenswap_;
+    /**
+     * <pre>
+     * tokenswap defines the tokenswap info
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+     * @return Whether the tokenswap field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenswap() {
+      return tokenswap_ != null;
+    }
+    /**
+     * <pre>
+     * tokenswap defines the tokenswap info
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+     * @return The tokenswap.
+     */
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap getTokenswap() {
+      return tokenswap_ == null ? com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.getDefaultInstance() : tokenswap_;
+    }
+    /**
+     * <pre>
+     * tokenswap defines the tokenswap info
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+     */
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.TokenswapProto.TokenswapOrBuilder getTokenswapOrBuilder() {
+      return tokenswap_ == null ? com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.getDefaultInstance() : tokenswap_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tokenswap_ != null) {
+        output.writeMessage(1, getTokenswap());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tokenswap_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTokenswap());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse other = (com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse) obj;
+
+      if (hasTokenswap() != other.hasTokenswap()) return false;
+      if (hasTokenswap()) {
+        if (!getTokenswap()
+            .equals(other.getTokenswap())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTokenswap()) {
+        hash = (37 * hash) + TOKENSWAP_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenswap().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTokenswapResponse is response type for the Query/Tokenswap RPC method
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.tokenswap.QueryTokenswapResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.tokenswap.QueryTokenswapResponse)
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tokenswap_ = null;
+        if (tokenswapBuilder_ != null) {
+          tokenswapBuilder_.dispose();
+          tokenswapBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryTokenswapResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse getDefaultInstanceForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse build() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse buildPartial() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse result = new com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tokenswap_ = tokenswapBuilder_ == null
+              ? tokenswap_
+              : tokenswapBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse) {
+          return mergeFrom((com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse other) {
+        if (other == com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.getDefaultInstance()) return this;
+        if (other.hasTokenswap()) {
+          mergeTokenswap(other.getTokenswap());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTokenswapFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap tokenswap_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap, com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.Builder, com.rizonworld.rizon.tokenswap.TokenswapProto.TokenswapOrBuilder> tokenswapBuilder_;
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       * @return Whether the tokenswap field is set.
+       */
+      public boolean hasTokenswap() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       * @return The tokenswap.
+       */
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap getTokenswap() {
+        if (tokenswapBuilder_ == null) {
+          return tokenswap_ == null ? com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.getDefaultInstance() : tokenswap_;
+        } else {
+          return tokenswapBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       */
+      public Builder setTokenswap(com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap value) {
+        if (tokenswapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tokenswap_ = value;
+        } else {
+          tokenswapBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       */
+      public Builder setTokenswap(
+          com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.Builder builderForValue) {
+        if (tokenswapBuilder_ == null) {
+          tokenswap_ = builderForValue.build();
+        } else {
+          tokenswapBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       */
+      public Builder mergeTokenswap(com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap value) {
+        if (tokenswapBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tokenswap_ != null &&
+            tokenswap_ != com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.getDefaultInstance()) {
+            getTokenswapBuilder().mergeFrom(value);
+          } else {
+            tokenswap_ = value;
+          }
+        } else {
+          tokenswapBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       */
+      public Builder clearTokenswap() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tokenswap_ = null;
+        if (tokenswapBuilder_ != null) {
+          tokenswapBuilder_.dispose();
+          tokenswapBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       */
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.Builder getTokenswapBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTokenswapFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       */
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.TokenswapOrBuilder getTokenswapOrBuilder() {
+        if (tokenswapBuilder_ != null) {
+          return tokenswapBuilder_.getMessageOrBuilder();
+        } else {
+          return tokenswap_ == null ?
+              com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.getDefaultInstance() : tokenswap_;
+        }
+      }
+      /**
+       * <pre>
+       * tokenswap defines the tokenswap info
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Tokenswap tokenswap = 1 [json_name = "tokenswap"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap, com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.Builder, com.rizonworld.rizon.tokenswap.TokenswapProto.TokenswapOrBuilder> 
+          getTokenswapFieldBuilder() {
+        if (tokenswapBuilder_ == null) {
+          tokenswapBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap, com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.Builder, com.rizonworld.rizon.tokenswap.TokenswapProto.TokenswapOrBuilder>(
+                  getTokenswap(),
+                  getParentForChildren(),
+                  isClean());
+          tokenswap_ = null;
+        }
+        return tokenswapBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.tokenswap.QueryTokenswapResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.tokenswap.QueryTokenswapResponse)
+    private static final com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse();
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenswapResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenswapResponse>() {
+      @java.lang.Override
+      public QueryTokenswapResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenswapResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenswapResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySwappedAmountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.tokenswap.QuerySwappedAmountRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QuerySwappedAmountRequest is request type for the Query/SwappedAmount RPC method
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.tokenswap.QuerySwappedAmountRequest}
+   */
+  public static final class QuerySwappedAmountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.tokenswap.QuerySwappedAmountRequest)
+      QuerySwappedAmountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySwappedAmountRequest.newBuilder() to construct.
+    private QuerySwappedAmountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySwappedAmountRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySwappedAmountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest.class, com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest other = (com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySwappedAmountRequest is request type for the Query/SwappedAmount RPC method
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.tokenswap.QuerySwappedAmountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.tokenswap.QuerySwappedAmountRequest)
+        com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest.class, com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest getDefaultInstanceForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest build() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest buildPartial() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest result = new com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest) {
+          return mergeFrom((com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest other) {
+        if (other == com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.tokenswap.QuerySwappedAmountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.tokenswap.QuerySwappedAmountRequest)
+    private static final com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest();
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySwappedAmountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySwappedAmountRequest>() {
+      @java.lang.Override
+      public QuerySwappedAmountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySwappedAmountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySwappedAmountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySwappedAmountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.tokenswap.QuerySwappedAmountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * amount defines current swapped amount of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the swappedAmount field is set.
+     */
+    boolean hasSwappedAmount();
+    /**
+     * <pre>
+     * amount defines current swapped amount of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+     * @return The swappedAmount.
+     */
+    com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount getSwappedAmount();
+    /**
+     * <pre>
+     * amount defines current swapped amount of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+     */
+    com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmountOrBuilder getSwappedAmountOrBuilder();
+  }
+  /**
+   * <pre>
+   * QuerySwappedAmountResponse is response type for the Query/SwappedAmount RPC method
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.tokenswap.QuerySwappedAmountResponse}
+   */
+  public static final class QuerySwappedAmountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.tokenswap.QuerySwappedAmountResponse)
+      QuerySwappedAmountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySwappedAmountResponse.newBuilder() to construct.
+    private QuerySwappedAmountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySwappedAmountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySwappedAmountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.Builder.class);
+    }
+
+    public static final int SWAPPED_AMOUNT_FIELD_NUMBER = 1;
+    private com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount swappedAmount_;
+    /**
+     * <pre>
+     * amount defines current swapped amount of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the swappedAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasSwappedAmount() {
+      return swappedAmount_ != null;
+    }
+    /**
+     * <pre>
+     * amount defines current swapped amount of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+     * @return The swappedAmount.
+     */
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount getSwappedAmount() {
+      return swappedAmount_ == null ? com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.getDefaultInstance() : swappedAmount_;
+    }
+    /**
+     * <pre>
+     * amount defines current swapped amount of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmountOrBuilder getSwappedAmountOrBuilder() {
+      return swappedAmount_ == null ? com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.getDefaultInstance() : swappedAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (swappedAmount_ != null) {
+        output.writeMessage(1, getSwappedAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (swappedAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSwappedAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse other = (com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse) obj;
+
+      if (hasSwappedAmount() != other.hasSwappedAmount()) return false;
+      if (hasSwappedAmount()) {
+        if (!getSwappedAmount()
+            .equals(other.getSwappedAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSwappedAmount()) {
+        hash = (37 * hash) + SWAPPED_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getSwappedAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySwappedAmountResponse is response type for the Query/SwappedAmount RPC method
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.tokenswap.QuerySwappedAmountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.tokenswap.QuerySwappedAmountResponse)
+        com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        swappedAmount_ = null;
+        if (swappedAmountBuilder_ != null) {
+          swappedAmountBuilder_.dispose();
+          swappedAmountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse getDefaultInstanceForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse build() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse buildPartial() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse result = new com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.swappedAmount_ = swappedAmountBuilder_ == null
+              ? swappedAmount_
+              : swappedAmountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse) {
+          return mergeFrom((com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse other) {
+        if (other == com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.getDefaultInstance()) return this;
+        if (other.hasSwappedAmount()) {
+          mergeSwappedAmount(other.getSwappedAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSwappedAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount swappedAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount, com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.Builder, com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmountOrBuilder> swappedAmountBuilder_;
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the swappedAmount field is set.
+       */
+      public boolean hasSwappedAmount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       * @return The swappedAmount.
+       */
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount getSwappedAmount() {
+        if (swappedAmountBuilder_ == null) {
+          return swappedAmount_ == null ? com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.getDefaultInstance() : swappedAmount_;
+        } else {
+          return swappedAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSwappedAmount(com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount value) {
+        if (swappedAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          swappedAmount_ = value;
+        } else {
+          swappedAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSwappedAmount(
+          com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.Builder builderForValue) {
+        if (swappedAmountBuilder_ == null) {
+          swappedAmount_ = builderForValue.build();
+        } else {
+          swappedAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSwappedAmount(com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount value) {
+        if (swappedAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            swappedAmount_ != null &&
+            swappedAmount_ != com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.getDefaultInstance()) {
+            getSwappedAmountBuilder().mergeFrom(value);
+          } else {
+            swappedAmount_ = value;
+          }
+        } else {
+          swappedAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSwappedAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        swappedAmount_ = null;
+        if (swappedAmountBuilder_ != null) {
+          swappedAmountBuilder_.dispose();
+          swappedAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.Builder getSwappedAmountBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSwappedAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmountOrBuilder getSwappedAmountOrBuilder() {
+        if (swappedAmountBuilder_ != null) {
+          return swappedAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return swappedAmount_ == null ?
+              com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.getDefaultInstance() : swappedAmount_;
+        }
+      }
+      /**
+       * <pre>
+       * amount defines current swapped amount of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.SwappedAmount swapped_amount = 1 [json_name = "swappedAmount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount, com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.Builder, com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmountOrBuilder> 
+          getSwappedAmountFieldBuilder() {
+        if (swappedAmountBuilder_ == null) {
+          swappedAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount, com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.Builder, com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmountOrBuilder>(
+                  getSwappedAmount(),
+                  getParentForChildren(),
+                  isClean());
+          swappedAmount_ = null;
+        }
+        return swappedAmountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.tokenswap.QuerySwappedAmountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.tokenswap.QuerySwappedAmountResponse)
+    private static final com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse();
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySwappedAmountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySwappedAmountResponse>() {
+      @java.lang.Override
+      public QuerySwappedAmountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySwappedAmountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySwappedAmountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.tokenswap.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Params RPC method
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.tokenswap.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.tokenswap.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest other = (com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Params RPC method
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.tokenswap.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.tokenswap.QueryParamsRequest)
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest build() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest buildPartial() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest result = new com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest other) {
+        if (other == com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.tokenswap.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.tokenswap.QueryParamsRequest)
+    private static final com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.tokenswap.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines the parameters of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the parameters of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.rizonworld.rizon.tokenswap.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the parameters of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.rizonworld.rizon.tokenswap.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Params RPC method
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.tokenswap.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.tokenswap.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.rizonworld.rizon.tokenswap.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines the parameters of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.ParamsProto.Params getParams() {
+      return params_ == null ? com.rizonworld.rizon.tokenswap.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of tokenswap
+     * </pre>
+     *
+     * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.rizonworld.rizon.tokenswap.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse other = (com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Params RPC method
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.tokenswap.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.tokenswap.QueryParamsResponse)
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.internal_static_rizonworld_rizon_tokenswap_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse build() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse buildPartial() {
+        com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse result = new com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse other) {
+        if (other == com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.rizonworld.rizon.tokenswap.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.rizonworld.rizon.tokenswap.ParamsProto.Params, com.rizonworld.rizon.tokenswap.ParamsProto.Params.Builder, com.rizonworld.rizon.tokenswap.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.rizonworld.rizon.tokenswap.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.rizonworld.rizon.tokenswap.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.rizonworld.rizon.tokenswap.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.rizonworld.rizon.tokenswap.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.rizonworld.rizon.tokenswap.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.rizonworld.rizon.tokenswap.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.rizonworld.rizon.tokenswap.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.rizonworld.rizon.tokenswap.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.rizonworld.rizon.tokenswap.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of tokenswap
+       * </pre>
+       *
+       * <code>.rizonworld.rizon.tokenswap.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.rizonworld.rizon.tokenswap.ParamsProto.Params, com.rizonworld.rizon.tokenswap.ParamsProto.Params.Builder, com.rizonworld.rizon.tokenswap.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.rizonworld.rizon.tokenswap.ParamsProto.Params, com.rizonworld.rizon.tokenswap.ParamsProto.Params.Builder, com.rizonworld.rizon.tokenswap.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.tokenswap.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.tokenswap.QueryParamsResponse)
+    private static final com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_tokenswap_QueryTokenswapRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_tokenswap_QueryTokenswapRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_tokenswap_QueryTokenswapResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_tokenswap_QueryTokenswapResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_tokenswap_QuerySwappedAmountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_tokenswap_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_tokenswap_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_tokenswap_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_tokenswap_QueryParamsResponse_fieldAccessorTable;
 
@@ -79,13 +3489,13 @@ public final class QueryProto {
       "ams\022..rizonworld.rizon.tokenswap.QueryPa" +
       "ramsRequest\032/.rizonworld.rizon.tokenswap" +
       ".QueryParamsResponse\"\037\202\323\344\223\002\031\022\027/rizon/tok" +
-      "enswap/paramsB\346\001\n\036com.rizonworld.rizon.t" +
-      "okenswapB\nQueryProtoP\001Z.github.com/rizon" +
-      "-world/rizon/x/tokenswap/types\242\002\003RRT\252\002\032R" +
-      "izonworld.Rizon.Tokenswap\312\002\032Rizonworld\\R" +
-      "izon\\Tokenswap\342\002&Rizonworld\\Rizon\\Tokens" +
-      "wap\\GPBMetadata\352\002\034Rizonworld::Rizon::Tok" +
-      "enswapb\006proto3"
+      "enswap/paramsB\344\001\n\036com.rizonworld.rizon.t" +
+      "okenswapB\nQueryProtoZ.github.com/rizon-w" +
+      "orld/rizon/x/tokenswap/types\242\002\003RRT\252\002\032Riz" +
+      "onworld.Rizon.Tokenswap\312\002\032Rizonworld\\Riz" +
+      "on\\Tokenswap\342\002&Rizonworld\\Rizon\\Tokenswa" +
+      "p\\GPBMetadata\352\002\034Rizonworld::Rizon::Token" +
+      "swapb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

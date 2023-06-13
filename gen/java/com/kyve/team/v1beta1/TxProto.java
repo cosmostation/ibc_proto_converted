@@ -14,54 +14,6448 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgClaimUnlockedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgClaimUnlocked)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * id is the unique identifier of the team member
+     * </pre>
+     *
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * amount of $KYVE that will be paid to the recipient and marked as deducted from the unlocked amount.
+     * </pre>
+     *
+     * <code>uint64 amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+  }
+  /**
+   * <pre>
+   * MsgClaimUnlockedTokens ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgClaimUnlocked}
+   */
+  public static final class MsgClaimUnlocked extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgClaimUnlocked)
+      MsgClaimUnlockedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimUnlocked.newBuilder() to construct.
+    private MsgClaimUnlocked(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimUnlocked() {
+      authority_ = "";
+      recipient_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimUnlocked();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlocked_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlocked_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked.class, com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id is the unique identifier of the team member
+     * </pre>
+     *
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount of $KYVE that will be paid to the recipient and marked as deducted from the unlocked amount.
+     * </pre>
+     *
+     * <code>uint64 amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, recipient_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, recipient_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked other = (com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimUnlockedTokens ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgClaimUnlocked}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgClaimUnlocked)
+        com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlocked_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlocked_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked.class, com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        id_ = 0L;
+        amount_ = 0L;
+        recipient_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlocked_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked build() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked result = new com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recipient_ = recipient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the unlocked amount.
+       * </pre>
+       *
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the unlocked amount.
+       * </pre>
+       *
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the unlocked amount.
+       * </pre>
+       *
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgClaimUnlocked)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgClaimUnlocked)
+    private static final com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimUnlocked>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimUnlocked>() {
+      @java.lang.Override
+      public MsgClaimUnlocked parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimUnlocked> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimUnlocked> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgClaimUnlocked getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimUnlockedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgClaimUnlockedResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgClaimUnlockedResponse defines the Msg/ClaimUnlockedTokens response type.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgClaimUnlockedResponse}
+   */
+  public static final class MsgClaimUnlockedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgClaimUnlockedResponse)
+      MsgClaimUnlockedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimUnlockedResponse.newBuilder() to construct.
+    private MsgClaimUnlockedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimUnlockedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimUnlockedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlockedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlockedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse.class, com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse other = (com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimUnlockedResponse defines the Msg/ClaimUnlockedTokens response type.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgClaimUnlockedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgClaimUnlockedResponse)
+        com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlockedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlockedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse.class, com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimUnlockedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse build() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse result = new com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgClaimUnlockedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgClaimUnlockedResponse)
+    private static final com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimUnlockedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimUnlockedResponse>() {
+      @java.lang.Override
+      public MsgClaimUnlockedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimUnlockedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimUnlockedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgClaimUnlockedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimAuthorityRewardsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgClaimAuthorityRewards)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * amount of $KYVE that will be paid to the recipient and marked as deducted from the authority inflation rewards
+     * </pre>
+     *
+     * <code>uint64 amount = 2 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+  }
+  /**
+   * <pre>
+   * MsgClaimAuthorityRewards ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgClaimAuthorityRewards}
+   */
+  public static final class MsgClaimAuthorityRewards extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgClaimAuthorityRewards)
+      MsgClaimAuthorityRewardsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimAuthorityRewards.newBuilder() to construct.
+    private MsgClaimAuthorityRewards(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimAuthorityRewards() {
+      authority_ = "";
+      recipient_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimAuthorityRewards();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewards_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewards_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards.class, com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount of $KYVE that will be paid to the recipient and marked as deducted from the authority inflation rewards
+     * </pre>
+     *
+     * <code>uint64 amount = 2 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(2, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, recipient_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, recipient_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards other = (com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimAuthorityRewards ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgClaimAuthorityRewards}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgClaimAuthorityRewards)
+        com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewards_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewards_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards.class, com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        amount_ = 0L;
+        recipient_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewards_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards build() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards result = new com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.recipient_ = recipient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the authority inflation rewards
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the authority inflation rewards
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the authority inflation rewards
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgClaimAuthorityRewards)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgClaimAuthorityRewards)
+    private static final com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimAuthorityRewards>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimAuthorityRewards>() {
+      @java.lang.Override
+      public MsgClaimAuthorityRewards parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimAuthorityRewards> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimAuthorityRewards> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewards getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimAuthorityRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgClaimAuthorityRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgClaimAuthorityRewardsResponse defines the Msg/ClaimAuthorityRewards response type.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgClaimAuthorityRewardsResponse}
+   */
+  public static final class MsgClaimAuthorityRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgClaimAuthorityRewardsResponse)
+      MsgClaimAuthorityRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimAuthorityRewardsResponse.newBuilder() to construct.
+    private MsgClaimAuthorityRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimAuthorityRewardsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimAuthorityRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse.class, com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse other = (com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimAuthorityRewardsResponse defines the Msg/ClaimAuthorityRewards response type.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgClaimAuthorityRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgClaimAuthorityRewardsResponse)
+        com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse.class, com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse build() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse result = new com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgClaimAuthorityRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgClaimAuthorityRewardsResponse)
+    private static final com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimAuthorityRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimAuthorityRewardsResponse>() {
+      @java.lang.Override
+      public MsgClaimAuthorityRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimAuthorityRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimAuthorityRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgClaimAuthorityRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimAccountRewardsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgClaimAccountRewards)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * id is the unique identifier of the team member
+     * </pre>
+     *
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * amount of $KYVE that will be paid to the recipient and marked as deducted from the inflation rewards
+     * </pre>
+     *
+     * <code>uint64 amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+  }
+  /**
+   * <pre>
+   * MsgClaimAccountRewards ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgClaimAccountRewards}
+   */
+  public static final class MsgClaimAccountRewards extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgClaimAccountRewards)
+      MsgClaimAccountRewardsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimAccountRewards.newBuilder() to construct.
+    private MsgClaimAccountRewards(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimAccountRewards() {
+      authority_ = "";
+      recipient_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimAccountRewards();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewards_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewards_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards.class, com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to payout unlocked tokens
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id is the unique identifier of the team member
+     * </pre>
+     *
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount of $KYVE that will be paid to the recipient and marked as deducted from the inflation rewards
+     * </pre>
+     *
+     * <code>uint64 amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * recipient is the recipient address chosen by the team member.
+     * </pre>
+     *
+     * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, recipient_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, recipient_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards other = (com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimAccountRewards ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgClaimAccountRewards}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgClaimAccountRewards)
+        com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewards_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewards_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards.class, com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        id_ = 0L;
+        amount_ = 0L;
+        recipient_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewards_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards build() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards result = new com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recipient_ = recipient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to payout unlocked tokens
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the inflation rewards
+       * </pre>
+       *
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the inflation rewards
+       * </pre>
+       *
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount of $KYVE that will be paid to the recipient and marked as deducted from the inflation rewards
+       * </pre>
+       *
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient is the recipient address chosen by the team member.
+       * </pre>
+       *
+       * <code>string recipient = 4 [json_name = "recipient", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgClaimAccountRewards)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgClaimAccountRewards)
+    private static final com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimAccountRewards>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimAccountRewards>() {
+      @java.lang.Override
+      public MsgClaimAccountRewards parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimAccountRewards> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimAccountRewards> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewards getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimAccountRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgClaimAccountRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgClaimAccountRewardsResponse defines the Msg/ClaimAccountRewards response type.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgClaimAccountRewardsResponse}
+   */
+  public static final class MsgClaimAccountRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgClaimAccountRewardsResponse)
+      MsgClaimAccountRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimAccountRewardsResponse.newBuilder() to construct.
+    private MsgClaimAccountRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimAccountRewardsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimAccountRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse.class, com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse other = (com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimAccountRewardsResponse defines the Msg/ClaimAccountRewards response type.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgClaimAccountRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgClaimAccountRewardsResponse)
+        com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse.class, com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClaimAccountRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse build() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse result = new com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgClaimAccountRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgClaimAccountRewardsResponse)
+    private static final com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimAccountRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimAccountRewardsResponse>() {
+      @java.lang.Override
+      public MsgClaimAccountRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimAccountRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimAccountRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgClaimAccountRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClawbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgClawback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to modify team accounts
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to modify team accounts
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * id is the unique identifier of the team member
+     * </pre>
+     *
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * clawback is a unix timestamp (in seconds) of when the clawback should be applied
+     * </pre>
+     *
+     * <code>uint64 clawback = 3 [json_name = "clawback"];</code>
+     * @return The clawback.
+     */
+    long getClawback();
+  }
+  /**
+   * <pre>
+   * MsgClawback ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgClawback}
+   */
+  public static final class MsgClawback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgClawback)
+      MsgClawbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClawback.newBuilder() to construct.
+    private MsgClawback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClawback() {
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClawback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgClawback.class, com.kyve.team.v1beta1.TxProto.MsgClawback.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to modify team accounts
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authority is the foundation which is allowed to modify team accounts
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id is the unique identifier of the team member
+     * </pre>
+     *
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int CLAWBACK_FIELD_NUMBER = 3;
+    private long clawback_ = 0L;
+    /**
+     * <pre>
+     * clawback is a unix timestamp (in seconds) of when the clawback should be applied
+     * </pre>
+     *
+     * <code>uint64 clawback = 3 [json_name = "clawback"];</code>
+     * @return The clawback.
+     */
+    @java.lang.Override
+    public long getClawback() {
+      return clawback_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      if (clawback_ != 0L) {
+        output.writeUInt64(3, clawback_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      if (clawback_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, clawback_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgClawback)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgClawback other = (com.kyve.team.v1beta1.TxProto.MsgClawback) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (getClawback()
+          != other.getClawback()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + CLAWBACK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClawback());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgClawback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClawback ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgClawback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgClawback)
+        com.kyve.team.v1beta1.TxProto.MsgClawbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgClawback.class, com.kyve.team.v1beta1.TxProto.MsgClawback.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgClawback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        id_ = 0L;
+        clawback_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClawback getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgClawback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClawback build() {
+        com.kyve.team.v1beta1.TxProto.MsgClawback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClawback buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgClawback result = new com.kyve.team.v1beta1.TxProto.MsgClawback(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.TxProto.MsgClawback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.clawback_ = clawback_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgClawback) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgClawback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgClawback other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgClawback.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getClawback() != 0L) {
+          setClawback(other.getClawback());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                clawback_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to modify team accounts
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to modify team accounts
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to modify team accounts
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to modify team accounts
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the foundation which is allowed to modify team accounts
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id is the unique identifier of the team member
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long clawback_ ;
+      /**
+       * <pre>
+       * clawback is a unix timestamp (in seconds) of when the clawback should be applied
+       * </pre>
+       *
+       * <code>uint64 clawback = 3 [json_name = "clawback"];</code>
+       * @return The clawback.
+       */
+      @java.lang.Override
+      public long getClawback() {
+        return clawback_;
+      }
+      /**
+       * <pre>
+       * clawback is a unix timestamp (in seconds) of when the clawback should be applied
+       * </pre>
+       *
+       * <code>uint64 clawback = 3 [json_name = "clawback"];</code>
+       * @param value The clawback to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClawback(long value) {
+
+        clawback_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * clawback is a unix timestamp (in seconds) of when the clawback should be applied
+       * </pre>
+       *
+       * <code>uint64 clawback = 3 [json_name = "clawback"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClawback() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        clawback_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgClawback)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgClawback)
+    private static final com.kyve.team.v1beta1.TxProto.MsgClawback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgClawback();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClawback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClawback>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClawback>() {
+      @java.lang.Override
+      public MsgClawback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClawback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClawback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgClawback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClawbackResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgClawbackResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgClawbackResponse defines the Msg/Clawback response type.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgClawbackResponse}
+   */
+  public static final class MsgClawbackResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgClawbackResponse)
+      MsgClawbackResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClawbackResponse.newBuilder() to construct.
+    private MsgClawbackResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClawbackResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClawbackResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawbackResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawbackResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgClawbackResponse.class, com.kyve.team.v1beta1.TxProto.MsgClawbackResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgClawbackResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgClawbackResponse other = (com.kyve.team.v1beta1.TxProto.MsgClawbackResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgClawbackResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClawbackResponse defines the Msg/Clawback response type.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgClawbackResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgClawbackResponse)
+        com.kyve.team.v1beta1.TxProto.MsgClawbackResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawbackResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawbackResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgClawbackResponse.class, com.kyve.team.v1beta1.TxProto.MsgClawbackResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgClawbackResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgClawbackResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClawbackResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgClawbackResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClawbackResponse build() {
+        com.kyve.team.v1beta1.TxProto.MsgClawbackResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgClawbackResponse buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgClawbackResponse result = new com.kyve.team.v1beta1.TxProto.MsgClawbackResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgClawbackResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgClawbackResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgClawbackResponse other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgClawbackResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgClawbackResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgClawbackResponse)
+    private static final com.kyve.team.v1beta1.TxProto.MsgClawbackResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgClawbackResponse();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgClawbackResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClawbackResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClawbackResponse>() {
+      @java.lang.Override
+      public MsgClawbackResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClawbackResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClawbackResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgClawbackResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateTeamVestingAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgCreateTeamVestingAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * total_allocation is the number of tokens reserved for this team member.
+     * </pre>
+     *
+     * <code>uint64 total_allocation = 2 [json_name = "totalAllocation"];</code>
+     * @return The totalAllocation.
+     */
+    long getTotalAllocation();
+
+    /**
+     * <pre>
+     * commencement is the unix timestamp of the member's official start date.
+     * </pre>
+     *
+     * <code>uint64 commencement = 3 [json_name = "commencement"];</code>
+     * @return The commencement.
+     */
+    long getCommencement();
+  }
+  /**
+   * <pre>
+   * MsgCreateTeamVestingAccount ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgCreateTeamVestingAccount}
+   */
+  public static final class MsgCreateTeamVestingAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgCreateTeamVestingAccount)
+      MsgCreateTeamVestingAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateTeamVestingAccount.newBuilder() to construct.
+    private MsgCreateTeamVestingAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateTeamVestingAccount() {
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateTeamVestingAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount.class, com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authority ...
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_ALLOCATION_FIELD_NUMBER = 2;
+    private long totalAllocation_ = 0L;
+    /**
+     * <pre>
+     * total_allocation is the number of tokens reserved for this team member.
+     * </pre>
+     *
+     * <code>uint64 total_allocation = 2 [json_name = "totalAllocation"];</code>
+     * @return The totalAllocation.
+     */
+    @java.lang.Override
+    public long getTotalAllocation() {
+      return totalAllocation_;
+    }
+
+    public static final int COMMENCEMENT_FIELD_NUMBER = 3;
+    private long commencement_ = 0L;
+    /**
+     * <pre>
+     * commencement is the unix timestamp of the member's official start date.
+     * </pre>
+     *
+     * <code>uint64 commencement = 3 [json_name = "commencement"];</code>
+     * @return The commencement.
+     */
+    @java.lang.Override
+    public long getCommencement() {
+      return commencement_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (totalAllocation_ != 0L) {
+        output.writeUInt64(2, totalAllocation_);
+      }
+      if (commencement_ != 0L) {
+        output.writeUInt64(3, commencement_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (totalAllocation_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, totalAllocation_);
+      }
+      if (commencement_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, commencement_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount other = (com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (getTotalAllocation()
+          != other.getTotalAllocation()) return false;
+      if (getCommencement()
+          != other.getCommencement()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + TOTAL_ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalAllocation());
+      hash = (37 * hash) + COMMENCEMENT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCommencement());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateTeamVestingAccount ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgCreateTeamVestingAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgCreateTeamVestingAccount)
+        com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount.class, com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        totalAllocation_ = 0L;
+        commencement_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount build() {
+        com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount result = new com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalAllocation_ = totalAllocation_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.commencement_ = commencement_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getTotalAllocation() != 0L) {
+          setTotalAllocation(other.getTotalAllocation());
+        }
+        if (other.getCommencement() != 0L) {
+          setCommencement(other.getCommencement());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                totalAllocation_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                commencement_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority ...
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long totalAllocation_ ;
+      /**
+       * <pre>
+       * total_allocation is the number of tokens reserved for this team member.
+       * </pre>
+       *
+       * <code>uint64 total_allocation = 2 [json_name = "totalAllocation"];</code>
+       * @return The totalAllocation.
+       */
+      @java.lang.Override
+      public long getTotalAllocation() {
+        return totalAllocation_;
+      }
+      /**
+       * <pre>
+       * total_allocation is the number of tokens reserved for this team member.
+       * </pre>
+       *
+       * <code>uint64 total_allocation = 2 [json_name = "totalAllocation"];</code>
+       * @param value The totalAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalAllocation(long value) {
+
+        totalAllocation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_allocation is the number of tokens reserved for this team member.
+       * </pre>
+       *
+       * <code>uint64 total_allocation = 2 [json_name = "totalAllocation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalAllocation() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalAllocation_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long commencement_ ;
+      /**
+       * <pre>
+       * commencement is the unix timestamp of the member's official start date.
+       * </pre>
+       *
+       * <code>uint64 commencement = 3 [json_name = "commencement"];</code>
+       * @return The commencement.
+       */
+      @java.lang.Override
+      public long getCommencement() {
+        return commencement_;
+      }
+      /**
+       * <pre>
+       * commencement is the unix timestamp of the member's official start date.
+       * </pre>
+       *
+       * <code>uint64 commencement = 3 [json_name = "commencement"];</code>
+       * @param value The commencement to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommencement(long value) {
+
+        commencement_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commencement is the unix timestamp of the member's official start date.
+       * </pre>
+       *
+       * <code>uint64 commencement = 3 [json_name = "commencement"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommencement() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        commencement_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgCreateTeamVestingAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgCreateTeamVestingAccount)
+    private static final com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateTeamVestingAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateTeamVestingAccount>() {
+      @java.lang.Override
+      public MsgCreateTeamVestingAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateTeamVestingAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateTeamVestingAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateTeamVestingAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.MsgCreateTeamVestingAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateTeamVestingAccountResponse defines the Msg/CreateTeamVestingAccount response type.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.MsgCreateTeamVestingAccountResponse}
+   */
+  public static final class MsgCreateTeamVestingAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.MsgCreateTeamVestingAccountResponse)
+      MsgCreateTeamVestingAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateTeamVestingAccountResponse.newBuilder() to construct.
+    private MsgCreateTeamVestingAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateTeamVestingAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateTeamVestingAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse.class, com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse other = (com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateTeamVestingAccountResponse defines the Msg/CreateTeamVestingAccount response type.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.MsgCreateTeamVestingAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.MsgCreateTeamVestingAccountResponse)
+        com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse.class, com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.TxProto.internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse build() {
+        com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse buildPartial() {
+        com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse result = new com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse other) {
+        if (other == com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.MsgCreateTeamVestingAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.MsgCreateTeamVestingAccountResponse)
+    private static final com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse();
+    }
+
+    public static com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateTeamVestingAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateTeamVestingAccountResponse>() {
+      @java.lang.Override
+      public MsgCreateTeamVestingAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateTeamVestingAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateTeamVestingAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TxProto.MsgCreateTeamVestingAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgClaimUnlocked_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgClaimUnlocked_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgClaimUnlockedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgClaimUnlockedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewards_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewards_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgClaimAuthorityRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgClaimAccountRewards_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgClaimAccountRewards_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgClaimAccountRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgClaimAccountRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgClawback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgClawback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgClawbackResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgClawbackResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_MsgCreateTeamVestingAccountResponse_fieldAccessorTable;
 
@@ -112,12 +6506,12 @@ public final class TxProto {
       "v1beta1.MsgClaimAuthorityRewardsResponse" +
       "\022s\n\023ClaimAccountRewards\022).kyve.team.v1be" +
       "ta1.MsgClaimAccountRewards\0321.kyve.team.v" +
-      "1beta1.MsgClaimAccountRewardsResponseB\261\001" +
-      "\n\025com.kyve.team.v1beta1B\007TxProtoP\001Z)gith" +
-      "ub.com/KYVENetwork/chain/x/team/types\242\002\003" +
-      "KTX\252\002\021Kyve.Team.V1beta1\312\002\021Kyve\\Team\\V1be" +
-      "ta1\342\002\035Kyve\\Team\\V1beta1\\GPBMetadata\352\002\023Ky" +
-      "ve::Team::V1beta1b\006proto3"
+      "1beta1.MsgClaimAccountRewardsResponseB\257\001" +
+      "\n\025com.kyve.team.v1beta1B\007TxProtoZ)github" +
+      ".com/KYVENetwork/chain/x/team/types\242\002\003KT" +
+      "X\252\002\021Kyve.Team.V1beta1\312\002\021Kyve\\Team\\V1beta" +
+      "1\342\002\035Kyve\\Team\\V1beta1\\GPBMetadata\352\002\023Kyve" +
+      "::Team::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

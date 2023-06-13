@@ -69,12 +69,12 @@ public final class QueryProto {
       "}\n\006Params\022&.desmos.profiles.v3.QueryPara" +
       "msRequest\032\'.desmos.profiles.v3.QueryPara" +
       "msResponse\"\"\202\323\344\223\002\034\022\032/desmos/profiles/v3/" +
-      "paramsB\301\001\n\026com.desmos.profiles.v3B\nQuery" +
-      "ProtoP\001Z1github.com/desmos-labs/desmos/v" +
-      "5/x/profiles/types\242\002\003DPX\252\002\022Desmos.Profil" +
-      "es.V3\312\002\022Desmos\\Profiles\\V3\342\002\036Desmos\\Prof" +
-      "iles\\V3\\GPBMetadata\352\002\024Desmos::Profiles::" +
-      "V3b\006proto3"
+      "paramsB\277\001\n\026com.desmos.profiles.v3B\nQuery" +
+      "ProtoZ1github.com/desmos-labs/desmos/v5/" +
+      "x/profiles/types\242\002\003DPX\252\002\022Desmos.Profiles" +
+      ".V3\312\002\022Desmos\\Profiles\\V3\342\002\036Desmos\\Profil" +
+      "es\\V3\\GPBMetadata\352\002\024Desmos::Profiles::V3" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

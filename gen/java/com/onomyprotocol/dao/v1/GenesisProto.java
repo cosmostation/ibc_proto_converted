@@ -14,9 +14,1167 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onomyprotocol.dao.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the dao module managed params
+     * </pre>
+     *
+     * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * the dao module managed params
+     * </pre>
+     *
+     * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.onomyprotocol.dao.v1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * the dao module managed params
+     * </pre>
+     *
+     * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.onomyprotocol.dao.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTreasuryBalanceList();
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTreasuryBalance(int index);
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getTreasuryBalanceCount();
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTreasuryBalanceOrBuilderList();
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTreasuryBalanceOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the dao module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code onomyprotocol.dao.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onomyprotocol.dao.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      treasuryBalance_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.onomyprotocol.dao.v1.GenesisProto.internal_static_onomyprotocol_dao_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.onomyprotocol.dao.v1.GenesisProto.internal_static_onomyprotocol_dao_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.onomyprotocol.dao.v1.GenesisProto.GenesisState.class, com.onomyprotocol.dao.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.onomyprotocol.dao.v1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * the dao module managed params
+     * </pre>
+     *
+     * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * the dao module managed params
+     * </pre>
+     *
+     * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.onomyprotocol.dao.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * the dao module managed params
+     * </pre>
+     *
+     * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.onomyprotocol.dao.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int TREASURY_BALANCE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> treasuryBalance_;
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTreasuryBalanceList() {
+      return treasuryBalance_;
+    }
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTreasuryBalanceOrBuilderList() {
+      return treasuryBalance_;
+    }
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getTreasuryBalanceCount() {
+      return treasuryBalance_.size();
+    }
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTreasuryBalance(int index) {
+      return treasuryBalance_.get(index);
+    }
+    /**
+     * <pre>
+     * the list of dao module coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTreasuryBalanceOrBuilder(
+        int index) {
+      return treasuryBalance_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < treasuryBalance_.size(); i++) {
+        output.writeMessage(2, treasuryBalance_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < treasuryBalance_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, treasuryBalance_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.onomyprotocol.dao.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.onomyprotocol.dao.v1.GenesisProto.GenesisState other = (com.onomyprotocol.dao.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getTreasuryBalanceList()
+          .equals(other.getTreasuryBalanceList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getTreasuryBalanceCount() > 0) {
+        hash = (37 * hash) + TREASURY_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getTreasuryBalanceList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.onomyprotocol.dao.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the dao module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code onomyprotocol.dao.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onomyprotocol.dao.v1.GenesisState)
+        com.onomyprotocol.dao.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.onomyprotocol.dao.v1.GenesisProto.internal_static_onomyprotocol_dao_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.onomyprotocol.dao.v1.GenesisProto.internal_static_onomyprotocol_dao_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.onomyprotocol.dao.v1.GenesisProto.GenesisState.class, com.onomyprotocol.dao.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.onomyprotocol.dao.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (treasuryBalanceBuilder_ == null) {
+          treasuryBalance_ = java.util.Collections.emptyList();
+        } else {
+          treasuryBalance_ = null;
+          treasuryBalanceBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.onomyprotocol.dao.v1.GenesisProto.internal_static_onomyprotocol_dao_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.onomyprotocol.dao.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.GenesisProto.GenesisState build() {
+        com.onomyprotocol.dao.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.onomyprotocol.dao.v1.GenesisProto.GenesisState buildPartial() {
+        com.onomyprotocol.dao.v1.GenesisProto.GenesisState result = new com.onomyprotocol.dao.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.onomyprotocol.dao.v1.GenesisProto.GenesisState result) {
+        if (treasuryBalanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            treasuryBalance_ = java.util.Collections.unmodifiableList(treasuryBalance_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.treasuryBalance_ = treasuryBalance_;
+        } else {
+          result.treasuryBalance_ = treasuryBalanceBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.onomyprotocol.dao.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.onomyprotocol.dao.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.onomyprotocol.dao.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.onomyprotocol.dao.v1.GenesisProto.GenesisState other) {
+        if (other == com.onomyprotocol.dao.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (treasuryBalanceBuilder_ == null) {
+          if (!other.treasuryBalance_.isEmpty()) {
+            if (treasuryBalance_.isEmpty()) {
+              treasuryBalance_ = other.treasuryBalance_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTreasuryBalanceIsMutable();
+              treasuryBalance_.addAll(other.treasuryBalance_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.treasuryBalance_.isEmpty()) {
+            if (treasuryBalanceBuilder_.isEmpty()) {
+              treasuryBalanceBuilder_.dispose();
+              treasuryBalanceBuilder_ = null;
+              treasuryBalance_ = other.treasuryBalance_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              treasuryBalanceBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTreasuryBalanceFieldBuilder() : null;
+            } else {
+              treasuryBalanceBuilder_.addAllMessages(other.treasuryBalance_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (treasuryBalanceBuilder_ == null) {
+                  ensureTreasuryBalanceIsMutable();
+                  treasuryBalance_.add(m);
+                } else {
+                  treasuryBalanceBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.onomyprotocol.dao.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.onomyprotocol.dao.v1.ParamsProto.Params, com.onomyprotocol.dao.v1.ParamsProto.Params.Builder, com.onomyprotocol.dao.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.onomyprotocol.dao.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.onomyprotocol.dao.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.onomyprotocol.dao.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.onomyprotocol.dao.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.onomyprotocol.dao.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.onomyprotocol.dao.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.onomyprotocol.dao.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.onomyprotocol.dao.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.onomyprotocol.dao.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * the dao module managed params
+       * </pre>
+       *
+       * <code>.onomyprotocol.dao.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.onomyprotocol.dao.v1.ParamsProto.Params, com.onomyprotocol.dao.v1.ParamsProto.Params.Builder, com.onomyprotocol.dao.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.onomyprotocol.dao.v1.ParamsProto.Params, com.onomyprotocol.dao.v1.ParamsProto.Params.Builder, com.onomyprotocol.dao.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> treasuryBalance_ =
+        java.util.Collections.emptyList();
+      private void ensureTreasuryBalanceIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          treasuryBalance_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(treasuryBalance_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> treasuryBalanceBuilder_;
+
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTreasuryBalanceList() {
+        if (treasuryBalanceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(treasuryBalance_);
+        } else {
+          return treasuryBalanceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getTreasuryBalanceCount() {
+        if (treasuryBalanceBuilder_ == null) {
+          return treasuryBalance_.size();
+        } else {
+          return treasuryBalanceBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTreasuryBalance(int index) {
+        if (treasuryBalanceBuilder_ == null) {
+          return treasuryBalance_.get(index);
+        } else {
+          return treasuryBalanceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTreasuryBalance(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (treasuryBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTreasuryBalanceIsMutable();
+          treasuryBalance_.set(index, value);
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTreasuryBalance(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (treasuryBalanceBuilder_ == null) {
+          ensureTreasuryBalanceIsMutable();
+          treasuryBalance_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTreasuryBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (treasuryBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTreasuryBalanceIsMutable();
+          treasuryBalance_.add(value);
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTreasuryBalance(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (treasuryBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTreasuryBalanceIsMutable();
+          treasuryBalance_.add(index, value);
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTreasuryBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (treasuryBalanceBuilder_ == null) {
+          ensureTreasuryBalanceIsMutable();
+          treasuryBalance_.add(builderForValue.build());
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTreasuryBalance(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (treasuryBalanceBuilder_ == null) {
+          ensureTreasuryBalanceIsMutable();
+          treasuryBalance_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllTreasuryBalance(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (treasuryBalanceBuilder_ == null) {
+          ensureTreasuryBalanceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, treasuryBalance_);
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearTreasuryBalance() {
+        if (treasuryBalanceBuilder_ == null) {
+          treasuryBalance_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeTreasuryBalance(int index) {
+        if (treasuryBalanceBuilder_ == null) {
+          ensureTreasuryBalanceIsMutable();
+          treasuryBalance_.remove(index);
+          onChanged();
+        } else {
+          treasuryBalanceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTreasuryBalanceBuilder(
+          int index) {
+        return getTreasuryBalanceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTreasuryBalanceOrBuilder(
+          int index) {
+        if (treasuryBalanceBuilder_ == null) {
+          return treasuryBalance_.get(index);  } else {
+          return treasuryBalanceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTreasuryBalanceOrBuilderList() {
+        if (treasuryBalanceBuilder_ != null) {
+          return treasuryBalanceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(treasuryBalance_);
+        }
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTreasuryBalanceBuilder() {
+        return getTreasuryBalanceFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTreasuryBalanceBuilder(
+          int index) {
+        return getTreasuryBalanceFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * the list of dao module coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin treasury_balance = 2 [json_name = "treasuryBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"treasury_balance&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTreasuryBalanceBuilderList() {
+        return getTreasuryBalanceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTreasuryBalanceFieldBuilder() {
+        if (treasuryBalanceBuilder_ == null) {
+          treasuryBalanceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  treasuryBalance_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          treasuryBalance_ = null;
+        }
+        return treasuryBalanceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onomyprotocol.dao.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:onomyprotocol.dao.v1.GenesisState)
+    private static final com.onomyprotocol.dao.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.onomyprotocol.dao.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.onomyprotocol.dao.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.onomyprotocol.dao.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_onomyprotocol_dao_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_onomyprotocol_dao_v1_GenesisState_fieldAccessorTable;
 
@@ -37,12 +1195,12 @@ public final class GenesisProto {
       "lance\030\002 \003(\0132\031.cosmos.base.v1beta1.CoinBK" +
       "\310\336\037\000\362\336\037\027yaml:\"treasury_balance\"\252\337\037(githu" +
       "b.com/cosmos/cosmos-sdk/types.CoinsR\017tre" +
-      "asuryBalanceB\306\001\n\030com.onomyprotocol.dao.v" +
-      "1B\014GenesisProtoP\001Z*github.com/onomyproto" +
-      "col/onomy/x/dao/types\242\002\003ODX\252\002\024Onomyproto" +
-      "col.Dao.V1\312\002\024Onomyprotocol\\Dao\\V1\342\002 Onom" +
-      "yprotocol\\Dao\\V1\\GPBMetadata\352\002\026Onomyprot" +
-      "ocol::Dao::V1b\006proto3"
+      "asuryBalanceB\304\001\n\030com.onomyprotocol.dao.v" +
+      "1B\014GenesisProtoZ*github.com/onomyprotoco" +
+      "l/onomy/x/dao/types\242\002\003ODX\252\002\024Onomyprotoco" +
+      "l.Dao.V1\312\002\024Onomyprotocol\\Dao\\V1\342\002 Onomyp" +
+      "rotocol\\Dao\\V1\\GPBMetadata\352\002\026Onomyprotoc" +
+      "ol::Dao::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,24 +14,2785 @@ public final class TreasuryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CurrencyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.treasury.Currency)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denom is the name of the currency
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom is the name of the currency
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * desc is a description of the currency
+     * </pre>
+     *
+     * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+     * @return The desc.
+     */
+    java.lang.String getDesc();
+    /**
+     * <pre>
+     * desc is a description of the currency
+     * </pre>
+     *
+     * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+     * @return The bytes for desc.
+     */
+    com.google.protobuf.ByteString
+        getDescBytes();
+
+    /**
+     * <pre>
+     * owner is who can mint this currency
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * owner is who can mint this currency
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * mintable indicates whether this currency can be minted or not
+     * </pre>
+     *
+     * <code>bool mintable = 4 [json_name = "mintable", (.gogoproto.moretags) = "yaml:&#92;"mintable&#92;""];</code>
+     * @return The mintable.
+     */
+    boolean getMintable();
+  }
+  /**
+   * <pre>
+   * Currency defines a single currency info
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.treasury.Currency}
+   */
+  public static final class Currency extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.treasury.Currency)
+      CurrencyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Currency.newBuilder() to construct.
+    private Currency(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Currency() {
+      denom_ = "";
+      desc_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Currency();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currency_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currency_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.treasury.TreasuryProto.Currency.class, com.rizonworld.rizon.treasury.TreasuryProto.Currency.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom is the name of the currency
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom is the name of the currency
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESC_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object desc_ = "";
+    /**
+     * <pre>
+     * desc is a description of the currency
+     * </pre>
+     *
+     * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+     * @return The desc.
+     */
+    @java.lang.Override
+    public java.lang.String getDesc() {
+      java.lang.Object ref = desc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        desc_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * desc is a description of the currency
+     * </pre>
+     *
+     * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+     * @return The bytes for desc.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescBytes() {
+      java.lang.Object ref = desc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        desc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * owner is who can mint this currency
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner is who can mint this currency
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINTABLE_FIELD_NUMBER = 4;
+    private boolean mintable_ = false;
+    /**
+     * <pre>
+     * mintable indicates whether this currency can be minted or not
+     * </pre>
+     *
+     * <code>bool mintable = 4 [json_name = "mintable", (.gogoproto.moretags) = "yaml:&#92;"mintable&#92;""];</code>
+     * @return The mintable.
+     */
+    @java.lang.Override
+    public boolean getMintable() {
+      return mintable_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desc_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, desc_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (mintable_ != false) {
+        output.writeBool(4, mintable_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desc_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, desc_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (mintable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, mintable_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.treasury.TreasuryProto.Currency)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.treasury.TreasuryProto.Currency other = (com.rizonworld.rizon.treasury.TreasuryProto.Currency) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getDesc()
+          .equals(other.getDesc())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (getMintable()
+          != other.getMintable()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + DESC_FIELD_NUMBER;
+      hash = (53 * hash) + getDesc().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + MINTABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMintable());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.treasury.TreasuryProto.Currency prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Currency defines a single currency info
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.treasury.Currency}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.treasury.Currency)
+        com.rizonworld.rizon.treasury.TreasuryProto.CurrencyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currency_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currency_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.treasury.TreasuryProto.Currency.class, com.rizonworld.rizon.treasury.TreasuryProto.Currency.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.treasury.TreasuryProto.Currency.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        desc_ = "";
+        owner_ = "";
+        mintable_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currency_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Currency getDefaultInstanceForType() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.Currency.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Currency build() {
+        com.rizonworld.rizon.treasury.TreasuryProto.Currency result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Currency buildPartial() {
+        com.rizonworld.rizon.treasury.TreasuryProto.Currency result = new com.rizonworld.rizon.treasury.TreasuryProto.Currency(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.treasury.TreasuryProto.Currency result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.desc_ = desc_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.mintable_ = mintable_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.treasury.TreasuryProto.Currency) {
+          return mergeFrom((com.rizonworld.rizon.treasury.TreasuryProto.Currency)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.treasury.TreasuryProto.Currency other) {
+        if (other == com.rizonworld.rizon.treasury.TreasuryProto.Currency.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDesc().isEmpty()) {
+          desc_ = other.desc_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getMintable() != false) {
+          setMintable(other.getMintable());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                desc_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                mintable_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom is the name of the currency
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom is the name of the currency
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom is the name of the currency
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom is the name of the currency
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom is the name of the currency
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object desc_ = "";
+      /**
+       * <pre>
+       * desc is a description of the currency
+       * </pre>
+       *
+       * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+       * @return The desc.
+       */
+      public java.lang.String getDesc() {
+        java.lang.Object ref = desc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          desc_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * desc is a description of the currency
+       * </pre>
+       *
+       * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+       * @return The bytes for desc.
+       */
+      public com.google.protobuf.ByteString
+          getDescBytes() {
+        java.lang.Object ref = desc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          desc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * desc is a description of the currency
+       * </pre>
+       *
+       * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+       * @param value The desc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDesc(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        desc_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * desc is a description of the currency
+       * </pre>
+       *
+       * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDesc() {
+        desc_ = getDefaultInstance().getDesc();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * desc is a description of the currency
+       * </pre>
+       *
+       * <code>string desc = 2 [json_name = "desc", (.gogoproto.moretags) = "yaml:&#92;"desc&#92;""];</code>
+       * @param value The bytes for desc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        desc_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * owner is who can mint this currency
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is who can mint this currency
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is who can mint this currency
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is who can mint this currency
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is who can mint this currency
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private boolean mintable_ ;
+      /**
+       * <pre>
+       * mintable indicates whether this currency can be minted or not
+       * </pre>
+       *
+       * <code>bool mintable = 4 [json_name = "mintable", (.gogoproto.moretags) = "yaml:&#92;"mintable&#92;""];</code>
+       * @return The mintable.
+       */
+      @java.lang.Override
+      public boolean getMintable() {
+        return mintable_;
+      }
+      /**
+       * <pre>
+       * mintable indicates whether this currency can be minted or not
+       * </pre>
+       *
+       * <code>bool mintable = 4 [json_name = "mintable", (.gogoproto.moretags) = "yaml:&#92;"mintable&#92;""];</code>
+       * @param value The mintable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintable(boolean value) {
+
+        mintable_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mintable indicates whether this currency can be minted or not
+       * </pre>
+       *
+       * <code>bool mintable = 4 [json_name = "mintable", (.gogoproto.moretags) = "yaml:&#92;"mintable&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintable() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        mintable_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.treasury.Currency)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.treasury.Currency)
+    private static final com.rizonworld.rizon.treasury.TreasuryProto.Currency DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.treasury.TreasuryProto.Currency();
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currency getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Currency>
+        PARSER = new com.google.protobuf.AbstractParser<Currency>() {
+      @java.lang.Override
+      public Currency parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Currency> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Currency> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.treasury.TreasuryProto.Currency getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CurrenciesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.treasury.Currencies)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denoms is the denom list of all currencies
+     * </pre>
+     *
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return A list containing the denoms.
+     */
+    java.util.List<java.lang.String>
+        getDenomsList();
+    /**
+     * <pre>
+     * denoms is the denom list of all currencies
+     * </pre>
+     *
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return The count of denoms.
+     */
+    int getDenomsCount();
+    /**
+     * <pre>
+     * denoms is the denom list of all currencies
+     * </pre>
+     *
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The denoms at the given index.
+     */
+    java.lang.String getDenoms(int index);
+    /**
+     * <pre>
+     * denoms is the denom list of all currencies
+     * </pre>
+     *
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the denoms at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDenomsBytes(int index);
+  }
+  /**
+   * <pre>
+   * Currencies
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.treasury.Currencies}
+   */
+  public static final class Currencies extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.treasury.Currencies)
+      CurrenciesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Currencies.newBuilder() to construct.
+    private Currencies(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Currencies() {
+      denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Currencies();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currencies_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currencies_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.treasury.TreasuryProto.Currencies.class, com.rizonworld.rizon.treasury.TreasuryProto.Currencies.Builder.class);
+    }
+
+    public static final int DENOMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList denoms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * denoms is the denom list of all currencies
+     * </pre>
+     *
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return A list containing the denoms.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDenomsList() {
+      return denoms_;
+    }
+    /**
+     * <pre>
+     * denoms is the denom list of all currencies
+     * </pre>
+     *
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return The count of denoms.
+     */
+    public int getDenomsCount() {
+      return denoms_.size();
+    }
+    /**
+     * <pre>
+     * denoms is the denom list of all currencies
+     * </pre>
+     *
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The denoms at the given index.
+     */
+    public java.lang.String getDenoms(int index) {
+      return denoms_.get(index);
+    }
+    /**
+     * <pre>
+     * denoms is the denom list of all currencies
+     * </pre>
+     *
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the denoms at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDenomsBytes(int index) {
+      return denoms_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < denoms_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denoms_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < denoms_.size(); i++) {
+          dataSize += computeStringSizeNoTag(denoms_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDenomsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.treasury.TreasuryProto.Currencies)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.treasury.TreasuryProto.Currencies other = (com.rizonworld.rizon.treasury.TreasuryProto.Currencies) obj;
+
+      if (!getDenomsList()
+          .equals(other.getDenomsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDenomsCount() > 0) {
+        hash = (37 * hash) + DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getDenomsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.treasury.TreasuryProto.Currencies prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Currencies
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.treasury.Currencies}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.treasury.Currencies)
+        com.rizonworld.rizon.treasury.TreasuryProto.CurrenciesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currencies_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currencies_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.treasury.TreasuryProto.Currencies.class, com.rizonworld.rizon.treasury.TreasuryProto.Currencies.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.treasury.TreasuryProto.Currencies.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denoms_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Currencies_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Currencies getDefaultInstanceForType() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.Currencies.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Currencies build() {
+        com.rizonworld.rizon.treasury.TreasuryProto.Currencies result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Currencies buildPartial() {
+        com.rizonworld.rizon.treasury.TreasuryProto.Currencies result = new com.rizonworld.rizon.treasury.TreasuryProto.Currencies(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.treasury.TreasuryProto.Currencies result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          denoms_.makeImmutable();
+          result.denoms_ = denoms_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.treasury.TreasuryProto.Currencies) {
+          return mergeFrom((com.rizonworld.rizon.treasury.TreasuryProto.Currencies)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.treasury.TreasuryProto.Currencies other) {
+        if (other == com.rizonworld.rizon.treasury.TreasuryProto.Currencies.getDefaultInstance()) return this;
+        if (!other.denoms_.isEmpty()) {
+          if (denoms_.isEmpty()) {
+            denoms_ = other.denoms_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureDenomsIsMutable();
+            denoms_.addAll(other.denoms_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureDenomsIsMutable();
+                denoms_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDenomsIsMutable() {
+        if (!denoms_.isModifiable()) {
+          denoms_ = new com.google.protobuf.LazyStringArrayList(denoms_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return A list containing the denoms.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDenomsList() {
+        denoms_.makeImmutable();
+        return denoms_;
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return The count of denoms.
+       */
+      public int getDenomsCount() {
+        return denoms_.size();
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The denoms at the given index.
+       */
+      public java.lang.String getDenoms(int index) {
+        return denoms_.get(index);
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the denoms at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDenomsBytes(int index) {
+        return denoms_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The denoms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenoms(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDenomsIsMutable();
+        denoms_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param value The denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDenoms(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDenomsIsMutable();
+        denoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param values The denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDenoms(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDenomsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, denoms_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenoms() {
+        denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denoms is the denom list of all currencies
+       * </pre>
+       *
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param value The bytes of the denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDenomsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDenomsIsMutable();
+        denoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.treasury.Currencies)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.treasury.Currencies)
+    private static final com.rizonworld.rizon.treasury.TreasuryProto.Currencies DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.treasury.TreasuryProto.Currencies();
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Currencies getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Currencies>
+        PARSER = new com.google.protobuf.AbstractParser<Currencies>() {
+      @java.lang.Override
+      public Currencies parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Currencies> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Currencies> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.treasury.TreasuryProto.Currencies getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MaxAtoloSupplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.treasury.MaxAtoloSupply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * amount is maximum mintable amount of atolo
+     * </pre>
+     *
+     * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * <pre>
+   * Maximum mintable amount of atolo
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.treasury.MaxAtoloSupply}
+   */
+  public static final class MaxAtoloSupply extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.treasury.MaxAtoloSupply)
+      MaxAtoloSupplyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MaxAtoloSupply.newBuilder() to construct.
+    private MaxAtoloSupply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MaxAtoloSupply() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MaxAtoloSupply();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_MaxAtoloSupply_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_MaxAtoloSupply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply.class, com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount is maximum mintable amount of atolo
+     * </pre>
+     *
+     * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (amount_ != 0L) {
+        output.writeInt64(1, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply other = (com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply) obj;
+
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Maximum mintable amount of atolo
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.treasury.MaxAtoloSupply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.treasury.MaxAtoloSupply)
+        com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_MaxAtoloSupply_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_MaxAtoloSupply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply.class, com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_MaxAtoloSupply_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply getDefaultInstanceForType() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply build() {
+        com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply buildPartial() {
+        com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply result = new com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply) {
+          return mergeFrom((com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply other) {
+        if (other == com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply.getDefaultInstance()) return this;
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                amount_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount is maximum mintable amount of atolo
+       * </pre>
+       *
+       * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount is maximum mintable amount of atolo
+       * </pre>
+       *
+       * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is maximum mintable amount of atolo
+       * </pre>
+       *
+       * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.treasury.MaxAtoloSupply)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.treasury.MaxAtoloSupply)
+    private static final com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply();
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MaxAtoloSupply>
+        PARSER = new com.google.protobuf.AbstractParser<MaxAtoloSupply>() {
+      @java.lang.Override
+      public MaxAtoloSupply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MaxAtoloSupply> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MaxAtoloSupply> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SequenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.treasury.Sequence)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * number is the currency sequence number of current state
+     * </pre>
+     *
+     * <code>int64 number = 1 [json_name = "number", (.gogoproto.moretags) = "yaml:&#92;"number&#92;""];</code>
+     * @return The number.
+     */
+    long getNumber();
+  }
+  /**
+   * <pre>
+   * Sequence
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.treasury.Sequence}
+   */
+  public static final class Sequence extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.treasury.Sequence)
+      SequenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Sequence.newBuilder() to construct.
+    private Sequence(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Sequence() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Sequence();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Sequence_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Sequence_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.treasury.TreasuryProto.Sequence.class, com.rizonworld.rizon.treasury.TreasuryProto.Sequence.Builder.class);
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private long number_ = 0L;
+    /**
+     * <pre>
+     * number is the currency sequence number of current state
+     * </pre>
+     *
+     * <code>int64 number = 1 [json_name = "number", (.gogoproto.moretags) = "yaml:&#92;"number&#92;""];</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public long getNumber() {
+      return number_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (number_ != 0L) {
+        output.writeInt64(1, number_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (number_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, number_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.treasury.TreasuryProto.Sequence)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.treasury.TreasuryProto.Sequence other = (com.rizonworld.rizon.treasury.TreasuryProto.Sequence) obj;
+
+      if (getNumber()
+          != other.getNumber()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNumber());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.treasury.TreasuryProto.Sequence prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Sequence
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.treasury.Sequence}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.treasury.Sequence)
+        com.rizonworld.rizon.treasury.TreasuryProto.SequenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Sequence_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Sequence_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.treasury.TreasuryProto.Sequence.class, com.rizonworld.rizon.treasury.TreasuryProto.Sequence.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.treasury.TreasuryProto.Sequence.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        number_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.internal_static_rizonworld_rizon_treasury_Sequence_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Sequence getDefaultInstanceForType() {
+        return com.rizonworld.rizon.treasury.TreasuryProto.Sequence.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Sequence build() {
+        com.rizonworld.rizon.treasury.TreasuryProto.Sequence result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.treasury.TreasuryProto.Sequence buildPartial() {
+        com.rizonworld.rizon.treasury.TreasuryProto.Sequence result = new com.rizonworld.rizon.treasury.TreasuryProto.Sequence(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.treasury.TreasuryProto.Sequence result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.number_ = number_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.treasury.TreasuryProto.Sequence) {
+          return mergeFrom((com.rizonworld.rizon.treasury.TreasuryProto.Sequence)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.treasury.TreasuryProto.Sequence other) {
+        if (other == com.rizonworld.rizon.treasury.TreasuryProto.Sequence.getDefaultInstance()) return this;
+        if (other.getNumber() != 0L) {
+          setNumber(other.getNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                number_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long number_ ;
+      /**
+       * <pre>
+       * number is the currency sequence number of current state
+       * </pre>
+       *
+       * <code>int64 number = 1 [json_name = "number", (.gogoproto.moretags) = "yaml:&#92;"number&#92;""];</code>
+       * @return The number.
+       */
+      @java.lang.Override
+      public long getNumber() {
+        return number_;
+      }
+      /**
+       * <pre>
+       * number is the currency sequence number of current state
+       * </pre>
+       *
+       * <code>int64 number = 1 [json_name = "number", (.gogoproto.moretags) = "yaml:&#92;"number&#92;""];</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(long value) {
+
+        number_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number is the currency sequence number of current state
+       * </pre>
+       *
+       * <code>int64 number = 1 [json_name = "number", (.gogoproto.moretags) = "yaml:&#92;"number&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.treasury.Sequence)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.treasury.Sequence)
+    private static final com.rizonworld.rizon.treasury.TreasuryProto.Sequence DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.treasury.TreasuryProto.Sequence();
+    }
+
+    public static com.rizonworld.rizon.treasury.TreasuryProto.Sequence getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Sequence>
+        PARSER = new com.google.protobuf.AbstractParser<Sequence>() {
+      @java.lang.Override
+      public Sequence parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Sequence> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Sequence> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.treasury.TreasuryProto.Sequence getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_treasury_Currency_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_treasury_Currency_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_treasury_Currencies_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_treasury_Currencies_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_treasury_MaxAtoloSupply_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_treasury_MaxAtoloSupply_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_treasury_Sequence_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_treasury_Sequence_fieldAccessorTable;
 
@@ -53,13 +2814,13 @@ public final class TreasuryProto {
       "oms\030\001 \003(\tB\021\362\336\037\ryaml:\"denoms\"R\006denoms\";\n\016" +
       "MaxAtoloSupply\022)\n\006amount\030\001 \001(\003B\021\362\336\037\ryaml" +
       ":\"amount\"R\006amount\"5\n\010Sequence\022)\n\006number\030" +
-      "\001 \001(\003B\021\362\336\037\ryaml:\"number\"R\006numberB\343\001\n\035com" +
+      "\001 \001(\003B\021\362\336\037\ryaml:\"number\"R\006numberB\341\001\n\035com" +
       ".rizonworld.rizon.treasuryB\rTreasuryProt" +
-      "oP\001Z-github.com/rizon-world/rizon/x/trea" +
-      "sury/types\242\002\003RRT\252\002\031Rizonworld.Rizon.Trea" +
-      "sury\312\002\031Rizonworld\\Rizon\\Treasury\342\002%Rizon" +
-      "world\\Rizon\\Treasury\\GPBMetadata\352\002\033Rizon" +
-      "world::Rizon::Treasuryb\006proto3"
+      "oZ-github.com/rizon-world/rizon/x/treasu" +
+      "ry/types\242\002\003RRT\252\002\031Rizonworld.Rizon.Treasu" +
+      "ry\312\002\031Rizonworld\\Rizon\\Treasury\342\002%Rizonwo" +
+      "rld\\Rizon\\Treasury\\GPBMetadata\352\002\033Rizonwo" +
+      "rld::Rizon::Treasuryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

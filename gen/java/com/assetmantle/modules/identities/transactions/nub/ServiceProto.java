@@ -34,14 +34,14 @@ public final class ServiceProto {
       "ctions.nub.Message\032D.assetmantle.modules" +
       ".identities.transactions.nub.Transaction" +
       "Response\"\036\202\323\344\223\002\030\"\026/mantle/identities/nub" +
-      "B\245\002\n3com.assetmantle.modules.identities." +
-      "transactions.nubB\014ServiceProtoP\001\242\002\005AMITN" +
-      "\252\002/Assetmantle.Modules.Identities.Transa" +
-      "ctions.Nub\312\002/Assetmantle\\Modules\\Identit" +
-      "ies\\Transactions\\Nub\342\002;Assetmantle\\Modul" +
-      "es\\Identities\\Transactions\\Nub\\GPBMetada" +
-      "ta\352\0023Assetmantle::Modules::Identities::T" +
-      "ransactions::Nubb\006proto3"
+      "B\243\002\n3com.assetmantle.modules.identities." +
+      "transactions.nubB\014ServiceProto\242\002\005AMITN\252\002" +
+      "/Assetmantle.Modules.Identities.Transact" +
+      "ions.Nub\312\002/Assetmantle\\Modules\\Identitie" +
+      "s\\Transactions\\Nub\342\002;Assetmantle\\Modules" +
+      "\\Identities\\Transactions\\Nub\\GPBMetadata" +
+      "\352\0023Assetmantle::Modules::Identities::Tra" +
+      "nsactions::Nubb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

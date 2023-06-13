@@ -14,9 +14,809 @@ public final class ModuleRouteProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * PoolType is an enumeration of all supported pool types.
+   * </pre>
+   *
+   * Protobuf enum {@code osmosis.poolmanager.v1beta1.PoolType}
+   */
+  public enum PoolType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Balancer is the standard xy=k curve. Its pool model is defined in x/gamm.
+     * </pre>
+     *
+     * <code>Balancer = 0;</code>
+     */
+    Balancer(0),
+    /**
+     * <pre>
+     * Stableswap is the Solidly cfmm stable swap curve. Its pool model is defined
+     * in x/gamm.
+     * </pre>
+     *
+     * <code>Stableswap = 1;</code>
+     */
+    Stableswap(1),
+    /**
+     * <pre>
+     * Concentrated is the pool model specific to concentrated liquidity. It is
+     * defined in x/concentrated-liquidity.
+     * </pre>
+     *
+     * <code>Concentrated = 2;</code>
+     */
+    Concentrated(2),
+    /**
+     * <pre>
+     * CosmWasm is the pool model specific to CosmWasm. It is defined in
+     * x/cosmwasmpool.
+     * </pre>
+     *
+     * <code>CosmWasm = 3;</code>
+     */
+    CosmWasm(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Balancer is the standard xy=k curve. Its pool model is defined in x/gamm.
+     * </pre>
+     *
+     * <code>Balancer = 0;</code>
+     */
+    public static final int Balancer_VALUE = 0;
+    /**
+     * <pre>
+     * Stableswap is the Solidly cfmm stable swap curve. Its pool model is defined
+     * in x/gamm.
+     * </pre>
+     *
+     * <code>Stableswap = 1;</code>
+     */
+    public static final int Stableswap_VALUE = 1;
+    /**
+     * <pre>
+     * Concentrated is the pool model specific to concentrated liquidity. It is
+     * defined in x/concentrated-liquidity.
+     * </pre>
+     *
+     * <code>Concentrated = 2;</code>
+     */
+    public static final int Concentrated_VALUE = 2;
+    /**
+     * <pre>
+     * CosmWasm is the pool model specific to CosmWasm. It is defined in
+     * x/cosmwasmpool.
+     * </pre>
+     *
+     * <code>CosmWasm = 3;</code>
+     */
+    public static final int CosmWasm_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PoolType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PoolType forNumber(int value) {
+      switch (value) {
+        case 0: return Balancer;
+        case 1: return Stableswap;
+        case 2: return Concentrated;
+        case 3: return CosmWasm;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PoolType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PoolType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PoolType>() {
+            public PoolType findValueByNumber(int number) {
+              return PoolType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.ModuleRouteProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PoolType[] VALUES = values();
+
+    public static PoolType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PoolType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:osmosis.poolmanager.v1beta1.PoolType)
+  }
+
+  public interface ModuleRouteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.ModuleRoute)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_type specifies the type of the pool
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+     * @return The enum numeric value on the wire for poolType.
+     */
+    int getPoolTypeValue();
+    /**
+     * <pre>
+     * pool_type specifies the type of the pool
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+     * @return The poolType.
+     */
+    com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType getPoolType();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * <pre>
+   * ModuleRouter defines a route encapsulating pool type.
+   * It is used as the value of a mapping from pool id to the pool type,
+   * allowing the pool manager to know which module to route swaps to given the
+   * pool id.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.ModuleRoute}
+   */
+  public static final class ModuleRoute extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.ModuleRoute)
+      ModuleRouteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ModuleRoute.newBuilder() to construct.
+    private ModuleRoute(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ModuleRoute() {
+      poolType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ModuleRoute();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.ModuleRouteProto.internal_static_osmosis_poolmanager_v1beta1_ModuleRoute_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.ModuleRouteProto.internal_static_osmosis_poolmanager_v1beta1_ModuleRoute_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute.class, com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute.Builder.class);
+    }
+
+    public static final int POOL_TYPE_FIELD_NUMBER = 1;
+    private int poolType_ = 0;
+    /**
+     * <pre>
+     * pool_type specifies the type of the pool
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+     * @return The enum numeric value on the wire for poolType.
+     */
+    @java.lang.Override public int getPoolTypeValue() {
+      return poolType_;
+    }
+    /**
+     * <pre>
+     * pool_type specifies the type of the pool
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+     * @return The poolType.
+     */
+    @java.lang.Override public com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType getPoolType() {
+      com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType result = com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType.forNumber(poolType_);
+      return result == null ? com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType.UNRECOGNIZED : result;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolType_ != com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType.Balancer.getNumber()) {
+        output.writeEnum(1, poolType_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolType_ != com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType.Balancer.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, poolType_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute other = (com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute) obj;
+
+      if (poolType_ != other.poolType_) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + poolType_;
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ModuleRouter defines a route encapsulating pool type.
+     * It is used as the value of a mapping from pool id to the pool type,
+     * allowing the pool manager to know which module to route swaps to given the
+     * pool id.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.ModuleRoute}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.ModuleRoute)
+        com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRouteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.ModuleRouteProto.internal_static_osmosis_poolmanager_v1beta1_ModuleRoute_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.ModuleRouteProto.internal_static_osmosis_poolmanager_v1beta1_ModuleRoute_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute.class, com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolType_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.ModuleRouteProto.internal_static_osmosis_poolmanager_v1beta1_ModuleRoute_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute build() {
+        com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute buildPartial() {
+        com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute result = new com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolType_ = poolType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute other) {
+        if (other == com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute.getDefaultInstance()) return this;
+        if (other.poolType_ != 0) {
+          setPoolTypeValue(other.getPoolTypeValue());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolType_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int poolType_ = 0;
+      /**
+       * <pre>
+       * pool_type specifies the type of the pool
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+       * @return The enum numeric value on the wire for poolType.
+       */
+      @java.lang.Override public int getPoolTypeValue() {
+        return poolType_;
+      }
+      /**
+       * <pre>
+       * pool_type specifies the type of the pool
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+       * @param value The enum numeric value on the wire for poolType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolTypeValue(int value) {
+        poolType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_type specifies the type of the pool
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+       * @return The poolType.
+       */
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType getPoolType() {
+        com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType result = com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType.forNumber(poolType_);
+        return result == null ? com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * pool_type specifies the type of the pool
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+       * @param value The poolType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolType(com.osmosis.poolmanager.v1beta1.ModuleRouteProto.PoolType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        poolType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_type specifies the type of the pool
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.PoolType pool_type = 1 [json_name = "poolType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.ModuleRoute)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.ModuleRoute)
+    private static final com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ModuleRoute>
+        PARSER = new com.google.protobuf.AbstractParser<ModuleRoute>() {
+      @java.lang.Override
+      public ModuleRoute parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ModuleRoute> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ModuleRoute> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRoute getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_poolmanager_v1beta1_ModuleRoute_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_poolmanager_v1beta1_ModuleRoute_fieldAccessorTable;
 
@@ -35,14 +835,14 @@ public final class ModuleRouteProto {
       "eta1.PoolTypeR\010poolType\022/\n\007pool_id\030\002 \001(\004" +
       "B\026\310\336\037\001\362\336\037\016yaml:\"pool_id\"R\006poolId*N\n\010Pool" +
       "Type\022\014\n\010Balancer\020\000\022\016\n\nStableswap\020\001\022\020\n\014Co" +
-      "ncentrated\020\002\022\014\n\010CosmWasm\020\003\032\004\210\243\036\000B\372\001\n\037com" +
+      "ncentrated\020\002\022\014\n\010CosmWasm\020\003\032\004\210\243\036\000B\370\001\n\037com" +
       ".osmosis.poolmanager.v1beta1B\020ModuleRout" +
-      "eProtoP\001Z7github.com/osmosis-labs/osmosi" +
-      "s/v15/x/poolmanager/types\242\002\003OPX\252\002\033Osmosi" +
-      "s.Poolmanager.V1beta1\312\002\033Osmosis\\Poolmana" +
-      "ger\\V1beta1\342\002\'Osmosis\\Poolmanager\\V1beta" +
-      "1\\GPBMetadata\352\002\035Osmosis::Poolmanager::V1" +
-      "beta1b\006proto3"
+      "eProtoZ7github.com/osmosis-labs/osmosis/" +
+      "v15/x/poolmanager/types\242\002\003OPX\252\002\033Osmosis." +
+      "Poolmanager.V1beta1\312\002\033Osmosis\\Poolmanage" +
+      "r\\V1beta1\342\002\'Osmosis\\Poolmanager\\V1beta1\\" +
+      "GPBMetadata\352\002\035Osmosis::Poolmanager::V1be" +
+      "ta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

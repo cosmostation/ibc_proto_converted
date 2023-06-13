@@ -14,9 +14,933 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.feemodel.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.coreum.feemodel.v1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.feemodel.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * min_gas_price is the current minimum gas price required by the chain.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minGasPrice field is set.
+     */
+    boolean hasMinGasPrice();
+    /**
+     * <pre>
+     * min_gas_price is the current minimum gas price required by the chain.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return The minGasPrice.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getMinGasPrice();
+    /**
+     * <pre>
+     * min_gas_price is the current minimum gas price required by the chain.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinGasPriceOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.feemodel.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.feemodel.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.feemodel.v1.GenesisProto.internal_static_coreum_feemodel_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.feemodel.v1.GenesisProto.internal_static_coreum_feemodel_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.feemodel.v1.GenesisProto.GenesisState.class, com.coreum.feemodel.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.coreum.feemodel.v1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.coreum.feemodel.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.coreum.feemodel.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.feemodel.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.coreum.feemodel.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int MIN_GAS_PRICE_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin minGasPrice_;
+    /**
+     * <pre>
+     * min_gas_price is the current minimum gas price required by the chain.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minGasPrice field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinGasPrice() {
+      return minGasPrice_ != null;
+    }
+    /**
+     * <pre>
+     * min_gas_price is the current minimum gas price required by the chain.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return The minGasPrice.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinGasPrice() {
+      return minGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : minGasPrice_;
+    }
+    /**
+     * <pre>
+     * min_gas_price is the current minimum gas price required by the chain.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinGasPriceOrBuilder() {
+      return minGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : minGasPrice_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (minGasPrice_ != null) {
+        output.writeMessage(2, getMinGasPrice());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (minGasPrice_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMinGasPrice());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.feemodel.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.coreum.feemodel.v1.GenesisProto.GenesisState other = (com.coreum.feemodel.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasMinGasPrice() != other.hasMinGasPrice()) return false;
+      if (hasMinGasPrice()) {
+        if (!getMinGasPrice()
+            .equals(other.getMinGasPrice())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasMinGasPrice()) {
+        hash = (37 * hash) + MIN_GAS_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getMinGasPrice().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.feemodel.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.feemodel.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.feemodel.v1.GenesisState)
+        com.coreum.feemodel.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.feemodel.v1.GenesisProto.internal_static_coreum_feemodel_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.feemodel.v1.GenesisProto.internal_static_coreum_feemodel_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.feemodel.v1.GenesisProto.GenesisState.class, com.coreum.feemodel.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.coreum.feemodel.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        minGasPrice_ = null;
+        if (minGasPriceBuilder_ != null) {
+          minGasPriceBuilder_.dispose();
+          minGasPriceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.feemodel.v1.GenesisProto.internal_static_coreum_feemodel_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.coreum.feemodel.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.GenesisProto.GenesisState build() {
+        com.coreum.feemodel.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.GenesisProto.GenesisState buildPartial() {
+        com.coreum.feemodel.v1.GenesisProto.GenesisState result = new com.coreum.feemodel.v1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.feemodel.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minGasPrice_ = minGasPriceBuilder_ == null
+              ? minGasPrice_
+              : minGasPriceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.feemodel.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.coreum.feemodel.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.feemodel.v1.GenesisProto.GenesisState other) {
+        if (other == com.coreum.feemodel.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasMinGasPrice()) {
+          mergeMinGasPrice(other.getMinGasPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getMinGasPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.coreum.feemodel.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.feemodel.v1.ParamsProto.Params, com.coreum.feemodel.v1.ParamsProto.Params.Builder, com.coreum.feemodel.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.coreum.feemodel.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.coreum.feemodel.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.coreum.feemodel.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.coreum.feemodel.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.coreum.feemodel.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.coreum.feemodel.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.feemodel.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.feemodel.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.coreum.feemodel.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.feemodel.v1.ParamsProto.Params, com.coreum.feemodel.v1.ParamsProto.Params.Builder, com.coreum.feemodel.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.coreum.feemodel.v1.ParamsProto.Params, com.coreum.feemodel.v1.ParamsProto.Params.Builder, com.coreum.feemodel.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin minGasPrice_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> minGasPriceBuilder_;
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       * @return Whether the minGasPrice field is set.
+       */
+      public boolean hasMinGasPrice() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       * @return The minGasPrice.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinGasPrice() {
+        if (minGasPriceBuilder_ == null) {
+          return minGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : minGasPrice_;
+        } else {
+          return minGasPriceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinGasPrice(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minGasPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minGasPrice_ = value;
+        } else {
+          minGasPriceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinGasPrice(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minGasPriceBuilder_ == null) {
+          minGasPrice_ = builderForValue.build();
+        } else {
+          minGasPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMinGasPrice(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minGasPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            minGasPrice_ != null &&
+            minGasPrice_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getMinGasPriceBuilder().mergeFrom(value);
+          } else {
+            minGasPrice_ = value;
+          }
+        } else {
+          minGasPriceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinGasPrice() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        minGasPrice_ = null;
+        if (minGasPriceBuilder_ != null) {
+          minGasPriceBuilder_.dispose();
+          minGasPriceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getMinGasPriceBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getMinGasPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinGasPriceOrBuilder() {
+        if (minGasPriceBuilder_ != null) {
+          return minGasPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return minGasPrice_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : minGasPrice_;
+        }
+      }
+      /**
+       * <pre>
+       * min_gas_price is the current minimum gas price required by the chain.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getMinGasPriceFieldBuilder() {
+        if (minGasPriceBuilder_ == null) {
+          minGasPriceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getMinGasPrice(),
+                  getParentForChildren(),
+                  isClean());
+          minGasPrice_ = null;
+        }
+        return minGasPriceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.feemodel.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.feemodel.v1.GenesisState)
+    private static final com.coreum.feemodel.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.feemodel.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.coreum.feemodel.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.feemodel.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_feemodel_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_feemodel_v1_GenesisState_fieldAccessorTable;
 
@@ -35,12 +959,12 @@ public final class GenesisProto {
       "\n\006params\030\001 \001(\0132\032.coreum.feemodel.v1.Para" +
       "msB\004\310\336\037\000R\006params\022F\n\rmin_gas_price\030\002 \001(\0132" +
       "\034.cosmos.base.v1beta1.DecCoinB\004\310\336\037\000R\013min" +
-      "GasPrice:\010\210\240\037\000\350\240\037\000B\305\001\n\026com.coreum.feemod" +
-      "el.v1B\014GenesisProtoP\001Z3github.com/Coreum" +
-      "Foundation/coreum/x/feemodel/types\242\002\003CFX" +
-      "\252\002\022Coreum.Feemodel.V1\312\002\022Coreum\\Feemodel\\" +
-      "V1\342\002\036Coreum\\Feemodel\\V1\\GPBMetadata\352\002\024Co" +
-      "reum::Feemodel::V1b\006proto3"
+      "GasPrice:\010\210\240\037\000\350\240\037\000B\303\001\n\026com.coreum.feemod" +
+      "el.v1B\014GenesisProtoZ3github.com/CoreumFo" +
+      "undation/coreum/x/feemodel/types\242\002\003CFX\252\002" +
+      "\022Coreum.Feemodel.V1\312\002\022Coreum\\Feemodel\\V1" +
+      "\342\002\036Coreum\\Feemodel\\V1\\GPBMetadata\352\002\024Core" +
+      "um::Feemodel::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

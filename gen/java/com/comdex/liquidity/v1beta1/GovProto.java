@@ -14,14 +14,2432 @@ public final class GovProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface UpdateGenericParamsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.UpdateGenericParamsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>repeated string keys = 2 [json_name = "keys"];</code>
+     * @return A list containing the keys.
+     */
+    java.util.List<java.lang.String>
+        getKeysList();
+    /**
+     * <code>repeated string keys = 2 [json_name = "keys"];</code>
+     * @return The count of keys.
+     */
+    int getKeysCount();
+    /**
+     * <code>repeated string keys = 2 [json_name = "keys"];</code>
+     * @param index The index of the element to return.
+     * @return The keys at the given index.
+     */
+    java.lang.String getKeys(int index);
+    /**
+     * <code>repeated string keys = 2 [json_name = "keys"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the keys at the given index.
+     */
+    com.google.protobuf.ByteString
+        getKeysBytes(int index);
+
+    /**
+     * <code>repeated string values = 3 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    java.util.List<java.lang.String>
+        getValuesList();
+    /**
+     * <code>repeated string values = 3 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    int getValuesCount();
+    /**
+     * <code>repeated string values = 3 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    java.lang.String getValues(int index);
+    /**
+     * <code>repeated string values = 3 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    com.google.protobuf.ByteString
+        getValuesBytes(int index);
+
+    /**
+     * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.liquidity.v1beta1.UpdateGenericParamsProposal}
+   */
+  public static final class UpdateGenericParamsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.UpdateGenericParamsProposal)
+      UpdateGenericParamsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateGenericParamsProposal.newBuilder() to construct.
+    private UpdateGenericParamsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateGenericParamsProposal() {
+      keys_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateGenericParamsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_UpdateGenericParamsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_UpdateGenericParamsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal.class, com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int KEYS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList keys_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string keys = 2 [json_name = "keys"];</code>
+     * @return A list containing the keys.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getKeysList() {
+      return keys_;
+    }
+    /**
+     * <code>repeated string keys = 2 [json_name = "keys"];</code>
+     * @return The count of keys.
+     */
+    public int getKeysCount() {
+      return keys_.size();
+    }
+    /**
+     * <code>repeated string keys = 2 [json_name = "keys"];</code>
+     * @param index The index of the element to return.
+     * @return The keys at the given index.
+     */
+    public java.lang.String getKeys(int index) {
+      return keys_.get(index);
+    }
+    /**
+     * <code>repeated string keys = 2 [json_name = "keys"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the keys at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getKeysBytes(int index) {
+      return keys_.getByteString(index);
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string values = 3 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getValuesList() {
+      return values_;
+    }
+    /**
+     * <code>repeated string values = 3 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated string values = 3 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    public java.lang.String getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <code>repeated string values = 3 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getValuesBytes(int index) {
+      return values_.getByteString(index);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      for (int i = 0; i < keys_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keys_.getRaw(i));
+      }
+      for (int i = 0; i < values_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, values_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < keys_.size(); i++) {
+          dataSize += computeStringSizeNoTag(keys_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getKeysList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < values_.size(); i++) {
+          dataSize += computeStringSizeNoTag(values_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getValuesList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal other = (com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getKeysList()
+          .equals(other.getKeysList())) return false;
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      if (getKeysCount() > 0) {
+        hash = (37 * hash) + KEYS_FIELD_NUMBER;
+        hash = (53 * hash) + getKeysList().hashCode();
+      }
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.liquidity.v1beta1.UpdateGenericParamsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.UpdateGenericParamsProposal)
+        com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_UpdateGenericParamsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_UpdateGenericParamsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal.class, com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        keys_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        values_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        title_ = "";
+        description_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_UpdateGenericParamsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal build() {
+        com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal buildPartial() {
+        com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal result = new com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          keys_.makeImmutable();
+          result.keys_ = keys_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          values_.makeImmutable();
+          result.values_ = values_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal other) {
+        if (other == com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (!other.keys_.isEmpty()) {
+          if (keys_.isEmpty()) {
+            keys_ = other.keys_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureKeysIsMutable();
+            keys_.addAll(other.keys_);
+          }
+          onChanged();
+        }
+        if (!other.values_.isEmpty()) {
+          if (values_.isEmpty()) {
+            values_ = other.values_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureValuesIsMutable();
+            values_.addAll(other.values_);
+          }
+          onChanged();
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureKeysIsMutable();
+                keys_.add(s);
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureValuesIsMutable();
+                values_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList keys_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureKeysIsMutable() {
+        if (!keys_.isModifiable()) {
+          keys_ = new com.google.protobuf.LazyStringArrayList(keys_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @return A list containing the keys.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getKeysList() {
+        keys_.makeImmutable();
+        return keys_;
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @return The count of keys.
+       */
+      public int getKeysCount() {
+        return keys_.size();
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @param index The index of the element to return.
+       * @return The keys at the given index.
+       */
+      public java.lang.String getKeys(int index) {
+        return keys_.get(index);
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the keys at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getKeysBytes(int index) {
+        return keys_.getByteString(index);
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @param index The index to set the value at.
+       * @param value The keys to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeys(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureKeysIsMutable();
+        keys_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @param value The keys to add.
+       * @return This builder for chaining.
+       */
+      public Builder addKeys(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureKeysIsMutable();
+        keys_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @param values The keys to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllKeys(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureKeysIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, keys_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeys() {
+        keys_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string keys = 2 [json_name = "keys"];</code>
+       * @param value The bytes of the keys to add.
+       * @return This builder for chaining.
+       */
+      public Builder addKeysBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureKeysIsMutable();
+        keys_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!values_.isModifiable()) {
+          values_ = new com.google.protobuf.LazyStringArrayList(values_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @return A list containing the values.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        values_.makeImmutable();
+        return values_;
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @param index The index to set the value at.
+       * @param value The values to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValues(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValuesIsMutable();
+        values_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @param value The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValues(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValuesIsMutable();
+        values_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @param values The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, values_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValues() {
+        values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 3 [json_name = "values"];</code>
+       * @param value The bytes of the values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValuesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureValuesIsMutable();
+        values_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 4 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 5 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.UpdateGenericParamsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.UpdateGenericParamsProposal)
+    private static final com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal();
+    }
+
+    public static com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateGenericParamsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateGenericParamsProposal>() {
+      @java.lang.Override
+      public UpdateGenericParamsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateGenericParamsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateGenericParamsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.GovProto.UpdateGenericParamsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateNewLiquidityPairProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.CreateNewLiquidityPairProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+     * @return The baseCoinDenom.
+     */
+    java.lang.String getBaseCoinDenom();
+    /**
+     * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+     * @return The bytes for baseCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getBaseCoinDenomBytes();
+
+    /**
+     * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+     * @return The quoteCoinDenom.
+     */
+    java.lang.String getQuoteCoinDenom();
+    /**
+     * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+     * @return The bytes for quoteCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getQuoteCoinDenomBytes();
+
+    /**
+     * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.liquidity.v1beta1.CreateNewLiquidityPairProposal}
+   */
+  public static final class CreateNewLiquidityPairProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.CreateNewLiquidityPairProposal)
+      CreateNewLiquidityPairProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateNewLiquidityPairProposal.newBuilder() to construct.
+    private CreateNewLiquidityPairProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateNewLiquidityPairProposal() {
+      from_ = "";
+      baseCoinDenom_ = "";
+      quoteCoinDenom_ = "";
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateNewLiquidityPairProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_CreateNewLiquidityPairProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_CreateNewLiquidityPairProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal.class, com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from"];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int BASE_COIN_DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseCoinDenom_ = "";
+    /**
+     * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+     * @return The baseCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseCoinDenom() {
+      java.lang.Object ref = baseCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+     * @return The bytes for baseCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseCoinDenomBytes() {
+      java.lang.Object ref = baseCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUOTE_COIN_DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quoteCoinDenom_ = "";
+    /**
+     * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+     * @return The quoteCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getQuoteCoinDenom() {
+      java.lang.Object ref = quoteCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quoteCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+     * @return The bytes for quoteCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuoteCoinDenomBytes() {
+      java.lang.Object ref = quoteCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quoteCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, baseCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quoteCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, quoteCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, baseCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quoteCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, quoteCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal other = (com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getBaseCoinDenom()
+          .equals(other.getBaseCoinDenom())) return false;
+      if (!getQuoteCoinDenom()
+          .equals(other.getQuoteCoinDenom())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + BASE_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseCoinDenom().hashCode();
+      hash = (37 * hash) + QUOTE_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getQuoteCoinDenom().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.liquidity.v1beta1.CreateNewLiquidityPairProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.CreateNewLiquidityPairProposal)
+        com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_CreateNewLiquidityPairProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_CreateNewLiquidityPairProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal.class, com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        appId_ = 0L;
+        baseCoinDenom_ = "";
+        quoteCoinDenom_ = "";
+        title_ = "";
+        description_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.GovProto.internal_static_comdex_liquidity_v1beta1_CreateNewLiquidityPairProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal build() {
+        com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal buildPartial() {
+        com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal result = new com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.baseCoinDenom_ = baseCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.quoteCoinDenom_ = quoteCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal other) {
+        if (other == com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (!other.getBaseCoinDenom().isEmpty()) {
+          baseCoinDenom_ = other.baseCoinDenom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getQuoteCoinDenom().isEmpty()) {
+          quoteCoinDenom_ = other.quoteCoinDenom_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                baseCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                quoteCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from"];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object baseCoinDenom_ = "";
+      /**
+       * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+       * @return The baseCoinDenom.
+       */
+      public java.lang.String getBaseCoinDenom() {
+        java.lang.Object ref = baseCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+       * @return The bytes for baseCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBaseCoinDenomBytes() {
+        java.lang.Object ref = baseCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+       * @param value The baseCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseCoinDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseCoinDenom() {
+        baseCoinDenom_ = getDefaultInstance().getBaseCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_coin_denom = 3 [json_name = "baseCoinDenom"];</code>
+       * @param value The bytes for baseCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseCoinDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quoteCoinDenom_ = "";
+      /**
+       * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+       * @return The quoteCoinDenom.
+       */
+      public java.lang.String getQuoteCoinDenom() {
+        java.lang.Object ref = quoteCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quoteCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+       * @return The bytes for quoteCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getQuoteCoinDenomBytes() {
+        java.lang.Object ref = quoteCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quoteCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+       * @param value The quoteCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quoteCoinDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuoteCoinDenom() {
+        quoteCoinDenom_ = getDefaultInstance().getQuoteCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string quote_coin_denom = 4 [json_name = "quoteCoinDenom"];</code>
+       * @param value The bytes for quoteCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quoteCoinDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 5 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 6 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.CreateNewLiquidityPairProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.CreateNewLiquidityPairProposal)
+    private static final com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal();
+    }
+
+    public static com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateNewLiquidityPairProposal>
+        PARSER = new com.google.protobuf.AbstractParser<CreateNewLiquidityPairProposal>() {
+      @java.lang.Override
+      public CreateNewLiquidityPairProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateNewLiquidityPairProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateNewLiquidityPairProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.GovProto.CreateNewLiquidityPairProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_UpdateGenericParamsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_UpdateGenericParamsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_CreateNewLiquidityPairProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_CreateNewLiquidityPairProposal_fieldAccessorTable;
 
@@ -46,13 +2464,13 @@ public final class GovProto {
       "(\n\020quote_coin_denom\030\004 \001(\tR\016quoteCoinDeno" +
       "m\022&\n\005title\030\005 \001(\tB\020\362\336\037\014yaml:\"title\"R\005titl" +
       "e\0228\n\013description\030\006 \001(\tB\026\362\336\037\022yaml:\"descri" +
-      "ption\"R\013descriptionB\347\001\n\034com.comdex.liqui" +
-      "dity.v1beta1B\010GovProtoP\001Z3github.com/com" +
-      "dex-official/comdex/x/liquidity/types\242\002\003" +
-      "CLX\252\002\030Comdex.Liquidity.V1beta1\312\002\030Comdex\\" +
-      "Liquidity\\V1beta1\342\002$Comdex\\Liquidity\\V1b" +
-      "eta1\\GPBMetadata\352\002\032Comdex::Liquidity::V1" +
-      "beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "ption\"R\013descriptionB\345\001\n\034com.comdex.liqui" +
+      "dity.v1beta1B\010GovProtoZ3github.com/comde" +
+      "x-official/comdex/x/liquidity/types\242\002\003CL" +
+      "X\252\002\030Comdex.Liquidity.V1beta1\312\002\030Comdex\\Li" +
+      "quidity\\V1beta1\342\002$Comdex\\Liquidity\\V1bet" +
+      "a1\\GPBMetadata\352\002\032Comdex::Liquidity::V1be" +
+      "ta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

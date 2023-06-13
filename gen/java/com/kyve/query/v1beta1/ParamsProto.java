@@ -14,14 +14,2111 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest.class, com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest other = (com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryParamsRequest)
+        com.kyve.query.v1beta1.ParamsProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest.class, com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest build() {
+        com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest buildPartial() {
+        com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest result = new com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest) {
+          return mergeFrom((com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest other) {
+        if (other == com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryParamsRequest)
+    private static final com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest();
+    }
+
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * bundles_params ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+     * @return Whether the bundlesParams field is set.
+     */
+    boolean hasBundlesParams();
+    /**
+     * <pre>
+     * bundles_params ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+     * @return The bundlesParams.
+     */
+    com.kyve.bundles.v1beta1.ParamsProto.Params getBundlesParams();
+    /**
+     * <pre>
+     * bundles_params ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+     */
+    com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder getBundlesParamsOrBuilder();
+
+    /**
+     * <pre>
+     * delegation_params ...
+     * </pre>
+     *
+     * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+     * @return Whether the delegationParams field is set.
+     */
+    boolean hasDelegationParams();
+    /**
+     * <pre>
+     * delegation_params ...
+     * </pre>
+     *
+     * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+     * @return The delegationParams.
+     */
+    com.kyve.delegation.v1beta1.ParamsProto.Params getDelegationParams();
+    /**
+     * <pre>
+     * delegation_params ...
+     * </pre>
+     *
+     * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+     */
+    com.kyve.delegation.v1beta1.ParamsProto.ParamsOrBuilder getDelegationParamsOrBuilder();
+
+    /**
+     * <pre>
+     * global_params ...
+     * </pre>
+     *
+     * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+     * @return Whether the globalParams field is set.
+     */
+    boolean hasGlobalParams();
+    /**
+     * <pre>
+     * global_params ...
+     * </pre>
+     *
+     * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+     * @return The globalParams.
+     */
+    com.kyve.global.v1beta1.GlobalProto.Params getGlobalParams();
+    /**
+     * <pre>
+     * global_params ...
+     * </pre>
+     *
+     * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+     */
+    com.kyve.global.v1beta1.GlobalProto.ParamsOrBuilder getGlobalParamsOrBuilder();
+
+    /**
+     * <pre>
+     * gov_params ...
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+     * @return Whether the govParams field is set.
+     */
+    boolean hasGovParams();
+    /**
+     * <pre>
+     * gov_params ...
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+     * @return The govParams.
+     */
+    com.cosmos.gov.v1.QueryProto.QueryParamsResponse getGovParams();
+    /**
+     * <pre>
+     * gov_params ...
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+     */
+    com.cosmos.gov.v1.QueryProto.QueryParamsResponseOrBuilder getGovParamsOrBuilder();
+
+    /**
+     * <pre>
+     * stakers_params ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+     * @return Whether the stakersParams field is set.
+     */
+    boolean hasStakersParams();
+    /**
+     * <pre>
+     * stakers_params ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+     * @return The stakersParams.
+     */
+    com.kyve.stakers.v1beta1.ParamsProto.Params getStakersParams();
+    /**
+     * <pre>
+     * stakers_params ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+     */
+    com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getStakersParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse.class, com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int BUNDLES_PARAMS_FIELD_NUMBER = 1;
+    private com.kyve.bundles.v1beta1.ParamsProto.Params bundlesParams_;
+    /**
+     * <pre>
+     * bundles_params ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+     * @return Whether the bundlesParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasBundlesParams() {
+      return bundlesParams_ != null;
+    }
+    /**
+     * <pre>
+     * bundles_params ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+     * @return The bundlesParams.
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.ParamsProto.Params getBundlesParams() {
+      return bundlesParams_ == null ? com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance() : bundlesParams_;
+    }
+    /**
+     * <pre>
+     * bundles_params ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder getBundlesParamsOrBuilder() {
+      return bundlesParams_ == null ? com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance() : bundlesParams_;
+    }
+
+    public static final int DELEGATION_PARAMS_FIELD_NUMBER = 2;
+    private com.kyve.delegation.v1beta1.ParamsProto.Params delegationParams_;
+    /**
+     * <pre>
+     * delegation_params ...
+     * </pre>
+     *
+     * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+     * @return Whether the delegationParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelegationParams() {
+      return delegationParams_ != null;
+    }
+    /**
+     * <pre>
+     * delegation_params ...
+     * </pre>
+     *
+     * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+     * @return The delegationParams.
+     */
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.ParamsProto.Params getDelegationParams() {
+      return delegationParams_ == null ? com.kyve.delegation.v1beta1.ParamsProto.Params.getDefaultInstance() : delegationParams_;
+    }
+    /**
+     * <pre>
+     * delegation_params ...
+     * </pre>
+     *
+     * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+     */
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.ParamsProto.ParamsOrBuilder getDelegationParamsOrBuilder() {
+      return delegationParams_ == null ? com.kyve.delegation.v1beta1.ParamsProto.Params.getDefaultInstance() : delegationParams_;
+    }
+
+    public static final int GLOBAL_PARAMS_FIELD_NUMBER = 3;
+    private com.kyve.global.v1beta1.GlobalProto.Params globalParams_;
+    /**
+     * <pre>
+     * global_params ...
+     * </pre>
+     *
+     * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+     * @return Whether the globalParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasGlobalParams() {
+      return globalParams_ != null;
+    }
+    /**
+     * <pre>
+     * global_params ...
+     * </pre>
+     *
+     * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+     * @return The globalParams.
+     */
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.Params getGlobalParams() {
+      return globalParams_ == null ? com.kyve.global.v1beta1.GlobalProto.Params.getDefaultInstance() : globalParams_;
+    }
+    /**
+     * <pre>
+     * global_params ...
+     * </pre>
+     *
+     * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+     */
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.ParamsOrBuilder getGlobalParamsOrBuilder() {
+      return globalParams_ == null ? com.kyve.global.v1beta1.GlobalProto.Params.getDefaultInstance() : globalParams_;
+    }
+
+    public static final int GOV_PARAMS_FIELD_NUMBER = 4;
+    private com.cosmos.gov.v1.QueryProto.QueryParamsResponse govParams_;
+    /**
+     * <pre>
+     * gov_params ...
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+     * @return Whether the govParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasGovParams() {
+      return govParams_ != null;
+    }
+    /**
+     * <pre>
+     * gov_params ...
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+     * @return The govParams.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1.QueryProto.QueryParamsResponse getGovParams() {
+      return govParams_ == null ? com.cosmos.gov.v1.QueryProto.QueryParamsResponse.getDefaultInstance() : govParams_;
+    }
+    /**
+     * <pre>
+     * gov_params ...
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1.QueryProto.QueryParamsResponseOrBuilder getGovParamsOrBuilder() {
+      return govParams_ == null ? com.cosmos.gov.v1.QueryProto.QueryParamsResponse.getDefaultInstance() : govParams_;
+    }
+
+    public static final int STAKERS_PARAMS_FIELD_NUMBER = 5;
+    private com.kyve.stakers.v1beta1.ParamsProto.Params stakersParams_;
+    /**
+     * <pre>
+     * stakers_params ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+     * @return Whether the stakersParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasStakersParams() {
+      return stakersParams_ != null;
+    }
+    /**
+     * <pre>
+     * stakers_params ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+     * @return The stakersParams.
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.ParamsProto.Params getStakersParams() {
+      return stakersParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : stakersParams_;
+    }
+    /**
+     * <pre>
+     * stakers_params ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getStakersParamsOrBuilder() {
+      return stakersParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : stakersParams_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (bundlesParams_ != null) {
+        output.writeMessage(1, getBundlesParams());
+      }
+      if (delegationParams_ != null) {
+        output.writeMessage(2, getDelegationParams());
+      }
+      if (globalParams_ != null) {
+        output.writeMessage(3, getGlobalParams());
+      }
+      if (govParams_ != null) {
+        output.writeMessage(4, getGovParams());
+      }
+      if (stakersParams_ != null) {
+        output.writeMessage(5, getStakersParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (bundlesParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBundlesParams());
+      }
+      if (delegationParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDelegationParams());
+      }
+      if (globalParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getGlobalParams());
+      }
+      if (govParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGovParams());
+      }
+      if (stakersParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getStakersParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse other = (com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse) obj;
+
+      if (hasBundlesParams() != other.hasBundlesParams()) return false;
+      if (hasBundlesParams()) {
+        if (!getBundlesParams()
+            .equals(other.getBundlesParams())) return false;
+      }
+      if (hasDelegationParams() != other.hasDelegationParams()) return false;
+      if (hasDelegationParams()) {
+        if (!getDelegationParams()
+            .equals(other.getDelegationParams())) return false;
+      }
+      if (hasGlobalParams() != other.hasGlobalParams()) return false;
+      if (hasGlobalParams()) {
+        if (!getGlobalParams()
+            .equals(other.getGlobalParams())) return false;
+      }
+      if (hasGovParams() != other.hasGovParams()) return false;
+      if (hasGovParams()) {
+        if (!getGovParams()
+            .equals(other.getGovParams())) return false;
+      }
+      if (hasStakersParams() != other.hasStakersParams()) return false;
+      if (hasStakersParams()) {
+        if (!getStakersParams()
+            .equals(other.getStakersParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBundlesParams()) {
+        hash = (37 * hash) + BUNDLES_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getBundlesParams().hashCode();
+      }
+      if (hasDelegationParams()) {
+        hash = (37 * hash) + DELEGATION_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getDelegationParams().hashCode();
+      }
+      if (hasGlobalParams()) {
+        hash = (37 * hash) + GLOBAL_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getGlobalParams().hashCode();
+      }
+      if (hasGovParams()) {
+        hash = (37 * hash) + GOV_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getGovParams().hashCode();
+      }
+      if (hasStakersParams()) {
+        hash = (37 * hash) + STAKERS_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakersParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryParamsResponse)
+        com.kyve.query.v1beta1.ParamsProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse.class, com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bundlesParams_ = null;
+        if (bundlesParamsBuilder_ != null) {
+          bundlesParamsBuilder_.dispose();
+          bundlesParamsBuilder_ = null;
+        }
+        delegationParams_ = null;
+        if (delegationParamsBuilder_ != null) {
+          delegationParamsBuilder_.dispose();
+          delegationParamsBuilder_ = null;
+        }
+        globalParams_ = null;
+        if (globalParamsBuilder_ != null) {
+          globalParamsBuilder_.dispose();
+          globalParamsBuilder_ = null;
+        }
+        govParams_ = null;
+        if (govParamsBuilder_ != null) {
+          govParamsBuilder_.dispose();
+          govParamsBuilder_ = null;
+        }
+        stakersParams_ = null;
+        if (stakersParamsBuilder_ != null) {
+          stakersParamsBuilder_.dispose();
+          stakersParamsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.ParamsProto.internal_static_kyve_query_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse build() {
+        com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse buildPartial() {
+        com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse result = new com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bundlesParams_ = bundlesParamsBuilder_ == null
+              ? bundlesParams_
+              : bundlesParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.delegationParams_ = delegationParamsBuilder_ == null
+              ? delegationParams_
+              : delegationParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.globalParams_ = globalParamsBuilder_ == null
+              ? globalParams_
+              : globalParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.govParams_ = govParamsBuilder_ == null
+              ? govParams_
+              : govParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.stakersParams_ = stakersParamsBuilder_ == null
+              ? stakersParams_
+              : stakersParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse) {
+          return mergeFrom((com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse other) {
+        if (other == com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasBundlesParams()) {
+          mergeBundlesParams(other.getBundlesParams());
+        }
+        if (other.hasDelegationParams()) {
+          mergeDelegationParams(other.getDelegationParams());
+        }
+        if (other.hasGlobalParams()) {
+          mergeGlobalParams(other.getGlobalParams());
+        }
+        if (other.hasGovParams()) {
+          mergeGovParams(other.getGovParams());
+        }
+        if (other.hasStakersParams()) {
+          mergeStakersParams(other.getStakersParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBundlesParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getDelegationParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getGlobalParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getGovParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getStakersParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.kyve.bundles.v1beta1.ParamsProto.Params bundlesParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.bundles.v1beta1.ParamsProto.Params, com.kyve.bundles.v1beta1.ParamsProto.Params.Builder, com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder> bundlesParamsBuilder_;
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       * @return Whether the bundlesParams field is set.
+       */
+      public boolean hasBundlesParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       * @return The bundlesParams.
+       */
+      public com.kyve.bundles.v1beta1.ParamsProto.Params getBundlesParams() {
+        if (bundlesParamsBuilder_ == null) {
+          return bundlesParams_ == null ? com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance() : bundlesParams_;
+        } else {
+          return bundlesParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       */
+      public Builder setBundlesParams(com.kyve.bundles.v1beta1.ParamsProto.Params value) {
+        if (bundlesParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bundlesParams_ = value;
+        } else {
+          bundlesParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       */
+      public Builder setBundlesParams(
+          com.kyve.bundles.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (bundlesParamsBuilder_ == null) {
+          bundlesParams_ = builderForValue.build();
+        } else {
+          bundlesParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       */
+      public Builder mergeBundlesParams(com.kyve.bundles.v1beta1.ParamsProto.Params value) {
+        if (bundlesParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            bundlesParams_ != null &&
+            bundlesParams_ != com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getBundlesParamsBuilder().mergeFrom(value);
+          } else {
+            bundlesParams_ = value;
+          }
+        } else {
+          bundlesParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       */
+      public Builder clearBundlesParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bundlesParams_ = null;
+        if (bundlesParamsBuilder_ != null) {
+          bundlesParamsBuilder_.dispose();
+          bundlesParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       */
+      public com.kyve.bundles.v1beta1.ParamsProto.Params.Builder getBundlesParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBundlesParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       */
+      public com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder getBundlesParamsOrBuilder() {
+        if (bundlesParamsBuilder_ != null) {
+          return bundlesParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return bundlesParams_ == null ?
+              com.kyve.bundles.v1beta1.ParamsProto.Params.getDefaultInstance() : bundlesParams_;
+        }
+      }
+      /**
+       * <pre>
+       * bundles_params ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.Params bundles_params = 1 [json_name = "bundlesParams"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.bundles.v1beta1.ParamsProto.Params, com.kyve.bundles.v1beta1.ParamsProto.Params.Builder, com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getBundlesParamsFieldBuilder() {
+        if (bundlesParamsBuilder_ == null) {
+          bundlesParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.bundles.v1beta1.ParamsProto.Params, com.kyve.bundles.v1beta1.ParamsProto.Params.Builder, com.kyve.bundles.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getBundlesParams(),
+                  getParentForChildren(),
+                  isClean());
+          bundlesParams_ = null;
+        }
+        return bundlesParamsBuilder_;
+      }
+
+      private com.kyve.delegation.v1beta1.ParamsProto.Params delegationParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.delegation.v1beta1.ParamsProto.Params, com.kyve.delegation.v1beta1.ParamsProto.Params.Builder, com.kyve.delegation.v1beta1.ParamsProto.ParamsOrBuilder> delegationParamsBuilder_;
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       * @return Whether the delegationParams field is set.
+       */
+      public boolean hasDelegationParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       * @return The delegationParams.
+       */
+      public com.kyve.delegation.v1beta1.ParamsProto.Params getDelegationParams() {
+        if (delegationParamsBuilder_ == null) {
+          return delegationParams_ == null ? com.kyve.delegation.v1beta1.ParamsProto.Params.getDefaultInstance() : delegationParams_;
+        } else {
+          return delegationParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       */
+      public Builder setDelegationParams(com.kyve.delegation.v1beta1.ParamsProto.Params value) {
+        if (delegationParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delegationParams_ = value;
+        } else {
+          delegationParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       */
+      public Builder setDelegationParams(
+          com.kyve.delegation.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (delegationParamsBuilder_ == null) {
+          delegationParams_ = builderForValue.build();
+        } else {
+          delegationParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       */
+      public Builder mergeDelegationParams(com.kyve.delegation.v1beta1.ParamsProto.Params value) {
+        if (delegationParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            delegationParams_ != null &&
+            delegationParams_ != com.kyve.delegation.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getDelegationParamsBuilder().mergeFrom(value);
+          } else {
+            delegationParams_ = value;
+          }
+        } else {
+          delegationParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       */
+      public Builder clearDelegationParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        delegationParams_ = null;
+        if (delegationParamsBuilder_ != null) {
+          delegationParamsBuilder_.dispose();
+          delegationParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       */
+      public com.kyve.delegation.v1beta1.ParamsProto.Params.Builder getDelegationParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDelegationParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       */
+      public com.kyve.delegation.v1beta1.ParamsProto.ParamsOrBuilder getDelegationParamsOrBuilder() {
+        if (delegationParamsBuilder_ != null) {
+          return delegationParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return delegationParams_ == null ?
+              com.kyve.delegation.v1beta1.ParamsProto.Params.getDefaultInstance() : delegationParams_;
+        }
+      }
+      /**
+       * <pre>
+       * delegation_params ...
+       * </pre>
+       *
+       * <code>.kyve.delegation.v1beta1.Params delegation_params = 2 [json_name = "delegationParams"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.delegation.v1beta1.ParamsProto.Params, com.kyve.delegation.v1beta1.ParamsProto.Params.Builder, com.kyve.delegation.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getDelegationParamsFieldBuilder() {
+        if (delegationParamsBuilder_ == null) {
+          delegationParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.delegation.v1beta1.ParamsProto.Params, com.kyve.delegation.v1beta1.ParamsProto.Params.Builder, com.kyve.delegation.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getDelegationParams(),
+                  getParentForChildren(),
+                  isClean());
+          delegationParams_ = null;
+        }
+        return delegationParamsBuilder_;
+      }
+
+      private com.kyve.global.v1beta1.GlobalProto.Params globalParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.global.v1beta1.GlobalProto.Params, com.kyve.global.v1beta1.GlobalProto.Params.Builder, com.kyve.global.v1beta1.GlobalProto.ParamsOrBuilder> globalParamsBuilder_;
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       * @return Whether the globalParams field is set.
+       */
+      public boolean hasGlobalParams() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       * @return The globalParams.
+       */
+      public com.kyve.global.v1beta1.GlobalProto.Params getGlobalParams() {
+        if (globalParamsBuilder_ == null) {
+          return globalParams_ == null ? com.kyve.global.v1beta1.GlobalProto.Params.getDefaultInstance() : globalParams_;
+        } else {
+          return globalParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       */
+      public Builder setGlobalParams(com.kyve.global.v1beta1.GlobalProto.Params value) {
+        if (globalParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          globalParams_ = value;
+        } else {
+          globalParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       */
+      public Builder setGlobalParams(
+          com.kyve.global.v1beta1.GlobalProto.Params.Builder builderForValue) {
+        if (globalParamsBuilder_ == null) {
+          globalParams_ = builderForValue.build();
+        } else {
+          globalParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       */
+      public Builder mergeGlobalParams(com.kyve.global.v1beta1.GlobalProto.Params value) {
+        if (globalParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            globalParams_ != null &&
+            globalParams_ != com.kyve.global.v1beta1.GlobalProto.Params.getDefaultInstance()) {
+            getGlobalParamsBuilder().mergeFrom(value);
+          } else {
+            globalParams_ = value;
+          }
+        } else {
+          globalParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       */
+      public Builder clearGlobalParams() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        globalParams_ = null;
+        if (globalParamsBuilder_ != null) {
+          globalParamsBuilder_.dispose();
+          globalParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.Params.Builder getGlobalParamsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getGlobalParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.ParamsOrBuilder getGlobalParamsOrBuilder() {
+        if (globalParamsBuilder_ != null) {
+          return globalParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return globalParams_ == null ?
+              com.kyve.global.v1beta1.GlobalProto.Params.getDefaultInstance() : globalParams_;
+        }
+      }
+      /**
+       * <pre>
+       * global_params ...
+       * </pre>
+       *
+       * <code>.kyve.global.v1beta1.Params global_params = 3 [json_name = "globalParams"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.global.v1beta1.GlobalProto.Params, com.kyve.global.v1beta1.GlobalProto.Params.Builder, com.kyve.global.v1beta1.GlobalProto.ParamsOrBuilder> 
+          getGlobalParamsFieldBuilder() {
+        if (globalParamsBuilder_ == null) {
+          globalParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.global.v1beta1.GlobalProto.Params, com.kyve.global.v1beta1.GlobalProto.Params.Builder, com.kyve.global.v1beta1.GlobalProto.ParamsOrBuilder>(
+                  getGlobalParams(),
+                  getParentForChildren(),
+                  isClean());
+          globalParams_ = null;
+        }
+        return globalParamsBuilder_;
+      }
+
+      private com.cosmos.gov.v1.QueryProto.QueryParamsResponse govParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1.QueryProto.QueryParamsResponse, com.cosmos.gov.v1.QueryProto.QueryParamsResponse.Builder, com.cosmos.gov.v1.QueryProto.QueryParamsResponseOrBuilder> govParamsBuilder_;
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       * @return Whether the govParams field is set.
+       */
+      public boolean hasGovParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       * @return The govParams.
+       */
+      public com.cosmos.gov.v1.QueryProto.QueryParamsResponse getGovParams() {
+        if (govParamsBuilder_ == null) {
+          return govParams_ == null ? com.cosmos.gov.v1.QueryProto.QueryParamsResponse.getDefaultInstance() : govParams_;
+        } else {
+          return govParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       */
+      public Builder setGovParams(com.cosmos.gov.v1.QueryProto.QueryParamsResponse value) {
+        if (govParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          govParams_ = value;
+        } else {
+          govParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       */
+      public Builder setGovParams(
+          com.cosmos.gov.v1.QueryProto.QueryParamsResponse.Builder builderForValue) {
+        if (govParamsBuilder_ == null) {
+          govParams_ = builderForValue.build();
+        } else {
+          govParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       */
+      public Builder mergeGovParams(com.cosmos.gov.v1.QueryProto.QueryParamsResponse value) {
+        if (govParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            govParams_ != null &&
+            govParams_ != com.cosmos.gov.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) {
+            getGovParamsBuilder().mergeFrom(value);
+          } else {
+            govParams_ = value;
+          }
+        } else {
+          govParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       */
+      public Builder clearGovParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        govParams_ = null;
+        if (govParamsBuilder_ != null) {
+          govParamsBuilder_.dispose();
+          govParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       */
+      public com.cosmos.gov.v1.QueryProto.QueryParamsResponse.Builder getGovParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getGovParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       */
+      public com.cosmos.gov.v1.QueryProto.QueryParamsResponseOrBuilder getGovParamsOrBuilder() {
+        if (govParamsBuilder_ != null) {
+          return govParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return govParams_ == null ?
+              com.cosmos.gov.v1.QueryProto.QueryParamsResponse.getDefaultInstance() : govParams_;
+        }
+      }
+      /**
+       * <pre>
+       * gov_params ...
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.QueryParamsResponse gov_params = 4 [json_name = "govParams"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1.QueryProto.QueryParamsResponse, com.cosmos.gov.v1.QueryProto.QueryParamsResponse.Builder, com.cosmos.gov.v1.QueryProto.QueryParamsResponseOrBuilder> 
+          getGovParamsFieldBuilder() {
+        if (govParamsBuilder_ == null) {
+          govParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1.QueryProto.QueryParamsResponse, com.cosmos.gov.v1.QueryProto.QueryParamsResponse.Builder, com.cosmos.gov.v1.QueryProto.QueryParamsResponseOrBuilder>(
+                  getGovParams(),
+                  getParentForChildren(),
+                  isClean());
+          govParams_ = null;
+        }
+        return govParamsBuilder_;
+      }
+
+      private com.kyve.stakers.v1beta1.ParamsProto.Params stakersParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder> stakersParamsBuilder_;
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       * @return Whether the stakersParams field is set.
+       */
+      public boolean hasStakersParams() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       * @return The stakersParams.
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.Params getStakersParams() {
+        if (stakersParamsBuilder_ == null) {
+          return stakersParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : stakersParams_;
+        } else {
+          return stakersParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       */
+      public Builder setStakersParams(com.kyve.stakers.v1beta1.ParamsProto.Params value) {
+        if (stakersParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stakersParams_ = value;
+        } else {
+          stakersParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       */
+      public Builder setStakersParams(
+          com.kyve.stakers.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (stakersParamsBuilder_ == null) {
+          stakersParams_ = builderForValue.build();
+        } else {
+          stakersParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       */
+      public Builder mergeStakersParams(com.kyve.stakers.v1beta1.ParamsProto.Params value) {
+        if (stakersParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            stakersParams_ != null &&
+            stakersParams_ != com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getStakersParamsBuilder().mergeFrom(value);
+          } else {
+            stakersParams_ = value;
+          }
+        } else {
+          stakersParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       */
+      public Builder clearStakersParams() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        stakersParams_ = null;
+        if (stakersParamsBuilder_ != null) {
+          stakersParamsBuilder_.dispose();
+          stakersParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.Params.Builder getStakersParamsBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getStakersParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getStakersParamsOrBuilder() {
+        if (stakersParamsBuilder_ != null) {
+          return stakersParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return stakersParams_ == null ?
+              com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : stakersParams_;
+        }
+      }
+      /**
+       * <pre>
+       * stakers_params ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params stakers_params = 5 [json_name = "stakersParams"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getStakersParamsFieldBuilder() {
+        if (stakersParamsBuilder_ == null) {
+          stakersParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getStakersParams(),
+                  getParentForChildren(),
+                  isClean());
+          stakersParams_ = null;
+        }
+        return stakersParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryParamsResponse)
+    private static final com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse();
+    }
+
+    public static com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.ParamsProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryParamsResponse_fieldAccessorTable;
 
@@ -52,12 +2149,12 @@ public final class ParamsProto {
       "sParams2\214\001\n\013QueryParams\022}\n\006Params\022&.kyve" +
       ".query.v1beta1.QueryParamsRequest\032\'.kyve" +
       ".query.v1beta1.QueryParamsResponse\"\"\202\323\344\223" +
-      "\002\034\022\032/kyve/query/v1beta1/paramsB\273\001\n\026com.k" +
-      "yve.query.v1beta1B\013ParamsProtoP\001Z*github" +
-      ".com/KYVENetwork/chain/x/query/types\242\002\003K" +
-      "QX\252\002\022Kyve.Query.V1beta1\312\002\022Kyve\\Query\\V1b" +
-      "eta1\342\002\036Kyve\\Query\\V1beta1\\GPBMetadata\352\002\024" +
-      "Kyve::Query::V1beta1b\006proto3"
+      "\002\034\022\032/kyve/query/v1beta1/paramsB\271\001\n\026com.k" +
+      "yve.query.v1beta1B\013ParamsProtoZ*github.c" +
+      "om/KYVENetwork/chain/x/query/types\242\002\003KQX" +
+      "\252\002\022Kyve.Query.V1beta1\312\002\022Kyve\\Query\\V1bet" +
+      "a1\342\002\036Kyve\\Query\\V1beta1\\GPBMetadata\352\002\024Ky" +
+      "ve::Query::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

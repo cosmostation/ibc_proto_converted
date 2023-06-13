@@ -14,9 +14,791 @@ public final class PrizeStrategyProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface PrizeStrategyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.PrizeStrategy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.lum.network.millions.PrizeBatchProto.PrizeBatch> 
+        getPrizeBatchesList();
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.millions.PrizeBatchProto.PrizeBatch getPrizeBatches(int index);
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    int getPrizeBatchesCount();
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder> 
+        getPrizeBatchesOrBuilderList();
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder getPrizeBatchesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.PrizeStrategy}
+   */
+  public static final class PrizeStrategy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.PrizeStrategy)
+      PrizeStrategyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrizeStrategy.newBuilder() to construct.
+    private PrizeStrategy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrizeStrategy() {
+      prizeBatches_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrizeStrategy();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.PrizeStrategyProto.internal_static_lum_network_millions_PrizeStrategy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.PrizeStrategyProto.internal_static_lum_network_millions_PrizeStrategy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.class, com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder.class);
+    }
+
+    public static final int PRIZE_BATCHES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.millions.PrizeBatchProto.PrizeBatch> prizeBatches_;
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.millions.PrizeBatchProto.PrizeBatch> getPrizeBatchesList() {
+      return prizeBatches_;
+    }
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder> 
+        getPrizeBatchesOrBuilderList() {
+      return prizeBatches_;
+    }
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPrizeBatchesCount() {
+      return prizeBatches_.size();
+    }
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.PrizeBatchProto.PrizeBatch getPrizeBatches(int index) {
+      return prizeBatches_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder getPrizeBatchesOrBuilder(
+        int index) {
+      return prizeBatches_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < prizeBatches_.size(); i++) {
+        output.writeMessage(1, prizeBatches_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < prizeBatches_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, prizeBatches_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.PrizeStrategyProto.PrizeStrategy)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.PrizeStrategyProto.PrizeStrategy other = (com.lum.network.millions.PrizeStrategyProto.PrizeStrategy) obj;
+
+      if (!getPrizeBatchesList()
+          .equals(other.getPrizeBatchesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPrizeBatchesCount() > 0) {
+        hash = (37 * hash) + PRIZE_BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + getPrizeBatchesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.PrizeStrategyProto.PrizeStrategy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.PrizeStrategy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.PrizeStrategy)
+        com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.PrizeStrategyProto.internal_static_lum_network_millions_PrizeStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.PrizeStrategyProto.internal_static_lum_network_millions_PrizeStrategy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.class, com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (prizeBatchesBuilder_ == null) {
+          prizeBatches_ = java.util.Collections.emptyList();
+        } else {
+          prizeBatches_ = null;
+          prizeBatchesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.PrizeStrategyProto.internal_static_lum_network_millions_PrizeStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getDefaultInstanceForType() {
+        return com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy build() {
+        com.lum.network.millions.PrizeStrategyProto.PrizeStrategy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy buildPartial() {
+        com.lum.network.millions.PrizeStrategyProto.PrizeStrategy result = new com.lum.network.millions.PrizeStrategyProto.PrizeStrategy(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.millions.PrizeStrategyProto.PrizeStrategy result) {
+        if (prizeBatchesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            prizeBatches_ = java.util.Collections.unmodifiableList(prizeBatches_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.prizeBatches_ = prizeBatches_;
+        } else {
+          result.prizeBatches_ = prizeBatchesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.millions.PrizeStrategyProto.PrizeStrategy result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.PrizeStrategyProto.PrizeStrategy) {
+          return mergeFrom((com.lum.network.millions.PrizeStrategyProto.PrizeStrategy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.PrizeStrategyProto.PrizeStrategy other) {
+        if (other == com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance()) return this;
+        if (prizeBatchesBuilder_ == null) {
+          if (!other.prizeBatches_.isEmpty()) {
+            if (prizeBatches_.isEmpty()) {
+              prizeBatches_ = other.prizeBatches_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePrizeBatchesIsMutable();
+              prizeBatches_.addAll(other.prizeBatches_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.prizeBatches_.isEmpty()) {
+            if (prizeBatchesBuilder_.isEmpty()) {
+              prizeBatchesBuilder_.dispose();
+              prizeBatchesBuilder_ = null;
+              prizeBatches_ = other.prizeBatches_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              prizeBatchesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPrizeBatchesFieldBuilder() : null;
+            } else {
+              prizeBatchesBuilder_.addAllMessages(other.prizeBatches_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lum.network.millions.PrizeBatchProto.PrizeBatch m =
+                    input.readMessage(
+                        com.lum.network.millions.PrizeBatchProto.PrizeBatch.parser(),
+                        extensionRegistry);
+                if (prizeBatchesBuilder_ == null) {
+                  ensurePrizeBatchesIsMutable();
+                  prizeBatches_.add(m);
+                } else {
+                  prizeBatchesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lum.network.millions.PrizeBatchProto.PrizeBatch> prizeBatches_ =
+        java.util.Collections.emptyList();
+      private void ensurePrizeBatchesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          prizeBatches_ = new java.util.ArrayList<com.lum.network.millions.PrizeBatchProto.PrizeBatch>(prizeBatches_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.millions.PrizeBatchProto.PrizeBatch, com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder, com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder> prizeBatchesBuilder_;
+
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.millions.PrizeBatchProto.PrizeBatch> getPrizeBatchesList() {
+        if (prizeBatchesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(prizeBatches_);
+        } else {
+          return prizeBatchesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPrizeBatchesCount() {
+        if (prizeBatchesBuilder_ == null) {
+          return prizeBatches_.size();
+        } else {
+          return prizeBatchesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeBatchProto.PrizeBatch getPrizeBatches(int index) {
+        if (prizeBatchesBuilder_ == null) {
+          return prizeBatches_.get(index);
+        } else {
+          return prizeBatchesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPrizeBatches(
+          int index, com.lum.network.millions.PrizeBatchProto.PrizeBatch value) {
+        if (prizeBatchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrizeBatchesIsMutable();
+          prizeBatches_.set(index, value);
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPrizeBatches(
+          int index, com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder builderForValue) {
+        if (prizeBatchesBuilder_ == null) {
+          ensurePrizeBatchesIsMutable();
+          prizeBatches_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPrizeBatches(com.lum.network.millions.PrizeBatchProto.PrizeBatch value) {
+        if (prizeBatchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrizeBatchesIsMutable();
+          prizeBatches_.add(value);
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPrizeBatches(
+          int index, com.lum.network.millions.PrizeBatchProto.PrizeBatch value) {
+        if (prizeBatchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrizeBatchesIsMutable();
+          prizeBatches_.add(index, value);
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPrizeBatches(
+          com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder builderForValue) {
+        if (prizeBatchesBuilder_ == null) {
+          ensurePrizeBatchesIsMutable();
+          prizeBatches_.add(builderForValue.build());
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPrizeBatches(
+          int index, com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder builderForValue) {
+        if (prizeBatchesBuilder_ == null) {
+          ensurePrizeBatchesIsMutable();
+          prizeBatches_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPrizeBatches(
+          java.lang.Iterable<? extends com.lum.network.millions.PrizeBatchProto.PrizeBatch> values) {
+        if (prizeBatchesBuilder_ == null) {
+          ensurePrizeBatchesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, prizeBatches_);
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPrizeBatches() {
+        if (prizeBatchesBuilder_ == null) {
+          prizeBatches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePrizeBatches(int index) {
+        if (prizeBatchesBuilder_ == null) {
+          ensurePrizeBatchesIsMutable();
+          prizeBatches_.remove(index);
+          onChanged();
+        } else {
+          prizeBatchesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder getPrizeBatchesBuilder(
+          int index) {
+        return getPrizeBatchesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder getPrizeBatchesOrBuilder(
+          int index) {
+        if (prizeBatchesBuilder_ == null) {
+          return prizeBatches_.get(index);  } else {
+          return prizeBatchesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder> 
+           getPrizeBatchesOrBuilderList() {
+        if (prizeBatchesBuilder_ != null) {
+          return prizeBatchesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(prizeBatches_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder addPrizeBatchesBuilder() {
+        return getPrizeBatchesFieldBuilder().addBuilder(
+            com.lum.network.millions.PrizeBatchProto.PrizeBatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder addPrizeBatchesBuilder(
+          int index) {
+        return getPrizeBatchesFieldBuilder().addBuilder(
+            index, com.lum.network.millions.PrizeBatchProto.PrizeBatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeBatch prize_batches = 1 [json_name = "prizeBatches", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder> 
+           getPrizeBatchesBuilderList() {
+        return getPrizeBatchesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.millions.PrizeBatchProto.PrizeBatch, com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder, com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder> 
+          getPrizeBatchesFieldBuilder() {
+        if (prizeBatchesBuilder_ == null) {
+          prizeBatchesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.millions.PrizeBatchProto.PrizeBatch, com.lum.network.millions.PrizeBatchProto.PrizeBatch.Builder, com.lum.network.millions.PrizeBatchProto.PrizeBatchOrBuilder>(
+                  prizeBatches_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          prizeBatches_ = null;
+        }
+        return prizeBatchesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.PrizeStrategy)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.PrizeStrategy)
+    private static final com.lum.network.millions.PrizeStrategyProto.PrizeStrategy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.PrizeStrategyProto.PrizeStrategy();
+    }
+
+    public static com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrizeStrategy>
+        PARSER = new com.google.protobuf.AbstractParser<PrizeStrategy>() {
+      @java.lang.Override
+      public PrizeStrategy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrizeStrategy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrizeStrategy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_PrizeStrategy_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_PrizeStrategy_fieldAccessorTable;
 
@@ -33,12 +815,12 @@ public final class PrizeStrategyProto {
       "o.proto\032&lum-network/millions/prize_batc" +
       "h.proto\"\\\n\rPrizeStrategy\022K\n\rprize_batche" +
       "s\030\001 \003(\0132 .lum.network.millions.PrizeBatc" +
-      "hB\004\310\336\037\000R\014prizeBatchesB\317\001\n\030com.lum.networ" +
-      "k.millionsB\022PrizeStrategyProtoP\001Z-github" +
-      ".com/lum-network/chain/x/millions/types\242" +
-      "\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Netwo" +
-      "rk\\Millions\342\002 Lum\\Network\\Millions\\GPBMe" +
-      "tadata\352\002\026Lum::Network::Millionsb\006proto3"
+      "hB\004\310\336\037\000R\014prizeBatchesB\315\001\n\030com.lum.networ" +
+      "k.millionsB\022PrizeStrategyProtoZ-github.c" +
+      "om/lum-network/chain/x/millions/types\242\002\003" +
+      "LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network" +
+      "\\Millions\342\002 Lum\\Network\\Millions\\GPBMeta" +
+      "data\352\002\026Lum::Network::Millionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

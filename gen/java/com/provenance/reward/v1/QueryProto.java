@@ -14,59 +14,9817 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryRewardProgramByIDRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryRewardProgramByIDRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The id of the reward program to query.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * <pre>
+   * QueryRewardProgramByIDRequest queries for the Reward Program with an identifier of id
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryRewardProgramByIDRequest}
+   */
+  public static final class QueryRewardProgramByIDRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryRewardProgramByIDRequest)
+      QueryRewardProgramByIDRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardProgramByIDRequest.newBuilder() to construct.
+    private QueryRewardProgramByIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardProgramByIDRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardProgramByIDRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest.class, com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * The id of the reward program to query.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest other = (com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardProgramByIDRequest queries for the Reward Program with an identifier of id
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryRewardProgramByIDRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryRewardProgramByIDRequest)
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest.class, com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest build() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest result = new com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * The id of the reward program to query.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * The id of the reward program to query.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the reward program to query.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryRewardProgramByIDRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryRewardProgramByIDRequest)
+    private static final com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardProgramByIDRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardProgramByIDRequest>() {
+      @java.lang.Override
+      public QueryRewardProgramByIDRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardProgramByIDRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardProgramByIDRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardProgramByIDResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryRewardProgramByIDResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The reward program object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+     * @return Whether the rewardProgram field is set.
+     */
+    boolean hasRewardProgram();
+    /**
+     * <pre>
+     * The reward program object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+     * @return The rewardProgram.
+     */
+    com.provenance.reward.v1.RewardProto.RewardProgram getRewardProgram();
+    /**
+     * <pre>
+     * The reward program object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+     */
+    com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder getRewardProgramOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardProgramByIDResponse contains the requested RewardProgram
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryRewardProgramByIDResponse}
+   */
+  public static final class QueryRewardProgramByIDResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryRewardProgramByIDResponse)
+      QueryRewardProgramByIDResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardProgramByIDResponse.newBuilder() to construct.
+    private QueryRewardProgramByIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardProgramByIDResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardProgramByIDResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse.class, com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse.Builder.class);
+    }
+
+    public static final int REWARD_PROGRAM_FIELD_NUMBER = 1;
+    private com.provenance.reward.v1.RewardProto.RewardProgram rewardProgram_;
+    /**
+     * <pre>
+     * The reward program object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+     * @return Whether the rewardProgram field is set.
+     */
+    @java.lang.Override
+    public boolean hasRewardProgram() {
+      return rewardProgram_ != null;
+    }
+    /**
+     * <pre>
+     * The reward program object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+     * @return The rewardProgram.
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.RewardProgram getRewardProgram() {
+      return rewardProgram_ == null ? com.provenance.reward.v1.RewardProto.RewardProgram.getDefaultInstance() : rewardProgram_;
+    }
+    /**
+     * <pre>
+     * The reward program object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder getRewardProgramOrBuilder() {
+      return rewardProgram_ == null ? com.provenance.reward.v1.RewardProto.RewardProgram.getDefaultInstance() : rewardProgram_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardProgram_ != null) {
+        output.writeMessage(1, getRewardProgram());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardProgram_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRewardProgram());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse other = (com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse) obj;
+
+      if (hasRewardProgram() != other.hasRewardProgram()) return false;
+      if (hasRewardProgram()) {
+        if (!getRewardProgram()
+            .equals(other.getRewardProgram())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRewardProgram()) {
+        hash = (37 * hash) + REWARD_PROGRAM_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardProgram().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardProgramByIDResponse contains the requested RewardProgram
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryRewardProgramByIDResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryRewardProgramByIDResponse)
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse.class, com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardProgram_ = null;
+        if (rewardProgramBuilder_ != null) {
+          rewardProgramBuilder_.dispose();
+          rewardProgramBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramByIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse build() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse result = new com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardProgram_ = rewardProgramBuilder_ == null
+              ? rewardProgram_
+              : rewardProgramBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse.getDefaultInstance()) return this;
+        if (other.hasRewardProgram()) {
+          mergeRewardProgram(other.getRewardProgram());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRewardProgramFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.reward.v1.RewardProto.RewardProgram rewardProgram_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.RewardProgram, com.provenance.reward.v1.RewardProto.RewardProgram.Builder, com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder> rewardProgramBuilder_;
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       * @return Whether the rewardProgram field is set.
+       */
+      public boolean hasRewardProgram() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       * @return The rewardProgram.
+       */
+      public com.provenance.reward.v1.RewardProto.RewardProgram getRewardProgram() {
+        if (rewardProgramBuilder_ == null) {
+          return rewardProgram_ == null ? com.provenance.reward.v1.RewardProto.RewardProgram.getDefaultInstance() : rewardProgram_;
+        } else {
+          return rewardProgramBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       */
+      public Builder setRewardProgram(com.provenance.reward.v1.RewardProto.RewardProgram value) {
+        if (rewardProgramBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rewardProgram_ = value;
+        } else {
+          rewardProgramBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       */
+      public Builder setRewardProgram(
+          com.provenance.reward.v1.RewardProto.RewardProgram.Builder builderForValue) {
+        if (rewardProgramBuilder_ == null) {
+          rewardProgram_ = builderForValue.build();
+        } else {
+          rewardProgramBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       */
+      public Builder mergeRewardProgram(com.provenance.reward.v1.RewardProto.RewardProgram value) {
+        if (rewardProgramBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            rewardProgram_ != null &&
+            rewardProgram_ != com.provenance.reward.v1.RewardProto.RewardProgram.getDefaultInstance()) {
+            getRewardProgramBuilder().mergeFrom(value);
+          } else {
+            rewardProgram_ = value;
+          }
+        } else {
+          rewardProgramBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       */
+      public Builder clearRewardProgram() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rewardProgram_ = null;
+        if (rewardProgramBuilder_ != null) {
+          rewardProgramBuilder_.dispose();
+          rewardProgramBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.RewardProgram.Builder getRewardProgramBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRewardProgramFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder getRewardProgramOrBuilder() {
+        if (rewardProgramBuilder_ != null) {
+          return rewardProgramBuilder_.getMessageOrBuilder();
+        } else {
+          return rewardProgram_ == null ?
+              com.provenance.reward.v1.RewardProto.RewardProgram.getDefaultInstance() : rewardProgram_;
+        }
+      }
+      /**
+       * <pre>
+       * The reward program object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgram reward_program = 1 [json_name = "rewardProgram"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.RewardProgram, com.provenance.reward.v1.RewardProto.RewardProgram.Builder, com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder> 
+          getRewardProgramFieldBuilder() {
+        if (rewardProgramBuilder_ == null) {
+          rewardProgramBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.reward.v1.RewardProto.RewardProgram, com.provenance.reward.v1.RewardProto.RewardProgram.Builder, com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder>(
+                  getRewardProgram(),
+                  getParentForChildren(),
+                  isClean());
+          rewardProgram_ = null;
+        }
+        return rewardProgramBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryRewardProgramByIDResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryRewardProgramByIDResponse)
+    private static final com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardProgramByIDResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardProgramByIDResponse>() {
+      @java.lang.Override
+      public QueryRewardProgramByIDResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardProgramByIDResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardProgramByIDResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryRewardProgramByIDResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardProgramsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryRewardProgramsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A filter on the types of reward programs.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+     * @return The enum numeric value on the wire for queryType.
+     */
+    int getQueryTypeValue();
+    /**
+     * <pre>
+     * A filter on the types of reward programs.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+     * @return The queryType.
+     */
+    com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType getQueryType();
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardProgramsRequest queries for all reward programs matching the query_type
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryRewardProgramsRequest}
+   */
+  public static final class QueryRewardProgramsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryRewardProgramsRequest)
+      QueryRewardProgramsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardProgramsRequest.newBuilder() to construct.
+    private QueryRewardProgramsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardProgramsRequest() {
+      queryType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardProgramsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.class, com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * QueryType is the state of reward program to query
+     * </pre>
+     *
+     * Protobuf enum {@code provenance.reward.v1.QueryRewardProgramsRequest.QueryType}
+     */
+    public enum QueryType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * unspecified type
+       * </pre>
+       *
+       * <code>QUERY_TYPE_UNSPECIFIED = 0;</code>
+       */
+      QUERY_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * all reward programs states
+       * </pre>
+       *
+       * <code>QUERY_TYPE_ALL = 1;</code>
+       */
+      QUERY_TYPE_ALL(1),
+      /**
+       * <pre>
+       * pending reward program state=
+       * </pre>
+       *
+       * <code>QUERY_TYPE_PENDING = 2;</code>
+       */
+      QUERY_TYPE_PENDING(2),
+      /**
+       * <pre>
+       * active reward program state
+       * </pre>
+       *
+       * <code>QUERY_TYPE_ACTIVE = 3;</code>
+       */
+      QUERY_TYPE_ACTIVE(3),
+      /**
+       * <pre>
+       * pending and active reward program states
+       * </pre>
+       *
+       * <code>QUERY_TYPE_OUTSTANDING = 4;</code>
+       */
+      QUERY_TYPE_OUTSTANDING(4),
+      /**
+       * <pre>
+       * finished reward program state
+       * </pre>
+       *
+       * <code>QUERY_TYPE_FINISHED = 5;</code>
+       */
+      QUERY_TYPE_FINISHED(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * unspecified type
+       * </pre>
+       *
+       * <code>QUERY_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int QUERY_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * all reward programs states
+       * </pre>
+       *
+       * <code>QUERY_TYPE_ALL = 1;</code>
+       */
+      public static final int QUERY_TYPE_ALL_VALUE = 1;
+      /**
+       * <pre>
+       * pending reward program state=
+       * </pre>
+       *
+       * <code>QUERY_TYPE_PENDING = 2;</code>
+       */
+      public static final int QUERY_TYPE_PENDING_VALUE = 2;
+      /**
+       * <pre>
+       * active reward program state
+       * </pre>
+       *
+       * <code>QUERY_TYPE_ACTIVE = 3;</code>
+       */
+      public static final int QUERY_TYPE_ACTIVE_VALUE = 3;
+      /**
+       * <pre>
+       * pending and active reward program states
+       * </pre>
+       *
+       * <code>QUERY_TYPE_OUTSTANDING = 4;</code>
+       */
+      public static final int QUERY_TYPE_OUTSTANDING_VALUE = 4;
+      /**
+       * <pre>
+       * finished reward program state
+       * </pre>
+       *
+       * <code>QUERY_TYPE_FINISHED = 5;</code>
+       */
+      public static final int QUERY_TYPE_FINISHED_VALUE = 5;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static QueryType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static QueryType forNumber(int value) {
+        switch (value) {
+          case 0: return QUERY_TYPE_UNSPECIFIED;
+          case 1: return QUERY_TYPE_ALL;
+          case 2: return QUERY_TYPE_PENDING;
+          case 3: return QUERY_TYPE_ACTIVE;
+          case 4: return QUERY_TYPE_OUTSTANDING;
+          case 5: return QUERY_TYPE_FINISHED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<QueryType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          QueryType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<QueryType>() {
+              public QueryType findValueByNumber(int number) {
+                return QueryType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final QueryType[] VALUES = values();
+
+      public static QueryType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private QueryType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:provenance.reward.v1.QueryRewardProgramsRequest.QueryType)
+    }
+
+    public static final int QUERY_TYPE_FIELD_NUMBER = 1;
+    private int queryType_ = 0;
+    /**
+     * <pre>
+     * A filter on the types of reward programs.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+     * @return The enum numeric value on the wire for queryType.
+     */
+    @java.lang.Override public int getQueryTypeValue() {
+      return queryType_;
+    }
+    /**
+     * <pre>
+     * A filter on the types of reward programs.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+     * @return The queryType.
+     */
+    @java.lang.Override public com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType getQueryType() {
+      com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType result = com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType.forNumber(queryType_);
+      return result == null ? com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType.UNRECOGNIZED : result;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 99;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (queryType_ != com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType.QUERY_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, queryType_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(99, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (queryType_ != com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType.QUERY_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, queryType_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest other = (com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest) obj;
+
+      if (queryType_ != other.queryType_) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + QUERY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + queryType_;
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardProgramsRequest queries for all reward programs matching the query_type
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryRewardProgramsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryRewardProgramsRequest)
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.class, com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        queryType_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest build() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest result = new com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.queryType_ = queryType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.getDefaultInstance()) return this;
+        if (other.queryType_ != 0) {
+          setQueryTypeValue(other.getQueryTypeValue());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                queryType_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 794: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 794
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int queryType_ = 0;
+      /**
+       * <pre>
+       * A filter on the types of reward programs.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+       * @return The enum numeric value on the wire for queryType.
+       */
+      @java.lang.Override public int getQueryTypeValue() {
+        return queryType_;
+      }
+      /**
+       * <pre>
+       * A filter on the types of reward programs.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+       * @param value The enum numeric value on the wire for queryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryTypeValue(int value) {
+        queryType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter on the types of reward programs.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+       * @return The queryType.
+       */
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType getQueryType() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType result = com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType.forNumber(queryType_);
+        return result == null ? com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * A filter on the types of reward programs.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+       * @param value The queryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryType(com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest.QueryType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        queryType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter on the types of reward programs.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.QueryRewardProgramsRequest.QueryType query_type = 1 [json_name = "queryType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        queryType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryRewardProgramsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryRewardProgramsRequest)
+    private static final com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardProgramsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardProgramsRequest>() {
+      @java.lang.Override
+      public QueryRewardProgramsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardProgramsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardProgramsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryRewardProgramsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardProgramsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryRewardProgramsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.reward.v1.RewardProto.RewardProgram> 
+        getRewardProgramsList();
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.RewardProto.RewardProgram getRewardPrograms(int index);
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    int getRewardProgramsCount();
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder> 
+        getRewardProgramsOrBuilderList();
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder getRewardProgramsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardProgramsResponse contains the list of RewardPrograms matching the query
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryRewardProgramsResponse}
+   */
+  public static final class QueryRewardProgramsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryRewardProgramsResponse)
+      QueryRewardProgramsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardProgramsResponse.newBuilder() to construct.
+    private QueryRewardProgramsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardProgramsResponse() {
+      rewardPrograms_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardProgramsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse.class, com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse.Builder.class);
+    }
+
+    public static final int REWARD_PROGRAMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.reward.v1.RewardProto.RewardProgram> rewardPrograms_;
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.reward.v1.RewardProto.RewardProgram> getRewardProgramsList() {
+      return rewardPrograms_;
+    }
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder> 
+        getRewardProgramsOrBuilderList() {
+      return rewardPrograms_;
+    }
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRewardProgramsCount() {
+      return rewardPrograms_.size();
+    }
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.RewardProgram getRewardPrograms(int index) {
+      return rewardPrograms_.get(index);
+    }
+    /**
+     * <pre>
+     * List of RewardProgram objects matching the query_type.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder getRewardProgramsOrBuilder(
+        int index) {
+      return rewardPrograms_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 99;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rewardPrograms_.size(); i++) {
+        output.writeMessage(1, rewardPrograms_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(99, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rewardPrograms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rewardPrograms_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse other = (com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse) obj;
+
+      if (!getRewardProgramsList()
+          .equals(other.getRewardProgramsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRewardProgramsCount() > 0) {
+        hash = (37 * hash) + REWARD_PROGRAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardProgramsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardProgramsResponse contains the list of RewardPrograms matching the query
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryRewardProgramsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryRewardProgramsResponse)
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse.class, com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rewardProgramsBuilder_ == null) {
+          rewardPrograms_ = java.util.Collections.emptyList();
+        } else {
+          rewardPrograms_ = null;
+          rewardProgramsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardProgramsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse build() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse result = new com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse result) {
+        if (rewardProgramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rewardPrograms_ = java.util.Collections.unmodifiableList(rewardPrograms_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rewardPrograms_ = rewardPrograms_;
+        } else {
+          result.rewardPrograms_ = rewardProgramsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse.getDefaultInstance()) return this;
+        if (rewardProgramsBuilder_ == null) {
+          if (!other.rewardPrograms_.isEmpty()) {
+            if (rewardPrograms_.isEmpty()) {
+              rewardPrograms_ = other.rewardPrograms_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardProgramsIsMutable();
+              rewardPrograms_.addAll(other.rewardPrograms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardPrograms_.isEmpty()) {
+            if (rewardProgramsBuilder_.isEmpty()) {
+              rewardProgramsBuilder_.dispose();
+              rewardProgramsBuilder_ = null;
+              rewardPrograms_ = other.rewardPrograms_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardProgramsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardProgramsFieldBuilder() : null;
+            } else {
+              rewardProgramsBuilder_.addAllMessages(other.rewardPrograms_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.provenance.reward.v1.RewardProto.RewardProgram m =
+                    input.readMessage(
+                        com.provenance.reward.v1.RewardProto.RewardProgram.parser(),
+                        extensionRegistry);
+                if (rewardProgramsBuilder_ == null) {
+                  ensureRewardProgramsIsMutable();
+                  rewardPrograms_.add(m);
+                } else {
+                  rewardProgramsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 794: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 794
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.provenance.reward.v1.RewardProto.RewardProgram> rewardPrograms_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardProgramsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rewardPrograms_ = new java.util.ArrayList<com.provenance.reward.v1.RewardProto.RewardProgram>(rewardPrograms_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.RewardProgram, com.provenance.reward.v1.RewardProto.RewardProgram.Builder, com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder> rewardProgramsBuilder_;
+
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.RewardProto.RewardProgram> getRewardProgramsList() {
+        if (rewardProgramsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardPrograms_);
+        } else {
+          return rewardProgramsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRewardProgramsCount() {
+        if (rewardProgramsBuilder_ == null) {
+          return rewardPrograms_.size();
+        } else {
+          return rewardProgramsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.RewardProgram getRewardPrograms(int index) {
+        if (rewardProgramsBuilder_ == null) {
+          return rewardPrograms_.get(index);
+        } else {
+          return rewardProgramsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardPrograms(
+          int index, com.provenance.reward.v1.RewardProto.RewardProgram value) {
+        if (rewardProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardProgramsIsMutable();
+          rewardPrograms_.set(index, value);
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardPrograms(
+          int index, com.provenance.reward.v1.RewardProto.RewardProgram.Builder builderForValue) {
+        if (rewardProgramsBuilder_ == null) {
+          ensureRewardProgramsIsMutable();
+          rewardPrograms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardPrograms(com.provenance.reward.v1.RewardProto.RewardProgram value) {
+        if (rewardProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardProgramsIsMutable();
+          rewardPrograms_.add(value);
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardPrograms(
+          int index, com.provenance.reward.v1.RewardProto.RewardProgram value) {
+        if (rewardProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardProgramsIsMutable();
+          rewardPrograms_.add(index, value);
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardPrograms(
+          com.provenance.reward.v1.RewardProto.RewardProgram.Builder builderForValue) {
+        if (rewardProgramsBuilder_ == null) {
+          ensureRewardProgramsIsMutable();
+          rewardPrograms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardPrograms(
+          int index, com.provenance.reward.v1.RewardProto.RewardProgram.Builder builderForValue) {
+        if (rewardProgramsBuilder_ == null) {
+          ensureRewardProgramsIsMutable();
+          rewardPrograms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRewardPrograms(
+          java.lang.Iterable<? extends com.provenance.reward.v1.RewardProto.RewardProgram> values) {
+        if (rewardProgramsBuilder_ == null) {
+          ensureRewardProgramsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardPrograms_);
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRewardPrograms() {
+        if (rewardProgramsBuilder_ == null) {
+          rewardPrograms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRewardPrograms(int index) {
+        if (rewardProgramsBuilder_ == null) {
+          ensureRewardProgramsIsMutable();
+          rewardPrograms_.remove(index);
+          onChanged();
+        } else {
+          rewardProgramsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.RewardProgram.Builder getRewardProgramsBuilder(
+          int index) {
+        return getRewardProgramsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder getRewardProgramsOrBuilder(
+          int index) {
+        if (rewardProgramsBuilder_ == null) {
+          return rewardPrograms_.get(index);  } else {
+          return rewardProgramsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder> 
+           getRewardProgramsOrBuilderList() {
+        if (rewardProgramsBuilder_ != null) {
+          return rewardProgramsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardPrograms_);
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.RewardProgram.Builder addRewardProgramsBuilder() {
+        return getRewardProgramsFieldBuilder().addBuilder(
+            com.provenance.reward.v1.RewardProto.RewardProgram.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.RewardProgram.Builder addRewardProgramsBuilder(
+          int index) {
+        return getRewardProgramsFieldBuilder().addBuilder(
+            index, com.provenance.reward.v1.RewardProto.RewardProgram.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of RewardProgram objects matching the query_type.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgram reward_programs = 1 [json_name = "rewardPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.RewardProto.RewardProgram.Builder> 
+           getRewardProgramsBuilderList() {
+        return getRewardProgramsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.RewardProgram, com.provenance.reward.v1.RewardProto.RewardProgram.Builder, com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder> 
+          getRewardProgramsFieldBuilder() {
+        if (rewardProgramsBuilder_ == null) {
+          rewardProgramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.reward.v1.RewardProto.RewardProgram, com.provenance.reward.v1.RewardProto.RewardProgram.Builder, com.provenance.reward.v1.RewardProto.RewardProgramOrBuilder>(
+                  rewardPrograms_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewardPrograms_ = null;
+        }
+        return rewardProgramsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryRewardProgramsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryRewardProgramsResponse)
+    private static final com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardProgramsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardProgramsResponse>() {
+      @java.lang.Override
+      public QueryRewardProgramsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardProgramsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardProgramsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryRewardProgramsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimPeriodRewardDistributionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryClaimPeriodRewardDistributionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryClaimPeriodRewardDistributionsRequest queries for all the ClaimPeriodRewardDistributions with pagination.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryClaimPeriodRewardDistributionsRequest}
+   */
+  public static final class QueryClaimPeriodRewardDistributionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryClaimPeriodRewardDistributionsRequest)
+      QueryClaimPeriodRewardDistributionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimPeriodRewardDistributionsRequest.newBuilder() to construct.
+    private QueryClaimPeriodRewardDistributionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimPeriodRewardDistributionsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimPeriodRewardDistributionsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest.class, com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 99;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(99, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest other = (com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimPeriodRewardDistributionsRequest queries for all the ClaimPeriodRewardDistributions with pagination.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryClaimPeriodRewardDistributionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryClaimPeriodRewardDistributionsRequest)
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest.class, com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest build() {
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest result = new com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 794: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 794
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryClaimPeriodRewardDistributionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryClaimPeriodRewardDistributionsRequest)
+    private static final com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimPeriodRewardDistributionsRequest>() {
+      @java.lang.Override
+      public QueryClaimPeriodRewardDistributionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimPeriodRewardDistributionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryClaimPeriodRewardDistributionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution> 
+        getClaimPeriodRewardDistributionsList();
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution getClaimPeriodRewardDistributions(int index);
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    int getClaimPeriodRewardDistributionsCount();
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder> 
+        getClaimPeriodRewardDistributionsOrBuilderList();
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder getClaimPeriodRewardDistributionsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryClaimPeriodRewardDistributionsResponse returns the list of paginated ClaimPeriodRewardDistributions
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryClaimPeriodRewardDistributionsResponse}
+   */
+  public static final class QueryClaimPeriodRewardDistributionsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryClaimPeriodRewardDistributionsResponse)
+      QueryClaimPeriodRewardDistributionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimPeriodRewardDistributionsResponse.newBuilder() to construct.
+    private QueryClaimPeriodRewardDistributionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimPeriodRewardDistributionsResponse() {
+      claimPeriodRewardDistributions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimPeriodRewardDistributionsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse.class, com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse.Builder.class);
+    }
+
+    public static final int CLAIM_PERIOD_REWARD_DISTRIBUTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution> claimPeriodRewardDistributions_;
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution> getClaimPeriodRewardDistributionsList() {
+      return claimPeriodRewardDistributions_;
+    }
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder> 
+        getClaimPeriodRewardDistributionsOrBuilderList() {
+      return claimPeriodRewardDistributions_;
+    }
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClaimPeriodRewardDistributionsCount() {
+      return claimPeriodRewardDistributions_.size();
+    }
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution getClaimPeriodRewardDistributions(int index) {
+      return claimPeriodRewardDistributions_.get(index);
+    }
+    /**
+     * <pre>
+     * List of all ClaimPeriodRewardDistribution objects queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder getClaimPeriodRewardDistributionsOrBuilder(
+        int index) {
+      return claimPeriodRewardDistributions_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 99;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < claimPeriodRewardDistributions_.size(); i++) {
+        output.writeMessage(1, claimPeriodRewardDistributions_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(99, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < claimPeriodRewardDistributions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, claimPeriodRewardDistributions_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse other = (com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse) obj;
+
+      if (!getClaimPeriodRewardDistributionsList()
+          .equals(other.getClaimPeriodRewardDistributionsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClaimPeriodRewardDistributionsCount() > 0) {
+        hash = (37 * hash) + CLAIM_PERIOD_REWARD_DISTRIBUTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimPeriodRewardDistributionsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimPeriodRewardDistributionsResponse returns the list of paginated ClaimPeriodRewardDistributions
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryClaimPeriodRewardDistributionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryClaimPeriodRewardDistributionsResponse)
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse.class, com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          claimPeriodRewardDistributions_ = java.util.Collections.emptyList();
+        } else {
+          claimPeriodRewardDistributions_ = null;
+          claimPeriodRewardDistributionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse build() {
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse result = new com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse result) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            claimPeriodRewardDistributions_ = java.util.Collections.unmodifiableList(claimPeriodRewardDistributions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.claimPeriodRewardDistributions_ = claimPeriodRewardDistributions_;
+        } else {
+          result.claimPeriodRewardDistributions_ = claimPeriodRewardDistributionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse.getDefaultInstance()) return this;
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          if (!other.claimPeriodRewardDistributions_.isEmpty()) {
+            if (claimPeriodRewardDistributions_.isEmpty()) {
+              claimPeriodRewardDistributions_ = other.claimPeriodRewardDistributions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureClaimPeriodRewardDistributionsIsMutable();
+              claimPeriodRewardDistributions_.addAll(other.claimPeriodRewardDistributions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claimPeriodRewardDistributions_.isEmpty()) {
+            if (claimPeriodRewardDistributionsBuilder_.isEmpty()) {
+              claimPeriodRewardDistributionsBuilder_.dispose();
+              claimPeriodRewardDistributionsBuilder_ = null;
+              claimPeriodRewardDistributions_ = other.claimPeriodRewardDistributions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              claimPeriodRewardDistributionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimPeriodRewardDistributionsFieldBuilder() : null;
+            } else {
+              claimPeriodRewardDistributionsBuilder_.addAllMessages(other.claimPeriodRewardDistributions_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution m =
+                    input.readMessage(
+                        com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.parser(),
+                        extensionRegistry);
+                if (claimPeriodRewardDistributionsBuilder_ == null) {
+                  ensureClaimPeriodRewardDistributionsIsMutable();
+                  claimPeriodRewardDistributions_.add(m);
+                } else {
+                  claimPeriodRewardDistributionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 794: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 794
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution> claimPeriodRewardDistributions_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimPeriodRewardDistributionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          claimPeriodRewardDistributions_ = new java.util.ArrayList<com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution>(claimPeriodRewardDistributions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder> claimPeriodRewardDistributionsBuilder_;
+
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution> getClaimPeriodRewardDistributionsList() {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claimPeriodRewardDistributions_);
+        } else {
+          return claimPeriodRewardDistributionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClaimPeriodRewardDistributionsCount() {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          return claimPeriodRewardDistributions_.size();
+        } else {
+          return claimPeriodRewardDistributionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution getClaimPeriodRewardDistributions(int index) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          return claimPeriodRewardDistributions_.get(index);
+        } else {
+          return claimPeriodRewardDistributionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimPeriodRewardDistributions(
+          int index, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution value) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimPeriodRewardDistributionsIsMutable();
+          claimPeriodRewardDistributions_.set(index, value);
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimPeriodRewardDistributions(
+          int index, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder builderForValue) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          ensureClaimPeriodRewardDistributionsIsMutable();
+          claimPeriodRewardDistributions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimPeriodRewardDistributions(com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution value) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimPeriodRewardDistributionsIsMutable();
+          claimPeriodRewardDistributions_.add(value);
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimPeriodRewardDistributions(
+          int index, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution value) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimPeriodRewardDistributionsIsMutable();
+          claimPeriodRewardDistributions_.add(index, value);
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimPeriodRewardDistributions(
+          com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder builderForValue) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          ensureClaimPeriodRewardDistributionsIsMutable();
+          claimPeriodRewardDistributions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimPeriodRewardDistributions(
+          int index, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder builderForValue) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          ensureClaimPeriodRewardDistributionsIsMutable();
+          claimPeriodRewardDistributions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClaimPeriodRewardDistributions(
+          java.lang.Iterable<? extends com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution> values) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          ensureClaimPeriodRewardDistributionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claimPeriodRewardDistributions_);
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaimPeriodRewardDistributions() {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          claimPeriodRewardDistributions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClaimPeriodRewardDistributions(int index) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          ensureClaimPeriodRewardDistributionsIsMutable();
+          claimPeriodRewardDistributions_.remove(index);
+          onChanged();
+        } else {
+          claimPeriodRewardDistributionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder getClaimPeriodRewardDistributionsBuilder(
+          int index) {
+        return getClaimPeriodRewardDistributionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder getClaimPeriodRewardDistributionsOrBuilder(
+          int index) {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          return claimPeriodRewardDistributions_.get(index);  } else {
+          return claimPeriodRewardDistributionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder> 
+           getClaimPeriodRewardDistributionsOrBuilderList() {
+        if (claimPeriodRewardDistributionsBuilder_ != null) {
+          return claimPeriodRewardDistributionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claimPeriodRewardDistributions_);
+        }
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder addClaimPeriodRewardDistributionsBuilder() {
+        return getClaimPeriodRewardDistributionsFieldBuilder().addBuilder(
+            com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder addClaimPeriodRewardDistributionsBuilder(
+          int index) {
+        return getClaimPeriodRewardDistributionsFieldBuilder().addBuilder(
+            index, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of all ClaimPeriodRewardDistribution objects queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distributions = 1 [json_name = "claimPeriodRewardDistributions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder> 
+           getClaimPeriodRewardDistributionsBuilderList() {
+        return getClaimPeriodRewardDistributionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder> 
+          getClaimPeriodRewardDistributionsFieldBuilder() {
+        if (claimPeriodRewardDistributionsBuilder_ == null) {
+          claimPeriodRewardDistributionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder>(
+                  claimPeriodRewardDistributions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claimPeriodRewardDistributions_ = null;
+        }
+        return claimPeriodRewardDistributionsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryClaimPeriodRewardDistributionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryClaimPeriodRewardDistributionsResponse)
+    private static final com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimPeriodRewardDistributionsResponse>() {
+      @java.lang.Override
+      public QueryClaimPeriodRewardDistributionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimPeriodRewardDistributionsByIDRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The reward program that the claim period reward distribution belongs to.
+     * </pre>
+     *
+     * <code>uint64 reward_id = 1 [json_name = "rewardId"];</code>
+     * @return The rewardId.
+     */
+    long getRewardId();
+
+    /**
+     * <pre>
+     * The claim period that the claim period reward distribution was created for.
+     * </pre>
+     *
+     * <code>uint64 claim_period_id = 2 [json_name = "claimPeriodId"];</code>
+     * @return The claimPeriodId.
+     */
+    long getClaimPeriodId();
+  }
+  /**
+   * <pre>
+   * QueryClaimPeriodRewardDistributionsByIDRequest queries for a single ClaimPeriodRewardDistribution
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDRequest}
+   */
+  public static final class QueryClaimPeriodRewardDistributionsByIDRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDRequest)
+      QueryClaimPeriodRewardDistributionsByIDRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimPeriodRewardDistributionsByIDRequest.newBuilder() to construct.
+    private QueryClaimPeriodRewardDistributionsByIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimPeriodRewardDistributionsByIDRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimPeriodRewardDistributionsByIDRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest.class, com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest.Builder.class);
+    }
+
+    public static final int REWARD_ID_FIELD_NUMBER = 1;
+    private long rewardId_ = 0L;
+    /**
+     * <pre>
+     * The reward program that the claim period reward distribution belongs to.
+     * </pre>
+     *
+     * <code>uint64 reward_id = 1 [json_name = "rewardId"];</code>
+     * @return The rewardId.
+     */
+    @java.lang.Override
+    public long getRewardId() {
+      return rewardId_;
+    }
+
+    public static final int CLAIM_PERIOD_ID_FIELD_NUMBER = 2;
+    private long claimPeriodId_ = 0L;
+    /**
+     * <pre>
+     * The claim period that the claim period reward distribution was created for.
+     * </pre>
+     *
+     * <code>uint64 claim_period_id = 2 [json_name = "claimPeriodId"];</code>
+     * @return The claimPeriodId.
+     */
+    @java.lang.Override
+    public long getClaimPeriodId() {
+      return claimPeriodId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardId_ != 0L) {
+        output.writeUInt64(1, rewardId_);
+      }
+      if (claimPeriodId_ != 0L) {
+        output.writeUInt64(2, claimPeriodId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, rewardId_);
+      }
+      if (claimPeriodId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, claimPeriodId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest other = (com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest) obj;
+
+      if (getRewardId()
+          != other.getRewardId()) return false;
+      if (getClaimPeriodId()
+          != other.getClaimPeriodId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REWARD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRewardId());
+      hash = (37 * hash) + CLAIM_PERIOD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimPeriodId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimPeriodRewardDistributionsByIDRequest queries for a single ClaimPeriodRewardDistribution
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDRequest)
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest.class, com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardId_ = 0L;
+        claimPeriodId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest build() {
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest result = new com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardId_ = rewardId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.claimPeriodId_ = claimPeriodId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest.getDefaultInstance()) return this;
+        if (other.getRewardId() != 0L) {
+          setRewardId(other.getRewardId());
+        }
+        if (other.getClaimPeriodId() != 0L) {
+          setClaimPeriodId(other.getClaimPeriodId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                rewardId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                claimPeriodId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long rewardId_ ;
+      /**
+       * <pre>
+       * The reward program that the claim period reward distribution belongs to.
+       * </pre>
+       *
+       * <code>uint64 reward_id = 1 [json_name = "rewardId"];</code>
+       * @return The rewardId.
+       */
+      @java.lang.Override
+      public long getRewardId() {
+        return rewardId_;
+      }
+      /**
+       * <pre>
+       * The reward program that the claim period reward distribution belongs to.
+       * </pre>
+       *
+       * <code>uint64 reward_id = 1 [json_name = "rewardId"];</code>
+       * @param value The rewardId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardId(long value) {
+
+        rewardId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The reward program that the claim period reward distribution belongs to.
+       * </pre>
+       *
+       * <code>uint64 reward_id = 1 [json_name = "rewardId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rewardId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long claimPeriodId_ ;
+      /**
+       * <pre>
+       * The claim period that the claim period reward distribution was created for.
+       * </pre>
+       *
+       * <code>uint64 claim_period_id = 2 [json_name = "claimPeriodId"];</code>
+       * @return The claimPeriodId.
+       */
+      @java.lang.Override
+      public long getClaimPeriodId() {
+        return claimPeriodId_;
+      }
+      /**
+       * <pre>
+       * The claim period that the claim period reward distribution was created for.
+       * </pre>
+       *
+       * <code>uint64 claim_period_id = 2 [json_name = "claimPeriodId"];</code>
+       * @param value The claimPeriodId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimPeriodId(long value) {
+
+        claimPeriodId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The claim period that the claim period reward distribution was created for.
+       * </pre>
+       *
+       * <code>uint64 claim_period_id = 2 [json_name = "claimPeriodId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimPeriodId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        claimPeriodId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDRequest)
+    private static final com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsByIDRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimPeriodRewardDistributionsByIDRequest>() {
+      @java.lang.Override
+      public QueryClaimPeriodRewardDistributionsByIDRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsByIDRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsByIDRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimPeriodRewardDistributionsByIDResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The ClaimPeriodRewardDistribution object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+     * @return Whether the claimPeriodRewardDistribution field is set.
+     */
+    boolean hasClaimPeriodRewardDistribution();
+    /**
+     * <pre>
+     * The ClaimPeriodRewardDistribution object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+     * @return The claimPeriodRewardDistribution.
+     */
+    com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution getClaimPeriodRewardDistribution();
+    /**
+     * <pre>
+     * The ClaimPeriodRewardDistribution object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+     */
+    com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder getClaimPeriodRewardDistributionOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryClaimPeriodRewardDistributionsByIDResponse returns the requested ClaimPeriodRewardDistribution
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDResponse}
+   */
+  public static final class QueryClaimPeriodRewardDistributionsByIDResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDResponse)
+      QueryClaimPeriodRewardDistributionsByIDResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimPeriodRewardDistributionsByIDResponse.newBuilder() to construct.
+    private QueryClaimPeriodRewardDistributionsByIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimPeriodRewardDistributionsByIDResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimPeriodRewardDistributionsByIDResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse.class, com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse.Builder.class);
+    }
+
+    public static final int CLAIM_PERIOD_REWARD_DISTRIBUTION_FIELD_NUMBER = 1;
+    private com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution claimPeriodRewardDistribution_;
+    /**
+     * <pre>
+     * The ClaimPeriodRewardDistribution object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+     * @return Whether the claimPeriodRewardDistribution field is set.
+     */
+    @java.lang.Override
+    public boolean hasClaimPeriodRewardDistribution() {
+      return claimPeriodRewardDistribution_ != null;
+    }
+    /**
+     * <pre>
+     * The ClaimPeriodRewardDistribution object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+     * @return The claimPeriodRewardDistribution.
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution getClaimPeriodRewardDistribution() {
+      return claimPeriodRewardDistribution_ == null ? com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.getDefaultInstance() : claimPeriodRewardDistribution_;
+    }
+    /**
+     * <pre>
+     * The ClaimPeriodRewardDistribution object that was queried for.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder getClaimPeriodRewardDistributionOrBuilder() {
+      return claimPeriodRewardDistribution_ == null ? com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.getDefaultInstance() : claimPeriodRewardDistribution_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (claimPeriodRewardDistribution_ != null) {
+        output.writeMessage(1, getClaimPeriodRewardDistribution());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (claimPeriodRewardDistribution_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getClaimPeriodRewardDistribution());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse other = (com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse) obj;
+
+      if (hasClaimPeriodRewardDistribution() != other.hasClaimPeriodRewardDistribution()) return false;
+      if (hasClaimPeriodRewardDistribution()) {
+        if (!getClaimPeriodRewardDistribution()
+            .equals(other.getClaimPeriodRewardDistribution())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClaimPeriodRewardDistribution()) {
+        hash = (37 * hash) + CLAIM_PERIOD_REWARD_DISTRIBUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimPeriodRewardDistribution().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimPeriodRewardDistributionsByIDResponse returns the requested ClaimPeriodRewardDistribution
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDResponse)
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse.class, com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimPeriodRewardDistribution_ = null;
+        if (claimPeriodRewardDistributionBuilder_ != null) {
+          claimPeriodRewardDistributionBuilder_.dispose();
+          claimPeriodRewardDistributionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse build() {
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse result = new com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimPeriodRewardDistribution_ = claimPeriodRewardDistributionBuilder_ == null
+              ? claimPeriodRewardDistribution_
+              : claimPeriodRewardDistributionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse.getDefaultInstance()) return this;
+        if (other.hasClaimPeriodRewardDistribution()) {
+          mergeClaimPeriodRewardDistribution(other.getClaimPeriodRewardDistribution());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getClaimPeriodRewardDistributionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution claimPeriodRewardDistribution_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder> claimPeriodRewardDistributionBuilder_;
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       * @return Whether the claimPeriodRewardDistribution field is set.
+       */
+      public boolean hasClaimPeriodRewardDistribution() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       * @return The claimPeriodRewardDistribution.
+       */
+      public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution getClaimPeriodRewardDistribution() {
+        if (claimPeriodRewardDistributionBuilder_ == null) {
+          return claimPeriodRewardDistribution_ == null ? com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.getDefaultInstance() : claimPeriodRewardDistribution_;
+        } else {
+          return claimPeriodRewardDistributionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       */
+      public Builder setClaimPeriodRewardDistribution(com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution value) {
+        if (claimPeriodRewardDistributionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          claimPeriodRewardDistribution_ = value;
+        } else {
+          claimPeriodRewardDistributionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       */
+      public Builder setClaimPeriodRewardDistribution(
+          com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder builderForValue) {
+        if (claimPeriodRewardDistributionBuilder_ == null) {
+          claimPeriodRewardDistribution_ = builderForValue.build();
+        } else {
+          claimPeriodRewardDistributionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       */
+      public Builder mergeClaimPeriodRewardDistribution(com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution value) {
+        if (claimPeriodRewardDistributionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            claimPeriodRewardDistribution_ != null &&
+            claimPeriodRewardDistribution_ != com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.getDefaultInstance()) {
+            getClaimPeriodRewardDistributionBuilder().mergeFrom(value);
+          } else {
+            claimPeriodRewardDistribution_ = value;
+          }
+        } else {
+          claimPeriodRewardDistributionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       */
+      public Builder clearClaimPeriodRewardDistribution() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        claimPeriodRewardDistribution_ = null;
+        if (claimPeriodRewardDistributionBuilder_ != null) {
+          claimPeriodRewardDistributionBuilder_.dispose();
+          claimPeriodRewardDistributionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder getClaimPeriodRewardDistributionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getClaimPeriodRewardDistributionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder getClaimPeriodRewardDistributionOrBuilder() {
+        if (claimPeriodRewardDistributionBuilder_ != null) {
+          return claimPeriodRewardDistributionBuilder_.getMessageOrBuilder();
+        } else {
+          return claimPeriodRewardDistribution_ == null ?
+              com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.getDefaultInstance() : claimPeriodRewardDistribution_;
+        }
+      }
+      /**
+       * <pre>
+       * The ClaimPeriodRewardDistribution object that was queried for.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.ClaimPeriodRewardDistribution claim_period_reward_distribution = 1 [json_name = "claimPeriodRewardDistribution"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder> 
+          getClaimPeriodRewardDistributionFieldBuilder() {
+        if (claimPeriodRewardDistributionBuilder_ == null) {
+          claimPeriodRewardDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistributionOrBuilder>(
+                  getClaimPeriodRewardDistribution(),
+                  getParentForChildren(),
+                  isClean());
+          claimPeriodRewardDistribution_ = null;
+        }
+        return claimPeriodRewardDistributionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryClaimPeriodRewardDistributionsByIDResponse)
+    private static final com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsByIDResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimPeriodRewardDistributionsByIDResponse>() {
+      @java.lang.Override
+      public QueryClaimPeriodRewardDistributionsByIDResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsByIDResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimPeriodRewardDistributionsByIDResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryClaimPeriodRewardDistributionsByIDResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardDistributionsByAddressRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryRewardDistributionsByAddressRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The address that the claim belongs to.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * The address that the claim belongs to.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * The status that the reward account must have.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+     * @return The enum numeric value on the wire for claimStatus.
+     */
+    int getClaimStatusValue();
+    /**
+     * <pre>
+     * The status that the reward account must have.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+     * @return The claimStatus.
+     */
+    com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus getClaimStatus();
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardDistributionsByAddressRequest queries for reward claims by address that match the claim_status.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryRewardDistributionsByAddressRequest}
+   */
+  public static final class QueryRewardDistributionsByAddressRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryRewardDistributionsByAddressRequest)
+      QueryRewardDistributionsByAddressRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardDistributionsByAddressRequest.newBuilder() to construct.
+    private QueryRewardDistributionsByAddressRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardDistributionsByAddressRequest() {
+      address_ = "";
+      claimStatus_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardDistributionsByAddressRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest.class, com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * The address that the claim belongs to.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The address that the claim belongs to.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLAIM_STATUS_FIELD_NUMBER = 2;
+    private int claimStatus_ = 0;
+    /**
+     * <pre>
+     * The status that the reward account must have.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+     * @return The enum numeric value on the wire for claimStatus.
+     */
+    @java.lang.Override public int getClaimStatusValue() {
+      return claimStatus_;
+    }
+    /**
+     * <pre>
+     * The status that the reward account must have.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+     * @return The claimStatus.
+     */
+    @java.lang.Override public com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus getClaimStatus() {
+      com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus result = com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.forNumber(claimStatus_);
+      return result == null ? com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 99;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (claimStatus_ != com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.CLAIM_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, claimStatus_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(99, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (claimStatus_ != com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.CLAIM_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, claimStatus_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest other = (com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (claimStatus_ != other.claimStatus_) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + CLAIM_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + claimStatus_;
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardDistributionsByAddressRequest queries for reward claims by address that match the claim_status.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryRewardDistributionsByAddressRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryRewardDistributionsByAddressRequest)
+        com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest.class, com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        claimStatus_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest build() {
+        com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest result = new com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.claimStatus_ = claimStatus_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.claimStatus_ != 0) {
+          setClaimStatusValue(other.getClaimStatusValue());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                claimStatus_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 794: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 794
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * The address that the claim belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The address that the claim belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The address that the claim belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The address that the claim belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The address that the claim belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int claimStatus_ = 0;
+      /**
+       * <pre>
+       * The status that the reward account must have.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+       * @return The enum numeric value on the wire for claimStatus.
+       */
+      @java.lang.Override public int getClaimStatusValue() {
+        return claimStatus_;
+      }
+      /**
+       * <pre>
+       * The status that the reward account must have.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+       * @param value The enum numeric value on the wire for claimStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimStatusValue(int value) {
+        claimStatus_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status that the reward account must have.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+       * @return The claimStatus.
+       */
+      @java.lang.Override
+      public com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus getClaimStatus() {
+        com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus result = com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.forNumber(claimStatus_);
+        return result == null ? com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The status that the reward account must have.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+       * @param value The claimStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimStatus(com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        claimStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status that the reward account must have.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 2 [json_name = "claimStatus"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        claimStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 99 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryRewardDistributionsByAddressRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryRewardDistributionsByAddressRequest)
+    private static final com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardDistributionsByAddressRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardDistributionsByAddressRequest>() {
+      @java.lang.Override
+      public QueryRewardDistributionsByAddressRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardDistributionsByAddressRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardDistributionsByAddressRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardDistributionsByAddressResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.QueryRewardDistributionsByAddressResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The address that the reward account belongs to.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * The address that the reward account belongs to.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.reward.v1.QueryProto.RewardAccountResponse> 
+        getRewardAccountStateList();
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.QueryProto.RewardAccountResponse getRewardAccountState(int index);
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    int getRewardAccountStateCount();
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder> 
+        getRewardAccountStateOrBuilderList();
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder getRewardAccountStateOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardDistributionsByAddressResponse returns the reward claims for an address that match the claim_status.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.QueryRewardDistributionsByAddressResponse}
+   */
+  public static final class QueryRewardDistributionsByAddressResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.QueryRewardDistributionsByAddressResponse)
+      QueryRewardDistributionsByAddressResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardDistributionsByAddressResponse.newBuilder() to construct.
+    private QueryRewardDistributionsByAddressResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardDistributionsByAddressResponse() {
+      address_ = "";
+      rewardAccountState_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardDistributionsByAddressResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse.class, com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * The address that the reward account belongs to.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The address that the reward account belongs to.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARD_ACCOUNT_STATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.reward.v1.QueryProto.RewardAccountResponse> rewardAccountState_;
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.reward.v1.QueryProto.RewardAccountResponse> getRewardAccountStateList() {
+      return rewardAccountState_;
+    }
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder> 
+        getRewardAccountStateOrBuilderList() {
+      return rewardAccountState_;
+    }
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRewardAccountStateCount() {
+      return rewardAccountState_.size();
+    }
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.RewardAccountResponse getRewardAccountState(int index) {
+      return rewardAccountState_.get(index);
+    }
+    /**
+     * <pre>
+     * List of RewardAccounts queried for.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder getRewardAccountStateOrBuilder(
+        int index) {
+      return rewardAccountState_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 99;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      for (int i = 0; i < rewardAccountState_.size(); i++) {
+        output.writeMessage(2, rewardAccountState_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(99, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      for (int i = 0; i < rewardAccountState_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, rewardAccountState_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse other = (com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getRewardAccountStateList()
+          .equals(other.getRewardAccountStateList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (getRewardAccountStateCount() > 0) {
+        hash = (37 * hash) + REWARD_ACCOUNT_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardAccountStateList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardDistributionsByAddressResponse returns the reward claims for an address that match the claim_status.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.QueryRewardDistributionsByAddressResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.QueryRewardDistributionsByAddressResponse)
+        com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse.class, com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        if (rewardAccountStateBuilder_ == null) {
+          rewardAccountState_ = java.util.Collections.emptyList();
+        } else {
+          rewardAccountState_ = null;
+          rewardAccountStateBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse build() {
+        com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse buildPartial() {
+        com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse result = new com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse result) {
+        if (rewardAccountStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            rewardAccountState_ = java.util.Collections.unmodifiableList(rewardAccountState_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.rewardAccountState_ = rewardAccountState_;
+        } else {
+          result.rewardAccountState_ = rewardAccountStateBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse other) {
+        if (other == com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (rewardAccountStateBuilder_ == null) {
+          if (!other.rewardAccountState_.isEmpty()) {
+            if (rewardAccountState_.isEmpty()) {
+              rewardAccountState_ = other.rewardAccountState_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRewardAccountStateIsMutable();
+              rewardAccountState_.addAll(other.rewardAccountState_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardAccountState_.isEmpty()) {
+            if (rewardAccountStateBuilder_.isEmpty()) {
+              rewardAccountStateBuilder_.dispose();
+              rewardAccountStateBuilder_ = null;
+              rewardAccountState_ = other.rewardAccountState_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              rewardAccountStateBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardAccountStateFieldBuilder() : null;
+            } else {
+              rewardAccountStateBuilder_.addAllMessages(other.rewardAccountState_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.provenance.reward.v1.QueryProto.RewardAccountResponse m =
+                    input.readMessage(
+                        com.provenance.reward.v1.QueryProto.RewardAccountResponse.parser(),
+                        extensionRegistry);
+                if (rewardAccountStateBuilder_ == null) {
+                  ensureRewardAccountStateIsMutable();
+                  rewardAccountState_.add(m);
+                } else {
+                  rewardAccountStateBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 794: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 794
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * The address that the reward account belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The address that the reward account belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The address that the reward account belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The address that the reward account belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The address that the reward account belongs to.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.reward.v1.QueryProto.RewardAccountResponse> rewardAccountState_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardAccountStateIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          rewardAccountState_ = new java.util.ArrayList<com.provenance.reward.v1.QueryProto.RewardAccountResponse>(rewardAccountState_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.QueryProto.RewardAccountResponse, com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder, com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder> rewardAccountStateBuilder_;
+
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.QueryProto.RewardAccountResponse> getRewardAccountStateList() {
+        if (rewardAccountStateBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardAccountState_);
+        } else {
+          return rewardAccountStateBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRewardAccountStateCount() {
+        if (rewardAccountStateBuilder_ == null) {
+          return rewardAccountState_.size();
+        } else {
+          return rewardAccountStateBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.QueryProto.RewardAccountResponse getRewardAccountState(int index) {
+        if (rewardAccountStateBuilder_ == null) {
+          return rewardAccountState_.get(index);
+        } else {
+          return rewardAccountStateBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardAccountState(
+          int index, com.provenance.reward.v1.QueryProto.RewardAccountResponse value) {
+        if (rewardAccountStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardAccountStateIsMutable();
+          rewardAccountState_.set(index, value);
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardAccountState(
+          int index, com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder builderForValue) {
+        if (rewardAccountStateBuilder_ == null) {
+          ensureRewardAccountStateIsMutable();
+          rewardAccountState_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardAccountState(com.provenance.reward.v1.QueryProto.RewardAccountResponse value) {
+        if (rewardAccountStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardAccountStateIsMutable();
+          rewardAccountState_.add(value);
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardAccountState(
+          int index, com.provenance.reward.v1.QueryProto.RewardAccountResponse value) {
+        if (rewardAccountStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardAccountStateIsMutable();
+          rewardAccountState_.add(index, value);
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardAccountState(
+          com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder builderForValue) {
+        if (rewardAccountStateBuilder_ == null) {
+          ensureRewardAccountStateIsMutable();
+          rewardAccountState_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardAccountState(
+          int index, com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder builderForValue) {
+        if (rewardAccountStateBuilder_ == null) {
+          ensureRewardAccountStateIsMutable();
+          rewardAccountState_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRewardAccountState(
+          java.lang.Iterable<? extends com.provenance.reward.v1.QueryProto.RewardAccountResponse> values) {
+        if (rewardAccountStateBuilder_ == null) {
+          ensureRewardAccountStateIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardAccountState_);
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRewardAccountState() {
+        if (rewardAccountStateBuilder_ == null) {
+          rewardAccountState_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRewardAccountState(int index) {
+        if (rewardAccountStateBuilder_ == null) {
+          ensureRewardAccountStateIsMutable();
+          rewardAccountState_.remove(index);
+          onChanged();
+        } else {
+          rewardAccountStateBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder getRewardAccountStateBuilder(
+          int index) {
+        return getRewardAccountStateFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder getRewardAccountStateOrBuilder(
+          int index) {
+        if (rewardAccountStateBuilder_ == null) {
+          return rewardAccountState_.get(index);  } else {
+          return rewardAccountStateBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder> 
+           getRewardAccountStateOrBuilderList() {
+        if (rewardAccountStateBuilder_ != null) {
+          return rewardAccountStateBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardAccountState_);
+        }
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder addRewardAccountStateBuilder() {
+        return getRewardAccountStateFieldBuilder().addBuilder(
+            com.provenance.reward.v1.QueryProto.RewardAccountResponse.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder addRewardAccountStateBuilder(
+          int index) {
+        return getRewardAccountStateFieldBuilder().addBuilder(
+            index, com.provenance.reward.v1.QueryProto.RewardAccountResponse.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of RewardAccounts queried for.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardAccountResponse reward_account_state = 2 [json_name = "rewardAccountState", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder> 
+           getRewardAccountStateBuilderList() {
+        return getRewardAccountStateFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.QueryProto.RewardAccountResponse, com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder, com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder> 
+          getRewardAccountStateFieldBuilder() {
+        if (rewardAccountStateBuilder_ == null) {
+          rewardAccountStateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.reward.v1.QueryProto.RewardAccountResponse, com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder, com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder>(
+                  rewardAccountState_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewardAccountState_ = null;
+        }
+        return rewardAccountStateBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 99 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.QueryRewardDistributionsByAddressResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.QueryRewardDistributionsByAddressResponse)
+    private static final com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardDistributionsByAddressResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardDistributionsByAddressResponse>() {
+      @java.lang.Override
+      public QueryRewardDistributionsByAddressResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardDistributionsByAddressResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardDistributionsByAddressResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.QueryRewardDistributionsByAddressResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RewardAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.RewardAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The id of the reward program that this claim belongs to.
+     * </pre>
+     *
+     * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+     * @return The rewardProgramId.
+     */
+    long getRewardProgramId();
+
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalRewardClaim field is set.
+     */
+    boolean hasTotalRewardClaim();
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     * @return The totalRewardClaim.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim();
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder();
+
+    /**
+     * <pre>
+     * The status of the claim.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+     * @return The enum numeric value on the wire for claimStatus.
+     */
+    int getClaimStatusValue();
+    /**
+     * <pre>
+     * The status of the claim.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+     * @return The claimStatus.
+     */
+    com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus getClaimStatus();
+
+    /**
+     * <pre>
+     * The claim period that the claim belongs to.
+     * </pre>
+     *
+     * <code>uint64 claim_id = 4 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    long getClaimId();
+  }
+  /**
+   * <pre>
+   * RewardAccountResponse is an address' reward claim for a reward program's claim period.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.RewardAccountResponse}
+   */
+  public static final class RewardAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.RewardAccountResponse)
+      RewardAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardAccountResponse.newBuilder() to construct.
+    private RewardAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardAccountResponse() {
+      claimStatus_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_RewardAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_RewardAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.QueryProto.RewardAccountResponse.class, com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder.class);
+    }
+
+    public static final int REWARD_PROGRAM_ID_FIELD_NUMBER = 1;
+    private long rewardProgramId_ = 0L;
+    /**
+     * <pre>
+     * The id of the reward program that this claim belongs to.
+     * </pre>
+     *
+     * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+     * @return The rewardProgramId.
+     */
+    @java.lang.Override
+    public long getRewardProgramId() {
+      return rewardProgramId_;
+    }
+
+    public static final int TOTAL_REWARD_CLAIM_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin totalRewardClaim_;
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalRewardClaim field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalRewardClaim() {
+      return totalRewardClaim_ != null;
+    }
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     * @return The totalRewardClaim.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim() {
+      return totalRewardClaim_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardClaim_;
+    }
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder() {
+      return totalRewardClaim_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardClaim_;
+    }
+
+    public static final int CLAIM_STATUS_FIELD_NUMBER = 3;
+    private int claimStatus_ = 0;
+    /**
+     * <pre>
+     * The status of the claim.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+     * @return The enum numeric value on the wire for claimStatus.
+     */
+    @java.lang.Override public int getClaimStatusValue() {
+      return claimStatus_;
+    }
+    /**
+     * <pre>
+     * The status of the claim.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+     * @return The claimStatus.
+     */
+    @java.lang.Override public com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus getClaimStatus() {
+      com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus result = com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.forNumber(claimStatus_);
+      return result == null ? com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int CLAIM_ID_FIELD_NUMBER = 4;
+    private long claimId_ = 0L;
+    /**
+     * <pre>
+     * The claim period that the claim belongs to.
+     * </pre>
+     *
+     * <code>uint64 claim_id = 4 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    @java.lang.Override
+    public long getClaimId() {
+      return claimId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardProgramId_ != 0L) {
+        output.writeUInt64(1, rewardProgramId_);
+      }
+      if (totalRewardClaim_ != null) {
+        output.writeMessage(2, getTotalRewardClaim());
+      }
+      if (claimStatus_ != com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.CLAIM_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, claimStatus_);
+      }
+      if (claimId_ != 0L) {
+        output.writeUInt64(4, claimId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardProgramId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, rewardProgramId_);
+      }
+      if (totalRewardClaim_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTotalRewardClaim());
+      }
+      if (claimStatus_ != com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.CLAIM_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, claimStatus_);
+      }
+      if (claimId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, claimId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.QueryProto.RewardAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.QueryProto.RewardAccountResponse other = (com.provenance.reward.v1.QueryProto.RewardAccountResponse) obj;
+
+      if (getRewardProgramId()
+          != other.getRewardProgramId()) return false;
+      if (hasTotalRewardClaim() != other.hasTotalRewardClaim()) return false;
+      if (hasTotalRewardClaim()) {
+        if (!getTotalRewardClaim()
+            .equals(other.getTotalRewardClaim())) return false;
+      }
+      if (claimStatus_ != other.claimStatus_) return false;
+      if (getClaimId()
+          != other.getClaimId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REWARD_PROGRAM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRewardProgramId());
+      if (hasTotalRewardClaim()) {
+        hash = (37 * hash) + TOTAL_REWARD_CLAIM_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalRewardClaim().hashCode();
+      }
+      hash = (37 * hash) + CLAIM_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + claimStatus_;
+      hash = (37 * hash) + CLAIM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.QueryProto.RewardAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RewardAccountResponse is an address' reward claim for a reward program's claim period.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.RewardAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.RewardAccountResponse)
+        com.provenance.reward.v1.QueryProto.RewardAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_RewardAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_RewardAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.QueryProto.RewardAccountResponse.class, com.provenance.reward.v1.QueryProto.RewardAccountResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.QueryProto.RewardAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardProgramId_ = 0L;
+        totalRewardClaim_ = null;
+        if (totalRewardClaimBuilder_ != null) {
+          totalRewardClaimBuilder_.dispose();
+          totalRewardClaimBuilder_ = null;
+        }
+        claimStatus_ = 0;
+        claimId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.QueryProto.internal_static_provenance_reward_v1_RewardAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.RewardAccountResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.QueryProto.RewardAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.RewardAccountResponse build() {
+        com.provenance.reward.v1.QueryProto.RewardAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.QueryProto.RewardAccountResponse buildPartial() {
+        com.provenance.reward.v1.QueryProto.RewardAccountResponse result = new com.provenance.reward.v1.QueryProto.RewardAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.QueryProto.RewardAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardProgramId_ = rewardProgramId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalRewardClaim_ = totalRewardClaimBuilder_ == null
+              ? totalRewardClaim_
+              : totalRewardClaimBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.claimStatus_ = claimStatus_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.claimId_ = claimId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.QueryProto.RewardAccountResponse) {
+          return mergeFrom((com.provenance.reward.v1.QueryProto.RewardAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.QueryProto.RewardAccountResponse other) {
+        if (other == com.provenance.reward.v1.QueryProto.RewardAccountResponse.getDefaultInstance()) return this;
+        if (other.getRewardProgramId() != 0L) {
+          setRewardProgramId(other.getRewardProgramId());
+        }
+        if (other.hasTotalRewardClaim()) {
+          mergeTotalRewardClaim(other.getTotalRewardClaim());
+        }
+        if (other.claimStatus_ != 0) {
+          setClaimStatusValue(other.getClaimStatusValue());
+        }
+        if (other.getClaimId() != 0L) {
+          setClaimId(other.getClaimId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                rewardProgramId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getTotalRewardClaimFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                claimStatus_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                claimId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long rewardProgramId_ ;
+      /**
+       * <pre>
+       * The id of the reward program that this claim belongs to.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @return The rewardProgramId.
+       */
+      @java.lang.Override
+      public long getRewardProgramId() {
+        return rewardProgramId_;
+      }
+      /**
+       * <pre>
+       * The id of the reward program that this claim belongs to.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @param value The rewardProgramId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardProgramId(long value) {
+
+        rewardProgramId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the reward program that this claim belongs to.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardProgramId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rewardProgramId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin totalRewardClaim_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalRewardClaimBuilder_;
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       * @return Whether the totalRewardClaim field is set.
+       */
+      public boolean hasTotalRewardClaim() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       * @return The totalRewardClaim.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim() {
+        if (totalRewardClaimBuilder_ == null) {
+          return totalRewardClaim_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardClaim_;
+        } else {
+          return totalRewardClaimBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewardClaim(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardClaimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          totalRewardClaim_ = value;
+        } else {
+          totalRewardClaimBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewardClaim(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalRewardClaimBuilder_ == null) {
+          totalRewardClaim_ = builderForValue.build();
+        } else {
+          totalRewardClaimBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTotalRewardClaim(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardClaimBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            totalRewardClaim_ != null &&
+            totalRewardClaim_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTotalRewardClaimBuilder().mergeFrom(value);
+          } else {
+            totalRewardClaim_ = value;
+          }
+        } else {
+          totalRewardClaimBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTotalRewardClaim() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalRewardClaim_ = null;
+        if (totalRewardClaimBuilder_ != null) {
+          totalRewardClaimBuilder_.dispose();
+          totalRewardClaimBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalRewardClaimBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTotalRewardClaimFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder() {
+        if (totalRewardClaimBuilder_ != null) {
+          return totalRewardClaimBuilder_.getMessageOrBuilder();
+        } else {
+          return totalRewardClaim_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardClaim_;
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalRewardClaimFieldBuilder() {
+        if (totalRewardClaimBuilder_ == null) {
+          totalRewardClaimBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTotalRewardClaim(),
+                  getParentForChildren(),
+                  isClean());
+          totalRewardClaim_ = null;
+        }
+        return totalRewardClaimBuilder_;
+      }
+
+      private int claimStatus_ = 0;
+      /**
+       * <pre>
+       * The status of the claim.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+       * @return The enum numeric value on the wire for claimStatus.
+       */
+      @java.lang.Override public int getClaimStatusValue() {
+        return claimStatus_;
+      }
+      /**
+       * <pre>
+       * The status of the claim.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+       * @param value The enum numeric value on the wire for claimStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimStatusValue(int value) {
+        claimStatus_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the claim.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+       * @return The claimStatus.
+       */
+      @java.lang.Override
+      public com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus getClaimStatus() {
+        com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus result = com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.forNumber(claimStatus_);
+        return result == null ? com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The status of the claim.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+       * @param value The claimStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimStatus(com.provenance.reward.v1.RewardProto.RewardAccountState.ClaimStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        claimStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the claim.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardAccountState.ClaimStatus claim_status = 3 [json_name = "claimStatus"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        claimStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long claimId_ ;
+      /**
+       * <pre>
+       * The claim period that the claim belongs to.
+       * </pre>
+       *
+       * <code>uint64 claim_id = 4 [json_name = "claimId"];</code>
+       * @return The claimId.
+       */
+      @java.lang.Override
+      public long getClaimId() {
+        return claimId_;
+      }
+      /**
+       * <pre>
+       * The claim period that the claim belongs to.
+       * </pre>
+       *
+       * <code>uint64 claim_id = 4 [json_name = "claimId"];</code>
+       * @param value The claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimId(long value) {
+
+        claimId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The claim period that the claim belongs to.
+       * </pre>
+       *
+       * <code>uint64 claim_id = 4 [json_name = "claimId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        claimId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.RewardAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.RewardAccountResponse)
+    private static final com.provenance.reward.v1.QueryProto.RewardAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.QueryProto.RewardAccountResponse();
+    }
+
+    public static com.provenance.reward.v1.QueryProto.RewardAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RewardAccountResponse>() {
+      @java.lang.Override
+      public RewardAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.QueryProto.RewardAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryRewardProgramByIDRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryRewardProgramByIDRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryRewardProgramByIDResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryRewardProgramByIDResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryRewardProgramsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryRewardProgramsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryRewardProgramsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryRewardProgramsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryClaimPeriodRewardDistributionsByIDResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_QueryRewardDistributionsByAddressResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_RewardAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_RewardAccountResponse_fieldAccessorTable;
 
@@ -165,7 +9923,7 @@ public final class QueryProto {
       "ardDistributionsByAddressResponse\"6\202\323\344\223\002" +
       "0\022./provenance/rewards/v1/reward_claims/" +
       "{address}B\314\001\n\030com.provenance.reward.v1B\n" +
-      "QueryProtoP\001Z2github.com/provenance-io/p" +
+      "QueryProtoP\000Z2github.com/provenance-io/p" +
       "rovenance/x/reward/types\242\002\003PRX\252\002\024Provena" +
       "nce.Reward.V1\312\002\024Provenance\\Reward\\V1\342\002 P" +
       "rovenance\\Reward\\V1\\GPBMetadata\352\002\026Proven" +

@@ -14,124 +14,20715 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgAddAccountCertificateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgAddAccountCertificate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <pre>
+     * NewCertificate is the new certificate to add
+     * </pre>
+     *
+     * <code>bytes new_certificate = 5 [json_name = "newCertificate", (.gogoproto.moretags) = "yaml:&#92;"new_certificate&#92;""];</code>
+     * @return The newCertificate.
+     */
+    com.google.protobuf.ByteString getNewCertificate();
+  }
+  /**
+   * <pre>
+   * MsgAddAccountCertificate is the message used when a user wants to add new
+   * certificates to his account
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgAddAccountCertificate}
+   */
+  public static final class MsgAddAccountCertificate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgAddAccountCertificate)
+      MsgAddAccountCertificateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddAccountCertificate.newBuilder() to construct.
+    private MsgAddAccountCertificate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddAccountCertificate() {
+      domain_ = "";
+      name_ = "";
+      owner_ = "";
+      payer_ = "";
+      newCertificate_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddAccountCertificate();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate.class, com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_CERTIFICATE_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString newCertificate_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * NewCertificate is the new certificate to add
+     * </pre>
+     *
+     * <code>bytes new_certificate = 5 [json_name = "newCertificate", (.gogoproto.moretags) = "yaml:&#92;"new_certificate&#92;""];</code>
+     * @return The newCertificate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getNewCertificate() {
+      return newCertificate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payer_);
+      }
+      if (!newCertificate_.isEmpty()) {
+        output.writeBytes(5, newCertificate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payer_);
+      }
+      if (!newCertificate_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, newCertificate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate other = (com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getNewCertificate()
+          .equals(other.getNewCertificate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (37 * hash) + NEW_CERTIFICATE_FIELD_NUMBER;
+      hash = (53 * hash) + getNewCertificate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddAccountCertificate is the message used when a user wants to add new
+     * certificates to his account
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgAddAccountCertificate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgAddAccountCertificate)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate.class, com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        name_ = "";
+        owner_ = "";
+        payer_ = "";
+        newCertificate_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate result = new com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payer_ = payer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.newCertificate_ = newCertificate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getNewCertificate() != com.google.protobuf.ByteString.EMPTY) {
+          setNewCertificate(other.getNewCertificate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                newCertificate_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString newCertificate_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * NewCertificate is the new certificate to add
+       * </pre>
+       *
+       * <code>bytes new_certificate = 5 [json_name = "newCertificate", (.gogoproto.moretags) = "yaml:&#92;"new_certificate&#92;""];</code>
+       * @return The newCertificate.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getNewCertificate() {
+        return newCertificate_;
+      }
+      /**
+       * <pre>
+       * NewCertificate is the new certificate to add
+       * </pre>
+       *
+       * <code>bytes new_certificate = 5 [json_name = "newCertificate", (.gogoproto.moretags) = "yaml:&#92;"new_certificate&#92;""];</code>
+       * @param value The newCertificate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewCertificate(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        newCertificate_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewCertificate is the new certificate to add
+       * </pre>
+       *
+       * <code>bytes new_certificate = 5 [json_name = "newCertificate", (.gogoproto.moretags) = "yaml:&#92;"new_certificate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewCertificate() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        newCertificate_ = getDefaultInstance().getNewCertificate();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgAddAccountCertificate)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgAddAccountCertificate)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddAccountCertificate>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddAccountCertificate>() {
+      @java.lang.Override
+      public MsgAddAccountCertificate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddAccountCertificate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddAccountCertificate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddAccountCertificateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgAddAccountCertificateResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgAddAccountCertificateResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgAddAccountCertificateResponse}
+   */
+  public static final class MsgAddAccountCertificateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgAddAccountCertificateResponse)
+      MsgAddAccountCertificateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddAccountCertificateResponse.newBuilder() to construct.
+    private MsgAddAccountCertificateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddAccountCertificateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddAccountCertificateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddAccountCertificateResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgAddAccountCertificateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgAddAccountCertificateResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgAddAccountCertificateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgAddAccountCertificateResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddAccountCertificateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddAccountCertificateResponse>() {
+      @java.lang.Override
+      public MsgAddAccountCertificateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddAccountCertificateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddAccountCertificateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgAddAccountCertificateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteAccountCertificateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <pre>
+     * DeleteCertificate is the certificate to delete
+     * </pre>
+     *
+     * <code>bytes delete_certificate = 5 [json_name = "deleteCertificate", (.gogoproto.moretags) = "yaml:&#92;"delete_certificate&#92;""];</code>
+     * @return The deleteCertificate.
+     */
+    com.google.protobuf.ByteString getDeleteCertificate();
+  }
+  /**
+   * <pre>
+   * MsgDeleteAccountCertificate is the request model used to remove certificates
+   * from an account
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteAccountCertificate}
+   */
+  public static final class MsgDeleteAccountCertificate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificate)
+      MsgDeleteAccountCertificateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteAccountCertificate.newBuilder() to construct.
+    private MsgDeleteAccountCertificate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteAccountCertificate() {
+      domain_ = "";
+      name_ = "";
+      owner_ = "";
+      payer_ = "";
+      deleteCertificate_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteAccountCertificate();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELETE_CERTIFICATE_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString deleteCertificate_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * DeleteCertificate is the certificate to delete
+     * </pre>
+     *
+     * <code>bytes delete_certificate = 5 [json_name = "deleteCertificate", (.gogoproto.moretags) = "yaml:&#92;"delete_certificate&#92;""];</code>
+     * @return The deleteCertificate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDeleteCertificate() {
+      return deleteCertificate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payer_);
+      }
+      if (!deleteCertificate_.isEmpty()) {
+        output.writeBytes(5, deleteCertificate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payer_);
+      }
+      if (!deleteCertificate_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, deleteCertificate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate other = (com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getDeleteCertificate()
+          .equals(other.getDeleteCertificate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (37 * hash) + DELETE_CERTIFICATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDeleteCertificate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteAccountCertificate is the request model used to remove certificates
+     * from an account
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteAccountCertificate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificate)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        name_ = "";
+        owner_ = "";
+        payer_ = "";
+        deleteCertificate_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate result = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payer_ = payer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.deleteCertificate_ = deleteCertificate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getDeleteCertificate() != com.google.protobuf.ByteString.EMPTY) {
+          setDeleteCertificate(other.getDeleteCertificate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                deleteCertificate_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString deleteCertificate_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * DeleteCertificate is the certificate to delete
+       * </pre>
+       *
+       * <code>bytes delete_certificate = 5 [json_name = "deleteCertificate", (.gogoproto.moretags) = "yaml:&#92;"delete_certificate&#92;""];</code>
+       * @return The deleteCertificate.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDeleteCertificate() {
+        return deleteCertificate_;
+      }
+      /**
+       * <pre>
+       * DeleteCertificate is the certificate to delete
+       * </pre>
+       *
+       * <code>bytes delete_certificate = 5 [json_name = "deleteCertificate", (.gogoproto.moretags) = "yaml:&#92;"delete_certificate&#92;""];</code>
+       * @param value The deleteCertificate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeleteCertificate(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        deleteCertificate_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DeleteCertificate is the certificate to delete
+       * </pre>
+       *
+       * <code>bytes delete_certificate = 5 [json_name = "deleteCertificate", (.gogoproto.moretags) = "yaml:&#92;"delete_certificate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeleteCertificate() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        deleteCertificate_ = getDefaultInstance().getDeleteCertificate();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificate)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificate)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteAccountCertificate>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteAccountCertificate>() {
+      @java.lang.Override
+      public MsgDeleteAccountCertificate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteAccountCertificate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteAccountCertificate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteAccountCertificateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificateResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgDeleteAccountCertificateResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteAccountCertificateResponse}
+   */
+  public static final class MsgDeleteAccountCertificateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificateResponse)
+      MsgDeleteAccountCertificateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteAccountCertificateResponse.newBuilder() to construct.
+    private MsgDeleteAccountCertificateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteAccountCertificateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteAccountCertificateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteAccountCertificateResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteAccountCertificateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificateResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgDeleteAccountCertificateResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteAccountCertificateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteAccountCertificateResponse>() {
+      @java.lang.Override
+      public MsgDeleteAccountCertificateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteAccountCertificateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteAccountCertificateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountCertificateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgDeleteAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+  }
+  /**
+   * <pre>
+   * MsgDeleteAccount is the request model used to delete an account
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteAccount}
+   */
+  public static final class MsgDeleteAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgDeleteAccount)
+      MsgDeleteAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteAccount.newBuilder() to construct.
+    private MsgDeleteAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteAccount() {
+      domain_ = "";
+      name_ = "";
+      owner_ = "";
+      payer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount other = (com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteAccount is the request model used to delete an account
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgDeleteAccount)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        name_ = "";
+        owner_ = "";
+        payer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount result = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payer_ = payer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgDeleteAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgDeleteAccount)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteAccount>() {
+      @java.lang.Override
+      public MsgDeleteAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgDeleteAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgDeleteAccountResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteAccountResponse}
+   */
+  public static final class MsgDeleteAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgDeleteAccountResponse)
+      MsgDeleteAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteAccountResponse.newBuilder() to construct.
+    private MsgDeleteAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteAccountResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgDeleteAccountResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgDeleteAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgDeleteAccountResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteAccountResponse>() {
+      @java.lang.Override
+      public MsgDeleteAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteDomainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgDeleteDomain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+  }
+  /**
+   * <pre>
+   * MsgDeleteDomain is the request model to delete a domain
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteDomain}
+   */
+  public static final class MsgDeleteDomain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgDeleteDomain)
+      MsgDeleteDomainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteDomain.newBuilder() to construct.
+    private MsgDeleteDomain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteDomain() {
+      domain_ = "";
+      owner_ = "";
+      payer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteDomain();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, payer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, payer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain other = (com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteDomain is the request model to delete a domain
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteDomain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgDeleteDomain)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        owner_ = "";
+        payer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomain_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain result = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.payer_ = payer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgDeleteDomain)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgDeleteDomain)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteDomain>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteDomain>() {
+      @java.lang.Override
+      public MsgDeleteDomain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteDomain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteDomain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteDomainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgDeleteDomainResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgDeleteDomainResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteDomainResponse}
+   */
+  public static final class MsgDeleteDomainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgDeleteDomainResponse)
+      MsgDeleteDomainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteDomainResponse.newBuilder() to construct.
+    private MsgDeleteDomainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteDomainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteDomainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteDomainResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgDeleteDomainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgDeleteDomainResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgDeleteDomainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgDeleteDomainResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteDomainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteDomainResponse>() {
+      @java.lang.Override
+      public MsgDeleteDomainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteDomainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteDomainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgDeleteDomainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRegisterAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgRegisterAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <pre>
+     * Broker is the account that facilitated the transaction
+     * </pre>
+     *
+     * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+     * @return The broker.
+     */
+    java.lang.String getBroker();
+    /**
+     * <pre>
+     * Broker is the account that facilitated the transaction
+     * </pre>
+     *
+     * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+     * @return The bytes for broker.
+     */
+    com.google.protobuf.ByteString
+        getBrokerBytes();
+
+    /**
+     * <pre>
+     * Registerer is the user who registers this account
+     * </pre>
+     *
+     * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+     * @return The registerer.
+     */
+    java.lang.String getRegisterer();
+    /**
+     * <pre>
+     * Registerer is the user who registers this account
+     * </pre>
+     *
+     * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+     * @return The bytes for registerer.
+     */
+    com.google.protobuf.ByteString
+        getRegistererBytes();
+
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> 
+        getResourcesList();
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    com.starnamed.x.starname.v1beta1.TypesProto.Resource getResources(int index);
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    int getResourcesCount();
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> 
+        getResourcesOrBuilderList();
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder getResourcesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgRegisterAccount is the request model used to register new accounts
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRegisterAccount}
+   */
+  public static final class MsgRegisterAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgRegisterAccount)
+      MsgRegisterAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterAccount.newBuilder() to construct.
+    private MsgRegisterAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterAccount() {
+      domain_ = "";
+      name_ = "";
+      owner_ = "";
+      payer_ = "";
+      broker_ = "";
+      registerer_ = "";
+      resources_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BROKER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object broker_ = "";
+    /**
+     * <pre>
+     * Broker is the account that facilitated the transaction
+     * </pre>
+     *
+     * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+     * @return The broker.
+     */
+    @java.lang.Override
+    public java.lang.String getBroker() {
+      java.lang.Object ref = broker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        broker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Broker is the account that facilitated the transaction
+     * </pre>
+     *
+     * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+     * @return The bytes for broker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBrokerBytes() {
+      java.lang.Object ref = broker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        broker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTERER_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerer_ = "";
+    /**
+     * <pre>
+     * Registerer is the user who registers this account
+     * </pre>
+     *
+     * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+     * @return The registerer.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterer() {
+      java.lang.Object ref = registerer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Registerer is the user who registers this account
+     * </pre>
+     *
+     * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+     * @return The bytes for registerer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistererBytes() {
+      java.lang.Object ref = registerer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCES_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> resources_;
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> getResourcesList() {
+      return resources_;
+    }
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> 
+        getResourcesOrBuilderList() {
+      return resources_;
+    }
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getResourcesCount() {
+      return resources_.size();
+    }
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TypesProto.Resource getResources(int index) {
+      return resources_.get(index);
+    }
+    /**
+     * <pre>
+     * Resources are the blockchain addresses of the account
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder getResourcesOrBuilder(
+        int index) {
+      return resources_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(broker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, broker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, registerer_);
+      }
+      for (int i = 0; i < resources_.size(); i++) {
+        output.writeMessage(7, resources_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(broker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, broker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, registerer_);
+      }
+      for (int i = 0; i < resources_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, resources_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount other = (com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getBroker()
+          .equals(other.getBroker())) return false;
+      if (!getRegisterer()
+          .equals(other.getRegisterer())) return false;
+      if (!getResourcesList()
+          .equals(other.getResourcesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (37 * hash) + BROKER_FIELD_NUMBER;
+      hash = (53 * hash) + getBroker().hashCode();
+      hash = (37 * hash) + REGISTERER_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterer().hashCode();
+      if (getResourcesCount() > 0) {
+        hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+        hash = (53 * hash) + getResourcesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterAccount is the request model used to register new accounts
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRegisterAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgRegisterAccount)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        name_ = "";
+        owner_ = "";
+        payer_ = "";
+        broker_ = "";
+        registerer_ = "";
+        if (resourcesBuilder_ == null) {
+          resources_ = java.util.Collections.emptyList();
+        } else {
+          resources_ = null;
+          resourcesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount result = new com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount result) {
+        if (resourcesBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            resources_ = java.util.Collections.unmodifiableList(resources_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.resources_ = resources_;
+        } else {
+          result.resources_ = resourcesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payer_ = payer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.broker_ = broker_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.registerer_ = registerer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getBroker().isEmpty()) {
+          broker_ = other.broker_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getRegisterer().isEmpty()) {
+          registerer_ = other.registerer_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (resourcesBuilder_ == null) {
+          if (!other.resources_.isEmpty()) {
+            if (resources_.isEmpty()) {
+              resources_ = other.resources_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureResourcesIsMutable();
+              resources_.addAll(other.resources_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.resources_.isEmpty()) {
+            if (resourcesBuilder_.isEmpty()) {
+              resourcesBuilder_.dispose();
+              resourcesBuilder_ = null;
+              resources_ = other.resources_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              resourcesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResourcesFieldBuilder() : null;
+            } else {
+              resourcesBuilder_.addAllMessages(other.resources_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                broker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                registerer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                com.starnamed.x.starname.v1beta1.TypesProto.Resource m =
+                    input.readMessage(
+                        com.starnamed.x.starname.v1beta1.TypesProto.Resource.parser(),
+                        extensionRegistry);
+                if (resourcesBuilder_ == null) {
+                  ensureResourcesIsMutable();
+                  resources_.add(m);
+                } else {
+                  resourcesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object broker_ = "";
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @return The broker.
+       */
+      public java.lang.String getBroker() {
+        java.lang.Object ref = broker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          broker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @return The bytes for broker.
+       */
+      public com.google.protobuf.ByteString
+          getBrokerBytes() {
+        java.lang.Object ref = broker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          broker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @param value The broker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBroker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        broker_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBroker() {
+        broker_ = getDefaultInstance().getBroker();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 5 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @param value The bytes for broker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrokerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        broker_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerer_ = "";
+      /**
+       * <pre>
+       * Registerer is the user who registers this account
+       * </pre>
+       *
+       * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+       * @return The registerer.
+       */
+      public java.lang.String getRegisterer() {
+        java.lang.Object ref = registerer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Registerer is the user who registers this account
+       * </pre>
+       *
+       * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+       * @return The bytes for registerer.
+       */
+      public com.google.protobuf.ByteString
+          getRegistererBytes() {
+        java.lang.Object ref = registerer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Registerer is the user who registers this account
+       * </pre>
+       *
+       * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+       * @param value The registerer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerer_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Registerer is the user who registers this account
+       * </pre>
+       *
+       * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterer() {
+        registerer_ = getDefaultInstance().getRegisterer();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Registerer is the user who registers this account
+       * </pre>
+       *
+       * <code>string registerer = 6 [json_name = "registerer", (.gogoproto.moretags) = "yaml:&#92;"registerer&#92;""];</code>
+       * @param value The bytes for registerer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistererBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerer_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> resources_ =
+        java.util.Collections.emptyList();
+      private void ensureResourcesIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          resources_ = new java.util.ArrayList<com.starnamed.x.starname.v1beta1.TypesProto.Resource>(resources_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.starname.v1beta1.TypesProto.Resource, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder, com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> resourcesBuilder_;
+
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> getResourcesList() {
+        if (resourcesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resources_);
+        } else {
+          return resourcesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public int getResourcesCount() {
+        if (resourcesBuilder_ == null) {
+          return resources_.size();
+        } else {
+          return resourcesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Resource getResources(int index) {
+        if (resourcesBuilder_ == null) {
+          return resources_.get(index);
+        } else {
+          return resourcesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder setResources(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Resource value) {
+        if (resourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourcesIsMutable();
+          resources_.set(index, value);
+          onChanged();
+        } else {
+          resourcesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder setResources(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder builderForValue) {
+        if (resourcesBuilder_ == null) {
+          ensureResourcesIsMutable();
+          resources_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resourcesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder addResources(com.starnamed.x.starname.v1beta1.TypesProto.Resource value) {
+        if (resourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourcesIsMutable();
+          resources_.add(value);
+          onChanged();
+        } else {
+          resourcesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder addResources(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Resource value) {
+        if (resourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourcesIsMutable();
+          resources_.add(index, value);
+          onChanged();
+        } else {
+          resourcesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder addResources(
+          com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder builderForValue) {
+        if (resourcesBuilder_ == null) {
+          ensureResourcesIsMutable();
+          resources_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resourcesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder addResources(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder builderForValue) {
+        if (resourcesBuilder_ == null) {
+          ensureResourcesIsMutable();
+          resources_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resourcesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder addAllResources(
+          java.lang.Iterable<? extends com.starnamed.x.starname.v1beta1.TypesProto.Resource> values) {
+        if (resourcesBuilder_ == null) {
+          ensureResourcesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resources_);
+          onChanged();
+        } else {
+          resourcesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder clearResources() {
+        if (resourcesBuilder_ == null) {
+          resources_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          resourcesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public Builder removeResources(int index) {
+        if (resourcesBuilder_ == null) {
+          ensureResourcesIsMutable();
+          resources_.remove(index);
+          onChanged();
+        } else {
+          resourcesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder getResourcesBuilder(
+          int index) {
+        return getResourcesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder getResourcesOrBuilder(
+          int index) {
+        if (resourcesBuilder_ == null) {
+          return resources_.get(index);  } else {
+          return resourcesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> 
+           getResourcesOrBuilderList() {
+        if (resourcesBuilder_ != null) {
+          return resourcesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(resources_);
+        }
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder addResourcesBuilder() {
+        return getResourcesFieldBuilder().addBuilder(
+            com.starnamed.x.starname.v1beta1.TypesProto.Resource.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder addResourcesBuilder(
+          int index) {
+        return getResourcesFieldBuilder().addBuilder(
+            index, com.starnamed.x.starname.v1beta1.TypesProto.Resource.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Resources are the blockchain addresses of the account
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource resources = 7 [json_name = "resources", (.gogoproto.moretags) = "yaml:&#92;"resources&#92;""];</code>
+       */
+      public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder> 
+           getResourcesBuilderList() {
+        return getResourcesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.starname.v1beta1.TypesProto.Resource, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder, com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> 
+          getResourcesFieldBuilder() {
+        if (resourcesBuilder_ == null) {
+          resourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.starnamed.x.starname.v1beta1.TypesProto.Resource, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder, com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder>(
+                  resources_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          resources_ = null;
+        }
+        return resourcesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgRegisterAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgRegisterAccount)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterAccount>() {
+      @java.lang.Override
+      public MsgRegisterAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRegisterAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgRegisterAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRegisterAccountResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRegisterAccountResponse}
+   */
+  public static final class MsgRegisterAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgRegisterAccountResponse)
+      MsgRegisterAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterAccountResponse.newBuilder() to construct.
+    private MsgRegisterAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterAccountResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRegisterAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgRegisterAccountResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgRegisterAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgRegisterAccountResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterAccountResponse>() {
+      @java.lang.Override
+      public MsgRegisterAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRegisterDomainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgRegisterDomain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <pre>
+     * Broker is the account that facilitated the transaction
+     * </pre>
+     *
+     * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+     * @return The broker.
+     */
+    java.lang.String getBroker();
+    /**
+     * <pre>
+     * Broker is the account that facilitated the transaction
+     * </pre>
+     *
+     * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+     * @return The bytes for broker.
+     */
+    com.google.protobuf.ByteString
+        getBrokerBytes();
+
+    /**
+     * <pre>
+     * DomainType defines the type of the domain
+     * </pre>
+     *
+     * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+     * @return The domainType.
+     */
+    java.lang.String getDomainType();
+    /**
+     * <pre>
+     * DomainType defines the type of the domain
+     * </pre>
+     *
+     * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+     * @return The bytes for domainType.
+     */
+    com.google.protobuf.ByteString
+        getDomainTypeBytes();
+  }
+  /**
+   * <pre>
+   * MsgRegisterDomain is the request used to register new domains
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRegisterDomain}
+   */
+  public static final class MsgRegisterDomain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgRegisterDomain)
+      MsgRegisterDomainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterDomain.newBuilder() to construct.
+    private MsgRegisterDomain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterDomain() {
+      name_ = "";
+      admin_ = "";
+      payer_ = "";
+      broker_ = "";
+      domainType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterDomain();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BROKER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object broker_ = "";
+    /**
+     * <pre>
+     * Broker is the account that facilitated the transaction
+     * </pre>
+     *
+     * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+     * @return The broker.
+     */
+    @java.lang.Override
+    public java.lang.String getBroker() {
+      java.lang.Object ref = broker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        broker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Broker is the account that facilitated the transaction
+     * </pre>
+     *
+     * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+     * @return The bytes for broker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBrokerBytes() {
+      java.lang.Object ref = broker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        broker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_TYPE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domainType_ = "";
+    /**
+     * <pre>
+     * DomainType defines the type of the domain
+     * </pre>
+     *
+     * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+     * @return The domainType.
+     */
+    @java.lang.Override
+    public java.lang.String getDomainType() {
+      java.lang.Object ref = domainType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domainType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DomainType defines the type of the domain
+     * </pre>
+     *
+     * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+     * @return The bytes for domainType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainTypeBytes() {
+      java.lang.Object ref = domainType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domainType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, admin_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(broker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, broker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, domainType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, admin_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(broker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, broker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, domainType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain other = (com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getBroker()
+          .equals(other.getBroker())) return false;
+      if (!getDomainType()
+          .equals(other.getDomainType())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (37 * hash) + BROKER_FIELD_NUMBER;
+      hash = (53 * hash) + getBroker().hashCode();
+      hash = (37 * hash) + DOMAIN_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getDomainType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterDomain is the request used to register new domains
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRegisterDomain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgRegisterDomain)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        admin_ = "";
+        payer_ = "";
+        broker_ = "";
+        domainType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomain_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain result = new com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.admin_ = admin_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.payer_ = payer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.broker_ = broker_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.domainType_ = domainType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBroker().isEmpty()) {
+          broker_ = other.broker_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDomainType().isEmpty()) {
+          domainType_ = other.domainType_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                broker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                domainType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string admin = 2 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;""];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object broker_ = "";
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @return The broker.
+       */
+      public java.lang.String getBroker() {
+        java.lang.Object ref = broker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          broker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @return The bytes for broker.
+       */
+      public com.google.protobuf.ByteString
+          getBrokerBytes() {
+        java.lang.Object ref = broker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          broker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @param value The broker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBroker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        broker_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBroker() {
+        broker_ = getDefaultInstance().getBroker();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Broker is the account that facilitated the transaction
+       * </pre>
+       *
+       * <code>string broker = 4 [json_name = "broker", (.gogoproto.moretags) = "yaml:&#92;"broker&#92;""];</code>
+       * @param value The bytes for broker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrokerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        broker_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domainType_ = "";
+      /**
+       * <pre>
+       * DomainType defines the type of the domain
+       * </pre>
+       *
+       * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+       * @return The domainType.
+       */
+      public java.lang.String getDomainType() {
+        java.lang.Object ref = domainType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domainType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DomainType defines the type of the domain
+       * </pre>
+       *
+       * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+       * @return The bytes for domainType.
+       */
+      public com.google.protobuf.ByteString
+          getDomainTypeBytes() {
+        java.lang.Object ref = domainType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domainType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DomainType defines the type of the domain
+       * </pre>
+       *
+       * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+       * @param value The domainType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domainType_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainType defines the type of the domain
+       * </pre>
+       *
+       * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomainType() {
+        domainType_ = getDefaultInstance().getDomainType();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainType defines the type of the domain
+       * </pre>
+       *
+       * <code>string domain_type = 5 [json_name = "domainType", (.gogoproto.moretags) = "yaml:&#92;"domain_type", (.gogoproto.casttype) = "DomainType"];</code>
+       * @param value The bytes for domainType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domainType_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgRegisterDomain)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgRegisterDomain)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterDomain>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterDomain>() {
+      @java.lang.Override
+      public MsgRegisterDomain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterDomain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterDomain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRegisterDomainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgRegisterDomainResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRegisterDomainResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRegisterDomainResponse}
+   */
+  public static final class MsgRegisterDomainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgRegisterDomainResponse)
+      MsgRegisterDomainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterDomainResponse.newBuilder() to construct.
+    private MsgRegisterDomainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterDomainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterDomainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterDomainResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRegisterDomainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgRegisterDomainResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgRegisterDomainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgRegisterDomainResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterDomainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterDomainResponse>() {
+      @java.lang.Override
+      public MsgRegisterDomainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterDomainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterDomainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgRegisterDomainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRenewAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgRenewAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Signer is the signer of the request
+     * </pre>
+     *
+     * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <pre>
+     * Signer is the signer of the request
+     * </pre>
+     *
+     * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+  }
+  /**
+   * <pre>
+   * MsgRenewAccount is the request model used to renew accounts
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRenewAccount}
+   */
+  public static final class MsgRenewAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgRenewAccount)
+      MsgRenewAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRenewAccount.newBuilder() to construct.
+    private MsgRenewAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRenewAccount() {
+      domain_ = "";
+      name_ = "";
+      signer_ = "";
+      payer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRenewAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <pre>
+     * Signer is the signer of the request
+     * </pre>
+     *
+     * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Signer is the signer of the request
+     * </pre>
+     *
+     * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, signer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, signer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount other = (com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRenewAccount is the request model used to renew accounts
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRenewAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgRenewAccount)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        name_ = "";
+        signer_ = "";
+        payer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount result = new com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payer_ = payer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgRenewAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgRenewAccount)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRenewAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRenewAccount>() {
+      @java.lang.Override
+      public MsgRenewAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRenewAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRenewAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRenewAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgRenewAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRenewAccountResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRenewAccountResponse}
+   */
+  public static final class MsgRenewAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgRenewAccountResponse)
+      MsgRenewAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRenewAccountResponse.newBuilder() to construct.
+    private MsgRenewAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRenewAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRenewAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRenewAccountResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRenewAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgRenewAccountResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgRenewAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgRenewAccountResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRenewAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRenewAccountResponse>() {
+      @java.lang.Override
+      public MsgRenewAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRenewAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRenewAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRenewDomainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgRenewDomain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Signer is the signer of the request
+     * </pre>
+     *
+     * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <pre>
+     * Signer is the signer of the request
+     * </pre>
+     *
+     * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+  }
+  /**
+   * <pre>
+   * MsgRenewDomain is the request model used to renew a domain
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRenewDomain}
+   */
+  public static final class MsgRenewDomain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgRenewDomain)
+      MsgRenewDomainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRenewDomain.newBuilder() to construct.
+    private MsgRenewDomain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRenewDomain() {
+      domain_ = "";
+      signer_ = "";
+      payer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRenewDomain();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <pre>
+     * Signer is the signer of the request
+     * </pre>
+     *
+     * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Signer is the signer of the request
+     * </pre>
+     *
+     * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, payer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, signer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, payer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain other = (com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRenewDomain is the request model used to renew a domain
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRenewDomain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgRenewDomain)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        signer_ = "";
+        payer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomain_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain result = new com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.payer_ = payer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signer is the signer of the request
+       * </pre>
+       *
+       * <code>string signer = 2 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgRenewDomain)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgRenewDomain)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRenewDomain>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRenewDomain>() {
+      @java.lang.Override
+      public MsgRenewDomain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRenewDomain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRenewDomain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRenewDomainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgRenewDomainResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRegisterDomain returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRenewDomainResponse}
+   */
+  public static final class MsgRenewDomainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgRenewDomainResponse)
+      MsgRenewDomainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRenewDomainResponse.newBuilder() to construct.
+    private MsgRenewDomainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRenewDomainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRenewDomainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterDomain returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgRenewDomainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgRenewDomainResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgRenewDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgRenewDomainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgRenewDomainResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRenewDomainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRenewDomainResponse>() {
+      @java.lang.Override
+      public MsgRenewDomainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRenewDomainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRenewDomainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgRenewDomainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgReplaceAccountResourcesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgReplaceAccountResources)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> 
+        getNewResourcesList();
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    com.starnamed.x.starname.v1beta1.TypesProto.Resource getNewResources(int index);
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    int getNewResourcesCount();
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> 
+        getNewResourcesOrBuilderList();
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder getNewResourcesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgReplaceAccountResources is the request model used to renew resources
+   * associated with an account
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgReplaceAccountResources}
+   */
+  public static final class MsgReplaceAccountResources extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgReplaceAccountResources)
+      MsgReplaceAccountResourcesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgReplaceAccountResources.newBuilder() to construct.
+    private MsgReplaceAccountResources(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgReplaceAccountResources() {
+      domain_ = "";
+      name_ = "";
+      owner_ = "";
+      payer_ = "";
+      newResources_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgReplaceAccountResources();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResources_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResources_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources.class, com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_RESOURCES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> newResources_;
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> getNewResourcesList() {
+      return newResources_;
+    }
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> 
+        getNewResourcesOrBuilderList() {
+      return newResources_;
+    }
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    @java.lang.Override
+    public int getNewResourcesCount() {
+      return newResources_.size();
+    }
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TypesProto.Resource getNewResources(int index) {
+      return newResources_.get(index);
+    }
+    /**
+     * <pre>
+     * NewResources are the new resources
+     * </pre>
+     *
+     * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder getNewResourcesOrBuilder(
+        int index) {
+      return newResources_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payer_);
+      }
+      for (int i = 0; i < newResources_.size(); i++) {
+        output.writeMessage(5, newResources_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payer_);
+      }
+      for (int i = 0; i < newResources_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, newResources_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources other = (com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getNewResourcesList()
+          .equals(other.getNewResourcesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      if (getNewResourcesCount() > 0) {
+        hash = (37 * hash) + NEW_RESOURCES_FIELD_NUMBER;
+        hash = (53 * hash) + getNewResourcesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgReplaceAccountResources is the request model used to renew resources
+     * associated with an account
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgReplaceAccountResources}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgReplaceAccountResources)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResources_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResources_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources.class, com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        name_ = "";
+        owner_ = "";
+        payer_ = "";
+        if (newResourcesBuilder_ == null) {
+          newResources_ = java.util.Collections.emptyList();
+        } else {
+          newResources_ = null;
+          newResourcesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResources_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources result = new com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources result) {
+        if (newResourcesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            newResources_ = java.util.Collections.unmodifiableList(newResources_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.newResources_ = newResources_;
+        } else {
+          result.newResources_ = newResourcesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payer_ = payer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (newResourcesBuilder_ == null) {
+          if (!other.newResources_.isEmpty()) {
+            if (newResources_.isEmpty()) {
+              newResources_ = other.newResources_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureNewResourcesIsMutable();
+              newResources_.addAll(other.newResources_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.newResources_.isEmpty()) {
+            if (newResourcesBuilder_.isEmpty()) {
+              newResourcesBuilder_.dispose();
+              newResourcesBuilder_ = null;
+              newResources_ = other.newResources_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              newResourcesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNewResourcesFieldBuilder() : null;
+            } else {
+              newResourcesBuilder_.addAllMessages(other.newResources_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.starnamed.x.starname.v1beta1.TypesProto.Resource m =
+                    input.readMessage(
+                        com.starnamed.x.starname.v1beta1.TypesProto.Resource.parser(),
+                        extensionRegistry);
+                if (newResourcesBuilder_ == null) {
+                  ensureNewResourcesIsMutable();
+                  newResources_.add(m);
+                } else {
+                  newResourcesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> newResources_ =
+        java.util.Collections.emptyList();
+      private void ensureNewResourcesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          newResources_ = new java.util.ArrayList<com.starnamed.x.starname.v1beta1.TypesProto.Resource>(newResources_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.starname.v1beta1.TypesProto.Resource, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder, com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> newResourcesBuilder_;
+
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource> getNewResourcesList() {
+        if (newResourcesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(newResources_);
+        } else {
+          return newResourcesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public int getNewResourcesCount() {
+        if (newResourcesBuilder_ == null) {
+          return newResources_.size();
+        } else {
+          return newResourcesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Resource getNewResources(int index) {
+        if (newResourcesBuilder_ == null) {
+          return newResources_.get(index);
+        } else {
+          return newResourcesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder setNewResources(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Resource value) {
+        if (newResourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewResourcesIsMutable();
+          newResources_.set(index, value);
+          onChanged();
+        } else {
+          newResourcesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder setNewResources(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder builderForValue) {
+        if (newResourcesBuilder_ == null) {
+          ensureNewResourcesIsMutable();
+          newResources_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          newResourcesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder addNewResources(com.starnamed.x.starname.v1beta1.TypesProto.Resource value) {
+        if (newResourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewResourcesIsMutable();
+          newResources_.add(value);
+          onChanged();
+        } else {
+          newResourcesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder addNewResources(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Resource value) {
+        if (newResourcesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewResourcesIsMutable();
+          newResources_.add(index, value);
+          onChanged();
+        } else {
+          newResourcesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder addNewResources(
+          com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder builderForValue) {
+        if (newResourcesBuilder_ == null) {
+          ensureNewResourcesIsMutable();
+          newResources_.add(builderForValue.build());
+          onChanged();
+        } else {
+          newResourcesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder addNewResources(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder builderForValue) {
+        if (newResourcesBuilder_ == null) {
+          ensureNewResourcesIsMutable();
+          newResources_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          newResourcesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder addAllNewResources(
+          java.lang.Iterable<? extends com.starnamed.x.starname.v1beta1.TypesProto.Resource> values) {
+        if (newResourcesBuilder_ == null) {
+          ensureNewResourcesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, newResources_);
+          onChanged();
+        } else {
+          newResourcesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder clearNewResources() {
+        if (newResourcesBuilder_ == null) {
+          newResources_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          newResourcesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public Builder removeNewResources(int index) {
+        if (newResourcesBuilder_ == null) {
+          ensureNewResourcesIsMutable();
+          newResources_.remove(index);
+          onChanged();
+        } else {
+          newResourcesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder getNewResourcesBuilder(
+          int index) {
+        return getNewResourcesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder getNewResourcesOrBuilder(
+          int index) {
+        if (newResourcesBuilder_ == null) {
+          return newResources_.get(index);  } else {
+          return newResourcesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> 
+           getNewResourcesOrBuilderList() {
+        if (newResourcesBuilder_ != null) {
+          return newResourcesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(newResources_);
+        }
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder addNewResourcesBuilder() {
+        return getNewResourcesFieldBuilder().addBuilder(
+            com.starnamed.x.starname.v1beta1.TypesProto.Resource.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder addNewResourcesBuilder(
+          int index) {
+        return getNewResourcesFieldBuilder().addBuilder(
+            index, com.starnamed.x.starname.v1beta1.TypesProto.Resource.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * NewResources are the new resources
+       * </pre>
+       *
+       * <code>repeated .starnamed.x.starname.v1beta1.Resource new_resources = 5 [json_name = "newResources", (.gogoproto.moretags) = "yaml:&#92;"new_resources"];</code>
+       */
+      public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder> 
+           getNewResourcesBuilderList() {
+        return getNewResourcesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.starname.v1beta1.TypesProto.Resource, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder, com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder> 
+          getNewResourcesFieldBuilder() {
+        if (newResourcesBuilder_ == null) {
+          newResourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.starnamed.x.starname.v1beta1.TypesProto.Resource, com.starnamed.x.starname.v1beta1.TypesProto.Resource.Builder, com.starnamed.x.starname.v1beta1.TypesProto.ResourceOrBuilder>(
+                  newResources_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          newResources_ = null;
+        }
+        return newResourcesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgReplaceAccountResources)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgReplaceAccountResources)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgReplaceAccountResources>
+        PARSER = new com.google.protobuf.AbstractParser<MsgReplaceAccountResources>() {
+      @java.lang.Override
+      public MsgReplaceAccountResources parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgReplaceAccountResources> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgReplaceAccountResources> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResources getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgReplaceAccountResourcesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgReplaceAccountResourcesResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgReplaceAccountResourcesResponse
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgReplaceAccountResourcesResponse}
+   */
+  public static final class MsgReplaceAccountResourcesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgReplaceAccountResourcesResponse)
+      MsgReplaceAccountResourcesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgReplaceAccountResourcesResponse.newBuilder() to construct.
+    private MsgReplaceAccountResourcesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgReplaceAccountResourcesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgReplaceAccountResourcesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResourcesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResourcesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgReplaceAccountResourcesResponse
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgReplaceAccountResourcesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgReplaceAccountResourcesResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResourcesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResourcesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResourcesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgReplaceAccountResourcesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgReplaceAccountResourcesResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgReplaceAccountResourcesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgReplaceAccountResourcesResponse>() {
+      @java.lang.Override
+      public MsgReplaceAccountResourcesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgReplaceAccountResourcesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgReplaceAccountResourcesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountResourcesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgReplaceAccountMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <pre>
+     * NewMetadataURI is the metadata URI of the account
+     * we want to update or insert
+     * </pre>
+     *
+     * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+     * @return The newMetadataUri.
+     */
+    java.lang.String getNewMetadataUri();
+    /**
+     * <pre>
+     * NewMetadataURI is the metadata URI of the account
+     * we want to update or insert
+     * </pre>
+     *
+     * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+     * @return The bytes for newMetadataUri.
+     */
+    com.google.protobuf.ByteString
+        getNewMetadataUriBytes();
+  }
+  /**
+   * <pre>
+   * MsgReplaceAccountMetadata is the function used to set accounts metadata
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgReplaceAccountMetadata}
+   */
+  public static final class MsgReplaceAccountMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadata)
+      MsgReplaceAccountMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgReplaceAccountMetadata.newBuilder() to construct.
+    private MsgReplaceAccountMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgReplaceAccountMetadata() {
+      domain_ = "";
+      name_ = "";
+      owner_ = "";
+      payer_ = "";
+      newMetadataUri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgReplaceAccountMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata.class, com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_METADATA_URI_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newMetadataUri_ = "";
+    /**
+     * <pre>
+     * NewMetadataURI is the metadata URI of the account
+     * we want to update or insert
+     * </pre>
+     *
+     * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+     * @return The newMetadataUri.
+     */
+    @java.lang.Override
+    public java.lang.String getNewMetadataUri() {
+      java.lang.Object ref = newMetadataUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newMetadataUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * NewMetadataURI is the metadata URI of the account
+     * we want to update or insert
+     * </pre>
+     *
+     * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+     * @return The bytes for newMetadataUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewMetadataUriBytes() {
+      java.lang.Object ref = newMetadataUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newMetadataUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newMetadataUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, newMetadataUri_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newMetadataUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, newMetadataUri_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata other = (com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getNewMetadataUri()
+          .equals(other.getNewMetadataUri())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (37 * hash) + NEW_METADATA_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getNewMetadataUri().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgReplaceAccountMetadata is the function used to set accounts metadata
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgReplaceAccountMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadata)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata.class, com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        name_ = "";
+        owner_ = "";
+        payer_ = "";
+        newMetadataUri_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata result = new com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payer_ = payer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.newMetadataUri_ = newMetadataUri_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getNewMetadataUri().isEmpty()) {
+          newMetadataUri_ = other.newMetadataUri_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                newMetadataUri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newMetadataUri_ = "";
+      /**
+       * <pre>
+       * NewMetadataURI is the metadata URI of the account
+       * we want to update or insert
+       * </pre>
+       *
+       * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+       * @return The newMetadataUri.
+       */
+      public java.lang.String getNewMetadataUri() {
+        java.lang.Object ref = newMetadataUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newMetadataUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NewMetadataURI is the metadata URI of the account
+       * we want to update or insert
+       * </pre>
+       *
+       * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+       * @return The bytes for newMetadataUri.
+       */
+      public com.google.protobuf.ByteString
+          getNewMetadataUriBytes() {
+        java.lang.Object ref = newMetadataUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newMetadataUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NewMetadataURI is the metadata URI of the account
+       * we want to update or insert
+       * </pre>
+       *
+       * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+       * @param value The newMetadataUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewMetadataUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newMetadataUri_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewMetadataURI is the metadata URI of the account
+       * we want to update or insert
+       * </pre>
+       *
+       * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewMetadataUri() {
+        newMetadataUri_ = getDefaultInstance().getNewMetadataUri();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewMetadataURI is the metadata URI of the account
+       * we want to update or insert
+       * </pre>
+       *
+       * <code>string new_metadata_uri = 5 [json_name = "newMetadataUri", (.gogoproto.customname) = "NewMetadataURI", (.gogoproto.moretags) = "yaml:&#92;"new_metadata_uri&#92;""];</code>
+       * @param value The bytes for newMetadataUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewMetadataUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newMetadataUri_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadata)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgReplaceAccountMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MsgReplaceAccountMetadata>() {
+      @java.lang.Override
+      public MsgReplaceAccountMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgReplaceAccountMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgReplaceAccountMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgReplaceAccountMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadataResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgReplaceAccountMetadataResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgReplaceAccountMetadataResponse}
+   */
+  public static final class MsgReplaceAccountMetadataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadataResponse)
+      MsgReplaceAccountMetadataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgReplaceAccountMetadataResponse.newBuilder() to construct.
+    private MsgReplaceAccountMetadataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgReplaceAccountMetadataResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgReplaceAccountMetadataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgReplaceAccountMetadataResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgReplaceAccountMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadataResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgReplaceAccountMetadataResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgReplaceAccountMetadataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgReplaceAccountMetadataResponse>() {
+      @java.lang.Override
+      public MsgReplaceAccountMetadataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgReplaceAccountMetadataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgReplaceAccountMetadataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgReplaceAccountMetadataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgTransferAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <pre>
+     * NewOwner is the new owner of the account
+     * </pre>
+     *
+     * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+     * @return The newOwner.
+     */
+    java.lang.String getNewOwner();
+    /**
+     * <pre>
+     * NewOwner is the new owner of the account
+     * </pre>
+     *
+     * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+     * @return The bytes for newOwner.
+     */
+    com.google.protobuf.ByteString
+        getNewOwnerBytes();
+
+    /**
+     * <pre>
+     * ToReset if true, removes all old data from account
+     * </pre>
+     *
+     * <code>bool reset = 6 [json_name = "reset", (.gogoproto.customname) = "ToReset", (.gogoproto.moretags) = "yaml:&#92;"reset"];</code>
+     * @return The reset.
+     */
+    boolean getReset();
+  }
+  /**
+   * <pre>
+   * MsgTransferAccount is the request model used to transfer accounts
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgTransferAccount}
+   */
+  public static final class MsgTransferAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgTransferAccount)
+      MsgTransferAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferAccount.newBuilder() to construct.
+    private MsgTransferAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferAccount() {
+      domain_ = "";
+      name_ = "";
+      owner_ = "";
+      payer_ = "";
+      newOwner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount.class, com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the domain of the account
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name is the name of the account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the account
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_OWNER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newOwner_ = "";
+    /**
+     * <pre>
+     * NewOwner is the new owner of the account
+     * </pre>
+     *
+     * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+     * @return The newOwner.
+     */
+    @java.lang.Override
+    public java.lang.String getNewOwner() {
+      java.lang.Object ref = newOwner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newOwner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * NewOwner is the new owner of the account
+     * </pre>
+     *
+     * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+     * @return The bytes for newOwner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewOwnerBytes() {
+      java.lang.Object ref = newOwner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newOwner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESET_FIELD_NUMBER = 6;
+    private boolean reset_ = false;
+    /**
+     * <pre>
+     * ToReset if true, removes all old data from account
+     * </pre>
+     *
+     * <code>bool reset = 6 [json_name = "reset", (.gogoproto.customname) = "ToReset", (.gogoproto.moretags) = "yaml:&#92;"reset"];</code>
+     * @return The reset.
+     */
+    @java.lang.Override
+    public boolean getReset() {
+      return reset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newOwner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, newOwner_);
+      }
+      if (reset_ != false) {
+        output.writeBool(6, reset_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newOwner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, newOwner_);
+      }
+      if (reset_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, reset_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount other = (com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getNewOwner()
+          .equals(other.getNewOwner())) return false;
+      if (getReset()
+          != other.getReset()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (37 * hash) + NEW_OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getNewOwner().hashCode();
+      hash = (37 * hash) + RESET_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getReset());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgTransferAccount is the request model used to transfer accounts
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgTransferAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgTransferAccount)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount.class, com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        name_ = "";
+        owner_ = "";
+        payer_ = "";
+        newOwner_ = "";
+        reset_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount result = new com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.payer_ = payer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.newOwner_ = newOwner_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.reset_ = reset_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getNewOwner().isEmpty()) {
+          newOwner_ = other.newOwner_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getReset() != false) {
+          setReset(other.getReset());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                newOwner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                reset_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the domain of the account
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name is the name of the account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the account
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 4 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newOwner_ = "";
+      /**
+       * <pre>
+       * NewOwner is the new owner of the account
+       * </pre>
+       *
+       * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+       * @return The newOwner.
+       */
+      public java.lang.String getNewOwner() {
+        java.lang.Object ref = newOwner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newOwner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NewOwner is the new owner of the account
+       * </pre>
+       *
+       * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+       * @return The bytes for newOwner.
+       */
+      public com.google.protobuf.ByteString
+          getNewOwnerBytes() {
+        java.lang.Object ref = newOwner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newOwner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NewOwner is the new owner of the account
+       * </pre>
+       *
+       * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+       * @param value The newOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newOwner_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewOwner is the new owner of the account
+       * </pre>
+       *
+       * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewOwner() {
+        newOwner_ = getDefaultInstance().getNewOwner();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewOwner is the new owner of the account
+       * </pre>
+       *
+       * <code>string new_owner = 5 [json_name = "newOwner", (.gogoproto.moretags) = "yaml:&#92;"new_owner"];</code>
+       * @param value The bytes for newOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newOwner_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private boolean reset_ ;
+      /**
+       * <pre>
+       * ToReset if true, removes all old data from account
+       * </pre>
+       *
+       * <code>bool reset = 6 [json_name = "reset", (.gogoproto.customname) = "ToReset", (.gogoproto.moretags) = "yaml:&#92;"reset"];</code>
+       * @return The reset.
+       */
+      @java.lang.Override
+      public boolean getReset() {
+        return reset_;
+      }
+      /**
+       * <pre>
+       * ToReset if true, removes all old data from account
+       * </pre>
+       *
+       * <code>bool reset = 6 [json_name = "reset", (.gogoproto.customname) = "ToReset", (.gogoproto.moretags) = "yaml:&#92;"reset"];</code>
+       * @param value The reset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReset(boolean value) {
+
+        reset_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ToReset if true, removes all old data from account
+       * </pre>
+       *
+       * <code>bool reset = 6 [json_name = "reset", (.gogoproto.customname) = "ToReset", (.gogoproto.moretags) = "yaml:&#92;"reset"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReset() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        reset_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgTransferAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgTransferAccount)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferAccount>() {
+      @java.lang.Override
+      public MsgTransferAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgTransferAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgTransferAccountResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgTransferAccountResponse}
+   */
+  public static final class MsgTransferAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgTransferAccountResponse)
+      MsgTransferAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferAccountResponse.newBuilder() to construct.
+    private MsgTransferAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgTransferAccountResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgTransferAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgTransferAccountResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgTransferAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgTransferAccountResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferAccountResponse>() {
+      @java.lang.Override
+      public MsgTransferAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferDomainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgTransferDomain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Domain is the name of the domain
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain is the name of the domain
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Owner is the owner of the domain
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the owner of the domain
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    java.lang.String getPayer();
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    com.google.protobuf.ByteString
+        getPayerBytes();
+
+    /**
+     * <pre>
+     * NewAdmin is the  new owner of the domain
+     * </pre>
+     *
+     * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+     * @return The newAdmin.
+     */
+    java.lang.String getNewAdmin();
+    /**
+     * <pre>
+     * NewAdmin is the  new owner of the domain
+     * </pre>
+     *
+     * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+     * @return The bytes for newAdmin.
+     */
+    com.google.protobuf.ByteString
+        getNewAdminBytes();
+
+    /**
+     * <pre>
+     * TransferFlag controls the operations that occurs on a domain's accounts
+     * </pre>
+     *
+     * <code>int64 transfer_flag = 5 [json_name = "transferFlag", (.gogoproto.moretags) = "yaml:&#92;"transfer_flag", (.gogoproto.casttype) = "TransferFlag"];</code>
+     * @return The transferFlag.
+     */
+    long getTransferFlag();
+  }
+  /**
+   * <pre>
+   * MsgTransferDomain is the request model used to transfer a domain
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgTransferDomain}
+   */
+  public static final class MsgTransferDomain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgTransferDomain)
+      MsgTransferDomainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferDomain.newBuilder() to construct.
+    private MsgTransferDomain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferDomain() {
+      domain_ = "";
+      owner_ = "";
+      payer_ = "";
+      newAdmin_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferDomain();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain.class, com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain.Builder.class);
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * Domain is the name of the domain
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain is the name of the domain
+     * </pre>
+     *
+     * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the owner of the domain
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the owner of the domain
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payer_ = "";
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public java.lang.String getPayer() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Payer is the address of the entity that pays the product and transaction
+     * fees
+     * </pre>
+     *
+     * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+     * @return The bytes for payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayerBytes() {
+      java.lang.Object ref = payer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_ADMIN_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newAdmin_ = "";
+    /**
+     * <pre>
+     * NewAdmin is the  new owner of the domain
+     * </pre>
+     *
+     * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+     * @return The newAdmin.
+     */
+    @java.lang.Override
+    public java.lang.String getNewAdmin() {
+      java.lang.Object ref = newAdmin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newAdmin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * NewAdmin is the  new owner of the domain
+     * </pre>
+     *
+     * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+     * @return The bytes for newAdmin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewAdminBytes() {
+      java.lang.Object ref = newAdmin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newAdmin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSFER_FLAG_FIELD_NUMBER = 5;
+    private long transferFlag_ = 0L;
+    /**
+     * <pre>
+     * TransferFlag controls the operations that occurs on a domain's accounts
+     * </pre>
+     *
+     * <code>int64 transfer_flag = 5 [json_name = "transferFlag", (.gogoproto.moretags) = "yaml:&#92;"transfer_flag", (.gogoproto.casttype) = "TransferFlag"];</code>
+     * @return The transferFlag.
+     */
+    @java.lang.Override
+    public long getTransferFlag() {
+      return transferFlag_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newAdmin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newAdmin_);
+      }
+      if (transferFlag_ != 0L) {
+        output.writeInt64(5, transferFlag_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, payer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newAdmin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newAdmin_);
+      }
+      if (transferFlag_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, transferFlag_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain other = (com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain) obj;
+
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getNewAdmin()
+          .equals(other.getNewAdmin())) return false;
+      if (getTransferFlag()
+          != other.getTransferFlag()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      hash = (37 * hash) + NEW_ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getNewAdmin().hashCode();
+      hash = (37 * hash) + TRANSFER_FLAG_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTransferFlag());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgTransferDomain is the request model used to transfer a domain
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgTransferDomain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgTransferDomain)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain.class, com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        domain_ = "";
+        owner_ = "";
+        payer_ = "";
+        newAdmin_ = "";
+        transferFlag_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomain_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain result = new com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.payer_ = payer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.newAdmin_ = newAdmin_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.transferFlag_ = transferFlag_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain.getDefaultInstance()) return this;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getPayer().isEmpty()) {
+          payer_ = other.payer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getNewAdmin().isEmpty()) {
+          newAdmin_ = other.newAdmin_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getTransferFlag() != 0L) {
+          setTransferFlag(other.getTransferFlag());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                payer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                newAdmin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                transferFlag_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain is the name of the domain
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the name of the domain
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain is the name of the domain
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the name of the domain
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain is the name of the domain
+       * </pre>
+       *
+       * <code>string domain = 1 [json_name = "domain", (.gogoproto.moretags) = "yaml:&#92;"domain&#92;""];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the owner of the domain
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the domain
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the domain
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the domain
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the owner of the domain
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payer_ = "";
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The payer.
+       */
+      public java.lang.String getPayer() {
+        java.lang.Object ref = payer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return The bytes for payer.
+       */
+      public com.google.protobuf.ByteString
+          getPayerBytes() {
+        java.lang.Object ref = payer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        payer_ = getDefaultInstance().getPayer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Payer is the address of the entity that pays the product and transaction
+       * fees
+       * </pre>
+       *
+       * <code>string payer = 3 [json_name = "payer", (.gogoproto.moretags) = "yaml:&#92;"payer&#92;""];</code>
+       * @param value The bytes for payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newAdmin_ = "";
+      /**
+       * <pre>
+       * NewAdmin is the  new owner of the domain
+       * </pre>
+       *
+       * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+       * @return The newAdmin.
+       */
+      public java.lang.String getNewAdmin() {
+        java.lang.Object ref = newAdmin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newAdmin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NewAdmin is the  new owner of the domain
+       * </pre>
+       *
+       * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+       * @return The bytes for newAdmin.
+       */
+      public com.google.protobuf.ByteString
+          getNewAdminBytes() {
+        java.lang.Object ref = newAdmin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newAdmin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NewAdmin is the  new owner of the domain
+       * </pre>
+       *
+       * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+       * @param value The newAdmin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newAdmin_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewAdmin is the  new owner of the domain
+       * </pre>
+       *
+       * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewAdmin() {
+        newAdmin_ = getDefaultInstance().getNewAdmin();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewAdmin is the  new owner of the domain
+       * </pre>
+       *
+       * <code>string new_admin = 4 [json_name = "newAdmin", (.gogoproto.moretags) = "yaml:&#92;"new_admin"];</code>
+       * @param value The bytes for newAdmin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newAdmin_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long transferFlag_ ;
+      /**
+       * <pre>
+       * TransferFlag controls the operations that occurs on a domain's accounts
+       * </pre>
+       *
+       * <code>int64 transfer_flag = 5 [json_name = "transferFlag", (.gogoproto.moretags) = "yaml:&#92;"transfer_flag", (.gogoproto.casttype) = "TransferFlag"];</code>
+       * @return The transferFlag.
+       */
+      @java.lang.Override
+      public long getTransferFlag() {
+        return transferFlag_;
+      }
+      /**
+       * <pre>
+       * TransferFlag controls the operations that occurs on a domain's accounts
+       * </pre>
+       *
+       * <code>int64 transfer_flag = 5 [json_name = "transferFlag", (.gogoproto.moretags) = "yaml:&#92;"transfer_flag", (.gogoproto.casttype) = "TransferFlag"];</code>
+       * @param value The transferFlag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferFlag(long value) {
+
+        transferFlag_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TransferFlag controls the operations that occurs on a domain's accounts
+       * </pre>
+       *
+       * <code>int64 transfer_flag = 5 [json_name = "transferFlag", (.gogoproto.moretags) = "yaml:&#92;"transfer_flag", (.gogoproto.casttype) = "TransferFlag"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferFlag() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        transferFlag_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgTransferDomain)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgTransferDomain)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferDomain>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferDomain>() {
+      @java.lang.Override
+      public MsgTransferDomain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferDomain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferDomain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferDomainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.MsgTransferDomainResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgTransferDomainResponse returns an empty response.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.MsgTransferDomainResponse}
+   */
+  public static final class MsgTransferDomainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.MsgTransferDomainResponse)
+      MsgTransferDomainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferDomainResponse.newBuilder() to construct.
+    private MsgTransferDomainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferDomainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferDomainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse other = (com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgTransferDomainResponse returns an empty response.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.MsgTransferDomainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.MsgTransferDomainResponse)
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse.class, com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.internal_static_starnamed_x_starname_v1beta1_MsgTransferDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse build() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse buildPartial() {
+        com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse result = new com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse other) {
+        if (other == com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.MsgTransferDomainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.MsgTransferDomainResponse)
+    private static final com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferDomainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferDomainResponse>() {
+      @java.lang.Override
+      public MsgTransferDomainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferDomainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferDomainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TxProto.MsgTransferDomainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificate_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificate_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgAddAccountCertificateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificate_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificate_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountCertificateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgDeleteAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomain_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomain_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgDeleteDomainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgRegisterAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomain_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomain_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgRegisterDomainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgRenewAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgRenewAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgRenewAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgRenewAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgRenewDomain_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgRenewDomain_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgRenewDomainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgRenewDomainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResources_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResources_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResourcesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountResourcesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadata_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadata_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadataResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgReplaceAccountMetadataResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgTransferAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgTransferAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgTransferAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgTransferAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgTransferDomain_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgTransferDomain_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_MsgTransferDomainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_MsgTransferDomainResponse_fieldAccessorTable;
 
@@ -268,13 +20859,13 @@ public final class TxProto {
       "se\022z\n\016TransferDomain\022/.starnamed.x.starn" +
       "ame.v1beta1.MsgTransferDomain\0327.starname" +
       "d.x.starname.v1beta1.MsgTransferDomainRe" +
-      "sponseB\355\001\n com.starnamed.x.starname.v1be" +
-      "ta1B\007TxProtoP\001Z-github.com/iov-one/starn" +
-      "amed/x/starname/types\242\002\003SXS\252\002\034Starnamed." +
-      "X.Starname.V1beta1\312\002\034Starnamed\\X\\Starnam" +
-      "e\\V1beta1\342\002(Starnamed\\X\\Starname\\V1beta1" +
-      "\\GPBMetadata\352\002\037Starnamed::X::Starname::V" +
-      "1beta1b\006proto3"
+      "sponseB\353\001\n com.starnamed.x.starname.v1be" +
+      "ta1B\007TxProtoZ-github.com/iov-one/starnam" +
+      "ed/x/starname/types\242\002\003SXS\252\002\034Starnamed.X." +
+      "Starname.V1beta1\312\002\034Starnamed\\X\\Starname\\" +
+      "V1beta1\342\002(Starnamed\\X\\Starname\\V1beta1\\G" +
+      "PBMetadata\352\002\037Starnamed::X::Starname::V1b" +
+      "eta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

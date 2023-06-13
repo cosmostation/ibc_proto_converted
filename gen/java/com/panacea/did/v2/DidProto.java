@@ -14,39 +14,8358 @@ public final class DidProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface StringsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.did.v2.Strings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    java.util.List<java.lang.String>
+        getValuesList();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    int getValuesCount();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    java.lang.String getValues(int index);
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    com.google.protobuf.ByteString
+        getValuesBytes(int index);
+  }
+  /**
+   * <pre>
+   * Strings defines a JSON-LD string array format which is marshalled to a single string if the array length is 1.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.did.v2.Strings}
+   */
+  public static final class Strings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.did.v2.Strings)
+      StringsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Strings.newBuilder() to construct.
+    private Strings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Strings() {
+      values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Strings();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Strings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Strings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.did.v2.DidProto.Strings.class, com.panacea.did.v2.DidProto.Strings.Builder.class);
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getValuesList() {
+      return values_;
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    public java.lang.String getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <code>repeated string values = 1 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getValuesBytes(int index) {
+      return values_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < values_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, values_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < values_.size(); i++) {
+          dataSize += computeStringSizeNoTag(values_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getValuesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.did.v2.DidProto.Strings)) {
+        return super.equals(obj);
+      }
+      com.panacea.did.v2.DidProto.Strings other = (com.panacea.did.v2.DidProto.Strings) obj;
+
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.did.v2.DidProto.Strings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.did.v2.DidProto.Strings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.Strings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.did.v2.DidProto.Strings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Strings defines a JSON-LD string array format which is marshalled to a single string if the array length is 1.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.did.v2.Strings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.did.v2.Strings)
+        com.panacea.did.v2.DidProto.StringsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Strings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Strings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.did.v2.DidProto.Strings.class, com.panacea.did.v2.DidProto.Strings.Builder.class);
+      }
+
+      // Construct using com.panacea.did.v2.DidProto.Strings.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        values_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Strings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.Strings getDefaultInstanceForType() {
+        return com.panacea.did.v2.DidProto.Strings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.Strings build() {
+        com.panacea.did.v2.DidProto.Strings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.Strings buildPartial() {
+        com.panacea.did.v2.DidProto.Strings result = new com.panacea.did.v2.DidProto.Strings(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.did.v2.DidProto.Strings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          values_.makeImmutable();
+          result.values_ = values_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.did.v2.DidProto.Strings) {
+          return mergeFrom((com.panacea.did.v2.DidProto.Strings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.did.v2.DidProto.Strings other) {
+        if (other == com.panacea.did.v2.DidProto.Strings.getDefaultInstance()) return this;
+        if (!other.values_.isEmpty()) {
+          if (values_.isEmpty()) {
+            values_ = other.values_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureValuesIsMutable();
+            values_.addAll(other.values_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureValuesIsMutable();
+                values_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!values_.isModifiable()) {
+          values_ = new com.google.protobuf.LazyStringArrayList(values_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return A list containing the values.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        values_.makeImmutable();
+        return values_;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param index The index to set the value at.
+       * @param value The values to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValues(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValuesIsMutable();
+        values_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param value The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValues(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValuesIsMutable();
+        values_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param values The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, values_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValues() {
+        values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string values = 1 [json_name = "values"];</code>
+       * @param value The bytes of the values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValuesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureValuesIsMutable();
+        values_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.did.v2.Strings)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.did.v2.Strings)
+    private static final com.panacea.did.v2.DidProto.Strings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.did.v2.DidProto.Strings();
+    }
+
+    public static com.panacea.did.v2.DidProto.Strings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Strings>
+        PARSER = new com.google.protobuf.AbstractParser<Strings>() {
+      @java.lang.Override
+      public Strings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Strings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Strings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.Strings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DIDDocumentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.did.v2.DIDDocument)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     * @return Whether the contexts field is set.
+     */
+    boolean hasContexts();
+    /**
+     * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     * @return The contexts.
+     */
+    com.panacea.did.v2.DidProto.Strings getContexts();
+    /**
+     * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     */
+    com.panacea.did.v2.DidProto.StringsOrBuilder getContextsOrBuilder();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     * @return Whether the controller field is set.
+     */
+    boolean hasController();
+    /**
+     * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     * @return The controller.
+     */
+    com.panacea.did.v2.DidProto.Strings getController();
+    /**
+     * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     */
+    com.panacea.did.v2.DidProto.StringsOrBuilder getControllerOrBuilder();
+
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    java.util.List<com.panacea.did.v2.DidProto.VerificationMethod> 
+        getVerificationMethodsList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationMethod getVerificationMethods(int index);
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    int getVerificationMethodsCount();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    java.util.List<? extends com.panacea.did.v2.DidProto.VerificationMethodOrBuilder> 
+        getVerificationMethodsOrBuilderList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationMethodOrBuilder getVerificationMethodsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> 
+        getAuthenticationsList();
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationship getAuthentications(int index);
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    int getAuthenticationsCount();
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getAuthenticationsOrBuilderList();
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getAuthenticationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> 
+        getAssertionMethodsList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationship getAssertionMethods(int index);
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    int getAssertionMethodsCount();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getAssertionMethodsOrBuilderList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getAssertionMethodsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> 
+        getKeyAgreementsList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationship getKeyAgreements(int index);
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    int getKeyAgreementsCount();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getKeyAgreementsOrBuilderList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getKeyAgreementsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> 
+        getCapabilityInvocationsList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationship getCapabilityInvocations(int index);
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    int getCapabilityInvocationsCount();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getCapabilityInvocationsOrBuilderList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getCapabilityInvocationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> 
+        getCapabilityDelegationsList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationship getCapabilityDelegations(int index);
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    int getCapabilityDelegationsCount();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getCapabilityDelegationsOrBuilderList();
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getCapabilityDelegationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    java.util.List<com.panacea.did.v2.DidProto.Service> 
+        getServicesList();
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    com.panacea.did.v2.DidProto.Service getServices(int index);
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    int getServicesCount();
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    java.util.List<? extends com.panacea.did.v2.DidProto.ServiceOrBuilder> 
+        getServicesOrBuilderList();
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    com.panacea.did.v2.DidProto.ServiceOrBuilder getServicesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * DIDDocument defines a W3C DID Document
+   *
+   * NOTE: All 'json_name' and 'gogoproto.customtype' tags are for panacea-core to unmarshal the v1.3 genesis which is in the W3C JSON-LD format.
+   *       On the other hand, the panacea-core and cosmos-sdk don't use those tags to marshal result to JSON (via grpc-gateway).
+   * </pre>
+   *
+   * Protobuf type {@code panacea.did.v2.DIDDocument}
+   */
+  public static final class DIDDocument extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.did.v2.DIDDocument)
+      DIDDocumentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DIDDocument.newBuilder() to construct.
+    private DIDDocument(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DIDDocument() {
+      id_ = "";
+      verificationMethods_ = java.util.Collections.emptyList();
+      authentications_ = java.util.Collections.emptyList();
+      assertionMethods_ = java.util.Collections.emptyList();
+      keyAgreements_ = java.util.Collections.emptyList();
+      capabilityInvocations_ = java.util.Collections.emptyList();
+      capabilityDelegations_ = java.util.Collections.emptyList();
+      services_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DIDDocument();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocument_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocument_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.did.v2.DidProto.DIDDocument.class, com.panacea.did.v2.DidProto.DIDDocument.Builder.class);
+    }
+
+    public static final int CONTEXTS_FIELD_NUMBER = 1;
+    private com.panacea.did.v2.DidProto.Strings contexts_;
+    /**
+     * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     * @return Whether the contexts field is set.
+     */
+    @java.lang.Override
+    public boolean hasContexts() {
+      return contexts_ != null;
+    }
+    /**
+     * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     * @return The contexts.
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.Strings getContexts() {
+      return contexts_ == null ? com.panacea.did.v2.DidProto.Strings.getDefaultInstance() : contexts_;
+    }
+    /**
+     * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.StringsOrBuilder getContextsOrBuilder() {
+      return contexts_ == null ? com.panacea.did.v2.DidProto.Strings.getDefaultInstance() : contexts_;
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTROLLER_FIELD_NUMBER = 3;
+    private com.panacea.did.v2.DidProto.Strings controller_;
+    /**
+     * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     * @return Whether the controller field is set.
+     */
+    @java.lang.Override
+    public boolean hasController() {
+      return controller_ != null;
+    }
+    /**
+     * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     * @return The controller.
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.Strings getController() {
+      return controller_ == null ? com.panacea.did.v2.DidProto.Strings.getDefaultInstance() : controller_;
+    }
+    /**
+     * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.StringsOrBuilder getControllerOrBuilder() {
+      return controller_ == null ? com.panacea.did.v2.DidProto.Strings.getDefaultInstance() : controller_;
+    }
+
+    public static final int VERIFICATION_METHODS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.did.v2.DidProto.VerificationMethod> verificationMethods_;
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.did.v2.DidProto.VerificationMethod> getVerificationMethodsList() {
+      return verificationMethods_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationMethodOrBuilder> 
+        getVerificationMethodsOrBuilderList() {
+      return verificationMethods_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    @java.lang.Override
+    public int getVerificationMethodsCount() {
+      return verificationMethods_.size();
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationMethod getVerificationMethods(int index) {
+      return verificationMethods_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationMethodOrBuilder getVerificationMethodsOrBuilder(
+        int index) {
+      return verificationMethods_.get(index);
+    }
+
+    public static final int AUTHENTICATIONS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> authentications_;
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getAuthenticationsList() {
+      return authentications_;
+    }
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getAuthenticationsOrBuilderList() {
+      return authentications_;
+    }
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public int getAuthenticationsCount() {
+      return authentications_.size();
+    }
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationship getAuthentications(int index) {
+      return authentications_.get(index);
+    }
+    /**
+     * <pre>
+     * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+     * </pre>
+     *
+     * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getAuthenticationsOrBuilder(
+        int index) {
+      return authentications_.get(index);
+    }
+
+    public static final int ASSERTION_METHODS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> assertionMethods_;
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getAssertionMethodsList() {
+      return assertionMethods_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getAssertionMethodsOrBuilderList() {
+      return assertionMethods_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public int getAssertionMethodsCount() {
+      return assertionMethods_.size();
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationship getAssertionMethods(int index) {
+      return assertionMethods_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getAssertionMethodsOrBuilder(
+        int index) {
+      return assertionMethods_.get(index);
+    }
+
+    public static final int KEY_AGREEMENTS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> keyAgreements_;
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getKeyAgreementsList() {
+      return keyAgreements_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getKeyAgreementsOrBuilderList() {
+      return keyAgreements_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public int getKeyAgreementsCount() {
+      return keyAgreements_.size();
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationship getKeyAgreements(int index) {
+      return keyAgreements_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getKeyAgreementsOrBuilder(
+        int index) {
+      return keyAgreements_.get(index);
+    }
+
+    public static final int CAPABILITY_INVOCATIONS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> capabilityInvocations_;
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getCapabilityInvocationsList() {
+      return capabilityInvocations_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getCapabilityInvocationsOrBuilderList() {
+      return capabilityInvocations_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public int getCapabilityInvocationsCount() {
+      return capabilityInvocations_.size();
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationship getCapabilityInvocations(int index) {
+      return capabilityInvocations_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getCapabilityInvocationsOrBuilder(
+        int index) {
+      return capabilityInvocations_.get(index);
+    }
+
+    public static final int CAPABILITY_DELEGATIONS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> capabilityDelegations_;
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getCapabilityDelegationsList() {
+      return capabilityDelegations_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+        getCapabilityDelegationsOrBuilderList() {
+      return capabilityDelegations_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public int getCapabilityDelegationsCount() {
+      return capabilityDelegations_.size();
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationship getCapabilityDelegations(int index) {
+      return capabilityDelegations_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getCapabilityDelegationsOrBuilder(
+        int index) {
+      return capabilityDelegations_.get(index);
+    }
+
+    public static final int SERVICES_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.did.v2.DidProto.Service> services_;
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.did.v2.DidProto.Service> getServicesList() {
+      return services_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.did.v2.DidProto.ServiceOrBuilder> 
+        getServicesOrBuilderList() {
+      return services_;
+    }
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public int getServicesCount() {
+      return services_.size();
+    }
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.Service getServices(int index) {
+      return services_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.ServiceOrBuilder getServicesOrBuilder(
+        int index) {
+      return services_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (contexts_ != null) {
+        output.writeMessage(1, getContexts());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (controller_ != null) {
+        output.writeMessage(3, getController());
+      }
+      for (int i = 0; i < verificationMethods_.size(); i++) {
+        output.writeMessage(4, verificationMethods_.get(i));
+      }
+      for (int i = 0; i < authentications_.size(); i++) {
+        output.writeMessage(5, authentications_.get(i));
+      }
+      for (int i = 0; i < assertionMethods_.size(); i++) {
+        output.writeMessage(6, assertionMethods_.get(i));
+      }
+      for (int i = 0; i < keyAgreements_.size(); i++) {
+        output.writeMessage(7, keyAgreements_.get(i));
+      }
+      for (int i = 0; i < capabilityInvocations_.size(); i++) {
+        output.writeMessage(8, capabilityInvocations_.get(i));
+      }
+      for (int i = 0; i < capabilityDelegations_.size(); i++) {
+        output.writeMessage(9, capabilityDelegations_.get(i));
+      }
+      for (int i = 0; i < services_.size(); i++) {
+        output.writeMessage(10, services_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (contexts_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getContexts());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (controller_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getController());
+      }
+      for (int i = 0; i < verificationMethods_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, verificationMethods_.get(i));
+      }
+      for (int i = 0; i < authentications_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, authentications_.get(i));
+      }
+      for (int i = 0; i < assertionMethods_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, assertionMethods_.get(i));
+      }
+      for (int i = 0; i < keyAgreements_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, keyAgreements_.get(i));
+      }
+      for (int i = 0; i < capabilityInvocations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, capabilityInvocations_.get(i));
+      }
+      for (int i = 0; i < capabilityDelegations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, capabilityDelegations_.get(i));
+      }
+      for (int i = 0; i < services_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, services_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.did.v2.DidProto.DIDDocument)) {
+        return super.equals(obj);
+      }
+      com.panacea.did.v2.DidProto.DIDDocument other = (com.panacea.did.v2.DidProto.DIDDocument) obj;
+
+      if (hasContexts() != other.hasContexts()) return false;
+      if (hasContexts()) {
+        if (!getContexts()
+            .equals(other.getContexts())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasController() != other.hasController()) return false;
+      if (hasController()) {
+        if (!getController()
+            .equals(other.getController())) return false;
+      }
+      if (!getVerificationMethodsList()
+          .equals(other.getVerificationMethodsList())) return false;
+      if (!getAuthenticationsList()
+          .equals(other.getAuthenticationsList())) return false;
+      if (!getAssertionMethodsList()
+          .equals(other.getAssertionMethodsList())) return false;
+      if (!getKeyAgreementsList()
+          .equals(other.getKeyAgreementsList())) return false;
+      if (!getCapabilityInvocationsList()
+          .equals(other.getCapabilityInvocationsList())) return false;
+      if (!getCapabilityDelegationsList()
+          .equals(other.getCapabilityDelegationsList())) return false;
+      if (!getServicesList()
+          .equals(other.getServicesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasContexts()) {
+        hash = (37 * hash) + CONTEXTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContexts().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (hasController()) {
+        hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
+        hash = (53 * hash) + getController().hashCode();
+      }
+      if (getVerificationMethodsCount() > 0) {
+        hash = (37 * hash) + VERIFICATION_METHODS_FIELD_NUMBER;
+        hash = (53 * hash) + getVerificationMethodsList().hashCode();
+      }
+      if (getAuthenticationsCount() > 0) {
+        hash = (37 * hash) + AUTHENTICATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthenticationsList().hashCode();
+      }
+      if (getAssertionMethodsCount() > 0) {
+        hash = (37 * hash) + ASSERTION_METHODS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssertionMethodsList().hashCode();
+      }
+      if (getKeyAgreementsCount() > 0) {
+        hash = (37 * hash) + KEY_AGREEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getKeyAgreementsList().hashCode();
+      }
+      if (getCapabilityInvocationsCount() > 0) {
+        hash = (37 * hash) + CAPABILITY_INVOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCapabilityInvocationsList().hashCode();
+      }
+      if (getCapabilityDelegationsCount() > 0) {
+        hash = (37 * hash) + CAPABILITY_DELEGATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCapabilityDelegationsList().hashCode();
+      }
+      if (getServicesCount() > 0) {
+        hash = (37 * hash) + SERVICES_FIELD_NUMBER;
+        hash = (53 * hash) + getServicesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.did.v2.DidProto.DIDDocument parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.did.v2.DidProto.DIDDocument parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocument parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.did.v2.DidProto.DIDDocument prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DIDDocument defines a W3C DID Document
+     *
+     * NOTE: All 'json_name' and 'gogoproto.customtype' tags are for panacea-core to unmarshal the v1.3 genesis which is in the W3C JSON-LD format.
+     *       On the other hand, the panacea-core and cosmos-sdk don't use those tags to marshal result to JSON (via grpc-gateway).
+     * </pre>
+     *
+     * Protobuf type {@code panacea.did.v2.DIDDocument}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.did.v2.DIDDocument)
+        com.panacea.did.v2.DidProto.DIDDocumentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocument_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocument_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.did.v2.DidProto.DIDDocument.class, com.panacea.did.v2.DidProto.DIDDocument.Builder.class);
+      }
+
+      // Construct using com.panacea.did.v2.DidProto.DIDDocument.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contexts_ = null;
+        if (contextsBuilder_ != null) {
+          contextsBuilder_.dispose();
+          contextsBuilder_ = null;
+        }
+        id_ = "";
+        controller_ = null;
+        if (controllerBuilder_ != null) {
+          controllerBuilder_.dispose();
+          controllerBuilder_ = null;
+        }
+        if (verificationMethodsBuilder_ == null) {
+          verificationMethods_ = java.util.Collections.emptyList();
+        } else {
+          verificationMethods_ = null;
+          verificationMethodsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (authenticationsBuilder_ == null) {
+          authentications_ = java.util.Collections.emptyList();
+        } else {
+          authentications_ = null;
+          authenticationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (assertionMethodsBuilder_ == null) {
+          assertionMethods_ = java.util.Collections.emptyList();
+        } else {
+          assertionMethods_ = null;
+          assertionMethodsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (keyAgreementsBuilder_ == null) {
+          keyAgreements_ = java.util.Collections.emptyList();
+        } else {
+          keyAgreements_ = null;
+          keyAgreementsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (capabilityInvocationsBuilder_ == null) {
+          capabilityInvocations_ = java.util.Collections.emptyList();
+        } else {
+          capabilityInvocations_ = null;
+          capabilityInvocationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (capabilityDelegationsBuilder_ == null) {
+          capabilityDelegations_ = java.util.Collections.emptyList();
+        } else {
+          capabilityDelegations_ = null;
+          capabilityDelegationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (servicesBuilder_ == null) {
+          services_ = java.util.Collections.emptyList();
+        } else {
+          services_ = null;
+          servicesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocument_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DIDDocument getDefaultInstanceForType() {
+        return com.panacea.did.v2.DidProto.DIDDocument.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DIDDocument build() {
+        com.panacea.did.v2.DidProto.DIDDocument result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DIDDocument buildPartial() {
+        com.panacea.did.v2.DidProto.DIDDocument result = new com.panacea.did.v2.DidProto.DIDDocument(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.panacea.did.v2.DidProto.DIDDocument result) {
+        if (verificationMethodsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            verificationMethods_ = java.util.Collections.unmodifiableList(verificationMethods_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.verificationMethods_ = verificationMethods_;
+        } else {
+          result.verificationMethods_ = verificationMethodsBuilder_.build();
+        }
+        if (authenticationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            authentications_ = java.util.Collections.unmodifiableList(authentications_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.authentications_ = authentications_;
+        } else {
+          result.authentications_ = authenticationsBuilder_.build();
+        }
+        if (assertionMethodsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            assertionMethods_ = java.util.Collections.unmodifiableList(assertionMethods_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.assertionMethods_ = assertionMethods_;
+        } else {
+          result.assertionMethods_ = assertionMethodsBuilder_.build();
+        }
+        if (keyAgreementsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            keyAgreements_ = java.util.Collections.unmodifiableList(keyAgreements_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.keyAgreements_ = keyAgreements_;
+        } else {
+          result.keyAgreements_ = keyAgreementsBuilder_.build();
+        }
+        if (capabilityInvocationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            capabilityInvocations_ = java.util.Collections.unmodifiableList(capabilityInvocations_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.capabilityInvocations_ = capabilityInvocations_;
+        } else {
+          result.capabilityInvocations_ = capabilityInvocationsBuilder_.build();
+        }
+        if (capabilityDelegationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            capabilityDelegations_ = java.util.Collections.unmodifiableList(capabilityDelegations_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.capabilityDelegations_ = capabilityDelegations_;
+        } else {
+          result.capabilityDelegations_ = capabilityDelegationsBuilder_.build();
+        }
+        if (servicesBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            services_ = java.util.Collections.unmodifiableList(services_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.services_ = services_;
+        } else {
+          result.services_ = servicesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.panacea.did.v2.DidProto.DIDDocument result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contexts_ = contextsBuilder_ == null
+              ? contexts_
+              : contextsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.controller_ = controllerBuilder_ == null
+              ? controller_
+              : controllerBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.did.v2.DidProto.DIDDocument) {
+          return mergeFrom((com.panacea.did.v2.DidProto.DIDDocument)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.did.v2.DidProto.DIDDocument other) {
+        if (other == com.panacea.did.v2.DidProto.DIDDocument.getDefaultInstance()) return this;
+        if (other.hasContexts()) {
+          mergeContexts(other.getContexts());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasController()) {
+          mergeController(other.getController());
+        }
+        if (verificationMethodsBuilder_ == null) {
+          if (!other.verificationMethods_.isEmpty()) {
+            if (verificationMethods_.isEmpty()) {
+              verificationMethods_ = other.verificationMethods_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureVerificationMethodsIsMutable();
+              verificationMethods_.addAll(other.verificationMethods_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.verificationMethods_.isEmpty()) {
+            if (verificationMethodsBuilder_.isEmpty()) {
+              verificationMethodsBuilder_.dispose();
+              verificationMethodsBuilder_ = null;
+              verificationMethods_ = other.verificationMethods_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              verificationMethodsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVerificationMethodsFieldBuilder() : null;
+            } else {
+              verificationMethodsBuilder_.addAllMessages(other.verificationMethods_);
+            }
+          }
+        }
+        if (authenticationsBuilder_ == null) {
+          if (!other.authentications_.isEmpty()) {
+            if (authentications_.isEmpty()) {
+              authentications_ = other.authentications_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureAuthenticationsIsMutable();
+              authentications_.addAll(other.authentications_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.authentications_.isEmpty()) {
+            if (authenticationsBuilder_.isEmpty()) {
+              authenticationsBuilder_.dispose();
+              authenticationsBuilder_ = null;
+              authentications_ = other.authentications_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              authenticationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAuthenticationsFieldBuilder() : null;
+            } else {
+              authenticationsBuilder_.addAllMessages(other.authentications_);
+            }
+          }
+        }
+        if (assertionMethodsBuilder_ == null) {
+          if (!other.assertionMethods_.isEmpty()) {
+            if (assertionMethods_.isEmpty()) {
+              assertionMethods_ = other.assertionMethods_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureAssertionMethodsIsMutable();
+              assertionMethods_.addAll(other.assertionMethods_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assertionMethods_.isEmpty()) {
+            if (assertionMethodsBuilder_.isEmpty()) {
+              assertionMethodsBuilder_.dispose();
+              assertionMethodsBuilder_ = null;
+              assertionMethods_ = other.assertionMethods_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              assertionMethodsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssertionMethodsFieldBuilder() : null;
+            } else {
+              assertionMethodsBuilder_.addAllMessages(other.assertionMethods_);
+            }
+          }
+        }
+        if (keyAgreementsBuilder_ == null) {
+          if (!other.keyAgreements_.isEmpty()) {
+            if (keyAgreements_.isEmpty()) {
+              keyAgreements_ = other.keyAgreements_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureKeyAgreementsIsMutable();
+              keyAgreements_.addAll(other.keyAgreements_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.keyAgreements_.isEmpty()) {
+            if (keyAgreementsBuilder_.isEmpty()) {
+              keyAgreementsBuilder_.dispose();
+              keyAgreementsBuilder_ = null;
+              keyAgreements_ = other.keyAgreements_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              keyAgreementsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getKeyAgreementsFieldBuilder() : null;
+            } else {
+              keyAgreementsBuilder_.addAllMessages(other.keyAgreements_);
+            }
+          }
+        }
+        if (capabilityInvocationsBuilder_ == null) {
+          if (!other.capabilityInvocations_.isEmpty()) {
+            if (capabilityInvocations_.isEmpty()) {
+              capabilityInvocations_ = other.capabilityInvocations_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureCapabilityInvocationsIsMutable();
+              capabilityInvocations_.addAll(other.capabilityInvocations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.capabilityInvocations_.isEmpty()) {
+            if (capabilityInvocationsBuilder_.isEmpty()) {
+              capabilityInvocationsBuilder_.dispose();
+              capabilityInvocationsBuilder_ = null;
+              capabilityInvocations_ = other.capabilityInvocations_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              capabilityInvocationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCapabilityInvocationsFieldBuilder() : null;
+            } else {
+              capabilityInvocationsBuilder_.addAllMessages(other.capabilityInvocations_);
+            }
+          }
+        }
+        if (capabilityDelegationsBuilder_ == null) {
+          if (!other.capabilityDelegations_.isEmpty()) {
+            if (capabilityDelegations_.isEmpty()) {
+              capabilityDelegations_ = other.capabilityDelegations_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureCapabilityDelegationsIsMutable();
+              capabilityDelegations_.addAll(other.capabilityDelegations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.capabilityDelegations_.isEmpty()) {
+            if (capabilityDelegationsBuilder_.isEmpty()) {
+              capabilityDelegationsBuilder_.dispose();
+              capabilityDelegationsBuilder_ = null;
+              capabilityDelegations_ = other.capabilityDelegations_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              capabilityDelegationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCapabilityDelegationsFieldBuilder() : null;
+            } else {
+              capabilityDelegationsBuilder_.addAllMessages(other.capabilityDelegations_);
+            }
+          }
+        }
+        if (servicesBuilder_ == null) {
+          if (!other.services_.isEmpty()) {
+            if (services_.isEmpty()) {
+              services_ = other.services_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureServicesIsMutable();
+              services_.addAll(other.services_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.services_.isEmpty()) {
+            if (servicesBuilder_.isEmpty()) {
+              servicesBuilder_.dispose();
+              servicesBuilder_ = null;
+              services_ = other.services_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              servicesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getServicesFieldBuilder() : null;
+            } else {
+              servicesBuilder_.addAllMessages(other.services_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getContextsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getControllerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.panacea.did.v2.DidProto.VerificationMethod m =
+                    input.readMessage(
+                        com.panacea.did.v2.DidProto.VerificationMethod.parser(),
+                        extensionRegistry);
+                if (verificationMethodsBuilder_ == null) {
+                  ensureVerificationMethodsIsMutable();
+                  verificationMethods_.add(m);
+                } else {
+                  verificationMethodsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.panacea.did.v2.DidProto.VerificationRelationship m =
+                    input.readMessage(
+                        com.panacea.did.v2.DidProto.VerificationRelationship.parser(),
+                        extensionRegistry);
+                if (authenticationsBuilder_ == null) {
+                  ensureAuthenticationsIsMutable();
+                  authentications_.add(m);
+                } else {
+                  authenticationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.panacea.did.v2.DidProto.VerificationRelationship m =
+                    input.readMessage(
+                        com.panacea.did.v2.DidProto.VerificationRelationship.parser(),
+                        extensionRegistry);
+                if (assertionMethodsBuilder_ == null) {
+                  ensureAssertionMethodsIsMutable();
+                  assertionMethods_.add(m);
+                } else {
+                  assertionMethodsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.panacea.did.v2.DidProto.VerificationRelationship m =
+                    input.readMessage(
+                        com.panacea.did.v2.DidProto.VerificationRelationship.parser(),
+                        extensionRegistry);
+                if (keyAgreementsBuilder_ == null) {
+                  ensureKeyAgreementsIsMutable();
+                  keyAgreements_.add(m);
+                } else {
+                  keyAgreementsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.panacea.did.v2.DidProto.VerificationRelationship m =
+                    input.readMessage(
+                        com.panacea.did.v2.DidProto.VerificationRelationship.parser(),
+                        extensionRegistry);
+                if (capabilityInvocationsBuilder_ == null) {
+                  ensureCapabilityInvocationsIsMutable();
+                  capabilityInvocations_.add(m);
+                } else {
+                  capabilityInvocationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                com.panacea.did.v2.DidProto.VerificationRelationship m =
+                    input.readMessage(
+                        com.panacea.did.v2.DidProto.VerificationRelationship.parser(),
+                        extensionRegistry);
+                if (capabilityDelegationsBuilder_ == null) {
+                  ensureCapabilityDelegationsIsMutable();
+                  capabilityDelegations_.add(m);
+                } else {
+                  capabilityDelegationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                com.panacea.did.v2.DidProto.Service m =
+                    input.readMessage(
+                        com.panacea.did.v2.DidProto.Service.parser(),
+                        extensionRegistry);
+                if (servicesBuilder_ == null) {
+                  ensureServicesIsMutable();
+                  services_.add(m);
+                } else {
+                  servicesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.did.v2.DidProto.Strings contexts_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.did.v2.DidProto.Strings, com.panacea.did.v2.DidProto.Strings.Builder, com.panacea.did.v2.DidProto.StringsOrBuilder> contextsBuilder_;
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       * @return Whether the contexts field is set.
+       */
+      public boolean hasContexts() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       * @return The contexts.
+       */
+      public com.panacea.did.v2.DidProto.Strings getContexts() {
+        if (contextsBuilder_ == null) {
+          return contexts_ == null ? com.panacea.did.v2.DidProto.Strings.getDefaultInstance() : contexts_;
+        } else {
+          return contextsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public Builder setContexts(com.panacea.did.v2.DidProto.Strings value) {
+        if (contextsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contexts_ = value;
+        } else {
+          contextsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public Builder setContexts(
+          com.panacea.did.v2.DidProto.Strings.Builder builderForValue) {
+        if (contextsBuilder_ == null) {
+          contexts_ = builderForValue.build();
+        } else {
+          contextsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public Builder mergeContexts(com.panacea.did.v2.DidProto.Strings value) {
+        if (contextsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            contexts_ != null &&
+            contexts_ != com.panacea.did.v2.DidProto.Strings.getDefaultInstance()) {
+            getContextsBuilder().mergeFrom(value);
+          } else {
+            contexts_ = value;
+          }
+        } else {
+          contextsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public Builder clearContexts() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contexts_ = null;
+        if (contextsBuilder_ != null) {
+          contextsBuilder_.dispose();
+          contextsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public com.panacea.did.v2.DidProto.Strings.Builder getContextsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getContextsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public com.panacea.did.v2.DidProto.StringsOrBuilder getContextsOrBuilder() {
+        if (contextsBuilder_ != null) {
+          return contextsBuilder_.getMessageOrBuilder();
+        } else {
+          return contexts_ == null ?
+              com.panacea.did.v2.DidProto.Strings.getDefaultInstance() : contexts_;
+        }
+      }
+      /**
+       * <code>.panacea.did.v2.Strings contexts = 1 [json_name = "&#64;context", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.did.v2.DidProto.Strings, com.panacea.did.v2.DidProto.Strings.Builder, com.panacea.did.v2.DidProto.StringsOrBuilder> 
+          getContextsFieldBuilder() {
+        if (contextsBuilder_ == null) {
+          contextsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.did.v2.DidProto.Strings, com.panacea.did.v2.DidProto.Strings.Builder, com.panacea.did.v2.DidProto.StringsOrBuilder>(
+                  getContexts(),
+                  getParentForChildren(),
+                  isClean());
+          contexts_ = null;
+        }
+        return contextsBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.panacea.did.v2.DidProto.Strings controller_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.did.v2.DidProto.Strings, com.panacea.did.v2.DidProto.Strings.Builder, com.panacea.did.v2.DidProto.StringsOrBuilder> controllerBuilder_;
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       * @return Whether the controller field is set.
+       */
+      public boolean hasController() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       * @return The controller.
+       */
+      public com.panacea.did.v2.DidProto.Strings getController() {
+        if (controllerBuilder_ == null) {
+          return controller_ == null ? com.panacea.did.v2.DidProto.Strings.getDefaultInstance() : controller_;
+        } else {
+          return controllerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public Builder setController(com.panacea.did.v2.DidProto.Strings value) {
+        if (controllerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          controller_ = value;
+        } else {
+          controllerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public Builder setController(
+          com.panacea.did.v2.DidProto.Strings.Builder builderForValue) {
+        if (controllerBuilder_ == null) {
+          controller_ = builderForValue.build();
+        } else {
+          controllerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public Builder mergeController(com.panacea.did.v2.DidProto.Strings value) {
+        if (controllerBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            controller_ != null &&
+            controller_ != com.panacea.did.v2.DidProto.Strings.getDefaultInstance()) {
+            getControllerBuilder().mergeFrom(value);
+          } else {
+            controller_ = value;
+          }
+        } else {
+          controllerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public Builder clearController() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        controller_ = null;
+        if (controllerBuilder_ != null) {
+          controllerBuilder_.dispose();
+          controllerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public com.panacea.did.v2.DidProto.Strings.Builder getControllerBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getControllerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      public com.panacea.did.v2.DidProto.StringsOrBuilder getControllerOrBuilder() {
+        if (controllerBuilder_ != null) {
+          return controllerBuilder_.getMessageOrBuilder();
+        } else {
+          return controller_ == null ?
+              com.panacea.did.v2.DidProto.Strings.getDefaultInstance() : controller_;
+        }
+      }
+      /**
+       * <code>.panacea.did.v2.Strings controller = 3 [json_name = "controller", (.gogoproto.customtype) = "JSONStringOrStrings"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.did.v2.DidProto.Strings, com.panacea.did.v2.DidProto.Strings.Builder, com.panacea.did.v2.DidProto.StringsOrBuilder> 
+          getControllerFieldBuilder() {
+        if (controllerBuilder_ == null) {
+          controllerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.did.v2.DidProto.Strings, com.panacea.did.v2.DidProto.Strings.Builder, com.panacea.did.v2.DidProto.StringsOrBuilder>(
+                  getController(),
+                  getParentForChildren(),
+                  isClean());
+          controller_ = null;
+        }
+        return controllerBuilder_;
+      }
+
+      private java.util.List<com.panacea.did.v2.DidProto.VerificationMethod> verificationMethods_ =
+        java.util.Collections.emptyList();
+      private void ensureVerificationMethodsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          verificationMethods_ = new java.util.ArrayList<com.panacea.did.v2.DidProto.VerificationMethod>(verificationMethods_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationMethod, com.panacea.did.v2.DidProto.VerificationMethod.Builder, com.panacea.did.v2.DidProto.VerificationMethodOrBuilder> verificationMethodsBuilder_;
+
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationMethod> getVerificationMethodsList() {
+        if (verificationMethodsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(verificationMethods_);
+        } else {
+          return verificationMethodsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public int getVerificationMethodsCount() {
+        if (verificationMethodsBuilder_ == null) {
+          return verificationMethods_.size();
+        } else {
+          return verificationMethodsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationMethod getVerificationMethods(int index) {
+        if (verificationMethodsBuilder_ == null) {
+          return verificationMethods_.get(index);
+        } else {
+          return verificationMethodsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder setVerificationMethods(
+          int index, com.panacea.did.v2.DidProto.VerificationMethod value) {
+        if (verificationMethodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVerificationMethodsIsMutable();
+          verificationMethods_.set(index, value);
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder setVerificationMethods(
+          int index, com.panacea.did.v2.DidProto.VerificationMethod.Builder builderForValue) {
+        if (verificationMethodsBuilder_ == null) {
+          ensureVerificationMethodsIsMutable();
+          verificationMethods_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder addVerificationMethods(com.panacea.did.v2.DidProto.VerificationMethod value) {
+        if (verificationMethodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVerificationMethodsIsMutable();
+          verificationMethods_.add(value);
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder addVerificationMethods(
+          int index, com.panacea.did.v2.DidProto.VerificationMethod value) {
+        if (verificationMethodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVerificationMethodsIsMutable();
+          verificationMethods_.add(index, value);
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder addVerificationMethods(
+          com.panacea.did.v2.DidProto.VerificationMethod.Builder builderForValue) {
+        if (verificationMethodsBuilder_ == null) {
+          ensureVerificationMethodsIsMutable();
+          verificationMethods_.add(builderForValue.build());
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder addVerificationMethods(
+          int index, com.panacea.did.v2.DidProto.VerificationMethod.Builder builderForValue) {
+        if (verificationMethodsBuilder_ == null) {
+          ensureVerificationMethodsIsMutable();
+          verificationMethods_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder addAllVerificationMethods(
+          java.lang.Iterable<? extends com.panacea.did.v2.DidProto.VerificationMethod> values) {
+        if (verificationMethodsBuilder_ == null) {
+          ensureVerificationMethodsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, verificationMethods_);
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder clearVerificationMethods() {
+        if (verificationMethodsBuilder_ == null) {
+          verificationMethods_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public Builder removeVerificationMethods(int index) {
+        if (verificationMethodsBuilder_ == null) {
+          ensureVerificationMethodsIsMutable();
+          verificationMethods_.remove(index);
+          onChanged();
+        } else {
+          verificationMethodsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationMethod.Builder getVerificationMethodsBuilder(
+          int index) {
+        return getVerificationMethodsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationMethodOrBuilder getVerificationMethodsOrBuilder(
+          int index) {
+        if (verificationMethodsBuilder_ == null) {
+          return verificationMethods_.get(index);  } else {
+          return verificationMethodsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationMethodOrBuilder> 
+           getVerificationMethodsOrBuilderList() {
+        if (verificationMethodsBuilder_ != null) {
+          return verificationMethodsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(verificationMethods_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationMethod.Builder addVerificationMethodsBuilder() {
+        return getVerificationMethodsFieldBuilder().addBuilder(
+            com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationMethod.Builder addVerificationMethodsBuilder(
+          int index) {
+        return getVerificationMethodsFieldBuilder().addBuilder(
+            index, com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationMethod verification_methods = 4 [json_name = "verificationMethod"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationMethod.Builder> 
+           getVerificationMethodsBuilderList() {
+        return getVerificationMethodsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationMethod, com.panacea.did.v2.DidProto.VerificationMethod.Builder, com.panacea.did.v2.DidProto.VerificationMethodOrBuilder> 
+          getVerificationMethodsFieldBuilder() {
+        if (verificationMethodsBuilder_ == null) {
+          verificationMethodsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.did.v2.DidProto.VerificationMethod, com.panacea.did.v2.DidProto.VerificationMethod.Builder, com.panacea.did.v2.DidProto.VerificationMethodOrBuilder>(
+                  verificationMethods_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          verificationMethods_ = null;
+        }
+        return verificationMethodsBuilder_;
+      }
+
+      private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> authentications_ =
+        java.util.Collections.emptyList();
+      private void ensureAuthenticationsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          authentications_ = new java.util.ArrayList<com.panacea.did.v2.DidProto.VerificationRelationship>(authentications_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> authenticationsBuilder_;
+
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getAuthenticationsList() {
+        if (authenticationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(authentications_);
+        } else {
+          return authenticationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public int getAuthenticationsCount() {
+        if (authenticationsBuilder_ == null) {
+          return authentications_.size();
+        } else {
+          return authenticationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship getAuthentications(int index) {
+        if (authenticationsBuilder_ == null) {
+          return authentications_.get(index);
+        } else {
+          return authenticationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setAuthentications(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (authenticationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuthenticationsIsMutable();
+          authentications_.set(index, value);
+          onChanged();
+        } else {
+          authenticationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setAuthentications(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (authenticationsBuilder_ == null) {
+          ensureAuthenticationsIsMutable();
+          authentications_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          authenticationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAuthentications(com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (authenticationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuthenticationsIsMutable();
+          authentications_.add(value);
+          onChanged();
+        } else {
+          authenticationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAuthentications(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (authenticationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuthenticationsIsMutable();
+          authentications_.add(index, value);
+          onChanged();
+        } else {
+          authenticationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAuthentications(
+          com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (authenticationsBuilder_ == null) {
+          ensureAuthenticationsIsMutable();
+          authentications_.add(builderForValue.build());
+          onChanged();
+        } else {
+          authenticationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAuthentications(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (authenticationsBuilder_ == null) {
+          ensureAuthenticationsIsMutable();
+          authentications_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          authenticationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAllAuthentications(
+          java.lang.Iterable<? extends com.panacea.did.v2.DidProto.VerificationRelationship> values) {
+        if (authenticationsBuilder_ == null) {
+          ensureAuthenticationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, authentications_);
+          onChanged();
+        } else {
+          authenticationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder clearAuthentications() {
+        if (authenticationsBuilder_ == null) {
+          authentications_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          authenticationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder removeAuthentications(int index) {
+        if (authenticationsBuilder_ == null) {
+          ensureAuthenticationsIsMutable();
+          authentications_.remove(index);
+          onChanged();
+        } else {
+          authenticationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder getAuthenticationsBuilder(
+          int index) {
+        return getAuthenticationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getAuthenticationsOrBuilder(
+          int index) {
+        if (authenticationsBuilder_ == null) {
+          return authentications_.get(index);  } else {
+          return authenticationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+           getAuthenticationsOrBuilderList() {
+        if (authenticationsBuilder_ != null) {
+          return authenticationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(authentications_);
+        }
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addAuthenticationsBuilder() {
+        return getAuthenticationsFieldBuilder().addBuilder(
+            com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addAuthenticationsBuilder(
+          int index) {
+        return getAuthenticationsFieldBuilder().addBuilder(
+            index, com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * TODO: the repeated gogoproto.customtype has an issue: https://github.com/gogo/protobuf/issues/478
+       * </pre>
+       *
+       * <code>repeated .panacea.did.v2.VerificationRelationship authentications = 5 [json_name = "authentication", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship.Builder> 
+           getAuthenticationsBuilderList() {
+        return getAuthenticationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+          getAuthenticationsFieldBuilder() {
+        if (authenticationsBuilder_ == null) {
+          authenticationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder>(
+                  authentications_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          authentications_ = null;
+        }
+        return authenticationsBuilder_;
+      }
+
+      private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> assertionMethods_ =
+        java.util.Collections.emptyList();
+      private void ensureAssertionMethodsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          assertionMethods_ = new java.util.ArrayList<com.panacea.did.v2.DidProto.VerificationRelationship>(assertionMethods_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> assertionMethodsBuilder_;
+
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getAssertionMethodsList() {
+        if (assertionMethodsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assertionMethods_);
+        } else {
+          return assertionMethodsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public int getAssertionMethodsCount() {
+        if (assertionMethodsBuilder_ == null) {
+          return assertionMethods_.size();
+        } else {
+          return assertionMethodsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship getAssertionMethods(int index) {
+        if (assertionMethodsBuilder_ == null) {
+          return assertionMethods_.get(index);
+        } else {
+          return assertionMethodsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setAssertionMethods(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (assertionMethodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssertionMethodsIsMutable();
+          assertionMethods_.set(index, value);
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setAssertionMethods(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (assertionMethodsBuilder_ == null) {
+          ensureAssertionMethodsIsMutable();
+          assertionMethods_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAssertionMethods(com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (assertionMethodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssertionMethodsIsMutable();
+          assertionMethods_.add(value);
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAssertionMethods(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (assertionMethodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssertionMethodsIsMutable();
+          assertionMethods_.add(index, value);
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAssertionMethods(
+          com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (assertionMethodsBuilder_ == null) {
+          ensureAssertionMethodsIsMutable();
+          assertionMethods_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAssertionMethods(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (assertionMethodsBuilder_ == null) {
+          ensureAssertionMethodsIsMutable();
+          assertionMethods_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAllAssertionMethods(
+          java.lang.Iterable<? extends com.panacea.did.v2.DidProto.VerificationRelationship> values) {
+        if (assertionMethodsBuilder_ == null) {
+          ensureAssertionMethodsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assertionMethods_);
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder clearAssertionMethods() {
+        if (assertionMethodsBuilder_ == null) {
+          assertionMethods_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder removeAssertionMethods(int index) {
+        if (assertionMethodsBuilder_ == null) {
+          ensureAssertionMethodsIsMutable();
+          assertionMethods_.remove(index);
+          onChanged();
+        } else {
+          assertionMethodsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder getAssertionMethodsBuilder(
+          int index) {
+        return getAssertionMethodsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getAssertionMethodsOrBuilder(
+          int index) {
+        if (assertionMethodsBuilder_ == null) {
+          return assertionMethods_.get(index);  } else {
+          return assertionMethodsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+           getAssertionMethodsOrBuilderList() {
+        if (assertionMethodsBuilder_ != null) {
+          return assertionMethodsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assertionMethods_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addAssertionMethodsBuilder() {
+        return getAssertionMethodsFieldBuilder().addBuilder(
+            com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addAssertionMethodsBuilder(
+          int index) {
+        return getAssertionMethodsFieldBuilder().addBuilder(
+            index, com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship assertion_methods = 6 [json_name = "assertionMethod", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship.Builder> 
+           getAssertionMethodsBuilderList() {
+        return getAssertionMethodsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+          getAssertionMethodsFieldBuilder() {
+        if (assertionMethodsBuilder_ == null) {
+          assertionMethodsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder>(
+                  assertionMethods_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assertionMethods_ = null;
+        }
+        return assertionMethodsBuilder_;
+      }
+
+      private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> keyAgreements_ =
+        java.util.Collections.emptyList();
+      private void ensureKeyAgreementsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          keyAgreements_ = new java.util.ArrayList<com.panacea.did.v2.DidProto.VerificationRelationship>(keyAgreements_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> keyAgreementsBuilder_;
+
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getKeyAgreementsList() {
+        if (keyAgreementsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(keyAgreements_);
+        } else {
+          return keyAgreementsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public int getKeyAgreementsCount() {
+        if (keyAgreementsBuilder_ == null) {
+          return keyAgreements_.size();
+        } else {
+          return keyAgreementsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship getKeyAgreements(int index) {
+        if (keyAgreementsBuilder_ == null) {
+          return keyAgreements_.get(index);
+        } else {
+          return keyAgreementsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setKeyAgreements(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (keyAgreementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeyAgreementsIsMutable();
+          keyAgreements_.set(index, value);
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setKeyAgreements(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (keyAgreementsBuilder_ == null) {
+          ensureKeyAgreementsIsMutable();
+          keyAgreements_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addKeyAgreements(com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (keyAgreementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeyAgreementsIsMutable();
+          keyAgreements_.add(value);
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addKeyAgreements(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (keyAgreementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeyAgreementsIsMutable();
+          keyAgreements_.add(index, value);
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addKeyAgreements(
+          com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (keyAgreementsBuilder_ == null) {
+          ensureKeyAgreementsIsMutable();
+          keyAgreements_.add(builderForValue.build());
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addKeyAgreements(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (keyAgreementsBuilder_ == null) {
+          ensureKeyAgreementsIsMutable();
+          keyAgreements_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAllKeyAgreements(
+          java.lang.Iterable<? extends com.panacea.did.v2.DidProto.VerificationRelationship> values) {
+        if (keyAgreementsBuilder_ == null) {
+          ensureKeyAgreementsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, keyAgreements_);
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder clearKeyAgreements() {
+        if (keyAgreementsBuilder_ == null) {
+          keyAgreements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder removeKeyAgreements(int index) {
+        if (keyAgreementsBuilder_ == null) {
+          ensureKeyAgreementsIsMutable();
+          keyAgreements_.remove(index);
+          onChanged();
+        } else {
+          keyAgreementsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder getKeyAgreementsBuilder(
+          int index) {
+        return getKeyAgreementsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getKeyAgreementsOrBuilder(
+          int index) {
+        if (keyAgreementsBuilder_ == null) {
+          return keyAgreements_.get(index);  } else {
+          return keyAgreementsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+           getKeyAgreementsOrBuilderList() {
+        if (keyAgreementsBuilder_ != null) {
+          return keyAgreementsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(keyAgreements_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addKeyAgreementsBuilder() {
+        return getKeyAgreementsFieldBuilder().addBuilder(
+            com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addKeyAgreementsBuilder(
+          int index) {
+        return getKeyAgreementsFieldBuilder().addBuilder(
+            index, com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship key_agreements = 7 [json_name = "keyAgreement", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship.Builder> 
+           getKeyAgreementsBuilderList() {
+        return getKeyAgreementsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+          getKeyAgreementsFieldBuilder() {
+        if (keyAgreementsBuilder_ == null) {
+          keyAgreementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder>(
+                  keyAgreements_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          keyAgreements_ = null;
+        }
+        return keyAgreementsBuilder_;
+      }
+
+      private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> capabilityInvocations_ =
+        java.util.Collections.emptyList();
+      private void ensureCapabilityInvocationsIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          capabilityInvocations_ = new java.util.ArrayList<com.panacea.did.v2.DidProto.VerificationRelationship>(capabilityInvocations_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> capabilityInvocationsBuilder_;
+
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getCapabilityInvocationsList() {
+        if (capabilityInvocationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(capabilityInvocations_);
+        } else {
+          return capabilityInvocationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public int getCapabilityInvocationsCount() {
+        if (capabilityInvocationsBuilder_ == null) {
+          return capabilityInvocations_.size();
+        } else {
+          return capabilityInvocationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship getCapabilityInvocations(int index) {
+        if (capabilityInvocationsBuilder_ == null) {
+          return capabilityInvocations_.get(index);
+        } else {
+          return capabilityInvocationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setCapabilityInvocations(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (capabilityInvocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCapabilityInvocationsIsMutable();
+          capabilityInvocations_.set(index, value);
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setCapabilityInvocations(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (capabilityInvocationsBuilder_ == null) {
+          ensureCapabilityInvocationsIsMutable();
+          capabilityInvocations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addCapabilityInvocations(com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (capabilityInvocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCapabilityInvocationsIsMutable();
+          capabilityInvocations_.add(value);
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addCapabilityInvocations(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (capabilityInvocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCapabilityInvocationsIsMutable();
+          capabilityInvocations_.add(index, value);
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addCapabilityInvocations(
+          com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (capabilityInvocationsBuilder_ == null) {
+          ensureCapabilityInvocationsIsMutable();
+          capabilityInvocations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addCapabilityInvocations(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (capabilityInvocationsBuilder_ == null) {
+          ensureCapabilityInvocationsIsMutable();
+          capabilityInvocations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAllCapabilityInvocations(
+          java.lang.Iterable<? extends com.panacea.did.v2.DidProto.VerificationRelationship> values) {
+        if (capabilityInvocationsBuilder_ == null) {
+          ensureCapabilityInvocationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, capabilityInvocations_);
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder clearCapabilityInvocations() {
+        if (capabilityInvocationsBuilder_ == null) {
+          capabilityInvocations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder removeCapabilityInvocations(int index) {
+        if (capabilityInvocationsBuilder_ == null) {
+          ensureCapabilityInvocationsIsMutable();
+          capabilityInvocations_.remove(index);
+          onChanged();
+        } else {
+          capabilityInvocationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder getCapabilityInvocationsBuilder(
+          int index) {
+        return getCapabilityInvocationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getCapabilityInvocationsOrBuilder(
+          int index) {
+        if (capabilityInvocationsBuilder_ == null) {
+          return capabilityInvocations_.get(index);  } else {
+          return capabilityInvocationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+           getCapabilityInvocationsOrBuilderList() {
+        if (capabilityInvocationsBuilder_ != null) {
+          return capabilityInvocationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(capabilityInvocations_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addCapabilityInvocationsBuilder() {
+        return getCapabilityInvocationsFieldBuilder().addBuilder(
+            com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addCapabilityInvocationsBuilder(
+          int index) {
+        return getCapabilityInvocationsFieldBuilder().addBuilder(
+            index, com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_invocations = 8 [json_name = "capabilityInvocation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship.Builder> 
+           getCapabilityInvocationsBuilderList() {
+        return getCapabilityInvocationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+          getCapabilityInvocationsFieldBuilder() {
+        if (capabilityInvocationsBuilder_ == null) {
+          capabilityInvocationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder>(
+                  capabilityInvocations_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          capabilityInvocations_ = null;
+        }
+        return capabilityInvocationsBuilder_;
+      }
+
+      private java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> capabilityDelegations_ =
+        java.util.Collections.emptyList();
+      private void ensureCapabilityDelegationsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          capabilityDelegations_ = new java.util.ArrayList<com.panacea.did.v2.DidProto.VerificationRelationship>(capabilityDelegations_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> capabilityDelegationsBuilder_;
+
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship> getCapabilityDelegationsList() {
+        if (capabilityDelegationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(capabilityDelegations_);
+        } else {
+          return capabilityDelegationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public int getCapabilityDelegationsCount() {
+        if (capabilityDelegationsBuilder_ == null) {
+          return capabilityDelegations_.size();
+        } else {
+          return capabilityDelegationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship getCapabilityDelegations(int index) {
+        if (capabilityDelegationsBuilder_ == null) {
+          return capabilityDelegations_.get(index);
+        } else {
+          return capabilityDelegationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setCapabilityDelegations(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (capabilityDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCapabilityDelegationsIsMutable();
+          capabilityDelegations_.set(index, value);
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder setCapabilityDelegations(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (capabilityDelegationsBuilder_ == null) {
+          ensureCapabilityDelegationsIsMutable();
+          capabilityDelegations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addCapabilityDelegations(com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (capabilityDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCapabilityDelegationsIsMutable();
+          capabilityDelegations_.add(value);
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addCapabilityDelegations(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship value) {
+        if (capabilityDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCapabilityDelegationsIsMutable();
+          capabilityDelegations_.add(index, value);
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addCapabilityDelegations(
+          com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (capabilityDelegationsBuilder_ == null) {
+          ensureCapabilityDelegationsIsMutable();
+          capabilityDelegations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addCapabilityDelegations(
+          int index, com.panacea.did.v2.DidProto.VerificationRelationship.Builder builderForValue) {
+        if (capabilityDelegationsBuilder_ == null) {
+          ensureCapabilityDelegationsIsMutable();
+          capabilityDelegations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder addAllCapabilityDelegations(
+          java.lang.Iterable<? extends com.panacea.did.v2.DidProto.VerificationRelationship> values) {
+        if (capabilityDelegationsBuilder_ == null) {
+          ensureCapabilityDelegationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, capabilityDelegations_);
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder clearCapabilityDelegations() {
+        if (capabilityDelegationsBuilder_ == null) {
+          capabilityDelegations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public Builder removeCapabilityDelegations(int index) {
+        if (capabilityDelegationsBuilder_ == null) {
+          ensureCapabilityDelegationsIsMutable();
+          capabilityDelegations_.remove(index);
+          onChanged();
+        } else {
+          capabilityDelegationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder getCapabilityDelegationsBuilder(
+          int index) {
+        return getCapabilityDelegationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder getCapabilityDelegationsOrBuilder(
+          int index) {
+        if (capabilityDelegationsBuilder_ == null) {
+          return capabilityDelegations_.get(index);  } else {
+          return capabilityDelegationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<? extends com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+           getCapabilityDelegationsOrBuilderList() {
+        if (capabilityDelegationsBuilder_ != null) {
+          return capabilityDelegationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(capabilityDelegations_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addCapabilityDelegationsBuilder() {
+        return getCapabilityDelegationsFieldBuilder().addBuilder(
+            com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationRelationship.Builder addCapabilityDelegationsBuilder(
+          int index) {
+        return getCapabilityDelegationsFieldBuilder().addBuilder(
+            index, com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.VerificationRelationship capability_delegations = 9 [json_name = "capabilityDelegation", (.gogoproto.customtype) = "VerificationRelationship"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.VerificationRelationship.Builder> 
+           getCapabilityDelegationsBuilderList() {
+        return getCapabilityDelegationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder> 
+          getCapabilityDelegationsFieldBuilder() {
+        if (capabilityDelegationsBuilder_ == null) {
+          capabilityDelegationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.did.v2.DidProto.VerificationRelationship, com.panacea.did.v2.DidProto.VerificationRelationship.Builder, com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder>(
+                  capabilityDelegations_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          capabilityDelegations_ = null;
+        }
+        return capabilityDelegationsBuilder_;
+      }
+
+      private java.util.List<com.panacea.did.v2.DidProto.Service> services_ =
+        java.util.Collections.emptyList();
+      private void ensureServicesIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          services_ = new java.util.ArrayList<com.panacea.did.v2.DidProto.Service>(services_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.Service, com.panacea.did.v2.DidProto.Service.Builder, com.panacea.did.v2.DidProto.ServiceOrBuilder> servicesBuilder_;
+
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.Service> getServicesList() {
+        if (servicesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(services_);
+        } else {
+          return servicesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public int getServicesCount() {
+        if (servicesBuilder_ == null) {
+          return services_.size();
+        } else {
+          return servicesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public com.panacea.did.v2.DidProto.Service getServices(int index) {
+        if (servicesBuilder_ == null) {
+          return services_.get(index);
+        } else {
+          return servicesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder setServices(
+          int index, com.panacea.did.v2.DidProto.Service value) {
+        if (servicesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServicesIsMutable();
+          services_.set(index, value);
+          onChanged();
+        } else {
+          servicesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder setServices(
+          int index, com.panacea.did.v2.DidProto.Service.Builder builderForValue) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          services_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          servicesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder addServices(com.panacea.did.v2.DidProto.Service value) {
+        if (servicesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServicesIsMutable();
+          services_.add(value);
+          onChanged();
+        } else {
+          servicesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder addServices(
+          int index, com.panacea.did.v2.DidProto.Service value) {
+        if (servicesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServicesIsMutable();
+          services_.add(index, value);
+          onChanged();
+        } else {
+          servicesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder addServices(
+          com.panacea.did.v2.DidProto.Service.Builder builderForValue) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          services_.add(builderForValue.build());
+          onChanged();
+        } else {
+          servicesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder addServices(
+          int index, com.panacea.did.v2.DidProto.Service.Builder builderForValue) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          services_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          servicesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder addAllServices(
+          java.lang.Iterable<? extends com.panacea.did.v2.DidProto.Service> values) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, services_);
+          onChanged();
+        } else {
+          servicesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder clearServices() {
+        if (servicesBuilder_ == null) {
+          services_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          servicesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public Builder removeServices(int index) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          services_.remove(index);
+          onChanged();
+        } else {
+          servicesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public com.panacea.did.v2.DidProto.Service.Builder getServicesBuilder(
+          int index) {
+        return getServicesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public com.panacea.did.v2.DidProto.ServiceOrBuilder getServicesOrBuilder(
+          int index) {
+        if (servicesBuilder_ == null) {
+          return services_.get(index);  } else {
+          return servicesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public java.util.List<? extends com.panacea.did.v2.DidProto.ServiceOrBuilder> 
+           getServicesOrBuilderList() {
+        if (servicesBuilder_ != null) {
+          return servicesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(services_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public com.panacea.did.v2.DidProto.Service.Builder addServicesBuilder() {
+        return getServicesFieldBuilder().addBuilder(
+            com.panacea.did.v2.DidProto.Service.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public com.panacea.did.v2.DidProto.Service.Builder addServicesBuilder(
+          int index) {
+        return getServicesFieldBuilder().addBuilder(
+            index, com.panacea.did.v2.DidProto.Service.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.did.v2.Service services = 10 [json_name = "service"];</code>
+       */
+      public java.util.List<com.panacea.did.v2.DidProto.Service.Builder> 
+           getServicesBuilderList() {
+        return getServicesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.did.v2.DidProto.Service, com.panacea.did.v2.DidProto.Service.Builder, com.panacea.did.v2.DidProto.ServiceOrBuilder> 
+          getServicesFieldBuilder() {
+        if (servicesBuilder_ == null) {
+          servicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.did.v2.DidProto.Service, com.panacea.did.v2.DidProto.Service.Builder, com.panacea.did.v2.DidProto.ServiceOrBuilder>(
+                  services_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          services_ = null;
+        }
+        return servicesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.did.v2.DIDDocument)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.did.v2.DIDDocument)
+    private static final com.panacea.did.v2.DidProto.DIDDocument DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.did.v2.DidProto.DIDDocument();
+    }
+
+    public static com.panacea.did.v2.DidProto.DIDDocument getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DIDDocument>
+        PARSER = new com.google.protobuf.AbstractParser<DIDDocument>() {
+      @java.lang.Override
+      public DIDDocument parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DIDDocument> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DIDDocument> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.DIDDocument getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VerificationMethodOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.did.v2.VerificationMethod)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string controller = 3 [json_name = "controller"];</code>
+     * @return The controller.
+     */
+    java.lang.String getController();
+    /**
+     * <code>string controller = 3 [json_name = "controller"];</code>
+     * @return The bytes for controller.
+     */
+    com.google.protobuf.ByteString
+        getControllerBytes();
+
+    /**
+     * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+     * @return The publicKeyBase58.
+     */
+    java.lang.String getPublicKeyBase58();
+    /**
+     * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+     * @return The bytes for publicKeyBase58.
+     */
+    com.google.protobuf.ByteString
+        getPublicKeyBase58Bytes();
+  }
+  /**
+   * <pre>
+   * VerificationMethod defines a W3C verification method
+   * </pre>
+   *
+   * Protobuf type {@code panacea.did.v2.VerificationMethod}
+   */
+  public static final class VerificationMethod extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.did.v2.VerificationMethod)
+      VerificationMethodOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VerificationMethod.newBuilder() to construct.
+    private VerificationMethod(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VerificationMethod() {
+      id_ = "";
+      type_ = "";
+      controller_ = "";
+      publicKeyBase58_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VerificationMethod();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationMethod_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationMethod_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.did.v2.DidProto.VerificationMethod.class, com.panacea.did.v2.DidProto.VerificationMethod.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTROLLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object controller_ = "";
+    /**
+     * <code>string controller = 3 [json_name = "controller"];</code>
+     * @return The controller.
+     */
+    @java.lang.Override
+    public java.lang.String getController() {
+      java.lang.Object ref = controller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        controller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string controller = 3 [json_name = "controller"];</code>
+     * @return The bytes for controller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControllerBytes() {
+      java.lang.Object ref = controller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLIC_KEY_BASE58_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publicKeyBase58_ = "";
+    /**
+     * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+     * @return The publicKeyBase58.
+     */
+    @java.lang.Override
+    public java.lang.String getPublicKeyBase58() {
+      java.lang.Object ref = publicKeyBase58_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publicKeyBase58_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+     * @return The bytes for publicKeyBase58.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublicKeyBase58Bytes() {
+      java.lang.Object ref = publicKeyBase58_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publicKeyBase58_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, controller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKeyBase58_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, publicKeyBase58_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, controller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKeyBase58_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, publicKeyBase58_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.did.v2.DidProto.VerificationMethod)) {
+        return super.equals(obj);
+      }
+      com.panacea.did.v2.DidProto.VerificationMethod other = (com.panacea.did.v2.DidProto.VerificationMethod) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getController()
+          .equals(other.getController())) return false;
+      if (!getPublicKeyBase58()
+          .equals(other.getPublicKeyBase58())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
+      hash = (53 * hash) + getController().hashCode();
+      hash = (37 * hash) + PUBLIC_KEY_BASE58_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicKeyBase58().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationMethod parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.did.v2.DidProto.VerificationMethod prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * VerificationMethod defines a W3C verification method
+     * </pre>
+     *
+     * Protobuf type {@code panacea.did.v2.VerificationMethod}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.did.v2.VerificationMethod)
+        com.panacea.did.v2.DidProto.VerificationMethodOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationMethod_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationMethod_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.did.v2.DidProto.VerificationMethod.class, com.panacea.did.v2.DidProto.VerificationMethod.Builder.class);
+      }
+
+      // Construct using com.panacea.did.v2.DidProto.VerificationMethod.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        type_ = "";
+        controller_ = "";
+        publicKeyBase58_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationMethod_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.VerificationMethod getDefaultInstanceForType() {
+        return com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.VerificationMethod build() {
+        com.panacea.did.v2.DidProto.VerificationMethod result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.VerificationMethod buildPartial() {
+        com.panacea.did.v2.DidProto.VerificationMethod result = new com.panacea.did.v2.DidProto.VerificationMethod(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.did.v2.DidProto.VerificationMethod result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.controller_ = controller_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.publicKeyBase58_ = publicKeyBase58_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.did.v2.DidProto.VerificationMethod) {
+          return mergeFrom((com.panacea.did.v2.DidProto.VerificationMethod)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.did.v2.DidProto.VerificationMethod other) {
+        if (other == com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getController().isEmpty()) {
+          controller_ = other.controller_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPublicKeyBase58().isEmpty()) {
+          publicKeyBase58_ = other.publicKeyBase58_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                controller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                publicKeyBase58_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controller_ = "";
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @return The controller.
+       */
+      public java.lang.String getController() {
+        java.lang.Object ref = controller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          controller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @return The bytes for controller.
+       */
+      public com.google.protobuf.ByteString
+          getControllerBytes() {
+        java.lang.Object ref = controller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @param value The controller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setController(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        controller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearController() {
+        controller_ = getDefaultInstance().getController();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string controller = 3 [json_name = "controller"];</code>
+       * @param value The bytes for controller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        controller_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publicKeyBase58_ = "";
+      /**
+       * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+       * @return The publicKeyBase58.
+       */
+      public java.lang.String getPublicKeyBase58() {
+        java.lang.Object ref = publicKeyBase58_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publicKeyBase58_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+       * @return The bytes for publicKeyBase58.
+       */
+      public com.google.protobuf.ByteString
+          getPublicKeyBase58Bytes() {
+        java.lang.Object ref = publicKeyBase58_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publicKeyBase58_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+       * @param value The publicKeyBase58 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyBase58(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicKeyBase58_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKeyBase58() {
+        publicKeyBase58_ = getDefaultInstance().getPublicKeyBase58();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string public_key_base58 = 4 [json_name = "publicKeyBase58"];</code>
+       * @param value The bytes for publicKeyBase58 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyBase58Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publicKeyBase58_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.did.v2.VerificationMethod)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.did.v2.VerificationMethod)
+    private static final com.panacea.did.v2.DidProto.VerificationMethod DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.did.v2.DidProto.VerificationMethod();
+    }
+
+    public static com.panacea.did.v2.DidProto.VerificationMethod getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VerificationMethod>
+        PARSER = new com.google.protobuf.AbstractParser<VerificationMethod>() {
+      @java.lang.Override
+      public VerificationMethod parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VerificationMethod> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VerificationMethod> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationMethod getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VerificationRelationshipOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.did.v2.VerificationRelationship)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+     * @return Whether the verificationMethodId field is set.
+     */
+    boolean hasVerificationMethodId();
+    /**
+     * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+     * @return The verificationMethodId.
+     */
+    java.lang.String getVerificationMethodId();
+    /**
+     * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+     * @return The bytes for verificationMethodId.
+     */
+    com.google.protobuf.ByteString
+        getVerificationMethodIdBytes();
+
+    /**
+     * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+     * @return Whether the verificationMethod field is set.
+     */
+    boolean hasVerificationMethod();
+    /**
+     * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+     * @return The verificationMethod.
+     */
+    com.panacea.did.v2.DidProto.VerificationMethod getVerificationMethod();
+    /**
+     * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+     */
+    com.panacea.did.v2.DidProto.VerificationMethodOrBuilder getVerificationMethodOrBuilder();
+
+    com.panacea.did.v2.DidProto.VerificationRelationship.ContentCase getContentCase();
+  }
+  /**
+   * <pre>
+   * VerificationRelationship defines a W3C verification relationship
+   * </pre>
+   *
+   * Protobuf type {@code panacea.did.v2.VerificationRelationship}
+   */
+  public static final class VerificationRelationship extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.did.v2.VerificationRelationship)
+      VerificationRelationshipOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VerificationRelationship.newBuilder() to construct.
+    private VerificationRelationship(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VerificationRelationship() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VerificationRelationship();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationRelationship_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationRelationship_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.did.v2.DidProto.VerificationRelationship.class, com.panacea.did.v2.DidProto.VerificationRelationship.Builder.class);
+    }
+
+    private int contentCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object content_;
+    public enum ContentCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      VERIFICATION_METHOD_ID(1),
+      VERIFICATION_METHOD(2),
+      CONTENT_NOT_SET(0);
+      private final int value;
+      private ContentCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ContentCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ContentCase forNumber(int value) {
+        switch (value) {
+          case 1: return VERIFICATION_METHOD_ID;
+          case 2: return VERIFICATION_METHOD;
+          case 0: return CONTENT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ContentCase
+    getContentCase() {
+      return ContentCase.forNumber(
+          contentCase_);
+    }
+
+    public static final int VERIFICATION_METHOD_ID_FIELD_NUMBER = 1;
+    /**
+     * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+     * @return Whether the verificationMethodId field is set.
+     */
+    public boolean hasVerificationMethodId() {
+      return contentCase_ == 1;
+    }
+    /**
+     * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+     * @return The verificationMethodId.
+     */
+    public java.lang.String getVerificationMethodId() {
+      java.lang.Object ref = "";
+      if (contentCase_ == 1) {
+        ref = content_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (contentCase_ == 1) {
+          content_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+     * @return The bytes for verificationMethodId.
+     */
+    public com.google.protobuf.ByteString
+        getVerificationMethodIdBytes() {
+      java.lang.Object ref = "";
+      if (contentCase_ == 1) {
+        ref = content_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (contentCase_ == 1) {
+          content_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERIFICATION_METHOD_FIELD_NUMBER = 2;
+    /**
+     * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+     * @return Whether the verificationMethod field is set.
+     */
+    @java.lang.Override
+    public boolean hasVerificationMethod() {
+      return contentCase_ == 2;
+    }
+    /**
+     * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+     * @return The verificationMethod.
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationMethod getVerificationMethod() {
+      if (contentCase_ == 2) {
+         return (com.panacea.did.v2.DidProto.VerificationMethod) content_;
+      }
+      return com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance();
+    }
+    /**
+     * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationMethodOrBuilder getVerificationMethodOrBuilder() {
+      if (contentCase_ == 2) {
+         return (com.panacea.did.v2.DidProto.VerificationMethod) content_;
+      }
+      return com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (contentCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, content_);
+      }
+      if (contentCase_ == 2) {
+        output.writeMessage(2, (com.panacea.did.v2.DidProto.VerificationMethod) content_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (contentCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, content_);
+      }
+      if (contentCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.panacea.did.v2.DidProto.VerificationMethod) content_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.did.v2.DidProto.VerificationRelationship)) {
+        return super.equals(obj);
+      }
+      com.panacea.did.v2.DidProto.VerificationRelationship other = (com.panacea.did.v2.DidProto.VerificationRelationship) obj;
+
+      if (!getContentCase().equals(other.getContentCase())) return false;
+      switch (contentCase_) {
+        case 1:
+          if (!getVerificationMethodId()
+              .equals(other.getVerificationMethodId())) return false;
+          break;
+        case 2:
+          if (!getVerificationMethod()
+              .equals(other.getVerificationMethod())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (contentCase_) {
+        case 1:
+          hash = (37 * hash) + VERIFICATION_METHOD_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getVerificationMethodId().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + VERIFICATION_METHOD_FIELD_NUMBER;
+          hash = (53 * hash) + getVerificationMethod().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.VerificationRelationship parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.did.v2.DidProto.VerificationRelationship prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * VerificationRelationship defines a W3C verification relationship
+     * </pre>
+     *
+     * Protobuf type {@code panacea.did.v2.VerificationRelationship}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.did.v2.VerificationRelationship)
+        com.panacea.did.v2.DidProto.VerificationRelationshipOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationRelationship_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationRelationship_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.did.v2.DidProto.VerificationRelationship.class, com.panacea.did.v2.DidProto.VerificationRelationship.Builder.class);
+      }
+
+      // Construct using com.panacea.did.v2.DidProto.VerificationRelationship.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (verificationMethodBuilder_ != null) {
+          verificationMethodBuilder_.clear();
+        }
+        contentCase_ = 0;
+        content_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_VerificationRelationship_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.VerificationRelationship getDefaultInstanceForType() {
+        return com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.VerificationRelationship build() {
+        com.panacea.did.v2.DidProto.VerificationRelationship result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.VerificationRelationship buildPartial() {
+        com.panacea.did.v2.DidProto.VerificationRelationship result = new com.panacea.did.v2.DidProto.VerificationRelationship(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.did.v2.DidProto.VerificationRelationship result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.panacea.did.v2.DidProto.VerificationRelationship result) {
+        result.contentCase_ = contentCase_;
+        result.content_ = this.content_;
+        if (contentCase_ == 2 &&
+            verificationMethodBuilder_ != null) {
+          result.content_ = verificationMethodBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.did.v2.DidProto.VerificationRelationship) {
+          return mergeFrom((com.panacea.did.v2.DidProto.VerificationRelationship)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.did.v2.DidProto.VerificationRelationship other) {
+        if (other == com.panacea.did.v2.DidProto.VerificationRelationship.getDefaultInstance()) return this;
+        switch (other.getContentCase()) {
+          case VERIFICATION_METHOD_ID: {
+            contentCase_ = 1;
+            content_ = other.content_;
+            onChanged();
+            break;
+          }
+          case VERIFICATION_METHOD: {
+            mergeVerificationMethod(other.getVerificationMethod());
+            break;
+          }
+          case CONTENT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                contentCase_ = 1;
+                content_ = s;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getVerificationMethodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 2;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int contentCase_ = 0;
+      private java.lang.Object content_;
+      public ContentCase
+          getContentCase() {
+        return ContentCase.forNumber(
+            contentCase_);
+      }
+
+      public Builder clearContent() {
+        contentCase_ = 0;
+        content_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      /**
+       * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+       * @return Whether the verificationMethodId field is set.
+       */
+      @java.lang.Override
+      public boolean hasVerificationMethodId() {
+        return contentCase_ == 1;
+      }
+      /**
+       * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+       * @return The verificationMethodId.
+       */
+      @java.lang.Override
+      public java.lang.String getVerificationMethodId() {
+        java.lang.Object ref = "";
+        if (contentCase_ == 1) {
+          ref = content_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (contentCase_ == 1) {
+            content_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+       * @return The bytes for verificationMethodId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVerificationMethodIdBytes() {
+        java.lang.Object ref = "";
+        if (contentCase_ == 1) {
+          ref = content_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (contentCase_ == 1) {
+            content_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+       * @param value The verificationMethodId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerificationMethodId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contentCase_ = 1;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVerificationMethodId() {
+        if (contentCase_ == 1) {
+          contentCase_ = 0;
+          content_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string verification_method_id = 1 [json_name = "verificationMethodId"];</code>
+       * @param value The bytes for verificationMethodId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerificationMethodIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contentCase_ = 1;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationMethod, com.panacea.did.v2.DidProto.VerificationMethod.Builder, com.panacea.did.v2.DidProto.VerificationMethodOrBuilder> verificationMethodBuilder_;
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       * @return Whether the verificationMethod field is set.
+       */
+      @java.lang.Override
+      public boolean hasVerificationMethod() {
+        return contentCase_ == 2;
+      }
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       * @return The verificationMethod.
+       */
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.VerificationMethod getVerificationMethod() {
+        if (verificationMethodBuilder_ == null) {
+          if (contentCase_ == 2) {
+            return (com.panacea.did.v2.DidProto.VerificationMethod) content_;
+          }
+          return com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance();
+        } else {
+          if (contentCase_ == 2) {
+            return verificationMethodBuilder_.getMessage();
+          }
+          return com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       */
+      public Builder setVerificationMethod(com.panacea.did.v2.DidProto.VerificationMethod value) {
+        if (verificationMethodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          content_ = value;
+          onChanged();
+        } else {
+          verificationMethodBuilder_.setMessage(value);
+        }
+        contentCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       */
+      public Builder setVerificationMethod(
+          com.panacea.did.v2.DidProto.VerificationMethod.Builder builderForValue) {
+        if (verificationMethodBuilder_ == null) {
+          content_ = builderForValue.build();
+          onChanged();
+        } else {
+          verificationMethodBuilder_.setMessage(builderForValue.build());
+        }
+        contentCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       */
+      public Builder mergeVerificationMethod(com.panacea.did.v2.DidProto.VerificationMethod value) {
+        if (verificationMethodBuilder_ == null) {
+          if (contentCase_ == 2 &&
+              content_ != com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance()) {
+            content_ = com.panacea.did.v2.DidProto.VerificationMethod.newBuilder((com.panacea.did.v2.DidProto.VerificationMethod) content_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            content_ = value;
+          }
+          onChanged();
+        } else {
+          if (contentCase_ == 2) {
+            verificationMethodBuilder_.mergeFrom(value);
+          } else {
+            verificationMethodBuilder_.setMessage(value);
+          }
+        }
+        contentCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       */
+      public Builder clearVerificationMethod() {
+        if (verificationMethodBuilder_ == null) {
+          if (contentCase_ == 2) {
+            contentCase_ = 0;
+            content_ = null;
+            onChanged();
+          }
+        } else {
+          if (contentCase_ == 2) {
+            contentCase_ = 0;
+            content_ = null;
+          }
+          verificationMethodBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       */
+      public com.panacea.did.v2.DidProto.VerificationMethod.Builder getVerificationMethodBuilder() {
+        return getVerificationMethodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       */
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.VerificationMethodOrBuilder getVerificationMethodOrBuilder() {
+        if ((contentCase_ == 2) && (verificationMethodBuilder_ != null)) {
+          return verificationMethodBuilder_.getMessageOrBuilder();
+        } else {
+          if (contentCase_ == 2) {
+            return (com.panacea.did.v2.DidProto.VerificationMethod) content_;
+          }
+          return com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.panacea.did.v2.VerificationMethod verification_method = 2 [json_name = "verificationMethod"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.did.v2.DidProto.VerificationMethod, com.panacea.did.v2.DidProto.VerificationMethod.Builder, com.panacea.did.v2.DidProto.VerificationMethodOrBuilder> 
+          getVerificationMethodFieldBuilder() {
+        if (verificationMethodBuilder_ == null) {
+          if (!(contentCase_ == 2)) {
+            content_ = com.panacea.did.v2.DidProto.VerificationMethod.getDefaultInstance();
+          }
+          verificationMethodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.did.v2.DidProto.VerificationMethod, com.panacea.did.v2.DidProto.VerificationMethod.Builder, com.panacea.did.v2.DidProto.VerificationMethodOrBuilder>(
+                  (com.panacea.did.v2.DidProto.VerificationMethod) content_,
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        contentCase_ = 2;
+        onChanged();
+        return verificationMethodBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.did.v2.VerificationRelationship)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.did.v2.VerificationRelationship)
+    private static final com.panacea.did.v2.DidProto.VerificationRelationship DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.did.v2.DidProto.VerificationRelationship();
+    }
+
+    public static com.panacea.did.v2.DidProto.VerificationRelationship getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VerificationRelationship>
+        PARSER = new com.google.protobuf.AbstractParser<VerificationRelationship>() {
+      @java.lang.Override
+      public VerificationRelationship parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VerificationRelationship> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VerificationRelationship> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.VerificationRelationship getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ServiceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.did.v2.Service)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+     * @return The serviceEndpoint.
+     */
+    java.lang.String getServiceEndpoint();
+    /**
+     * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+     * @return The bytes for serviceEndpoint.
+     */
+    com.google.protobuf.ByteString
+        getServiceEndpointBytes();
+  }
+  /**
+   * <pre>
+   * Service defines a service in the W3C DID Document.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.did.v2.Service}
+   */
+  public static final class Service extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.did.v2.Service)
+      ServiceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Service.newBuilder() to construct.
+    private Service(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Service() {
+      id_ = "";
+      type_ = "";
+      serviceEndpoint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Service();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Service_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Service_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.did.v2.DidProto.Service.class, com.panacea.did.v2.DidProto.Service.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ENDPOINT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceEndpoint_ = "";
+    /**
+     * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+     * @return The serviceEndpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceEndpoint() {
+      java.lang.Object ref = serviceEndpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceEndpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+     * @return The bytes for serviceEndpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceEndpointBytes() {
+      java.lang.Object ref = serviceEndpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceEndpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceEndpoint_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceEndpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceEndpoint_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.did.v2.DidProto.Service)) {
+        return super.equals(obj);
+      }
+      com.panacea.did.v2.DidProto.Service other = (com.panacea.did.v2.DidProto.Service) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getServiceEndpoint()
+          .equals(other.getServiceEndpoint())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + SERVICE_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceEndpoint().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.did.v2.DidProto.Service parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.did.v2.DidProto.Service parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.did.v2.DidProto.Service parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.Service parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.did.v2.DidProto.Service prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Service defines a service in the W3C DID Document.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.did.v2.Service}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.did.v2.Service)
+        com.panacea.did.v2.DidProto.ServiceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Service_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Service_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.did.v2.DidProto.Service.class, com.panacea.did.v2.DidProto.Service.Builder.class);
+      }
+
+      // Construct using com.panacea.did.v2.DidProto.Service.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        type_ = "";
+        serviceEndpoint_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_Service_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.Service getDefaultInstanceForType() {
+        return com.panacea.did.v2.DidProto.Service.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.Service build() {
+        com.panacea.did.v2.DidProto.Service result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.Service buildPartial() {
+        com.panacea.did.v2.DidProto.Service result = new com.panacea.did.v2.DidProto.Service(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.did.v2.DidProto.Service result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.serviceEndpoint_ = serviceEndpoint_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.did.v2.DidProto.Service) {
+          return mergeFrom((com.panacea.did.v2.DidProto.Service)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.did.v2.DidProto.Service other) {
+        if (other == com.panacea.did.v2.DidProto.Service.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getServiceEndpoint().isEmpty()) {
+          serviceEndpoint_ = other.serviceEndpoint_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                serviceEndpoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceEndpoint_ = "";
+      /**
+       * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @return The serviceEndpoint.
+       */
+      public java.lang.String getServiceEndpoint() {
+        java.lang.Object ref = serviceEndpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceEndpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @return The bytes for serviceEndpoint.
+       */
+      public com.google.protobuf.ByteString
+          getServiceEndpointBytes() {
+        java.lang.Object ref = serviceEndpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceEndpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @param value The serviceEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceEndpoint(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceEndpoint_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceEndpoint() {
+        serviceEndpoint_ = getDefaultInstance().getServiceEndpoint();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_endpoint = 3 [json_name = "serviceEndpoint"];</code>
+       * @param value The bytes for serviceEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceEndpoint_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.did.v2.Service)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.did.v2.Service)
+    private static final com.panacea.did.v2.DidProto.Service DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.did.v2.DidProto.Service();
+    }
+
+    public static com.panacea.did.v2.DidProto.Service getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Service>
+        PARSER = new com.google.protobuf.AbstractParser<Service>() {
+      @java.lang.Override
+      public Service parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Service> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Service> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.Service getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DIDDocumentWithSeqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.did.v2.DIDDocumentWithSeq)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+     * @return Whether the document field is set.
+     */
+    boolean hasDocument();
+    /**
+     * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+     * @return The document.
+     */
+    com.panacea.did.v2.DidProto.DIDDocument getDocument();
+    /**
+     * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+     */
+    com.panacea.did.v2.DidProto.DIDDocumentOrBuilder getDocumentOrBuilder();
+
+    /**
+     * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    long getSequence();
+  }
+  /**
+   * <pre>
+   * DIDDocumentWithSeq defines a message for DID Document with a sequence number for preventing replay attacks.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.did.v2.DIDDocumentWithSeq}
+   */
+  public static final class DIDDocumentWithSeq extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.did.v2.DIDDocumentWithSeq)
+      DIDDocumentWithSeqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DIDDocumentWithSeq.newBuilder() to construct.
+    private DIDDocumentWithSeq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DIDDocumentWithSeq() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DIDDocumentWithSeq();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocumentWithSeq_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocumentWithSeq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.did.v2.DidProto.DIDDocumentWithSeq.class, com.panacea.did.v2.DidProto.DIDDocumentWithSeq.Builder.class);
+    }
+
+    public static final int DOCUMENT_FIELD_NUMBER = 1;
+    private com.panacea.did.v2.DidProto.DIDDocument document_;
+    /**
+     * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+     * @return Whether the document field is set.
+     */
+    @java.lang.Override
+    public boolean hasDocument() {
+      return document_ != null;
+    }
+    /**
+     * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+     * @return The document.
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.DIDDocument getDocument() {
+      return document_ == null ? com.panacea.did.v2.DidProto.DIDDocument.getDefaultInstance() : document_;
+    }
+    /**
+     * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.DIDDocumentOrBuilder getDocumentOrBuilder() {
+      return document_ == null ? com.panacea.did.v2.DidProto.DIDDocument.getDefaultInstance() : document_;
+    }
+
+    public static final int SEQUENCE_FIELD_NUMBER = 2;
+    private long sequence_ = 0L;
+    /**
+     * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    @java.lang.Override
+    public long getSequence() {
+      return sequence_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (document_ != null) {
+        output.writeMessage(1, getDocument());
+      }
+      if (sequence_ != 0L) {
+        output.writeUInt64(2, sequence_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (document_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDocument());
+      }
+      if (sequence_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sequence_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.did.v2.DidProto.DIDDocumentWithSeq)) {
+        return super.equals(obj);
+      }
+      com.panacea.did.v2.DidProto.DIDDocumentWithSeq other = (com.panacea.did.v2.DidProto.DIDDocumentWithSeq) obj;
+
+      if (hasDocument() != other.hasDocument()) return false;
+      if (hasDocument()) {
+        if (!getDocument()
+            .equals(other.getDocument())) return false;
+      }
+      if (getSequence()
+          != other.getSequence()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDocument()) {
+        hash = (37 * hash) + DOCUMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getDocument().hashCode();
+      }
+      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSequence());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.did.v2.DidProto.DIDDocumentWithSeq prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DIDDocumentWithSeq defines a message for DID Document with a sequence number for preventing replay attacks.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.did.v2.DIDDocumentWithSeq}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.did.v2.DIDDocumentWithSeq)
+        com.panacea.did.v2.DidProto.DIDDocumentWithSeqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocumentWithSeq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocumentWithSeq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.did.v2.DidProto.DIDDocumentWithSeq.class, com.panacea.did.v2.DidProto.DIDDocumentWithSeq.Builder.class);
+      }
+
+      // Construct using com.panacea.did.v2.DidProto.DIDDocumentWithSeq.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
+          documentBuilder_ = null;
+        }
+        sequence_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DIDDocumentWithSeq_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DIDDocumentWithSeq getDefaultInstanceForType() {
+        return com.panacea.did.v2.DidProto.DIDDocumentWithSeq.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DIDDocumentWithSeq build() {
+        com.panacea.did.v2.DidProto.DIDDocumentWithSeq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DIDDocumentWithSeq buildPartial() {
+        com.panacea.did.v2.DidProto.DIDDocumentWithSeq result = new com.panacea.did.v2.DidProto.DIDDocumentWithSeq(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.did.v2.DidProto.DIDDocumentWithSeq result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.document_ = documentBuilder_ == null
+              ? document_
+              : documentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sequence_ = sequence_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.did.v2.DidProto.DIDDocumentWithSeq) {
+          return mergeFrom((com.panacea.did.v2.DidProto.DIDDocumentWithSeq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.did.v2.DidProto.DIDDocumentWithSeq other) {
+        if (other == com.panacea.did.v2.DidProto.DIDDocumentWithSeq.getDefaultInstance()) return this;
+        if (other.hasDocument()) {
+          mergeDocument(other.getDocument());
+        }
+        if (other.getSequence() != 0L) {
+          setSequence(other.getSequence());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDocumentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                sequence_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.did.v2.DidProto.DIDDocument document_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.did.v2.DidProto.DIDDocument, com.panacea.did.v2.DidProto.DIDDocument.Builder, com.panacea.did.v2.DidProto.DIDDocumentOrBuilder> documentBuilder_;
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       * @return Whether the document field is set.
+       */
+      public boolean hasDocument() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       * @return The document.
+       */
+      public com.panacea.did.v2.DidProto.DIDDocument getDocument() {
+        if (documentBuilder_ == null) {
+          return document_ == null ? com.panacea.did.v2.DidProto.DIDDocument.getDefaultInstance() : document_;
+        } else {
+          return documentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       */
+      public Builder setDocument(com.panacea.did.v2.DidProto.DIDDocument value) {
+        if (documentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          document_ = value;
+        } else {
+          documentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       */
+      public Builder setDocument(
+          com.panacea.did.v2.DidProto.DIDDocument.Builder builderForValue) {
+        if (documentBuilder_ == null) {
+          document_ = builderForValue.build();
+        } else {
+          documentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       */
+      public Builder mergeDocument(com.panacea.did.v2.DidProto.DIDDocument value) {
+        if (documentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            document_ != null &&
+            document_ != com.panacea.did.v2.DidProto.DIDDocument.getDefaultInstance()) {
+            getDocumentBuilder().mergeFrom(value);
+          } else {
+            document_ = value;
+          }
+        } else {
+          documentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       */
+      public Builder clearDocument() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
+          documentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       */
+      public com.panacea.did.v2.DidProto.DIDDocument.Builder getDocumentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDocumentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       */
+      public com.panacea.did.v2.DidProto.DIDDocumentOrBuilder getDocumentOrBuilder() {
+        if (documentBuilder_ != null) {
+          return documentBuilder_.getMessageOrBuilder();
+        } else {
+          return document_ == null ?
+              com.panacea.did.v2.DidProto.DIDDocument.getDefaultInstance() : document_;
+        }
+      }
+      /**
+       * <code>.panacea.did.v2.DIDDocument document = 1 [json_name = "document"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.did.v2.DidProto.DIDDocument, com.panacea.did.v2.DidProto.DIDDocument.Builder, com.panacea.did.v2.DidProto.DIDDocumentOrBuilder> 
+          getDocumentFieldBuilder() {
+        if (documentBuilder_ == null) {
+          documentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.did.v2.DidProto.DIDDocument, com.panacea.did.v2.DidProto.DIDDocument.Builder, com.panacea.did.v2.DidProto.DIDDocumentOrBuilder>(
+                  getDocument(),
+                  getParentForChildren(),
+                  isClean());
+          document_ = null;
+        }
+        return documentBuilder_;
+      }
+
+      private long sequence_ ;
+      /**
+       * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+       * @return The sequence.
+       */
+      @java.lang.Override
+      public long getSequence() {
+        return sequence_;
+      }
+      /**
+       * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+       * @param value The sequence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequence(long value) {
+
+        sequence_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequence() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sequence_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.did.v2.DIDDocumentWithSeq)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.did.v2.DIDDocumentWithSeq)
+    private static final com.panacea.did.v2.DidProto.DIDDocumentWithSeq DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.did.v2.DidProto.DIDDocumentWithSeq();
+    }
+
+    public static com.panacea.did.v2.DidProto.DIDDocumentWithSeq getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DIDDocumentWithSeq>
+        PARSER = new com.google.protobuf.AbstractParser<DIDDocumentWithSeq>() {
+      @java.lang.Override
+      public DIDDocumentWithSeq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DIDDocumentWithSeq> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DIDDocumentWithSeq> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.DIDDocumentWithSeq getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataWithSeqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.did.v2.DataWithSeq)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    long getSequence();
+  }
+  /**
+   * <pre>
+   * DataWithSeq defines a message for data with a sequence number for preventing replay attacks.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.did.v2.DataWithSeq}
+   */
+  public static final class DataWithSeq extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.did.v2.DataWithSeq)
+      DataWithSeqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataWithSeq.newBuilder() to construct.
+    private DataWithSeq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataWithSeq() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataWithSeq();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DataWithSeq_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DataWithSeq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.did.v2.DidProto.DataWithSeq.class, com.panacea.did.v2.DidProto.DataWithSeq.Builder.class);
+    }
+
+    public static final int DATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    public static final int SEQUENCE_FIELD_NUMBER = 2;
+    private long sequence_ = 0L;
+    /**
+     * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    @java.lang.Override
+    public long getSequence() {
+      return sequence_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!data_.isEmpty()) {
+        output.writeBytes(1, data_);
+      }
+      if (sequence_ != 0L) {
+        output.writeUInt64(2, sequence_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, data_);
+      }
+      if (sequence_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sequence_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.did.v2.DidProto.DataWithSeq)) {
+        return super.equals(obj);
+      }
+      com.panacea.did.v2.DidProto.DataWithSeq other = (com.panacea.did.v2.DidProto.DataWithSeq) obj;
+
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (getSequence()
+          != other.getSequence()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSequence());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.did.v2.DidProto.DataWithSeq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.did.v2.DidProto.DataWithSeq prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DataWithSeq defines a message for data with a sequence number for preventing replay attacks.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.did.v2.DataWithSeq}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.did.v2.DataWithSeq)
+        com.panacea.did.v2.DidProto.DataWithSeqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DataWithSeq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DataWithSeq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.did.v2.DidProto.DataWithSeq.class, com.panacea.did.v2.DidProto.DataWithSeq.Builder.class);
+      }
+
+      // Construct using com.panacea.did.v2.DidProto.DataWithSeq.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        sequence_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.did.v2.DidProto.internal_static_panacea_did_v2_DataWithSeq_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DataWithSeq getDefaultInstanceForType() {
+        return com.panacea.did.v2.DidProto.DataWithSeq.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DataWithSeq build() {
+        com.panacea.did.v2.DidProto.DataWithSeq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.did.v2.DidProto.DataWithSeq buildPartial() {
+        com.panacea.did.v2.DidProto.DataWithSeq result = new com.panacea.did.v2.DidProto.DataWithSeq(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.did.v2.DidProto.DataWithSeq result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sequence_ = sequence_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.did.v2.DidProto.DataWithSeq) {
+          return mergeFrom((com.panacea.did.v2.DidProto.DataWithSeq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.did.v2.DidProto.DataWithSeq other) {
+        if (other == com.panacea.did.v2.DidProto.DataWithSeq.getDefaultInstance()) return this;
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        if (other.getSequence() != 0L) {
+          setSequence(other.getSequence());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                sequence_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+
+      private long sequence_ ;
+      /**
+       * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+       * @return The sequence.
+       */
+      @java.lang.Override
+      public long getSequence() {
+        return sequence_;
+      }
+      /**
+       * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+       * @param value The sequence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequence(long value) {
+
+        sequence_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sequence = 2 [json_name = "sequence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequence() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sequence_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.did.v2.DataWithSeq)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.did.v2.DataWithSeq)
+    private static final com.panacea.did.v2.DidProto.DataWithSeq DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.did.v2.DidProto.DataWithSeq();
+    }
+
+    public static com.panacea.did.v2.DidProto.DataWithSeq getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataWithSeq>
+        PARSER = new com.google.protobuf.AbstractParser<DataWithSeq>() {
+      @java.lang.Override
+      public DataWithSeq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataWithSeq> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataWithSeq> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.did.v2.DidProto.DataWithSeq getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_did_v2_Strings_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_did_v2_Strings_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_did_v2_DIDDocument_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_did_v2_DIDDocument_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_did_v2_VerificationMethod_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_did_v2_VerificationMethod_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_did_v2_VerificationRelationship_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_did_v2_VerificationRelationship_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_did_v2_Service_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_did_v2_Service_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_did_v2_DIDDocumentWithSeq_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_did_v2_DIDDocumentWithSeq_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_did_v2_DataWithSeq_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_did_v2_DataWithSeq_fieldAccessorTable;
 
@@ -98,7 +8417,7 @@ public final class DidProto {
       "id.v2.DIDDocumentR\010document\022\032\n\010sequence\030" +
       "\002 \001(\004R\010sequence\"=\n\013DataWithSeq\022\022\n\004data\030\001" +
       " \001(\014R\004data\022\032\n\010sequence\030\002 \001(\004R\010sequenceB\251" +
-      "\001\n\022com.panacea.did.v2B\010DidProtoP\001Z/githu" +
+      "\001\n\022com.panacea.did.v2B\010DidProtoP\000Z/githu" +
       "b.com/medibloc/panacea-core/v2/x/did/typ" +
       "es\242\002\003PDX\252\002\016Panacea.Did.V2\312\002\016Panacea\\Did\\" +
       "V2\342\002\032Panacea\\Did\\V2\\GPBMetadata\352\002\020Panace" +

@@ -14,14 +14,1455 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgAddDenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rbank.MsgAddDenom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+     * @return The accAddressPrefix.
+     */
+    java.lang.String getAccAddressPrefix();
+    /**
+     * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+     * @return The bytes for accAddressPrefix.
+     */
+    com.google.protobuf.ByteString
+        getAccAddressPrefixBytes();
+
+    /**
+     * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+     * @return The valAddressPrefix.
+     */
+    java.lang.String getValAddressPrefix();
+    /**
+     * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+     * @return The bytes for valAddressPrefix.
+     */
+    com.google.protobuf.ByteString
+        getValAddressPrefixBytes();
+
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+     * @return The metadata.
+     */
+    com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata();
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rbank.MsgAddDenom}
+   */
+  public static final class MsgAddDenom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rbank.MsgAddDenom)
+      MsgAddDenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddDenom.newBuilder() to construct.
+    private MsgAddDenom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddDenom() {
+      creator_ = "";
+      accAddressPrefix_ = "";
+      valAddressPrefix_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddDenom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.class, com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCADDRESSPREFIX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accAddressPrefix_ = "";
+    /**
+     * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+     * @return The accAddressPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getAccAddressPrefix() {
+      java.lang.Object ref = accAddressPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accAddressPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+     * @return The bytes for accAddressPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccAddressPrefixBytes() {
+      java.lang.Object ref = accAddressPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accAddressPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALADDRESSPREFIX_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valAddressPrefix_ = "";
+    /**
+     * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+     * @return The valAddressPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getValAddressPrefix() {
+      java.lang.Object ref = valAddressPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valAddressPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+     * @return The bytes for valAddressPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValAddressPrefixBytes() {
+      java.lang.Object ref = valAddressPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valAddressPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 4;
+    private com.cosmos.bank.v1beta1.BankProto.Metadata metadata_;
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata() {
+      return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accAddressPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accAddressPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valAddressPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valAddressPrefix_);
+      }
+      if (metadata_ != null) {
+        output.writeMessage(4, getMetadata());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accAddressPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accAddressPrefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valAddressPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valAddressPrefix_);
+      }
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMetadata());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rbank.TxProto.MsgAddDenom)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rbank.TxProto.MsgAddDenom other = (com.stafihub.stafihub.rbank.TxProto.MsgAddDenom) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getAccAddressPrefix()
+          .equals(other.getAccAddressPrefix())) return false;
+      if (!getValAddressPrefix()
+          .equals(other.getValAddressPrefix())) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ACCADDRESSPREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getAccAddressPrefix().hashCode();
+      hash = (37 * hash) + VALADDRESSPREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getValAddressPrefix().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rbank.TxProto.MsgAddDenom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rbank.MsgAddDenom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rbank.MsgAddDenom)
+        com.stafihub.stafihub.rbank.TxProto.MsgAddDenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.class, com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        accAddressPrefix_ = "";
+        valAddressPrefix_ = "";
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rbank.TxProto.MsgAddDenom getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rbank.TxProto.MsgAddDenom build() {
+        com.stafihub.stafihub.rbank.TxProto.MsgAddDenom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rbank.TxProto.MsgAddDenom buildPartial() {
+        com.stafihub.stafihub.rbank.TxProto.MsgAddDenom result = new com.stafihub.stafihub.rbank.TxProto.MsgAddDenom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rbank.TxProto.MsgAddDenom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.accAddressPrefix_ = accAddressPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.valAddressPrefix_ = valAddressPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rbank.TxProto.MsgAddDenom) {
+          return mergeFrom((com.stafihub.stafihub.rbank.TxProto.MsgAddDenom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rbank.TxProto.MsgAddDenom other) {
+        if (other == com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAccAddressPrefix().isEmpty()) {
+          accAddressPrefix_ = other.accAddressPrefix_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getValAddressPrefix().isEmpty()) {
+          valAddressPrefix_ = other.valAddressPrefix_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                accAddressPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                valAddressPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accAddressPrefix_ = "";
+      /**
+       * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+       * @return The accAddressPrefix.
+       */
+      public java.lang.String getAccAddressPrefix() {
+        java.lang.Object ref = accAddressPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accAddressPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+       * @return The bytes for accAddressPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getAccAddressPrefixBytes() {
+        java.lang.Object ref = accAddressPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accAddressPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+       * @param value The accAddressPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccAddressPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        accAddressPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccAddressPrefix() {
+        accAddressPrefix_ = getDefaultInstance().getAccAddressPrefix();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string accAddressPrefix = 2 [json_name = "accAddressPrefix"];</code>
+       * @param value The bytes for accAddressPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccAddressPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        accAddressPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valAddressPrefix_ = "";
+      /**
+       * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+       * @return The valAddressPrefix.
+       */
+      public java.lang.String getValAddressPrefix() {
+        java.lang.Object ref = valAddressPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valAddressPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+       * @return The bytes for valAddressPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getValAddressPrefixBytes() {
+        java.lang.Object ref = valAddressPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valAddressPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+       * @param value The valAddressPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValAddressPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valAddressPrefix_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValAddressPrefix() {
+        valAddressPrefix_ = getDefaultInstance().getValAddressPrefix();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string valAddressPrefix = 3 [json_name = "valAddressPrefix"];</code>
+       * @param value The bytes for valAddressPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValAddressPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valAddressPrefix_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.bank.v1beta1.BankProto.Metadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       * @return The metadata.
+       */
+      public com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMetadata(com.cosmos.bank.v1beta1.BankProto.Metadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMetadata(
+          com.cosmos.bank.v1beta1.BankProto.Metadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMetadata(com.cosmos.bank.v1beta1.BankProto.Metadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.bank.v1beta1.BankProto.Metadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rbank.MsgAddDenom)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rbank.MsgAddDenom)
+    private static final com.stafihub.stafihub.rbank.TxProto.MsgAddDenom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rbank.TxProto.MsgAddDenom();
+    }
+
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddDenom>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddDenom>() {
+      @java.lang.Override
+      public MsgAddDenom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddDenom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddDenom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rbank.TxProto.MsgAddDenom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddDenomResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rbank.MsgAddDenomResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rbank.MsgAddDenomResponse}
+   */
+  public static final class MsgAddDenomResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rbank.MsgAddDenomResponse)
+      MsgAddDenomResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddDenomResponse.newBuilder() to construct.
+    private MsgAddDenomResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddDenomResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddDenomResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenomResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenomResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse.class, com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse other = (com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rbank.MsgAddDenomResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rbank.MsgAddDenomResponse)
+        com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenomResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse.class, com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rbank.TxProto.internal_static_stafihub_stafihub_rbank_MsgAddDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse build() {
+        com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse buildPartial() {
+        com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse result = new com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse) {
+          return mergeFrom((com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse other) {
+        if (other == com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rbank.MsgAddDenomResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rbank.MsgAddDenomResponse)
+    private static final com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse();
+    }
+
+    public static com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddDenomResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddDenomResponse>() {
+      @java.lang.Override
+      public MsgAddDenomResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddDenomResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddDenomResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rbank.TxProto.MsgAddDenomResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rbank_MsgAddDenom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rbank_MsgAddDenom_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rbank_MsgAddDenomResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rbank_MsgAddDenomResponse_fieldAccessorTable;
 
@@ -43,13 +1484,13 @@ public final class TxProto {
       "ataB\004\310\336\037\000R\010Metadata\"\025\n\023MsgAddDenomRespon" +
       "se2e\n\003Msg\022^\n\010AddDenom\022$.stafihub.stafihu" +
       "b.rbank.MsgAddDenom\032,.stafihub.stafihub." +
-      "rbank.MsgAddDenomResponseB\320\001\n\033com.stafih" +
-      "ub.stafihub.rbankB\007TxProtoP\001Z*github.com" +
-      "/stafihub/stafihub/x/rbank/types\242\002\003SSR\252\002" +
-      "\027Stafihub.Stafihub.Rbank\312\002\027Stafihub\\Staf" +
-      "ihub\\Rbank\342\002#Stafihub\\Stafihub\\Rbank\\GPB" +
-      "Metadata\352\002\031Stafihub::Stafihub::Rbankb\006pr" +
-      "oto3"
+      "rbank.MsgAddDenomResponseB\316\001\n\033com.stafih" +
+      "ub.stafihub.rbankB\007TxProtoZ*github.com/s" +
+      "tafihub/stafihub/x/rbank/types\242\002\003SSR\252\002\027S" +
+      "tafihub.Stafihub.Rbank\312\002\027Stafihub\\Stafih" +
+      "ub\\Rbank\342\002#Stafihub\\Stafihub\\Rbank\\GPBMe" +
+      "tadata\352\002\031Stafihub::Stafihub::Rbankb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

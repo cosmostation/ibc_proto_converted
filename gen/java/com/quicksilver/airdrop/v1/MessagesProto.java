@@ -14,14 +14,1642 @@ public final class MessagesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgClaimOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.airdrop.v1.MsgClaim)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>int64 action = 2 [json_name = "action", (.gogoproto.moretags) = "yaml:&#92;"action&#92;""];</code>
+     * @return The action.
+     */
+    long getAction();
+
+    /**
+     * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof> 
+        getProofsList();
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof getProofs(int index);
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    int getProofsCount();
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    java.util.List<? extends com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder> 
+        getProofsOrBuilderList();
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder getProofsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code quicksilver.airdrop.v1.MsgClaim}
+   */
+  public static final class MsgClaim extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.airdrop.v1.MsgClaim)
+      MsgClaimOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaim.newBuilder() to construct.
+    private MsgClaim(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaim() {
+      chainId_ = "";
+      address_ = "";
+      proofs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaim();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaim_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaim_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.airdrop.v1.MessagesProto.MsgClaim.class, com.quicksilver.airdrop.v1.MessagesProto.MsgClaim.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 2;
+    private long action_ = 0L;
+    /**
+     * <code>int64 action = 2 [json_name = "action", (.gogoproto.moretags) = "yaml:&#92;"action&#92;""];</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public long getAction() {
+      return action_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROOFS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof> proofs_;
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof> getProofsList() {
+      return proofs_;
+    }
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder> 
+        getProofsOrBuilderList() {
+      return proofs_;
+    }
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getProofsCount() {
+      return proofs_.size();
+    }
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof getProofs(int index) {
+      return proofs_.get(index);
+    }
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder getProofsOrBuilder(
+        int index) {
+      return proofs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      if (action_ != 0L) {
+        output.writeInt64(2, action_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
+      for (int i = 0; i < proofs_.size(); i++) {
+        output.writeMessage(4, proofs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      if (action_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, action_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+      }
+      for (int i = 0; i < proofs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, proofs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.airdrop.v1.MessagesProto.MsgClaim)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.airdrop.v1.MessagesProto.MsgClaim other = (com.quicksilver.airdrop.v1.MessagesProto.MsgClaim) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (getAction()
+          != other.getAction()) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getProofsList()
+          .equals(other.getProofsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAction());
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (getProofsCount() > 0) {
+        hash = (37 * hash) + PROOFS_FIELD_NUMBER;
+        hash = (53 * hash) + getProofsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.airdrop.v1.MessagesProto.MsgClaim prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.airdrop.v1.MsgClaim}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.airdrop.v1.MsgClaim)
+        com.quicksilver.airdrop.v1.MessagesProto.MsgClaimOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaim_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaim_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.airdrop.v1.MessagesProto.MsgClaim.class, com.quicksilver.airdrop.v1.MessagesProto.MsgClaim.Builder.class);
+      }
+
+      // Construct using com.quicksilver.airdrop.v1.MessagesProto.MsgClaim.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        action_ = 0L;
+        address_ = "";
+        if (proofsBuilder_ == null) {
+          proofs_ = java.util.Collections.emptyList();
+        } else {
+          proofs_ = null;
+          proofsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaim_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.MessagesProto.MsgClaim getDefaultInstanceForType() {
+        return com.quicksilver.airdrop.v1.MessagesProto.MsgClaim.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.MessagesProto.MsgClaim build() {
+        com.quicksilver.airdrop.v1.MessagesProto.MsgClaim result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.MessagesProto.MsgClaim buildPartial() {
+        com.quicksilver.airdrop.v1.MessagesProto.MsgClaim result = new com.quicksilver.airdrop.v1.MessagesProto.MsgClaim(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.quicksilver.airdrop.v1.MessagesProto.MsgClaim result) {
+        if (proofsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            proofs_ = java.util.Collections.unmodifiableList(proofs_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.proofs_ = proofs_;
+        } else {
+          result.proofs_ = proofsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.quicksilver.airdrop.v1.MessagesProto.MsgClaim result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.action_ = action_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.airdrop.v1.MessagesProto.MsgClaim) {
+          return mergeFrom((com.quicksilver.airdrop.v1.MessagesProto.MsgClaim)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.airdrop.v1.MessagesProto.MsgClaim other) {
+        if (other == com.quicksilver.airdrop.v1.MessagesProto.MsgClaim.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAction() != 0L) {
+          setAction(other.getAction());
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (proofsBuilder_ == null) {
+          if (!other.proofs_.isEmpty()) {
+            if (proofs_.isEmpty()) {
+              proofs_ = other.proofs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureProofsIsMutable();
+              proofs_.addAll(other.proofs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.proofs_.isEmpty()) {
+            if (proofsBuilder_.isEmpty()) {
+              proofsBuilder_.dispose();
+              proofsBuilder_ = null;
+              proofs_ = other.proofs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              proofsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProofsFieldBuilder() : null;
+            } else {
+              proofsBuilder_.addAllMessages(other.proofs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                action_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof m =
+                    input.readMessage(
+                        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.parser(),
+                        extensionRegistry);
+                if (proofsBuilder_ == null) {
+                  ensureProofsIsMutable();
+                  proofs_.add(m);
+                } else {
+                  proofsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long action_ ;
+      /**
+       * <code>int64 action = 2 [json_name = "action", (.gogoproto.moretags) = "yaml:&#92;"action&#92;""];</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public long getAction() {
+        return action_;
+      }
+      /**
+       * <code>int64 action = 2 [json_name = "action", (.gogoproto.moretags) = "yaml:&#92;"action&#92;""];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(long value) {
+
+        action_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 action = 2 [json_name = "action", (.gogoproto.moretags) = "yaml:&#92;"action&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        action_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 3 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof> proofs_ =
+        java.util.Collections.emptyList();
+      private void ensureProofsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          proofs_ = new java.util.ArrayList<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof>(proofs_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder> proofsBuilder_;
+
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof> getProofsList() {
+        if (proofsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(proofs_);
+        } else {
+          return proofsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public int getProofsCount() {
+        if (proofsBuilder_ == null) {
+          return proofs_.size();
+        } else {
+          return proofsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof getProofs(int index) {
+        if (proofsBuilder_ == null) {
+          return proofs_.get(index);
+        } else {
+          return proofsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder setProofs(
+          int index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof value) {
+        if (proofsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProofsIsMutable();
+          proofs_.set(index, value);
+          onChanged();
+        } else {
+          proofsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder setProofs(
+          int index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder builderForValue) {
+        if (proofsBuilder_ == null) {
+          ensureProofsIsMutable();
+          proofs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          proofsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder addProofs(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof value) {
+        if (proofsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProofsIsMutable();
+          proofs_.add(value);
+          onChanged();
+        } else {
+          proofsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder addProofs(
+          int index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof value) {
+        if (proofsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProofsIsMutable();
+          proofs_.add(index, value);
+          onChanged();
+        } else {
+          proofsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder addProofs(
+          com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder builderForValue) {
+        if (proofsBuilder_ == null) {
+          ensureProofsIsMutable();
+          proofs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          proofsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder addProofs(
+          int index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder builderForValue) {
+        if (proofsBuilder_ == null) {
+          ensureProofsIsMutable();
+          proofs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          proofsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder addAllProofs(
+          java.lang.Iterable<? extends com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof> values) {
+        if (proofsBuilder_ == null) {
+          ensureProofsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, proofs_);
+          onChanged();
+        } else {
+          proofsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder clearProofs() {
+        if (proofsBuilder_ == null) {
+          proofs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          proofsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public Builder removeProofs(int index) {
+        if (proofsBuilder_ == null) {
+          ensureProofsIsMutable();
+          proofs_.remove(index);
+          onChanged();
+        } else {
+          proofsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder getProofsBuilder(
+          int index) {
+        return getProofsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder getProofsOrBuilder(
+          int index) {
+        if (proofsBuilder_ == null) {
+          return proofs_.get(index);  } else {
+          return proofsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public java.util.List<? extends com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder> 
+           getProofsOrBuilderList() {
+        if (proofsBuilder_ != null) {
+          return proofsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(proofs_);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder addProofsBuilder() {
+        return getProofsFieldBuilder().addBuilder(
+            com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder addProofsBuilder(
+          int index) {
+        return getProofsFieldBuilder().addBuilder(
+            index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Proof proofs = 4 [json_name = "proofs", (.gogoproto.moretags) = "yaml:&#92;"proofs&#92;""];</code>
+       */
+      public java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder> 
+           getProofsBuilderList() {
+        return getProofsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder> 
+          getProofsFieldBuilder() {
+        if (proofsBuilder_ == null) {
+          proofsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder>(
+                  proofs_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          proofs_ = null;
+        }
+        return proofsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.airdrop.v1.MsgClaim)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.airdrop.v1.MsgClaim)
+    private static final com.quicksilver.airdrop.v1.MessagesProto.MsgClaim DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.airdrop.v1.MessagesProto.MsgClaim();
+    }
+
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaim getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaim>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaim>() {
+      @java.lang.Override
+      public MsgClaim parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaim> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaim> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.MessagesProto.MsgClaim getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.airdrop.v1.MsgClaimResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * Protobuf type {@code quicksilver.airdrop.v1.MsgClaimResponse}
+   */
+  public static final class MsgClaimResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.airdrop.v1.MsgClaimResponse)
+      MsgClaimResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimResponse.newBuilder() to construct.
+    private MsgClaimResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaimResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaimResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse.class, com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    private long amount_ = 0L;
+    /**
+     * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (amount_ != 0L) {
+        output.writeUInt64(1, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse other = (com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse) obj;
+
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.airdrop.v1.MsgClaimResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.airdrop.v1.MsgClaimResponse)
+        com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaimResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaimResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse.class, com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.airdrop.v1.MessagesProto.internal_static_quicksilver_airdrop_v1_MsgClaimResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse getDefaultInstanceForType() {
+        return com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse build() {
+        com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse buildPartial() {
+        com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse result = new com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse) {
+          return mergeFrom((com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse other) {
+        if (other == com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse.getDefaultInstance()) return this;
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long amount_ ;
+      /**
+       * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.airdrop.v1.MsgClaimResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.airdrop.v1.MsgClaimResponse)
+    private static final com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse();
+    }
+
+    public static com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimResponse>() {
+      @java.lang.Override
+      public MsgClaimResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.MessagesProto.MsgClaimResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_airdrop_v1_MsgClaim_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_airdrop_v1_MsgClaim_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_airdrop_v1_MsgClaimResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_airdrop_v1_MsgClaimResponse_fieldAccessorTable;
 
@@ -49,12 +1677,12 @@ public final class MessagesProto {
       " .quicksilver.airdrop.v1.MsgClaim\032(.quic" +
       "ksilver.airdrop.v1.MsgClaimResponse\"+\202\323\344" +
       "\223\002%\" /quicksilver/tx/v1/airdrop/claim:\001*" +
-      "B\335\001\n\032com.quicksilver.airdrop.v1B\rMessage" +
-      "sProtoP\001Z6github.com/ingenuity-build/qui" +
-      "cksilver/x/airdrop/types\242\002\003QAX\252\002\026Quicksi" +
-      "lver.Airdrop.V1\312\002\026Quicksilver\\Airdrop\\V1" +
-      "\342\002\"Quicksilver\\Airdrop\\V1\\GPBMetadata\352\002\030" +
-      "Quicksilver::Airdrop::V1b\006proto3"
+      "B\333\001\n\032com.quicksilver.airdrop.v1B\rMessage" +
+      "sProtoZ6github.com/ingenuity-build/quick" +
+      "silver/x/airdrop/types\242\002\003QAX\252\002\026Quicksilv" +
+      "er.Airdrop.V1\312\002\026Quicksilver\\Airdrop\\V1\342\002" +
+      "\"Quicksilver\\Airdrop\\V1\\GPBMetadata\352\002\030Qu" +
+      "icksilver::Airdrop::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

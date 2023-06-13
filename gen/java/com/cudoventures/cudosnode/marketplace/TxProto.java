@@ -14,124 +14,17679 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgPublishCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgPublishCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> 
+        getMintRoyaltiesList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index);
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    int getMintRoyaltiesCount();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getMintRoyaltiesOrBuilderList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> 
+        getResaleRoyaltiesList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index);
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    int getResaleRoyaltiesCount();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getResaleRoyaltiesOrBuilderList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgPublishCollection}
+   */
+  public static final class MsgPublishCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgPublishCollection)
+      MsgPublishCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPublishCollection.newBuilder() to construct.
+    private MsgPublishCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPublishCollection() {
+      creator_ = "";
+      denomId_ = "";
+      mintRoyalties_ = java.util.Collections.emptyList();
+      resaleRoyalties_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPublishCollection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOMID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINTROYALTIES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> mintRoyalties_;
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getMintRoyaltiesList() {
+      return mintRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getMintRoyaltiesOrBuilderList() {
+      return mintRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMintRoyaltiesCount() {
+      return mintRoyalties_.size();
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index) {
+      return mintRoyalties_.get(index);
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+        int index) {
+      return mintRoyalties_.get(index);
+    }
+
+    public static final int RESALEROYALTIES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> resaleRoyalties_;
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getResaleRoyaltiesList() {
+      return resaleRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getResaleRoyaltiesOrBuilderList() {
+      return resaleRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getResaleRoyaltiesCount() {
+      return resaleRoyalties_.size();
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index) {
+      return resaleRoyalties_.get(index);
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+        int index) {
+      return resaleRoyalties_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denomId_);
+      }
+      for (int i = 0; i < mintRoyalties_.size(); i++) {
+        output.writeMessage(3, mintRoyalties_.get(i));
+      }
+      for (int i = 0; i < resaleRoyalties_.size(); i++) {
+        output.writeMessage(4, resaleRoyalties_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denomId_);
+      }
+      for (int i = 0; i < mintRoyalties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, mintRoyalties_.get(i));
+      }
+      for (int i = 0; i < resaleRoyalties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, resaleRoyalties_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getMintRoyaltiesList()
+          .equals(other.getMintRoyaltiesList())) return false;
+      if (!getResaleRoyaltiesList()
+          .equals(other.getResaleRoyaltiesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + DENOMID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      if (getMintRoyaltiesCount() > 0) {
+        hash = (37 * hash) + MINTROYALTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getMintRoyaltiesList().hashCode();
+      }
+      if (getResaleRoyaltiesCount() > 0) {
+        hash = (37 * hash) + RESALEROYALTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getResaleRoyaltiesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgPublishCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgPublishCollection)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        denomId_ = "";
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyalties_ = java.util.Collections.emptyList();
+        } else {
+          mintRoyalties_ = null;
+          mintRoyaltiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyalties_ = java.util.Collections.emptyList();
+        } else {
+          resaleRoyalties_ = null;
+          resaleRoyaltiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection result) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            mintRoyalties_ = java.util.Collections.unmodifiableList(mintRoyalties_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.mintRoyalties_ = mintRoyalties_;
+        } else {
+          result.mintRoyalties_ = mintRoyaltiesBuilder_.build();
+        }
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            resaleRoyalties_ = java.util.Collections.unmodifiableList(resaleRoyalties_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.resaleRoyalties_ = resaleRoyalties_;
+        } else {
+          result.resaleRoyalties_ = resaleRoyaltiesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denomId_ = denomId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (mintRoyaltiesBuilder_ == null) {
+          if (!other.mintRoyalties_.isEmpty()) {
+            if (mintRoyalties_.isEmpty()) {
+              mintRoyalties_ = other.mintRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureMintRoyaltiesIsMutable();
+              mintRoyalties_.addAll(other.mintRoyalties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mintRoyalties_.isEmpty()) {
+            if (mintRoyaltiesBuilder_.isEmpty()) {
+              mintRoyaltiesBuilder_.dispose();
+              mintRoyaltiesBuilder_ = null;
+              mintRoyalties_ = other.mintRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              mintRoyaltiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintRoyaltiesFieldBuilder() : null;
+            } else {
+              mintRoyaltiesBuilder_.addAllMessages(other.mintRoyalties_);
+            }
+          }
+        }
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (!other.resaleRoyalties_.isEmpty()) {
+            if (resaleRoyalties_.isEmpty()) {
+              resaleRoyalties_ = other.resaleRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureResaleRoyaltiesIsMutable();
+              resaleRoyalties_.addAll(other.resaleRoyalties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.resaleRoyalties_.isEmpty()) {
+            if (resaleRoyaltiesBuilder_.isEmpty()) {
+              resaleRoyaltiesBuilder_.dispose();
+              resaleRoyaltiesBuilder_ = null;
+              resaleRoyalties_ = other.resaleRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              resaleRoyaltiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResaleRoyaltiesFieldBuilder() : null;
+            } else {
+              resaleRoyaltiesBuilder_.addAllMessages(other.resaleRoyalties_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty m =
+                    input.readMessage(
+                        com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.parser(),
+                        extensionRegistry);
+                if (mintRoyaltiesBuilder_ == null) {
+                  ensureMintRoyaltiesIsMutable();
+                  mintRoyalties_.add(m);
+                } else {
+                  mintRoyaltiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty m =
+                    input.readMessage(
+                        com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.parser(),
+                        extensionRegistry);
+                if (resaleRoyaltiesBuilder_ == null) {
+                  ensureResaleRoyaltiesIsMutable();
+                  resaleRoyalties_.add(m);
+                } else {
+                  resaleRoyaltiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> mintRoyalties_ =
+        java.util.Collections.emptyList();
+      private void ensureMintRoyaltiesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          mintRoyalties_ = new java.util.ArrayList<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty>(mintRoyalties_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> mintRoyaltiesBuilder_;
+
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getMintRoyaltiesList() {
+        if (mintRoyaltiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mintRoyalties_);
+        } else {
+          return mintRoyaltiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMintRoyaltiesCount() {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.size();
+        } else {
+          return mintRoyaltiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.get(index);
+        } else {
+          return mintRoyaltiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.set(index, value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(index, value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMintRoyalties(
+          java.lang.Iterable<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> values) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mintRoyalties_);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMintRoyalties() {
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyalties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMintRoyalties(int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.remove(index);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder getMintRoyaltiesBuilder(
+          int index) {
+        return getMintRoyaltiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+          int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.get(index);  } else {
+          return mintRoyaltiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+           getMintRoyaltiesOrBuilderList() {
+        if (mintRoyaltiesBuilder_ != null) {
+          return mintRoyaltiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mintRoyalties_);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addMintRoyaltiesBuilder() {
+        return getMintRoyaltiesFieldBuilder().addBuilder(
+            com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addMintRoyaltiesBuilder(
+          int index) {
+        return getMintRoyaltiesFieldBuilder().addBuilder(
+            index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder> 
+           getMintRoyaltiesBuilderList() {
+        return getMintRoyaltiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+          getMintRoyaltiesFieldBuilder() {
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyaltiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder>(
+                  mintRoyalties_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mintRoyalties_ = null;
+        }
+        return mintRoyaltiesBuilder_;
+      }
+
+      private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> resaleRoyalties_ =
+        java.util.Collections.emptyList();
+      private void ensureResaleRoyaltiesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          resaleRoyalties_ = new java.util.ArrayList<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty>(resaleRoyalties_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> resaleRoyaltiesBuilder_;
+
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getResaleRoyaltiesList() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resaleRoyalties_);
+        } else {
+          return resaleRoyaltiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getResaleRoyaltiesCount() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.size();
+        } else {
+          return resaleRoyaltiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.get(index);
+        } else {
+          return resaleRoyaltiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.set(index, value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(index, value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllResaleRoyalties(
+          java.lang.Iterable<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> values) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resaleRoyalties_);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResaleRoyalties() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyalties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeResaleRoyalties(int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.remove(index);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder getResaleRoyaltiesBuilder(
+          int index) {
+        return getResaleRoyaltiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+          int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.get(index);  } else {
+          return resaleRoyaltiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+           getResaleRoyaltiesOrBuilderList() {
+        if (resaleRoyaltiesBuilder_ != null) {
+          return resaleRoyaltiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(resaleRoyalties_);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addResaleRoyaltiesBuilder() {
+        return getResaleRoyaltiesFieldBuilder().addBuilder(
+            com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addResaleRoyaltiesBuilder(
+          int index) {
+        return getResaleRoyaltiesFieldBuilder().addBuilder(
+            index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder> 
+           getResaleRoyaltiesBuilderList() {
+        return getResaleRoyaltiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+          getResaleRoyaltiesFieldBuilder() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyaltiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder>(
+                  resaleRoyalties_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          resaleRoyalties_ = null;
+        }
+        return resaleRoyaltiesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgPublishCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgPublishCollection)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPublishCollection>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPublishCollection>() {
+      @java.lang.Override
+      public MsgPublishCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPublishCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPublishCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPublishCollectionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgPublishCollectionResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgPublishCollectionResponse}
+   */
+  public static final class MsgPublishCollectionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgPublishCollectionResponse)
+      MsgPublishCollectionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPublishCollectionResponse.newBuilder() to construct.
+    private MsgPublishCollectionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPublishCollectionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPublishCollectionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollectionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollectionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgPublishCollectionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgPublishCollectionResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollectionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgPublishCollectionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgPublishCollectionResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPublishCollectionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPublishCollectionResponse>() {
+      @java.lang.Override
+      public MsgPublishCollectionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPublishCollectionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPublishCollectionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishCollectionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPublishNftOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgPublishNft)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+     * @return The tokenId.
+     */
+    java.lang.String getTokenId();
+    /**
+     * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+     * @return The bytes for tokenId.
+     */
+    com.google.protobuf.ByteString
+        getTokenIdBytes();
+
+    /**
+     * <code>string denomId = 3 [json_name = "denomId"];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denomId = 3 [json_name = "denomId"];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the price field is set.
+     */
+    boolean hasPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The price.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgPublishNft}
+   */
+  public static final class MsgPublishNft extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgPublishNft)
+      MsgPublishNftOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPublishNft.newBuilder() to construct.
+    private MsgPublishNft(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPublishNft() {
+      creator_ = "";
+      tokenId_ = "";
+      denomId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPublishNft();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNft_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNft_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKENID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenId_ = "";
+    /**
+     * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+     * @return The tokenId.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenId() {
+      java.lang.Object ref = tokenId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+     * @return The bytes for tokenId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenIdBytes() {
+      java.lang.Object ref = tokenId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOMID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denomId = 3 [json_name = "denomId"];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denomId = 3 [json_name = "denomId"];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin price_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the price field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrice() {
+      return price_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPrice() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, denomId_);
+      }
+      if (price_ != null) {
+        output.writeMessage(4, getPrice());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, denomId_);
+      }
+      if (price_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPrice());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getTokenId()
+          .equals(other.getTokenId())) return false;
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (hasPrice() != other.hasPrice()) return false;
+      if (hasPrice()) {
+        if (!getPrice()
+            .equals(other.getPrice())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + TOKENID_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenId().hashCode();
+      hash = (37 * hash) + DENOMID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      if (hasPrice()) {
+        hash = (37 * hash) + PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getPrice().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgPublishNft}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgPublishNft)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNft_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNft_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        tokenId_ = "";
+        denomId_ = "";
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNft_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenId_ = tokenId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.price_ = priceBuilder_ == null
+              ? price_
+              : priceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTokenId().isEmpty()) {
+          tokenId_ = other.tokenId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasPrice()) {
+          mergePrice(other.getPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                tokenId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenId_ = "";
+      /**
+       * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+       * @return The tokenId.
+       */
+      public java.lang.String getTokenId() {
+        java.lang.Object ref = tokenId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+       * @return The bytes for tokenId.
+       */
+      public com.google.protobuf.ByteString
+          getTokenIdBytes() {
+        java.lang.Object ref = tokenId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+       * @param value The tokenId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenId() {
+        tokenId_ = getDefaultInstance().getTokenId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tokenId = 2 [json_name = "tokenId"];</code>
+       * @param value The bytes for tokenId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denomId = 3 [json_name = "denomId"];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denomId = 3 [json_name = "denomId"];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denomId = 3 [json_name = "denomId"];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denomId = 3 [json_name = "denomId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denomId = 3 [json_name = "denomId"];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin price_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> priceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return Whether the price field is set.
+       */
+      public boolean hasPrice() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return The price.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPrice() {
+        if (priceBuilder_ == null) {
+          return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+        } else {
+          return priceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          price_ = value;
+        } else {
+          priceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (priceBuilder_ == null) {
+          price_ = builderForValue.build();
+        } else {
+          priceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder mergePrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            price_ != null &&
+            price_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getPriceBuilder().mergeFrom(value);
+          } else {
+            price_ = value;
+          }
+        } else {
+          priceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearPrice() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPriceBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder() {
+        if (priceBuilder_ != null) {
+          return priceBuilder_.getMessageOrBuilder();
+        } else {
+          return price_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPriceFieldBuilder() {
+        if (priceBuilder_ == null) {
+          priceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getPrice(),
+                  getParentForChildren(),
+                  isClean());
+          price_ = null;
+        }
+        return priceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgPublishNft)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgPublishNft)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPublishNft>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPublishNft>() {
+      @java.lang.Override
+      public MsgPublishNft parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPublishNft> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPublishNft> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPublishNftResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgPublishNftResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgPublishNftResponse}
+   */
+  public static final class MsgPublishNftResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgPublishNftResponse)
+      MsgPublishNftResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPublishNftResponse.newBuilder() to construct.
+    private MsgPublishNftResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPublishNftResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPublishNftResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNftResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNftResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgPublishNftResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgPublishNftResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNftResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgPublishNftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgPublishNftResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgPublishNftResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPublishNftResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPublishNftResponse>() {
+      @java.lang.Override
+      public MsgPublishNftResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPublishNftResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPublishNftResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNftResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgBuyNftOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgBuyNft)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgBuyNft}
+   */
+  public static final class MsgBuyNft extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgBuyNft)
+      MsgBuyNftOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgBuyNft.newBuilder() to construct.
+    private MsgBuyNft(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgBuyNft() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgBuyNft();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNft_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNft_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgBuyNft}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgBuyNft)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNft_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNft_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNft_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgBuyNft)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgBuyNft)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgBuyNft>
+        PARSER = new com.google.protobuf.AbstractParser<MsgBuyNft>() {
+      @java.lang.Override
+      public MsgBuyNft parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgBuyNft> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgBuyNft> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNft getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgBuyNftResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgBuyNftResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgBuyNftResponse}
+   */
+  public static final class MsgBuyNftResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgBuyNftResponse)
+      MsgBuyNftResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgBuyNftResponse.newBuilder() to construct.
+    private MsgBuyNftResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgBuyNftResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgBuyNftResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNftResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNftResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgBuyNftResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgBuyNftResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNftResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgBuyNftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgBuyNftResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgBuyNftResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgBuyNftResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgBuyNftResponse>() {
+      @java.lang.Override
+      public MsgBuyNftResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgBuyNftResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgBuyNftResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgBuyNftResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgMintNftOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgMintNft)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>string recipient = 3 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <code>string recipient = 3 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the price field is set.
+     */
+    boolean hasPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The price.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder();
+
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string uri = 6 [json_name = "uri"];</code>
+     * @return The uri.
+     */
+    java.lang.String getUri();
+    /**
+     * <code>string uri = 6 [json_name = "uri"];</code>
+     * @return The bytes for uri.
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+
+    /**
+     * <code>string data = 7 [json_name = "data"];</code>
+     * @return The data.
+     */
+    java.lang.String getData();
+    /**
+     * <code>string data = 7 [json_name = "data"];</code>
+     * @return The bytes for data.
+     */
+    com.google.protobuf.ByteString
+        getDataBytes();
+
+    /**
+     * <code>string uid = 8 [json_name = "uid"];</code>
+     * @return The uid.
+     */
+    java.lang.String getUid();
+    /**
+     * <code>string uid = 8 [json_name = "uid"];</code>
+     * @return The bytes for uid.
+     */
+    com.google.protobuf.ByteString
+        getUidBytes();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgMintNft}
+   */
+  public static final class MsgMintNft extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgMintNft)
+      MsgMintNftOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgMintNft.newBuilder() to construct.
+    private MsgMintNft(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgMintNft() {
+      creator_ = "";
+      denomId_ = "";
+      recipient_ = "";
+      name_ = "";
+      uri_ = "";
+      data_ = "";
+      uid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgMintNft();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNft_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNft_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOMID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denomId = 2 [json_name = "denomId"];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <code>string recipient = 3 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string recipient = 3 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin price_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the price field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrice() {
+      return price_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPrice() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URI_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uri_ = "";
+    /**
+     * <code>string uri = 6 [json_name = "uri"];</code>
+     * @return The uri.
+     */
+    @java.lang.Override
+    public java.lang.String getUri() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string uri = 6 [json_name = "uri"];</code>
+     * @return The bytes for uri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object data_ = "";
+    /**
+     * <code>string data = 7 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public java.lang.String getData() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        data_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data = 7 [json_name = "data"];</code>
+     * @return The bytes for data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataBytes() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        data_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UID_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uid_ = "";
+    /**
+     * <code>string uid = 8 [json_name = "uid"];</code>
+     * @return The uid.
+     */
+    @java.lang.Override
+    public java.lang.String getUid() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string uid = 8 [json_name = "uid"];</code>
+     * @return The bytes for uid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUidBytes() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, recipient_);
+      }
+      if (price_ != null) {
+        output.writeMessage(4, getPrice());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, uri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, data_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, uid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denomId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, recipient_);
+      }
+      if (price_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPrice());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, uri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, data_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, uid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (hasPrice() != other.hasPrice()) return false;
+      if (hasPrice()) {
+        if (!getPrice()
+            .equals(other.getPrice())) return false;
+      }
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUid()
+          .equals(other.getUid())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + DENOMID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      if (hasPrice()) {
+        hash = (37 * hash) + PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getPrice().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + URI_FIELD_NUMBER;
+      hash = (53 * hash) + getUri().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (37 * hash) + UID_FIELD_NUMBER;
+      hash = (53 * hash) + getUid().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgMintNft}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgMintNft)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNft_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNft_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        denomId_ = "";
+        recipient_ = "";
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        name_ = "";
+        uri_ = "";
+        data_ = "";
+        uid_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNft_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.recipient_ = recipient_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.price_ = priceBuilder_ == null
+              ? price_
+              : priceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.uri_ = uri_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.uid_ = uid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasPrice()) {
+          mergePrice(other.getPrice());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getUri().isEmpty()) {
+          uri_ = other.uri_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getData().isEmpty()) {
+          data_ = other.data_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getUid().isEmpty()) {
+          uid_ = other.uid_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                uri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                data_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                uid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denomId = 2 [json_name = "denomId"];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin price_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> priceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return Whether the price field is set.
+       */
+      public boolean hasPrice() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return The price.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPrice() {
+        if (priceBuilder_ == null) {
+          return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+        } else {
+          return priceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          price_ = value;
+        } else {
+          priceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (priceBuilder_ == null) {
+          price_ = builderForValue.build();
+        } else {
+          priceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder mergePrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            price_ != null &&
+            price_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getPriceBuilder().mergeFrom(value);
+          } else {
+            price_ = value;
+          }
+        } else {
+          priceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearPrice() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPriceBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder() {
+        if (priceBuilder_ != null) {
+          return priceBuilder_.getMessageOrBuilder();
+        } else {
+          return price_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPriceFieldBuilder() {
+        if (priceBuilder_ == null) {
+          priceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getPrice(),
+                  getParentForChildren(),
+                  isClean());
+          price_ = null;
+        }
+        return priceBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 5 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 5 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 5 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 5 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 5 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uri_ = "";
+      /**
+       * <code>string uri = 6 [json_name = "uri"];</code>
+       * @return The uri.
+       */
+      public java.lang.String getUri() {
+        java.lang.Object ref = uri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string uri = 6 [json_name = "uri"];</code>
+       * @return The bytes for uri.
+       */
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        java.lang.Object ref = uri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string uri = 6 [json_name = "uri"];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uri_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uri = 6 [json_name = "uri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUri() {
+        uri_ = getDefaultInstance().getUri();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uri = 6 [json_name = "uri"];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uri_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object data_ = "";
+      /**
+       * <code>string data = 7 [json_name = "data"];</code>
+       * @return The data.
+       */
+      public java.lang.String getData() {
+        java.lang.Object ref = data_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          data_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data = 7 [json_name = "data"];</code>
+       * @return The bytes for data.
+       */
+      public com.google.protobuf.ByteString
+          getDataBytes() {
+        java.lang.Object ref = data_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          data_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data = 7 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data = 7 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        data_ = getDefaultInstance().getData();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data = 7 [json_name = "data"];</code>
+       * @param value The bytes for data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        data_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uid_ = "";
+      /**
+       * <code>string uid = 8 [json_name = "uid"];</code>
+       * @return The uid.
+       */
+      public java.lang.String getUid() {
+        java.lang.Object ref = uid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string uid = 8 [json_name = "uid"];</code>
+       * @return The bytes for uid.
+       */
+      public com.google.protobuf.ByteString
+          getUidBytes() {
+        java.lang.Object ref = uid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string uid = 8 [json_name = "uid"];</code>
+       * @param value The uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uid_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uid = 8 [json_name = "uid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUid() {
+        uid_ = getDefaultInstance().getUid();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uid = 8 [json_name = "uid"];</code>
+       * @param value The bytes for uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uid_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgMintNft)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgMintNft)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgMintNft>
+        PARSER = new com.google.protobuf.AbstractParser<MsgMintNft>() {
+      @java.lang.Override
+      public MsgMintNft parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgMintNft> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgMintNft> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgMintNftResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgMintNftResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgMintNftResponse}
+   */
+  public static final class MsgMintNftResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgMintNftResponse)
+      MsgMintNftResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgMintNftResponse.newBuilder() to construct.
+    private MsgMintNftResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgMintNftResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgMintNftResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNftResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNftResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgMintNftResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgMintNftResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNftResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgMintNftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgMintNftResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgMintNftResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgMintNftResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgMintNftResponse>() {
+      @java.lang.Override
+      public MsgMintNftResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgMintNftResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgMintNftResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNftResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveNftOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgRemoveNft)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgRemoveNft}
+   */
+  public static final class MsgRemoveNft extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgRemoveNft)
+      MsgRemoveNftOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveNft.newBuilder() to construct.
+    private MsgRemoveNft(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveNft() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveNft();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNft_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNft_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgRemoveNft}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgRemoveNft)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNft_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNft_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNft_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgRemoveNft)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgRemoveNft)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveNft>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveNft>() {
+      @java.lang.Override
+      public MsgRemoveNft parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveNft> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveNft> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNft getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveNftResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgRemoveNftResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgRemoveNftResponse}
+   */
+  public static final class MsgRemoveNftResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgRemoveNftResponse)
+      MsgRemoveNftResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveNftResponse.newBuilder() to construct.
+    private MsgRemoveNftResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveNftResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveNftResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNftResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNftResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgRemoveNftResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgRemoveNftResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNftResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgRemoveNftResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgRemoveNftResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveNftResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveNftResponse>() {
+      @java.lang.Override
+      public MsgRemoveNftResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveNftResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveNftResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveNftResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgVerifyCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgVerifyCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgVerifyCollection}
+   */
+  public static final class MsgVerifyCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgVerifyCollection)
+      MsgVerifyCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgVerifyCollection.newBuilder() to construct.
+    private MsgVerifyCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgVerifyCollection() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgVerifyCollection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgVerifyCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgVerifyCollection)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgVerifyCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgVerifyCollection)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgVerifyCollection>
+        PARSER = new com.google.protobuf.AbstractParser<MsgVerifyCollection>() {
+      @java.lang.Override
+      public MsgVerifyCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgVerifyCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgVerifyCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgVerifyCollectionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgVerifyCollectionResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgVerifyCollectionResponse}
+   */
+  public static final class MsgVerifyCollectionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgVerifyCollectionResponse)
+      MsgVerifyCollectionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgVerifyCollectionResponse.newBuilder() to construct.
+    private MsgVerifyCollectionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgVerifyCollectionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgVerifyCollectionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollectionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollectionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgVerifyCollectionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgVerifyCollectionResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollectionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgVerifyCollectionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgVerifyCollectionResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgVerifyCollectionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgVerifyCollectionResponse>() {
+      @java.lang.Override
+      public MsgVerifyCollectionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgVerifyCollectionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgVerifyCollectionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgVerifyCollectionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUnverifyCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgUnverifyCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUnverifyCollection}
+   */
+  public static final class MsgUnverifyCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgUnverifyCollection)
+      MsgUnverifyCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUnverifyCollection.newBuilder() to construct.
+    private MsgUnverifyCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUnverifyCollection() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUnverifyCollection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUnverifyCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgUnverifyCollection)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgUnverifyCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgUnverifyCollection)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUnverifyCollection>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUnverifyCollection>() {
+      @java.lang.Override
+      public MsgUnverifyCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUnverifyCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUnverifyCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUnverifyCollectionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgUnverifyCollectionResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUnverifyCollectionResponse}
+   */
+  public static final class MsgUnverifyCollectionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgUnverifyCollectionResponse)
+      MsgUnverifyCollectionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUnverifyCollectionResponse.newBuilder() to construct.
+    private MsgUnverifyCollectionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUnverifyCollectionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUnverifyCollectionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollectionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollectionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUnverifyCollectionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgUnverifyCollectionResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollectionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgUnverifyCollectionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgUnverifyCollectionResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUnverifyCollectionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUnverifyCollectionResponse>() {
+      @java.lang.Override
+      public MsgUnverifyCollectionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUnverifyCollectionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUnverifyCollectionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgUnverifyCollectionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgCreateCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string schema = 4 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    java.lang.String getSchema();
+    /**
+     * <code>string schema = 4 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    com.google.protobuf.ByteString
+        getSchemaBytes();
+
+    /**
+     * <code>string symbol = 5 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <code>string symbol = 5 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+
+    /**
+     * <code>string traits = 6 [json_name = "traits"];</code>
+     * @return The traits.
+     */
+    java.lang.String getTraits();
+    /**
+     * <code>string traits = 6 [json_name = "traits"];</code>
+     * @return The bytes for traits.
+     */
+    com.google.protobuf.ByteString
+        getTraitsBytes();
+
+    /**
+     * <code>string description = 7 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 7 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string minter = 8 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    java.lang.String getMinter();
+    /**
+     * <code>string minter = 8 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    com.google.protobuf.ByteString
+        getMinterBytes();
+
+    /**
+     * <code>string data = 9 [json_name = "data"];</code>
+     * @return The data.
+     */
+    java.lang.String getData();
+    /**
+     * <code>string data = 9 [json_name = "data"];</code>
+     * @return The bytes for data.
+     */
+    com.google.protobuf.ByteString
+        getDataBytes();
+
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> 
+        getMintRoyaltiesList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index);
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    int getMintRoyaltiesCount();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getMintRoyaltiesOrBuilderList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> 
+        getResaleRoyaltiesList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index);
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    int getResaleRoyaltiesCount();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getResaleRoyaltiesOrBuilderList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+        int index);
+
+    /**
+     * <code>bool verified = 12 [json_name = "verified"];</code>
+     * @return The verified.
+     */
+    boolean getVerified();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgCreateCollection}
+   */
+  public static final class MsgCreateCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgCreateCollection)
+      MsgCreateCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateCollection.newBuilder() to construct.
+    private MsgCreateCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateCollection() {
+      creator_ = "";
+      id_ = "";
+      name_ = "";
+      schema_ = "";
+      symbol_ = "";
+      traits_ = "";
+      description_ = "";
+      minter_ = "";
+      data_ = "";
+      mintRoyalties_ = java.util.Collections.emptyList();
+      resaleRoyalties_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateCollection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCHEMA_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object schema_ = "";
+    /**
+     * <code>string schema = 4 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    @java.lang.Override
+    public java.lang.String getSchema() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schema_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string schema = 4 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaBytes() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schema_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <code>string symbol = 5 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol = 5 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRAITS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object traits_ = "";
+    /**
+     * <code>string traits = 6 [json_name = "traits"];</code>
+     * @return The traits.
+     */
+    @java.lang.Override
+    public java.lang.String getTraits() {
+      java.lang.Object ref = traits_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        traits_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string traits = 6 [json_name = "traits"];</code>
+     * @return The bytes for traits.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTraitsBytes() {
+      java.lang.Object ref = traits_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        traits_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 7 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 7 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINTER_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minter_ = "";
+    /**
+     * <code>string minter = 8 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    @java.lang.Override
+    public java.lang.String getMinter() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string minter = 8 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinterBytes() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object data_ = "";
+    /**
+     * <code>string data = 9 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public java.lang.String getData() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        data_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data = 9 [json_name = "data"];</code>
+     * @return The bytes for data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataBytes() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        data_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINTROYALTIES_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> mintRoyalties_;
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getMintRoyaltiesList() {
+      return mintRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getMintRoyaltiesOrBuilderList() {
+      return mintRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMintRoyaltiesCount() {
+      return mintRoyalties_.size();
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index) {
+      return mintRoyalties_.get(index);
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+        int index) {
+      return mintRoyalties_.get(index);
+    }
+
+    public static final int RESALEROYALTIES_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> resaleRoyalties_;
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getResaleRoyaltiesList() {
+      return resaleRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getResaleRoyaltiesOrBuilderList() {
+      return resaleRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getResaleRoyaltiesCount() {
+      return resaleRoyalties_.size();
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index) {
+      return resaleRoyalties_.get(index);
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+        int index) {
+      return resaleRoyalties_.get(index);
+    }
+
+    public static final int VERIFIED_FIELD_NUMBER = 12;
+    private boolean verified_ = false;
+    /**
+     * <code>bool verified = 12 [json_name = "verified"];</code>
+     * @return The verified.
+     */
+    @java.lang.Override
+    public boolean getVerified() {
+      return verified_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, schema_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(traits_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, traits_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, data_);
+      }
+      for (int i = 0; i < mintRoyalties_.size(); i++) {
+        output.writeMessage(10, mintRoyalties_.get(i));
+      }
+      for (int i = 0; i < resaleRoyalties_.size(); i++) {
+        output.writeMessage(11, resaleRoyalties_.get(i));
+      }
+      if (verified_ != false) {
+        output.writeBool(12, verified_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, schema_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(traits_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, traits_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, data_);
+      }
+      for (int i = 0; i < mintRoyalties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, mintRoyalties_.get(i));
+      }
+      for (int i = 0; i < resaleRoyalties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, resaleRoyalties_.get(i));
+      }
+      if (verified_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, verified_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getSchema()
+          .equals(other.getSchema())) return false;
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (!getTraits()
+          .equals(other.getTraits())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getMinter()
+          .equals(other.getMinter())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getMintRoyaltiesList()
+          .equals(other.getMintRoyaltiesList())) return false;
+      if (!getResaleRoyaltiesList()
+          .equals(other.getResaleRoyaltiesList())) return false;
+      if (getVerified()
+          != other.getVerified()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
+      hash = (53 * hash) + getSchema().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (37 * hash) + TRAITS_FIELD_NUMBER;
+      hash = (53 * hash) + getTraits().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + MINTER_FIELD_NUMBER;
+      hash = (53 * hash) + getMinter().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      if (getMintRoyaltiesCount() > 0) {
+        hash = (37 * hash) + MINTROYALTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getMintRoyaltiesList().hashCode();
+      }
+      if (getResaleRoyaltiesCount() > 0) {
+        hash = (37 * hash) + RESALEROYALTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getResaleRoyaltiesList().hashCode();
+      }
+      hash = (37 * hash) + VERIFIED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getVerified());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgCreateCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgCreateCollection)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = "";
+        name_ = "";
+        schema_ = "";
+        symbol_ = "";
+        traits_ = "";
+        description_ = "";
+        minter_ = "";
+        data_ = "";
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyalties_ = java.util.Collections.emptyList();
+        } else {
+          mintRoyalties_ = null;
+          mintRoyaltiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyalties_ = java.util.Collections.emptyList();
+        } else {
+          resaleRoyalties_ = null;
+          resaleRoyaltiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        verified_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection result) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            mintRoyalties_ = java.util.Collections.unmodifiableList(mintRoyalties_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.mintRoyalties_ = mintRoyalties_;
+        } else {
+          result.mintRoyalties_ = mintRoyaltiesBuilder_.build();
+        }
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            resaleRoyalties_ = java.util.Collections.unmodifiableList(resaleRoyalties_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.resaleRoyalties_ = resaleRoyalties_;
+        } else {
+          result.resaleRoyalties_ = resaleRoyaltiesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.schema_ = schema_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.symbol_ = symbol_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.traits_ = traits_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.minter_ = minter_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.verified_ = verified_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getSchema().isEmpty()) {
+          schema_ = other.schema_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getTraits().isEmpty()) {
+          traits_ = other.traits_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getMinter().isEmpty()) {
+          minter_ = other.minter_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getData().isEmpty()) {
+          data_ = other.data_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (mintRoyaltiesBuilder_ == null) {
+          if (!other.mintRoyalties_.isEmpty()) {
+            if (mintRoyalties_.isEmpty()) {
+              mintRoyalties_ = other.mintRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureMintRoyaltiesIsMutable();
+              mintRoyalties_.addAll(other.mintRoyalties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mintRoyalties_.isEmpty()) {
+            if (mintRoyaltiesBuilder_.isEmpty()) {
+              mintRoyaltiesBuilder_.dispose();
+              mintRoyaltiesBuilder_ = null;
+              mintRoyalties_ = other.mintRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              mintRoyaltiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintRoyaltiesFieldBuilder() : null;
+            } else {
+              mintRoyaltiesBuilder_.addAllMessages(other.mintRoyalties_);
+            }
+          }
+        }
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (!other.resaleRoyalties_.isEmpty()) {
+            if (resaleRoyalties_.isEmpty()) {
+              resaleRoyalties_ = other.resaleRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureResaleRoyaltiesIsMutable();
+              resaleRoyalties_.addAll(other.resaleRoyalties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.resaleRoyalties_.isEmpty()) {
+            if (resaleRoyaltiesBuilder_.isEmpty()) {
+              resaleRoyaltiesBuilder_.dispose();
+              resaleRoyaltiesBuilder_ = null;
+              resaleRoyalties_ = other.resaleRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              resaleRoyaltiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResaleRoyaltiesFieldBuilder() : null;
+            } else {
+              resaleRoyaltiesBuilder_.addAllMessages(other.resaleRoyalties_);
+            }
+          }
+        }
+        if (other.getVerified() != false) {
+          setVerified(other.getVerified());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                schema_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                traits_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                minter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                data_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty m =
+                    input.readMessage(
+                        com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.parser(),
+                        extensionRegistry);
+                if (mintRoyaltiesBuilder_ == null) {
+                  ensureMintRoyaltiesIsMutable();
+                  mintRoyalties_.add(m);
+                } else {
+                  mintRoyaltiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty m =
+                    input.readMessage(
+                        com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.parser(),
+                        extensionRegistry);
+                if (resaleRoyaltiesBuilder_ == null) {
+                  ensureResaleRoyaltiesIsMutable();
+                  resaleRoyalties_.add(m);
+                } else {
+                  resaleRoyaltiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              case 96: {
+                verified_ = input.readBool();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object schema_ = "";
+      /**
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @return The schema.
+       */
+      public java.lang.String getSchema() {
+        java.lang.Object ref = schema_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schema_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @return The bytes for schema.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaBytes() {
+        java.lang.Object ref = schema_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schema_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @param value The schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchema(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        schema_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchema() {
+        schema_ = getDefaultInstance().getSchema();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema = 4 [json_name = "schema"];</code>
+       * @param value The bytes for schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        schema_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object traits_ = "";
+      /**
+       * <code>string traits = 6 [json_name = "traits"];</code>
+       * @return The traits.
+       */
+      public java.lang.String getTraits() {
+        java.lang.Object ref = traits_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          traits_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string traits = 6 [json_name = "traits"];</code>
+       * @return The bytes for traits.
+       */
+      public com.google.protobuf.ByteString
+          getTraitsBytes() {
+        java.lang.Object ref = traits_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          traits_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string traits = 6 [json_name = "traits"];</code>
+       * @param value The traits to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraits(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        traits_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string traits = 6 [json_name = "traits"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTraits() {
+        traits_ = getDefaultInstance().getTraits();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string traits = 6 [json_name = "traits"];</code>
+       * @param value The bytes for traits to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraitsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        traits_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 7 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 7 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 7 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 7 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 7 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minter_ = "";
+      /**
+       * <code>string minter = 8 [json_name = "minter"];</code>
+       * @return The minter.
+       */
+      public java.lang.String getMinter() {
+        java.lang.Object ref = minter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string minter = 8 [json_name = "minter"];</code>
+       * @return The bytes for minter.
+       */
+      public com.google.protobuf.ByteString
+          getMinterBytes() {
+        java.lang.Object ref = minter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string minter = 8 [json_name = "minter"];</code>
+       * @param value The minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minter_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string minter = 8 [json_name = "minter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinter() {
+        minter_ = getDefaultInstance().getMinter();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string minter = 8 [json_name = "minter"];</code>
+       * @param value The bytes for minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minter_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object data_ = "";
+      /**
+       * <code>string data = 9 [json_name = "data"];</code>
+       * @return The data.
+       */
+      public java.lang.String getData() {
+        java.lang.Object ref = data_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          data_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data = 9 [json_name = "data"];</code>
+       * @return The bytes for data.
+       */
+      public com.google.protobuf.ByteString
+          getDataBytes() {
+        java.lang.Object ref = data_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          data_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data = 9 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data = 9 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        data_ = getDefaultInstance().getData();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data = 9 [json_name = "data"];</code>
+       * @param value The bytes for data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        data_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> mintRoyalties_ =
+        java.util.Collections.emptyList();
+      private void ensureMintRoyaltiesIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          mintRoyalties_ = new java.util.ArrayList<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty>(mintRoyalties_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> mintRoyaltiesBuilder_;
+
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getMintRoyaltiesList() {
+        if (mintRoyaltiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mintRoyalties_);
+        } else {
+          return mintRoyaltiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMintRoyaltiesCount() {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.size();
+        } else {
+          return mintRoyaltiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.get(index);
+        } else {
+          return mintRoyaltiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.set(index, value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(index, value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMintRoyalties(
+          java.lang.Iterable<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> values) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mintRoyalties_);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMintRoyalties() {
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyalties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMintRoyalties(int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.remove(index);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder getMintRoyaltiesBuilder(
+          int index) {
+        return getMintRoyaltiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+          int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.get(index);  } else {
+          return mintRoyaltiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+           getMintRoyaltiesOrBuilderList() {
+        if (mintRoyaltiesBuilder_ != null) {
+          return mintRoyaltiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mintRoyalties_);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addMintRoyaltiesBuilder() {
+        return getMintRoyaltiesFieldBuilder().addBuilder(
+            com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addMintRoyaltiesBuilder(
+          int index) {
+        return getMintRoyaltiesFieldBuilder().addBuilder(
+            index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 10 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder> 
+           getMintRoyaltiesBuilderList() {
+        return getMintRoyaltiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+          getMintRoyaltiesFieldBuilder() {
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyaltiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder>(
+                  mintRoyalties_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mintRoyalties_ = null;
+        }
+        return mintRoyaltiesBuilder_;
+      }
+
+      private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> resaleRoyalties_ =
+        java.util.Collections.emptyList();
+      private void ensureResaleRoyaltiesIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          resaleRoyalties_ = new java.util.ArrayList<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty>(resaleRoyalties_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> resaleRoyaltiesBuilder_;
+
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getResaleRoyaltiesList() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resaleRoyalties_);
+        } else {
+          return resaleRoyaltiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getResaleRoyaltiesCount() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.size();
+        } else {
+          return resaleRoyaltiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.get(index);
+        } else {
+          return resaleRoyaltiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.set(index, value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(index, value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllResaleRoyalties(
+          java.lang.Iterable<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> values) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resaleRoyalties_);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResaleRoyalties() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyalties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeResaleRoyalties(int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.remove(index);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder getResaleRoyaltiesBuilder(
+          int index) {
+        return getResaleRoyaltiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+          int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.get(index);  } else {
+          return resaleRoyaltiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+           getResaleRoyaltiesOrBuilderList() {
+        if (resaleRoyaltiesBuilder_ != null) {
+          return resaleRoyaltiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(resaleRoyalties_);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addResaleRoyaltiesBuilder() {
+        return getResaleRoyaltiesFieldBuilder().addBuilder(
+            com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addResaleRoyaltiesBuilder(
+          int index) {
+        return getResaleRoyaltiesFieldBuilder().addBuilder(
+            index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 11 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder> 
+           getResaleRoyaltiesBuilderList() {
+        return getResaleRoyaltiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+          getResaleRoyaltiesFieldBuilder() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyaltiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder>(
+                  resaleRoyalties_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          resaleRoyalties_ = null;
+        }
+        return resaleRoyaltiesBuilder_;
+      }
+
+      private boolean verified_ ;
+      /**
+       * <code>bool verified = 12 [json_name = "verified"];</code>
+       * @return The verified.
+       */
+      @java.lang.Override
+      public boolean getVerified() {
+        return verified_;
+      }
+      /**
+       * <code>bool verified = 12 [json_name = "verified"];</code>
+       * @param value The verified to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerified(boolean value) {
+
+        verified_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool verified = 12 [json_name = "verified"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVerified() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        verified_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgCreateCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgCreateCollection)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateCollection>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateCollection>() {
+      @java.lang.Override
+      public MsgCreateCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateCollectionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgCreateCollectionResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgCreateCollectionResponse}
+   */
+  public static final class MsgCreateCollectionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgCreateCollectionResponse)
+      MsgCreateCollectionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateCollectionResponse.newBuilder() to construct.
+    private MsgCreateCollectionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateCollectionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateCollectionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollectionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollectionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgCreateCollectionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgCreateCollectionResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollectionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollectionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgCreateCollectionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgCreateCollectionResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateCollectionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateCollectionResponse>() {
+      @java.lang.Override
+      public MsgCreateCollectionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateCollectionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateCollectionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgCreateCollectionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateRoyaltiesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgUpdateRoyalties)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> 
+        getMintRoyaltiesList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index);
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    int getMintRoyaltiesCount();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getMintRoyaltiesOrBuilderList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> 
+        getResaleRoyaltiesList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index);
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    int getResaleRoyaltiesCount();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getResaleRoyaltiesOrBuilderList();
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUpdateRoyalties}
+   */
+  public static final class MsgUpdateRoyalties extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgUpdateRoyalties)
+      MsgUpdateRoyaltiesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateRoyalties.newBuilder() to construct.
+    private MsgUpdateRoyalties(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateRoyalties() {
+      creator_ = "";
+      mintRoyalties_ = java.util.Collections.emptyList();
+      resaleRoyalties_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateRoyalties();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyalties_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyalties_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int MINTROYALTIES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> mintRoyalties_;
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getMintRoyaltiesList() {
+      return mintRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getMintRoyaltiesOrBuilderList() {
+      return mintRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMintRoyaltiesCount() {
+      return mintRoyalties_.size();
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index) {
+      return mintRoyalties_.get(index);
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+        int index) {
+      return mintRoyalties_.get(index);
+    }
+
+    public static final int RESALEROYALTIES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> resaleRoyalties_;
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getResaleRoyaltiesList() {
+      return resaleRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+        getResaleRoyaltiesOrBuilderList() {
+      return resaleRoyalties_;
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getResaleRoyaltiesCount() {
+      return resaleRoyalties_.size();
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index) {
+      return resaleRoyalties_.get(index);
+    }
+    /**
+     * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+        int index) {
+      return resaleRoyalties_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      for (int i = 0; i < mintRoyalties_.size(); i++) {
+        output.writeMessage(3, mintRoyalties_.get(i));
+      }
+      for (int i = 0; i < resaleRoyalties_.size(); i++) {
+        output.writeMessage(4, resaleRoyalties_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      for (int i = 0; i < mintRoyalties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, mintRoyalties_.get(i));
+      }
+      for (int i = 0; i < resaleRoyalties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, resaleRoyalties_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getMintRoyaltiesList()
+          .equals(other.getMintRoyaltiesList())) return false;
+      if (!getResaleRoyaltiesList()
+          .equals(other.getResaleRoyaltiesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      if (getMintRoyaltiesCount() > 0) {
+        hash = (37 * hash) + MINTROYALTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getMintRoyaltiesList().hashCode();
+      }
+      if (getResaleRoyaltiesCount() > 0) {
+        hash = (37 * hash) + RESALEROYALTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getResaleRoyaltiesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUpdateRoyalties}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgUpdateRoyalties)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyalties_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyalties_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyalties_ = java.util.Collections.emptyList();
+        } else {
+          mintRoyalties_ = null;
+          mintRoyaltiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyalties_ = java.util.Collections.emptyList();
+        } else {
+          resaleRoyalties_ = null;
+          resaleRoyaltiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyalties_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties result) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            mintRoyalties_ = java.util.Collections.unmodifiableList(mintRoyalties_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.mintRoyalties_ = mintRoyalties_;
+        } else {
+          result.mintRoyalties_ = mintRoyaltiesBuilder_.build();
+        }
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            resaleRoyalties_ = java.util.Collections.unmodifiableList(resaleRoyalties_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.resaleRoyalties_ = resaleRoyalties_;
+        } else {
+          result.resaleRoyalties_ = resaleRoyaltiesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (mintRoyaltiesBuilder_ == null) {
+          if (!other.mintRoyalties_.isEmpty()) {
+            if (mintRoyalties_.isEmpty()) {
+              mintRoyalties_ = other.mintRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureMintRoyaltiesIsMutable();
+              mintRoyalties_.addAll(other.mintRoyalties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mintRoyalties_.isEmpty()) {
+            if (mintRoyaltiesBuilder_.isEmpty()) {
+              mintRoyaltiesBuilder_.dispose();
+              mintRoyaltiesBuilder_ = null;
+              mintRoyalties_ = other.mintRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              mintRoyaltiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintRoyaltiesFieldBuilder() : null;
+            } else {
+              mintRoyaltiesBuilder_.addAllMessages(other.mintRoyalties_);
+            }
+          }
+        }
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (!other.resaleRoyalties_.isEmpty()) {
+            if (resaleRoyalties_.isEmpty()) {
+              resaleRoyalties_ = other.resaleRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureResaleRoyaltiesIsMutable();
+              resaleRoyalties_.addAll(other.resaleRoyalties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.resaleRoyalties_.isEmpty()) {
+            if (resaleRoyaltiesBuilder_.isEmpty()) {
+              resaleRoyaltiesBuilder_.dispose();
+              resaleRoyaltiesBuilder_ = null;
+              resaleRoyalties_ = other.resaleRoyalties_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              resaleRoyaltiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResaleRoyaltiesFieldBuilder() : null;
+            } else {
+              resaleRoyaltiesBuilder_.addAllMessages(other.resaleRoyalties_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty m =
+                    input.readMessage(
+                        com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.parser(),
+                        extensionRegistry);
+                if (mintRoyaltiesBuilder_ == null) {
+                  ensureMintRoyaltiesIsMutable();
+                  mintRoyalties_.add(m);
+                } else {
+                  mintRoyaltiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty m =
+                    input.readMessage(
+                        com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.parser(),
+                        extensionRegistry);
+                if (resaleRoyaltiesBuilder_ == null) {
+                  ensureResaleRoyaltiesIsMutable();
+                  resaleRoyalties_.add(m);
+                } else {
+                  resaleRoyaltiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> mintRoyalties_ =
+        java.util.Collections.emptyList();
+      private void ensureMintRoyaltiesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          mintRoyalties_ = new java.util.ArrayList<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty>(mintRoyalties_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> mintRoyaltiesBuilder_;
+
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getMintRoyaltiesList() {
+        if (mintRoyaltiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mintRoyalties_);
+        } else {
+          return mintRoyaltiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMintRoyaltiesCount() {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.size();
+        } else {
+          return mintRoyaltiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getMintRoyalties(int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.get(index);
+        } else {
+          return mintRoyaltiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.set(index, value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (mintRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(index, value);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMintRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMintRoyalties(
+          java.lang.Iterable<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> values) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mintRoyalties_);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMintRoyalties() {
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyalties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMintRoyalties(int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          ensureMintRoyaltiesIsMutable();
+          mintRoyalties_.remove(index);
+          onChanged();
+        } else {
+          mintRoyaltiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder getMintRoyaltiesBuilder(
+          int index) {
+        return getMintRoyaltiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getMintRoyaltiesOrBuilder(
+          int index) {
+        if (mintRoyaltiesBuilder_ == null) {
+          return mintRoyalties_.get(index);  } else {
+          return mintRoyaltiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+           getMintRoyaltiesOrBuilderList() {
+        if (mintRoyaltiesBuilder_ != null) {
+          return mintRoyaltiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mintRoyalties_);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addMintRoyaltiesBuilder() {
+        return getMintRoyaltiesFieldBuilder().addBuilder(
+            com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addMintRoyaltiesBuilder(
+          int index) {
+        return getMintRoyaltiesFieldBuilder().addBuilder(
+            index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty mintRoyalties = 3 [json_name = "mintRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder> 
+           getMintRoyaltiesBuilderList() {
+        return getMintRoyaltiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+          getMintRoyaltiesFieldBuilder() {
+        if (mintRoyaltiesBuilder_ == null) {
+          mintRoyaltiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder>(
+                  mintRoyalties_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mintRoyalties_ = null;
+        }
+        return mintRoyaltiesBuilder_;
+      }
+
+      private java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> resaleRoyalties_ =
+        java.util.Collections.emptyList();
+      private void ensureResaleRoyaltiesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          resaleRoyalties_ = new java.util.ArrayList<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty>(resaleRoyalties_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> resaleRoyaltiesBuilder_;
+
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> getResaleRoyaltiesList() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resaleRoyalties_);
+        } else {
+          return resaleRoyaltiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getResaleRoyaltiesCount() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.size();
+        } else {
+          return resaleRoyaltiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty getResaleRoyalties(int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.get(index);
+        } else {
+          return resaleRoyaltiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.set(index, value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty value) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(index, value);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addResaleRoyalties(
+          int index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder builderForValue) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllResaleRoyalties(
+          java.lang.Iterable<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty> values) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resaleRoyalties_);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResaleRoyalties() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyalties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeResaleRoyalties(int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          ensureResaleRoyaltiesIsMutable();
+          resaleRoyalties_.remove(index);
+          onChanged();
+        } else {
+          resaleRoyaltiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder getResaleRoyaltiesBuilder(
+          int index) {
+        return getResaleRoyaltiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder getResaleRoyaltiesOrBuilder(
+          int index) {
+        if (resaleRoyaltiesBuilder_ == null) {
+          return resaleRoyalties_.get(index);  } else {
+          return resaleRoyaltiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+           getResaleRoyaltiesOrBuilderList() {
+        if (resaleRoyaltiesBuilder_ != null) {
+          return resaleRoyaltiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(resaleRoyalties_);
+        }
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addResaleRoyaltiesBuilder() {
+        return getResaleRoyaltiesFieldBuilder().addBuilder(
+            com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder addResaleRoyaltiesBuilder(
+          int index) {
+        return getResaleRoyaltiesFieldBuilder().addBuilder(
+            index, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cudoventures.cudosnode.marketplace.Royalty resaleRoyalties = 4 [json_name = "resaleRoyalties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder> 
+           getResaleRoyaltiesBuilderList() {
+        return getResaleRoyaltiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder> 
+          getResaleRoyaltiesFieldBuilder() {
+        if (resaleRoyaltiesBuilder_ == null) {
+          resaleRoyaltiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty, com.cudoventures.cudosnode.marketplace.RoyaltyProto.Royalty.Builder, com.cudoventures.cudosnode.marketplace.RoyaltyProto.RoyaltyOrBuilder>(
+                  resaleRoyalties_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          resaleRoyalties_ = null;
+        }
+        return resaleRoyaltiesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgUpdateRoyalties)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgUpdateRoyalties)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateRoyalties>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateRoyalties>() {
+      @java.lang.Override
+      public MsgUpdateRoyalties parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateRoyalties> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateRoyalties> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyalties getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateRoyaltiesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgUpdateRoyaltiesResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUpdateRoyaltiesResponse}
+   */
+  public static final class MsgUpdateRoyaltiesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgUpdateRoyaltiesResponse)
+      MsgUpdateRoyaltiesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateRoyaltiesResponse.newBuilder() to construct.
+    private MsgUpdateRoyaltiesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateRoyaltiesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateRoyaltiesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyaltiesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyaltiesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUpdateRoyaltiesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgUpdateRoyaltiesResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyaltiesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyaltiesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyaltiesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgUpdateRoyaltiesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgUpdateRoyaltiesResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateRoyaltiesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateRoyaltiesResponse>() {
+      @java.lang.Override
+      public MsgUpdateRoyaltiesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateRoyaltiesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateRoyaltiesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdateRoyaltiesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdatePriceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgUpdatePrice)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the price field is set.
+     */
+    boolean hasPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The price.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUpdatePrice}
+   */
+  public static final class MsgUpdatePrice extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgUpdatePrice)
+      MsgUpdatePriceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdatePrice.newBuilder() to construct.
+    private MsgUpdatePrice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdatePrice() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdatePrice();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePrice_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePrice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin price_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the price field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrice() {
+      return price_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPrice() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      if (price_ != null) {
+        output.writeMessage(4, getPrice());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      if (price_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPrice());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (hasPrice() != other.hasPrice()) return false;
+      if (hasPrice()) {
+        if (!getPrice()
+            .equals(other.getPrice())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      if (hasPrice()) {
+        hash = (37 * hash) + PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getPrice().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUpdatePrice}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgUpdatePrice)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePrice_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePrice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        id_ = 0L;
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePrice_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.price_ = priceBuilder_ == null
+              ? price_
+              : priceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.hasPrice()) {
+          mergePrice(other.getPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 34: {
+                input.readMessage(
+                    getPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin price_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> priceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return Whether the price field is set.
+       */
+      public boolean hasPrice() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return The price.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPrice() {
+        if (priceBuilder_ == null) {
+          return price_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+        } else {
+          return priceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          price_ = value;
+        } else {
+          priceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (priceBuilder_ == null) {
+          price_ = builderForValue.build();
+        } else {
+          priceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder mergePrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            price_ != null &&
+            price_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getPriceBuilder().mergeFrom(value);
+          } else {
+            price_ = value;
+          }
+        } else {
+          priceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearPrice() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPriceBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder() {
+        if (priceBuilder_ != null) {
+          return priceBuilder_.getMessageOrBuilder();
+        } else {
+          return price_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : price_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPriceFieldBuilder() {
+        if (priceBuilder_ == null) {
+          priceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getPrice(),
+                  getParentForChildren(),
+                  isClean());
+          price_ = null;
+        }
+        return priceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgUpdatePrice)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgUpdatePrice)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdatePrice>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdatePrice>() {
+      @java.lang.Override
+      public MsgUpdatePrice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdatePrice> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdatePrice> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdatePriceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgUpdatePriceResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUpdatePriceResponse}
+   */
+  public static final class MsgUpdatePriceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgUpdatePriceResponse)
+      MsgUpdatePriceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdatePriceResponse.newBuilder() to construct.
+    private MsgUpdatePriceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdatePriceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdatePriceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePriceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePriceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgUpdatePriceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgUpdatePriceResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePriceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePriceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePriceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgUpdatePriceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgUpdatePriceResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdatePriceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdatePriceResponse>() {
+      @java.lang.Override
+      public MsgUpdatePriceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdatePriceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdatePriceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePriceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddAdminOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgAddAdmin)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgAddAdmin}
+   */
+  public static final class MsgAddAdmin extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgAddAdmin)
+      MsgAddAdminOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddAdmin.newBuilder() to construct.
+    private MsgAddAdmin(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddAdmin() {
+      creator_ = "";
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddAdmin();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdmin_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdmin_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgAddAdmin}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgAddAdmin)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdmin_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdmin_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdmin_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgAddAdmin)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgAddAdmin)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddAdmin>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddAdmin>() {
+      @java.lang.Override
+      public MsgAddAdmin parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddAdmin> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddAdmin> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdmin getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddAdminResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgAddAdminResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgAddAdminResponse}
+   */
+  public static final class MsgAddAdminResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgAddAdminResponse)
+      MsgAddAdminResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddAdminResponse.newBuilder() to construct.
+    private MsgAddAdminResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddAdminResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddAdminResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdminResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdminResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgAddAdminResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgAddAdminResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdminResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdminResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgAddAdminResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgAddAdminResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgAddAdminResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddAdminResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddAdminResponse>() {
+      @java.lang.Override
+      public MsgAddAdminResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddAdminResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddAdminResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgAddAdminResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveAdminOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgRemoveAdmin)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgRemoveAdmin}
+   */
+  public static final class MsgRemoveAdmin extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgRemoveAdmin)
+      MsgRemoveAdminOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveAdmin.newBuilder() to construct.
+    private MsgRemoveAdmin(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveAdmin() {
+      creator_ = "";
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveAdmin();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdmin_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdmin_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgRemoveAdmin}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgRemoveAdmin)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdmin_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdmin_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdmin_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgRemoveAdmin)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgRemoveAdmin)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveAdmin>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveAdmin>() {
+      @java.lang.Override
+      public MsgRemoveAdmin parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveAdmin> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveAdmin> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdmin getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveAdminResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudoventures.cudosnode.marketplace.MsgRemoveAdminResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgRemoveAdminResponse}
+   */
+  public static final class MsgRemoveAdminResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudoventures.cudosnode.marketplace.MsgRemoveAdminResponse)
+      MsgRemoveAdminResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveAdminResponse.newBuilder() to construct.
+    private MsgRemoveAdminResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveAdminResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveAdminResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdminResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdminResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse)) {
+        return super.equals(obj);
+      }
+      com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse other = (com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cudoventures.cudosnode.marketplace.MsgRemoveAdminResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudoventures.cudosnode.marketplace.MsgRemoveAdminResponse)
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdminResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdminResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse.Builder.class);
+      }
+
+      // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdminResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse getDefaultInstanceForType() {
+        return com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse build() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse buildPartial() {
+        com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse result = new com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse) {
+          return mergeFrom((com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse other) {
+        if (other == com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudoventures.cudosnode.marketplace.MsgRemoveAdminResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudoventures.cudosnode.marketplace.MsgRemoveAdminResponse)
+    private static final com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse();
+    }
+
+    public static com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveAdminResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveAdminResponse>() {
+      @java.lang.Override
+      public MsgRemoveAdminResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveAdminResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveAdminResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudoventures.cudosnode.marketplace.TxProto.MsgRemoveAdminResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollection_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollectionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgPublishCollectionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgPublishNft_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgPublishNft_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgPublishNftResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgPublishNftResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgBuyNft_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgBuyNft_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgBuyNftResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgBuyNftResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgMintNft_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgMintNft_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgMintNftResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgMintNftResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNft_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNft_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNftResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgRemoveNftResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollection_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollectionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgVerifyCollectionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollection_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollectionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgUnverifyCollectionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollection_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollectionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgCreateCollectionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyalties_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyalties_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyaltiesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgUpdateRoyaltiesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePrice_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePrice_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePriceResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgUpdatePriceResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgAddAdmin_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgAddAdmin_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgAddAdminResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgAddAdminResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdmin_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdmin_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdminResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudoventures_cudosnode_marketplace_MsgRemoveAdminResponse_fieldAccessorTable;
 
@@ -243,15 +17798,14 @@ public final class TxProto {
       "rketplace.MsgAddAdminResponse\022}\n\013RemoveA" +
       "dmin\0222.cudoventures.cudosnode.marketplac" +
       "e.MsgRemoveAdmin\032:.cudoventures.cudosnod" +
-      "e.marketplace.MsgRemoveAdminResponseB\223\002\n" +
+      "e.marketplace.MsgRemoveAdminResponseB\221\002\n" +
       "&com.cudoventures.cudosnode.marketplaceB" +
-      "\007TxProtoP\001Z6github.com/CudoVentures/cudo" +
-      "s-node/x/marketplace/types\242\002\003CCM\252\002\"Cudov" +
-      "entures.Cudosnode.Marketplace\312\002\"Cudovent" +
-      "ures\\Cudosnode\\Marketplace\342\002.Cudoventure" +
-      "s\\Cudosnode\\Marketplace\\GPBMetadata\352\002$Cu" +
-      "doventures::Cudosnode::Marketplaceb\006prot" +
-      "o3"
+      "\007TxProtoZ6github.com/CudoVentures/cudos-" +
+      "node/x/marketplace/types\242\002\003CCM\252\002\"Cudoven" +
+      "tures.Cudosnode.Marketplace\312\002\"Cudoventur" +
+      "es\\Cudosnode\\Marketplace\342\002.Cudoventures\\" +
+      "Cudosnode\\Marketplace\\GPBMetadata\352\002$Cudo" +
+      "ventures::Cudosnode::Marketplaceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

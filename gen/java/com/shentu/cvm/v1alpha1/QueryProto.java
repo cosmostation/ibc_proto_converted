@@ -14,79 +14,9596 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryCodeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryCodeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryCodeRequest}
+   */
+  public static final class QueryCodeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryCodeRequest)
+      QueryCodeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCodeRequest.newBuilder() to construct.
+    private QueryCodeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCodeRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCodeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest other = (com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryCodeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryCodeRequest)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest result = new com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryCodeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryCodeRequest)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCodeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCodeRequest>() {
+      @java.lang.Override
+      public QueryCodeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCodeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCodeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryCodeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCodeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryCodeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+     * @return The code.
+     */
+    java.lang.String getCode();
+    /**
+     * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+     * @return The bytes for code.
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryCodeResponse}
+   */
+  public static final class QueryCodeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryCodeResponse)
+      QueryCodeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCodeResponse.newBuilder() to construct.
+    private QueryCodeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCodeResponse() {
+      code_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCodeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse.Builder.class);
+    }
+
+    public static final int CODE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object code_ = "";
+    /**
+     * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+     * @return The code.
+     */
+    @java.lang.Override
+    public java.lang.String getCode() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        code_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+     * @return The bytes for code.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        code_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse other = (com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse) obj;
+
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryCodeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryCodeResponse)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        code_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryCodeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse result = new com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.code_ = code_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse.getDefaultInstance()) return this;
+        if (!other.getCode().isEmpty()) {
+          code_ = other.code_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                code_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object code_ = "";
+      /**
+       * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @return The code.
+       */
+      public java.lang.String getCode() {
+        java.lang.Object ref = code_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          code_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @return The bytes for code.
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        java.lang.Object ref = code_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          code_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @param value The code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        code_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCode() {
+        code_ = getDefaultInstance().getCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string code = 1 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @param value The bytes for code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        code_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryCodeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryCodeResponse)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCodeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCodeResponse>() {
+      @java.lang.Override
+      public QueryCodeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCodeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCodeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryCodeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAbiRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryAbiRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryAbiRequest}
+   */
+  public static final class QueryAbiRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryAbiRequest)
+      QueryAbiRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAbiRequest.newBuilder() to construct.
+    private QueryAbiRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAbiRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAbiRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest other = (com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryAbiRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryAbiRequest)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest result = new com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryAbiRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryAbiRequest)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAbiRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAbiRequest>() {
+      @java.lang.Override
+      public QueryAbiRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAbiRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAbiRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryAbiRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAbiResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryAbiResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+     * @return The abi.
+     */
+    java.lang.String getAbi();
+    /**
+     * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+     * @return The bytes for abi.
+     */
+    com.google.protobuf.ByteString
+        getAbiBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryAbiResponse}
+   */
+  public static final class QueryAbiResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryAbiResponse)
+      QueryAbiResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAbiResponse.newBuilder() to construct.
+    private QueryAbiResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAbiResponse() {
+      abi_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAbiResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse.Builder.class);
+    }
+
+    public static final int ABI_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object abi_ = "";
+    /**
+     * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+     * @return The abi.
+     */
+    @java.lang.Override
+    public java.lang.String getAbi() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        abi_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+     * @return The bytes for abi.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAbiBytes() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abi_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(abi_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, abi_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(abi_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, abi_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse other = (com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse) obj;
+
+      if (!getAbi()
+          .equals(other.getAbi())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ABI_FIELD_NUMBER;
+      hash = (53 * hash) + getAbi().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryAbiResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryAbiResponse)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        abi_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAbiResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse result = new com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.abi_ = abi_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse.getDefaultInstance()) return this;
+        if (!other.getAbi().isEmpty()) {
+          abi_ = other.abi_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                abi_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object abi_ = "";
+      /**
+       * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @return The abi.
+       */
+      public java.lang.String getAbi() {
+        java.lang.Object ref = abi_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          abi_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @return The bytes for abi.
+       */
+      public com.google.protobuf.ByteString
+          getAbiBytes() {
+        java.lang.Object ref = abi_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abi_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @param value The abi to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbi(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        abi_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbi() {
+        abi_ = getDefaultInstance().getAbi();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 1 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @param value The bytes for abi to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbiBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        abi_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryAbiResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryAbiResponse)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAbiResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAbiResponse>() {
+      @java.lang.Override
+      public QueryAbiResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAbiResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAbiResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryAbiResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStorageRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryStorageRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryStorageRequest}
+   */
+  public static final class QueryStorageRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryStorageRequest)
+      QueryStorageRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStorageRequest.newBuilder() to construct.
+    private QueryStorageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStorageRequest() {
+      address_ = "";
+      key_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStorageRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
+    /**
+     * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest other = (com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryStorageRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryStorageRequest)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        key_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest result = new com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.key_ = key_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 2 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryStorageRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryStorageRequest)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStorageRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStorageRequest>() {
+      @java.lang.Override
+      public QueryStorageRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStorageRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStorageRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryStorageRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStorageResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryStorageResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    com.google.protobuf.ByteString getValue();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryStorageResponse}
+   */
+  public static final class QueryStorageResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryStorageResponse)
+      QueryStorageResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStorageResponse.newBuilder() to construct.
+    private QueryStorageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStorageResponse() {
+      value_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStorageResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse.Builder.class);
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getValue() {
+      return value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!value_.isEmpty()) {
+        output.writeBytes(1, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!value_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse other = (com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse) obj;
+
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryStorageResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryStorageResponse)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        value_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryStorageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse result = new com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse.getDefaultInstance()) return this;
+        if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                value_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getValue() {
+        return value_;
+      }
+      /**
+       * <code>bytes value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryStorageResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryStorageResponse)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStorageResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStorageResponse>() {
+      @java.lang.Override
+      public QueryStorageResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStorageResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStorageResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryStorageResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAddressMetaRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryAddressMetaRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryAddressMetaRequest}
+   */
+  public static final class QueryAddressMetaRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryAddressMetaRequest)
+      QueryAddressMetaRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAddressMetaRequest.newBuilder() to construct.
+    private QueryAddressMetaRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAddressMetaRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAddressMetaRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest other = (com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryAddressMetaRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryAddressMetaRequest)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest result = new com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryAddressMetaRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryAddressMetaRequest)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAddressMetaRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAddressMetaRequest>() {
+      @java.lang.Override
+      public QueryAddressMetaRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAddressMetaRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAddressMetaRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAddressMetaResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryAddressMetaResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+     * @return The metaHash.
+     */
+    java.lang.String getMetaHash();
+    /**
+     * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+     * @return The bytes for metaHash.
+     */
+    com.google.protobuf.ByteString
+        getMetaHashBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryAddressMetaResponse}
+   */
+  public static final class QueryAddressMetaResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryAddressMetaResponse)
+      QueryAddressMetaResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAddressMetaResponse.newBuilder() to construct.
+    private QueryAddressMetaResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAddressMetaResponse() {
+      metaHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAddressMetaResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse.Builder.class);
+    }
+
+    public static final int META_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object metaHash_ = "";
+    /**
+     * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+     * @return The metaHash.
+     */
+    @java.lang.Override
+    public java.lang.String getMetaHash() {
+      java.lang.Object ref = metaHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metaHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+     * @return The bytes for metaHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetaHashBytes() {
+      java.lang.Object ref = metaHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metaHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metaHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, metaHash_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metaHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, metaHash_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse other = (com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse) obj;
+
+      if (!getMetaHash()
+          .equals(other.getMetaHash())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + META_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getMetaHash().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryAddressMetaResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryAddressMetaResponse)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        metaHash_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAddressMetaResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse result = new com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.metaHash_ = metaHash_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse.getDefaultInstance()) return this;
+        if (!other.getMetaHash().isEmpty()) {
+          metaHash_ = other.metaHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                metaHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object metaHash_ = "";
+      /**
+       * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+       * @return The metaHash.
+       */
+      public java.lang.String getMetaHash() {
+        java.lang.Object ref = metaHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metaHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+       * @return The bytes for metaHash.
+       */
+      public com.google.protobuf.ByteString
+          getMetaHashBytes() {
+        java.lang.Object ref = metaHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metaHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+       * @param value The metaHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        metaHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetaHash() {
+        metaHash_ = getDefaultInstance().getMetaHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string meta_hash = 1 [json_name = "metaHash", (.gogoproto.moretags) = "yaml:&#92;"metaHash&#92;""];</code>
+       * @param value The bytes for metaHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        metaHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryAddressMetaResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryAddressMetaResponse)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAddressMetaResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAddressMetaResponse>() {
+      @java.lang.Override
+      public QueryAddressMetaResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAddressMetaResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAddressMetaResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryAddressMetaResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMetaRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryMetaRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryMetaRequest}
+   */
+  public static final class QueryMetaRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryMetaRequest)
+      QueryMetaRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMetaRequest.newBuilder() to construct.
+    private QueryMetaRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMetaRequest() {
+      hash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMetaRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest.Builder.class);
+    }
+
+    public static final int HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hash_ = "";
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public java.lang.String getHash() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The bytes for hash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest other = (com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest) obj;
+
+      if (!getHash()
+          .equals(other.getHash())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryMetaRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryMetaRequest)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hash_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest result = new com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hash_ = hash_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest.getDefaultInstance()) return this;
+        if (!other.getHash().isEmpty()) {
+          hash_ = other.hash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                hash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object hash_ = "";
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return The hash.
+       */
+      public java.lang.String getHash() {
+        java.lang.Object ref = hash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return The bytes for hash.
+       */
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = hash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        hash_ = getDefaultInstance().getHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryMetaRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryMetaRequest)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMetaRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMetaRequest>() {
+      @java.lang.Override
+      public QueryMetaRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMetaRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMetaRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryMetaRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMetaResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryMetaResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+     * @return The meta.
+     */
+    java.lang.String getMeta();
+    /**
+     * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+     * @return The bytes for meta.
+     */
+    com.google.protobuf.ByteString
+        getMetaBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryMetaResponse}
+   */
+  public static final class QueryMetaResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryMetaResponse)
+      QueryMetaResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMetaResponse.newBuilder() to construct.
+    private QueryMetaResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMetaResponse() {
+      meta_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMetaResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object meta_ = "";
+    /**
+     * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public java.lang.String getMeta() {
+      java.lang.Object ref = meta_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        meta_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+     * @return The bytes for meta.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetaBytes() {
+      java.lang.Object ref = meta_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        meta_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(meta_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, meta_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(meta_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, meta_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse other = (com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse) obj;
+
+      if (!getMeta()
+          .equals(other.getMeta())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + META_FIELD_NUMBER;
+      hash = (53 * hash) + getMeta().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryMetaResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryMetaResponse)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        meta_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryMetaResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse result = new com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.meta_ = meta_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse.getDefaultInstance()) return this;
+        if (!other.getMeta().isEmpty()) {
+          meta_ = other.meta_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                meta_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object meta_ = "";
+      /**
+       * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+       * @return The meta.
+       */
+      public java.lang.String getMeta() {
+        java.lang.Object ref = meta_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          meta_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+       * @return The bytes for meta.
+       */
+      public com.google.protobuf.ByteString
+          getMetaBytes() {
+        java.lang.Object ref = meta_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          meta_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+       * @param value The meta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMeta(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        meta_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMeta() {
+        meta_ = getDefaultInstance().getMeta();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string meta = 1 [json_name = "meta", (.gogoproto.moretags) = "yaml:&#92;"meta&#92;""];</code>
+       * @param value The bytes for meta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        meta_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryMetaResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryMetaResponse)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMetaResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMetaResponse>() {
+      @java.lang.Override
+      public QueryMetaResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMetaResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMetaResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryMetaResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryAccountRequest}
+   */
+  public static final class QueryAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryAccountRequest)
+      QueryAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAccountRequest.newBuilder() to construct.
+    private QueryAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAccountRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest other = (com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryAccountRequest)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest result = new com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryAccountRequest)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAccountRequest>() {
+      @java.lang.Override
+      public QueryAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVMAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.CVMAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+     * @return Whether the baseAccount field is set.
+     */
+    boolean hasBaseAccount();
+    /**
+     * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+     * @return The baseAccount.
+     */
+    com.cosmos.auth.v1beta1.AuthProto.BaseAccount getBaseAccount();
+    /**
+     * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+     */
+    com.cosmos.auth.v1beta1.AuthProto.BaseAccountOrBuilder getBaseAccountOrBuilder();
+
+    /**
+     * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+     * @return The code.
+     */
+    java.lang.String getCode();
+    /**
+     * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+     * @return The bytes for code.
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+     * @return The abi.
+     */
+    java.lang.String getAbi();
+    /**
+     * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+     * @return The bytes for abi.
+     */
+    com.google.protobuf.ByteString
+        getAbiBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.CVMAccount}
+   */
+  public static final class CVMAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.CVMAccount)
+      CVMAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVMAccount.newBuilder() to construct.
+    private CVMAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVMAccount() {
+      code_ = "";
+      abi_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVMAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_CVMAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_CVMAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.class, com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.Builder.class);
+    }
+
+    public static final int BASE_ACCOUNT_FIELD_NUMBER = 1;
+    private com.cosmos.auth.v1beta1.AuthProto.BaseAccount baseAccount_;
+    /**
+     * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+     * @return Whether the baseAccount field is set.
+     */
+    @java.lang.Override
+    public boolean hasBaseAccount() {
+      return baseAccount_ != null;
+    }
+    /**
+     * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+     * @return The baseAccount.
+     */
+    @java.lang.Override
+    public com.cosmos.auth.v1beta1.AuthProto.BaseAccount getBaseAccount() {
+      return baseAccount_ == null ? com.cosmos.auth.v1beta1.AuthProto.BaseAccount.getDefaultInstance() : baseAccount_;
+    }
+    /**
+     * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.auth.v1beta1.AuthProto.BaseAccountOrBuilder getBaseAccountOrBuilder() {
+      return baseAccount_ == null ? com.cosmos.auth.v1beta1.AuthProto.BaseAccount.getDefaultInstance() : baseAccount_;
+    }
+
+    public static final int CODE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object code_ = "";
+    /**
+     * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+     * @return The code.
+     */
+    @java.lang.Override
+    public java.lang.String getCode() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        code_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+     * @return The bytes for code.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        code_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ABI_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object abi_ = "";
+    /**
+     * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+     * @return The abi.
+     */
+    @java.lang.Override
+    public java.lang.String getAbi() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        abi_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+     * @return The bytes for abi.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAbiBytes() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abi_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (baseAccount_ != null) {
+        output.writeMessage(1, getBaseAccount());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, code_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(abi_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, abi_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (baseAccount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBaseAccount());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, code_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(abi_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, abi_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.CVMAccount)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.CVMAccount other = (com.shentu.cvm.v1alpha1.QueryProto.CVMAccount) obj;
+
+      if (hasBaseAccount() != other.hasBaseAccount()) return false;
+      if (hasBaseAccount()) {
+        if (!getBaseAccount()
+            .equals(other.getBaseAccount())) return false;
+      }
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getAbi()
+          .equals(other.getAbi())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBaseAccount()) {
+        hash = (37 * hash) + BASE_ACCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getBaseAccount().hashCode();
+      }
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode().hashCode();
+      hash = (37 * hash) + ABI_FIELD_NUMBER;
+      hash = (53 * hash) + getAbi().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.CVMAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.CVMAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.CVMAccount)
+        com.shentu.cvm.v1alpha1.QueryProto.CVMAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_CVMAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_CVMAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.class, com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        baseAccount_ = null;
+        if (baseAccountBuilder_ != null) {
+          baseAccountBuilder_.dispose();
+          baseAccountBuilder_ = null;
+        }
+        code_ = "";
+        abi_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_CVMAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.CVMAccount getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.CVMAccount build() {
+        com.shentu.cvm.v1alpha1.QueryProto.CVMAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.CVMAccount buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.CVMAccount result = new com.shentu.cvm.v1alpha1.QueryProto.CVMAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.CVMAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.baseAccount_ = baseAccountBuilder_ == null
+              ? baseAccount_
+              : baseAccountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.code_ = code_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.abi_ = abi_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.CVMAccount) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.CVMAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.CVMAccount other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.getDefaultInstance()) return this;
+        if (other.hasBaseAccount()) {
+          mergeBaseAccount(other.getBaseAccount());
+        }
+        if (!other.getCode().isEmpty()) {
+          code_ = other.code_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAbi().isEmpty()) {
+          abi_ = other.abi_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBaseAccountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                code_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                abi_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.auth.v1beta1.AuthProto.BaseAccount baseAccount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.auth.v1beta1.AuthProto.BaseAccount, com.cosmos.auth.v1beta1.AuthProto.BaseAccount.Builder, com.cosmos.auth.v1beta1.AuthProto.BaseAccountOrBuilder> baseAccountBuilder_;
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       * @return Whether the baseAccount field is set.
+       */
+      public boolean hasBaseAccount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       * @return The baseAccount.
+       */
+      public com.cosmos.auth.v1beta1.AuthProto.BaseAccount getBaseAccount() {
+        if (baseAccountBuilder_ == null) {
+          return baseAccount_ == null ? com.cosmos.auth.v1beta1.AuthProto.BaseAccount.getDefaultInstance() : baseAccount_;
+        } else {
+          return baseAccountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       */
+      public Builder setBaseAccount(com.cosmos.auth.v1beta1.AuthProto.BaseAccount value) {
+        if (baseAccountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          baseAccount_ = value;
+        } else {
+          baseAccountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       */
+      public Builder setBaseAccount(
+          com.cosmos.auth.v1beta1.AuthProto.BaseAccount.Builder builderForValue) {
+        if (baseAccountBuilder_ == null) {
+          baseAccount_ = builderForValue.build();
+        } else {
+          baseAccountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       */
+      public Builder mergeBaseAccount(com.cosmos.auth.v1beta1.AuthProto.BaseAccount value) {
+        if (baseAccountBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            baseAccount_ != null &&
+            baseAccount_ != com.cosmos.auth.v1beta1.AuthProto.BaseAccount.getDefaultInstance()) {
+            getBaseAccountBuilder().mergeFrom(value);
+          } else {
+            baseAccount_ = value;
+          }
+        } else {
+          baseAccountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       */
+      public Builder clearBaseAccount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        baseAccount_ = null;
+        if (baseAccountBuilder_ != null) {
+          baseAccountBuilder_.dispose();
+          baseAccountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       */
+      public com.cosmos.auth.v1beta1.AuthProto.BaseAccount.Builder getBaseAccountBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBaseAccountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       */
+      public com.cosmos.auth.v1beta1.AuthProto.BaseAccountOrBuilder getBaseAccountOrBuilder() {
+        if (baseAccountBuilder_ != null) {
+          return baseAccountBuilder_.getMessageOrBuilder();
+        } else {
+          return baseAccount_ == null ?
+              com.cosmos.auth.v1beta1.AuthProto.BaseAccount.getDefaultInstance() : baseAccount_;
+        }
+      }
+      /**
+       * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.auth.v1beta1.AuthProto.BaseAccount, com.cosmos.auth.v1beta1.AuthProto.BaseAccount.Builder, com.cosmos.auth.v1beta1.AuthProto.BaseAccountOrBuilder> 
+          getBaseAccountFieldBuilder() {
+        if (baseAccountBuilder_ == null) {
+          baseAccountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.auth.v1beta1.AuthProto.BaseAccount, com.cosmos.auth.v1beta1.AuthProto.BaseAccount.Builder, com.cosmos.auth.v1beta1.AuthProto.BaseAccountOrBuilder>(
+                  getBaseAccount(),
+                  getParentForChildren(),
+                  isClean());
+          baseAccount_ = null;
+        }
+        return baseAccountBuilder_;
+      }
+
+      private java.lang.Object code_ = "";
+      /**
+       * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @return The code.
+       */
+      public java.lang.String getCode() {
+        java.lang.Object ref = code_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          code_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @return The bytes for code.
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        java.lang.Object ref = code_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          code_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @param value The code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        code_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCode() {
+        code_ = getDefaultInstance().getCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string code = 2 [json_name = "code", (.gogoproto.moretags) = "yaml:&#92;"code&#92;""];</code>
+       * @param value The bytes for code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        code_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object abi_ = "";
+      /**
+       * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @return The abi.
+       */
+      public java.lang.String getAbi() {
+        java.lang.Object ref = abi_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          abi_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @return The bytes for abi.
+       */
+      public com.google.protobuf.ByteString
+          getAbiBytes() {
+        java.lang.Object ref = abi_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abi_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @param value The abi to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbi(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        abi_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbi() {
+        abi_ = getDefaultInstance().getAbi();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 3 [json_name = "abi", (.gogoproto.moretags) = "yaml:&#92;"abi&#92;""];</code>
+       * @param value The bytes for abi to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbiBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        abi_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.CVMAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.CVMAccount)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.CVMAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.CVMAccount();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.CVMAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CVMAccount>
+        PARSER = new com.google.protobuf.AbstractParser<CVMAccount>() {
+      @java.lang.Override
+      public CVMAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVMAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVMAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.CVMAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryViewRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryViewRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+     * @return The caller.
+     */
+    java.lang.String getCaller();
+    /**
+     * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+     * @return The bytes for caller.
+     */
+    com.google.protobuf.ByteString
+        getCallerBytes();
+
+    /**
+     * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+     * @return The callee.
+     */
+    java.lang.String getCallee();
+    /**
+     * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+     * @return The bytes for callee.
+     */
+    com.google.protobuf.ByteString
+        getCalleeBytes();
+
+    /**
+     * <code>bytes abi_spec = 3 [json_name = "abiSpec", (.gogoproto.moretags) = "yaml:&#92;"abi_spec&#92;""];</code>
+     * @return The abiSpec.
+     */
+    com.google.protobuf.ByteString getAbiSpec();
+
+    /**
+     * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+     * @return The functionName.
+     */
+    java.lang.String getFunctionName();
+    /**
+     * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+     * @return The bytes for functionName.
+     */
+    com.google.protobuf.ByteString
+        getFunctionNameBytes();
+
+    /**
+     * <code>bytes data = 5 [json_name = "data", (.gogoproto.moretags) = "yaml:&#92;"data&#92;""];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryViewRequest}
+   */
+  public static final class QueryViewRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryViewRequest)
+      QueryViewRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryViewRequest.newBuilder() to construct.
+    private QueryViewRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryViewRequest() {
+      caller_ = "";
+      callee_ = "";
+      abiSpec_ = com.google.protobuf.ByteString.EMPTY;
+      functionName_ = "";
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryViewRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest.Builder.class);
+    }
+
+    public static final int CALLER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object caller_ = "";
+    /**
+     * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+     * @return The caller.
+     */
+    @java.lang.Override
+    public java.lang.String getCaller() {
+      java.lang.Object ref = caller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        caller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+     * @return The bytes for caller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCallerBytes() {
+      java.lang.Object ref = caller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        caller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CALLEE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object callee_ = "";
+    /**
+     * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+     * @return The callee.
+     */
+    @java.lang.Override
+    public java.lang.String getCallee() {
+      java.lang.Object ref = callee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        callee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+     * @return The bytes for callee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCalleeBytes() {
+      java.lang.Object ref = callee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        callee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ABI_SPEC_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString abiSpec_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes abi_spec = 3 [json_name = "abiSpec", (.gogoproto.moretags) = "yaml:&#92;"abi_spec&#92;""];</code>
+     * @return The abiSpec.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAbiSpec() {
+      return abiSpec_;
+    }
+
+    public static final int FUNCTION_NAME_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object functionName_ = "";
+    /**
+     * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+     * @return The functionName.
+     */
+    @java.lang.Override
+    public java.lang.String getFunctionName() {
+      java.lang.Object ref = functionName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        functionName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+     * @return The bytes for functionName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunctionNameBytes() {
+      java.lang.Object ref = functionName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        functionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 5 [json_name = "data", (.gogoproto.moretags) = "yaml:&#92;"data&#92;""];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, caller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callee_);
+      }
+      if (!abiSpec_.isEmpty()) {
+        output.writeBytes(3, abiSpec_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, functionName_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(5, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, caller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callee_);
+      }
+      if (!abiSpec_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, abiSpec_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, functionName_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest other = (com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest) obj;
+
+      if (!getCaller()
+          .equals(other.getCaller())) return false;
+      if (!getCallee()
+          .equals(other.getCallee())) return false;
+      if (!getAbiSpec()
+          .equals(other.getAbiSpec())) return false;
+      if (!getFunctionName()
+          .equals(other.getFunctionName())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CALLER_FIELD_NUMBER;
+      hash = (53 * hash) + getCaller().hashCode();
+      hash = (37 * hash) + CALLEE_FIELD_NUMBER;
+      hash = (53 * hash) + getCallee().hashCode();
+      hash = (37 * hash) + ABI_SPEC_FIELD_NUMBER;
+      hash = (53 * hash) + getAbiSpec().hashCode();
+      hash = (37 * hash) + FUNCTION_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFunctionName().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryViewRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryViewRequest)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest.class, com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        caller_ = "";
+        callee_ = "";
+        abiSpec_ = com.google.protobuf.ByteString.EMPTY;
+        functionName_ = "";
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest result = new com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.caller_ = caller_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.callee_ = callee_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.abiSpec_ = abiSpec_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.functionName_ = functionName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest.getDefaultInstance()) return this;
+        if (!other.getCaller().isEmpty()) {
+          caller_ = other.caller_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCallee().isEmpty()) {
+          callee_ = other.callee_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getAbiSpec() != com.google.protobuf.ByteString.EMPTY) {
+          setAbiSpec(other.getAbiSpec());
+        }
+        if (!other.getFunctionName().isEmpty()) {
+          functionName_ = other.functionName_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                caller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                callee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                abiSpec_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                functionName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object caller_ = "";
+      /**
+       * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+       * @return The caller.
+       */
+      public java.lang.String getCaller() {
+        java.lang.Object ref = caller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          caller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+       * @return The bytes for caller.
+       */
+      public com.google.protobuf.ByteString
+          getCallerBytes() {
+        java.lang.Object ref = caller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          caller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+       * @param value The caller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        caller_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCaller() {
+        caller_ = getDefaultInstance().getCaller();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string caller = 1 [json_name = "caller", (.gogoproto.moretags) = "yaml:&#92;"caller&#92;""];</code>
+       * @param value The bytes for caller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        caller_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object callee_ = "";
+      /**
+       * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+       * @return The callee.
+       */
+      public java.lang.String getCallee() {
+        java.lang.Object ref = callee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          callee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+       * @return The bytes for callee.
+       */
+      public com.google.protobuf.ByteString
+          getCalleeBytes() {
+        java.lang.Object ref = callee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          callee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+       * @param value The callee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        callee_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallee() {
+        callee_ = getDefaultInstance().getCallee();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string callee = 2 [json_name = "callee", (.gogoproto.moretags) = "yaml:&#92;"callee&#92;""];</code>
+       * @param value The bytes for callee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCalleeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        callee_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString abiSpec_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes abi_spec = 3 [json_name = "abiSpec", (.gogoproto.moretags) = "yaml:&#92;"abi_spec&#92;""];</code>
+       * @return The abiSpec.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAbiSpec() {
+        return abiSpec_;
+      }
+      /**
+       * <code>bytes abi_spec = 3 [json_name = "abiSpec", (.gogoproto.moretags) = "yaml:&#92;"abi_spec&#92;""];</code>
+       * @param value The abiSpec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbiSpec(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        abiSpec_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes abi_spec = 3 [json_name = "abiSpec", (.gogoproto.moretags) = "yaml:&#92;"abi_spec&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbiSpec() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        abiSpec_ = getDefaultInstance().getAbiSpec();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object functionName_ = "";
+      /**
+       * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+       * @return The functionName.
+       */
+      public java.lang.String getFunctionName() {
+        java.lang.Object ref = functionName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          functionName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+       * @return The bytes for functionName.
+       */
+      public com.google.protobuf.ByteString
+          getFunctionNameBytes() {
+        java.lang.Object ref = functionName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          functionName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+       * @param value The functionName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunctionName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        functionName_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunctionName() {
+        functionName_ = getDefaultInstance().getFunctionName();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string function_name = 4 [json_name = "functionName", (.gogoproto.moretags) = "yaml:&#92;"function_name&#92;""];</code>
+       * @param value The bytes for functionName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunctionNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        functionName_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 5 [json_name = "data", (.gogoproto.moretags) = "yaml:&#92;"data&#92;""];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 5 [json_name = "data", (.gogoproto.moretags) = "yaml:&#92;"data&#92;""];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 5 [json_name = "data", (.gogoproto.moretags) = "yaml:&#92;"data&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryViewRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryViewRequest)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryViewRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryViewRequest>() {
+      @java.lang.Override
+      public QueryViewRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryViewRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryViewRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryViewRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryViewResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.QueryViewResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    java.util.List<com.shentu.cvm.v1alpha1.QueryProto.ReturnVars> 
+        getReturnVarsList();
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    com.shentu.cvm.v1alpha1.QueryProto.ReturnVars getReturnVars(int index);
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    int getReturnVarsCount();
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    java.util.List<? extends com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder> 
+        getReturnVarsOrBuilderList();
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder getReturnVarsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.QueryViewResponse}
+   */
+  public static final class QueryViewResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.QueryViewResponse)
+      QueryViewResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryViewResponse.newBuilder() to construct.
+    private QueryViewResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryViewResponse() {
+      returnVars_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryViewResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse.Builder.class);
+    }
+
+    public static final int RETURN_VARS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.cvm.v1alpha1.QueryProto.ReturnVars> returnVars_;
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.cvm.v1alpha1.QueryProto.ReturnVars> getReturnVarsList() {
+      return returnVars_;
+    }
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder> 
+        getReturnVarsOrBuilderList() {
+      return returnVars_;
+    }
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getReturnVarsCount() {
+      return returnVars_.size();
+    }
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars getReturnVars(int index) {
+      return returnVars_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder getReturnVarsOrBuilder(
+        int index) {
+      return returnVars_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < returnVars_.size(); i++) {
+        output.writeMessage(1, returnVars_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < returnVars_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, returnVars_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse other = (com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse) obj;
+
+      if (!getReturnVarsList()
+          .equals(other.getReturnVarsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getReturnVarsCount() > 0) {
+        hash = (37 * hash) + RETURN_VARS_FIELD_NUMBER;
+        hash = (53 * hash) + getReturnVarsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.QueryViewResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.QueryViewResponse)
+        com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse.class, com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (returnVarsBuilder_ == null) {
+          returnVars_ = java.util.Collections.emptyList();
+        } else {
+          returnVars_ = null;
+          returnVarsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_QueryViewResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse build() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse result = new com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse result) {
+        if (returnVarsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            returnVars_ = java.util.Collections.unmodifiableList(returnVars_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.returnVars_ = returnVars_;
+        } else {
+          result.returnVars_ = returnVarsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse.getDefaultInstance()) return this;
+        if (returnVarsBuilder_ == null) {
+          if (!other.returnVars_.isEmpty()) {
+            if (returnVars_.isEmpty()) {
+              returnVars_ = other.returnVars_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureReturnVarsIsMutable();
+              returnVars_.addAll(other.returnVars_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.returnVars_.isEmpty()) {
+            if (returnVarsBuilder_.isEmpty()) {
+              returnVarsBuilder_.dispose();
+              returnVarsBuilder_ = null;
+              returnVars_ = other.returnVars_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              returnVarsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getReturnVarsFieldBuilder() : null;
+            } else {
+              returnVarsBuilder_.addAllMessages(other.returnVars_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.cvm.v1alpha1.QueryProto.ReturnVars m =
+                    input.readMessage(
+                        com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.parser(),
+                        extensionRegistry);
+                if (returnVarsBuilder_ == null) {
+                  ensureReturnVarsIsMutable();
+                  returnVars_.add(m);
+                } else {
+                  returnVarsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.cvm.v1alpha1.QueryProto.ReturnVars> returnVars_ =
+        java.util.Collections.emptyList();
+      private void ensureReturnVarsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          returnVars_ = new java.util.ArrayList<com.shentu.cvm.v1alpha1.QueryProto.ReturnVars>(returnVars_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.cvm.v1alpha1.QueryProto.ReturnVars, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder, com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder> returnVarsBuilder_;
+
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public java.util.List<com.shentu.cvm.v1alpha1.QueryProto.ReturnVars> getReturnVarsList() {
+        if (returnVarsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(returnVars_);
+        } else {
+          return returnVarsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public int getReturnVarsCount() {
+        if (returnVarsBuilder_ == null) {
+          return returnVars_.size();
+        } else {
+          return returnVarsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars getReturnVars(int index) {
+        if (returnVarsBuilder_ == null) {
+          return returnVars_.get(index);
+        } else {
+          return returnVarsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder setReturnVars(
+          int index, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars value) {
+        if (returnVarsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReturnVarsIsMutable();
+          returnVars_.set(index, value);
+          onChanged();
+        } else {
+          returnVarsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder setReturnVars(
+          int index, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder builderForValue) {
+        if (returnVarsBuilder_ == null) {
+          ensureReturnVarsIsMutable();
+          returnVars_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          returnVarsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder addReturnVars(com.shentu.cvm.v1alpha1.QueryProto.ReturnVars value) {
+        if (returnVarsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReturnVarsIsMutable();
+          returnVars_.add(value);
+          onChanged();
+        } else {
+          returnVarsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder addReturnVars(
+          int index, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars value) {
+        if (returnVarsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReturnVarsIsMutable();
+          returnVars_.add(index, value);
+          onChanged();
+        } else {
+          returnVarsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder addReturnVars(
+          com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder builderForValue) {
+        if (returnVarsBuilder_ == null) {
+          ensureReturnVarsIsMutable();
+          returnVars_.add(builderForValue.build());
+          onChanged();
+        } else {
+          returnVarsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder addReturnVars(
+          int index, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder builderForValue) {
+        if (returnVarsBuilder_ == null) {
+          ensureReturnVarsIsMutable();
+          returnVars_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          returnVarsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder addAllReturnVars(
+          java.lang.Iterable<? extends com.shentu.cvm.v1alpha1.QueryProto.ReturnVars> values) {
+        if (returnVarsBuilder_ == null) {
+          ensureReturnVarsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, returnVars_);
+          onChanged();
+        } else {
+          returnVarsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder clearReturnVars() {
+        if (returnVarsBuilder_ == null) {
+          returnVars_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          returnVarsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public Builder removeReturnVars(int index) {
+        if (returnVarsBuilder_ == null) {
+          ensureReturnVarsIsMutable();
+          returnVars_.remove(index);
+          onChanged();
+        } else {
+          returnVarsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder getReturnVarsBuilder(
+          int index) {
+        return getReturnVarsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder getReturnVarsOrBuilder(
+          int index) {
+        if (returnVarsBuilder_ == null) {
+          return returnVars_.get(index);  } else {
+          return returnVarsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public java.util.List<? extends com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder> 
+           getReturnVarsOrBuilderList() {
+        if (returnVarsBuilder_ != null) {
+          return returnVarsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(returnVars_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder addReturnVarsBuilder() {
+        return getReturnVarsFieldBuilder().addBuilder(
+            com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder addReturnVarsBuilder(
+          int index) {
+        return getReturnVarsFieldBuilder().addBuilder(
+            index, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.cvm.v1alpha1.ReturnVars return_vars = 1 [json_name = "returnVars", (.gogoproto.moretags) = "yaml:&#92;"return_vars&#92;""];</code>
+       */
+      public java.util.List<com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder> 
+           getReturnVarsBuilderList() {
+        return getReturnVarsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.cvm.v1alpha1.QueryProto.ReturnVars, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder, com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder> 
+          getReturnVarsFieldBuilder() {
+        if (returnVarsBuilder_ == null) {
+          returnVarsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.cvm.v1alpha1.QueryProto.ReturnVars, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder, com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder>(
+                  returnVars_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          returnVars_ = null;
+        }
+        return returnVarsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.QueryViewResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.QueryViewResponse)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryViewResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryViewResponse>() {
+      @java.lang.Override
+      public QueryViewResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryViewResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryViewResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.QueryViewResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReturnVarsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.cvm.v1alpha1.ReturnVars)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.cvm.v1alpha1.ReturnVars}
+   */
+  public static final class ReturnVars extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.cvm.v1alpha1.ReturnVars)
+      ReturnVarsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReturnVars.newBuilder() to construct.
+    private ReturnVars(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReturnVars() {
+      name_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReturnVars();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_ReturnVars_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_ReturnVars_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.class, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.cvm.v1alpha1.QueryProto.ReturnVars)) {
+        return super.equals(obj);
+      }
+      com.shentu.cvm.v1alpha1.QueryProto.ReturnVars other = (com.shentu.cvm.v1alpha1.QueryProto.ReturnVars) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.cvm.v1alpha1.QueryProto.ReturnVars prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.cvm.v1alpha1.ReturnVars}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.cvm.v1alpha1.ReturnVars)
+        com.shentu.cvm.v1alpha1.QueryProto.ReturnVarsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_ReturnVars_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_ReturnVars_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.class, com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.Builder.class);
+      }
+
+      // Construct using com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.internal_static_shentu_cvm_v1alpha1_ReturnVars_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars getDefaultInstanceForType() {
+        return com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars build() {
+        com.shentu.cvm.v1alpha1.QueryProto.ReturnVars result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars buildPartial() {
+        com.shentu.cvm.v1alpha1.QueryProto.ReturnVars result = new com.shentu.cvm.v1alpha1.QueryProto.ReturnVars(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.ReturnVars result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.cvm.v1alpha1.QueryProto.ReturnVars) {
+          return mergeFrom((com.shentu.cvm.v1alpha1.QueryProto.ReturnVars)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.cvm.v1alpha1.QueryProto.ReturnVars other) {
+        if (other == com.shentu.cvm.v1alpha1.QueryProto.ReturnVars.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.cvm.v1alpha1.ReturnVars)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.cvm.v1alpha1.ReturnVars)
+    private static final com.shentu.cvm.v1alpha1.QueryProto.ReturnVars DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.cvm.v1alpha1.QueryProto.ReturnVars();
+    }
+
+    public static com.shentu.cvm.v1alpha1.QueryProto.ReturnVars getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReturnVars>
+        PARSER = new com.google.protobuf.AbstractParser<ReturnVars>() {
+      @java.lang.Override
+      public ReturnVars parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReturnVars> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReturnVars> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.cvm.v1alpha1.QueryProto.ReturnVars getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryCodeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryCodeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryCodeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryCodeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryAbiRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryAbiRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryAbiResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryAbiResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryStorageRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryStorageRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryStorageResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryStorageResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryAddressMetaRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryAddressMetaRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryAddressMetaResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryAddressMetaResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryMetaRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryMetaRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryMetaResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryMetaResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryAccountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryAccountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_CVMAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_CVMAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryViewRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryViewRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_QueryViewResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_QueryViewResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_cvm_v1alpha1_ReturnVars_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_cvm_v1alpha1_ReturnVars_fieldAccessorTable;
 
@@ -162,12 +9679,12 @@ public final class QueryProto {
       "View\022%.shentu.cvm.v1alpha1.QueryViewRequ" +
       "est\032&.shentu.cvm.v1alpha1.QueryViewRespo" +
       "nse\"3\202\323\344\223\002-\022+/shentu/cvm/v1alpha1/view/{" +
-      "caller}/{callee}B\303\001\n\027com.shentu.cvm.v1al" +
-      "pha1B\nQueryProtoP\001Z.github.com/shentufou" +
-      "ndation/shentu/x/cvm/types\242\002\003SCX\252\002\023Shent" +
-      "u.Cvm.V1alpha1\312\002\023Shentu\\Cvm\\V1alpha1\342\002\037S" +
-      "hentu\\Cvm\\V1alpha1\\GPBMetadata\352\002\025Shentu:" +
-      ":Cvm::V1alpha1b\006proto3"
+      "caller}/{callee}B\301\001\n\027com.shentu.cvm.v1al" +
+      "pha1B\nQueryProtoZ.github.com/shentufound" +
+      "ation/shentu/x/cvm/types\242\002\003SCX\252\002\023Shentu." +
+      "Cvm.V1alpha1\312\002\023Shentu\\Cvm\\V1alpha1\342\002\037She" +
+      "ntu\\Cvm\\V1alpha1\\GPBMetadata\352\002\025Shentu::C" +
+      "vm::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

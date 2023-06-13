@@ -14,9 +14,609 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the assetRegisrationFee field is set.
+     */
+    boolean hasAssetRegisrationFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The assetRegisrationFee.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAssetRegisrationFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetRegisrationFeeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.ParamsProto.internal_static_comdex_asset_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.ParamsProto.internal_static_comdex_asset_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.ParamsProto.Params.class, com.comdex.asset.v1beta1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int ASSET_REGISRATION_FEE_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin assetRegisrationFee_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return Whether the assetRegisrationFee field is set.
+     */
+    @java.lang.Override
+    public boolean hasAssetRegisrationFee() {
+      return assetRegisrationFee_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     * @return The assetRegisrationFee.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAssetRegisrationFee() {
+      return assetRegisrationFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : assetRegisrationFee_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetRegisrationFeeOrBuilder() {
+      return assetRegisrationFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : assetRegisrationFee_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (assetRegisrationFee_ != null) {
+        output.writeMessage(6, getAssetRegisrationFee());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (assetRegisrationFee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getAssetRegisrationFee());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.ParamsProto.Params other = (com.comdex.asset.v1beta1.ParamsProto.Params) obj;
+
+      if (hasAssetRegisrationFee() != other.hasAssetRegisrationFee()) return false;
+      if (hasAssetRegisrationFee()) {
+        if (!getAssetRegisrationFee()
+            .equals(other.getAssetRegisrationFee())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAssetRegisrationFee()) {
+        hash = (37 * hash) + ASSET_REGISRATION_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetRegisrationFee().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.Params)
+        com.comdex.asset.v1beta1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.ParamsProto.internal_static_comdex_asset_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.ParamsProto.internal_static_comdex_asset_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.ParamsProto.Params.class, com.comdex.asset.v1beta1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        assetRegisrationFee_ = null;
+        if (assetRegisrationFeeBuilder_ != null) {
+          assetRegisrationFeeBuilder_.dispose();
+          assetRegisrationFeeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.ParamsProto.internal_static_comdex_asset_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.ParamsProto.Params build() {
+        com.comdex.asset.v1beta1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.ParamsProto.Params buildPartial() {
+        com.comdex.asset.v1beta1.ParamsProto.Params result = new com.comdex.asset.v1beta1.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.assetRegisrationFee_ = assetRegisrationFeeBuilder_ == null
+              ? assetRegisrationFee_
+              : assetRegisrationFeeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.ParamsProto.Params) {
+          return mergeFrom((com.comdex.asset.v1beta1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.ParamsProto.Params other) {
+        if (other == com.comdex.asset.v1beta1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.hasAssetRegisrationFee()) {
+          mergeAssetRegisrationFee(other.getAssetRegisrationFee());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 50: {
+                input.readMessage(
+                    getAssetRegisrationFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin assetRegisrationFee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> assetRegisrationFeeBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return Whether the assetRegisrationFee field is set.
+       */
+      public boolean hasAssetRegisrationFee() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       * @return The assetRegisrationFee.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAssetRegisrationFee() {
+        if (assetRegisrationFeeBuilder_ == null) {
+          return assetRegisrationFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : assetRegisrationFee_;
+        } else {
+          return assetRegisrationFeeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAssetRegisrationFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetRegisrationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          assetRegisrationFee_ = value;
+        } else {
+          assetRegisrationFeeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAssetRegisrationFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (assetRegisrationFeeBuilder_ == null) {
+          assetRegisrationFee_ = builderForValue.build();
+        } else {
+          assetRegisrationFeeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder mergeAssetRegisrationFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (assetRegisrationFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            assetRegisrationFee_ != null &&
+            assetRegisrationFee_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAssetRegisrationFeeBuilder().mergeFrom(value);
+          } else {
+            assetRegisrationFee_ = value;
+          }
+        } else {
+          assetRegisrationFeeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearAssetRegisrationFee() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        assetRegisrationFee_ = null;
+        if (assetRegisrationFeeBuilder_ != null) {
+          assetRegisrationFeeBuilder_.dispose();
+          assetRegisrationFeeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAssetRegisrationFeeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAssetRegisrationFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAssetRegisrationFeeOrBuilder() {
+        if (assetRegisrationFeeBuilder_ != null) {
+          return assetRegisrationFeeBuilder_.getMessageOrBuilder();
+        } else {
+          return assetRegisrationFee_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : assetRegisrationFee_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAssetRegisrationFeeFieldBuilder() {
+        if (assetRegisrationFeeBuilder_ == null) {
+          assetRegisrationFeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAssetRegisrationFee(),
+                  getParentForChildren(),
+                  isClean());
+          assetRegisrationFee_ = null;
+        }
+        return assetRegisrationFeeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.Params)
+    private static final com.comdex.asset.v1beta1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.ParamsProto.Params();
+    }
+
+    public static com.comdex.asset.v1beta1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_Params_fieldAccessorTable;
 
@@ -34,12 +634,12 @@ public final class ParamsProto {
       "ms\022\177\n\025asset_regisration_fee\030\006 \001(\0132\031.cosm" +
       "os.base.v1beta1.CoinB0\310\336\037\000\252\337\037(github.com" +
       "/cosmos/cosmos-sdk/types.CoinsR\023assetReg" +
-      "isrationFeeB\322\001\n\030com.comdex.asset.v1beta1" +
-      "B\013ParamsProtoP\001Z/github.com/comdex-offic" +
-      "ial/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex." +
-      "Asset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 C" +
-      "omdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex" +
-      "::Asset::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "isrationFeeB\320\001\n\030com.comdex.asset.v1beta1" +
+      "B\013ParamsProtoZ/github.com/comdex-officia" +
+      "l/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.As" +
+      "set.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Com" +
+      "dex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::" +
+      "Asset::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
